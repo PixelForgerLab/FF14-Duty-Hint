@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using FF14DutyHint.Models;
 using FF14DutyHint.Services;
@@ -12,7 +14,11 @@ namespace FF14DutyHint.Views;
 
 public partial class DutySelectionWindow : Window
 {
+    private const string AllExpansions = "全部版本";
+
     private readonly List<Duty> _allDuties;
+    private string _selectedExpansion = AllExpansions;
+    private string _selectedType = "";
 
     public Duty? SelectedDuty { get; private set; }
 
@@ -20,7 +26,23 @@ public partial class DutySelectionWindow : Window
     {
         InitializeComponent();
         _allDuties = duties;
-        DutyListBox.ItemsSource = duties;
+
+        // 從資料中收集所有 expansion，依名稱排序
+        var expansions = duties
+            .Select(d => d.Expansion ?? "")
+            .Where(e => !string.IsNullOrWhiteSpace(e))
+            .Distinct()
+            .OrderBy(e => e, StringComparer.Ordinal)
+            .ToList();
+
+        ExpansionCombo.Items.Add(AllExpansions);
+        foreach (var exp in expansions)
+        {
+            ExpansionCombo.Items.Add(exp);
+        }
+        ExpansionCombo.SelectedIndex = 0;
+
+        ApplyFilter();
 
         if (!string.IsNullOrEmpty(currentDutyId))
         {
@@ -28,9 +50,10 @@ public partial class DutySelectionWindow : Window
             if (current is not null)
             {
                 DutyListBox.SelectedItem = current;
+                DutyListBox.ScrollIntoView(current);
             }
         }
-        if (DutyListBox.SelectedIndex < 0 && duties.Count > 0)
+        if (DutyListBox.SelectedIndex < 0 && DutyListBox.Items.Count > 0)
         {
             DutyListBox.SelectedIndex = 0;
         }
@@ -38,21 +61,83 @@ public partial class DutySelectionWindow : Window
         Loaded += (_, _) => SearchBox.Focus();
     }
 
+    private void ApplyFilter()
+    {
+        var keyword = SearchBox?.Text?.Trim() ?? string.Empty;
+
+        var query = _allDuties.AsEnumerable();
+
+        // 版本篩選
+        if (_selectedExpansion != AllExpansions)
+        {
+            query = query.Where(d =>
+                string.Equals(d.Expansion, _selectedExpansion, StringComparison.Ordinal));
+        }
+
+        // 類型篩選
+        if (!string.IsNullOrEmpty(_selectedType))
+        {
+            query = query.Where(d =>
+                string.Equals(d.Type, _selectedType, StringComparison.OrdinalIgnoreCase));
+        }
+
+        // 關鍵字篩選
+        if (!string.IsNullOrEmpty(keyword))
+        {
+            query = query.Where(d =>
+                (d.Name?.Contains(keyword, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (d.NameEn?.Contains(keyword, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (d.Expansion?.Contains(keyword, StringComparison.OrdinalIgnoreCase) ?? false));
+        }
+
+        var filtered = query.ToList();
+        DutyListBox.ItemsSource = filtered;
+
+        ResultCountText.Text = filtered.Count == _allDuties.Count
+            ? $"全部 {filtered.Count} 個副本"
+            : $"{filtered.Count} / {_allDuties.Count} 個副本";
+    }
+
     private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
     {
-        var keyword = SearchBox.Text?.Trim() ?? string.Empty;
-        if (string.IsNullOrEmpty(keyword))
+        ApplyFilter();
+    }
+
+    private void ExpansionCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (ExpansionCombo.SelectedItem is string exp)
         {
-            DutyListBox.ItemsSource = _allDuties;
+            _selectedExpansion = exp;
+            ApplyFilter();
+        }
+    }
+
+    private void TypeFilter_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is not ToggleButton clicked)
+        {
+            return;
+        }
+
+        // 互斥：所有 ToggleButton 只能有一個 IsChecked
+        foreach (var child in TypeFilterPanel.Children)
+        {
+            if (child is ToggleButton tb && tb != clicked)
+            {
+                tb.IsChecked = false;
+            }
+        }
+        // 若使用者反向取消 → 退回 "全部"
+        if (clicked.IsChecked != true)
+        {
+            TypeAllBtn.IsChecked = true;
+            _selectedType = "";
         }
         else
         {
-            DutyListBox.ItemsSource = _allDuties.Where(d =>
-                (d.Name?.Contains(keyword, System.StringComparison.OrdinalIgnoreCase) ?? false) ||
-                (d.NameEn?.Contains(keyword, System.StringComparison.OrdinalIgnoreCase) ?? false) ||
-                (d.Expansion?.Contains(keyword, System.StringComparison.OrdinalIgnoreCase) ?? false)
-            ).ToList();
+            _selectedType = clicked.Tag as string ?? "";
         }
+        ApplyFilter();
     }
 
     private void DutyListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -109,3 +194,4 @@ public partial class DutySelectionWindow : Window
         }
     }
 }
+

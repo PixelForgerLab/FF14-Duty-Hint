@@ -22,16 +22,40 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="選擇副本" FontSize="16" FontWeight="Bold"
                    Foreground="{StaticResource Accent}" Margin="0,0,0,8"/>
 
+        <!-- 版本下拉 -->
+        <DockPanel Grid.Row="1" Margin="0,0,0,6">
+            <TextBlock Text="版本：" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="0,0,6,0"/>
+            <ComboBox x:Name="ExpansionCombo"
+                      SelectionChanged="ExpansionCombo_SelectionChanged"
+                      Background="#22FFFFFF"
+                      Foreground="{StaticResource TextBrush}"
+                      BorderBrush="#44FFFFFF"
+                      Padding="6,3"/>
+        </DockPanel>
+
+        <!-- 類型篩選按鈕 row -->
+        <WrapPanel Grid.Row="2" Margin="0,0,0,6" x:Name="TypeFilterPanel">
+            <ToggleButton x:Name="TypeAllBtn" Content="全部" IsChecked="True" Margin="0,2,4,2" Padding="8,2" Click="TypeFilter_Click" Tag=""/>
+            <ToggleButton x:Name="TypeDungeonBtn" Content="Dungeon" Margin="0,2,4,2" Padding="8,2" Click="TypeFilter_Click" Tag="dungeon"/>
+            <ToggleButton x:Name="TypeTrialBtn" Content="Trial" Margin="0,2,4,2" Padding="8,2" Click="TypeFilter_Click" Tag="trial"/>
+            <ToggleButton x:Name="TypeRaidBtn" Content="Raid" Margin="0,2,4,2" Padding="8,2" Click="TypeFilter_Click" Tag="raid"/>
+            <ToggleButton x:Name="TypeUltimateBtn" Content="絕代" Margin="0,2,4,2" Padding="8,2" Click="TypeFilter_Click" Tag="ultimate"/>
+        </WrapPanel>
+
+        <!-- 搜尋 -->
         <TextBox x:Name="SearchBox"
-                 Grid.Row="1"
-                 Margin="0,0,0,8"
+                 Grid.Row="3"
+                 Margin="0,0,0,6"
                  Padding="6,4"
                  Background="#22FFFFFF"
                  Foreground="{StaticResource TextBrush}"
@@ -41,7 +65,7 @@
                  ToolTip="輸入名稱關鍵字篩選"/>
 
         <ListBox x:Name="DutyListBox"
-                 Grid.Row="2"
+                 Grid.Row="4"
                  Background="#11FFFFFF"
                  BorderBrush="#22FFFFFF"
                  Foreground="{StaticResource TextBrush}"
@@ -82,7 +106,13 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+        <TextBlock x:Name="ResultCountText"
+                   Grid.Row="5"
+                   Foreground="{StaticResource MutedTextBrush}"
+                   FontSize="11"
+                   Margin="0,6,0,0"/>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
             <Button Content="開啟內建資料夾" Click="OpenBuiltInFolder_Click" Padding="10,4" Margin="0,0,6,0"
                     Background="#22FFFFFF" Foreground="{StaticResource TextBrush}" BorderBrush="#44FFFFFF"/>
             <Button Content="開啟使用者資料夾" Click="OpenUserFolder_Click" Padding="10,4" Margin="0,0,6,0"
