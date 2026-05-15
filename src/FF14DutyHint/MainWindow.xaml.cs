@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
+using FF14DutyHint.Helpers;
 using FF14DutyHint.Models;
 using FF14DutyHint.Services;
 using FF14DutyHint.Views;
@@ -27,11 +28,18 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         Closing += OnClosing;
     }
 
-    // 字體大小：標題、Boss、Phase、內文 — 都從設定派生
     public double HeaderFontSize => Math.Round(_settings.FontSize + 4);
     public double BossFontSize => Math.Round(_settings.FontSize + 2);
     public double PhaseFontSize => Math.Round(_settings.FontSize + 1);
     public double BodyFontSize => _settings.FontSize;
+
+    protected override void OnSourceInitialized(EventArgs e)
+    {
+        base.OnSourceInitialized(e);
+        // 套用 WS_EX_NOACTIVATE：在遊戲中點擊 Overlay 不會偷走焦點，
+        // 也順帶 WS_EX_TOOLWINDOW 從 Alt+Tab 清單隱藏。
+        WindowInterop.MakeOverlayWindow(this);
+    }
 
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
