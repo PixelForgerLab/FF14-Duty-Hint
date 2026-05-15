@@ -1,6 +1,6 @@
 {
     "id": "holminster_switch",
-    "name": "遇襲集落水灘村",
+    "name": "霍敏斯特轉軌站",
     "nameEn": "Holminster Switch",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -10,59 +10,40 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 72 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）寬恕者迪松南斯：Brazen Bull 4 個球十字 AoE + Thumbscrew 線、Wooden Horse 大錐。",
+        "2）泰絲琳：Fevered Flagellation 數字 1-4 順序撞玩家，菱形站位；Exorcise 疊機留地面 AoE。",
+        "3）光之贖罪者菲莉雅：Chain Down 一玩家被鎖，其他人打鏈解救；Fierce Beating 旋轉場中央。"
+    ],
+    "notes": "5.0 ShB 第一個 MSQ 副本（Lv 71-72）。光之戰士vs光之贖罪者。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "寬恕者迪松南斯",
+            "nameEn": "Forgiven Dissonance",
+            "mnemonic": ["球十字找縫", "Thumbscrew 線後跑"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Brazen Bull + Thumbscrew + Wooden Horse", "type": "aoe", "description": "4 球十字 AoE + 線 + 中央錐。", "tips": ["先找十字縫", "再閃線", "再繞 Boss 後"] },
+                { "name": "Pillory", "type": "tankbuster", "description": "坦補。", "tips": [{ "text": "減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "泰絲琳",
+            "nameEn": "Tesleen",
+            "mnemonic": ["看數字 1-4 順序", "菱形站位"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Fevered Flagellation", "type": "aoe", "description": "玩家頭上數字 1-4，依序被衝撞。", "tips": ["菱形站位讓只有自己被打"] },
+                { "name": "Exorcise", "type": "stack", "description": "疊機 + 4 個圓 AoE 留流血池。", "tips": ["全員疊", "閃池"] }
+            ]}]
+        },
+        {
+            "name": "菲莉雅",
+            "nameEn": "Philia",
+            "mnemonic": ["Chain Down 打鏈救人", "Fierce Beating 旋轉跑外"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Pendulum", "type": "aoe", "description": "T 標記 + 中央漸減 AoE。", "tips": [{ "text": "T 拉遠", "role": "tank" }, "其他人到中央"] },
+                { "name": "Chain Down + Aethersup", "type": "other", "description": "玩家被鎖 → 大 cone AoE 致命，需打掉鎖鏈救援。", "tips": [{ "text": "全力打鎖鏈", "role": "dps" }] },
+                { "name": "Left/Right Knout", "type": "aoe", "description": "Boss 抬手 = 該側 >180 度 AoE。", "tips": ["看手繞對側"] },
+                { "name": "Fierce Beating", "type": "aoe", "description": "Boss 旋轉放兩條移動圓 AoE + 後方錐 360 度。", "tips": ["跟著旋轉方向跑"] }
+            ]}]
+        }
+    ]
 }

@@ -1,68 +1,34 @@
 {
     "id": "mt_gulg",
-    "name": "僞造天界格魯格火山",
+    "name": "古勒格火山",
     "nameEn": "Mt. Gulg",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 420,
+    "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 80 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）寬恕者殘暴：Typhoon Wing 別站綠球前面三角 AoE；Lumen Infinitum 別站 Boss 正前方。",
+        "2）寬恕者奇思：Exegesis 看 3x3 臉圖案，站無臉格；Judgement Day 雙隕石各 1 人踩。",
+        "3）寬恕者下流：發光環變形機制（Diminuendo 圓+環、Marcato 線+X）；Solitaire Ring 6 柱依序，站最後爆的柱再跑。"
+    ],
+    "notes": "5.0 ShB 第五個 MSQ 副本（Lv 79-80）。最終 Lightwarden Vauthry 戰前。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        { "name": "寬恕者殘暴", "nameEn": "Forgiven Cruelty", "mnemonic": ["別站綠球前", "Lumen 別站 Boss 前"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Lumen Infinitum", "type": "aoe", "description": "Boss 前方線 AoE 無預警。", "tips": ["別站 Boss 前"] },
+            { "name": "Typhoon Wing", "type": "aoe", "description": "綠球前方三角 AoE。", "tips": ["遠離綠球前方"] }
+        ]}]},
+        { "name": "寬恕者奇思", "nameEn": "Forgiven Whimsy", "mnemonic": ["3x3 臉圖案", "踩隕石"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Exegesis", "type": "aoe", "description": "Boss 上 3x3 臉發光 = 場上對應格 AoE。", "tips": ["站無臉格", "通常上角安全"] },
+            { "name": "Judgement Day", "type": "stack", "description": "2 隕石各 1 人踩。", "tips": ["2 人分開踩"] }
+        ]}]},
+        { "name": "寬恕者下流", "nameEn": "Forgiven Obscenity", "mnemonic": ["發光環 = 變形", "Solitaire 6 柱"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Divine Diminuendo (有發光環)", "type": "aoe", "description": "中央圓 AoE + 兩個環 AoE，站初始圓邊緣。", "tips": ["靠近圓邊緣"] },
+            { "name": "Conviction Marcato (有發光環)", "type": "aoe", "description": "Boss 前線 + 圓盤 X 形線。", "tips": ["站基本方向非前", "Boss hitbox 外"] },
+            { "name": "Feather Marionette", "type": "aoe", "description": "4 分身 + 發光那個位置決定安全。", "tips": ["跟著發光分身"] },
+            { "name": "Solitaire Ring", "type": "aoe", "description": "6 柱依序爆，站最後的柱再跑。", "tips": ["看順序", "進最後爆的柱"] }
+        ]}]}
+    ]
 }

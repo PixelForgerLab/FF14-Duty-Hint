@@ -1,6 +1,6 @@
 {
     "id": "qitana_ravel",
-    "name": "文明古跡奇坦那神影洞",
+    "name": "齊塔納拉維爾",
     "nameEn": "The Qitana Ravel",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -10,59 +10,41 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 76 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）洛紮特：看雕像哪邊發光 + Boss 哪側發紅，組合避半場。",
+        "2）巴托夸奇：Subsonics 多石頭 + 大柱倒下方向避；柱倒會即死。",
+        "3）光之贖罪者埃羅斯：左/右頭電球 = 兩側錐 + 中央疊機；中頭火球 = 玩家圓 + 中央錐，站側。"
+    ],
+    "notes": "5.0 ShB 第三個 MSQ 副本（Lv 75-76）。Ronka 古文明遺跡。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "洛紮特",
+            "nameEn": "Lozatl",
+            "mnemonic": ["看雕像光 + Boss 發紅組合"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Lozatl's Scorn", "type": "aoe", "description": "雕像紫光 = 該半場 AoE。", "tips": ["看雕像繞對側"] },
+                { "name": "Heat Up + Lozatl's Fury", "type": "aoe", "description": "Boss 一側發紅 = 該半場 cleave。", "tips": ["看 Boss 紅側繞對側"] },
+                { "name": "組合", "type": "aoe", "description": "Scorn + Fury 組合留小安全位。", "tips": ["雙重判斷"] }
+            ]}]
+        },
+        {
+            "name": "巴托夸奇",
+            "nameEn": "Batsquatch",
+            "mnemonic": ["柱倒方向", "Soundwave 前打掉柱"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Subsonics", "type": "aoe", "description": "石頭掉落多圓 AoE，最大的留石柱。", "tips": ["閃 AoE", "記柱位置"] },
+                { "name": "Pillars + Soundwave", "type": "aoe", "description": "柱在 Soundwave 時倒下成寬 cone 致命 + 易傷。", "tips": ["遠離柱倒方向", "或先打掉柱"] }
+            ]}]
+        },
+        {
+            "name": "埃羅斯",
+            "nameEn": "Eros",
+            "mnemonic": ["左/右頭電 = 兩側錐", "中頭火 = 玩家圓"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Hound out of Heaven", "type": "aoe", "description": "Proximity 連繩玩家，拉繩變紫色才安全。", "tips": ["拉繩到極限"] },
+                { "name": "Viper Poison + Inhale + Heaving Breath", "type": "other", "description": "毒池 + 拉入 + 擊退。", "tips": ["記住毒池位置", "預判擊退落點"] },
+                { "name": "Confession of Faith (雷)", "type": "stack", "description": "兩側頭電球 = 兩側錐 + 中央疊機。", "tips": ["疊在 Boss 正前"] },
+                { "name": "Confession of Faith (火)", "type": "aoe", "description": "中頭火球 = 玩家圓 + 中央錐。", "tips": ["站 Boss 兩側"] }
+            ]}]
+        }
+    ]
 }

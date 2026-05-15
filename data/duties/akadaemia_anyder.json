@@ -1,6 +1,6 @@
 {
     "id": "akadaemia_anyder",
-    "name": "創造機構阿尼德羅學院",
+    "name": "亞馬羅特學院",
     "nameEn": "Akadaemia Anyder",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -10,59 +10,25 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 80 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）雙鯊：兩 boss 輪流，看誰場上 - 切換時看「is gathering its strength」訊息預判。",
+        "2）侯爵魔花：Extensible Tendrils 旋轉線 AoE + 後續 Bile Vomit 錐；Blossom 兩花池切換站。",
+        "3）羽蛇神：Thunderstorm 球觸到加增傷 buff，別讓球連 Boss；Winding Current 擊退後 4 圓 + 環，貼 Boss 安全。"
+    ],
+    "notes": "5.0 ShB 第二個 post-MSQ 副本（Lv 80，ilvl 470）。Amaurot 古代學院。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        { "name": "雙鯊", "nameEn": "Cladoselache + Doliodus", "mnemonic": ["看誰場上", "預判切換"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Tidal Guillotine", "type": "aoe", "description": "Cladoselache 中心 AoE。", "tips": ["跑遠"] },
+            { "name": "Pelagic Cleaver", "type": "aoe", "description": "Doliodus 前方錐 AoE 擊退。", "tips": ["繞側"] },
+            { "name": "Aquatic Lance", "type": "aoe", "description": "玩家圓 AoE 留池。", "tips": ["拉開"] }
+        ]}]},
+        { "name": "侯爵魔花", "nameEn": "Marquis Morbol", "mnemonic": ["旋轉線", "兩花池切換"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Extensible Tendrils + Bile Vomit", "type": "aoe", "description": "4 觸手線 AoE 旋轉 + 前方錐毒。", "tips": ["看觸手位置", "繞 Boss 後"] },
+            { "name": "Blossom", "type": "other", "description": "兩花池循環，新池蓋舊池。", "tips": ["跑到剛清的花上"] }
+        ]}]},
+        { "name": "羽蛇神", "nameEn": "Quetzalcoatl", "mnemonic": ["球別讓 Boss 拿", "貼 Boss 躲環"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Thunderstorm", "type": "spread", "description": "玩家圓 + 多 AoE，留電球可踩拿 buff。", "tips": ["全員踩球", "別讓球連 Boss"] },
+            { "name": "Shocking Plumage", "type": "aoe", "description": "4 錐 AoE 朝外。", "tips": ["站基本方向"] },
+            { "name": "Winding Current", "type": "other", "description": "擊退 + 4 圓擴張 + 環（Boss hitbox 內安全）。", "tips": ["擊退後貼 Boss"] }
+        ]}]}
+    ]
 }

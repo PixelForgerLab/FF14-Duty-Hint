@@ -1,6 +1,6 @@
 {
     "id": "seat_of_sacrifice",
-    "name": "光之戰士殲滅戰",
+    "name": "祭典之座 光之戰士殲滅戰",
     "nameEn": "The Seat of Sacrifice",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -10,59 +10,34 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 80 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
-    "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        "1）Terror Unleashed：HP 變 1 + True Walking Dead 必須補滿。",
+        "2）Coruscant Saber 看劍周圍環：有環 = 環 AoE 站 Boss hitbox 中、無環 = 點 AoE 跑遠。",
+        "3）Absolute Fire III 停動避 Pyretic；Absolute Blizzard III 持續移動避凍。",
+        "4）Phase 2 召喚 Spectral 系列（黑白法、龍騎、占星等）多種致敬機制。",
+        "5）Ultimate Crossover 用坦 LB3 擋。"
+    ],
+    "notes": "5.3 ShB 後 MSQ trial（Lv 80，ilvl 465）。Elidibus 光之戰士擬態。各 job 致敬戰。資料整理自 Console Games Wiki。",
+    "bosses": [{
+        "name": "光之戰士艾利迪布斯",
+        "nameEn": "Warrior of Light (Elidibus)",
+        "mnemonic": ["有環/無環判斷", "停動/持續動", "Ultimate 用坦 LB3"],
+        "phases": [
+            { "name": "Phase 1", "mechanics": [
+                { "name": "Terror Unleashed", "type": "raidwide", "description": "HP 變 1 + True Walking Dead debuff 補滿才能解。", "tips": [{ "text": "立刻補滿", "role": "healer" }] },
+                { "name": "Coruscant Saber", "type": "aoe", "description": "劍周圍有環 = 環 AoE（中央安全）；無環 = 點 AoE。", "tips": ["看劍周圍"] },
+                { "name": "Absolute Fire III", "type": "other", "description": "暫停符號 = 3 秒不能動。", "tips": ["看暫停符號停手停動"] },
+                { "name": "Absolute Blizzard III", "type": "other", "description": "播放符號 = 必須移動避凍。", "tips": ["看播放符號持續走動"] },
+                { "name": "Sword of Light", "type": "aoe", "description": "黑暗中三角形即死區。", "tips": ["別站三角內"] }
+            ]},
+            { "name": "Intermission", "mechanics": [
+                { "name": "Active Time Maneuver + Ultimate Crossover", "type": "other", "description": "需狂點按鍵解綁；Crossover 是 LB4，需坦 LB3 擋。", "tips": [
+                    "全員狂按",
+                    { "text": "用坦 LB3", "role": "tank" }
+                ]}
+            ]},
+            { "name": "Phase 2", "mechanics": [
+                { "name": "Specter of Light",  "type": "other", "description": "黑白法雙咒 + 隕石、龍騎跳、占星牌等致敬機制。", "tips": ["看召喚的職業預判機制"] }
+            ]}
+        ]
+    }]
 }

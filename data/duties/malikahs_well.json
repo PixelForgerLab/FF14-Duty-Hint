@@ -1,7 +1,7 @@
 {
     "id": "malikahs_well",
-    "name": "避暑離宮馬利卡大井",
-    "nameEn": "Malikah\u0027s Well",
+    "name": "瑪莉卡之井",
+    "nameEn": "Malikah's Well",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
@@ -10,59 +10,24 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 78 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）大犰狳：Flail Smash 中央漸減後場邊環 AoE，跑近中央；Pack Armadillo 補職可解 Rehydration。",
+        "2）水陸塔羅斯：Wellbore 中央大圓 + 4 小圓變間歇泉；High Pressure 強擊退。",
+        "3）光之贖罪者斯托吉：Crystal Nail 4 個 Nail，Censure 釘子順時針複製 Boss 上一招。"
+    ],
+    "notes": "5.0 ShB 第四個 MSQ 副本（Lv 77-78）。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        { "name": "大犰狳", "nameEn": "Greater Armadillo", "mnemonic": ["Flail Smash 跑近中央"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Flail Smash", "type": "aoe", "description": "中央漸減 + 場邊環 AoE。", "tips": ["跑近中央"] },
+            { "name": "Falling Rocks", "type": "aoe", "description": "兩組圓 AoE 隨機位置。", "tips": ["持續移動避"] }
+        ]}]},
+        { "name": "水陸塔羅斯", "nameEn": "Amphibious Talos", "mnemonic": ["High Pressure 強擊退"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Wellbore", "type": "aoe", "description": "中央大圓 + 4 小圓間歇泉。", "tips": ["跑遠"] },
+            { "name": "Swift Spill", "type": "aoe", "description": "中央旋轉錐 AoE。", "tips": ["跟著旋轉方向"] }
+        ]}]},
+        { "name": "斯托吉", "nameEn": "Storge", "mnemonic": ["Censure 順時針"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Heretics Fork", "type": "aoe", "description": "4 基本方向線 AoE。", "tips": ["站對角"] },
+            { "name": "Breaking Wheel", "type": "raidwide", "description": "全場 AoE，只有 Boss hitbox 內安全。", "tips": ["貼 Boss"] },
+            { "name": "Crystal Nail + Censure", "type": "aoe", "description": "4 釘子 + 順時針複製 Boss 上一招。", "tips": ["記 Boss 上一招", "預判 Nail 動作"] }
+        ]}]}
+    ]
 }

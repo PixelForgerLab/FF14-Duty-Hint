@@ -1,6 +1,6 @@
 {
     "id": "dohn_mheg",
-    "name": "水妖幻園多恩美格禁園",
+    "name": "多恩米格",
     "nameEn": "Dohn Mheg",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -10,59 +10,39 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "漆黑的反叛者 (Shadowbringers) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 74 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Aenc Thon (1)：Laughing Leap 中央或玩家 + Landsblood 連續藍水 AoE 別站。",
+        "2）Griaule：截斷 Painted Sapling 連繩取得 Growing buff，5 stacks 上 Griaule = 團滅。",
+        "3）Aenc Thon (Lakelord)：Toad Choir 變蛤蟆、Imp Choir 變小妖；Funambulist's Fantasia 走獨木橋打 Liar's Lyre 打斷 Finale 即死。"
+    ],
+    "notes": "5.0 ShB 第二個 MSQ 副本（Lv 73-74）。Lengthsome Gait 童話幻境。獨木橋 + Finale 即死是核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "Aenc Thon (1)",
+            "nameEn": "Aenc Thon, Lord of the Lingering Gaze",
+            "mnemonic": ["藍水 AoE 別站"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Hydrofall", "type": "aoe", "description": "玩家圓 AoE。", "tips": ["拉開"] },
+                { "name": "Laughing Leap + Landsblood", "type": "aoe", "description": "中央或玩家圓 + 連續藍水 AoE。", "tips": ["持續移動避水"] }
+            ]}]
+        },
+        {
+            "name": "Griaule",
+            "nameEn": "Griaule",
+            "mnemonic": ["截斷 Sapling 拿 buff", "別讓 Boss 疊 5 stack"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Fodder + Painted Sapling", "type": "other", "description": "5 個藤蔓連 Boss，玩家可截斷連繩獲得 Growing buff。", "tips": ["全員都截斷", "別讓 5 個全到 Boss"] },
+                { "name": "Tiiimbeeer", "type": "raidwide", "description": "全體 AoE。5 stack 上 Boss = 團滅。", "tips": [{ "text": "預判補血", "role": "healer" }] },
+                { "name": "Coiling Ivy", "type": "other", "description": "藤蔓綁住玩家。", "tips": ["遠程協助打小怪解綁"] }
+            ]}]
+        },
+        {
+            "name": "Aenc Thon (Lakelord)",
+            "nameEn": "Aenc Thon, Lord of the Lengthsome Gait",
+            "mnemonic": ["獨木橋走謹慎", "打 Lyre 中斷 Finale"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Imp/Toad Choir", "type": "other", "description": "凝視變小妖 / 錐變蛤蟆 6 秒。", "tips": ["背對 Boss", "錐 Toad 繞側"] },
+                { "name": "Funambulist's Fantasia + Finale", "type": "other", "description": "場分裂剩窄獨木橋，Boss 開始 cast Finale 即死，需打 Liar's Lyre 中斷。", "tips": ["小心走橋", "進屏障打 Lyre"] }
+            ]}]
+        }
+    ]
 }
