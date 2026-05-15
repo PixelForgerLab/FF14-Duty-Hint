@@ -1,13 +1,55 @@
 {
-    "id": "thornmarch_hard",
-    "name": "莫古力賢王殲滅戰",
-    "nameEn": "Thornmarch (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "thornmarch_hard",
+  "name": "莫古力賢王殲滅戰",
+  "nameEn": "Thornmarch (Hard)",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "莫古力賢王戰，超可愛但難搞",
+    "場上多隻莫古力，DPS 注意擊殺順序",
+    "賢王本體 + 多隻莫古力同時打",
+    "看莫古力顏色決定優先擊殺"
+  ],
+  "notes": "Primal 賢王莫古爾的殲滅戰。多隻莫古力同台機制。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "賢王莫古爾·莫古十二世",
+      "nameEn": "Good King Moggle Mog XII",
+      "mnemonic": [
+        "場上多隻莫古力一起戰鬥",
+        "依顏色判斷優先擊殺（補職/坦職/DPS 型）",
+        "全體 AoE 注意補血"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "多莫古力",
+              "type": "other",
+              "description": "賢王與多隻莫古力一起出現，各有不同職業屬性。",
+              "tips": [
+                "優先擊殺奶媽型莫古力（補職顏色）",
+                "再清坦克型",
+                { "text": "T 控制各莫古力仇恨", "role": "tank" }
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

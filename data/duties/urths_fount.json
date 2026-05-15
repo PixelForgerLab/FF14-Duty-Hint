@@ -1,13 +1,64 @@
 {
-    "id": "urths_fount",
-    "name": "奧丁殲滅戰",
-    "nameEn": "Urth\u0027s Fount",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "urths_fount",
+  "name": "奧丁殲滅戰",
+  "nameEn": "Urth's Fount",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "奧丁戰，騎著八腳馬 Sleipnir",
+    "Boss 揮劍 → Zantetsuken 即死技",
+    "場上需要躲場邊或站對位避免被砍",
+    "閃前方扇形與直線"
+  ],
+  "notes": "Primal 奧丁戰（彩虹之神兵）。著名 Zantetsuken 即死機制。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "奧丁",
+      "nameEn": "Odin",
+      "mnemonic": [
+        "Zantetsuken（斬鐵劍）：即死技，看走位",
+        "前方扇形/直線 AoE",
+        "騎著八腳馬移動快",
+        "DPS check 高，要快"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Zantetsuken",
+              "type": "other",
+              "description": "奧丁揮劍即死技，需要躲到劍範圍外。",
+              "tips": [
+                "看劍指向，跑反向",
+                "失敗 = 即死",
+                { "text": "若 T 接到 Zantetsuken 要立刻 invuln", "role": "tank" }
+              ]
+            },
+            {
+              "name": "前方扇形",
+              "type": "aoe",
+              "description": "前方扇形劍氣。",
+              "tips": [
+                "閃側面或背後"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
