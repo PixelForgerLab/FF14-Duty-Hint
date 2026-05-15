@@ -7,62 +7,46 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）保留 normal 機制（Sidewise、Shadow Sabbath、大砲、翼階段）+ Savage 強化。",
+        "2）Fivefold Blast 換成 Sixfold/Sevenfold；分身數量增加。",
+        "3）Witch Hunt 內/外螺旋更快 + 散開組合。",
+        "4）Phase 2 翼階段：Bewitching Flight + Shadows Sabbath 翼分身更複雜的交叉線。",
+        "5）詳細請參考 Hector Hectorson 動畫攻略。"
+    ],
+    "notes": "DT 7.05 AAC 輕量級 4 零式（Lv 100，ilvl 700）。Wicked Thunder Savage。前 Wicked Thunder 第 1 個輕量級 tier 終戰。詳細請參考 Hector Hectorson 攻略。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "雷霆女巫",
+            "nameEn": "Wicked Thunder",
+            "mnemonic": ["分身更多", "螺旋更快"],
+            "phases": [
+                {
+                    "name": "Savage 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Sidewise Spark / Shadows' Sabbath (強化)",
+                            "type": "aoe",
+                            "description": "分身數量增加，cleave 速度更快。",
+                            "tips": ["看尾巴指向預判"]
+                        },
+                        {
+                            "name": "Sixfold / Sevenfold Blast",
+                            "type": "aoe",
+                            "description": "大砲後半場 cleave 連 6-7 次。",
+                            "tips": ["跟著標記顏色切邊"]
+                        },
+                        {
+                            "name": "Bewitching Flight (Savage)",
+                            "type": "aoe",
+                            "description": "翼階段交叉線 + 點 AoE 組合更複雜。",
+                            "tips": ["看線寬度找縫"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

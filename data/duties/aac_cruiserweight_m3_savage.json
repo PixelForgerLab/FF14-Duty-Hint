@@ -7,62 +7,39 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）保留 normal 機制（Stoneringer、Quarry Swamp、Phase 2/3）+ Savage 強化。",
+        "2）Phase 1 Spore Sac 與 Pulp Smash 更複雜的組合。",
+        "3）Phase 3 Lashing Lariat 連發更快 + Slaminator 重複。",
+        "4）詳細請參考 Hector Hectorson 動畫攻略。"
+    ],
+    "notes": "DT 7.25 AAC 中量級 3 零式（Lv 100，ilvl 730）。Brute Abombinator Savage。詳細請參考 Hector Hectorson 攻略。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "變異炸彈魔",
+            "nameEn": "Brute Abombinator",
+            "mnemonic": ["3 階段強化", "Spore Sac 更複雜"],
+            "phases": [
+                {
+                    "name": "Savage 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Spore Sac + Pulp Smash (Savage)",
+                            "type": "stack",
+                            "description": "藤蔓擴展 + 疊機 + 8 錐輻射，需更精準站位。",
+                            "tips": ["看藤蔓終點 + 疊機點"]
+                        },
+                        {
+                            "name": "Quarry Swamp (Savage)",
+                            "type": "other",
+                            "description": "屍體保留更少，需更精準利用掩體。",
+                            "tips": ["保留至少 1 隻 Abomination 屍體"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

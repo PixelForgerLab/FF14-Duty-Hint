@@ -7,62 +7,58 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）保留 normal 機制（4x4 格、Mouser、Elevate）+ Savage 強化。",
+        "2）Soulshade：分身複製機制；Nine Lives 把機制存起來延後爆。",
+        "3）Quadruple Crossing：4 個錐 AoE 點最近 4 人，需誘導 + 後追擊掩體閃避。",
+        "4）Biscuit Maker 連發要換手或無敵；DPS 與補職輪流誘導 AoE。",
+        "5）詳細路徑請參考 Hector Hectorson 動畫攻略。"
+    ],
+    "notes": "DT 7.05 AAC 輕量級 1 零式（Lv 100，ilvl 700）。Black Cat Savage。Soulshade 分身 + Nine Lives 存招機制為特色。詳細請參考 Hector Hectorson 攻略。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "黑貓",
+            "nameEn": "Black Cat",
+            "mnemonic": ["Soulshade 分身複製", "Nine Lives 存招", "Quadruple Crossing 4 人誘導"],
+            "phases": [
+                {
+                    "name": "Savage 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Quadruple Crossing",
+                            "type": "aoe",
+                            "description": "最近 4 人錐 AoE 高物理傷 + 切下 debuff；連續 2 次（DPS 誘導 → 補職誘導），再有 2 組地面預警 AoE。",
+                            "tips": ["DPS 站 intercardinal 內 hitbox 誘導", "補職站 cardinal 外", "再交換"]
+                        },
+                        {
+                            "name": "Biscuit Maker",
+                            "type": "tankbuster",
+                            "description": "高傷物理 + 切下，連續 2 次需換手或無敵。",
+                            "tips": [{ "text": "換手或無敵", "role": "tank" }]
+                        },
+                        {
+                            "name": "Nine Lives + One-two Paw + Soulshade",
+                            "type": "aoe",
+                            "description": "Boss 把 One-two Paw 存起來 + 2 個分身（135 度差）也複製同樣模式。需依序解：分身先放 + Boss 再放。",
+                            "tips": ["先閃分身兩段", "再閃 Boss 存的兩段"]
+                        },
+                        {
+                            "name": "Double / Quadruple Swipe",
+                            "type": "stack",
+                            "description": "Double = 雙補疊機（光小隊分組）；Quadruple = DPS 或補職整組疊（搭配指派 pair）。",
+                            "tips": ["看顏色判斷哪組", "依指派 pair 站位"]
+                        },
+                        {
+                            "name": "Mouser (Savage)",
+                            "type": "other",
+                            "description": "4x4 格部分破壞，需要更精細的觀察 9 段預警。",
+                            "tips": ["跟 normal 同理但反應更快"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

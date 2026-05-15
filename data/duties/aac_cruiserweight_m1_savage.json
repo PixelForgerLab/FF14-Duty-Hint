@@ -7,62 +7,40 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）保留 normal 機制（8x8 格、Funky Floor、聚光燈、Let's Dance）+ Savage 強化。",
+        "2）Disco Infernal：聚光燈位置更難判斷 + 火池追蹤。",
+        "3）Arcady Night Fever：8 個青蛙更快 + 順序判斷精細。",
+        "4）Ride the Waves 多輪 + 移動 AoE 速度更快。",
+        "5）詳細請參考 Hector Hectorson 動畫攻略。"
+    ],
+    "notes": "DT 7.25 AAC 中量級 1 零式（Lv 100，ilvl 730）。Dancing Green Savage。詳細請參考 Hector Hectorson 攻略。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "舞王綠青蛙",
+            "nameEn": "Dancing Green",
+            "mnemonic": ["聚光燈 + 火池組合", "青蛙更快"],
+            "phases": [
+                {
+                    "name": "Savage 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Disco Infernal (Savage)",
+                            "type": "other",
+                            "description": "Burn Baby Burn debuff + 移動聚光燈 + 火池追蹤組合。",
+                            "tips": ["跟聚光燈路徑", "避開火池"]
+                        },
+                        {
+                            "name": "Arcady Night Fever (Savage)",
+                            "type": "aoe",
+                            "description": "8 個青蛙更快 + Perfect Groove 更嚴格。",
+                            "tips": ["看青蛙舉手快速反應"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

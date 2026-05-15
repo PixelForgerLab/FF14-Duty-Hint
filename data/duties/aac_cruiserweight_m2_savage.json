@@ -7,62 +7,40 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）保留 normal 機制（4 圖案、沙漠/河流、雷雲）+ Savage 強化。",
+        "2）Triple Style 三種圖案組合 + 散開/疊機。",
+        "3）河流階段水中 fire/lightning 切換更頻繁。",
+        "4）Layer 大雷雨 Highlightning 多段 + 散開組合。",
+        "5）詳細請參考 Hector Hectorson 動畫攻略。"
+    ],
+    "notes": "DT 7.25 AAC 中量級 2 零式（Lv 100，ilvl 730）。Sugar Riot Savage。詳細請參考 Hector Hectorson 攻略。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "藝術反叛者",
+            "nameEn": "Sugar Riot",
+            "mnemonic": ["3 種圖案組合", "河流水中切換"],
+            "phases": [
+                {
+                    "name": "Savage 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Triple Style",
+                            "type": "aoe",
+                            "description": "3 種圖案組合機制。",
+                            "tips": ["依預警順序解"]
+                        },
+                        {
+                            "name": "河流階段 (Savage)",
+                            "type": "spread",
+                            "description": "水中/陸地切換 fire/lightning 更頻繁。",
+                            "tips": ["看 debuff 決定站水/陸"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
