@@ -10,59 +10,124 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Half Moon：先一側半場 cleave 接對側，看球指向。",
+        "2）Vamp Stomp：中央圓 AoE + 蝙蝠分批爆（先中 2 → 3 → 5）。",
+        "3）Coffinmaker 階段：場地逐排消失，必須在它吞完前打掉。",
+        "4）Sadistic Screech：場地剩 2x4；後續鋸刃 + Fatal Flail 塔機制。",
+        "5）兩次 Crowd Kill 累積 Satisfied 強化。"
+    ],
+    "notes": "DT 7.4 AAC 重量級 1（Lv 100，ilvl 745）。Vamp Fatale 致命吸血女郎。4x4 場地。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "致命吸血鬼",
+            "nameEn": "Vamp Fatale",
+            "mnemonic": ["看球指向預判半場", "蝙蝠分 3 批爆", "場地會分階段縮小"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Killer Voice",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Half Moon",
+                            "type": "aoe",
+                            "description": "球指向 = 該側半場 cleave，緊接對側。",
+                            "tips": ["看球方向繞兩次"]
+                        },
+                        {
+                            "name": "Vamp Stomp",
+                            "type": "aoe",
+                            "description": "中央大圓 AoE + 蝙蝠分 3 批爆（先中 2 → 3 → 外 5）。",
+                            "tips": ["跑外圈再進中央", "看擴張環順序"]
+                        },
+                        {
+                            "name": "Hardcore",
+                            "type": "tankbuster",
+                            "description": "雙坦 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                        },
+                        {
+                            "name": "Sadistic Screech",
+                            "type": "raidwide",
+                            "description": "全體傷 + 摧毀左右列剩 2x4。",
+                            "tips": ["記場地形狀"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Coffinmaker Add",
+                    "mechanics": [
+                        {
+                            "name": "Coffinmaker 吞噬",
+                            "type": "other",
+                            "description": "場地北邊出現棺材小怪逐排前進，碰到=死。必須在它吞完前打掉。",
+                            "tips": ["全力打 Coffinmaker", "別碰它佔的格"]
+                        },
+                        {
+                            "name": "Coffinfiller",
+                            "type": "aoe",
+                            "description": "線 AoE 各覆蓋 1/4 場地。",
+                            "tips": ["找縫"]
+                        },
+                        {
+                            "name": "Flaying Fry + Dead Wake",
+                            "type": "spread",
+                            "description": "全員散開標記 + Coffinmaker 前進。",
+                            "tips": ["散開不重疊"]
+                        },
+                        {
+                            "name": "Penetrating Pitch + Dead Wake",
+                            "type": "stack",
+                            "description": "雙補疊機（魔抗下重疊致命）+ Coffinmaker 再前進。",
+                            "tips": ["全員疊靠補職分擔"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Crowd Kill",
+                    "mechanics": [
+                        {
+                            "name": "Crowd Kill",
+                            "type": "raidwide",
+                            "description": "全體傷 + 疊一層 Satisfied buff。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Finale Fatale + Aetherletting",
+                            "type": "spread",
+                            "description": "場邊 AoE 縮場 + 4 個圓 AoE + 4 人散開（殘留 + / X 十字 AoE）。",
+                            "tips": ["散開 + 預判十字方向", "閃圓 AoE"]
+                        },
+                        {
+                            "name": "Brutal Rain",
+                            "type": "stack",
+                            "description": "4 段疊機（後變 5 段）。",
+                            "tips": ["全員疊"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sadistic Screech 2 + Crowd Kill 2",
+                    "mechanics": [
+                        {
+                            "name": "Sawblades + Fatal Flail",
+                            "type": "stack",
+                            "description": "場地剩 2x4 + 鋸刃移動 + 雙人塔 + Fatal Flail 必須打掉。",
+                            "tips": ["閃鋸刃", "踩塔", "全力打 Flail"]
+                        },
+                        {
+                            "name": "Crowd Kill 2 強化",
+                            "type": "other",
+                            "description": "第二層 Satisfied，Half Moon 加 hitbox 線、Hardcore AoE 更大、Finale + Vamp Stomp 組合。",
+                            "tips": ["反應更快", "看球 + hitbox 線繞"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

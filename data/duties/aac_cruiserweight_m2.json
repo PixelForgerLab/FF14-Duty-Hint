@@ -10,59 +10,147 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Single Style：4 種圖案=4 種機制（炸彈/翼炸彈/箭頭/標靶箭頭）。",
+        "2）沙漠階段：陽光 DoT + 仙人掌圓 AoE + 流沙陷阱（中央或邊角）。",
+        "3）河流階段：Taste of Thunder（在水會大傷散開致死）vs Taste of Fire（必須在水分擔疊機）。",
+        "4）Layer 大雷雨：Highlightning 圓 AoE，跑到另外象限躲，最多 3 段。"
+    ],
+    "notes": "DT 7.2 AAC 中量級 2（Lv 100，ilvl 715）。Sugar Riot 藝術反叛者。畫風水主題。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "藝術反叛者",
+            "nameEn": "Sugar Riot",
+            "mnemonic": ["4 圖案=4 機制", "沙漠 = DoT + 流沙", "河流：雷散開要乾，火疊要濕"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Mousse Mural",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Single Style: Paint Bomb",
+                            "type": "aoe",
+                            "description": "黃圓位置 + 橘繩 = 大圓 AoE。",
+                            "tips": ["遠離黃圓"]
+                        },
+                        {
+                            "name": "Single Style: Heaven Bomb",
+                            "type": "aoe",
+                            "description": "翼炸彈會向前跳半場後爆。",
+                            "tips": ["站到翼炸彈位置（跳之前）"]
+                        },
+                        {
+                            "name": "Single Style: Sweet Shot",
+                            "type": "aoe",
+                            "description": "場外箭頭線 AoE，找縫。",
+                            "tips": ["找箭頭間隔"]
+                        },
+                        {
+                            "name": "Single Style: Throw-up Target",
+                            "type": "aoe",
+                            "description": "標靶 + 後續箭頭朝標靶射。",
+                            "tips": ["遠離標靶連線"]
+                        },
+                        {
+                            "name": "Pudding Party",
+                            "type": "stack",
+                            "description": "5 段疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Color Riot",
+                            "type": "tankbuster",
+                            "description": "雙坦圓 AoE 坦補（紅/藍色不影響）。",
+                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "沙漠階段",
+                    "mechanics": [
+                        {
+                            "name": "Layer: 陽光",
+                            "type": "raidwide",
+                            "description": "Sweltering debuff 持續 DoT。",
+                            "tips": [{ "text": "全程持續補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Layer: 仙人掌",
+                            "type": "aoe",
+                            "description": "場上仙人掌生長後爆圓 AoE。",
+                            "tips": ["看生長位置遠離"]
+                        },
+                        {
+                            "name": "Layer: 流沙",
+                            "type": "other",
+                            "description": "中央或角落生成流沙漩渦，站太久即死。",
+                            "tips": ["看流沙位置跑到對位"]
+                        },
+                        {
+                            "name": "Mousse Touch-up",
+                            "type": "spread",
+                            "description": "散開標記。",
+                            "tips": ["分散"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Double Style 階段",
+                    "mechanics": [
+                        {
+                            "name": "Paint + Heaven Bomb",
+                            "type": "aoe",
+                            "description": "炸彈 + 翼炸彈組合。",
+                            "tips": ["站翼炸彈位置（跳前）"]
+                        },
+                        {
+                            "name": "Sweet Shot + Paint Bomb",
+                            "type": "aoe",
+                            "description": "箭頭線 + 炸彈組合，跑到沒箭頭也沒炸彈的列。",
+                            "tips": ["找雙重安全列"]
+                        },
+                        {
+                            "name": "Sweet Shot + Heaven Bomb",
+                            "type": "aoe",
+                            "description": "翼炸彈後 + 沒箭頭的列。",
+                            "tips": ["站翼炸彈後 + 沒箭頭列"]
+                        }
+                    ]
+                },
+                {
+                    "name": "河流階段",
+                    "mechanics": [
+                        {
+                            "name": "Sugarscape: 河流",
+                            "type": "other",
+                            "description": "場地變草地 + 3 條河流 + 3 座橋。站水中：火抗上 + 雷抗下 II。",
+                            "tips": ["記住水位置"]
+                        },
+                        {
+                            "name": "Taste of Thunder",
+                            "type": "spread",
+                            "description": "全員散開標記（雷魔法），站水中=大傷。",
+                            "tips": ["站陸地散開"]
+                        },
+                        {
+                            "name": "Taste of Fire",
+                            "type": "stack",
+                            "description": "雙補疊機（火魔法），不站水=大傷。",
+                            "tips": ["全員站水中分擔"]
+                        },
+                        {
+                            "name": "Layer: 雷雨",
+                            "type": "aoe",
+                            "description": "水變不能踩（Dropsy）+ 多個圓 AoE + 大雷雲 Highlightning 即死圓 AoE 3 段。",
+                            "tips": ["離開水", "跟雷雲對位躲"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

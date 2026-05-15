@@ -10,59 +10,114 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）愛心倒數：被機制打到累計，3 顆就被魅惑暈眩；持續注意頭頂愛心數。",
+        "2）Tempting Twist = 甜甜圈、Honey Beeline = 線（側安全）。",
+        "3）毒階段：Splash of Venom 後 line 加毒球（爆後散開）；Drop of Venom 後 donut 加毒球（爆後疊機）。",
+        "4）Alarm Pheromones：場邊蜂群 → 兩象限被打（對角象限安全）。"
+    ],
+    "notes": "DT 7.01 AAC 輕量級 2（Lv 100，ilvl 685）。Honey B. Lovely 蜜糖蜂。愛心累計機制是這 boss 特色。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "可愛蜜糖蜂",
+            "nameEn": "Honey B. Lovely",
+            "mnemonic": ["看愛心倒數別 3", "Twist=甜甜圈 / Beeline=線", "毒球先閃再散/疊"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Call Me Honey",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Tempting Twist",
+                            "type": "aoe",
+                            "description": "甜甜圈 AoE（旋轉矛指示）。",
+                            "tips": ["貼 Boss 中心"]
+                        },
+                        {
+                            "name": "Honey Beeline",
+                            "type": "aoe",
+                            "description": "前方線 AoE（旋轉矛指示），側安全。",
+                            "tips": ["跑 Boss 側面"]
+                        },
+                        {
+                            "name": "Honeyed Breeze",
+                            "type": "tankbuster",
+                            "description": "雙 T 窄錐物理坦補。",
+                            "tips": [{ "text": "MT/OT 分散面對 Boss", "role": "tank" }]
+                        },
+                        {
+                            "name": "Honey B. Live + 愛心倒數",
+                            "type": "other",
+                            "description": "頭頂愛心 gauge，被機制打到 +1，3 顆=被魅惑暈眩高傷。",
+                            "tips": ["注意愛心數", "盡量避免任何 AoE", "用補職清理"]
+                        },
+                        {
+                            "name": "Love Me Tender",
+                            "type": "spread",
+                            "description": "全員散開標記 + 4 個塔（後續可能更多）。被打到 +1 愛心。",
+                            "tips": ["散開不重疊", "4 人各踩 1 塔"]
+                        },
+                        {
+                            "name": "Loveseeker",
+                            "type": "aoe",
+                            "description": "貼身 AoE。",
+                            "tips": ["跑遠"]
+                        },
+                        {
+                            "name": "Love Me Tender (心 + 圓 AoE)",
+                            "type": "aoe",
+                            "description": "Boss 噴愛心 + 場邊愛心 + 多個圓 AoE。",
+                            "tips": ["邊閃心邊閃圓"]
+                        },
+                        {
+                            "name": "Blow Kiss",
+                            "type": "aoe",
+                            "description": "寬前方錐 AoE。",
+                            "tips": ["繞 Boss 後"]
+                        },
+                        {
+                            "name": "Love Me Tender (9 連圓)",
+                            "type": "aoe",
+                            "description": "9 個連續圓 AoE 外圍 + 1 個中央。",
+                            "tips": ["第一個爆完馬上進", "再跟順序跑"]
+                        },
+                        {
+                            "name": "Honey B. Finale",
+                            "type": "raidwide",
+                            "description": "全體傷 + 移除愛心 gauge。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Splash of Venom（毒線）",
+                            "type": "spread",
+                            "description": "Beeline 後留下毒球，爆完散開標記（毒抗下重疊致命）。",
+                            "tips": ["先閃 Beeline + 毒球", "再散開"]
+                        },
+                        {
+                            "name": "Drop of Venom（毒甜甜圈）",
+                            "type": "stack",
+                            "description": "Twist 後留毒球，爆完疊機標記（毒抗下重疊致命）。",
+                            "tips": ["先閃 Twist + 毒球", "再回中央疊"]
+                        },
+                        {
+                            "name": "Alarm Pheromones",
+                            "type": "aoe",
+                            "description": "場邊 Groupbee 蜂群放線 AoE 穿過中央；後續對 2 個象限放（對角象限安全）。",
+                            "tips": ["跑到沒被打的對角"]
+                        },
+                        {
+                            "name": "Heartsies (二輪愛心)",
+                            "type": "stack",
+                            "description": "2 名玩家疊機，需要 4 人疊不然多扣愛心。",
+                            "tips": ["分 4 人疊每邊"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

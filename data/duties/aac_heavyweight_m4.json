@@ -10,59 +10,108 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Bloodshed：一隻手變龍頭，看手位置=cleave 邊。",
+        "2）Cruel Coil：被拉到中央被綁，看 Boss 旋轉缺口逆時針旋 90 度逃脫。",
+        "3）Bring Down the House：場地被切成 4 條交錯長條；中間修復後可跨。",
+        "4）Grotesquerie：Flesh Forward/Back 擊退方向；Directed 錐 AoE 朝四方向；Shared 1 人疊機。",
+        "5）Phase 2：5 條線 AoE + 散開 + 一手綠毒寬線 AoE（對側安全）。"
+    ],
+    "notes": "DT 7.4 AAC 重量級 4（Lv 100，ilvl 745）。The Lindwurm（總裁變身）。AAC 終戰。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "巨蛇龍總裁",
+            "nameEn": "The Lindwurm",
+            "mnemonic": ["手變龍頭=該側 cleave", "Cruel Coil 找旋轉缺口", "Bring Down 場切 4 條"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "The Fixer",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Bloodshed + Serpentine Scourge",
+                            "type": "aoe",
+                            "description": "一隻手變龍頭 = 該側半場 cleave（快 cast）。",
+                            "tips": ["看手位置繞對側"]
+                        },
+                        {
+                            "name": "Ravenous Reach",
+                            "type": "aoe",
+                            "description": "手伸長到左/右側放寬錐 AoE。",
+                            "tips": ["跑到手後方"]
+                        },
+                        {
+                            "name": "Burst 肉池",
+                            "type": "aoe",
+                            "description": "手放完 AoE 後留肉池會擴張後爆。",
+                            "tips": ["遠離肉池"]
+                        },
+                        {
+                            "name": "Cruel Coil + Constrictor",
+                            "type": "other",
+                            "description": "把全員拉到中央 + bind 5 秒。Boss 蛇繞中央留缺口，每秒旋轉 90 度逆時針，3 秒後 Constrictor 即死。",
+                            "tips": ["bind 結束後快跑", "從缺口出去（逆時針）"]
+                        },
+                        {
+                            "name": "Visceral Burst",
+                            "type": "tankbuster",
+                            "description": "雙坦 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                        },
+                        {
+                            "name": "Grotesquerie (Phase 1)",
+                            "type": "spread",
+                            "description": "全員 Bursting Grotesqurie debuff 28 秒結束時散開 AoE。",
+                            "tips": ["拉開 + debuff 結束前散開"]
+                        },
+                        {
+                            "name": "Splattershed + Feral Fission + Bring Down the House",
+                            "type": "other",
+                            "description": "兩手都變龍頭 + 蛇地圖預警 + 場地切成 4 條交錯。Fate of the Wurm = 不能跳。",
+                            "tips": ["看蛇路徑跑安全長條", "別跳過缺口"]
+                        },
+                        {
+                            "name": "Venomous Scourge",
+                            "type": "spread",
+                            "description": "全員散開標記。",
+                            "tips": ["散開"]
+                        },
+                        {
+                            "name": "Grotesquerie (組合)",
+                            "type": "other",
+                            "description": "Flesh Forward/Back（擊退）+ Directed（錐 AoE）+ Shared（1 人疊機）+ Boss Ravenous Reach 組合。",
+                            "tips": ["先看 Forward/Back 預判擊退方向", "再看 Directed 錐 AoE 方向", "Shared 的人引疊機"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Mindless Flesh",
+                            "type": "spread",
+                            "description": "5 條線 AoE 覆蓋全部列 + 散開標記。",
+                            "tips": ["找縫散開"]
+                        },
+                        {
+                            "name": "綠毒寬線",
+                            "type": "aoe",
+                            "description": "Boss 一隻手綠毒 = 該側寬線 AoE，對側安全。",
+                            "tips": ["跑到對側"]
+                        },
+                        {
+                            "name": "Splattershed",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

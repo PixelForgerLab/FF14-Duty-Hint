@@ -10,59 +10,122 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Wolves' Reign 連招：點 → 3 影 AoE → Boss 跳邊線 → 寬錐擊退。",
+        "2）Beckon Moonlight：4 個分身依出現順序半場 cleave；先找前 2 個安全象限，再對角跳。",
+        "3）Shadowchase：5 個分身放線 AoE，找分身後方躲。",
+        "4）Adds Phase：石狼 + 風狼，必須打死否則 enrage；同時要散開或疊機。",
+        "5）Phase 2 場地縮小 + Hungry for Victory 加速，注意擊退會掉場外。"
+    ],
+    "notes": "DT 7.2 AAC 中量級 4（Lv 100，ilvl 715）。Howling Blade 嚎月狼王。AAC 中量級終戰。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "嚎月狼王",
+            "nameEn": "The Howling Blade",
+            "mnemonic": ["Wolves' Reign 連招要記順序", "找分身後方躲", "Phase 2 場地縮小注意擊退"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Extraplanar Pursuit",
+                            "type": "raidwide",
+                            "description": "全體物理傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Great Divide",
+                            "type": "stack",
+                            "description": "主 T 線疊機坦補，兩 T 都疊。",
+                            "tips": [{ "text": "MT/OT 集中疊", "role": "tank" }]
+                        },
+                        {
+                            "name": "Wolves' Reign",
+                            "type": "aoe",
+                            "description": "連招：小點 AoE → 3 影分身指示場邊圓 AoE → Boss 跳一個圓位置放前方線 AoE → 寬錐 AoE 擊退。",
+                            "tips": ["每段按順序解", "最後一段抗擊退或位置調整"]
+                        },
+                        {
+                            "name": "Heavensearth",
+                            "type": "stack",
+                            "description": "全員疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Beckon Moonlight",
+                            "type": "aoe",
+                            "description": "4 個分身每個方向出現，依舉劍方向放半場 cleave，按出現順序解。",
+                            "tips": ["先找前 2 個分身都安全的象限", "再對角跳"]
+                        },
+                        {
+                            "name": "Shadowchase",
+                            "type": "aoe",
+                            "description": "5 分身呈五邊形，各放前方線 AoE。",
+                            "tips": ["跑到任一分身後方"]
+                        },
+                        {
+                            "name": "Bare Fangs + Terrestrial Rage",
+                            "type": "stack",
+                            "description": "4 個 Gleaming Fang 排成線，2 先 2 後放線 AoE 穿透；同時 3 組圓 AoE 點名 + 疊機。",
+                            "tips": ["找線縫", "閃圓 AoE", "全員疊"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Adds Phase",
+                    "mechanics": [
+                        {
+                            "name": "Tactical Pack",
+                            "type": "other",
+                            "description": "石狼 + 風狼，需在 Saber Intensity 100 前打完。",
+                            "tips": [
+                                { "text": "兩坦疊狼一起打", "role": "tank" },
+                                "全員集火"
+                            ]
+                        },
+                        {
+                            "name": "Weal of Stone / Wind + Gust / Heavensearth",
+                            "type": "spread",
+                            "description": "狼線 AoE + 散開或疊機。",
+                            "tips": ["全員集中 + 減傷", "散開時也要保持 group"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2（加速）",
+                    "mechanics": [
+                        {
+                            "name": "Ravenous Saber",
+                            "type": "raidwide",
+                            "description": "5 段物理傷 + 場地縮小。",
+                            "tips": [{ "text": "連補 + 減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Wolves' Reign (加速)",
+                            "type": "aoe",
+                            "description": "更快版本 + 2 個 Weal of Stone 線 + 寬錐擊退（場小掉外）。",
+                            "tips": ["反應更快", "用抗擊退"]
+                        },
+                        {
+                            "name": "Terrestrial Titans",
+                            "type": "aoe",
+                            "description": "3 個石柱 + Titanic Pursuit 砍倒成線 AoE。3 組。",
+                            "tips": ["看切割方向預判倒下位置"]
+                        },
+                        {
+                            "name": "Tracking Tremors",
+                            "type": "stack",
+                            "description": "5 段疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Beckon Moonlight + Stone Plus",
+                            "type": "aoe",
+                            "description": "標準 Moonlight + 4 個石狼放十字線 AoE + Terrestrial Rage。",
+                            "tips": ["用 Sprint", "依施法條找對角"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

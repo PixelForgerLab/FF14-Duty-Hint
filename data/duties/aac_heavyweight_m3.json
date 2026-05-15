@@ -10,59 +10,140 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Draw Steel：鐮刀=甜甜圈、斧頭=點 AoE、劍=十字（看面向）。",
+        "2）Phase 2 Assault Apex：依武器生成順序跳過去執行 AoE，風武器留旋風後再放錐 AoE。",
+        "3）Phase 3 場地分裂：Flatliner 把場分兩半，至少 2 人/邊。",
+        "4）Foregone Fatality：兩 portal 連石頭+T 坦補；其他人疊機。",
+        "5）Arcadion Avalanche：被點的平台會被砸，跑到對側安全平台。"
+    ],
+    "notes": "DT 7.4 AAC 重量級 3（Lv 100，ilvl 745）。The Tyrant 大冠軍。3 階段。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "暴君",
+            "nameEn": "The Tyrant",
+            "mnemonic": ["看武器類型 = AoE 形狀", "場地分裂要分邊站", "看 portal 連繩"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Crown of Arcadia",
+                            "type": "raidwide",
+                            "description": "全體物理傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Draw Steel + Smashdown",
+                            "type": "aoe",
+                            "description": "鐮=甜甜圈、斧=點 AoE、劍=十字（依 Boss 朝向）。",
+                            "tips": ["看武器類型站位"]
+                        },
+                        {
+                            "name": "Void Stardust",
+                            "type": "spread",
+                            "description": "全員紫散開標記（3 段，每段留圓 AoE）。",
+                            "tips": ["持續散開拉開 AoE"]
+                        },
+                        {
+                            "name": "Trophy Weapons + Assault Evolved",
+                            "type": "aoe",
+                            "description": "3 武器 + 連繩順序，Boss 跳每個武器執行對應 AoE。",
+                            "tips": ["跟著順序預判跳點"]
+                        },
+                        {
+                            "name": "Dance of Domination",
+                            "type": "raidwide",
+                            "description": "8 段全體傷 + 留三角形線 AoE。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }, "閃三角內部"]
+                        },
+                        {
+                            "name": "Raw Steel",
+                            "type": "spread",
+                            "description": "副坦坦補 + 非坦散開。",
+                            "tips": ["分散站位"]
+                        },
+                        {
+                            "name": "Charybdistopia",
+                            "type": "raidwide",
+                            "description": "全員 HP 變 1。",
+                            "tips": [{ "text": "立刻全補", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Ultimate Trophy Weapons + Assault Apex",
+                            "type": "aoe",
+                            "description": "武器依序生成 + Boss 跳過去執行 AoE（無連繩）。風武器留旋風。",
+                            "tips": ["記武器生成順序", "閃旋風 + 錐 AoE"]
+                        },
+                        {
+                            "name": "One and Only",
+                            "type": "raidwide",
+                            "description": "高傷全體傷。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3",
+                    "mechanics": [
+                        {
+                            "name": "Meteorain",
+                            "type": "stack",
+                            "description": "4 塔（2 近 2 遠對角），各踩 1。",
+                            "tips": ["1 人/塔", "留石頭"]
+                        },
+                        {
+                            "name": "Foregone Fatality",
+                            "type": "tankbuster",
+                            "description": "南北 portal 連石頭 T 坦補 + 1 非坦疊機。",
+                            "tips": [
+                                { "text": "2 T 各接 1 portal", "role": "tank" },
+                                "非坦集中疊"
+                            ]
+                        },
+                        {
+                            "name": "Double Tyrannihilation",
+                            "type": "other",
+                            "description": "兩段全場 AoE 摧毀近的石頭。躲在「另一個石頭背後的石頭」。",
+                            "tips": ["躲第二排石頭"]
+                        },
+                        {
+                            "name": "Flatliner",
+                            "type": "other",
+                            "description": "中央線 AoE + 擊退 + 場地分兩半。",
+                            "tips": ["位置調好被推到牆", "至少 2 人/邊"]
+                        },
+                        {
+                            "name": "Majestic Meteor + Fire and Fury",
+                            "type": "aoe",
+                            "description": "3 組圓 AoE 點名 + 場外線 AoE + 2 個對角漸減 + 對角 90 度 cleave。",
+                            "tips": ["閃圓 + 對角站位"]
+                        },
+                        {
+                            "name": "Knockback Towers",
+                            "type": "other",
+                            "description": "4 角塔 + 擊退。",
+                            "tips": ["1 人/塔", "位置調好"]
+                        },
+                        {
+                            "name": "Arcadion Avalanche",
+                            "type": "other",
+                            "description": "Boss 面對的平台被砸成線 AoE，安全平台另一個。",
+                            "tips": ["看 Boss 面向跑對側平台"]
+                        },
+                        {
+                            "name": "Heartbreak Kick",
+                            "type": "stack",
+                            "description": "5 段疊機塔（兩次）。沒人在塔內=巨傷。",
+                            "tips": ["全員疊塔"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

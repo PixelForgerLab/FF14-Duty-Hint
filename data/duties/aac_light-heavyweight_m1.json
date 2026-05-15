@@ -10,59 +10,90 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Mouser：4x4 格部分被打 0/1/2 次，2 次會破洞掉下；先觀察 9 段預警找安全格。",
+        "2）Black Cat Crossing：4 條線指示 = 錐 AoE 中心（不是線形），找對角無線方向。",
+        "3）Elevate and Eviscerate：被擊飛要落到完整格（未破損）；4 次依序點不同職業。",
+        "4）Copycat：分身機制（Predaceous Pounce 或 Eliminate）+ Boss 自己 stack/spread。"
+    ],
+    "notes": "DT 7.01 AAC 輕量級 1（Lv 100，ilvl 685）。Black Cat（FFXI Cath Palug 致敬）。4x4 場地會破洞是這 boss 特色。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "黑貓",
+            "nameEn": "Black Cat",
+            "mnemonic": ["4x4 格觀察 Mouser", "Crossing 線=錐", "看擊飛箭頭找完整格"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Bloody Scratch",
+                            "type": "raidwide",
+                            "description": "全體物理傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "One-two Paw",
+                            "type": "aoe",
+                            "description": "兩段半場 cleave，看左/右爪發光順序。",
+                            "tips": ["看爪光先後", "繞 Boss 另一側"]
+                        },
+                        {
+                            "name": "Black Cat Crossing",
+                            "type": "aoe",
+                            "description": "對角或基本方向 4 條線指示，但實際是錐 AoE。兩組依序。",
+                            "tips": ["線指示=錐 AoE 中心方向", "看對角方向找縫"]
+                        },
+                        {
+                            "name": "Biscuit Maker",
+                            "type": "tankbuster",
+                            "description": "對主 T 單體物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Clawful",
+                            "type": "stack",
+                            "description": "全員疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Mouser",
+                            "type": "other",
+                            "description": "9 段 AoE 預警每段打 1 格，部分格 0/1/2 次。打 2 次=破洞會跌下。",
+                            "tips": ["先觀察 9 段預警", "找 0 或 1 次的格站", "每象限至少留 1 格"]
+                        },
+                        {
+                            "name": "Elevate and Eviscerate",
+                            "type": "other",
+                            "description": "連繩玩家擊飛，落點看箭頭方向。落到破損格會把格踩破跌下；落到完整格會讓格變損傷。連用 4 次（同職業）。",
+                            "tips": ["拉箭頭往完整格", "別站隊友破損格"]
+                        },
+                        {
+                            "name": "Shockwave",
+                            "type": "other",
+                            "description": "Boss 中心放射狀擊退。",
+                            "tips": ["位置調好讓被擊退方向有完整格", "別站破洞方向"]
+                        },
+                        {
+                            "name": "Predaceous Pounce",
+                            "type": "aoe",
+                            "description": "Boss 多段線+圓 AoE 連跳，依預警順序爆。",
+                            "tips": ["記順序找跳的縫"]
+                        },
+                        {
+                            "name": "Leaping One-two Paw / Crossing",
+                            "type": "aoe",
+                            "description": "Boss 滑到指定點再放 cleave/錐。注意不轉向。",
+                            "tips": ["看滑動終點預判面向", "繞對側"]
+                        },
+                        {
+                            "name": "Copycat",
+                            "type": "spread",
+                            "description": "分身放 Elevate（連繩擊飛）+ Boss 放 Overshadow 線疊機。連用 4 次。",
+                            "tips": ["被擊飛的人不會被疊機打到（在空中）", "拉箭頭到完整格即可"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

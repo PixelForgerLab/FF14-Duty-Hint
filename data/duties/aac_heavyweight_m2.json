@@ -10,59 +10,113 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Red Hot 先單獨：火 AoE 留池、Cutback Blaze 圓錐火池。",
+        "2）Deep Blue 換場：浪擊退 + 線 AoE + Deep Varial 衝鋒。",
+        "3）合體後：Hot Aerial 4 塔留火池 + Sick Swell 浪擊退要避開火池。",
+        "4）Firesnaking / Watersnaking debuff = 對應 boss 的點名目標。",
+        "5）Xtreme Spectacular：線漸減 + 7 段全體傷。"
+    ],
+    "notes": "DT 7.4 AAC 重量級 2（Lv 100，ilvl 745）。Red Hot + Deep Blue 兄弟雙 boss。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "炎熱兄 + 深藍弟",
+            "nameEn": "Red Hot + Deep Blue (The Xtremes)",
+            "mnemonic": ["先 Red Hot 再 Deep Blue 後合體", "Snaking debuff = 被點", "Sick Swell 避開火池"],
+            "phases": [
+                {
+                    "name": "Red Hot 單戰",
+                    "mechanics": [
+                        {
+                            "name": "Hot Impact",
+                            "type": "tankbuster",
+                            "description": "分擔 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 集中", "role": "tank" }]
+                        },
+                        {
+                            "name": "Alley-oop Inferno",
+                            "type": "spread",
+                            "description": "散開火池標記，留持續火池。",
+                            "tips": ["散開拉開火池"]
+                        },
+                        {
+                            "name": "Cutback Blaze",
+                            "type": "aoe",
+                            "description": "2 名玩家錐 AoE 火池。",
+                            "tips": ["被點往場邊引"]
+                        },
+                        {
+                            "name": "Divers' Dare",
+                            "type": "raidwide",
+                            "description": "全體傷 + 清火池。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Deep Blue 單戰",
+                    "mechanics": [
+                        {
+                            "name": "Sick Swell + Sickest Take-off",
+                            "type": "aoe",
+                            "description": "Deep Blue 沖浪：浪邊擊退 + 中央線 AoE。",
+                            "tips": ["用抗擊退", "閃中央線"]
+                        },
+                        {
+                            "name": "Deep Varial",
+                            "type": "aoe",
+                            "description": "Deep Blue 跳到指定邊放寬錐 AoE 覆蓋大部分場地。",
+                            "tips": ["看箭頭跑對側角"]
+                        },
+                        {
+                            "name": "Deep Impact",
+                            "type": "tankbuster",
+                            "description": "AoE 物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "合體階段",
+                    "mechanics": [
+                        {
+                            "name": "Xtreme Spectacular",
+                            "type": "raidwide",
+                            "description": "線漸減 + 7 段全體傷。",
+                            "tips": ["遠離發光線", "減傷 + 連補"]
+                        },
+                        {
+                            "name": "Hot Aerial",
+                            "type": "stack",
+                            "description": "4 塔輪流（對角方向），每塔留火池。",
+                            "tips": ["1 人/塔", "別重疊火池"]
+                        },
+                        {
+                            "name": "Sick Swell + Hot Aerial 火池",
+                            "type": "other",
+                            "description": "擊退會把人推到火池或推出場。",
+                            "tips": ["位置調好避開火池", "用抗擊退"]
+                        },
+                        {
+                            "name": "Pyrorotation",
+                            "type": "stack",
+                            "description": "玩家疊機留火池。",
+                            "tips": ["全員疊靠 + 拉開"]
+                        },
+                        {
+                            "name": "Alley-oop Maelstrom",
+                            "type": "aoe",
+                            "description": "8 個錐 AoE 後再 8 個（前面安全位）+ 火池爆炸。",
+                            "tips": ["跟著預警縫跑", "閃火池爆"]
+                        },
+                        {
+                            "name": "Firesnaking / Watersnaking + Insane Air",
+                            "type": "aoe",
+                            "description": "兩 boss 各連繩 4 人（坦/補/2 DPS），Insane Air 後依顏色 debuff 點對應 boss 的目標放錐 AoE。",
+                            "tips": ["看自己 debuff 顏色", "被點的人引錐遠離"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

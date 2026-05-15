@@ -10,59 +10,91 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）2-snap / 4-snap Twist：彩虹格指示連續半場 cleave，最後一次反向。",
+        "2）Funky Floor：5 段棋盤格 AoE + 第 3 段疊機。",
+        "3）Disco Infernal：Burn Baby Burn debuff 倒數結束必須站聚光燈內。",
+        "4）Let's Dance：青蛙伴舞 8 段半場 cleave（看舉手方向），躲滿給 Perfect Groove + 免費 LB。",
+        "5）Ride the Waves：3 格寬移動 AoE 從北往南，找留下的空格。"
+    ],
+    "notes": "DT 7.2 AAC 中量級 1（Lv 100，ilvl 715）。Dancing Green 跳舞青蛙。8x8 格場地。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "舞王綠青蛙",
+            "nameEn": "Dancing Green",
+            "mnemonic": ["彩虹格指示半場", "聚光燈內安全", "青蛙舉手 = 半場 cleave 方向"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Do the Hustle",
+                            "type": "aoe",
+                            "description": "Boss 一側彩虹牆 = 該側半場 cleave。",
+                            "tips": ["看彩虹方向繞另一側"]
+                        },
+                        {
+                            "name": "2-snap Twist",
+                            "type": "aoe",
+                            "description": "一側兩次 cleave + 另一側一次（合奏節拍）。",
+                            "tips": ["看彩虹波先後", "繞兩次後跳對側"]
+                        },
+                        {
+                            "name": "4-snap Twist",
+                            "type": "aoe",
+                            "description": "一側四次 cleave + 另一側一次。",
+                            "tips": ["先閃 4 次同側", "最後跳對側"]
+                        },
+                        {
+                            "name": "Deep Cut",
+                            "type": "tankbuster",
+                            "description": "雙 T 錐魔法坦補。",
+                            "tips": [{ "text": "MT/OT 分散面對 Boss", "role": "tank" }]
+                        },
+                        {
+                            "name": "Funky Floor + Full Beat",
+                            "type": "aoe",
+                            "description": "5 段棋盤格 AoE，第 3 段同時疊機。",
+                            "tips": ["看格子顏色找對側", "第 3 段先疊再閃"]
+                        },
+                        {
+                            "name": "Disco Infernal",
+                            "type": "other",
+                            "description": "全員獲得 17 + 35 秒 Burn Baby Burn debuff 倒數，結束時須在聚光燈內。Boss 中間放 Do the Hustle。",
+                            "tips": ["看聚光燈移動路徑", "倒數結束前進聚光燈", "閃 cleave"]
+                        },
+                        {
+                            "name": "Celebrate Good Times",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Ride the Waves",
+                            "type": "aoe",
+                            "description": "北方 1 行空格 + 3 格寬 AoE 從北往南，第二輪不同空格留 1 行間隔。中間夾 2/4-snap Twist。",
+                            "tips": ["跟著空格行跑", "中間閃 cleave"]
+                        },
+                        {
+                            "name": "Ensemble Assemble / Arcady Night Fever / Let's Dance",
+                            "type": "aoe",
+                            "description": "8 個青蛙伴舞依序舉手指示 8 段半場 cleave，躲對應方向。Grooviness 計分。",
+                            "tips": ["看青蛙舉哪手", "繞對側", "盡量躲滿給 LB 與 buff"]
+                        },
+                        {
+                            "name": "Let's Pose!",
+                            "type": "raidwide",
+                            "description": "全體傷依 Grooviness 比例。完美躲過則無傷且加增傷 buff。",
+                            "tips": ["躲完 8 段更好"]
+                        },
+                        {
+                            "name": "Frogtourage / Moonburn",
+                            "type": "stack",
+                            "description": "2 隻青蛙月走指示 AoE 範圍 + 全員 Eighth Beats 疊機。",
+                            "tips": ["先看青蛙繞行軌跡找縫", "再全員疊"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

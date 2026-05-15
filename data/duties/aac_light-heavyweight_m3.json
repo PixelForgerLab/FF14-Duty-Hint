@@ -10,59 +10,93 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Brutal Lariat：跳邊 + 一隻手發光 = 該邊+前 cleave，對側安全。",
+        "2）Murderous Mist：270 度前方錐毒 AoE，繞 Boss 後安全。",
+        "3）Fuses of Fury：短引信先爆、長引信後爆；分別找縫躲。",
+        "4）Doping Draught 後機制升級：Lariat × 2、Fire Spin → Infernal Spin（圓+漸減 + 點 AoE）。"
+    ],
+    "notes": "DT 7.01 AAC 輕量級 3（Lv 100，ilvl 685）。Brute Bomber 暴力炸彈魔。火焰場邊有 Burns DoT。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "暴力炸彈魔",
+            "nameEn": "Brute Bomber",
+            "mnemonic": ["看手光繞對側", "短引信先 / 長引信後", "Mist 跑 Boss 後"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Brutal Impact",
+                            "type": "raidwide",
+                            "description": "4 段全體物理傷（後段變 6 段）。",
+                            "tips": [{ "text": "持續補血 + 減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Knuckle Sandwich",
+                            "type": "tankbuster",
+                            "description": "對副坦坦補需與主坦疊。",
+                            "tips": [{ "text": "MT/OT 集中疊", "role": "tank" }]
+                        },
+                        {
+                            "name": "Brutal Lariat",
+                            "type": "aoe",
+                            "description": "Boss 跳邊 + 一手發光 = 該側 180 度 + 正面 AoE，再衝對側。",
+                            "tips": ["看手光繞對側", "預判衝鋒"]
+                        },
+                        {
+                            "name": "Murderous Mist",
+                            "type": "aoe",
+                            "description": "前方 270 度毒霧錐 AoE，後方安全。",
+                            "tips": ["跑到 Boss 後方"]
+                        },
+                        {
+                            "name": "Barbarous Barrage",
+                            "type": "stack",
+                            "description": "4 個塔每人踩 1 個 + 擊退。",
+                            "tips": [
+                                "1 人/塔",
+                                "用抗擊退或位置調整避免被推到火焰"
+                            ]
+                        },
+                        {
+                            "name": "Fire Spin",
+                            "type": "aoe",
+                            "description": "前方錐 AoE 旋轉 360 度，每個方向只打 1 次。",
+                            "tips": ["第一個爆完進原位安全到結束"]
+                        },
+                        {
+                            "name": "Fuses of Fury",
+                            "type": "aoe",
+                            "description": "場上炸彈：短引信先爆 + 長引信後爆，各放點 AoE。",
+                            "tips": ["先閃短引信", "再閃長引信"]
+                        },
+                        {
+                            "name": "Doping Draught + Lariat Combo",
+                            "type": "aoe",
+                            "description": "Boss 強化後 Lariat 連用 2 次，第二次可同側或對側。",
+                            "tips": ["每次都看手光繞"]
+                        },
+                        {
+                            "name": "Brutal Burn",
+                            "type": "stack",
+                            "description": "重疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Infernal Spin",
+                            "type": "aoe",
+                            "description": "Fire Spin 升級版：加貼身漸減 + 同心甜甜圈 + 後段 3 組圓 AoE 點名。",
+                            "tips": ["先閃貼身", "進中央安全位", "閃圓 AoE"]
+                        },
+                        {
+                            "name": "Fuses + Lariat Combo / Barrage / Mist 組合",
+                            "type": "aoe",
+                            "description": "炸彈 + 各機制組合。",
+                            "tips": ["分階段解：先閃近端再閃遠端"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
