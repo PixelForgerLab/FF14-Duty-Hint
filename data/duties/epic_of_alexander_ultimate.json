@@ -1,13 +1,174 @@
 {
-    "id": "epic_of_alexander_ultimate",
-    "name": "亞歷山大絕境戰",
-    "nameEn": "The Epic of Alexander (Ultimate)",
-    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "ultimate",
-    "playerCount": 8,
-    "iLvlSync": 475,
-    "jobLevelSync": 80,
-    "highEnd": true,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "epic_of_alexander_ultimate",
+  "name": "亞歷山大絕境戰",
+  "nameEn": "The Epic of Alexander (Ultimate)",
+  "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+  "type": "ultimate",
+  "playerCount": 8,
+  "iLvlSync": 475,
+  "jobLevelSync": 80,
+  "highEnd": true,
+  "notes": "TEA（簡稱「絕亞」），FF14 第三個絕代副本，難度與創新度極高。包含 Living Liquid / Brute Justice / Cruise Chaser / Alexander Prime / Perfect Alexander。⚠️ 本提示由 AI 預填，細節（尤其後段時間線）可能不準確，請務必對照影片攻略；歡迎 PR 修正。",
+  "bosses": [
+    {
+      "name": "P1：液態人 + 殘暴正義號",
+      "nameEn": "Phase 1: Living Liquid + Brute Justice",
+      "notes": "兩個 boss 同時出現（液態人 + Brute Justice 雙手）。重點是 Cascade（水交換）和雙 boss DPS 平衡。",
+      "phases": [
+        {
+          "name": "主要機制",
+          "mechanics": [
+            {
+              "name": "Cascade（瀑布）",
+              "type": "tankbuster",
+              "description": "對主 T 的水流攻擊，會結算到水量條，水量過高會爆。",
+              "tips": ["主 T 換奶開盾", "兩 T 維持水量平衡"]
+            },
+            {
+              "name": "Splash（水花）",
+              "type": "raidwide",
+              "description": "全體 AoE。",
+              "tips": ["奶開減傷"]
+            },
+            {
+              "name": "Embolus（小水球）",
+              "type": "other",
+              "description": "場上出現小水球，會緩慢移動，需要打掉或讓特定玩家吸。",
+              "tips": ["依隊伍策略決定吸/打"]
+            },
+            {
+              "name": "Hand of Pain / Beyond Defense",
+              "type": "tankbuster",
+              "description": "Brute Justice 的左手/右手分別有 debuff，需要兩 T 各接一手並換邊。",
+              "tips": ["左右手互換，主 T 與副 T 換 boss"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P2：殘暴正義號 + 巡航號",
+      "nameEn": "Phase 2: Cruise Chaser + Brute Justice",
+      "notes": "兩 boss 都活著，加入 Limit Cut 編號斬擊機制。",
+      "phases": [
+        {
+          "name": "主要機制",
+          "mechanics": [
+            {
+              "name": "Limit Cut（編號斬擊）",
+              "type": "spread",
+              "description": "8 位玩家被點名 1-8 號，依序被 Cruise Chaser 斬擊。",
+              "tips": [
+                "依編號到指定位置（場邊定點）",
+                "面向外側避免格擋反彈傷到隊友",
+                "點名後立刻記憶自己編號"
+              ]
+            },
+            {
+              "name": "Whirlwind / Photon",
+              "type": "raidwide",
+              "description": "Cruise Chaser 的全體攻擊 / 將特定玩家 HP 強制扣到 1。",
+              "tips": ["Photon 後立刻補血", "奶留好治療 CD"]
+            },
+            {
+              "name": "Wormhole Formation",
+              "type": "other",
+              "description": "場地分區傳送，玩家被分配到 N/S 兩側並各自處理 Brute Justice 機制。",
+              "tips": [
+                "兩組各按預定走位",
+                "Brute Justice 會展示左/右手指引接力"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P3：亞歷山大主機",
+      "nameEn": "Phase 3: Alexander Prime",
+      "notes": "兩個 boss 死後出現的亞歷山大本體，包含著名的 Inception / Wormhole / Sentence 等機制。",
+      "phases": [
+        {
+          "name": "主要機制",
+          "mechanics": [
+            {
+              "name": "Mega Holy",
+              "type": "raidwide",
+              "description": "進入 P3 的全體大傷。",
+              "tips": ["全體減傷 + 滿血"]
+            },
+            {
+              "name": "Divine Spear（神聖之矛）",
+              "type": "spread",
+              "description": "4 個玩家被點名，需要散開避免共擔。",
+              "tips": ["散開到指定位置（雙人組合各佔場上一角）"]
+            },
+            {
+              "name": "Sacrament（聖事）",
+              "type": "aoe",
+              "description": "場地十字 AoE，安全區在四角。",
+              "tips": ["跑到場角避開十字"]
+            },
+            {
+              "name": "Optic Sight + Sentence（光學瞄準 + 判決）",
+              "type": "other",
+              "description": "場上多個目標標記，依編號順序爆發；最後對特定玩家發出「判決」（即死 debuff）。",
+              "tips": [
+                "編號順序走位",
+                "判決受害者需要在指定方位（北邊）等候"
+              ]
+            },
+            {
+              "name": "Inception",
+              "type": "other",
+              "description": "TEA 標誌性機制：場地分區 + 多重點名 + 受擊位置交換。",
+              "tips": [
+                "需要嚴格走位",
+                "建議照影片攻略一步步背"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P4：完美亞歷山大",
+      "nameEn": "Phase 4: Perfect Alexander",
+      "notes": "最終階段。Fate Calibration（命運校準） Alpha/Beta 機制非常複雜，是 TEA 最後一個檢驗點。",
+      "phases": [
+        {
+          "name": "主要機制",
+          "mechanics": [
+            {
+              "name": "Temporal Stasis（時停）",
+              "type": "raidwide",
+              "description": "全體機制：場上玩家被時停凍結，需在解凍前到達指定位置。",
+              "tips": ["解凍後立刻就位"]
+            },
+            {
+              "name": "Fate Calibration: Alpha",
+              "type": "other",
+              "description": "極為複雜的多階段機制：分區、編號、塔、共擔、散開組合。",
+              "tips": [
+                "建議找詳細攻略影片背流程",
+                "團隊需事前完整對齊路徑"
+              ]
+            },
+            {
+              "name": "Fate Calibration: Beta",
+              "type": "other",
+              "description": "Beta 是 Alpha 的變體，部分機制顛倒。",
+              "tips": ["注意「鏡像」的差別", "按隊伍既定 Beta 走位"]
+            },
+            {
+              "name": "Perfect Alexander Enrage",
+              "type": "raidwide",
+              "description": "Enrage 約 16-18 分整體，無法防禦的全滅。",
+              "tips": ["P4 是純技術 + DPS 比拼", "建議 P4 開始時剩 6 分以上"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
