@@ -1,13 +1,94 @@
 {
-    "id": "brayfloxs_longstop",
-    "name": "休養勝地布雷福洛克斯野營地",
-    "nameEn": "Brayflox\u0027s Longstop",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 34,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "brayfloxs_longstop",
+  "name": "休養勝地布雷福洛克斯野營地",
+  "nameEn": "Brayflox's Longstop",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 35,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Kyklops：獨眼巨人，注意擊退別摔下台",
+    "Aiatar：兩棲 boss，閃毒液 + AoE 圓圈",
+    "場上有酸液池注意別站"
+  ],
+  "notes": "等級 32 的 4 人副本（哥布林劇情）。Aiatar 是最終 boss，主要小心毒液 AoE 與酸池。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "克琉普斯",
+      "nameEn": "Kyklops",
+      "mnemonic": [
+        "獨眼巨人，會擊退",
+        "靠場邊小心摔下台"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "擊退",
+              "type": "other",
+              "description": "對單體的擊退攻擊。",
+              "tips": [
+                "注意背後是否為平台邊緣",
+                { "text": "T 拉 boss 站靠中間", "role": "tank" }
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "阿傑特",
+      "nameEn": "Aiatar",
+      "mnemonic": [
+        "兩棲 boss，毒液 AoE 多",
+        "場上有酸池別站",
+        "DPS 清小怪避免疊毒"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "毒液 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈毒液，留下酸池。",
+              "tips": [
+                "看到圓圈立刻走出去",
+                "走位避開殘留酸池"
+              ]
+            },
+            {
+              "name": "召喚小怪",
+              "type": "other",
+              "description": "戰鬥中會召喚小怪。",
+              "tips": [
+                "DPS 優先清",
+                { "text": "T 注意拉小怪集中", "role": "tank" }
+              ]
+            },
+            {
+              "name": "毒 debuff",
+              "type": "raidwide",
+              "description": "全體中毒 debuff。",
+              "tips": [
+                { "text": "中毒時補血 + 可解毒", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

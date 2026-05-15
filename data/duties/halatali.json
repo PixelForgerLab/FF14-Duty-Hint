@@ -1,13 +1,95 @@
 {
-    "id": "halatali",
-    "name": "魔獸領域日影地修煉所",
-    "nameEn": "Halatali",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 23,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "halatali",
+  "name": "魔獸領域日影地修煉所",
+  "nameEn": "Halatali",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 24,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Firemane：火元素，閃地面火圈",
+    "Tangata：鬥士，避前方扇形",
+    "Thunderclap Guivre：雷龍，閃直線雷"
+  ],
+  "notes": "等級 20 的 4 人副本（鬥技場副本）。3 個 boss 都不複雜，AoE 走位即可。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "熾熱火叢",
+      "nameEn": "Firemane",
+      "mnemonic": [
+        "火元素，閃腳下火圈"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "腳下火圈",
+              "type": "aoe",
+              "description": "地面出現火焰 AoE。",
+              "tips": [
+                "看到圓圈立刻走出去"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "獸鬥士 坦伽塔",
+      "nameEn": "Tangata",
+      "mnemonic": [
+        "鬥士型 boss，閃前方扇形"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "前方扇形",
+              "type": "tankbuster",
+              "description": "前方扇形攻擊。",
+              "tips": [
+                { "text": "T 拉好 boss 面向場邊", "role": "tank" },
+                "DPS 站背後"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "霹靂雷蛟",
+      "nameEn": "Thunderclap Guivre",
+      "mnemonic": [
+        "雷龍 boss，閃直線雷與 AoE"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "直線雷",
+              "type": "aoe",
+              "description": "前方直線雷攻擊。",
+              "tips": [
+                "閃到線外"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體雷傷。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
