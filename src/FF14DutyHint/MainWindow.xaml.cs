@@ -390,6 +390,14 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private void UpdateRoleToggleButton()
     {
+        // 簡易模式下不顯示 tips → 隱藏角色切換按鈕
+        if (_settings.MnemonicOnly)
+        {
+            RoleToggleButton.Visibility = Visibility.Collapsed;
+            return;
+        }
+        RoleToggleButton.Visibility = Visibility.Visible;
+
         var role = PlayerRoleExtensions.ParseRole(_settings.PreferredRole);
         bool all = string.Equals(_settings.PreferredRole, "all", StringComparison.OrdinalIgnoreCase);
         RoleToggleButton.Content = all ? "全角色" : role.ToDisplayLabel();
@@ -406,6 +414,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             RenderBossList(_currentDuty);
         }
         UpdateMnemonicToggleButton();
+        UpdateRoleToggleButton();
     }
 
     private void RoleToggle_Click(object sender, RoutedEventArgs e)
