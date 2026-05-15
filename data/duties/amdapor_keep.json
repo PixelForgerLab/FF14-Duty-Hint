@@ -1,13 +1,87 @@
 {
-    "id": "amdapor_keep",
-    "name": "邪教駐地無限城古堡",
-    "nameEn": "Amdapor Keep",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 110,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "amdapor_keep",
+  "name": "邪教駐地無限城古堡",
+  "nameEn": "Amdapor Keep",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "途中有惡魔牆機制：要快速擊殺否則推上死",
+    "最終 boss Anantaboga：閃毒液 AoE 與 debuff",
+    "場上有解謎環節"
+  ],
+  "notes": "等級 50 的 4 人副本（無限城古堡）。惡魔牆是著名 DPS check，要快打。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "惡魔牆",
+      "nameEn": "Demon Wall",
+      "mnemonic": [
+        "DPS check：要在牆推上來前打掉",
+        "Boss 是一面會慢慢推進的牆",
+        "失敗 = 全員被推到底死亡"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "推進",
+              "type": "other",
+              "description": "Boss 是一面緩慢向前推進的牆，碰到牆的玩家會被擊飛或秒殺。",
+              "tips": [
+                "DPS 火力全開",
+                "撿場上掉的水晶有 buff",
+                "若快推到底，撤退到 boss 後方繼續打"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "Boss 的範圍攻擊。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "阿難塔波嘉",
+      "nameEn": "Anantaboga",
+      "mnemonic": [
+        "蛇型 boss，閃毒液 AoE",
+        "場上有 debuff 機制",
+        "DPS 清小怪"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "毒液 AoE",
+              "type": "aoe",
+              "description": "腳下毒液圓圈，會留下毒區。",
+              "tips": [
+                "看到圓圈走出去",
+                "避開殘留毒區"
+              ]
+            },
+            {
+              "name": "毒 debuff",
+              "type": "raidwide",
+              "description": "全體中毒。",
+              "tips": [
+                { "text": "中毒解毒 + 補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
