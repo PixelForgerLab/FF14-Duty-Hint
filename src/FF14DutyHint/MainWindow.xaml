@@ -25,6 +25,7 @@
         <conv:StringToVisibilityConverter x:Key="StringToVis"/>
         <conv:TipToDisplayConverter x:Key="TipToDisplay"/>
         <conv:TipRoleToBrushConverter x:Key="TipRoleToBrush"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
     </Window.Resources>
 
     <Border Background="{StaticResource OverlayBg}"
@@ -97,39 +98,13 @@
                                FontWeight="Bold"
                                FontSize="{Binding HeaderFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                TextWrapping="Wrap"/>
-                    <WrapPanel Margin="0,4,0,0">
-                        <!-- 品質徽章 -->
-                        <Border x:Name="QualityBadge"
-                                Background="Transparent"
-                                CornerRadius="3"
-                                Padding="6,1"
-                                Margin="0,2,6,2"
-                                Visibility="Collapsed">
-                            <TextBlock x:Name="QualityBadgeText"
-                                       Foreground="#1A1A1F"
-                                       FontSize="11"
-                                       FontWeight="Bold"/>
-                        </Border>
-                        <!-- 來源徽章 -->
-                        <Border x:Name="SourceBadge"
-                                Background="#3A3A45"
-                                CornerRadius="3"
-                                Padding="6,1"
-                                Margin="0,2,6,2"
-                                Visibility="Collapsed">
-                            <TextBlock x:Name="SourceBadgeText"
-                                       Foreground="{StaticResource TextBrush}"
-                                       FontSize="11"
-                                       FontWeight="SemiBold"/>
-                        </Border>
-                        <TextBlock x:Name="DutyMetaText"
-                                   Foreground="{StaticResource MutedTextBrush}"
-                                   FontSize="11"
-                                   VerticalAlignment="Center"
-                                   Margin="0,2,0,2"
-                                   TextWrapping="Wrap"
-                                   Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={StaticResource StringToVis}}"/>
-                    </WrapPanel>
+                    <!-- meta 區：徽章與資訊 inline 流式排版 (可整段 wrap) -->
+                    <TextBlock x:Name="DutyMetaInline"
+                               Foreground="{StaticResource MutedTextBrush}"
+                               FontSize="11"
+                               Margin="0,4,0,0"
+                               TextWrapping="Wrap"
+                               LineHeight="20"/>
                 </StackPanel>
             </Border>
 
@@ -139,7 +114,7 @@
                           HorizontalScrollBarVisibility="Disabled"
                           Padding="12,8">
                 <StackPanel>
-                    <!-- 副本層級口訣 -->
+                    <!-- 副本層級簡易提示 -->
                     <Border x:Name="DutyMnemonicBorder"
                             Background="#33FFB347"
                             BorderBrush="#FFB347"
@@ -148,19 +123,38 @@
                             Padding="10,6"
                             Margin="0,0,0,8"
                             Visibility="Collapsed">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="💡 口訣"
+                        <DockPanel>
+                            <TextBlock Text="💡 簡易"
+                                       DockPanel.Dock="Top"
                                        Foreground="{StaticResource Accent}"
                                        FontWeight="Bold"
-                                       Margin="0,0,8,0"
-                                       VerticalAlignment="Center"/>
-                            <TextBlock x:Name="DutyMnemonicText"
-                                       Foreground="{StaticResource TextBrush}"
-                                       FontWeight="SemiBold"
-                                       FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
-                                       TextWrapping="Wrap"
-                                       VerticalAlignment="Center"/>
-                        </StackPanel>
+                                       Margin="0,0,0,4"/>
+                            <ItemsControl x:Name="DutyMnemonicList">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0"
+                                                       Text="{Binding Bullet}"
+                                                       Foreground="{StaticResource Accent}"
+                                                       FontWeight="SemiBold"
+                                                       Margin="0,0,6,0"
+                                                       VerticalAlignment="Top"
+                                                       FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                            <TextBlock Grid.Column="1"
+                                                       Text="{Binding Text}"
+                                                       Foreground="{StaticResource TextBrush}"
+                                                       FontWeight="SemiBold"
+                                                       TextWrapping="Wrap"
+                                                       FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DockPanel>
                     </Border>
 
                     <!-- 副本層級備註 -->
@@ -193,25 +187,38 @@
                                                            Foreground="{StaticResource MutedTextBrush}"
                                                            FontSize="11"
                                                            Visibility="{Binding NameEn, Converter={StaticResource StringToVis}}"/>
-                                                <!-- Boss 口訣 -->
+                                                <!-- Boss 簡易 -->
                                                 <Border Background="#33FFB347"
                                                         BorderBrush="#FFB347"
                                                         BorderThickness="3,0,0,0"
                                                         CornerRadius="2"
                                                         Padding="6,3"
                                                         Margin="0,6,0,2"
-                                                        Visibility="{Binding Mnemonic, Converter={StaticResource StringToVis}}">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="💡"
-                                                                   Foreground="{StaticResource Accent}"
-                                                                   Margin="0,0,6,0"
-                                                                   VerticalAlignment="Center"/>
-                                                        <TextBlock Text="{Binding Mnemonic}"
-                                                                   Foreground="{StaticResource TextBrush}"
-                                                                   FontWeight="SemiBold"
-                                                                   TextWrapping="Wrap"
-                                                                   FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
-                                                    </StackPanel>
+                                                        Visibility="{Binding HasMnemonic, Converter={StaticResource BoolToVis}}">
+                                                    <ItemsControl ItemsSource="{Binding MnemonicLines}">
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <Grid Margin="0,1">
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="Auto"/>
+                                                                        <ColumnDefinition Width="*"/>
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <TextBlock Grid.Column="0"
+                                                                               Text="{Binding Bullet}"
+                                                                               Foreground="{StaticResource Accent}"
+                                                                               Margin="0,0,4,0"
+                                                                               VerticalAlignment="Top"
+                                                                               FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                                                    <TextBlock Grid.Column="1"
+                                                                               Text="{Binding Text}"
+                                                                               Foreground="{StaticResource TextBrush}"
+                                                                               FontWeight="SemiBold"
+                                                                               TextWrapping="Wrap"
+                                                                               FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                                                </Grid>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
                                                 </Border>
                                                 <TextBlock Text="{Binding Notes}"
                                                            Foreground="{StaticResource TextBrush}"

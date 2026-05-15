@@ -34,7 +34,7 @@
 | `jobLevelSync` | ⬜ | int | 職業等級需求（由產生器自動填入） |
 | `highEnd` | ⬜ | bool | 是否為高難度（Savage / Ultimate / Chaotic）|
 | `quality` | ⬜ | string | 提示品質：`excellent` / `needs-update` / `skeleton`（見下方說明）|
-| `mnemonic` | ⬜ | string | 副本層級一句話口訣（會在「只看口訣」模式顯示） |
+| `mnemonic` | ⬜ | string \| string[] | 副本層級簡易提示，單句或多句陣列（多句會以 1）2）3）... 編號顯示） |
 | `notes` | ⬜ | string | 副本整體備註 |
 | `bosses` | ✅ | array | Boss 列表 |
 
@@ -50,9 +50,48 @@
 }
 ```
 
+`mnemonic` 也可以寫成多句陣列：
+
+```json
+{
+  "name": "Boss",
+  "mnemonic": [
+    "起手 Plummet → 主 T 對外吃",
+    "Liquid Hell：被點名拉線到場邊",
+    "Conflag Strike：8 人集合分擔"
+  ]
+}
+```
+
 | 欄位 | 說明 |
 |---|---|
-| `mnemonic` | Boss 層級的一句話口訣 |
+| `mnemonic` | Boss 層級簡易提示。單句或多句陣列。 |
+
+## 💡 簡易（Mnemonic）
+
+「簡易」是讓玩家**進本前快速複習**的提示。寫法：
+
+**單句**（短提示）：
+```json
+"mnemonic": "Plummet 主 T 對外吃，Liquid Hell 拉線到邊。"
+```
+
+**多句陣列**（重點清單）：
+```json
+"mnemonic": [
+  "Famfrit：看水壺方向躲海嘯。",
+  "Belias：快鐘先炸、慢鐘後炸；線不要掃到別人。",
+  "Construct 7：算數題做對，血量要符合條件。",
+  "Yiazmat：平常盡量貼王。",
+  "磁極場時，站到和自己 debuff 相反顏色那半場。",
+  "被點大黑圈就帶開。",
+  "有小怪或心臟先清，不要貪打王。"
+]
+```
+
+UI 會以「💡 簡易」標籤顯示。多句陣列會自動編號為 `1）` `2）` `3）...`。
+
+主視窗右上有「全部 ↔ 簡易」切換鈕，切到「簡易」就只看這些重點，不看詳細機制。
 
 ## 🏅 品質標籤 (`quality`)
 

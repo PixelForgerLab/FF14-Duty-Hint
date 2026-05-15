@@ -150,7 +150,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private const string NoDutyHint = "👈 點選右上「副本」按鈕，選擇要顯示的副本提示。";
     private const string NoMechanicsHint = "🚧 此副本目前沒有詳細機制提示。\n\n你可以到 GitHub 透過 PR 貢獻你的攻略筆記！\nhttps://github.com/PixelForgerLab/FF14-Duty-Hint\n\n或者點右上「副本」選擇其他副本。";
-    private const string MnemonicOnlyNoneHint = "ℹ 此副本（與每個 Boss）目前沒有口訣資料。\n\n切換到「全部」模式即可看到完整機制。";
+    private const string MnemonicOnlyNoneHint = "ℹ 此副本（與每個 Boss）目前沒有簡易提示資料。\n\n切換到「全部」模式即可看到完整機制。";
 
     private void SetDuty(Duty? duty)
     {
@@ -159,40 +159,30 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         if (duty is null)
         {
             DutyNameText.Text = "（尚未選擇副本）";
-            DutyMetaText.Text = string.Empty;
+            DutyMetaInline.Inlines.Clear();
             DutyNotesBorder.Visibility = Visibility.Collapsed;
             DutyNotesText.Text = string.Empty;
             BossList.ItemsSource = null;
-            QualityBadge.Visibility = Visibility.Collapsed;
-            SourceBadge.Visibility = Visibility.Collapsed;
             DutyMnemonicBorder.Visibility = Visibility.Collapsed;
+            DutyMnemonicList.ItemsSource = null;
             EmptyHintText.Text = NoDutyHint;
             EmptyHintText.Visibility = Visibility.Visible;
             return;
         }
 
         DutyNameText.Text = duty.DisplayName;
+        ApplyMetaInline(duty);
 
-        var metaParts = new List<string>();
-        if (!string.IsNullOrWhiteSpace(duty.Expansion)) metaParts.Add(duty.Expansion!);
-        if (!string.IsNullOrWhiteSpace(duty.Type)) metaParts.Add(duty.Type!);
-        if (duty.PlayerCount is int pc) metaParts.Add($"{pc}人");
-        if (duty.JobLevelSync is int jl && jl > 0) metaParts.Add($"Lv {jl}");
-        if (duty.ILvlSync is int il && il > 0) metaParts.Add($"iLvl {il}");
-        if (duty.HighEnd) metaParts.Add("★ 高難度");
-        DutyMetaText.Text = string.Join("  ·  ", metaParts);
-
-        ApplyQualityBadge(duty.Quality);
-        ApplySourceBadge(duty);
-
-        // 副本口訣
-        if (!string.IsNullOrWhiteSpace(duty.Mnemonic))
+        // 副本層級簡易提示
+        var dutyLines = duty.Mnemonic.ToDisplayLines();
+        if (dutyLines.Count > 0)
         {
-            DutyMnemonicText.Text = duty.Mnemonic;
+            DutyMnemonicList.ItemsSource = dutyLines;
             DutyMnemonicBorder.Visibility = Visibility.Visible;
         }
         else
         {
+            DutyMnemonicList.ItemsSource = null;
             DutyMnemonicBorder.Visibility = Visibility.Collapsed;
         }
 
@@ -211,6 +201,93 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         _settings.LastDutyId = duty.Id;
         UpdateMnemonicToggleButton();
         UpdateRoleToggleButton();
+    }
+
+    /// <summary>
+    /// 把品質徽章、來源徽章、meta 資訊組成 inline 流式 TextBlock，
+    /// 讓視窗變窄時可以自然 wrap，避免徽章獨占一行。
+    /// </summary>
+    private void ApplyMetaInline(Duty duty)
+    {
+        DutyMetaInline.Inlines.Clear();
+
+        // 品質徽章
+        if (duty.Quality != Models.DutyQuality.Unspecified)
+        {
+            DutyMetaInline.Inlines.Add(new System.Windows.Documents.InlineUIContainer(
+                BuildBadge(duty.Quality switch
+                {
+                    Models.DutyQuality.Excellent => "優秀",
+                    Models.DutyQuality.NeedsUpdate => "需更新",
+                    Models.DutyQuality.Skeleton => "骨架",
+                    _ => ""
+                }, duty.Quality switch
+                {
+                    Models.DutyQuality.Excellent => System.Windows.Media.Color.FromRgb(0xFF, 0xC1, 0x07),
+                    Models.DutyQuality.NeedsUpdate => System.Windows.Media.Color.FromRgb(0xFB, 0x8C, 0x00),
+                    Models.DutyQuality.Skeleton => System.Windows.Media.Color.FromRgb(0x60, 0x60, 0x68),
+                    _ => System.Windows.Media.Colors.Transparent
+                }, System.Windows.Media.Color.FromRgb(0x1A, 0x1A, 0x1F)))
+            { BaselineAlignment = System.Windows.BaselineAlignment.Center });
+            DutyMetaInline.Inlines.Add(new System.Windows.Documents.Run(" "));
+        }
+
+        // 來源徽章
+        if (duty.Source != Models.DutySource.BuiltIn || duty.OverridesBuiltIn)
+        {
+            var sourceLabel = duty.Source switch
+            {
+                Models.DutySource.UserAppData => "自訂",
+                Models.DutySource.UserCustomFolder => "自訂*",
+                _ => ""
+            };
+            if (!string.IsNullOrEmpty(sourceLabel))
+            {
+                var badge = BuildBadge(sourceLabel,
+                    System.Windows.Media.Color.FromRgb(0x3A, 0x3A, 0x45),
+                    System.Windows.Media.Color.FromRgb(0xF0, 0xF0, 0xF0));
+                badge.ToolTip = duty.OverridesBuiltIn
+                    ? $"來自 {duty.SourcePath}（覆寫了內建資料）"
+                    : $"來自 {duty.SourcePath}";
+                DutyMetaInline.Inlines.Add(new System.Windows.Documents.InlineUIContainer(badge)
+                { BaselineAlignment = System.Windows.BaselineAlignment.Center });
+                DutyMetaInline.Inlines.Add(new System.Windows.Documents.Run(" "));
+            }
+        }
+
+        // meta 文字
+        var metaParts = new List<string>();
+        if (!string.IsNullOrWhiteSpace(duty.Expansion)) metaParts.Add(duty.Expansion!);
+        if (!string.IsNullOrWhiteSpace(duty.Type)) metaParts.Add(duty.Type!);
+        if (duty.PlayerCount is int pc) metaParts.Add($"{pc}人");
+        if (duty.JobLevelSync is int jl && jl > 0) metaParts.Add($"Lv {jl}");
+        if (duty.ILvlSync is int il && il > 0) metaParts.Add($"iLvl {il}");
+        if (duty.HighEnd) metaParts.Add("★ 高難度");
+        if (metaParts.Count > 0)
+        {
+            DutyMetaInline.Inlines.Add(new System.Windows.Documents.Run(string.Join("  ·  ", metaParts)));
+        }
+    }
+
+    private static System.Windows.Controls.Border BuildBadge(
+        string label,
+        System.Windows.Media.Color bgColor,
+        System.Windows.Media.Color fgColor)
+    {
+        return new System.Windows.Controls.Border
+        {
+            Background = new System.Windows.Media.SolidColorBrush(bgColor),
+            CornerRadius = new System.Windows.CornerRadius(3),
+            Padding = new System.Windows.Thickness(5, 1, 5, 1),
+            Margin = new System.Windows.Thickness(0, 0, 2, 0),
+            Child = new System.Windows.Controls.TextBlock
+            {
+                Text = label,
+                Foreground = new System.Windows.Media.SolidColorBrush(fgColor),
+                FontSize = 11,
+                FontWeight = System.Windows.FontWeights.Bold
+            }
+        };
     }
 
     /// <summary>
@@ -236,7 +313,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
             if (_settings.MnemonicOnly)
             {
-                // 只看口訣模式：保留 boss header，不顯示 phases
+                // 只看簡易模式：保留 boss header，不顯示 phases
                 bosses.Add(bossCopy);
                 continue;
             }
@@ -270,19 +347,17 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         BossList.ItemsSource = bosses;
 
-        // 空狀態提示
-        bool anyContent = bosses.Count > 0 && !(
-            _settings.MnemonicOnly &&
-            string.IsNullOrWhiteSpace(duty.Mnemonic) &&
-            bosses.All(b => string.IsNullOrWhiteSpace(b.Mnemonic))
-        );
+        // 空狀態提示：MnemonicOnly 模式下若副本與所有 boss 都沒有簡易內容 → 顯示「無簡易」提示
+        bool anyMnemonicContent =
+            (duty.Mnemonic?.HasContent ?? false) ||
+            bosses.Any(b => b.HasMnemonic);
 
         if (duty.Bosses.Count == 0)
         {
             EmptyHintText.Text = NoMechanicsHint;
             EmptyHintText.Visibility = Visibility.Visible;
         }
-        else if (_settings.MnemonicOnly && !anyContent)
+        else if (_settings.MnemonicOnly && !anyMnemonicContent)
         {
             EmptyHintText.Text = MnemonicOnlyNoneHint;
             EmptyHintText.Visibility = Visibility.Visible;
@@ -295,10 +370,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private void UpdateMnemonicToggleButton()
     {
-        MnemonicToggleButton.Content = _settings.MnemonicOnly ? "口訣" : "全部";
+        MnemonicToggleButton.Content = _settings.MnemonicOnly ? "簡易" : "全部";
         MnemonicToggleButton.ToolTip = _settings.MnemonicOnly
-            ? "目前：只看口訣（按一下切換為全部）"
-            : "目前：全部顯示（按一下切換為只看口訣）";
+            ? "目前：只看簡易（按一下切換為全部）"
+            : "目前：全部顯示（按一下切換為只看簡易）";
     }
 
     private void UpdateRoleToggleButton()
@@ -338,52 +413,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             RenderBossList(_currentDuty);
         }
         UpdateRoleToggleButton();
-    }
-
-    private void ApplyQualityBadge(DutyQuality q)
-    {
-        if (q == DutyQuality.Unspecified)
-        {
-            QualityBadge.Visibility = Visibility.Collapsed;
-            return;
-        }
-
-        var (label, bg) = q switch
-        {
-            DutyQuality.Excellent => ("優秀", System.Windows.Media.Color.FromRgb(0xFF, 0xC1, 0x07)),
-            DutyQuality.NeedsUpdate => ("需更新", System.Windows.Media.Color.FromRgb(0xFB, 0x8C, 0x00)),
-            DutyQuality.Skeleton => ("骨架", System.Windows.Media.Color.FromRgb(0x60, 0x60, 0x68)),
-            _ => ("", System.Windows.Media.Colors.Transparent)
-        };
-        QualityBadgeText.Text = label;
-        QualityBadge.Background = new System.Windows.Media.SolidColorBrush(bg);
-        QualityBadge.Visibility = Visibility.Visible;
-    }
-
-    private void ApplySourceBadge(Duty duty)
-    {
-        if (duty.Source == DutySource.BuiltIn && !duty.OverridesBuiltIn)
-        {
-            SourceBadge.Visibility = Visibility.Collapsed;
-            return;
-        }
-
-        var label = duty.Source switch
-        {
-            DutySource.UserAppData => "自訂",
-            DutySource.UserCustomFolder => "自訂*",
-            _ => string.Empty
-        };
-        if (duty.OverridesBuiltIn)
-        {
-            SourceBadge.ToolTip = $"來自 {duty.SourcePath}（覆寫了內建資料）";
-        }
-        else
-        {
-            SourceBadge.ToolTip = $"來自 {duty.SourcePath}";
-        }
-        SourceBadgeText.Text = label;
-        SourceBadge.Visibility = Visibility.Visible;
     }
 
     private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

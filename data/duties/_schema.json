@@ -30,8 +30,11 @@
       "description": "副本提示品質：excellent=完整可信；needs-update=部分內容但需校對更新；skeleton=只有基本資料"
     },
     "mnemonic": {
-      "type": "string",
-      "description": "副本層級的一句話口訣，可在「只看口訣」模式快速回顧"
+      "description": "副本層級簡易提示。可為單句字串或多句字串陣列（多行會顯示為條列 1）2）3）...）",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
     },
     "notes": { "type": "string" },
     "bosses": {
@@ -42,7 +45,13 @@
         "properties": {
           "name": { "type": "string" },
           "nameEn": { "type": "string" },
-          "mnemonic": { "type": "string", "description": "Boss 層級的一句話口訣" },
+          "mnemonic": {
+            "description": "Boss 層級簡易提示。可為單句或多句陣列",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
           "notes": { "type": "string" },
           "phases": {
             "type": "array",

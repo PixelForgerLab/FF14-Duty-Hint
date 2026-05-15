@@ -41,9 +41,9 @@ public class Duty
     [JsonPropertyName("quality")]
     public string? QualityRaw { get; set; }
 
-    /// <summary>副本整體一句話口訣。</summary>
+    /// <summary>副本層級的簡易提示（單行或多行條列）。</summary>
     [JsonPropertyName("mnemonic")]
-    public string? Mnemonic { get; set; }
+    public Mnemonic? Mnemonic { get; set; }
 
     [JsonPropertyName("notes")]
     public string? Notes { get; set; }
