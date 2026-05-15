@@ -10,59 +10,191 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）桶子仙人：擊退到光禿仙人方向（有花的會放更大 AoE）。",
+        "2）無煙煤：黑箭頭=地面點 AoE、黃箭頭=牆面線 AoE，最後是組合機制。",
+        "3）圖拉爾巨蛇：迷宮機制找到 O 格倒推綠箭頭找路，X 格有劇毒。"
+    ],
+    "notes": "DT 後期副本（Lv 100），ilvl sync 730。圖拉爾巨蛇的迷宮機制是這座副本的特色。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "桶子仙人",
+            "nameEn": "Barreltender",
+            "mnemonic": ["擊退到光禿仙人", "有花的仙人 AoE 更大"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Barbed Bellow",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Heavyweight Needles",
+                            "type": "aoe",
+                            "description": "多個錐 AoE 留縫隙，將爆前 AoE 會擴張覆蓋小縫，玩家要站「最大」的縫。同時場邊長刺有流血 DoT。",
+                            "tips": ["站到最大縫中央", "別碰場邊刺"]
+                        },
+                        {
+                            "name": "Tender Drop",
+                            "type": "other",
+                            "description": "場上掉落多顆仙人掌，多數有花有刺（大 AoE），兩顆光禿（小 AoE）。",
+                            "tips": ["記住光禿仙人位置"]
+                        },
+                        {
+                            "name": "Barrel Breaker",
+                            "type": "other",
+                            "description": "從中心放射狀擊退，每顆仙人掌會放點 AoE（有花有刺更大）。",
+                            "tips": ["位置調到被擊退去靠近光禿仙人", "或直接用抗擊退技能"]
+                        },
+                        {
+                            "name": "Succulent Stomp",
+                            "type": "stack",
+                            "description": "隨機玩家頭頂疊機標記，Boss 跳上去。",
+                            "tips": ["全員疊靠標記者"]
+                        },
+                        {
+                            "name": "Prickly Left / Right",
+                            "type": "aoe",
+                            "description": "依名稱對應方向的半場 cleave 擴大成寬掃，安全位是指示方向「對面」的窄錐。",
+                            "tips": ["Left 名稱 = 站 Boss 右側", "Right 名稱 = 站 Boss 左側"]
+                        },
+                        {
+                            "name": "Tender Fury",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "無煙煤",
+            "nameEn": "Anthracite",
+            "mnemonic": ["黑箭頭=地面 AoE", "黃箭頭=牆面線 AoE"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Anthrabomb (地面)",
+                            "type": "aoe",
+                            "description": "三個黑色圓圈箭頭，指示掉落炸彈的圓 AoE 位置。",
+                            "tips": ["避開黑色圓圈"]
+                        },
+                        {
+                            "name": "Anthrabomb (牆面)",
+                            "type": "aoe",
+                            "description": "黃色箭頭指向圓孔或方孔，炸彈丟進去後從牆面同形孔放線 AoE。",
+                            "tips": ["看孔的形狀（圓/方）找對應牆孔位置"]
+                        },
+                        {
+                            "name": "Anthrabomb (組合)",
+                            "type": "aoe",
+                            "description": "黑+黃箭頭同時出現，地面 AoE + 牆面線 AoE 都要躲。",
+                            "tips": ["兩個都要看清楚"]
+                        },
+                        {
+                            "name": "Carbonaceous Combustion",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Carniflagration",
+                            "type": "spread",
+                            "description": "連續 3 組組合 AoE，最後一組附加散開標記。",
+                            "tips": ["跟上順序", "最後加散開要分散"]
+                        },
+                        {
+                            "name": "Burning Coals",
+                            "type": "stack",
+                            "description": "疊機標記。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Chimney Smack",
+                            "type": "tankbuster",
+                            "description": "對主 T 魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "圖拉爾巨蛇",
+            "nameEn": "Greatest Serpent of Tural",
+            "mnemonic": ["迷宮找 O 格倒推", "X 格劇毒不能踩"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Dubious Tulidisaster",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害並在場邊生成流血刺。",
+                            "tips": ["別碰場邊刺"]
+                        },
+                        {
+                            "name": "Bouncy Council (橫/直/斜)",
+                            "type": "aoe",
+                            "description": "4 個分身依箭頭方向放線 AoE。",
+                            "tips": ["看頭頂藍色箭頭找縫"]
+                        },
+                        {
+                            "name": "Screes of Fury",
+                            "type": "tankbuster",
+                            "description": "對主 T 魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Bouncy Council (點)",
+                            "type": "aoe",
+                            "description": "4 分身各放點 AoE（旋轉藍箭頭），安全位是沒分身的角落。",
+                            "tips": ["跑到唯一沒分身的角落"]
+                        },
+                        {
+                            "name": "Greatest Labyrinth",
+                            "type": "other",
+                            "description": "全員被拉到場中，獲得 Greatest Curse debuff 15 秒，需用綠箭頭格走到 O 格淨化（X 格劇毒）。",
+                            "tips": ["先找 O 格位置", "從 O 格沿箭頭倒推回中央找安全路線", "別碰 X 格"]
+                        },
+                        {
+                            "name": "Bouncy Council (混合)",
+                            "type": "aoe",
+                            "description": "4 個象限分身：2 個相鄰用點 AoE，另 2 個用線 AoE。",
+                            "tips": ["找線縫且遠離點 AoE 的位置"]
+                        },
+                        {
+                            "name": "Moist Summoning / Mighty Blorp",
+                            "type": "stack",
+                            "description": "蛇召喚物對隨機玩家連續 3 次疊機 AoE，每次留下水坑，水坑站太久中污泥 DoT。",
+                            "tips": ["全員跟著標記跑", "別站舊水坑"]
+                        },
+                        {
+                            "name": "Greatest Flood",
+                            "type": "other",
+                            "description": "從一角放射狀擊退。",
+                            "tips": ["位置調好避開舊水坑", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Bouncy Council (5 分身)",
+                            "type": "aoe",
+                            "description": "4 角 + 1 中央，2 相鄰角用點 AoE，其他用線 AoE。",
+                            "tips": ["找線縫且遠離點 AoE"]
+                        },
+                        {
+                            "name": "Great Torrent",
+                            "type": "spread",
+                            "description": "連續 AoE 覆蓋全場，第一格爆完馬上跑進去；同時散開標記。",
+                            "tips": ["第一格爆 = 進", "散開不重疊"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

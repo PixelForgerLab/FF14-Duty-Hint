@@ -10,59 +10,161 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）特雷諾石化龍：石化詛咒只能躲石頭後，石頭打太多會團滅。",
+        "2）阿姆杜西亞斯：環雷球留前或後，看哪邊有缺口；衝鋒會炸毒泡。",
+        "3）雷暴獅鷲：雷光連線標記線 AoE，邊閃球邊預判 Boss 跳邊。"
+    ],
+    "notes": "DT 7.4 新副本（Lv 100，ilvl 735），Expert roulette。9 代風格副本。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "特雷諾石化龍",
+            "nameEn": "Treno Catoblepas",
+            "mnemonic": ["躲石頭後避免石化", "別讓石頭打太多"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Earthquake",
+                            "type": "raidwide",
+                            "description": "無法閃避的全體物理傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Thunder II",
+                            "type": "aoe",
+                            "description": "玩家身上 + 隨機地面雷圓 AoE，會打壞石頭。",
+                            "tips": ["散開時別誘導 AoE 到石頭"]
+                        },
+                        {
+                            "name": "Bedeviling Light",
+                            "type": "other",
+                            "description": "全場魔法傷 + 石化詛咒，被中下次傷害即死。緊接 Earthquake。",
+                            "tips": ["躲到石頭後免疫", "盡可能保留石頭"]
+                        },
+                        {
+                            "name": "Thunder III",
+                            "type": "tankbuster",
+                            "description": "對主 T 的圓 AoE 魔法坦補。",
+                            "tips": [{ "text": "拉遠避免炸到隊友", "role": "tank" }]
+                        },
+                        {
+                            "name": "Ray of Lightning",
+                            "type": "stack",
+                            "description": "線疊機，也會打壞線上石頭。",
+                            "tips": ["排線時避免線經過石頭"]
+                        },
+                        {
+                            "name": "Petribreath",
+                            "type": "aoe",
+                            "description": "Boss 對玩家方向延遲大錐 AoE 加石化詛咒。",
+                            "tips": ["跑側後方"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿姆杜西亞斯",
+            "nameEn": "Amdusias",
+            "mnemonic": ["環雷球看缺口（前/後）", "衝鋒會炸毒泡"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Thunderclap Concerto",
+                            "type": "aoe",
+                            "description": "Boss 中央 7 個雷球環繞，前方或後方留缺口錐 AoE。除缺口外全部高傷。",
+                            "tips": ["看缺口位置跑到 Boss 前或後"]
+                        },
+                        {
+                            "name": "Bio II",
+                            "type": "raidwide",
+                            "description": "全場魔法傷 + 場上生成毒泡。",
+                            "tips": ["別碰毒泡"]
+                        },
+                        {
+                            "name": "Galloping Thunder",
+                            "type": "aoe",
+                            "description": "Boss 沿多條線衝鋒，踩到的毒泡會轉紅後爆圓 AoE。",
+                            "tips": ["閃避衝鋒線", "閃避紅泡爆炸"]
+                        },
+                        {
+                            "name": "Thunder IV",
+                            "type": "raidwide",
+                            "description": "全場魔法傷，並引爆所有剩餘毒泡。",
+                            "tips": ["毒泡集中時遠離"]
+                        },
+                        {
+                            "name": "Shockbolt",
+                            "type": "tankbuster",
+                            "description": "對主 T 魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Thunder + Concerto",
+                            "type": "spread",
+                            "description": "Concerto 後兩次會搭配玩家圓 AoE 標記。",
+                            "tips": ["先到缺口位置", "再散開不重疊"]
+                        },
+                        {
+                            "name": "Thunder III (stack)",
+                            "type": "stack",
+                            "description": "三段魔法疊機。",
+                            "tips": ["全員疊"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "雷暴獅鷲",
+            "nameEn": "Thundergust Griffin",
+            "mnemonic": ["雷球連線=線 AoE", "Boss 跳邊看連線方向"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Thunderspark",
+                            "type": "raidwide",
+                            "description": "全場魔法傷，第一次施放會在場邊形成雷池 (Electrocution DoT)。",
+                            "tips": ["別站場邊雷池"]
+                        },
+                        {
+                            "name": "High Volts",
+                            "type": "spread",
+                            "description": "玩家圓 AoE 標記 + 3 個地面圓 AoE，後者爆完變雷球。",
+                            "tips": ["散開不重疊", "記住地面圓 AoE 位置（會變雷球）"]
+                        },
+                        {
+                            "name": "Thundering Roar",
+                            "type": "aoe",
+                            "description": "Boss 移到場邊，與雷球連線形成線 AoE 覆蓋大部分場地。會做兩次，第二次後雷球消失。",
+                            "tips": ["看雷球與 Boss 連線方向", "找線 AoE 縫"]
+                        },
+                        {
+                            "name": "Golden Talons",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Fulgurous Fall",
+                            "type": "other",
+                            "description": "Boss 沿中軸線衝鋒（線外擊退），之後 4 個雷球出現，Boss 垂直線衝鋒。最後從中央放 Thundering Roar。",
+                            "tips": ["站線上避免擊退", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Storm Surge",
+                            "type": "aoe",
+                            "description": "Boss 場邊線 AoE + 場另一側生成繞行雷漩渦，作為下兩次 Thundering Roar 的額外雷球。",
+                            "tips": ["記住漩渦停下位置", "預判 Roar 連線方向"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

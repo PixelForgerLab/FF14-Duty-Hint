@@ -10,59 +10,206 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）蠍眼：石化錐 AoE 朝玩家掃；Motion Tracker 期間別動別攻擊。",
+        "2）裂蹄魔：旋轉滾出場後從中央衝鋒；Bodyweight Exorcism 放射狀擊退要抗。",
+        "3）馬爾法斯：操縱大/小垃圾小怪扇/點 AoE 組合；String Up 期間要持續移動。"
+    ],
+    "notes": "DT 7.5 新副本（Lv 100，ilvl 750），Expert roulette。Garlemald 場景的虛無 (voidsent) 主題副本。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "蠍眼",
+            "nameEn": "Eye of the Scorpion",
+            "mnemonic": ["看石化錐方向繞", "Motion Tracker 站定不動"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Eyes on Me",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。第一次施放會在場邊生成 AoE 縮小場地為方形。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Petrifying Beam",
+                            "type": "aoe",
+                            "description": "Boss 走到北牆，旋轉錐 AoE 掃動，定型時命中會石化。",
+                            "tips": ["看錐 AoE 移動軌跡繞側"]
+                        },
+                        {
+                            "name": "Motion Scanner / Launch",
+                            "type": "other",
+                            "description": "場上掃過去的線 AoE 給 Motion Tracker debuff，移動或攻擊會被擊飛高傷。",
+                            "tips": ["debuff 期間完全停手不動", "等掃過去再行動"]
+                        },
+                        {
+                            "name": "Penetrator Missile",
+                            "type": "stack",
+                            "description": "疊機標記。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Petrifying Beam + Surface Missile",
+                            "type": "aoe",
+                            "description": "Beam 同時加多個圓 AoE。",
+                            "tips": ["先閃圓再閃 Beam"]
+                        },
+                        {
+                            "name": "Motion Scanner + Anti-personnel Missile",
+                            "type": "spread",
+                            "description": "Motion Scanner 同時散開標記。",
+                            "tips": ["debuff 期間別動", "標記提前散開到安全位"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "裂蹄魔",
+            "nameEn": "Chort",
+            "mnemonic": ["旋轉=滾場外", "擊退用 Arm's Length"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Ripples of Gloom",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。第一次會壓縮場地。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Mortifying Flesh",
+                            "type": "aoe",
+                            "description": "Boss 旋轉指示前方線 AoE，之後滾出場外從中心衝鋒線 AoE。",
+                            "tips": ["先閃旋轉時的前方線", "再閃中央衝鋒"]
+                        },
+                        {
+                            "name": "Bodyweight Exorcism",
+                            "type": "other",
+                            "description": "中心放射狀擊退。",
+                            "tips": ["用抗擊退", "或站近 Boss 邊"]
+                        },
+                        {
+                            "name": "Basic Vomit",
+                            "type": "aoe",
+                            "description": "前方錐 AoE。",
+                            "tips": ["繞 Boss 後"]
+                        },
+                        {
+                            "name": "Bodyweight Exorcism (塔)",
+                            "type": "stack",
+                            "description": "連續 4 個疊機塔。",
+                            "tips": ["全員集中踩塔"]
+                        },
+                        {
+                            "name": "Mortifying Flesh (進階)",
+                            "type": "aoe",
+                            "description": "滾兩次穿過中央。",
+                            "tips": ["閃兩次中央線"]
+                        },
+                        {
+                            "name": "Evil Emission",
+                            "type": "spread",
+                            "description": "全員散開標記。",
+                            "tips": ["散開不重疊"]
+                        },
+                        {
+                            "name": "Profane Pressure",
+                            "type": "stack",
+                            "description": "補職疊機標記。",
+                            "tips": ["全員疊靠補職"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "馬爾法斯",
+            "nameEn": "Malphas",
+            "mnemonic": ["大小垃圾分前後", "Puppet Mastery 看最終位置", "String Up 不能停"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Rubbish Disposal",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。第一次會壓縮場地。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Void Dark",
+                            "type": "aoe",
+                            "description": "Boss 對玩家前方 180 度 AoE。",
+                            "tips": ["跑 Boss 後"]
+                        },
+                        {
+                            "name": "Scrap Meddle",
+                            "type": "aoe",
+                            "description": "多條線 AoE 召喚多個小型 + 1 個大型垃圾小怪。",
+                            "tips": ["閃線 AoE", "記住小怪位置"]
+                        },
+                        {
+                            "name": "Puppet Strings (大)",
+                            "type": "aoe",
+                            "description": "Boss 操縱大小怪放錐 AoE。",
+                            "tips": ["看大小怪朝向繞側"]
+                        },
+                        {
+                            "name": "Puppet Strings (小)",
+                            "type": "aoe",
+                            "description": "Boss 操縱所有小小怪放點 AoE。",
+                            "tips": ["遠離小小怪"]
+                        },
+                        {
+                            "name": "Gluttonous Wire",
+                            "type": "stack",
+                            "description": "補職疊機標記。",
+                            "tips": ["全員疊靠補職"]
+                        },
+                        {
+                            "name": "Scrap Meddle (2 大)",
+                            "type": "aoe",
+                            "description": "召喚 2 個大型 + 多個小型小怪。",
+                            "tips": ["閃線 AoE", "找兩大之間安全位"]
+                        },
+                        {
+                            "name": "Puppet Pair",
+                            "type": "aoe",
+                            "description": "Boss 操控全部小怪形成錐 + 點 AoE 組合。",
+                            "tips": ["先看大小怪朝向找錐安全", "再遠離小小怪"]
+                        },
+                        {
+                            "name": "String Up",
+                            "type": "other",
+                            "description": "Cast 結束時不在移動會被定身。",
+                            "tips": ["持續移動到 cast 結束"]
+                        },
+                        {
+                            "name": "Shadow Play",
+                            "type": "tankbuster",
+                            "description": "對主 T 魔法 AoE 坦補。",
+                            "tips": [
+                                { "text": "拉遠避免炸到隊友", "role": "tank" },
+                                { "text": "開減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Puppet Mastery",
+                            "type": "aoe",
+                            "description": "Boss 把所有小怪舉空旋轉，cast 結束時各自最終位置放對應 AoE。",
+                            "tips": ["盯緊小怪旋轉軌跡", "預判最終位置找安全縫"]
+                        },
+                        {
+                            "name": "Wrathful Wire",
+                            "type": "spread",
+                            "description": "全員散開標記，緊接 Puppet Mastery 之後。",
+                            "tips": ["最終位置散開"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

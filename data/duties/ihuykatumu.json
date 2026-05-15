@@ -10,59 +10,149 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 92 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）普努提之王：扇形 Hydrowave 看朝向；Resurface 退到對岸躲遠處 AoE。",
+        "2）瞌睡蟲：種子變藤蔓線 AoE，看箭頭預判；Mimiclot 召喚物優先處理。",
+        "3）阿波勒翁：吃完小怪每階段強化；蝗群跳牆四線 AoE 站西南或東南。"
+    ],
+    "notes": "DT 第一座 MSQ 副本（Lv 91-92）。三個 boss 都有強烈視覺預警，跟著箭頭走基本可過。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "普努提之王",
+            "nameEn": "Prime Punutiy",
+            "mnemonic": ["看扇形朝向", "Resurface 退到對岸"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Punutiy Press",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Hydrowave",
+                            "type": "aoe",
+                            "description": "面向玩家的扇形 AoE。",
+                            "tips": ["看 Boss 朝向繞側"]
+                        },
+                        {
+                            "name": "Resurface",
+                            "type": "other",
+                            "description": "Boss 退到西側深水，吸入碎屑後生成多個圓/線 AoE，最後 Flytrap 小怪放甜甜圈 AoE。",
+                            "tips": ["跟著預警跑", "甜甜圈站貼小怪內側"]
+                        },
+                        {
+                            "name": "Song of the Punutiy",
+                            "type": "spread",
+                            "description": "召喚 4 隻小怪，分別連繩玩家放大/中圓 AoE 與扇形 AoE。",
+                            "tips": ["四人分散站位避免重疊", "小怪解綁後優先打"]
+                        },
+                        {
+                            "name": "Shore Shaker",
+                            "type": "aoe",
+                            "description": "貼身 AoE 之後接兩個同心甜甜圈 AoE。",
+                            "tips": ["先跑遠", "看甜甜圈安全圈進出"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "瞌睡蟲",
+            "nameEn": "Drowsie",
+            "mnemonic": ["看藤蔓箭頭", "Mimiclot 優先清"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Uppercut",
+                            "type": "tankbuster",
+                            "description": "對主 T 的單體大傷。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "及時補血", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Sow → Drowsy Dance",
+                            "type": "aoe",
+                            "description": "撒 4 顆種子變成藤蔓小怪，依箭頭方向施放線 AoE Wallop。",
+                            "tips": ["看橘色箭頭預判藤蔓朝向", "第二輪藤蔓會放大或轉向，安全位變小"]
+                        },
+                        {
+                            "name": "Sneeze",
+                            "type": "aoe",
+                            "description": "Boss 寬扇形噴嚏。",
+                            "tips": ["跑到 Boss 後方"]
+                        },
+                        {
+                            "name": "Spit / Mimiclot",
+                            "type": "other",
+                            "description": "吐出多個 Clot 變成 Mimiclot 小怪，會生成圓 AoE 與單體散開標記 Flagrant Spread。",
+                            "tips": ["優先清 Mimiclot", "看到頭頂標記快速分散"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿波勒翁",
+            "nameEn": "Apollyon",
+            "mnemonic": ["吃小怪會強化", "蝗群線 AoE 站西南/東南"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Razor Zephyr",
+                            "type": "aoe",
+                            "description": "對玩家方向的寬線 AoE。",
+                            "tips": ["看朝向繞側"]
+                        },
+                        {
+                            "name": "Blade",
+                            "type": "tankbuster",
+                            "description": "對主 T 的高傷坦補。",
+                            "tips": [
+                                { "text": "大減傷", "role": "tank" },
+                                { "text": "預補加 shield", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "High Wind",
+                            "type": "raidwide",
+                            "description": "全體物理傷，同時也會殺掉場上小怪。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Swarming Locust / Blades of Famine",
+                            "type": "aoe",
+                            "description": "Boss 跳到場邊跳三次後放四條線 AoE 覆蓋大部分場地，安全位在西南與東南角。會重複一次。",
+                            "tips": ["站到西南或東南角", "兩輪都是同樣安全位"]
+                        },
+                        {
+                            "name": "Levinsickle",
+                            "type": "aoe",
+                            "description": "4 個圓 AoE，其中 2 個會留下持續閃電 AoE，各生成兩組連續扇形 AoE。",
+                            "tips": ["往第一組安全位跑", "持續閃電不能踩"]
+                        },
+                        {
+                            "name": "Thunder III",
+                            "type": "spread",
+                            "description": "全員散開標記。",
+                            "tips": ["四方向分散"]
+                        },
+                        {
+                            "name": "Windwhistle",
+                            "type": "other",
+                            "description": "召喚旋轉的旋風小怪，碰到會擊退；同時放 8 線 AoE 星狀爆裂。Boss 期間還會穿插 Razor Zephyr 與 Thunder III 散開。",
+                            "tips": ["遠離旋風", "看星狀線 AoE 間隙閃避", "散開時別撞到旋風"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

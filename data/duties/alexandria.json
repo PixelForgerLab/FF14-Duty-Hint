@@ -10,59 +10,200 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）抗病毒 X：看節點上綠色「+」（十字 AoE）或「○」（甜甜圈），照順序解。",
+        "2）融合體：Disassembly 分裂三角 AoE 看在哪半場；最終 Centralized/Split + 散開組合最複雜。",
+        "3）殲滅者：看劍光方向（Partition/Reconfigured）；Subroutine 召喚機關時要打掉 6 個發電機。"
+    ],
+    "notes": "DT 最後的 MSQ 副本（Lv 100），ilvl sync 700。殲滅者第二階段機關打 DPS check。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "抗病毒 X",
+            "nameEn": "Antivirus X",
+            "mnemonic": ["看綠色 + 或 ○", "依序解節點"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Immune Response (前)",
+                            "type": "aoe",
+                            "description": "Boss 前方寬扇形 AoE，側面與後方安全。",
+                            "tips": ["跑到 Boss 側後方"]
+                        },
+                        {
+                            "name": "Immune Response (側後)",
+                            "type": "aoe",
+                            "description": "側面與後方 AoE，前方安全。",
+                            "tips": ["跑到 Boss 正前方"]
+                        },
+                        {
+                            "name": "Foreign Entity Removal",
+                            "type": "aoe",
+                            "description": "5 個紫色節點圍著 Boss，紫線從西北/東北開始連，指示爆炸順序。每個節點頭上有「+」（十字 AoE）或「○」（甜甜圈 AoE）。",
+                            "tips": ["看紫線連接順序", "看綠色形狀預判 AoE", "依序閃避"]
+                        },
+                        {
+                            "name": "Quarantine",
+                            "type": "stack",
+                            "description": "T 受 Disinfection 坦補 + 其他人疊機標記。",
+                            "tips": [
+                                { "text": "獨自承受 Disinfection", "role": "tank" },
+                                "其他人疊靠標記者"
+                            ]
+                        },
+                        {
+                            "name": "Foreign Entity (進階)",
+                            "type": "aoe",
+                            "description": "節點 AoE 期間 Boss 連放兩次 Immune Response。順序：節點 1 → 節點 2 + Immune Response → 節點 3 → 節點 4 → 節點 5 → Immune Response。",
+                            "tips": ["建議用 Sprint", "邊閃節點邊看 Boss 方向"]
+                        },
+                        {
+                            "name": "Cytolysis",
+                            "type": "raidwide",
+                            "description": "全體傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "融合體",
+            "nameEn": "Amalgam",
+            "mnemonic": ["分裂三角看哪半場", "中後期組合機制最難"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Electrowave",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害，場邊生成 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Disassembly",
+                            "type": "aoe",
+                            "description": "Boss 分裂變小，電流線在半場勾出三角形 AoE。",
+                            "tips": ["看三角形在哪半場", "跑去另一半"]
+                        },
+                        {
+                            "name": "Centralized Current",
+                            "type": "aoe",
+                            "description": "Boss 朝向產生線 AoE，側面安全。",
+                            "tips": ["繞到 Boss 側面"]
+                        },
+                        {
+                            "name": "Split Current",
+                            "type": "aoe",
+                            "description": "Boss 兩側產生線 AoE，正面與後方安全。",
+                            "tips": ["站 Boss 正前/正後（hitbox 上）"]
+                        },
+                        {
+                            "name": "Energy Accumulates / Static Spark",
+                            "type": "spread",
+                            "description": "三角 AoE + 北邊三個傳送門線 AoE 同時放，全員散開標記。",
+                            "tips": ["先看清楚 2 種 AoE 的安全位", "再分散"]
+                        },
+                        {
+                            "name": "Amalgamight",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Disassembly (進階)",
+                            "type": "spread",
+                            "description": "再次分裂，三組玩家踩地圓 AoE，接著三角/線 AoE + 散開標記。",
+                            "tips": ["先誘導圓 AoE 遠離團隊", "再到安全位散開"]
+                        },
+                        {
+                            "name": "Superbolt",
+                            "type": "stack",
+                            "description": "疊機標記。",
+                            "tips": ["全員疊靠"]
+                        },
+                        {
+                            "name": "Ternary Charge",
+                            "type": "aoe",
+                            "description": "點 AoE 後接兩個同心甜甜圈 AoE。",
+                            "tips": ["先跑遠", "看甜甜圈安全圈進出"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "殲滅者",
+            "nameEn": "Eliminator",
+            "mnemonic": ["看劍光方向（半場 cleave）", "Subroutine 打掉 6 發電機"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Disruption",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害，場邊生成 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Partition / Reconfigured Partition",
+                            "type": "aoe",
+                            "description": "Boss 的劍發光，指示右側半場 cleave；Reconfigured 切換到左側。",
+                            "tips": ["看劍光朝向跑另一半"]
+                        },
+                        {
+                            "name": "Subroutine (爪)",
+                            "type": "aoe",
+                            "description": "Boss 浮空手移到東/西牆放線 AoE Terminate，搭配 Reconfigured Partition 同時爆，剩兩個角安全。",
+                            "tips": ["找剩下安全的角落"]
+                        },
+                        {
+                            "name": "Subroutine (圓) + Electray",
+                            "type": "spread",
+                            "description": "浮空 Elimbit 移到南北牆放甜甜圈 AoE Halo + Boss 同時 Partition；解完後全員散開標記，且有雷抗下 II（重疊致命）。",
+                            "tips": ["先進到甜甜圈安全位之半場", "再完全散開"]
+                        },
+                        {
+                            "name": "Overexposure",
+                            "type": "stack",
+                            "description": "線疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Subroutine (發電機 DPS check)",
+                            "type": "other",
+                            "description": "Boss 變不可選，召喚 6 個 Lightning Generator，需在 Charge 條到 100 前打完。期間還要躲 Elimbit 甜甜圈與 Elimination Claw 線 AoE。後段 Elimbit 放 Light of Salvation 線 AoE 全員散開。",
+                            "tips": ["全力 burst 打發電機", "邊打邊閃 AoE", "後段散開避免互相重疊"]
+                        },
+                        {
+                            "name": "Holo Ark",
+                            "type": "raidwide",
+                            "description": "全體高傷魔法。打不完發電機會團滅。",
+                            "tips": [{ "text": "預判補血 + 減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Impact + Light of Salvation",
+                            "type": "spread",
+                            "description": "藍色擊退圈 + 全員 Light of Salvation 散開標記。",
+                            "tips": ["用抗擊退", "擊退後馬上散開"]
+                        },
+                        {
+                            "name": "Elimination",
+                            "type": "aoe",
+                            "description": "場上三組紫線依序爆炸。",
+                            "tips": ["看順序找安全格"]
+                        },
+                        {
+                            "name": "Subroutine (最終組合)",
+                            "type": "aoe",
+                            "description": "半場 cleave + 甜甜圈 + 手線 AoE 三組合，手線 AoE 會打到初始甜甜圈安全位。",
+                            "tips": ["先解前兩個", "再馬上跑出手線 AoE"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

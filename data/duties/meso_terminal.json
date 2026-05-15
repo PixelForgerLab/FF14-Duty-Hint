@@ -10,59 +10,212 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）外科醫官：擊退預警有真有假；Sensory Deprivation 期間靠記憶解。",
+        "2）刑場兜兜頭：4 對 1 對決，按職業搭配對應小怪自己解；任意人死則對手解綁出來追別人。",
+        "3）不朽殘響：召喚亡魂預判線 AoE（被擊中亡魂消失=站該處安全）。"
+    ],
+    "notes": "DT 7.3 新副本（Lv 100，ilvl 720）。刑場頭子的 4 對 1 對決機制是 FF14 史上最特殊的副本機制之一。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "外科醫官",
+            "nameEn": "Chirurgeon General",
+            "mnemonic": ["擊退有真有假", "Sensory Deprivation 記真位置"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Medicine Field",
+                            "type": "raidwide",
+                            "description": "全體魔法傷，場邊生成 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Liquid Dispensers + Pungent Aerosol",
+                            "type": "other",
+                            "description": "4 個對角格分配器：2 個大圓 AoE、2 個小圓 AoE（旁邊安全）；同時東或西出現小綠擊退指示。",
+                            "tips": ["靠近小圓 AoE", "預判擊退避免撞牆", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Biochemical Front",
+                            "type": "aoe",
+                            "description": "前方扇形 AoE。",
+                            "tips": ["繞 Boss 後"]
+                        },
+                        {
+                            "name": "Sensory Deprivation",
+                            "type": "other",
+                            "description": "全員獲得 Insensible debuff，預警顯示變不可靠。會出現假擊退預警；Cast bar 5 秒前真機制才會解。",
+                            "tips": ["盯第一次出現的真擊退", "依記憶定位"]
+                        },
+                        {
+                            "name": "Concentrated Dose",
+                            "type": "tankbuster",
+                            "description": "魔法坦補 + 中毒 15 秒（可解）。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "幫 Esuna 解毒", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Sensory Deprivation (組合)",
+                            "type": "other",
+                            "description": "圓 AoE + 擊退 + 假預警全部組合，圓 AoE 變模糊覆蓋全場。",
+                            "tips": ["記住真擊退與真安全位置", "看 timer 出現順序判斷誰先解"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "刑場兜兜頭",
+            "nameEn": "Hooded Headsmen",
+            "mnemonic": ["奶→Bloody / 坦→Pale / DPS→Ravenous 或 Pestilent", "自己解自己的"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Lawless Pursuit",
+                            "type": "other",
+                            "description": "4 個小怪根據職業分別連繩玩家給對應 debuff（α/β/γ/δ）。每人只能攻擊自己的小怪。",
+                            "tips": ["記住自己對應的 Headsman"]
+                        },
+                        {
+                            "name": "Shackles of Fate",
+                            "type": "other",
+                            "description": "每人被拉到獨立小圈內 1v1，離開會受傷加 Vulnerability Up。",
+                            "tips": ["別嘗試離開圈"]
+                        },
+                        {
+                            "name": "Dismemberment",
+                            "type": "aoe",
+                            "description": "圈邊兩刀組合線 AoE 留縫。",
+                            "tips": ["看刀位置找縫"]
+                        },
+                        {
+                            "name": "Peal of Judgment",
+                            "type": "aoe",
+                            "description": "兩排電刀穿越圈，命中麻痺 15 秒（可解）。",
+                            "tips": ["找縫鑽過"]
+                        },
+                        {
+                            "name": "Chopping Block / Execution Wheel",
+                            "type": "aoe",
+                            "description": "各小怪用點 AoE 或甜甜圈 AoE。",
+                            "tips": ["看形狀預判跑遠或貼近"]
+                        },
+                        {
+                            "name": "Flaying Flail",
+                            "type": "aoe",
+                            "description": "圈上方 3 個刺球落下圓 AoE。",
+                            "tips": ["持續移動閃球"]
+                        },
+                        {
+                            "name": "Death Penalty (奶)",
+                            "type": "other",
+                            "description": "10 秒可解 Doom debuff。",
+                            "tips": [{ "text": "自己 Esuna", "role": "healer" }]
+                        },
+                        {
+                            "name": "Will Breaker (坦)",
+                            "type": "other",
+                            "description": "長 cast 需打斷，否則受傷加物理易傷；接 Relentless Torment 物理坦補。",
+                            "tips": [{ "text": "用 Stun/Interject 打斷", "role": "tank" }, { "text": "再開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Hellmaker (DPS)",
+                            "type": "other",
+                            "description": "地面流血 DoT，需打掉 Hellmaker 小怪結束。同時還有 Peal of Judgment + Flaying Flail。",
+                            "tips": ["優先打 Hellmaker", "邊閃 AoE 邊輸出"]
+                        },
+                        {
+                            "name": "Serial Torture",
+                            "type": "aoe",
+                            "description": "Dismemberment + Flaying Flail 組合，順序：線 → 圓 → 線 → 點/甜甜圈。",
+                            "tips": ["記順序解"]
+                        },
+                        {
+                            "name": "Head-splitting Roar",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "不朽殘響",
+            "nameEn": "The Immortal Remains",
+            "mnemonic": ["亡魂死後該位置安全", "場地會變化注意墜落"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Recollection",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Electray (亡魂連線)",
+                            "type": "aoe",
+                            "description": "氣球連繩亡魂指示交叉線 AoE。第二組會打死被連繩的亡魂。",
+                            "tips": ["第一組站在沒連繩亡魂上", "第二組站到剛被殺死的亡魂位置"]
+                        },
+                        {
+                            "name": "Memory of the Storm",
+                            "type": "stack",
+                            "description": "線疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Memory of Bombardment",
+                            "type": "aoe",
+                            "description": "5 亡魂群被大圓 AoE 命中；單獨亡魂被小圓 AoE 命中。",
+                            "tips": ["跑到對側遠離 5 亡魂群"]
+                        },
+                        {
+                            "name": "半場揮拳",
+                            "type": "aoe",
+                            "description": "Boss 一隻手蓄力（無地面預警）半場 cleave。",
+                            "tips": ["看 Boss 手臂方向繞另一半"]
+                        },
+                        {
+                            "name": "Impression",
+                            "type": "other",
+                            "description": "召喚 5 群 + 1 單亡魂 + 藍色擊退圈。",
+                            "tips": ["位置調整被擊退到只有 1 亡魂的角", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Memory of the Pyre",
+                            "type": "tankbuster",
+                            "description": "魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Keraunography (戰場記憶)",
+                            "type": "aoe",
+                            "description": "6 個亡魂從北跑到一個點，後面寬線 AoE 跟著。模式：「直線（東西或南北）+ 對角線」遠端交叉。",
+                            "tips": ["跑到亡魂軌跡相反側"]
+                        },
+                        {
+                            "name": "Keraunography + Electray",
+                            "type": "aoe",
+                            "description": "戰場線 AoE + 交叉線 AoE 組合。",
+                            "tips": ["先閃 Keraunography", "再到亡魂位置"]
+                        },
+                        {
+                            "name": "對角 3+3 亡魂",
+                            "type": "aoe",
+                            "description": "兩對角各 3 亡魂跑到兩個點，後續線 AoE。",
+                            "tips": ["找兩個點之間的安全縫"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

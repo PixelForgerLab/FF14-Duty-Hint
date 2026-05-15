@@ -10,59 +10,161 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 94 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）紐曲爾：被冰凍的小怪 AoE 會延後，先躲沒凍的，再回去躲凍的。",
+        "2）卡德爾尤爾：水晶碎片顏色決定安全方向（黃=點 AoE、綠=甜甜圈、紫=線）。",
+        "3）古爾夫爾爾：橘球必須吃掉避免 Boss 疊增傷；超過 6 層可用坦 LB 救。"
+    ],
+    "notes": "DT 第二座 MSQ 副本（Lv 93-94）。卡德爾尤爾的水晶顏色機制是新手最常翻車處。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "紐曲爾·特爾特",
+            "nameEn": "Ryoqor Terteh",
+            "mnemonic": ["冰凍小怪延後放", "先閃沒凍的再回去"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Frosting Fracas",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害並在場邊生成危險 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }, "不要靠場邊"]
+                        },
+                        {
+                            "name": "Fluffle Up / Cold Feet",
+                            "type": "aoe",
+                            "description": "召喚 4 隻小怪指示扇形或圓 AoE，其中 2 隻會被冰凍延後施放。",
+                            "tips": ["先站到沒冰凍的小怪前躲", "等他們放完再回去原本不安全的位置"]
+                        },
+                        {
+                            "name": "Snowscoop / Sparkling Sprinkling",
+                            "type": "spread",
+                            "description": "雪球小怪放線 AoE，玩家同時頭上散開標記。",
+                            "tips": ["線 AoE 間隙閃避", "四人散開不重疊"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "卡德爾尤爾",
+            "nameEn": "Kahderyor",
+            "mnemonic": ["水晶顏色決定形狀", "黃=點、綠=甜甜圈、紫=線"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Wind Unbound",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Crystalline Crush",
+                            "type": "stack",
+                            "description": "高塔疊機標記，命中後留下水晶碎片。",
+                            "tips": ["靠塔吃 AoE"]
+                        },
+                        {
+                            "name": "Earthen Shot / 黃色水晶",
+                            "type": "spread",
+                            "description": "玩家散開標記；黃色水晶碎片放大範圍點 AoE。",
+                            "tips": ["散開避免重疊", "遠離黃色水晶"]
+                        },
+                        {
+                            "name": "Wind Shot / 綠色水晶",
+                            "type": "stack",
+                            "description": "玩家甜甜圈 AoE；綠色水晶碎片放甜甜圈 AoE，安全位是水晶內部。",
+                            "tips": ["全員疊到綠色水晶內部"]
+                        },
+                        {
+                            "name": "Crystalline Storm / 紫色水晶",
+                            "type": "aoe",
+                            "description": "3 條窄線 AoE 留下紫色碎片，下次 Earthen Shot 時碎片放寬線 AoE 留窄安全區。",
+                            "tips": ["站到紫色水晶之間的窄安全帶"]
+                        },
+                        {
+                            "name": "Seed Crystals",
+                            "type": "spread",
+                            "description": "玩家頭頂散開標記後被水晶包住，必須打破身上的 Crystalline Debris 否則死亡。",
+                            "tips": ["馬上攻擊自己身上的水晶", "DPS 也要幫忙打隊友身上的"]
+                        },
+                        {
+                            "name": "Sharpened Sights",
+                            "type": "other",
+                            "description": "下兩次點 AoE 或甜甜圈會結合凝視攻擊 Eye of the Fierce。",
+                            "tips": ["背對 Boss 躲凝視", "同時注意 AoE 形狀"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "古爾夫爾爾",
+            "nameEn": "Gurfurlur",
+            "mnemonic": ["橘球必須吃掉", "Damage Up 太多會團滅，可坦 LB"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Heaving Haymaker",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害並在場邊生成危險 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Stonework (水)",
+                            "type": "other",
+                            "description": "場邊出現水的元素圖案，造成擊退與魔法傷害。",
+                            "tips": ["朝中心預先位移", "可用抗擊退技能免疫"]
+                        },
+                        {
+                            "name": "Stonework (火)",
+                            "type": "spread",
+                            "description": "連續方格 AoE 從中心擴散到全場（類似 Eden Gate Sepulture 的火山），玩家同時散開標記。",
+                            "tips": ["跟著未爆的格子跑", "散開不重疊"]
+                        },
+                        {
+                            "name": "Sledgehammer",
+                            "type": "stack",
+                            "description": "三段線疊機 AoE。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "全員疊靠補職減傷", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Arcane Stomp",
+                            "type": "other",
+                            "description": "場上出現多個橘球緩慢飄向 Boss，被 Boss 吃到會疊 Damage Up。被玩家踩到則玩家獲得 Damage Up。",
+                            "tips": ["盡量分配踩光所有橘球", "讓 Boss 吃到 6 顆以上會團滅"]
+                        },
+                        {
+                            "name": "Enduring Glory",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。Boss 疊太多 Damage Up 就會團滅。",
+                            "tips": [
+                                { "text": "Boss 超過 6 層可用坦 LB 救", "role": "tank" },
+                                { "text": "盡量別讓 Boss 吃球", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Stonework (風)",
+                            "type": "other",
+                            "description": "場中出現風的元素圖案，造成擊退與魔法傷害；同時生成 4 個移動龍捲風。",
+                            "tips": ["閃避龍捲風", "用抗擊退技能", "第二次擊退也要小心"]
+                        },
+                        {
+                            "name": "Stonework (火+水)",
+                            "type": "other",
+                            "description": "同時生成火與水圖案，兩種攻擊組合一起放。",
+                            "tips": ["朝中心位移避免擊退", "同時跟著未爆格子跑", "散開不重疊"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

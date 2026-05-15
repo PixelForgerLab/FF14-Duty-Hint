@@ -10,59 +10,179 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 96 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）羽魟：Nuisance debuff 讓你模仿 Boss 攻擊，別面對隊友；泡泡網格看缺口預判風向。",
+        "2）火器：藍色鏡子反射雷射打到黃球爆，站「黃球對側」；箭頭格指示十字 AoE。",
+        "3）重錘骷髏：擊退會掉下舞台！盡量靠近藍圈邊緣站；Maulwork 看綠箭頭找線縫。"
+    ],
+    "notes": "DT 中期 MSQ 副本（Lv 95-96）。重錘骷髏的擊退是少數可能讓玩家死於跌落的副本。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "羽魟",
+            "nameEn": "Feather Ray",
+            "mnemonic": ["Nuisance debuff 別面對人", "泡泡網格看風向"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Immersion",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Troublesome Tail / Nuisance",
+                            "type": "other",
+                            "description": "全員獲得 Nuisance debuff，會模仿 Boss 下次攻擊。",
+                            "tips": ["看清楚自己頭頂時間", "下面解釋的 Worrisome Wave / Trouble Bubbles 都會被觸發"]
+                        },
+                        {
+                            "name": "Worrisome Wave",
+                            "type": "aoe",
+                            "description": "隨機玩家前方錐 AoE。Nuisance 期間每人會放窄錐 AoE。",
+                            "tips": ["別面對隊友", "面向場邊或無人方向"]
+                        },
+                        {
+                            "name": "Hydro Ring",
+                            "type": "aoe",
+                            "description": "甜甜圈 AoE，場邊生成 AoE 壓縮場地。",
+                            "tips": ["站近 Boss 中央"]
+                        },
+                        {
+                            "name": "Blowing Bubbles",
+                            "type": "aoe",
+                            "description": "Boss 噴出泡泡緩慢往外移動。",
+                            "tips": ["閃避泡泡", "結束後場地恢復"]
+                        },
+                        {
+                            "name": "Bubble Bomb + Rolling Current",
+                            "type": "aoe",
+                            "description": "場上生成泡泡網格留空位；東邊水流推所有泡泡西移一格。",
+                            "tips": ["看清楚空格位置", "預判水流推動後的安全位"]
+                        },
+                        {
+                            "name": "Trouble Bubbles",
+                            "type": "other",
+                            "description": "Nuisance 期間每人持續向前射泡泡，被別人泡泡擊中會受傷。",
+                            "tips": ["別面對隊友", "排成單列同方向最安全"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "火器",
+            "nameEn": "Firearms",
+            "mnemonic": ["站黃球對側", "看鏡子反射路徑"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Dynamic Dominance",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害並在場邊生成 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Mirror Maneuver",
+                            "type": "aoe",
+                            "description": "牆上藍色鏡子，角落黃球。Boss 跳到黃球旁角落射線 AoE 反射到鏡子再打到黃球，造成大範圍點 AoE。",
+                            "tips": ["站到黃球正對面（最遠處）"]
+                        },
+                        {
+                            "name": "Ancient Artillery → Emergent Artillery",
+                            "type": "aoe",
+                            "description": "2 格出現橘色箭頭符號，指示十字形 AoE 從格子向箭頭方向擴張爆炸。",
+                            "tips": ["看箭頭方向找安全格"]
+                        },
+                        {
+                            "name": "Pummel",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Mirror Maneuver (進階)",
+                            "type": "aoe",
+                            "description": "2 鏡子 + 3 黃球，雷射反射 2 次。",
+                            "tips": ["判斷最終會擊中哪顆黃球", "遠離該黃球"]
+                        },
+                        {
+                            "name": "Ancient Artillery (進階) + Thunderblight Flurry",
+                            "type": "spread",
+                            "description": "3 個十字 AoE 只留 1 格安全；同時散開標記。",
+                            "tips": ["先進到唯一安全格", "再馬上散開"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "重錘骷髏",
+            "nameEn": "Maulskull",
+            "mnemonic": ["擊退會跌落舞台", "靠近藍圈邊緣站", "可用抗擊退技能保命"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Stonecarver",
+                            "type": "aoe",
+                            "description": "Boss 一隻拳發光（含音效），接著另一隻，預示兩段半場 cleave。",
+                            "tips": ["聽聲音/看發光順序判斷哪邊先爆"]
+                        },
+                        {
+                            "name": "Skullcrush + Destructive Heat",
+                            "type": "spread",
+                            "description": "北方生成藍色擊退圈，全員散開標記。擊退距離很長，可能會掉下舞台。",
+                            "tips": ["盡可能靠近藍圈站", "朝西南或東南被推", "或用抗擊退（Arm's Length 等）"]
+                        },
+                        {
+                            "name": "Maulwork",
+                            "type": "aoe",
+                            "description": "Boss 召喚紫方塊揍它，三組圓 AoE，第三組有綠箭頭預示寬線 AoE 留邊或中央安全。",
+                            "tips": ["看綠箭頭朝向找安全位"]
+                        },
+                        {
+                            "name": "Deep Thunder",
+                            "type": "stack",
+                            "description": "多段疊機高塔，全員疊靠 3 段物理傷。",
+                            "tips": ["全員集中踩塔"]
+                        },
+                        {
+                            "name": "Ringing Blows",
+                            "type": "other",
+                            "description": "Stonecarver 半場 cleave + Skullcrush 擊退（無散開）的組合。",
+                            "tips": ["先被擊退到安全位", "再閃半場 cleave"]
+                        },
+                        {
+                            "name": "Wrought Fire",
+                            "type": "tankbuster",
+                            "description": "對主 T 魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Colossal Impact (疊)",
+                            "type": "stack",
+                            "description": "藍色擊退圈出現在下角落 + 疊機標記。",
+                            "tips": ["全員疊靠標記", "確保被擊退到對角不掉場外"]
+                        },
+                        {
+                            "name": "Colossal Impact (散)",
+                            "type": "spread",
+                            "description": "再次擊退 + 散開標記。",
+                            "tips": ["散開不掉場"]
+                        },
+                        {
+                            "name": "Ashlayer",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

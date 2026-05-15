@@ -10,59 +10,203 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）林布盧 Zaghnal：水晶被丟出後爆中心圓 + 多線 AoE；Raw Electrope 小怪要打掉。",
+        "2）監視官卡尼洛卡：旋轉手指 Misdirection 期間 WASD 方向被改；牆邊吸魔力衰減傷害。",
+        "3）露尼皮亞蒂：場地變空心環不能跌；橘色螺旋線預判圓 AoE 順序。"
+    ],
+    "notes": "DT 7.1 新副本（Lv 100，ilvl 690）。露尼皮亞蒂的環狀場地是這座副本特色。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "林布盧 Zaghnal",
+            "nameEn": "Lindblum Zaghnal",
+            "mnemonic": ["水晶位置=線 AoE 原點", "Raw Electrope 打掉避免疊雷易傷"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Electrical Overload",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Gore + Caber Toss",
+                            "type": "aoe",
+                            "description": "Boss 推水晶，水晶放 3 組線 AoE 之後被丟到新位置（黃箭頭預告）放大圓 AoE。",
+                            "tips": ["看箭頭預判圓 AoE 中心"]
+                        },
+                        {
+                            "name": "水晶持續線 AoE",
+                            "type": "aoe",
+                            "description": "新位置水晶繼續放大小線 AoE。",
+                            "tips": ["看線找縫"]
+                        },
+                        {
+                            "name": "Lightning Storm",
+                            "type": "spread",
+                            "description": "全員散開標記。",
+                            "tips": ["散開不重疊"]
+                        },
+                        {
+                            "name": "Gore (地面)",
+                            "type": "other",
+                            "description": "Boss 將電引入地面，Sparking Fissure 連續全體傷。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Raw Electrope 召喚",
+                            "type": "other",
+                            "description": "多隻小怪生成有進度條，cast 完 Electrify 全體傷加魔法易傷；同時放兩次會團滅。",
+                            "tips": ["優先打進度條快的", "切勿讓兩個同時 cast"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "監視官卡尼洛卡",
+            "nameEn": "Overseer Kanilokka",
+            "mnemonic": ["Misdirection 旋轉慢", "Necrohazard 站牆邊免傷"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Free Spirits",
+                            "type": "raidwide",
+                            "description": "全體魔法傷，場邊生成持續傷害 AoE（流血 + 易傷 + 緩速）。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "橘紅曲線 AoE",
+                            "type": "aoe",
+                            "description": "多個橘紅色曲線連續爆。",
+                            "tips": ["跟著預警跑"]
+                        },
+                        {
+                            "name": "Phantom Flood",
+                            "type": "aoe",
+                            "description": "甜甜圈 AoE，場地壓縮成小圓。",
+                            "tips": ["站近 Boss"]
+                        },
+                        {
+                            "name": "Dark II",
+                            "type": "aoe",
+                            "description": "6 個錐 AoE 留交錯縫，第二組在第一組安全位。",
+                            "tips": ["先到第一安全位", "第一組爆完馬上移到下個"]
+                        },
+                        {
+                            "name": "Telltale Tears",
+                            "type": "spread",
+                            "description": "3 名玩家散開標記，需在小圓內分散。",
+                            "tips": ["小圓內最大化散開"]
+                        },
+                        {
+                            "name": "Lost Hope / Temporary Misdirection",
+                            "type": "other",
+                            "description": "17 秒方向錯亂 debuff，移動方向跟著旋轉手指。比其他副本旋轉慢。",
+                            "tips": ["慢慢按方向鍵", "看手指方向決定按鍵"]
+                        },
+                        {
+                            "name": "Necrohazard",
+                            "type": "other",
+                            "description": "中央漸減 AoE，場邊三條曲徑通往牆。需走到牆邊（必須完全貼牆）才能減傷。",
+                            "tips": ["走曲徑到牆", "完全貼牆", "場邊流血會疊加致命"]
+                        },
+                        {
+                            "name": "Bloodburst",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Dark II + Soul Douse",
+                            "type": "stack",
+                            "description": "Dark II 加疊機標記。",
+                            "tips": ["先閃 Dark II", "再全員疊"]
+                        },
+                        {
+                            "name": "Dark Souls",
+                            "type": "tankbuster",
+                            "description": "魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "露尼皮亞蒂",
+            "nameEn": "Lunipyati",
+            "mnemonic": ["環場別跌中央", "橘螺旋線=圓 AoE 順序", "繞 Boss 後躲 Raging Claw"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Raging Claw",
+                            "type": "aoe",
+                            "description": "Boss 對玩家方向 180 度多段 cleave。",
+                            "tips": ["跑到 Boss 後方"]
+                        },
+                        {
+                            "name": "Leporine Loaf",
+                            "type": "raidwide",
+                            "description": "全體魔法傷，場邊生成 AoE 縮小場地成圓。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "橘色曲線 / Leaping Earth",
+                            "type": "aoe",
+                            "description": "從場中央生成 4 條曲線，圓 AoE 沿曲線螺旋向外。最後 Boss 自己出一條長曲線。",
+                            "tips": ["跟著曲線軌跡走中間層"]
+                        },
+                        {
+                            "name": "Boulder Dance (箭頭)",
+                            "type": "aoe",
+                            "description": "3 條紅色曲箭頭預示沙蟲軌跡，原點 + 終點都有圓 AoE。",
+                            "tips": ["找沒箭頭的區域"]
+                        },
+                        {
+                            "name": "Jagged Edge (散)",
+                            "type": "spread",
+                            "description": "搭配箭頭機制的散開標記。",
+                            "tips": ["在安全角散開"]
+                        },
+                        {
+                            "name": "Crater Carve",
+                            "type": "other",
+                            "description": "Boss 摧毀場中央留下環形場地，掉進中央即死。",
+                            "tips": ["切勿用突進技過洞", "Boss 跳邊時別亂衝"]
+                        },
+                        {
+                            "name": "Beastly Roar",
+                            "type": "other",
+                            "description": "Boss 腳邊漸減 AoE，需跑到對面減傷；之後沿環產生順/逆時針圓 AoE。",
+                            "tips": ["跑到 Boss 對側", "按反方向繞環閃 AoE", "用 Sprint"]
+                        },
+                        {
+                            "name": "Raging Claw + Jagged Edge + Turali Stone IV",
+                            "type": "spread",
+                            "description": "Boss 跳到新位置後 cleave + 散開標記 + 疊機。",
+                            "tips": ["先繞 Boss 後", "再散開", "再疊"]
+                        },
+                        {
+                            "name": "Sonic Howl",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Slabber",
+                            "type": "tankbuster",
+                            "description": "魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

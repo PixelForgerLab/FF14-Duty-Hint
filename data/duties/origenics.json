@@ -10,59 +10,179 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）赫爾佩卡里斯：毒坑爆裂連續，預判到另一半再回中間。",
+        "2）欺騙者：站到模糊的小怪/砲塔前面（那邊不會發射）。",
+        "3）安布羅斯：擊退方向看格子顏色，小心被推到牆 AoE。"
+    ],
+    "notes": "DT 第三座 MSQ 副本（Lv 99-100）。欺騙者的「模糊砲塔不發射」是這座地下城最容易翻車的機制。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "赫爾佩卡里斯",
+            "nameEn": "Herpekaris",
+            "mnemonic": ["看 Boss 抬哪隻腳", "預判邊緣→中間→另一邊"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Strident Shriek",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Vasoconstrictor",
+                            "type": "other",
+                            "description": "前方左右各生成一灘毒，踩到中毒 DoT 15 秒。",
+                            "tips": ["遠離毒池", "中毒可請補職解或自癒"]
+                        },
+                        {
+                            "name": "Venomspill",
+                            "type": "aoe",
+                            "description": "Boss 抬左腳或右腳，對應該側毒坑連續放多個圓 AoE，會覆蓋一半場地與部分對面。",
+                            "tips": ["站中間預判到對側", "AoE 爆完再趕快回中間準備下一輪", "最後一輪通常與前次同邊"]
+                        },
+                        {
+                            "name": "Writhing Riot",
+                            "type": "aoe",
+                            "description": "依序三段：後 90 度錐 + 兩個 ~210 度大掃。",
+                            "tips": ["先躲後方", "再跟著預警轉移"]
+                        },
+                        {
+                            "name": "Poison Heart",
+                            "type": "spread",
+                            "description": "全員散開標記，與 Venomspill 同步。",
+                            "tips": ["散開時也要持續閃毒"]
+                        },
+                        {
+                            "name": "Collective Agony",
+                            "type": "stack",
+                            "description": "線疊機 AoE。",
+                            "tips": ["全員疊靠標記者"]
+                        },
+                        {
+                            "name": "Convulsive Crush",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "預補加 shield", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "欺騙者",
+            "nameEn": "Deceiver",
+            "mnemonic": ["模糊的小怪不發射", "站到模糊的前面"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Electrowave",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害，場邊生成麻痺 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Bionic Thrash",
+                            "type": "aoe",
+                            "description": "Boss 觸手覆蓋兩個對角象限，指示後延遲 AoE。",
+                            "tips": ["看觸手位置躲另一半"]
+                        },
+                        {
+                            "name": "Initialize Androids / Synchroshot",
+                            "type": "aoe",
+                            "description": "北牆生成一排小怪，模糊的不會發射，其餘放線 AoE 全覆蓋。",
+                            "tips": ["站到模糊的小怪正前方", "AoE 結束後馬上打小怪"]
+                        },
+                        {
+                            "name": "Initialize Turrets",
+                            "type": "aoe",
+                            "description": "西牆生成 4 個方形砲塔，模糊的不發射；接著對牆再來一輪。",
+                            "tips": ["站到模糊砲塔前方", "兩次都要判斷"]
+                        },
+                        {
+                            "name": "Surge / Electray",
+                            "type": "other",
+                            "description": "從中心橫向擊退，同時全員散開標記。",
+                            "tips": ["位置調整成被擊退到實體砲塔前", "避免被推進場邊 AoE"]
+                        },
+                        {
+                            "name": "Initialize Androids (進階)",
+                            "type": "aoe",
+                            "description": "再來一次小怪 AoE，但只剩 2 個模糊；同時 Boss 放 Bionic Thrash 觸手 AoE，安全位變小。",
+                            "tips": ["看清楚模糊位置 + 觸手位置", "中間夾縫"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "不歸者安布羅斯",
+            "nameEn": "Ambrose the Undeparted",
+            "mnemonic": ["格子箭頭=擊退方向", "別被推到牆 AoE"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Psychic Wave",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害，場邊生成危險 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Overwhelming Charge",
+                            "type": "aoe",
+                            "description": "延遲指示 180 度前方半場 AoE。",
+                            "tips": ["跑到 Boss 後方"]
+                        },
+                        {
+                            "name": "Psychokinesis (籠子)",
+                            "type": "aoe",
+                            "description": "東西兩側的籠子震動，預示兩條線 AoE 留一排安全。籠子破後跑出小怪 Eyeborg + Superfluity。",
+                            "tips": ["找留下的安全行", "AoE 結束後優先打 Eyeborg"]
+                        },
+                        {
+                            "name": "Extrasensory Field",
+                            "type": "other",
+                            "description": "場地分四個藍色象限，每個有不同擊退方向，擊退距離約半場長度。",
+                            "tips": ["看箭頭調整起始位置", "別被推進牆 AoE", "可用抗擊退免疫"]
+                        },
+                        {
+                            "name": "Voltaic Slash",
+                            "type": "tankbuster",
+                            "description": "對主 T 物理坦補。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "預補加 shield", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Psychokinetic Charge",
+                            "type": "other",
+                            "description": "結合 Extrasensory Field 擊退與 Overwhelming Charge 前方半場 AoE。",
+                            "tips": ["先預判擊退落點", "確保落點不在 Boss 前方"]
+                        },
+                        {
+                            "name": "Electrolance / Rush",
+                            "type": "aoe",
+                            "description": "場後方生成長矛，多條紅線預示線 AoE 從長矛射出。",
+                            "tips": ["看紅線位置躲線間隙"]
+                        },
+                        {
+                            "name": "Whorl of the Mind",
+                            "type": "spread",
+                            "description": "Psychokinesis 籠子再來一次，加上全員散開標記。",
+                            "tips": ["邊閃線 AoE 邊散開"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
