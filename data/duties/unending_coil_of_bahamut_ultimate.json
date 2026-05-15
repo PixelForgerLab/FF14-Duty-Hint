@@ -1,209 +1,263 @@
 {
-  "id": "unending_coil_of_bahamut_ultimate",
-  "name": "巴哈姆特絕境戰",
-  "nameEn": "The Unending Coil of Bahamut (Ultimate)",
-  "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-  "type": "ultimate",
-  "playerCount": 8,
-  "iLvlSync": 345,
-  "jobLevelSync": 70,
-  "highEnd": true,
-  "notes": "UCoB（簡稱「絕巴」），FF14 首個絕代副本。共 5 個階段：雙塔妮亞 → 涅爾 → 巴哈姆特真身 → 召喚物階段 → 黃金巴哈姆特。⚠️ 本提示由 AI 預填，可能有疏漏或時間軸誤差，請參考更多攻略影片並歡迎 PR 修正。",
-  "bosses": [
-    {
-      "name": "P1：雙塔妮亞",
-      "nameEn": "Phase 1: Twintania",
-      "notes": "100%-74% HP，循環四大機制：Plummet → Liquid Hell → Conflag Strike → Death Sentence。最後接 Twisters / Hatches 過渡。",
-      "phases": [
-        {
-          "name": "主循環機制",
-          "mechanics": [
-            {
-              "name": "Plummet",
-              "type": "tankbuster",
-              "description": "對主坦的扇形坦克爆擊，必須面向場外吃。",
-              "tips": ["主 T 開減傷", "面向場外避免掃到隊友"]
-            },
-            {
-              "name": "Liquid Hell",
-              "type": "aoe",
-              "description": "隨機點名 1 人，落下大量毒區圓圈。",
-              "tips": ["被點名者跑場邊一路畫線", "其餘人遠離被點名者"]
-            },
-            {
-              "name": "Conflag Strike",
-              "type": "stack",
-              "description": "全體大傷分擔，需 8 人集中分擔。",
-              "tips": ["集合到指定點", "副 T 不要拉走主 T 仇恨"]
-            },
-            {
-              "name": "Death Sentence",
-              "type": "tankbuster",
-              "description": "巨大單體坦克爆擊，無減傷會秒殺。",
-              "tips": ["主 T 必開大型減傷（如戰士的原初解放、騎士的盾陣等）", "奶開盾 / 救護車輔助"]
-            }
-          ]
-        },
-        {
-          "name": "Twisters / Hatches（74% 過渡）",
-          "mechanics": [
-            {
-              "name": "Twisters",
-              "type": "aoe",
-              "description": "場上落下多個龍捲風 AoE 圓圈，踩到立死。",
-              "tips": ["遠離龍捲風落點", "通常配合 P1 末段的 Death Sentence 後出現"]
-            },
-            {
-              "name": "Hatch（蛋）",
-              "type": "spread",
-              "description": "4 個隨機玩家頭上會出現蛋的標記，需移動至場邊指定位置「下蛋」。",
-              "tips": ["按隊伍預定的下蛋位置走位（通常 N/E/S/W 4 點）", "未被點名者注意不要擋路"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P2：涅爾·迪烏斯·達努斯",
-      "nameEn": "Phase 2: Nael deus Darnus",
-      "notes": "74% → 0% (Nael)，主要機制是 Heavensfall + 流星 + Quotes（涅爾語錄）。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Heavensfall（天降）",
-              "type": "raidwide",
-              "description": "全體 AoE，配合場上隕石機制。",
-              "tips": ["奶開 AoE 減傷", "全員集中減傷"]
-            },
-            {
-              "name": "Raven Dive",
-              "type": "tankbuster",
-              "description": "對遠端目標的坦克爆擊，二段或單段。",
-              "tips": ["副 T 接 dive", "主 T 開減傷接 cleave"]
-            },
-            {
-              "name": "Bahamut's Claw（巴哈姆特之爪）",
-              "type": "tankbuster",
-              "description": "對主 T 的連續多段攻擊，會疊 debuff。",
-              "tips": ["兩 T 換仇恨避免 debuff 疊到致死"]
-            },
-            {
-              "name": "Quote（語錄）機制",
-              "type": "other",
-              "description": "涅爾會「念詩」，文字內容對應特定機制（Doom、Thermionic、Lunar Dynamo、Iron Chariot 等）。每次唸 1-3 句，依序躲。",
-              "tips": [
-                "「Blazing Heavens」= Dynamo + Chariot（同時 in & out 不可，看實際組合）",
-                "「Lunar Dynamo」=  Boss 中心 AoE，要外圈站位",
-                "「Iron Chariot」= Boss 外圈 AoE，要中心站位",
-                "「Thermionic」= 對面玩家的直線 AoE",
-                "建議先背熟所有 quote 對應的機制"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P3：巴哈姆特真身",
-      "nameEn": "Phase 3: Bahamut Prime",
-      "notes": "Nael 死後召喚出來的巴哈姆特，核心機制是 Megaflare 與 Earth Shaker。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Megaflare（特大百萬核爆）",
-              "type": "raidwide",
-              "description": "全體 AoE + 3 人塔機制：3 個玩家頭上有「塔」標記，需各自踩塔；其他人散開避開塔的範圍。",
-              "tips": ["塔點名者迅速到指定塔位置", "未被點名者站在無塔的安全區"]
-            },
-            {
-              "name": "Earth Shaker",
-              "type": "spread",
-              "description": "3 人被點名，朝指定方向發射直線 AoE。",
-              "tips": ["被點名者依預定方位（如 NW / N / NE）拉線", "避免線交叉"]
-            },
-            {
-              "name": "Akh Morn",
-              "type": "tankbuster",
-              "description": "對單一目標的連續多段攻擊（3-5 段）。",
-              "tips": ["兩 T 接力，每段一人", "或主 T 開連續減傷硬吃"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P4：召喚物階段",
-      "nameEn": "Phase 4: Adds Phase",
-      "notes": "P3 結束後，場上同時出現 3 隻小型 boss（Twintania add / Nael add / Bahamut Prime add），需要在限制時間內擊殺。",
-      "phases": [
-        {
-          "name": "DPS check + 機制循環",
-          "mechanics": [
-            {
-              "name": "三隻小 boss",
-              "type": "other",
-              "description": "三隻小型 boss 同時開戰，每隻擁有 P1-P3 的部分機制。",
-              "tips": [
-                "依隊伍策略決定擊殺順序（常見：Bahamut → Nael → Twintania 或反之）",
-                "DPS 必須夠才能在 enrage 前打完",
-                "機制照舊處理（小 Plummet / 小 Akh Morn 等）"
-              ]
-            },
-            {
-              "name": "Morn Afah",
-              "type": "stack",
-              "description": "全體集合分擔大傷，分擔人數會逐次減少（從 8 人 → 7 人 → 6 人...）。",
-              "tips": ["每次集合 → 拉開 → 再集合，注意人數即時減少", "高傷害需多人共擔"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P5：黃金巴哈姆特",
-      "nameEn": "Phase 5: Golden Bahamut",
-      "notes": "最終階段。Teraflare 全滅 → 鳳凰復活 → 一連串高強度機制 → 9 分鐘 Enrage。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Teraflare",
-              "type": "raidwide",
-              "description": "進入 P5 時的全滅機制，所有玩家死亡。隨後由「鳳凰」復活並進入 P5。",
-              "tips": ["這是劇情強制機制，不是失誤", "復活後立刻接續打 P5"]
-            },
-            {
-              "name": "Akh Morn x6",
-              "type": "tankbuster",
-              "description": "對單體的 6 連擊坦克爆擊，必須兩 T 輪流接，每人吃 3 段。",
-              "tips": ["主 T 吃 1-3，副 T 吃 4-6 (或相反)", "每段都需減傷"]
-            },
-            {
-              "name": "Exaflare",
-              "type": "aoe",
-              "description": "場上出現多條移動式 AoE 線（往一個方向爆炸推進）。",
-              "tips": ["看清楚移動方向，往側邊閃", "不要逆向跑"]
-            },
-            {
-              "name": "Akh Rhai",
-              "type": "aoe",
-              "description": "全玩家腳下出現雷標，密集 AoE 圓圈密集落下。",
-              "tips": ["散開站位（每人都有獨立 AoE）", "找空位躲"]
-            },
-            {
-              "name": "Enrage（9 分鐘）",
-              "type": "raidwide",
-              "description": "9 分鐘整時 Boss 進入狂暴，無法防禦的全滅。",
-              "tips": ["DPS 在 9 分前打完", "通常 P5 是純技術 + DPS 比拼"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id": "unending_coil_of_bahamut_ultimate",
+    "name": "巴哈姆特絕境戰",
+    "nameEn": "The Unending Coil of Bahamut (Ultimate)",
+    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "type": "ultimate",
+    "playerCount": 8,
+    "iLvlSync": 345,
+    "jobLevelSync": 70,
+    "highEnd": true,
+    "quality": "excellent",
+    "notes": "UCoB（簡稱「絕巴」），FF14 首個絕代副本。共 5 個階段：雙塔妮亞 → 涅爾 → 巴哈姆特真身 → 召喚物階段 → 黃金巴哈姆特。⚠️ 本提示由 AI 預填，可能有疏漏或時間軸誤差，請參考更多攻略影片並歡迎 PR 修正。",
+    "bosses": [
+                   {
+                       "name": "P1：雙塔妮亞",
+                       "nameEn": "Phase 1: Twintania",
+                       "notes": "100%-74% HP，循環四大機制：Plummet → Liquid Hell → Conflag Strike → Death Sentence。最後接 Twisters / Hatches 過渡。",
+                       "phases": [
+                                      {
+                                          "name": "主循環機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Plummet",
+                                                                "type": "tankbuster",
+                                                                "description": "對主坦的扇形坦克爆擊，必須面向場外吃。",
+                                                                "tips": [
+                                                                             "主 T 開減傷",
+                                                                             "面向場外避免掃到隊友"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Liquid Hell",
+                                                                "type": "aoe",
+                                                                "description": "隨機點名 1 人，落下大量毒區圓圈。",
+                                                                "tips": [
+                                                                             "被點名者跑場邊一路畫線",
+                                                                             "其餘人遠離被點名者"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Conflag Strike",
+                                                                "type": "stack",
+                                                                "description": "全體大傷分擔，需 8 人集中分擔。",
+                                                                "tips": [
+                                                                             "集合到指定點",
+                                                                             "副 T 不要拉走主 T 仇恨"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Death Sentence",
+                                                                "type": "tankbuster",
+                                                                "description": "巨大單體坦克爆擊，無減傷會秒殺。",
+                                                                "tips": [
+                                                                             "主 T 必開大型減傷（如戰士的原初解放、騎士的盾陣等）",
+                                                                             "奶開盾 / 救護車輔助"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name": "Twisters / Hatches（74% 過渡）",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Twisters",
+                                                                "type": "aoe",
+                                                                "description": "場上落下多個龍捲風 AoE 圓圈，踩到立死。",
+                                                                "tips": [
+                                                                             "遠離龍捲風落點",
+                                                                             "通常配合 P1 末段的 Death Sentence 後出現"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Hatch（蛋）",
+                                                                "type": "spread",
+                                                                "description": "4 個隨機玩家頭上會出現蛋的標記，需移動至場邊指定位置「下蛋」。",
+                                                                "tips": [
+                                                                             "按隊伍預定的下蛋位置走位（通常 N/E/S/W 4 點）",
+                                                                             "未被點名者注意不要擋路"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P2：涅爾·迪烏斯·達努斯",
+                       "nameEn": "Phase 2: Nael deus Darnus",
+                       "notes": "74% → 0% (Nael)，主要機制是 Heavensfall + 流星 + Quotes（涅爾語錄）。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Heavensfall（天降）",
+                                                                "type": "raidwide",
+                                                                "description": "全體 AoE，配合場上隕石機制。",
+                                                                "tips": [
+                                                                             "奶開 AoE 減傷",
+                                                                             "全員集中減傷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Raven Dive",
+                                                                "type": "tankbuster",
+                                                                "description": "對遠端目標的坦克爆擊，二段或單段。",
+                                                                "tips": [
+                                                                             "副 T 接 dive",
+                                                                             "主 T 開減傷接 cleave"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Bahamut\u0027s Claw（巴哈姆特之爪）",
+                                                                "type": "tankbuster",
+                                                                "description": "對主 T 的連續多段攻擊，會疊 debuff。",
+                                                                "tips": [
+                                                                             "兩 T 換仇恨避免 debuff 疊到致死"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Quote（語錄）機制",
+                                                                "type": "other",
+                                                                "description": "涅爾會「念詩」，文字內容對應特定機制（Doom、Thermionic、Lunar Dynamo、Iron Chariot 等）。每次唸 1-3 句，依序躲。",
+                                                                "tips": [
+                                                                             "「Blazing Heavens」= Dynamo + Chariot（同時 in \u0026 out 不可，看實際組合）",
+                                                                             "「Lunar Dynamo」=  Boss 中心 AoE，要外圈站位",
+                                                                             "「Iron Chariot」= Boss 外圈 AoE，要中心站位",
+                                                                             "「Thermionic」= 對面玩家的直線 AoE",
+                                                                             "建議先背熟所有 quote 對應的機制"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P3：巴哈姆特真身",
+                       "nameEn": "Phase 3: Bahamut Prime",
+                       "notes": "Nael 死後召喚出來的巴哈姆特，核心機制是 Megaflare 與 Earth Shaker。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Megaflare（特大百萬核爆）",
+                                                                "type": "raidwide",
+                                                                "description": "全體 AoE + 3 人塔機制：3 個玩家頭上有「塔」標記，需各自踩塔；其他人散開避開塔的範圍。",
+                                                                "tips": [
+                                                                             "塔點名者迅速到指定塔位置",
+                                                                             "未被點名者站在無塔的安全區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Earth Shaker",
+                                                                "type": "spread",
+                                                                "description": "3 人被點名，朝指定方向發射直線 AoE。",
+                                                                "tips": [
+                                                                             "被點名者依預定方位（如 NW / N / NE）拉線",
+                                                                             "避免線交叉"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Akh Morn",
+                                                                "type": "tankbuster",
+                                                                "description": "對單一目標的連續多段攻擊（3-5 段）。",
+                                                                "tips": [
+                                                                             "兩 T 接力，每段一人",
+                                                                             "或主 T 開連續減傷硬吃"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P4：召喚物階段",
+                       "nameEn": "Phase 4: Adds Phase",
+                       "notes": "P3 結束後，場上同時出現 3 隻小型 boss（Twintania add / Nael add / Bahamut Prime add），需要在限制時間內擊殺。",
+                       "phases": [
+                                      {
+                                          "name": "DPS check + 機制循環",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "三隻小 boss",
+                                                                "type": "other",
+                                                                "description": "三隻小型 boss 同時開戰，每隻擁有 P1-P3 的部分機制。",
+                                                                "tips": [
+                                                                             "依隊伍策略決定擊殺順序（常見：Bahamut → Nael → Twintania 或反之）",
+                                                                             "DPS 必須夠才能在 enrage 前打完",
+                                                                             "機制照舊處理（小 Plummet / 小 Akh Morn 等）"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Morn Afah",
+                                                                "type": "stack",
+                                                                "description": "全體集合分擔大傷，分擔人數會逐次減少（從 8 人 → 7 人 → 6 人...）。",
+                                                                "tips": [
+                                                                             "每次集合 → 拉開 → 再集合，注意人數即時減少",
+                                                                             "高傷害需多人共擔"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P5：黃金巴哈姆特",
+                       "nameEn": "Phase 5: Golden Bahamut",
+                       "notes": "最終階段。Teraflare 全滅 → 鳳凰復活 → 一連串高強度機制 → 9 分鐘 Enrage。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Teraflare",
+                                                                "type": "raidwide",
+                                                                "description": "進入 P5 時的全滅機制，所有玩家死亡。隨後由「鳳凰」復活並進入 P5。",
+                                                                "tips": [
+                                                                             "這是劇情強制機制，不是失誤",
+                                                                             "復活後立刻接續打 P5"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Akh Morn x6",
+                                                                "type": "tankbuster",
+                                                                "description": "對單體的 6 連擊坦克爆擊，必須兩 T 輪流接，每人吃 3 段。",
+                                                                "tips": [
+                                                                             "主 T 吃 1-3，副 T 吃 4-6 (或相反)",
+                                                                             "每段都需減傷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Exaflare",
+                                                                "type": "aoe",
+                                                                "description": "場上出現多條移動式 AoE 線（往一個方向爆炸推進）。",
+                                                                "tips": [
+                                                                             "看清楚移動方向，往側邊閃",
+                                                                             "不要逆向跑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Akh Rhai",
+                                                                "type": "aoe",
+                                                                "description": "全玩家腳下出現雷標，密集 AoE 圓圈密集落下。",
+                                                                "tips": [
+                                                                             "散開站位（每人都有獨立 AoE）",
+                                                                             "找空位躲"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Enrage（9 分鐘）",
+                                                                "type": "raidwide",
+                                                                "description": "9 分鐘整時 Boss 進入狂暴，無法防禦的全滅。",
+                                                                "tips": [
+                                                                             "DPS 在 9 分前打完",
+                                                                             "通常 P5 是純技術 + DPS 比拼"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

@@ -30,4 +30,12 @@ public class AppSettings
 
     [JsonPropertyName("lastDutyId")]
     public string? LastDutyId { get; set; }
+
+    /// <summary>
+    /// 使用者自訂的副本資料夾路徑（最高優先級，會覆寫 APPDATA 與內建）。
+    /// 空字串/null = 不啟用。
+    /// </summary>
+    [JsonPropertyName("customDutyFolder")]
+    public string? CustomDutyFolder { get; set; }
 }
+

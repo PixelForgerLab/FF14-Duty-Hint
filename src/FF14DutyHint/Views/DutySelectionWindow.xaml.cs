@@ -71,10 +71,20 @@ public partial class DutySelectionWindow : Window
         Close();
     }
 
-    private void OpenFolder_Click(object sender, RoutedEventArgs e)
+    private void OpenBuiltInFolder_Click(object sender, RoutedEventArgs e)
     {
-        var dir = DutyLoader.GetDataDirectory();
+        OpenFolder(DutyLoader.GetBuiltInDirectory());
+    }
+
+    private void OpenUserFolder_Click(object sender, RoutedEventArgs e)
+    {
+        var dir = DutyLoader.GetUserAppDataDirectory();
         Directory.CreateDirectory(dir);
+        OpenFolder(dir);
+    }
+
+    private void OpenFolder(string dir)
+    {
         try
         {
             Process.Start(new ProcessStartInfo

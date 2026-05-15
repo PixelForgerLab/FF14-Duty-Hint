@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
+using FF14DutyHint.Models;
 
 namespace FF14DutyHint.Converters;
 
@@ -96,3 +97,95 @@ public class StringToVisibilityConverter : IValueConverter
     public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
         => throw new NotSupportedException();
 }
+
+/// <summary>
+/// DutyQuality => 徽章背景色（Unspecified => Transparent）。
+/// </summary>
+public class QualityToBrushConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        return value switch
+        {
+            DutyQuality.Excellent => new SolidColorBrush(Color.FromRgb(0xFF, 0xC1, 0x07)),    // 金
+            DutyQuality.NeedsUpdate => new SolidColorBrush(Color.FromRgb(0xFB, 0x8C, 0x00)),  // 橙
+            DutyQuality.Skeleton => new SolidColorBrush(Color.FromRgb(0x60, 0x60, 0x68)),     // 灰
+            _ => Brushes.Transparent
+        };
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
+/// DutyQuality => 標籤文字。
+/// </summary>
+public class QualityToLabelConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        return value switch
+        {
+            DutyQuality.Excellent => "優秀",
+            DutyQuality.NeedsUpdate => "需更新",
+            DutyQuality.Skeleton => "骨架",
+            _ => string.Empty
+        };
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
+/// DutyQuality == Unspecified => Collapsed，其他 => Visible。
+/// </summary>
+public class QualityToVisibilityConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        return value is DutyQuality q && q != DutyQuality.Unspecified
+            ? Visibility.Visible
+            : Visibility.Collapsed;
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
+/// DutySource != BuiltIn => Visible (顯示「自訂」徽章)。
+/// </summary>
+public class UserSourceToVisibilityConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        return value is DutySource s && s != DutySource.BuiltIn
+            ? Visibility.Visible
+            : Visibility.Collapsed;
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
+/// DutySource => 顯示用標籤。
+/// </summary>
+public class SourceToLabelConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        return value switch
+        {
+            DutySource.UserAppData => "自訂",
+            DutySource.UserCustomFolder => "自訂*",
+            _ => string.Empty
+        };
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+

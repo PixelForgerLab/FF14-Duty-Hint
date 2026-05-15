@@ -8,8 +8,17 @@ using FF14DutyHint.Models;
 namespace FF14DutyHint.Services;
 
 /// <summary>
-/// 從 data/duties 目錄載入所有 .json 副本檔案。
-/// 載入順序：與 exe 同層的 data/duties，找不到時退回原始碼目錄。
+/// Loader 的結果，包含載入的副本與警告訊息。
+/// </summary>
+public class DutyLoadResult
+{
+    public List<Duty> Duties { get; init; } = new();
+    public List<string> Warnings { get; init; } = new();
+}
+
+/// <summary>
+/// 從多個來源（內建 / APPDATA / 自訂資料夾）載入副本 JSON，
+/// 依優先級覆寫合併（內建 < APPDATA < 自訂）。
 /// </summary>
 public static class DutyLoader
 {
@@ -20,7 +29,8 @@ public static class DutyLoader
         AllowTrailingCommas = true
     };
 
-    public static string GetDataDirectory()
+    /// <summary>內建資料夾（隨 exe 發佈）。</summary>
+    public static string GetBuiltInDirectory()
     {
         var exeDir = AppContext.BaseDirectory;
         var primary = Path.Combine(exeDir, "data", "duties");
@@ -29,6 +39,7 @@ public static class DutyLoader
             return primary;
         }
 
+        // 開發時 fallback：往上找 repo 根目錄的 data/duties
         var probe = new DirectoryInfo(exeDir);
         for (int i = 0; i < 6 && probe is not null; i++)
         {
@@ -43,46 +54,122 @@ public static class DutyLoader
         return primary;
     }
 
-    public static List<Duty> LoadAll()
+    /// <summary>使用者預設資料夾（%APPDATA%/FF14DutyHint/duties）。</summary>
+    public static string GetUserAppDataDirectory()
     {
-        var directory = GetDataDirectory();
-        var results = new List<Duty>();
+        var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        return Path.Combine(appData, "FF14DutyHint", "duties");
+    }
 
-        if (!Directory.Exists(directory))
+    /// <summary>
+    /// 依設定載入所有副本資料，依優先級合併：內建 → APPDATA → 自訂資料夾。
+    /// </summary>
+    public static DutyLoadResult LoadAll(AppSettings? settings = null)
+    {
+        var result = new DutyLoadResult();
+        var dutyById = new Dictionary<string, Duty>(StringComparer.OrdinalIgnoreCase);
+
+        // 1. 內建（最低優先級）
+        LoadFromDirectory(GetBuiltInDirectory(), DutySource.BuiltIn, dutyById, result.Warnings);
+
+        // 2. APPDATA
+        var appDataDir = GetUserAppDataDirectory();
+        if (Directory.Exists(appDataDir))
         {
-            return results;
+            LoadFromDirectory(appDataDir, DutySource.UserAppData, dutyById, result.Warnings);
         }
 
-        foreach (var file in Directory.EnumerateFiles(directory, "*.json", SearchOption.TopDirectoryOnly))
+        // 3. 自訂資料夾（最高優先級）
+        var custom = settings?.CustomDutyFolder?.Trim();
+        if (!string.IsNullOrEmpty(custom))
+        {
+            if (Directory.Exists(custom))
+            {
+                LoadFromDirectory(custom, DutySource.UserCustomFolder, dutyById, result.Warnings);
+            }
+            else
+            {
+                result.Warnings.Add($"自訂資料夾不存在：{custom}");
+            }
+        }
+
+        result.Duties.AddRange(
+            dutyById.Values
+                .OrderBy(d => d.Expansion ?? string.Empty)
+                .ThenBy(d => d.Name)
+        );
+
+        return result;
+    }
+
+    private static void LoadFromDirectory(
+        string directory,
+        DutySource source,
+        Dictionary<string, Duty> bucket,
+        List<string> warnings)
+    {
+        if (!Directory.Exists(directory))
+        {
+            return;
+        }
+
+        // 同一資料夾內依檔名排序，重複 id 取最後一個並警告（deterministic）
+        var files = Directory.EnumerateFiles(directory, "*.json", SearchOption.TopDirectoryOnly)
+            .Where(f => !Path.GetFileName(f).StartsWith("_", StringComparison.Ordinal))
+            .OrderBy(f => f, StringComparer.OrdinalIgnoreCase);
+
+        var seenInThisDir = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var file in files)
         {
             var fileName = Path.GetFileName(file);
-            if (fileName.StartsWith("_", StringComparison.Ordinal))
-            {
-                continue;
-            }
-
+            Duty? duty;
             try
             {
                 using var stream = File.OpenRead(file);
-                var duty = JsonSerializer.Deserialize<Duty>(stream, JsonOptions);
-                if (duty is not null && !string.IsNullOrWhiteSpace(duty.Id))
-                {
-                    results.Add(duty);
-                }
+                duty = JsonSerializer.Deserialize<Duty>(stream, JsonOptions);
             }
             catch (JsonException ex)
             {
-                System.Diagnostics.Debug.WriteLine($"[DutyLoader] 解析 {fileName} 失敗：{ex.Message}");
+                warnings.Add($"[{source}] {fileName} JSON 解析失敗：{ex.Message}");
+                continue;
             }
             catch (IOException ex)
             {
-                System.Diagnostics.Debug.WriteLine($"[DutyLoader] 讀取 {fileName} 失敗：{ex.Message}");
+                warnings.Add($"[{source}] {fileName} 讀取失敗：{ex.Message}");
+                continue;
             }
-        }
 
-        return results
-            .OrderBy(d => d.Expansion ?? string.Empty)
-            .ThenBy(d => d.Name)
-            .ToList();
+            if (duty is null || string.IsNullOrWhiteSpace(duty.Id))
+            {
+                warnings.Add($"[{source}] {fileName} 缺少 id 或為空，已略過。");
+                continue;
+            }
+
+            if (string.IsNullOrWhiteSpace(duty.Name))
+            {
+                warnings.Add($"[{source}] {fileName} 缺少 name，已略過。");
+                continue;
+            }
+
+            if (!seenInThisDir.Add(duty.Id))
+            {
+                warnings.Add($"[{source}] {fileName} 與同資料夾中其他檔案的 id «{duty.Id}» 重複，以此檔覆蓋。");
+            }
+
+            duty.Source = source;
+            duty.SourcePath = file;
+
+            if (bucket.TryGetValue(duty.Id, out var existing))
+            {
+                if (existing.Source != source)
+                {
+                    duty.OverridesBuiltIn = true;
+                }
+            }
+
+            bucket[duty.Id] = duty;
+        }
     }
 }
+

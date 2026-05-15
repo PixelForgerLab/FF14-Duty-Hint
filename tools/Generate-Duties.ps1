@@ -330,6 +330,7 @@ foreach ($d in $duties) {
         iLvlSync     = $iLvlSync
         jobLevelSync = $jobLevelSync
         highEnd      = $highEnd
+        quality      = "skeleton"
         notes        = "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）"
         bosses       = @()
     }

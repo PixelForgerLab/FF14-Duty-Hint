@@ -24,6 +24,11 @@
     "iLvlSync": { "type": ["integer", "null"], "minimum": 0 },
     "jobLevelSync": { "type": ["integer", "null"], "minimum": 0, "maximum": 100, "description": "完成此副本所需的職業等級 (依資料挖掘自動填入)" },
     "highEnd": { "type": "boolean", "description": "是否為高難度副本 (Savage / Ultimate / Chaotic)" },
+    "quality": {
+      "type": "string",
+      "enum": ["excellent", "needs-update", "skeleton"],
+      "description": "副本提示品質：excellent=完整可信；needs-update=部分內容但需校對更新；skeleton=只有基本資料"
+    },
     "notes": { "type": "string" },
     "bosses": {
       "type": "array",

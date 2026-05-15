@@ -1,191 +1,244 @@
 {
-  "id": "weapons_refrain_ultimate",
-  "name": "究極神兵絕境戰",
-  "nameEn": "The Weapon's Refrain (Ultimate)",
-  "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-  "type": "ultimate",
-  "playerCount": 8,
-  "iLvlSync": 375,
-  "jobLevelSync": 70,
-  "highEnd": true,
-  "notes": "UWU（簡稱「絕神兵」），FF14 第二個絕代副本，由四個 primal（迦樓羅 / 伊弗利特 / 泰坦）+ 機械神兵 + 究極阿爾忒瑪武器組成。⚠️ 本提示由 AI 預填，可能有疏漏，歡迎 PR 修正。",
-  "bosses": [
-    {
-      "name": "P1：迦樓羅",
-      "nameEn": "Phase 1: Garuda",
-      "notes": "起手第一個 primal。重點是大型風刃、龍捲風、與 Spiny Plumes（羽毛）。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Mistral Song",
-              "type": "tankbuster",
-              "description": "對主 T 的單體坦克爆擊，無減傷會秒殺。",
-              "tips": ["主 T 開大型減傷", "奶準備立刻補血"]
-            },
-            {
-              "name": "Wicked Wheel",
-              "type": "aoe",
-              "description": "Boss 中心圓形 AoE，需離開 Boss 周圍。",
-              "tips": ["跑到場邊", "不要在 Boss 腳下"]
-            },
-            {
-              "name": "Spiny Plumes（羽毛）",
-              "type": "other",
-              "description": "場上出現大型羽毛，會吸引玩家 + 留下毒區。需要按隊伍策略 dump（引導）到指定位置。",
-              "tips": ["指定玩家拉羽毛到場邊", "其餘人不要被羽毛吸到"]
-            },
-            {
-              "name": "Vacuum Slice",
-              "type": "aoe",
-              "description": "前方扇形大 AoE。",
-              "tips": ["看 Boss 面向，閃到背後"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P2：伊弗利特",
-      "nameEn": "Phase 2: Ifrit",
-      "notes": "第二個 primal。核心是 Eruption（地獄火噴發）與 Searing Wind（灼熱風）debuff。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Eruption（地獄火）",
-              "type": "aoe",
-              "description": "隨機點名玩家，腳下出現紅色 AoE 圈。",
-              "tips": ["被點名者快速跑離隊伍", "不要踩到他人 AoE 殘留"]
-            },
-            {
-              "name": "Searing Wind",
-              "type": "spread",
-              "description": "Debuff，會對自己散發傷害。被點名者必須離隊伍夠遠避免燒傷其他人。",
-              "tips": [
-                "Searing Wind 玩家獨自站場邊",
-                "debuff 期間不能集合或共擔"
-              ]
-            },
-            {
-              "name": "Inferno Howl",
-              "type": "raidwide",
-              "description": "Ifrit 的全體 AoE。",
-              "tips": ["奶開 AoE 減傷"]
-            },
-            {
-              "name": "Crimson Cyclone（衝撞）",
-              "type": "aoe",
-              "description": "Boss 隨機跳到場邊，然後直線衝撞回場上某點。",
-              "tips": ["閃到衝撞線外", "可以從 Boss 跳躍位置預判落點"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P3：泰坦",
-      "nameEn": "Phase 3: Titan",
-      "notes": "第三個 primal。核心是 Geocrush（跳擊）+ Tumult（連環地震）+ 4 個圓盤（場地碎裂）。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Geocrush",
-              "type": "raidwide",
-              "description": "Boss 跳到中央，落地造成大 AoE + 擊退。",
-              "tips": ["往場邊跑準備站擊退位置", "靠近場邊以免被推下台"]
-            },
-            {
-              "name": "Tumult（連環地震）",
-              "type": "raidwide",
-              "description": "5 連擊全體 AoE，每次傷害較高。",
-              "tips": ["奶連續加血", "盡量縮減傷 CD"]
-            },
-            {
-              "name": "Landslide（地裂）",
-              "type": "aoe",
-              "description": "直線 AoE 配合擊退效果。",
-              "tips": ["閃到線外", "若被擊退，注意不要掉場"]
-            },
-            {
-              "name": "Weight of the Land",
-              "type": "spread",
-              "description": "玩家腳下出現黃色圓圈 AoE。",
-              "tips": ["散開避免重疊", "離開圈前才會結算傷害"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P4：機械神兵",
-      "nameEn": "Phase 4: The Magitek Bits",
-      "notes": "進入機械神兵階段，包含核爆塔、雷射、超核爆 (Annihilation) 等機制。也是 UWU 中段難點。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Diffractive Plasma",
-              "type": "tankbuster",
-              "description": "前方扇形坦克爆擊。",
-              "tips": ["主 T 開減傷", "副 T 注意換仇恨時機"]
-            },
-            {
-              "name": "Magitek Bits（電光彈）",
-              "type": "spread",
-              "description": "場上有多個機械小球，朝玩家發射雷射，需要散開避免線交叉。",
-              "tips": ["看清楚自己被哪顆球瞄準", "依隊伍走位策略決定站位"]
-            },
-            {
-              "name": "Annihilation",
-              "type": "raidwide",
-              "description": "P4 結束的高威力全體 AoE，全員需減傷與滿血。",
-              "tips": ["全體開減傷", "奶滿血治療"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "P5：究極阿爾忒瑪武器",
-      "nameEn": "Phase 5: The Ultima Weapon (Primal-merged)",
-      "notes": "最終階段。整合先前 primals 的機制 + 全新範圍機制。9-10 分鐘 enrage 是常見停損點。",
-      "phases": [
-        {
-          "name": "主要機制",
-          "mechanics": [
-            {
-              "name": "Sephirot 機制",
-              "type": "other",
-              "description": "源自 Sephirot 的 Da'at（紅色標記 = 散開）與 Ratzon（直線 AoE）。",
-              "tips": ["Da'at 散開避免 share", "Ratzon 避開直線"]
-            },
-            {
-              "name": "Sophia 機制",
-              "type": "other",
-              "description": "源自 Sophia 的 Quasar 落下 + 場地傾斜。",
-              "tips": ["看天平方向決定站位", "場地傾斜時往高點走"]
-            },
-            {
-              "name": "Zurvan 機制",
-              "type": "other",
-              "description": "源自 Zurvan 的 Shifting Mass 區域分區傷害。",
-              "tips": ["注意場地分區指示", "在安全區內等候"]
-            },
-            {
-              "name": "Enrage",
-              "type": "raidwide",
-              "description": "約 13 分鐘整體 Boss 進入狂暴。",
-              "tips": ["DPS check 較嚴格", "P5 內各 primal 機制錯不能斷補"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id": "weapons_refrain_ultimate",
+    "name": "究極神兵絕境戰",
+    "nameEn": "The Weapon\u0027s Refrain (Ultimate)",
+    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "type": "ultimate",
+    "playerCount": 8,
+    "iLvlSync": 375,
+    "jobLevelSync": 70,
+    "highEnd": true,
+    "quality": "excellent",
+    "notes": "UWU（簡稱「絕神兵」），FF14 第二個絕代副本，由四個 primal（迦樓羅 / 伊弗利特 / 泰坦）+ 機械神兵 + 究極阿爾忒瑪武器組成。⚠️ 本提示由 AI 預填，可能有疏漏，歡迎 PR 修正。",
+    "bosses": [
+                   {
+                       "name": "P1：迦樓羅",
+                       "nameEn": "Phase 1: Garuda",
+                       "notes": "起手第一個 primal。重點是大型風刃、龍捲風、與 Spiny Plumes（羽毛）。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Mistral Song",
+                                                                "type": "tankbuster",
+                                                                "description": "對主 T 的單體坦克爆擊，無減傷會秒殺。",
+                                                                "tips": [
+                                                                             "主 T 開大型減傷",
+                                                                             "奶準備立刻補血"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Wicked Wheel",
+                                                                "type": "aoe",
+                                                                "description": "Boss 中心圓形 AoE，需離開 Boss 周圍。",
+                                                                "tips": [
+                                                                             "跑到場邊",
+                                                                             "不要在 Boss 腳下"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Spiny Plumes（羽毛）",
+                                                                "type": "other",
+                                                                "description": "場上出現大型羽毛，會吸引玩家 + 留下毒區。需要按隊伍策略 dump（引導）到指定位置。",
+                                                                "tips": [
+                                                                             "指定玩家拉羽毛到場邊",
+                                                                             "其餘人不要被羽毛吸到"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Vacuum Slice",
+                                                                "type": "aoe",
+                                                                "description": "前方扇形大 AoE。",
+                                                                "tips": [
+                                                                             "看 Boss 面向，閃到背後"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P2：伊弗利特",
+                       "nameEn": "Phase 2: Ifrit",
+                       "notes": "第二個 primal。核心是 Eruption（地獄火噴發）與 Searing Wind（灼熱風）debuff。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Eruption（地獄火）",
+                                                                "type": "aoe",
+                                                                "description": "隨機點名玩家，腳下出現紅色 AoE 圈。",
+                                                                "tips": [
+                                                                             "被點名者快速跑離隊伍",
+                                                                             "不要踩到他人 AoE 殘留"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Searing Wind",
+                                                                "type": "spread",
+                                                                "description": "Debuff，會對自己散發傷害。被點名者必須離隊伍夠遠避免燒傷其他人。",
+                                                                "tips": [
+                                                                             "Searing Wind 玩家獨自站場邊",
+                                                                             "debuff 期間不能集合或共擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Inferno Howl",
+                                                                "type": "raidwide",
+                                                                "description": "Ifrit 的全體 AoE。",
+                                                                "tips": [
+                                                                             "奶開 AoE 減傷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Crimson Cyclone（衝撞）",
+                                                                "type": "aoe",
+                                                                "description": "Boss 隨機跳到場邊，然後直線衝撞回場上某點。",
+                                                                "tips": [
+                                                                             "閃到衝撞線外",
+                                                                             "可以從 Boss 跳躍位置預判落點"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P3：泰坦",
+                       "nameEn": "Phase 3: Titan",
+                       "notes": "第三個 primal。核心是 Geocrush（跳擊）+ Tumult（連環地震）+ 4 個圓盤（場地碎裂）。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Geocrush",
+                                                                "type": "raidwide",
+                                                                "description": "Boss 跳到中央，落地造成大 AoE + 擊退。",
+                                                                "tips": [
+                                                                             "往場邊跑準備站擊退位置",
+                                                                             "靠近場邊以免被推下台"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Tumult（連環地震）",
+                                                                "type": "raidwide",
+                                                                "description": "5 連擊全體 AoE，每次傷害較高。",
+                                                                "tips": [
+                                                                             "奶連續加血",
+                                                                             "盡量縮減傷 CD"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Landslide（地裂）",
+                                                                "type": "aoe",
+                                                                "description": "直線 AoE 配合擊退效果。",
+                                                                "tips": [
+                                                                             "閃到線外",
+                                                                             "若被擊退，注意不要掉場"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Weight of the Land",
+                                                                "type": "spread",
+                                                                "description": "玩家腳下出現黃色圓圈 AoE。",
+                                                                "tips": [
+                                                                             "散開避免重疊",
+                                                                             "離開圈前才會結算傷害"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P4：機械神兵",
+                       "nameEn": "Phase 4: The Magitek Bits",
+                       "notes": "進入機械神兵階段，包含核爆塔、雷射、超核爆 (Annihilation) 等機制。也是 UWU 中段難點。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Diffractive Plasma",
+                                                                "type": "tankbuster",
+                                                                "description": "前方扇形坦克爆擊。",
+                                                                "tips": [
+                                                                             "主 T 開減傷",
+                                                                             "副 T 注意換仇恨時機"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Magitek Bits（電光彈）",
+                                                                "type": "spread",
+                                                                "description": "場上有多個機械小球，朝玩家發射雷射，需要散開避免線交叉。",
+                                                                "tips": [
+                                                                             "看清楚自己被哪顆球瞄準",
+                                                                             "依隊伍走位策略決定站位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Annihilation",
+                                                                "type": "raidwide",
+                                                                "description": "P4 結束的高威力全體 AoE，全員需減傷與滿血。",
+                                                                "tips": [
+                                                                             "全體開減傷",
+                                                                             "奶滿血治療"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name": "P5：究極阿爾忒瑪武器",
+                       "nameEn": "Phase 5: The Ultima Weapon (Primal-merged)",
+                       "notes": "最終階段。整合先前 primals 的機制 + 全新範圍機制。9-10 分鐘 enrage 是常見停損點。",
+                       "phases": [
+                                      {
+                                          "name": "主要機制",
+                                          "mechanics": [
+                                                            {
+                                                                "name": "Sephirot 機制",
+                                                                "type": "other",
+                                                                "description": "源自 Sephirot 的 Da\u0027at（紅色標記 = 散開）與 Ratzon（直線 AoE）。",
+                                                                "tips": [
+                                                                             "Da\u0027at 散開避免 share",
+                                                                             "Ratzon 避開直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Sophia 機制",
+                                                                "type": "other",
+                                                                "description": "源自 Sophia 的 Quasar 落下 + 場地傾斜。",
+                                                                "tips": [
+                                                                             "看天平方向決定站位",
+                                                                             "場地傾斜時往高點走"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Zurvan 機制",
+                                                                "type": "other",
+                                                                "description": "源自 Zurvan 的 Shifting Mass 區域分區傷害。",
+                                                                "tips": [
+                                                                             "注意場地分區指示",
+                                                                             "在安全區內等候"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name": "Enrage",
+                                                                "type": "raidwide",
+                                                                "description": "約 13 分鐘整體 Boss 進入狂暴。",
+                                                                "tips": [
+                                                                             "DPS check 較嚴格",
+                                                                             "P5 內各 primal 機制錯不能斷補"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

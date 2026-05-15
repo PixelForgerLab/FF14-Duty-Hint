@@ -33,8 +33,22 @@
 | `iLvlSync` | ⬜ | int | iLvl 同步等級 |
 | `jobLevelSync` | ⬜ | int | 職業等級需求（由產生器自動填入） |
 | `highEnd` | ⬜ | bool | 是否為高難度（Savage / Ultimate / Chaotic）|
+| `quality` | ⬜ | string | 提示品質：`excellent` / `needs-update` / `skeleton`（見下方說明）|
 | `notes` | ⬜ | string | 副本整體備註 |
 | `bosses` | ✅ | array | Boss 列表 |
+
+## 🏅 品質標籤 (`quality`)
+
+| 值 | 顯示 | 用途 |
+|---|---|---|
+| `excellent` | 🟡 優秀 | 機制完整、經過驗證、可放心使用 |
+| `needs-update` | 🟠 需更新 | 有部分內容但不完整或可能過時 |
+| `skeleton` | ⬜ 骨架 | 只有副本基本資料，無詳細機制 |
+
+> **沒指定 `quality` 怎麼辦？**<br>
+> 若 `bosses` 為空陣列 → 自動視為 `skeleton`<br>
+> 若 `bosses` 有內容但未明確標 quality → 不顯示徽章（中性）<br>
+> 寫好新副本後，建議自評後加上 `"quality": "excellent"` 或 `"needs-update"`。
 
 ### Boss 層級
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +16,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 {
     private AppSettings _settings = new();
     private List<Duty> _duties = new();
+    private List<string> _lastLoadWarnings = new();
     private Duty? _currentDuty;
     private bool _initialized;
 
@@ -36,8 +37,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     protected override void OnSourceInitialized(EventArgs e)
     {
         base.OnSourceInitialized(e);
-        // 套用 WS_EX_NOACTIVATE：在遊戲中點擊 Overlay 不會偷走焦點，
-        // 也順帶 WS_EX_TOOLWINDOW 從 Alt+Tab 清單隱藏。
         WindowInterop.MakeOverlayWindow(this);
     }
 
@@ -45,19 +44,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     {
         _settings = SettingsService.Load();
         ApplySettings();
-
-        _duties = DutyLoader.LoadAll();
-
-        // 還原上次選的副本
-        if (!string.IsNullOrEmpty(_settings.LastDutyId))
-        {
-            var last = _duties.FirstOrDefault(d => d.Id == _settings.LastDutyId);
-            if (last is not null)
-            {
-                SetDuty(last);
-            }
-        }
-
+        ReloadDuties();
         RaiseFontProperties();
         _initialized = true;
     }
@@ -96,6 +83,63 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
     }
 
+    /// <summary>從各來源（內建/APPDATA/自訂資料夾）重新載入所有副本，並保留目前選擇。</summary>
+    private void ReloadDuties()
+    {
+        var previousId = _currentDuty?.Id ?? _settings.LastDutyId;
+
+        var loadResult = DutyLoader.LoadAll(_settings);
+        _duties = loadResult.Duties;
+        _lastLoadWarnings = loadResult.Warnings;
+
+        UpdateWarningBanner();
+
+        if (!string.IsNullOrEmpty(previousId))
+        {
+            var matching = _duties.FirstOrDefault(d =>
+                string.Equals(d.Id, previousId, StringComparison.OrdinalIgnoreCase));
+            if (matching is not null)
+            {
+                SetDuty(matching);
+                return;
+            }
+        }
+
+        // 第一次或找不到對應 → 顯示「請選副本」空畫面
+        if (_currentDuty is null)
+        {
+            SetDuty(null);
+        }
+    }
+
+    private void UpdateWarningBanner()
+    {
+        if (_lastLoadWarnings.Count == 0)
+        {
+            WarningBanner.Visibility = Visibility.Collapsed;
+            WarningBannerText.Text = string.Empty;
+            return;
+        }
+
+        WarningBannerText.Text = $"⚠ {_lastLoadWarnings.Count} 個資料載入警告（按此查看）";
+        WarningBanner.Visibility = Visibility.Visible;
+    }
+
+    private void WarningBanner_Click(object sender, MouseButtonEventArgs e)
+    {
+        if (_lastLoadWarnings.Count == 0)
+        {
+            return;
+        }
+
+        var msg = string.Join("\n\n", _lastLoadWarnings.Take(20));
+        if (_lastLoadWarnings.Count > 20)
+        {
+            msg += $"\n\n... 還有 {_lastLoadWarnings.Count - 20} 則。";
+        }
+        MessageBox.Show(this, msg, "資料載入警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+    }
+
     private void RaiseFontProperties()
     {
         OnPropertyChanged(nameof(HeaderFontSize));
@@ -118,6 +162,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             DutyNotesBorder.Visibility = Visibility.Collapsed;
             DutyNotesText.Text = string.Empty;
             BossList.ItemsSource = null;
+            QualityBadge.Visibility = Visibility.Collapsed;
+            SourceBadge.Visibility = Visibility.Collapsed;
             EmptyHintText.Text = NoDutyHint;
             EmptyHintText.Visibility = Visibility.Visible;
             return;
@@ -133,6 +179,11 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         if (duty.ILvlSync is int il && il > 0) metaParts.Add($"iLvl {il}");
         if (duty.HighEnd) metaParts.Add("★ 高難度");
         DutyMetaText.Text = string.Join("  ·  ", metaParts);
+
+        // 品質徽章
+        ApplyQualityBadge(duty.Quality);
+        // 來源徽章
+        ApplySourceBadge(duty);
 
         if (!string.IsNullOrWhiteSpace(duty.Notes))
         {
@@ -158,6 +209,52 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         _settings.LastDutyId = duty.Id;
     }
 
+    private void ApplyQualityBadge(DutyQuality q)
+    {
+        if (q == DutyQuality.Unspecified)
+        {
+            QualityBadge.Visibility = Visibility.Collapsed;
+            return;
+        }
+
+        var (label, bg) = q switch
+        {
+            DutyQuality.Excellent => ("優秀", System.Windows.Media.Color.FromRgb(0xFF, 0xC1, 0x07)),
+            DutyQuality.NeedsUpdate => ("需更新", System.Windows.Media.Color.FromRgb(0xFB, 0x8C, 0x00)),
+            DutyQuality.Skeleton => ("骨架", System.Windows.Media.Color.FromRgb(0x60, 0x60, 0x68)),
+            _ => ("", System.Windows.Media.Colors.Transparent)
+        };
+        QualityBadgeText.Text = label;
+        QualityBadge.Background = new System.Windows.Media.SolidColorBrush(bg);
+        QualityBadge.Visibility = Visibility.Visible;
+    }
+
+    private void ApplySourceBadge(Duty duty)
+    {
+        if (duty.Source == DutySource.BuiltIn && !duty.OverridesBuiltIn)
+        {
+            SourceBadge.Visibility = Visibility.Collapsed;
+            return;
+        }
+
+        var label = duty.Source switch
+        {
+            DutySource.UserAppData => "自訂",
+            DutySource.UserCustomFolder => "自訂*",
+            _ => string.Empty
+        };
+        if (duty.OverridesBuiltIn)
+        {
+            SourceBadge.ToolTip = $"來自 {duty.SourcePath}（覆寫了內建資料）";
+        }
+        else
+        {
+            SourceBadge.ToolTip = $"來自 {duty.SourcePath}";
+        }
+        SourceBadgeText.Text = label;
+        SourceBadge.Visibility = Visibility.Visible;
+    }
+
     private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
         if (e.ChangedButton == MouseButton.Left)
@@ -178,12 +275,16 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     private void OpenSettings_Click(object sender, RoutedEventArgs e)
     {
         var dlg = new SettingsWindow(_settings) { Owner = this };
-        dlg.SettingsChanged += s =>
+        dlg.AppearanceChanged += s =>
         {
             _settings = s;
             Opacity = Math.Clamp(_settings.Opacity, 0.2, 1.0);
             Topmost = _settings.Topmost;
             RaiseFontProperties();
+        };
+        dlg.DataSourceChanged += () =>
+        {
+            ReloadDuties();
         };
         dlg.ShowDialog();
         SettingsService.Save(_settings);

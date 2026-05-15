@@ -3,13 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:conv="clr-namespace:FF14DutyHint.Converters"
         mc:Ignorable="d"
         Title="選擇副本"
-        Height="500" Width="420"
+        Height="600" Width="500"
         WindowStartupLocation="CenterOwner"
         Background="{StaticResource OverlayBg}"
         FontFamily="Microsoft JhengHei UI, Segoe UI, Yu Gothic UI"
         Foreground="{StaticResource TextBrush}">
+    <Window.Resources>
+        <conv:QualityToBrushConverter x:Key="QualityToBrush"/>
+        <conv:QualityToLabelConverter x:Key="QualityToLabel"/>
+        <conv:QualityToVisibilityConverter x:Key="QualityToVis"/>
+        <conv:UserSourceToVisibilityConverter x:Key="UserSourceToVis"/>
+        <conv:SourceToLabelConverter x:Key="SourceToLabel"/>
+    </Window.Resources>
     <Grid Margin="12">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -42,7 +50,31 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="2">
-                        <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                        <StackPanel Orientation="Horizontal">
+                            <!-- 品質徽章 -->
+                            <Border Background="{Binding Quality, Converter={StaticResource QualityToBrush}}"
+                                    CornerRadius="3"
+                                    Padding="5,1"
+                                    Margin="0,0,6,0"
+                                    Visibility="{Binding Quality, Converter={StaticResource QualityToVis}}">
+                                <TextBlock Text="{Binding Quality, Converter={StaticResource QualityToLabel}}"
+                                           Foreground="#1A1A1F"
+                                           FontSize="10"
+                                           FontWeight="Bold"/>
+                            </Border>
+                            <!-- 來源徽章 -->
+                            <Border Background="#3A3A45"
+                                    CornerRadius="3"
+                                    Padding="5,1"
+                                    Margin="0,0,6,0"
+                                    Visibility="{Binding Source, Converter={StaticResource UserSourceToVis}}">
+                                <TextBlock Text="{Binding Source, Converter={StaticResource SourceToLabel}}"
+                                           Foreground="{StaticResource TextBrush}"
+                                           FontSize="10"
+                                           FontWeight="SemiBold"/>
+                            </Border>
+                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                        </StackPanel>
                         <TextBlock Text="{Binding NameEn}" Foreground="{StaticResource MutedTextBrush}" FontSize="11"/>
                         <TextBlock Text="{Binding Expansion}" Foreground="{StaticResource MutedTextBrush}" FontSize="11"/>
                     </StackPanel>
@@ -51,7 +83,9 @@
         </ListBox>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
-            <Button Content="開啟資料夾" Click="OpenFolder_Click" Padding="10,4" Margin="0,0,6,0"
+            <Button Content="開啟內建資料夾" Click="OpenBuiltInFolder_Click" Padding="10,4" Margin="0,0,6,0"
+                    Background="#22FFFFFF" Foreground="{StaticResource TextBrush}" BorderBrush="#44FFFFFF"/>
+            <Button Content="開啟使用者資料夾" Click="OpenUserFolder_Click" Padding="10,4" Margin="0,0,6,0"
                     Background="#22FFFFFF" Foreground="{StaticResource TextBrush}" BorderBrush="#44FFFFFF"/>
             <Button Content="取消" Click="Cancel_Click" Padding="10,4" Margin="0,0,6,0"
                     Background="#22FFFFFF" Foreground="{StaticResource TextBrush}" BorderBrush="#44FFFFFF"/>
@@ -60,3 +94,4 @@
         </StackPanel>
     </Grid>
 </Window>
+
