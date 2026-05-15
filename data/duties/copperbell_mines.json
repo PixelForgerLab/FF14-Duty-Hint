@@ -1,13 +1,124 @@
 {
-    "id": "copperbell_mines",
-    "name": "封鎖坑道銅鈴銅山",
-    "nameEn": "Copperbell Mines",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 20,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "copperbell_mines",
+  "name": "封鎖坑道銅鈴銅山",
+  "nameEn": "Copperbell Mines",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 20,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Kottos：踩亮地板抗擊退，不要被推下台",
+    "Ichorous Ire：分裂的小水球 DPS 快清",
+    "Gyges：閃 AoE、注意擊退方向"
+  ],
+  "notes": "等級 17 的 4 人副本。整體機制簡單，主要小心擊退類技能避免摔下平台。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "憤怒的科託斯",
+      "nameEn": "Kottos",
+      "mnemonic": [
+        "Boss 會擊退，靠場邊小心摔下去",
+        "踩亮的地板可以抗擊退"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "擊退攻擊",
+              "type": "other",
+              "description": "Boss 會把目標擊退。場上有發光地板可以踩著抗擊退。",
+              "tips": [
+                "站亮地板上戰鬥",
+                { "text": "拉 Boss 時站亮處避免被推下台", "role": "tank" }
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "怒水腐液",
+      "nameEn": "Ichorous Ire",
+      "mnemonic": [
+        "Boss 會分裂成小水球",
+        "DPS 全力打小水球避免合體"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "分裂",
+              "type": "other",
+              "description": "Boss HP 到某階段會分裂成多個小水球，若未及時擊殺會合體回大水球。",
+              "tips": [
+                "DPS 集中火力清小水球",
+                { "text": "T 控制小水球聚集方便 AoE", "role": "tank" }
+              ]
+            },
+            {
+              "name": "腳下圓圈",
+              "type": "aoe",
+              "description": "腳下會出現酸液圓圈，需移開。",
+              "tips": [
+                "看到圓圈立刻走出去"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "強腕的居格斯",
+      "nameEn": "Gyges the Great",
+      "mnemonic": [
+        "大型石頭巨人 boss",
+        "閃 AoE 圓圈、注意擊退別摔下去"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "扇形攻擊",
+              "type": "tankbuster",
+              "description": "前方扇形攻擊。",
+              "tips": [
+                { "text": "T 注意減傷或閃避", "role": "tank" },
+                "DPS 站背後輸出"
+              ]
+            },
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下大圓圈 AoE。",
+              "tips": [
+                "看到圓圈立刻走出去"
+              ]
+            },
+            {
+              "name": "擊退",
+              "type": "other",
+              "description": "對單一目標的擊退攻擊。",
+              "tips": [
+                "注意背後是否為平台邊緣"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

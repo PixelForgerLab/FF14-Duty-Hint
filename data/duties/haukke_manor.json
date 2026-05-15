@@ -1,13 +1,115 @@
 {
-    "id": "haukke_manor",
-    "name": "名門府邸靜語莊園",
-    "nameEn": "Haukke Manor",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 31,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "haukke_manor",
+  "name": "名門府邸靜語莊園",
+  "nameEn": "Haukke Manor",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 31,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Manor Sentry：純打 boss，沒大機制",
+    "Manor Steward：召喚多隻小怪，DPS 清",
+    "Lady Amandine：迷惑（魅惑）debuff、AoE 圓圈"
+  ],
+  "notes": "等級 28 的 4 人副本（怪物聲望貴族劇情）。Boss 機制簡單但 Lady Amandine 有魅惑要小心。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "莊園的守衛",
+      "nameEn": "Manor Sentry",
+      "mnemonic": [
+        "起手 boss，無特殊機制"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "普通攻擊",
+              "type": "tankbuster",
+              "description": "對主 T 的單體攻擊。",
+              "tips": [
+                { "text": "保持治療節奏", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "莊園的總管",
+      "nameEn": "Manor Steward",
+      "mnemonic": [
+        "Boss 會召喚多隻小蝙蝠",
+        "DPS 優先清小怪，否則壓力大"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "召喚小怪",
+              "type": "other",
+              "description": "Boss 戰中會持續召喚小蝙蝠。",
+              "tips": [
+                "DPS 切換清小怪",
+                { "text": "T 注意拉小怪集中方便 AoE", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Void Fire",
+              "type": "raidwide",
+              "description": "全體 AoE 攻擊。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "阿芒迪娜女士",
+      "nameEn": "Lady Amandine",
+      "mnemonic": [
+        "魅惑 debuff：玩家會攻擊隊友",
+        "踩亮地板可以解除魅惑",
+        "腳下 AoE 圓圈走開"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "魅惑（Charm）",
+              "type": "other",
+              "description": "Boss 會對隨機玩家施加魅惑 debuff，被魅惑者會攻擊隊友。場上會出現亮起的地板，被魅惑的玩家踩上去可解除。",
+              "tips": [
+                "被魅惑時自己快踩亮地板解除",
+                { "text": "若隊友被魅惑，T 接仇恨等他解除", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Void Fire",
+              "type": "aoe",
+              "description": "腳下 AoE 圓圈。",
+              "tips": [
+                "看到圓圈立刻走出去"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
