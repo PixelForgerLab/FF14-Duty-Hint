@@ -1,13 +1,78 @@
 {
-    "id": "cutters_cry",
-    "name": "流沙迷宮樵鳴洞",
-    "nameEn": "Cutter\u0027s Cry",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 40,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "cutters_cry",
+  "name": "流沙迷宮樵鳴洞",
+  "nameEn": "Cutter's Cry",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 41,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Chimera：注意 Boss 的元素切換（火/雷/水）",
+    "看 Boss 頭部顏色決定要躲什麼",
+    "Hedetet：閃毒液 AoE"
+  ],
+  "notes": "等級 38 的 4 人副本。Chimera 是 mini boss，最終 boss 是 Hedetet（蝎子）。Chimera 有元素轉換機制要注意。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "奇美拉",
+      "nameEn": "Chimera",
+      "mnemonic": [
+        "3 頭混合 boss：羊頭(雷)、龍頭(冰)、獅頭(普攻)",
+        "看亮起的頭判斷下一個攻擊",
+        "雷 → 散開、冰 → 集合避凍"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "元素準備",
+              "type": "other",
+              "description": "Boss 的頭部會發光，預告下一個元素攻擊（雷/冰）。",
+              "tips": [
+                "雷準備 → 散開避免共擔過大",
+                "冰準備 → 集合或互相靠近避免單獨被凍",
+                "看訊息提示判斷"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體元素傷害。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "赫德提特",
+      "nameEn": "Hedetet",
+      "mnemonic": [
+        "蝎子 boss，閃尾部毒液",
+        "腳下 AoE 注意走位"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "毒液 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈毒液。",
+              "tips": [
+                "看到圓圈立刻走出去",
+                { "text": "中毒可解毒", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
