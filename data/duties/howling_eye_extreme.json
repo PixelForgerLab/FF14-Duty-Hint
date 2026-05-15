@@ -1,13 +1,83 @@
 {
-    "id": "howling_eye_extreme",
-    "name": "迦樓羅殲殛戰",
-    "nameEn": "The Howling Eye (Extreme)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "howling_eye_extreme",
+  "name": "迦樓羅殲殛戰",
+  "nameEn": "The Howling Eye (Extreme)",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "迦樓羅絕境戰 (Ex)",
+    "場上多個 Plume（羽毛）需要被吸走",
+    "三神獸召喚：奇美拉 / 風神獸",
+    "Friction：跳場邊抗風推",
+    "Wicked Wheel：跑外圈"
+  ],
+  "notes": "Primal 迦樓羅的絕境戰版本，引入了三神獸召喚。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "迦樓羅 (Ex)",
+      "nameEn": "Garuda",
+      "mnemonic": [
+        "Wicked Wheel：跑外圈",
+        "Mistral Song：主 T 大減傷",
+        "Spiny Plumes：羽毛拉場邊",
+        "三神獸：召喚奇美拉與風神獸",
+        "Friction：站場邊抗風推"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Wicked Wheel",
+              "type": "aoe",
+              "description": "Boss 中心圓 AoE。",
+              "tips": [
+                "跑到場邊外圈"
+              ]
+            },
+            {
+              "name": "Mistral Song",
+              "type": "tankbuster",
+              "description": "對主 T 的大型坦克爆擊。",
+              "tips": [
+                { "text": "T 開大減傷", "role": "tank" },
+                { "text": "立刻補血", "role": "healer" }
+              ]
+            },
+            {
+              "name": "Spiny Plumes",
+              "type": "other",
+              "description": "場上有羽毛，需要 dump 到場邊。",
+              "tips": [
+                "指定玩家拉羽毛到場邊安全處"
+              ]
+            },
+            {
+              "name": "三神獸召喚（Suparna / Chirada / Garuda）",
+              "type": "other",
+              "description": "Boss 召喚奇美拉與風神獸，需要分頭擊殺。",
+              "tips": [
+                "依隊伍策略分組打小怪",
+                { "text": "T 分擔仇恨", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Friction",
+              "type": "other",
+              "description": "場上風推效果，玩家會被推向場邊。",
+              "tips": [
+                "靠場邊站抗風推",
+                "別被推下場"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
