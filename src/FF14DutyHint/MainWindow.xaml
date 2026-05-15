@@ -91,22 +91,19 @@
             <!-- 副本標題 -->
             <Border Grid.Row="2" Padding="12,8" BorderBrush="#22FFFFFF" BorderThickness="0,0,0,1">
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="DutyNameText"
-                                   Text="（尚未選擇副本）"
-                                   Foreground="{StaticResource Accent}"
-                                   FontWeight="Bold"
-                                   FontSize="{Binding HeaderFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
-                                   TextWrapping="Wrap"
-                                   VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                    <TextBlock x:Name="DutyNameText"
+                               Text="（尚未選擇副本）"
+                               Foreground="{StaticResource Accent}"
+                               FontWeight="Bold"
+                               FontSize="{Binding HeaderFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                               TextWrapping="Wrap"/>
+                    <WrapPanel Margin="0,4,0,0">
                         <!-- 品質徽章 -->
                         <Border x:Name="QualityBadge"
                                 Background="Transparent"
                                 CornerRadius="3"
                                 Padding="6,1"
-                                Margin="0,0,6,0"
+                                Margin="0,2,6,2"
                                 Visibility="Collapsed">
                             <TextBlock x:Name="QualityBadgeText"
                                        Foreground="#1A1A1F"
@@ -118,7 +115,7 @@
                                 Background="#3A3A45"
                                 CornerRadius="3"
                                 Padding="6,1"
-                                Margin="0,0,6,0"
+                                Margin="0,2,6,2"
                                 Visibility="Collapsed">
                             <TextBlock x:Name="SourceBadgeText"
                                        Foreground="{StaticResource TextBrush}"
@@ -129,8 +126,10 @@
                                    Foreground="{StaticResource MutedTextBrush}"
                                    FontSize="11"
                                    VerticalAlignment="Center"
+                                   Margin="0,2,0,2"
+                                   TextWrapping="Wrap"
                                    Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={StaticResource StringToVis}}"/>
-                    </StackPanel>
+                    </WrapPanel>
                 </StackPanel>
             </Border>
 

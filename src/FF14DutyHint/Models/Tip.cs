@@ -34,8 +34,8 @@ public static class PlayerRoleExtensions
     {
         return role switch
         {
-            PlayerRole.Tank => "坦克",
-            PlayerRole.Healer => "奶媽",
+            PlayerRole.Tank => "坦職",
+            PlayerRole.Healer => "補職",
             PlayerRole.Dps => "DPS",
             _ => "通用"
         };

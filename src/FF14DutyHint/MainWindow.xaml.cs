@@ -332,6 +332,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             "healer" => "dps",
             _ => "all"
         };
+        System.Diagnostics.Debug.WriteLine($"[RoleToggle] {current} -> {_settings.PreferredRole}");
         if (_currentDuty is not null)
         {
             RenderBossList(_currentDuty);
