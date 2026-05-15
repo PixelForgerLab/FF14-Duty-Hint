@@ -52,11 +52,22 @@ dotnet publish src/FF14DutyHint -c Release -r win-x64 --self-contained false -o 
 
 ## 📚 副本資料
 
-所有副本提示都儲存在 `data/duties/*.json`。
+所有副本提示都儲存在 `data/duties/*.json`（**約 365 個**，涵蓋 ARR 至 Dawntrail 全部 dungeon / trial / raid / ultimate / alliance raid 等）。
+
+絕大多數副本目前僅有骨架（名稱、版本、人數），歡迎透過 PR 補充詳細機制提示！
 
 想新增或修改副本嗎？歡迎發 PR！詳見：
 - [貢獻指南](docs/CONTRIBUTING.md)
 - [JSON 格式說明](docs/duty-format.md)
+
+### 重新產生副本骨架（維護者用）
+
+```powershell
+pwsh ./tools/Generate-Duties.ps1
+# 或，覆寫已存在的檔案（會清掉手寫機制提示！）：
+pwsh ./tools/Generate-Duties.ps1 -Force
+```
+腳本會從 [xivapi/ffxiv-datamining](https://github.com/xivapi/ffxiv-datamining) 下載最新的 `ContentFinderCondition.csv`，自動生成所有副本的骨架 JSON。
 
 ## 🤝 貢獻
 

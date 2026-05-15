@@ -29,6 +29,12 @@ public class Duty
     [JsonPropertyName("iLvlSync")]
     public int? ILvlSync { get; set; }
 
+    [JsonPropertyName("jobLevelSync")]
+    public int? JobLevelSync { get; set; }
+
+    [JsonPropertyName("highEnd")]
+    public bool HighEnd { get; set; }
+
     [JsonPropertyName("notes")]
     public string? Notes { get; set; }
 

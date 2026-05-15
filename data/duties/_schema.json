@@ -20,8 +20,10 @@
       "description": "raid / trial / dungeon / variant / criterion / ...",
       "examples": ["raid", "trial", "dungeon"]
     },
-    "playerCount": { "type": "integer", "minimum": 1, "maximum": 24 },
+    "playerCount": { "type": ["integer", "null"], "minimum": 1, "maximum": 144 },
     "iLvlSync": { "type": ["integer", "null"], "minimum": 0 },
+    "jobLevelSync": { "type": ["integer", "null"], "minimum": 0, "maximum": 100, "description": "完成此副本所需的職業等級 (依資料挖掘自動填入)" },
+    "highEnd": { "type": "boolean", "description": "是否為高難度副本 (Savage / Ultimate / Chaotic)" },
     "notes": { "type": "string" },
     "bosses": {
       "type": "array",

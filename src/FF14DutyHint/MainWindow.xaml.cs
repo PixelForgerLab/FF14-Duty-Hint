@@ -125,7 +125,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         if (!string.IsNullOrWhiteSpace(duty.Expansion)) metaParts.Add(duty.Expansion!);
         if (!string.IsNullOrWhiteSpace(duty.Type)) metaParts.Add(duty.Type!);
         if (duty.PlayerCount is int pc) metaParts.Add($"{pc}人");
+        if (duty.JobLevelSync is int jl && jl > 0) metaParts.Add($"Lv {jl}");
         if (duty.ILvlSync is int il && il > 0) metaParts.Add($"iLvl {il}");
+        if (duty.HighEnd) metaParts.Add("★ 高難度");
         DutyMetaText.Text = string.Join("  ·  ", metaParts);
 
         if (!string.IsNullOrWhiteSpace(duty.Notes))

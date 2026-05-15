@@ -29,8 +29,10 @@
 | `nameEn` | ⬜ | string | 副本英文名 |
 | `expansion` | ⬜ | string | 資料片版號，例：`6.4 曉月之終途` |
 | `type` | ⬜ | string | `raid` / `trial` / `dungeon` / `variant` / `criterion` |
-| `playerCount` | ⬜ | int | 人數（4 / 8 / 24） |
+| `playerCount` | ⬜ | int | 人數（4 / 8 / 24 / 48） |
 | `iLvlSync` | ⬜ | int | iLvl 同步等級 |
+| `jobLevelSync` | ⬜ | int | 職業等級需求（由產生器自動填入） |
+| `highEnd` | ⬜ | bool | 是否為高難度（Savage / Ultimate / Chaotic）|
 | `notes` | ⬜ | string | 副本整體備註 |
 | `bosses` | ✅ | array | Boss 列表 |
 
