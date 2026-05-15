@@ -1,13 +1,56 @@
 {
-    "id": "battle_on_the_big_bridge",
-    "name": "大橋上的決鬥",
-    "nameEn": "Battle on the Big Bridge",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "battle_on_the_big_bridge",
+  "name": "大橋上的決鬥",
+  "nameEn": "Battle on the Big Bridge",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Gilgamesh + Enkidu 戰",
+    "Gilgamesh 換武器：不同攻擊模式",
+    "Enkidu：DPS 注意清",
+    "場地是橋上要小心擊退"
+  ],
+  "notes": "FFV 致敬 trial。Gilgamesh 與 Enkidu 對決。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "吉爾伽美什",
+      "nameEn": "Gilgamesh",
+      "mnemonic": [
+        "Gilgamesh 換武器（劍/斧/弓）",
+        "看武器判斷攻擊類型",
+        "Enkidu 援軍 DPS 清",
+        "場邊擊退要小心"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "換武器",
+              "type": "other",
+              "description": "Gilgamesh 切換不同武器，攻擊模式不同。",
+              "tips": ["看武器判斷下一個攻擊", "保持距離 vs 近戰各有策略"]
+            },
+            {
+              "name": "Enkidu 援軍",
+              "type": "other",
+              "description": "Enkidu 加入戰鬥。",
+              "tips": ["DPS 切清", { "text": "T 控制仇恨", "role": "tank" }]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [{ "text": "預判補血", "role": "healer" }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
