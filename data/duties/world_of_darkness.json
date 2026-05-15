@@ -1,13 +1,73 @@
 {
-    "id": "world_of_darkness",
-    "name": "水晶塔 暗之世界",
-    "nameEn": "The World of Darkness",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "world_of_darkness",
+  "name": "水晶塔 暗之世界",
+  "nameEn": "The World of Darkness",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 24,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "水晶塔第三部，最終決戰",
+    "途中遇 Acheron Hellhound、Angra Mainyu 等",
+    "最終 boss 暗黑之雲：分區 + 連線機制",
+    "閃地面 AoE、按隊伍分工"
+  ],
+  "notes": "水晶塔三部曲第三部，24 人聯軍副本。最終 boss 是暗黑之雲。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "暗黑之雲",
+      "nameEn": "Cloud of Darkness",
+      "mnemonic": [
+        "場上分區：注意 debuff 處理",
+        "Anti-air Particle Beam：直線 AoE",
+        "Flood of Darkness：全體高傷",
+        "按隊伍策略分擔機制"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Anti-air Particle Beam",
+              "type": "aoe",
+              "description": "Boss 前方多條直線 AoE。",
+              "tips": [
+                "閃到線外"
+              ]
+            },
+            {
+              "name": "Flood of Darkness",
+              "type": "raidwide",
+              "description": "全體高傷暗屬性攻擊。",
+              "tips": [
+                { "text": "AoE 滿血滿條治療", "role": "healer" },
+                { "text": "T 開減傷", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Anti-air Particle Beam（連線）",
+              "type": "other",
+              "description": "玩家被點名連線，需要按隊伍策略走位避免重疊。",
+              "tips": [
+                "看點名拉線到指定位置",
+                "依預定走位策略"
+              ]
+            },
+            {
+              "name": "Particle Beam（直線）",
+              "type": "stack",
+              "description": "玩家集合分擔的射線傷害。",
+              "tips": [
+                "集合分擔",
+                "依分工分組站位"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

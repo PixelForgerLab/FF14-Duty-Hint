@@ -1,13 +1,136 @@
 {
-    "id": "praetorium",
-    "name": "最終決戰天幕魔導城",
-    "nameEn": "The Praetorium",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 60,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "praetorium",
+  "name": "最終決戰天幕魔導城",
+  "nameEn": "The Praetorium",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "MSQ 最終副本（蓋烏斯 + 究極神兵）",
+    "尼祿：閃 AoE + 召喚機械兵",
+    "蓋烏斯：經典首領戰，閃 AoE 與直線",
+    "究極神兵：最後 boss，多階段機制"
+  ],
+  "notes": "等級 50 的 8 人 MSQ 終結副本（紅蓮之解放者結局）。多場連續 boss 戰。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "尼祿·託爾·斯卡艾瓦",
+      "nameEn": "Nero tol Scaeva",
+      "mnemonic": [
+        "帝國科學家 boss",
+        "召喚機械兵，DPS 清"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "召喚機械",
+              "type": "other",
+              "description": "召喚機械兵援軍。",
+              "tips": [
+                "DPS 切清援軍"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "蓋烏斯·範·巴埃薩",
+      "nameEn": "Gaius van Baelsar",
+      "mnemonic": [
+        "帝國總督 boss",
+        "閃前方扇形 + 腳下 AoE",
+        "中後期會召喚援軍"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "前方扇形",
+              "type": "tankbuster",
+              "description": "前方扇形攻擊。",
+              "tips": [
+                { "text": "T 拉好面向場邊", "role": "tank" },
+                "DPS 站背後"
+              ]
+            },
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "究極神兵",
+      "nameEn": "Ultima Weapon",
+      "mnemonic": [
+        "MSQ 終極 boss，多階段",
+        "閃各種元素 AoE",
+        "全體 AoE 多次，注意補血"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "元素 AoE",
+              "type": "aoe",
+              "description": "各種元素的地面 AoE。",
+              "tips": [
+                "看落點顏色判斷元素",
+                "及時走位躲開"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體高傷。",
+              "tips": [
+                { "text": "AoE 滿血滿條治療", "role": "healer" },
+                { "text": "T 開減傷協助", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Aetheroplasm 連線",
+              "type": "stack",
+              "description": "場上會出現以太球，需要踩破或被吸收觸發連線傷害。",
+              "tips": [
+                "看清楚以太球位置走位",
+                "依隊伍策略處理"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
