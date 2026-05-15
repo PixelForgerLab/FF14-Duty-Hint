@@ -1,13 +1,133 @@
 {
-    "id": "syrcus_tower",
-    "name": "水晶塔 希爾科斯塔",
-    "nameEn": "Syrcus Tower",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "syrcus_tower",
+  "name": "水晶塔 希爾科斯塔",
+  "nameEn": "Syrcus Tower",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 24,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "水晶塔第二部",
+    "Scylla：六獸妖，閃前方扇形",
+    "Glasya Labolas：金剛守護，DPS 注意攻擊節奏",
+    "Amon：才思敏捷，書本機制（看書名走位）",
+    "Xande：始皇帝，多階段機制"
+  ],
+  "notes": "水晶塔三部曲第二部，24 人聯軍副本。最終 boss 始皇帝贊德。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "妖豔無比的六獸妖",
+      "nameEn": "Scylla",
+      "mnemonic": [
+        "閃前方扇形 + AoE 圓圈"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "前方扇形",
+              "type": "aoe",
+              "description": "前方扇形 AoE。",
+              "tips": [
+                { "text": "T 拉好仇恨面向場邊", "role": "tank" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "金剛不壞的守護者",
+      "nameEn": "Glasya Labolas",
+      "mnemonic": [
+        "閃 AoE 圓圈",
+        "注意 Boss 階段切換"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "才思敏捷的亞蒙",
+      "nameEn": "Amon",
+      "mnemonic": [
+        "魔法師 boss，書本機制",
+        "看書名判斷攻擊（雷/冰/火）",
+        "走位躲對應元素 AoE"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "書本機制",
+              "type": "other",
+              "description": "Boss 開書，書名決定下一個攻擊類型。",
+              "tips": [
+                "看書名（火/冰/雷等）判斷",
+                "依元素走位躲對應 AoE"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "始皇帝贊德",
+      "nameEn": "Xande",
+      "mnemonic": [
+        "水晶塔第二部最終 boss",
+        "多階段機制：召喚物 + 元素 AoE",
+        "全體 AoE 注意補血"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "召喚物",
+              "type": "other",
+              "description": "Boss 會召喚援軍。",
+              "tips": [
+                "DPS 切換清援軍",
+                { "text": "T 拉好援軍", "role": "tank" }
+              ]
+            },
+            {
+              "name": "元素 AoE",
+              "type": "aoe",
+              "description": "各種元素 AoE。",
+              "tips": [
+                "看落點走位"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體高傷。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
