@@ -104,6 +104,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         OnPropertyChanged(nameof(BodyFontSize));
     }
 
+    private const string NoDutyHint = "👈 點選右上「副本」按鈕，選擇要顯示的副本提示。";
+    private const string NoMechanicsHint = "🚧 此副本目前沒有詳細機制提示。\n\n你可以到 GitHub 透過 PR 貢獻你的攻略筆記！\nhttps://github.com/PixelForgerLab/FF14-Duty-Hint\n\n或者點右上「副本」選擇其他副本。";
+
     private void SetDuty(Duty? duty)
     {
         _currentDuty = duty;
@@ -115,6 +118,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             DutyNotesBorder.Visibility = Visibility.Collapsed;
             DutyNotesText.Text = string.Empty;
             BossList.ItemsSource = null;
+            EmptyHintText.Text = NoDutyHint;
             EmptyHintText.Visibility = Visibility.Visible;
             return;
         }
@@ -141,7 +145,15 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
 
         BossList.ItemsSource = duty.Bosses;
-        EmptyHintText.Visibility = duty.Bosses.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
+        if (duty.Bosses.Count == 0)
+        {
+            EmptyHintText.Text = NoMechanicsHint;
+            EmptyHintText.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            EmptyHintText.Visibility = Visibility.Collapsed;
+        }
 
         _settings.LastDutyId = duty.Id;
     }
