@@ -1,5 +1,9 @@
 # FF14 Duty Hint Overlay
 
+<p align="center">
+  <img src="src/FF14DutyHint/Resources/icon-preview.png" alt="App Icon" width="128" height="128"/>
+</p>
+
 [![Build](https://github.com/PixelForgerLab/FF14-Duty-Hint/actions/workflows/build.yml/badge.svg)](https://github.com/PixelForgerLab/FF14-Duty-Hint/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
