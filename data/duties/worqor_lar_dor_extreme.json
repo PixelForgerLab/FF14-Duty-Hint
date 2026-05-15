@@ -7,62 +7,69 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）增加火階段，三相元素 debuff（火/雷/冰）依當前階段效果不同。",
+        "2）body animation 攻擊保留，但每階段有後續效果。",
+        "3）持續移動避免凍/麻痺；元素標記倒數 3 秒前看當前階段。",
+        "4）詳細機制 wiki 仍標示 stub，需另尋資源。"
+    ],
+    "notes": "DT 7.0 EX trial（Lv 100，ilvl 690）。Valigarmanda EX 解鎖需完成 7.0 MSQ + How the West Was Sung。⚠️ Console Games Wiki 機制表標示 Section-stub，詳細請參考 Hector Hectorson YouTube 攻略。資料整理自 Console Games Wiki + normal 版基礎。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "瓦利伽曼達",
+            "nameEn": "Valigarmanda",
+            "mnemonic": ["看身體動作預告", "元素 debuff 看當前階段", "EX 加火階段"],
+            "phases": [
+                {
+                    "name": "EX 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Strangling Coil（繞場）",
+                            "type": "aoe",
+                            "description": "Boss 繞場 = 甜甜圈 AoE，中央安全。EX 加後續效果。",
+                            "tips": ["跑到場中央", "看當前元素階段決定後續"]
+                        },
+                        {
+                            "name": "Slithering Strike（舉爪）",
+                            "type": "aoe",
+                            "description": "Boss 舉爪 = 大貼身 AoE。",
+                            "tips": ["跑到場邊"]
+                        },
+                        {
+                            "name": "Susurrant Breath（張口）",
+                            "type": "aoe",
+                            "description": "Boss 張口 = 寬錐 AoE，北角安全。",
+                            "tips": ["跑到北邊兩個角落"]
+                        },
+                        {
+                            "name": "元素 debuff",
+                            "type": "other",
+                            "description": "火/雷/冰 元素 debuff 倒數，效果依當前階段決定。",
+                            "tips": ["看 3 秒前提示判斷怎麼解"]
+                        },
+                        {
+                            "name": "Skyruin",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 切換到下個元素階段。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Ice Talon",
+                            "type": "tankbuster",
+                            "description": "雙 T 坦補。",
+                            "tips": [{ "text": "MT/OT 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "其他機制",
+                            "type": "other",
+                            "description": "詳細 EX 機制目前 wiki 標示 Section-stub。建議參考 normal 版基礎 + Hector Hectorson YouTube。",
+                            "tips": ["參考外部攻略"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

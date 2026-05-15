@@ -10,59 +10,118 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Soul Reaping 記順序，戒指上方有藍色菱形指示 1-4。",
+        "2）Crop Rotation 戒指轉向後從南開始順時針，奇數 = 順、偶數 = 反。",
+        "3）Mass Macabre：4 個塔每塔 4 人，不踩會召喚小怪爆。",
+        "4）adds phase 沒打完團滅，被吸進深淵要單人打 3 隻 Icy Hands。"
+    ],
+    "notes": "DT 7.3 MSQ trial（Lv 100，ilvl 725）。Necron 為 FFIX 永遠之暗致敬。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "永遠之暗",
+            "nameEn": "Necron",
+            "mnemonic": ["戒指上菱形=順序", "Crop Rotation 看第一個奇偶", "Mass Macabre 4 人/塔"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Fear of Death",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 召喚 8 個 Icy Hands（紫圓位置）。",
+                            "tips": ["別站紫圓"]
+                        },
+                        {
+                            "name": "Choking Grasp",
+                            "type": "aoe",
+                            "description": "Icy Hands 朝隨機方向線 AoE。",
+                            "tips": ["看小怪朝向繞側"]
+                        },
+                        {
+                            "name": "Cold Grip + Existential Dread",
+                            "type": "aoe",
+                            "description": "外側兩條線 AoE 留中央 1/3 安全；Boss 一邊發光 = 接著左/右 2/3 場 cleave。",
+                            "tips": ["先閃中央", "看 Boss 發光側繞對側"]
+                        },
+                        {
+                            "name": "Memento Mori",
+                            "type": "aoe",
+                            "description": "中央線 AoE 留持續流血區，5 個 Icy Hands 朝東或西放線 AoE。",
+                            "tips": ["別碰流血區", "看小怪朝向繞縫"]
+                        },
+                        {
+                            "name": "Blue Shockwave",
+                            "type": "tankbuster",
+                            "description": "Boss 中心 90 度錐魔法坦補。",
+                            "tips": [{ "text": "拉錐遠離隊友", "role": "tank" }]
+                        },
+                        {
+                            "name": "Soul Reaping + Aetherblight",
+                            "type": "aoe",
+                            "description": "戒指顯示甜甜圈或實圓存起來，後續釋放。甜甜圈 = 貼 Boss 安全；實圓 = 出 hitbox 安全。",
+                            "tips": ["記戒指圖案", "釋放時依形狀進出"]
+                        },
+                        {
+                            "name": "Grand Cross",
+                            "type": "other",
+                            "description": "全體魔法傷 + 場地縮小成小圓，4 個 Azure Aether 球外旋轉放線 AoE，最後停在基本方向放十字漸減 AoE。",
+                            "tips": ["跑到對角象限減傷", "閃旋轉線 AoE"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Adds Phase",
+                    "mechanics": [
+                        {
+                            "name": "Rising Fear of Death",
+                            "type": "other",
+                            "description": "Boss 不可選，duty gauge 上升。多對 Icy Hands 召喚，需在 100 前打完。",
+                            "tips": ["全力集火 adds"]
+                        },
+                        {
+                            "name": "Darkness of Eternity / 深淵",
+                            "type": "other",
+                            "description": "全體傷 + 每人被轉移到單獨區域，需獨自打 3 隻 Icy Hands 在 40 秒 Doom 內。完成後傳送回。",
+                            "tips": ["快速秒小怪", "Doom 結束前完成"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Specter of Death / Invitation",
+                            "type": "aoe",
+                            "description": "東西連繩生成兩隻大手放橫線 AoE 留 1/3 安全。命中被拖進深淵單人打 adds。",
+                            "tips": ["看連繩位置找安全 1/3"]
+                        },
+                        {
+                            "name": "Relentless Reaping",
+                            "type": "aoe",
+                            "description": "戒指顯示 4 個依序 AoE（圓>甜甜圈>圓>甜甜圈，或反順），存進 1-4 菱形（南起順時針）。",
+                            "tips": ["記順序", "看戒指圖案"]
+                        },
+                        {
+                            "name": "Crop Rotation",
+                            "type": "aoe",
+                            "description": "戒指旋轉到新方向，從南方開始順時針釋放 AoE。第一個是奇 = 同順、偶 = 反順。",
+                            "tips": ["看戒指轉向", "判斷第一菱形奇偶"]
+                        },
+                        {
+                            "name": "Mass Macabre",
+                            "type": "stack",
+                            "description": "4 個塔每塔需 4 人踩，沒踩會召喚小怪爆 Spreading Fear。",
+                            "tips": ["分組 4 人/塔", "別漏塔"]
+                        },
+                        {
+                            "name": "終段組合",
+                            "type": "aoe",
+                            "description": "Soul Reaping + Memento Mori + Specter of Death + Blue Shockwave 快速組合後釋放單個存的 AoE。",
+                            "tips": ["跟著順序解每個機制"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

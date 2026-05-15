@@ -7,62 +7,138 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Shock：補職組與 DPS 組各拿不同 AoE（疊或甜甜圈），分職業組站位。",
+        "2）Escelons' Fall：粉紅菱形（近）vs 紫菱形（遠），分組站近/遠誘導 cone。",
+        "3）Blessed Barricade：3 人塔 + Zelenia's Shade 半場 cleave（看劍方向）。",
+        "4）Roseblood 1-6 Bloom 多階段，紅花格被機制打到會爆連鎖。",
+        "5）Emblazon：被點玫瑰標記移到角落避免污染好格。"
+    ],
+    "notes": "DT 7.2 EX trial（Lv 100，ilvl 730）。Zelenia EX 解鎖需完成 7.2 MSQ + 找 Wandering Minstrel。多階段花格機制是 EX 特色。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "澤蓮尼婭",
+            "nameEn": "Zelenia",
+            "mnemonic": ["補/DPS 分組各種機制", "粉=近、紫=遠", "Emblazon 點到去角落"],
+            "phases": [
+                {
+                    "name": "EX 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Thorned Catharsis",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Shock",
+                            "type": "spread",
+                            "description": "全補一種 AoE（多段或甜甜圈）+ 全 DPS 另一種。",
+                            "tips": ["分職業組站位", "看自己組是哪種"]
+                        },
+                        {
+                            "name": "Alexandrian Holy",
+                            "type": "stack",
+                            "description": "4 個塔需踩，踩後獲得 2 秒雷抗下 II。",
+                            "tips": ["輪流踩塔", "避免重複"]
+                        },
+                        {
+                            "name": "Specter of the Lost",
+                            "type": "tankbuster",
+                            "description": "2 名玩家連繩 cleave TB，可被攔截。",
+                            "tips": [
+                                { "text": "兩 T 攔截 cleave", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Escelons' Fall",
+                            "type": "aoe",
+                            "description": "Boss 頭上菱形預告：粉紅密=近 4 人 cone、紫色疏=遠 4 人 cone。被打到加切下抗。",
+                            "tips": ["看菱形顏色分近/遠站", "近/遠 4 人引 cone"]
+                        },
+                        {
+                            "name": "Stock Break",
+                            "type": "stack",
+                            "description": "4 段疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Blessed Barricade",
+                            "type": "other",
+                            "description": "Boss 不可選 + 4 個 Roseblood Drop + 2 個 Zelenia's Shade + 2 個 3 人塔（需 3 人踩）。",
+                            "tips": ["分配踩塔（每塔 3 人）", "另 2 人處理 Shade cleave"]
+                        },
+                        {
+                            "name": "Spearpoint Push",
+                            "type": "aoe",
+                            "description": "Zelenia's Shade 連繩衝鋒 + 半場 cleave，方向看劍指向。",
+                            "tips": ["被連繩往場邊引", "其他人看劍找安全側"]
+                        },
+                        {
+                            "name": "Perfumed Quietus",
+                            "type": "raidwide",
+                            "description": "Zelenia's Aether 累積量決定傷害。",
+                            "tips": [{ "text": "全程減傷 + 預補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Roseblood 1st-6th Bloom",
+                            "type": "aoe",
+                            "description": "6 個階段，每階段不同的紅花格圖樣，被 AoE 機制打到會爆。",
+                            "tips": ["別站紅花格", "別讓機制 AoE 經過紅花格"]
+                        },
+                        {
+                            "name": "Alexandrian Thunder II / III / IV",
+                            "type": "aoe",
+                            "description": "II = 3 段旋轉 cone；III = 玩家圓 AoE（碰紅格雷抗下 II）；IV = 貼身/甜甜圈切換（看花位置決定形狀）。",
+                            "tips": ["看 Thunder 編號預判機制", "IV：花在環外=甜甜圈、花在環內=貼身"]
+                        },
+                        {
+                            "name": "Bud of Valor",
+                            "type": "other",
+                            "description": "1-2 個 Shade 召喚 Alexandrian Holy/Banish II/Power Break/Shock。",
+                            "tips": ["看 Shade 動作預判"]
+                        },
+                        {
+                            "name": "Emblazon",
+                            "type": "spread",
+                            "description": "4 人（全補或全 DPS）獲得玫瑰標記，7 秒後消失留下花格 + 玩家 9 秒魔抗下。",
+                            "tips": ["被點往角落引花格", "別站在會被打到的位置"]
+                        },
+                        {
+                            "name": "Alexandrian Banish II",
+                            "type": "stack",
+                            "description": "2 人單擊疊機（沒中 Shock 的）。",
+                            "tips": ["指定 2 人疊"]
+                        },
+                        {
+                            "name": "Encircling Thorns",
+                            "type": "other",
+                            "description": "全員 Thorny Vine debuff，補職與 DPS 互相連繩，DoT 直到繩破。",
+                            "tips": ["拉繩遠離隊友直到破"]
+                        },
+                        {
+                            "name": "Alexandrian Banish III",
+                            "type": "stack",
+                            "description": "重擊疊機（優先補職），若打中紅花格會連鎖共享傷害。",
+                            "tips": ["全員站乾淨格", "誘到無紅花的位置"]
+                        },
+                        {
+                            "name": "Power Break",
+                            "type": "aoe",
+                            "description": "Zelenia's Shade 劍指向 = 半場 cleave 方向。第二次可同或對側。",
+                            "tips": ["看劍方向繞", "第二次再看一次"]
+                        },
+                        {
+                            "name": "Valorous Ascension + Briar Thorns",
+                            "type": "raidwide",
+                            "description": "2 段全體傷 + 場邊荊棘線 AoE。",
+                            "tips": ["閃線 + 持續補血"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

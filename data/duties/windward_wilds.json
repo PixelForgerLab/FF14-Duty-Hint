@@ -10,59 +10,96 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Boss 沒 cast bar，全看動作預判。",
+        "2）衝鋒裂痕顏色：白=線、紅=兩側線（中央安全）。",
+        "3）有 10 個 Mega Potion 可用，但有施法延遲；Well-done, Steak buff 持續 HoT。",
+        "4）Exaflares 第一輪炸水晶留地雷，後續閃 + 散開（魔法易傷別重疊）。"
+    ],
+    "notes": "DT 7.35 怪物獵人聯動（Lv 100，ilvl 725）。Guardian Arkveld 為 Monster Hunter Wilds 的白幽龍護鎖刃龍。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "護鎖刃龍",
+            "nameEn": "Guardian Arkveld",
+            "mnemonic": ["看動作預判", "白裂痕=線、紅裂痕=兩側線", "Mega Potion 救命"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Cleave",
+                            "type": "aoe",
+                            "description": "Boss 舉一隻爪 → 該側 + hitbox 寬線 AoE，對側安全。",
+                            "tips": ["看爪方向繞對側"]
+                        },
+                        {
+                            "name": "Charge + 白色裂痕",
+                            "type": "aoe",
+                            "description": "Boss 跳邊衝鋒留白色地面裂痕，接著沿裂痕線 AoE。",
+                            "tips": ["跑到衝鋒線兩側"]
+                        },
+                        {
+                            "name": "Charge + 紅色裂痕",
+                            "type": "aoe",
+                            "description": "紅色裂痕對應兩側寬線 AoE，中央窄安全。",
+                            "tips": ["站到中央窄帶"]
+                        },
+                        {
+                            "name": "Cascading Line",
+                            "type": "aoe",
+                            "description": "中央線 AoE 朝兩邊擴散。後段會打到場邊紅雲，引發二次擴散 AoE。",
+                            "tips": ["先閃中央", "再閃紅雲二段"]
+                        },
+                        {
+                            "name": "三段衝鋒 + 漸減 AoE",
+                            "type": "aoe",
+                            "description": "3 段線衝鋒，每段結束顯示圓 AoE 外擴箭頭，最後依序爆漸減同心甜甜圈。",
+                            "tips": ["記三個衝鋒位置", "依序閃同心 AoE"]
+                        },
+                        {
+                            "name": "半場 cleave",
+                            "type": "aoe",
+                            "description": "Boss 抬頭 + 一側身體傾斜 = 該側半場 cleave。",
+                            "tips": ["看身體傾向繞對側"]
+                        },
+                        {
+                            "name": "尾巴線 AoE",
+                            "type": "aoe",
+                            "description": "Boss 抬尾巴 = 後方窄線 AoE。",
+                            "tips": ["遠離 Boss 後方"]
+                        },
+                        {
+                            "name": "Towers + 圓 AoE 引爆",
+                            "type": "stack",
+                            "description": "6 個塔（2 個對角坦塔 + 4 個普通塔）。期間玩家有 2 組圓 AoE 標記，引到塔外再進塔。",
+                            "tips": ["引 AoE 遠離塔", "再回塔疊機"]
+                        },
+                        {
+                            "name": "Exaflares + 水晶",
+                            "type": "spread",
+                            "description": "4 組 exaflares 交替基本/對角方向，第一組炸水晶留點 AoE，後續搭配散開標記（魔法易傷別重疊）。",
+                            "tips": ["跟著 exaflare 縫跑", "散開時別撞到隊友"]
+                        },
+                        {
+                            "name": "Multi-hit Raidwide + Guardian Will",
+                            "type": "raidwide",
+                            "description": "3 段全體傷（前 2 物理 + 1 魔法），全員疊上易傷 + DoT。",
+                            "tips": [{ "text": "全程補血 + 減傷", "role": "healer" }, "用 Mega Potion 自救"]
+                        },
+                        {
+                            "name": "Roar",
+                            "type": "raidwide",
+                            "description": "Boss 撐牆 = 全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Rotating Line + 散開",
+                            "type": "spread",
+                            "description": "紫線 AoE 沿箭頭旋轉 + 全員散開標記。",
+                            "tips": ["先繞箭頭背面", "再散開"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

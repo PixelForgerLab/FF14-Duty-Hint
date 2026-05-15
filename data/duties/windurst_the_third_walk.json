@@ -10,59 +10,165 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）夏特托：地面南北抬起合擊找縫；Diagrammatic Doorway 3 個 ley line 順序甜甜圈。",
+        "2）阿魯沙比 4 波小怪 + Medusa Swarmsinger（exaflare + 凝視石化 + 半場 cleave）。",
+        "3）亞歷山卓復活：箭頭 + Radiant Sacrament 5x5 格按順序爆 + Perfect Defense 護盾 adds DPS check。",
+        "4）Aw'aern 庭園 boss + 4 個 Aw'zdei adds（5 連扇 + 散開）。"
+    ],
+    "notes": "DT 7.5 24 人 alliance raid（Lv 100，ilvl 755），Mentor roulette。Echoes of Vana'diel 第 3 部 + 終戰。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "魔人夏特托",
+            "nameEn": "Shantotto the Demon",
+            "mnemonic": ["地裂南北合擊找中縫", "ley line 連鎖甜甜圈"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Flare Play",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Vidohunir",
+                            "type": "stack",
+                            "description": "3 坦疊機。",
+                            "tips": [{ "text": "3 T 集中", "role": "tank" }]
+                        },
+                        {
+                            "name": "Superior Stone II + Groundbreaking Quake",
+                            "type": "other",
+                            "description": "場地南北段抬起後合擊。找 4 段中最大縫躲。",
+                            "tips": ["看抬起預警找中縫"]
+                        },
+                        {
+                            "name": "Diagrammatic Doorway + Circumscribed Fire",
+                            "type": "aoe",
+                            "description": "3x4 ley line + 3 段連鎖甜甜圈 AoE。Shantotto 依序移動。",
+                            "tips": ["記 3 個 ley line 順序", "貼她繞甜甜圈"]
+                        },
+                        {
+                            "name": "Localized Blizzard + Thunder and Error",
+                            "type": "spread",
+                            "description": "點 AoE + 散開標記。",
+                            "tips": ["分散避免重疊"]
+                        },
+                        {
+                            "name": "Meteoric Rhyme",
+                            "type": "stack",
+                            "description": "多 AoE + Stardust Specimen 補職疊機。",
+                            "tips": ["閃 AoE + 補職疊"]
+                        },
+                        {
+                            "name": "Aero Dynamics (擊退組合)",
+                            "type": "other",
+                            "description": "Westerly/Easterly Winds debuff 10 秒擊退極遠 + 接 Groundbreaking Quake。",
+                            "tips": ["位置調整到抬起段", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Diagrammatic Doorway (5 ley)",
+                            "type": "aoe",
+                            "description": "5 條 ley line 連鎖。",
+                            "tips": ["記 5 個 ley 位置（繩消失後）"]
+                        },
+                        {
+                            "name": "Final Exam",
+                            "type": "stack",
+                            "description": "3 段補職疊機。",
+                            "tips": [{ "text": "全員疊靠補職", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "亞歷山卓復活",
+            "nameEn": "Alexander Resurrected",
+            "mnemonic": ["箭頭旋轉 cleave", "5x5 格依序爆", "Perfect Defense DPS check"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Banishga IV",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 場邊 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Divine Arrow",
+                            "type": "aoe",
+                            "description": "藍標旋轉指示 90 度 cleave + 旋轉方向（順/逆）+ 兩個同心甜甜圈 + 點 AoE 結尾 + 散開 + 圓 AoE。",
+                            "tips": ["看旋轉方向預判 cleave", "閃同心圈 + 散開"]
+                        },
+                        {
+                            "name": "Impartial Ruling",
+                            "type": "aoe",
+                            "description": "兩側量條，先滿的先放半場 cleave。",
+                            "tips": ["看哪邊先滿"]
+                        },
+                        {
+                            "name": "Radiant Sacrament",
+                            "type": "aoe",
+                            "description": "5x5 藍色格 + 橘色準星依序移動指示爆破順序。",
+                            "tips": ["看準星移動順序找安全格"]
+                        },
+                        {
+                            "name": "Divine Spear",
+                            "type": "aoe",
+                            "description": "藍色線描繪三角形，包圍區域爆。",
+                            "tips": ["站三角形外"]
+                        },
+                        {
+                            "name": "Mega Holy",
+                            "type": "stack",
+                            "description": "3 段補職疊機。",
+                            "tips": ["全員疊靠補職"]
+                        },
+                        {
+                            "name": "Sacred Assembly + Perfect Defense (DPS check)",
+                            "type": "other",
+                            "description": "4 個 Gordius System adds，有護盾的攻擊反傷。需先打沒護盾的，在 Aetherial Conduit Reserves 100 前打完。",
+                            "tips": ["優先沒護盾的", "別打有護盾的（反傷）"]
+                        },
+                        {
+                            "name": "Divine Bolt",
+                            "type": "tankbuster",
+                            "description": "散開 + 圓 AoE + 主 T 線 cleave 坦補。",
+                            "tips": [
+                                { "text": "T 開減傷", "role": "tank" },
+                                "其他人散開"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Aw'aern + 4 Aw'zdei",
+            "nameEn": "Aw'aern + 4 Aw'zdei",
+            "mnemonic": ["5 連扇後排", "Static Filament 圓 AoE 散開"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Glacier Splitter",
+                            "type": "aoe",
+                            "description": "5 連扇 AoE 留縫；adds 用 Optic Induration 前方扇 AoE。連 4 輪不同圖樣。",
+                            "tips": ["後方相對安全", "看每輪預警找縫"]
+                        },
+                        {
+                            "name": "Auroral Wind + Static Filament",
+                            "type": "spread",
+                            "description": "Boss 散開標記 + adds 圓 AoE。",
+                            "tips": ["散開遠離圓 AoE"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

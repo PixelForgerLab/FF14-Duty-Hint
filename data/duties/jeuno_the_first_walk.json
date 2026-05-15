@@ -10,59 +10,170 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）普麗修：「Wait for it...」幾次決定 AoE 大小（1=最大、3=最小）；Auroral Uppercut 同樣規則。",
+        "2）法夫納：尾巴=270 度 AoE、嘴=甜甜圈火、爪=點 AoE；Darters 小怪要快打掉。",
+        "3）大天使五人組（MR/EV/HM/GK/TT）：保持血量接近，超過會強化；持續觀察動作預判。"
+    ],
+    "notes": "DT 7.1 24 人 alliance raid（Lv 100，ilvl 695）。FFXI Echoes of Vana'diel 致敬第 1 部。3 boss 都有 FFXI 致敬。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "桎梏的普麗修",
+            "nameEn": "Prishe of the Distant Chains",
+            "mnemonic": ["Wait for it 次數=AoE 大小", "1 次最大、3 次最小"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Banishga",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Knuckle Sandwich",
+                            "type": "aoe",
+                            "description": "拳套黃/橘/紫 3 色同心圓，「Wait for it」次數決定 AoE 大小（1=最大、2=中、3=最小）。AoE 後接甜甜圈打剛才安全位。",
+                            "tips": ["聽「Wait for it」次數", "選對應大小的圓", "AoE 後馬上移到剛被打到的圈內"]
+                        },
+                        {
+                            "name": "Nullifying Dropkick",
+                            "type": "stack",
+                            "description": "3 坦疊機坦補。",
+                            "tips": [{ "text": "3 坦集中疊", "role": "tank" }]
+                        },
+                        {
+                            "name": "Banish Storm",
+                            "type": "aoe",
+                            "description": "2 根棒子 + 各 3 條黃箭頭外擴圓 AoE。",
+                            "tips": ["看箭頭方向預判 AoE"]
+                        },
+                        {
+                            "name": "Holy",
+                            "type": "spread",
+                            "description": "散開標記 + 光抗下（重疊致命）。",
+                            "tips": ["完全分散"]
+                        },
+                        {
+                            "name": "Crystalline Thorns",
+                            "type": "aoe",
+                            "description": "場上多數區域長刺，L 形對角 + 中央方塊安全。",
+                            "tips": ["跑到 L 角或中央"]
+                        },
+                        {
+                            "name": "Auroral Uppercut",
+                            "type": "other",
+                            "description": "玩家被擊飛擊退，3 條彩色軌跡，「Wait for it」次數選擇正確軌跡（1=最近、2=中、3=最遠）。落到刺上會被暈。",
+                            "tips": ["看「Wait for it」次數選對應軌跡", "角度避免被打到刺", "1 次留中央、2-3 次到 L 角"]
+                        },
+                        {
+                            "name": "Banishga IV",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 場上網格球 AoE 外/內擴散。",
+                            "tips": ["看內/外球發光", "跟著順序閃"]
+                        },
+                        {
+                            "name": "Asuran Fists",
+                            "type": "stack",
+                            "description": "8 段疊機塔。",
+                            "tips": ["全員集中疊"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "被遺忘的法夫納",
+            "nameEn": "Fafnir the Forgotten",
+            "mnemonic": ["尾=270 度（前安全）", "嘴=甜甜圈火", "爪=點 AoE"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Dark Matter Blast",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 場邊 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Spike Flail（尾巴）",
+                            "type": "aoe",
+                            "description": "Boss 抬尾 = 270 度 AoE 留前方安全。",
+                            "tips": ["跑到 Boss 正前方"]
+                        },
+                        {
+                            "name": "Dragon Breath（嘴）",
+                            "type": "aoe",
+                            "description": "Boss 嘴發光 = 甜甜圈火 AoE 留持續岩漿。",
+                            "tips": ["跑進 Boss 貼身", "記岩漿從起始點開始消失"]
+                        },
+                        {
+                            "name": "Touchdown（爪）",
+                            "type": "aoe",
+                            "description": "Boss 爪發光 = 大點 AoE。",
+                            "tips": ["跑到場邊（爪攻擊不到的地方）"]
+                        },
+                        {
+                            "name": "Baleful Breath",
+                            "type": "stack",
+                            "description": "4 段線疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Sharp Spike",
+                            "type": "tankbuster",
+                            "description": "3 T AoE 坦補。",
+                            "tips": [{ "text": "3 T 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Darters",
+                            "type": "other",
+                            "description": "毒蝙蝠小怪會狂怒放正面切（高傷+中毒）。",
+                            "tips": [
+                                { "text": "T 拉住快打掉", "role": "tank" },
+                                "別站正面"
+                            ]
+                        },
+                        {
+                            "name": "Hurricane Wing",
+                            "type": "raidwide",
+                            "description": "9 段魔法全體傷，最後一段更強。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "風暴階段",
+                            "type": "aoe",
+                            "description": "紫圓/甜甜圈漸減 AoE + 旋風小怪 + Horrid Roar 紅圓（恐慌）+ 散開標記。",
+                            "tips": ["看紫圖案找縫", "閃旋風", "閃紅圓避免恐慌"]
+                        },
+                        {
+                            "name": "Absolute / Winged Terror",
+                            "type": "aoe",
+                            "description": "頭發光 = 中央線；翅膀發光 = 兩側線。",
+                            "tips": ["看發光位置繞"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "5 大天使",
+            "nameEn": "The Ark Angels",
+            "mnemonic": ["MR/EV/HM/GK/TT 五人組", "保持血量接近", "看動作預判"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "團體機制",
+                            "type": "other",
+                            "description": "5 boss 不需要拉開，建議集中在場中。血量差距太大會強化。",
+                            "tips": ["平均輸出", "持續觀察 5 boss 動作"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

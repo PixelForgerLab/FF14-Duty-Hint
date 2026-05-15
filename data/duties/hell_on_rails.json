@@ -10,59 +10,172 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Lightning Express：站「上方門」的列下，避免下方門線 AoE。",
+        "2）Head-on Emission：嘴=下層 AoE 跳平台，頭燈=上層 AoE 跳地面。",
+        "3）Aether 加值階段是 DPS check，沒打完團滅。",
+        "4）注意東西兩側會跌落，Arcane Revelation 飛行圓需看停止位置。"
+    ],
+    "notes": "DT 7.4 MSQ trial（Lv 100，ilvl 745）。Doomtrain 是 FFIX 致敬 boss，多階段列車車廂機制。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "末日列車",
+            "nameEn": "Doomtrain",
+            "mnemonic": ["看門位置（上/下）", "嘴=下層、頭燈=上層", "東西側會跌落"],
+            "phases": [
+                {
+                    "name": "車廂 1",
+                    "mechanics": [
+                        {
+                            "name": "Lightning Burst",
+                            "type": "tankbuster",
+                            "description": "兩 T 都中的魔法 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Lightning Express",
+                            "type": "aoe",
+                            "description": "北方上方/下方門放線 AoE，只有下方門打到場地。同時 Boss 衝撞擊退。",
+                            "tips": ["站到上方門的列下", "用抗擊退或預定位"]
+                        },
+                        {
+                            "name": "Windpipe",
+                            "type": "aoe",
+                            "description": "把全員吸向前方，前兩排被 AoE 打到。",
+                            "tips": ["站夠遠避免被吸進去", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Unlimited Express",
+                            "type": "raidwide",
+                            "description": "全體物理傷 + 推到下一車廂。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "車廂 2（東西砲塔）",
+                    "mechanics": [
+                        {
+                            "name": "Turret Crossing",
+                            "type": "aoe",
+                            "description": "東西兩側生成砲塔群。",
+                            "tips": ["看哪邊發光"]
+                        },
+                        {
+                            "name": "Electray",
+                            "type": "aoe",
+                            "description": "一邊砲塔發光放線 AoE，需躲到箱子後。",
+                            "tips": ["躲到箱子背面"]
+                        },
+                        {
+                            "name": "Lightning Express + Electray (組合)",
+                            "type": "aoe",
+                            "description": "擊退後另一邊砲塔放 Electray。",
+                            "tips": ["位置調整被擊退到箱子後", "再快速躲到另一邊箱子"]
+                        }
+                    ]
+                },
+                {
+                    "name": "車廂 3（雙平台）",
+                    "mechanics": [
+                        {
+                            "name": "Head-on Emission（嘴）",
+                            "type": "aoe",
+                            "description": "Boss 嘴蓄能 = 下層全 AoE，需跳上平台。",
+                            "tips": ["看到嘴 = 跳平台"]
+                        },
+                        {
+                            "name": "Head-on Emission（頭燈）",
+                            "type": "aoe",
+                            "description": "Boss 頭燈發光 = 上層全 AoE，需在地面。",
+                            "tips": ["看到頭燈 = 跳下地面"]
+                        },
+                        {
+                            "name": "Lightning Express (5 門)",
+                            "type": "aoe",
+                            "description": "5 個門：4 地面 + 1 上層。需到平台對應上層門「不在」的位置。",
+                            "tips": ["跳到沒有上門的平台"]
+                        }
+                    ]
+                },
+                {
+                    "name": "車廂 4（Aether DPS check）",
+                    "mechanics": [
+                        {
+                            "name": "Runaway Train / Aether",
+                            "type": "other",
+                            "description": "轉移到圓形場地，打 Aether 小怪在 Doom-engine Power 到 100 前。",
+                            "tips": ["全力集火", "可以站邊（無墜落）"]
+                        },
+                        {
+                            "name": "Aether Surge",
+                            "type": "tankbuster",
+                            "description": "外圍 Ghost Train 對 T 錐 AoE 坦補 + Aether 4 個錐 AoE。",
+                            "tips": [
+                                { "text": "拉錐 AoE 遠離隊友", "role": "tank" },
+                                "兩 T 輪流被點"
+                            ]
+                        },
+                        {
+                            "name": "Scream of Metal",
+                            "type": "raidwide",
+                            "description": "結束時全體高物理傷。沒打完團滅。",
+                            "tips": [{ "text": "全體減傷", "role": "tank" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "車廂 4 續（Arcane Revelation）",
+                    "mechanics": [
+                        {
+                            "name": "Shockwave (即時)",
+                            "type": "raidwide",
+                            "description": "無 cast 即時全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Arcane Revelation",
+                            "type": "aoe",
+                            "description": "大紅圈沿菱形軌道旋轉，停止後爆大 AoE。停止位置決定安全位（南/北/西北/東北/南）。",
+                            "tips": ["盯著圓位置", "停下時看安全方位"]
+                        },
+                        {
+                            "name": "Derailment Siege",
+                            "type": "stack",
+                            "description": "三段疊機塔。",
+                            "tips": ["全員集中踩塔"]
+                        },
+                        {
+                            "name": "Derail",
+                            "type": "other",
+                            "description": "摧毀平台，需用南方傳送器到下個平台。",
+                            "tips": ["馬上跑到南方傳送器"]
+                        }
+                    ]
+                },
+                {
+                    "name": "車廂 5（最後）",
+                    "mechanics": [
+                        {
+                            "name": "Arcane Revelation (雙爆)",
+                            "type": "aoe",
+                            "description": "兩段不同安全位的爆炸。",
+                            "tips": ["記第一個安全位", "再跳第二個"]
+                        },
+                        {
+                            "name": "Turret Crossing + Head-on Crossing",
+                            "type": "aoe",
+                            "description": "砲塔高低 + Boss 嘴/頭燈組合，需高度反相砲塔且地面/平台對應。",
+                            "tips": ["看砲塔高度 + Boss 動作雙重判斷"]
+                        },
+                        {
+                            "name": "Battering Arms",
+                            "type": "stack",
+                            "description": "三段疊機塔（沒接 Derail）。",
+                            "tips": ["全員集中踩塔"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

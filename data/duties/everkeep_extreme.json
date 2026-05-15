@@ -7,62 +7,120 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Multidirectional Divide：中央十字延伸線 AoE，看小線朝向找縫。",
+        "2）Forward/Backward Half：Forward 會跳到 hitbox 邊轉身，Backward 不轉。",
+        "3）Sync 選 2 個外平台複製劍陣到中央，雙重要記。",
+        "4）Forged Track 火/風/藍 3 種繩：火=3 格擴張、風=擊退線、藍=普通線。",
+        "5）Bitter Whirlwind 3 段 TB 要換手或無敵；Projection of Turmoil 注意「跨線=爆」。"
+    ],
+    "notes": "DT 7.0 EX trial（Lv 100，ilvl 690）。Zoraal Ja EX 解鎖需完成 7.0 MSQ 後找 Wandering Minstrel。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "佐拉加",
+            "nameEn": "Zoraal Ja",
+            "mnemonic": ["Forward 跳邊翻身 / Backward 不翻", "Sync 雙平台複製", "TB 換手或無敵"],
+            "phases": [
+                {
+                    "name": "EX 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Actualize",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Multidirectional Divide",
+                            "type": "aoe",
+                            "description": "中央十字延伸出小線，朝指示方向爆。",
+                            "tips": ["看小線朝向找縫"]
+                        },
+                        {
+                            "name": "Forward Half / Backward Half",
+                            "type": "aoe",
+                            "description": "Forward = 跳到 hitbox 邊翻身後 cleave 前 + 發光劍側；Backward = 不翻身。",
+                            "tips": ["看是否跳/翻身判斷面向", "繞對側"]
+                        },
+                        {
+                            "name": "Regicidal Rage",
+                            "type": "tankbuster",
+                            "description": "雙 T 連繩。",
+                            "tips": [{ "text": "兩 T 分散站位", "role": "tank" }]
+                        },
+                        {
+                            "name": "Dawn of an Age + Vollok",
+                            "type": "aoe",
+                            "description": "場地縮小成 4x4，每個外平台 4 把劍各覆蓋 1 格。",
+                            "tips": ["記四個外平台劍陣"]
+                        },
+                        {
+                            "name": "Sync",
+                            "type": "aoe",
+                            "description": "選 2 個外平台複製劍陣到中央。",
+                            "tips": ["記住 2 個劍陣組合", "找中央安全格"]
+                        },
+                        {
+                            "name": "Greater Gateway + Blade Warp + Forged Track",
+                            "type": "aoe",
+                            "description": "繩有 3 種：火（3 格擴張）、風（線+擊退）、藍（普通線）。",
+                            "tips": ["看繩顏色預判 AoE", "風繩用抗擊退"]
+                        },
+                        {
+                            "name": "Projection of Triumph",
+                            "type": "aoe",
+                            "description": "4x4 劍陣 + 兩邊線：環線=接觸劍變甜甜圈、火球線=接觸劍變點 AoE。",
+                            "tips": ["看線位置 + 劍位置預判形狀"]
+                        },
+                        {
+                            "name": "Projection of Turmoil",
+                            "type": "stack",
+                            "description": "北方多疊機線 + Projection debuff（跨線爆共享傷害）。",
+                            "tips": ["跟著線疊機位置移動", "別讓 debuff 太早跨線"]
+                        },
+                        {
+                            "name": "Bitter Whirlwind",
+                            "type": "tankbuster",
+                            "description": "3 段坦補，必須換手或無敵。",
+                            "tips": [
+                                { "text": "換手或開無敵", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Drum of Vollok",
+                            "type": "other",
+                            "description": "全補 or 全 DPS 點名擊退非點名者。",
+                            "tips": ["看點名分組站位"]
+                        },
+                        {
+                            "name": "Aero III",
+                            "type": "other",
+                            "description": "兩平台各生成龍捲，可用來換平台。再用會獲得 Aero Vulnerability 立即死亡。",
+                            "tips": ["只能用 1 次龍捲", "別重複"]
+                        },
+                        {
+                            "name": "Duty's Edge",
+                            "type": "stack",
+                            "description": "4 段魔法疊機。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Burning Chains",
+                            "type": "other",
+                            "description": "全補連繩 DPS 需打斷。",
+                            "tips": ["互相走到拉到上限解繩"]
+                        },
+                        {
+                            "name": "Half Circuit",
+                            "type": "aoe",
+                            "description": "半場 cleave + 甜甜圈（劍外）或貼身（劍內）。",
+                            "tips": ["看劍位置 + cleave 方向"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

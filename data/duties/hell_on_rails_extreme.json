@@ -7,62 +7,121 @@
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 100,
-    "highEnd": false,
+    "highEnd": true,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Dead Man's Overdraught：4 球=雙人吃 Plasma；8 球=單人吃 Hyperexplosive Plasma。",
+        "2）多數攻擊無 cast bar，依音效（chug/snap）與視覺（嘴/頭燈光/手臂）判斷。",
+        "3）3 chug = Aetherosote（非坦點 AoE）；2 chug = Aetherochar（補職分擔）。",
+        "4）藍光=Thunderous Breath 下層 / 橘光=Headlight 上層。",
+        "5）6 個車廂節奏快，建議跟 Hector Hectorson 攻略影片。"
+    ],
+    "notes": "DT 7.4 EX trial（Lv 100，ilvl 760）。Doomtrain EX 6 車廂機制。⚠️ 多攻擊無 cast bar，需聽音/看視覺。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "末日列車",
+            "nameEn": "Doomtrain",
+            "mnemonic": ["看音效/視覺", "3 chug=非坦、2 chug=補", "嘴藍=下、燈橘=上"],
+            "phases": [
+                {
+                    "name": "EX 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Dead Man's Overdraught",
+                            "type": "aoe",
+                            "description": "4 或 8 浮空球指示 Plasma（4，雙人吃）或 Hyperexplosive Plasma（8，單吃）。",
+                            "tips": ["看球數量判斷", "雙人或單人站位"]
+                        },
+                        {
+                            "name": "Dead Man's Express",
+                            "type": "aoe",
+                            "description": "多 Levin Signal + 平台擊退 + 線 AoE。",
+                            "tips": ["用抗擊退或定位", "閃線 AoE"]
+                        },
+                        {
+                            "name": "Dead Man's Windpipe",
+                            "type": "aoe",
+                            "description": "拉入 + 前兩排 AoE。",
+                            "tips": ["站夠遠或抗擊退"]
+                        },
+                        {
+                            "name": "Turret Crossing",
+                            "type": "aoe",
+                            "description": "左/右砲塔多次線 AoE。",
+                            "tips": ["躲箱子後"]
+                        },
+                        {
+                            "name": "Lightning Burst",
+                            "type": "tankbuster",
+                            "description": "雙坦坦補。",
+                            "tips": [{ "text": "MT/OT 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Aetherial Ray",
+                            "type": "tankbuster",
+                            "description": "Ghost Train 位置決定 cleave 範圍（無 cast）。",
+                            "tips": [{ "text": "看 Ghost Train 位置", "role": "tank" }]
+                        },
+                        {
+                            "name": "Aetherosote (3 chug)",
+                            "type": "spread",
+                            "description": "非坦點 AoE + 2 秒魔抗下。無 cast，3 個 chug 音效。",
+                            "tips": ["3 chug = 全員散開", "拉開不重疊"]
+                        },
+                        {
+                            "name": "Aetherochar (2 chug)",
+                            "type": "stack",
+                            "description": "補職點 AoE 需多人分擔 + 2 秒魔抗下。無 cast，2 個 chug 音效。",
+                            "tips": ["2 chug = 多人疊靠補職"]
+                        },
+                        {
+                            "name": "Shockwave",
+                            "type": "raidwide",
+                            "description": "Boss 召喚手臂 = 全體傷（無 cast）。",
+                            "tips": [{ "text": "看到手臂預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Third Rail",
+                            "type": "aoe",
+                            "description": "Snap 音效 + 手指動作，全員腳下圓 AoE 2.7 秒後爆。",
+                            "tips": ["聽到 snap 立即拉開"]
+                        },
+                        {
+                            "name": "Headlight / Thunderous Breath",
+                            "type": "aoe",
+                            "description": "頭燈橘=上層、嘴藍=下層。",
+                            "tips": ["看光位置跳/不跳平台"]
+                        },
+                        {
+                            "name": "Arcane Revelation",
+                            "type": "aoe",
+                            "description": "菱形軌道多段 Hail of Thunder + Hyperconductive Plasma 雙點（1 補 1 坦）。",
+                            "tips": ["1 補 1 坦分散吃", "其他人閃菱形 AoE"]
+                        },
+                        {
+                            "name": "Psychokinesis",
+                            "type": "aoe",
+                            "description": "多目標點 AoE。",
+                            "tips": ["看點名分散站位"]
+                        },
+                        {
+                            "name": "Derailment Siege",
+                            "type": "stack",
+                            "description": "多段疊機，可坦無敵。",
+                            "tips": [
+                                "全員疊",
+                                { "text": "選擇性用無敵", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Derail",
+                            "type": "other",
+                            "description": "摧毀平台，前 3 次後方有傳送點到下車廂，最後一次=enrage。",
+                            "tips": ["馬上跑傳送點", "最後要在 enrage 前打死"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

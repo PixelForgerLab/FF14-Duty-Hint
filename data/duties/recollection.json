@@ -10,59 +10,101 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Shock 散開：移到 AoE 標記外，不需要繞圈跑（Sphene 提示誤導）。",
+        "2）Roseblood Bloom：紅色花格被打到會爆連鎖；站普通格上躲 AoE。",
+        "3）Briar Thorns：場邊 4 個荊棘放線 AoE 會引爆紅格；站非紅格閃線 AoE。"
+    ],
+    "notes": "DT 7.2 MSQ trial（Lv 100，ilvl 715）。Zelenia（澤蓮尼婭，FFIX 致敬 BGM Roses of May）。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "澤蓮尼婭",
+            "nameEn": "Zelenia",
+            "mnemonic": ["紅花格會爆連鎖", "Sphene 提示僅供參考"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Alexandrian Thunder IV",
+                            "type": "aoe",
+                            "description": "貼身 AoE 跟甜甜圈 AoE 依序，順序隨機。",
+                            "tips": ["看第一個形狀預判第二個", "進出 Boss hitbox"]
+                        },
+                        {
+                            "name": "Shock",
+                            "type": "spread",
+                            "description": "全員藍色散開標記，留下持續閃電 AoE。Sphene 提示「要持續移動」是誤導，只需 timer 結束時離開 AoE。",
+                            "tips": ["散開不重疊", "timer 一結束就移開"]
+                        },
+                        {
+                            "name": "Power Break",
+                            "type": "aoe",
+                            "description": "Boss 劍光指示半場 cleave。",
+                            "tips": ["看劍光繞另一半"]
+                        },
+                        {
+                            "name": "Holy Hazard",
+                            "type": "aoe",
+                            "description": "兩組對角 120 度扇形 AoE 依序爆。第一組消失後第二組出現。",
+                            "tips": ["看第一組找安全位", "第二組依順序解"]
+                        },
+                        {
+                            "name": "Specter of the Lost",
+                            "type": "tankbuster",
+                            "description": "兩 T 都中錐 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Thunder Slash + Alexandrian Thunder IV",
+                            "type": "aoe",
+                            "description": "3 組 60 度扇形 + 貼身/甜甜圈組合。",
+                            "tips": ["先站第三組扇形位置", "依序躲 in/out"]
+                        },
+                        {
+                            "name": "Roseblood Bloom (2 紅)",
+                            "type": "aoe",
+                            "description": "場地分 6 區，2 紅花區會爆並連鎖相鄰紅區。中央持續流血 AoE 別碰。",
+                            "tips": ["別站紅花區", "別碰中央流血"]
+                        },
+                        {
+                            "name": "Alexandrian Thunder III",
+                            "type": "aoe",
+                            "description": "3 個圓 AoE 帶玫瑰標記，其中 2 個在紅花區（會引爆）。",
+                            "tips": ["閃圓 AoE 同時遠離紅區"]
+                        },
+                        {
+                            "name": "Roseblood Bloom (4 紅)",
+                            "type": "aoe",
+                            "description": "4 紅區留兩個對角普通區，4 個連續閃電 AoE，先 2 個相鄰紅、再 2 個另外的紅。搭配 Power Break。",
+                            "tips": ["跳在兩個普通區之間", "看 Power Break 方向"]
+                        },
+                        {
+                            "name": "Stock Break",
+                            "type": "stack",
+                            "description": "四段疊機 AoE。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Roseblood Bloom (3 交替紅)",
+                            "type": "aoe",
+                            "description": "3 個交替紅區。Roseblood Drop 滾動橘球指示新紅區位置。3 個 Thunder III + Power Break。",
+                            "tips": ["遠離橘球目的地", "站普通區"]
+                        },
+                        {
+                            "name": "Valorous Ascension + Briar Thorns",
+                            "type": "spread",
+                            "description": "3 段全體傷 + 場邊 4 個荊棘小怪線 AoE + 全員 Shock 散開 + Power Break。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }, "閃 Briar 線 AoE", "站普通區散開", "看 Power Break 繞"]
+                        },
+                        {
+                            "name": "Thorned Catharsis",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

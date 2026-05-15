@@ -1,7 +1,7 @@
 {
     "id": "san_doria_the_second_walk",
     "name": "桑多利亞：第二巡行",
-    "nameEn": "San d\u0027Oria: The Second Walk",
+    "nameEn": "San d'Oria: The Second Walk",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "raid",
     "playerCount": 24,
@@ -10,59 +10,128 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）麒麟：手臂南北線 AoE 後接更寬線；召喚四聖獸（玄武/白虎/朱雀/青龍）各有不同機制。",
+        "2）Ultima + Omega：Ultima 場外固定，Omega 移動；鏡子反射雷射 + Trajectory Projection 散開。",
+        "3）卡姆拉納特：最後 boss（資料截斷，請參考 Hector 攻略影片）。"
+    ],
+    "notes": "DT 7.3 24 人 alliance raid（Lv 100，ilvl 725）。Echoes of Vana'diel 第 2 部。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "信仰麒麟",
+            "nameEn": "Faithbound Kirin",
+            "mnemonic": ["手臂線 AoE 寬度比預警更廣", "看召喚的四聖獸"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Stonega IV",
+                            "type": "raidwide",
+                            "description": "全體魔法傷。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Wrought Arms + Synchronized Strike",
+                            "type": "aoe",
+                            "description": "東西兩手 + 線 AoE 後傳遞給手臂放更寬的線 AoE。",
+                            "tips": ["看初始線朝向", "預判更寬版本"]
+                        },
+                        {
+                            "name": "Crimson Riddle",
+                            "type": "aoe",
+                            "description": "尾發光=後 180 度 cleave；嘴發光=前 180 度 cleave。",
+                            "tips": ["看發光位置繞對側"]
+                        },
+                        {
+                            "name": "Summon Genbu（玄武）",
+                            "type": "aoe",
+                            "description": "震地後地裂噴水柱 + 點 AoE + 甜甜圈 AoE。",
+                            "tips": ["先閃水柱位置", "再外/內判斷"]
+                        },
+                        {
+                            "name": "Summon Byakko（白虎）",
+                            "type": "aoe",
+                            "description": "8 板跳邊衝鋒線 AoE + 終點點 AoE。後段配合 Quake 圓 AoE。",
+                            "tips": ["看 Byakko 衝鋒朝向", "閃線 + 圓"]
+                        },
+                        {
+                            "name": "Summon Suzaku（朱雀）",
+                            "type": "aoe",
+                            "description": "場地縮成方形 + 火球線 AoE 衝鋒 + 散開標記。",
+                            "tips": ["看火球位置找縫", "散開"]
+                        },
+                        {
+                            "name": "Summon Seiryu（青龍）",
+                            "type": "aoe",
+                            "description": "角落旋轉線 AoE + Boss 雙釋放（圓 AoE + 散開）。",
+                            "tips": ["看旋轉方向避", "散開"]
+                        },
+                        {
+                            "name": "Wringer + 手臂甜甜圈",
+                            "type": "aoe",
+                            "description": "中央點 AoE + 手臂甜甜圈留中央安全。",
+                            "tips": ["先跑遠避點", "再回中央"]
+                        },
+                        {
+                            "name": "Mighty Grip + Chiseled Arms",
+                            "type": "other",
+                            "description": "場地壓縮 + 2 個可選手臂小怪 + Deadly Hold 4 塔（3 T 各踩 1）+ Kirin Captivator DPS check。",
+                            "tips": [
+                                "全力打 Chiseled Arms",
+                                { "text": "3 T 各踩 1 塔", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "歐美加 + 阿魯提瑪",
+            "nameEn": "Ultima, the Feared + Omega, the One",
+            "mnemonic": ["Ultima 場外固定", "Omega 移動可調", "鏡子反射雷射"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Antimatter (Ultima)",
+                            "type": "tankbuster",
+                            "description": "3 T 都受魔法坦補。",
+                            "tips": [{ "text": "3 T 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Energy Orb + Energy Ray",
+                            "type": "aoe",
+                            "description": "Ultima 場邊 3 個 portal 放線 AoE。",
+                            "tips": ["遠離 portal 行"]
+                        },
+                        {
+                            "name": "Aft-to-fore / Fore-to-aft Fire",
+                            "type": "aoe",
+                            "description": "Omega 兩段 180 度 cleave 依名稱方向。",
+                            "tips": ["看名稱方向繞"]
+                        },
+                        {
+                            "name": "Tractor Beam + 散開",
+                            "type": "spread",
+                            "description": "Ultima 拉入 + 飛船半場 cleave + 散開標記。",
+                            "tips": ["跑對側或抗擊退", "閃 cleave 再散開"]
+                        },
+                        {
+                            "name": "Mana Screen",
+                            "type": "aoe",
+                            "description": "鏡子斜放 + Energy Orb 雷射反射 90 度。",
+                            "tips": ["看鏡子角度預判反射方向"]
+                        },
+                        {
+                            "name": "Trajectory Projection",
+                            "type": "spread",
+                            "description": "玩家獲得 Projection Locus 9 秒 debuff，圓 AoE 偏移玩家位置。",
+                            "tips": ["debuff 結束前往安全位調整"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
