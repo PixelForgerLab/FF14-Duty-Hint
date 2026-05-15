@@ -1,13 +1,85 @@
 {
-    "id": "hullbreaker_isle",
-    "name": "財寶傳說破艦島",
-    "nameEn": "Hullbreaker Isle",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 110,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "hullbreaker_isle",
+  "name": "財寶傳說破艦島",
+  "nameEn": "Hullbreaker Isle",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "海盜島主題副本",
+    "Cuca Fera：龜型 boss，閃水柱 AoE",
+    "Kraken：海怪，閃觸手 + 全體",
+    "場上注意海水與毒"
+  ],
+  "notes": "等級 50 的 4 人副本（破艦島）。海盜冒險主題，最終 boss 克拉肯。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "庫卡龍龜",
+      "nameEn": "Cuca Fera",
+      "mnemonic": [
+        "龜型 boss",
+        "閃 AoE 圓圈"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "克拉肯",
+      "nameEn": "Kraken",
+      "mnemonic": [
+        "巨型海怪",
+        "閃觸手攻擊 AoE",
+        "場上會被觸手抓住 → DPS 救援"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "觸手抓人",
+              "type": "other",
+              "description": "Boss 會用觸手抓住玩家，被抓的會持續受傷。",
+              "tips": [
+                "DPS 打觸手救援被抓的隊友",
+                { "text": "立刻補血給被抓玩家", "role": "healer" }
+              ]
+            },
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
