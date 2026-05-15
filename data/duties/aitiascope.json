@@ -1,6 +1,6 @@
 {
     "id": "aitiascope",
-    "name": "星海深幽尋因星晶鏡",
+    "name": "因果之鏡",
     "nameEn": "The Aitiascope",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,125 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）莉薇亞：兩圓 AoE 散開後疊機；Aglaea Climb 看發光手對角站非發光手位置；Aglaea Shot 8 線出後等回收。",
+        "2）瑞塔提：Vexillatio 中間 1/3 安全 + Shield Skewer 看哪柱先碎站該道。",
+        "3）阿蒙：Thundaga 8 格鋸齒進慢爆格；Curtain Call 躲冰晶後即死。"
+    ],
+    "notes": "6.0 第五個 MSQ 副本（Lv 89-90，ilvl sync 550）。Amon 為復活版法師。Curtain Call 即死機制是核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "莉薇亞",
+            "nameEn": "Livia the Undeterred",
+            "mnemonic": ["看發光手對角站", "8 線出後注意回收"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Aglaea Bite",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Odi Et Amo + Disparagement",
+                            "type": "stack",
+                            "description": "2 圓 AoE + 疊機，疊機後 cone 朝目標方向。",
+                            "tips": ["閃圓再疊", "疊後馬上離開疊機者前方"]
+                        },
+                        {
+                            "name": "Aglaea Climb",
+                            "type": "aoe",
+                            "description": "Boss 4 手 2 發光 = 該象限 AoE。發光手永遠對角。",
+                            "tips": ["站非發光手的兩個象限之一"]
+                        },
+                        {
+                            "name": "Aglaea Shot",
+                            "type": "aoe",
+                            "description": "8 條線到場邊 + 10 秒後回收。",
+                            "tips": ["先閃外擴，再小心回收"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "瑞塔提",
+            "nameEn": "Rhitahtyn the Unshakable",
+            "mnemonic": ["Vexillatio 中央 1/3 安全", "Skewer 看哪柱先碎"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Anvil of Tartarus",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Tartarean Spark",
+                            "type": "aoe",
+                            "description": "對隨機玩家線 AoE。",
+                            "tips": ["看標記閃"]
+                        },
+                        {
+                            "name": "Shrapnel Shell",
+                            "type": "aoe",
+                            "description": "迫擊砲掃 2 個角落。",
+                            "tips": ["跑遠角"]
+                        },
+                        {
+                            "name": "Vexillatio + Shield Skewer",
+                            "type": "other",
+                            "description": "外側 1/3 被牆封 + 中央 1/3 安全。4 柱被吸 Aether，先碎柱對應的道安全。",
+                            "tips": ["站中央 1/3 + 看哪柱先碎跑該道"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿蒙",
+            "nameEn": "Amon the Undying",
+            "mnemonic": ["Thundaga 8 格進慢爆", "Curtain Call 躲冰晶後"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Eruption Forte",
+                            "type": "aoe",
+                            "description": "2 玩家圓 AoE 標記。",
+                            "tips": ["拉開"]
+                        },
+                        {
+                            "name": "Thundaga Forte",
+                            "type": "aoe",
+                            "description": "中央漸減 + 8 鋸齒格交替快慢爆。",
+                            "tips": ["跑邊", "進慢爆格 → 再進剛爆完格"]
+                        },
+                        {
+                            "name": "Strophe + Antistrophe",
+                            "type": "aoe",
+                            "description": "板子立起來 = 兩面寬線 AoE。1 板 = 兩邊安全；2 板（平行或匯聚）有特殊安全位。",
+                            "tips": ["看板子位置與朝向", "兩板匯聚 = 反向角落 + 中央三角"]
+                        },
+                        {
+                            "name": "Left/Right Firaga Forte",
+                            "type": "aoe",
+                            "description": "Boss 左/右半場 cleave（Boss 視角，玩家視角相反）。",
+                            "tips": ["看 cast 名稱 = 該側安全（玩家視角）"]
+                        },
+                        {
+                            "name": "Curtain Call",
+                            "type": "other",
+                            "description": "2 圓 AoE 後生成大冰晶，沒躲後面即死。",
+                            "tips": ["先閃圓", "躲冰晶後", "不能用坦無敵"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

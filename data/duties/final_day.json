@@ -1,6 +1,6 @@
 {
     "id": "final_day",
-    "name": "終結之戰",
+    "name": "終末歌詠者殲滅戰",
     "nameEn": "The Final Day",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -10,59 +10,144 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Elegeia：兩星球繞場，看慢的撞擊時間。",
+        "2）Elenchos：嘴亮=中央線（跑兩側）；眼淚=兩側線（跑中央）。",
+        "3）Add Phase：Kakodaimon 打掉 + Ultimate Fate 需坦 LB3 第一次擋；第二次無法擋有過場救。",
+        "4）Phase 2 Prayers of Hope 加強傷，全力打。"
+    ],
+    "notes": "6.0 EW MSQ 終戰（Lv 90，ilvl 570）。Endsinger（終末歌詠者）為 EW 主線最終 boss。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "終末歌詠者",
+            "nameEn": "The Endsinger",
+            "mnemonic": ["嘴亮跑側、眼淚跑中", "看慢星球", "Ultimate Fate 用坦 LB3"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Elegeia",
+                            "type": "aoe",
+                            "description": "全體 + 兩星球繞場最後撞擊。看慢的星球。",
+                            "tips": ["遠離慢星球撞擊位置"]
+                        },
+                        {
+                            "name": "Galaxias",
+                            "type": "other",
+                            "description": "中央隕石擊退。",
+                            "tips": ["站中央被半擊退", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Elenchos",
+                            "type": "aoe",
+                            "description": "嘴亮 = 中央線；眼淚 = 兩側線。",
+                            "tips": ["看臉部哪邊發光", "嘴=跑側、淚=跑中"]
+                        },
+                        {
+                            "name": "Death's Embrace + Feathers",
+                            "type": "spread",
+                            "description": "錐 AoE 追蹤玩家 + 羽毛掉落 Pharmakon 圓 AoE。",
+                            "tips": ["散開拉錐", "閃羽毛圓"]
+                        },
+                        {
+                            "name": "Aporrhos",
+                            "type": "aoe",
+                            "description": "4 個臉 + 各放線 AoE。",
+                            "tips": ["站臉間"]
+                        },
+                        {
+                            "name": "Hubris",
+                            "type": "tankbuster",
+                            "description": "雙 T AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 拉開", "role": "tank" }]
+                        },
+                        {
+                            "name": "Elegeia Unforgotten + Fatalism",
+                            "type": "aoe",
+                            "description": "Elegeia 再來一次，星球依固定順序爆。Fatalism 重複機制。",
+                            "tips": ["記住第一次順序"]
+                        },
+                        {
+                            "name": "Ekstasis",
+                            "type": "aoe",
+                            "description": "場上 AoE 池變臉 → 再生長 AoE。",
+                            "tips": ["站場邊基本方向角"]
+                        },
+                        {
+                            "name": "Interstellar",
+                            "type": "aoe",
+                            "description": "中央線 cleave + 4 玩家圓 AoE。",
+                            "tips": ["遠離中央 + 散開不重疊"]
+                        },
+                        {
+                            "name": "Nemesis",
+                            "type": "spread",
+                            "description": "全員散開標記。",
+                            "tips": ["分散"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Add Phase",
+                    "mechanics": [
+                        {
+                            "name": "Kakodaimon",
+                            "type": "other",
+                            "description": "項鏈小怪要打掉，Despair 條到 100 = Ultimate Fate 團滅。",
+                            "tips": ["全力打 Kakodaimon"]
+                        },
+                        {
+                            "name": "Meteor Radiant",
+                            "type": "aoe",
+                            "description": "場邊星球落下 AoE，看彩虹箭頭。",
+                            "tips": ["遠離箭頭目標"]
+                        },
+                        {
+                            "name": "Meteor Outburst",
+                            "type": "spread",
+                            "description": "全員圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Ultimate Fate (1)",
+                            "type": "raidwide",
+                            "description": "依 Despair 條決定傷害。",
+                            "tips": [
+                                { "text": "用 LB3 + 減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Ultimate Fate (2)",
+                            "type": "raidwide",
+                            "description": "第二次無法擋，過場後 Phase 2。",
+                            "tips": ["注定團滅，過場救回"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Prayers of Hope",
+                            "type": "other",
+                            "description": "全員加堆疊增傷 buff。",
+                            "tips": [{ "text": "全力 burst", "role": "dps" }]
+                        },
+                        {
+                            "name": "Telos",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Telomania",
+                            "type": "aoe",
+                            "description": "4 cleave + 全體 AoE + 3 組 AoE 池。",
+                            "tips": ["減傷 + 閃 AoE 池"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

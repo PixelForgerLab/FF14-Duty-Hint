@@ -1,6 +1,6 @@
 {
     "id": "dead_ends",
-    "name": "最終幻想末世終跡",
+    "name": "終焉之絕境",
     "nameEn": "The Dead Ends",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,155 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）腐爛者：Cough Up 散開後 Craven 必須疊；Wave of Nausea 甜甜圈貼 Boss；地上毒池別踩。",
+        "2）和平守衛者：Order to Fire 站 Boss 後線 AoE 縫；No Future 看 AoE 從中心或邊緣外擴/內縮跟進。",
+        "3）拉拉：Lifesbreath 蝴蝶面朝側放線 AoE 站蝴蝶後；中段加 Loving Embrace 一邊半場 cleave。"
+    ],
+    "notes": "6.0 終末 MSQ 副本（Lv 90，ilvl 570）。Endwalker 主線結尾。Ra-la 是 Meteion 的姊妹，悲傷主題。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "腐爛者",
+            "nameEn": "Caustic Grebuloff",
+            "mnemonic": ["別踩毒池", "Cough Up 散後疊"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Miasmata",
+                            "type": "aoe",
+                            "description": "全體 AoE + 風吹圓 AoE 過場。命中 Necrosis 需 Esuna。",
+                            "tips": ["閃移動 AoE", { "text": "Esuna Necrosis", "role": "healer" }]
+                        },
+                        {
+                            "name": "Cough Up + Craven Companionship",
+                            "type": "stack",
+                            "description": "3 組散開圓 + debuff 結束必須疊（否則 Hysteria）。",
+                            "tips": ["先散後集中疊"]
+                        },
+                        {
+                            "name": "Wave of Nausea",
+                            "type": "aoe",
+                            "description": "甜甜圈 AoE。",
+                            "tips": ["貼 Boss"]
+                        },
+                        {
+                            "name": "Pox Flail",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Blighted Water",
+                            "type": "stack",
+                            "description": "疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Befoulment",
+                            "type": "spread",
+                            "description": "玩家圓 AoE 散開。",
+                            "tips": ["分散"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "和平守衛者",
+            "nameEn": "Peacekeeper",
+            "mnemonic": ["No Future 看內/外擴", "Order to Fire 站線縫"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Decimation",
+                            "type": "raidwide",
+                            "description": "全體 + 場邊火 AoE。",
+                            "tips": ["別站場邊"]
+                        },
+                        {
+                            "name": "Electromagnetic Repellant",
+                            "type": "other",
+                            "description": "Boss hitbox 內電擊 DoT。",
+                            "tips": ["跑出 hitbox"]
+                        },
+                        {
+                            "name": "Order to Fire",
+                            "type": "aoe",
+                            "description": "Boss 周圍砲塔線 AoE 朝外擴，hitbox 與場邊之間有錐縫。",
+                            "tips": ["站線間錐縫"]
+                        },
+                        {
+                            "name": "No Future",
+                            "type": "aoe",
+                            "description": "圓 AoE 從中心或邊緣依序爆。Boss 下永遠不安全。",
+                            "tips": ["看順序找已爆/未爆位置", "外擴 = 從外往內、內縮 = 從內往外"]
+                        },
+                        {
+                            "name": "Peacefire",
+                            "type": "aoe",
+                            "description": "AoE 旋轉繞 Boss，伴隨 Electromagnetic Repellant。",
+                            "tips": ["跟著旋轉方向跑"]
+                        },
+                        {
+                            "name": "Eclipsing Exhaust",
+                            "type": "other",
+                            "description": "場邊圓 AoE 留縫 + 中央擊退。",
+                            "tips": ["位置調好擊退到縫"]
+                        },
+                        {
+                            "name": "Elimination",
+                            "type": "tankbuster",
+                            "description": "T 寬線坦補。",
+                            "tips": [{ "text": "T 拉遠避免炸隊友", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "拉拉",
+            "nameEn": "Ra-la",
+            "mnemonic": ["蝴蝶後安全", "看雲翅膀 Loving Embrace"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Prance",
+                            "type": "aoe",
+                            "description": "4 段金色圓 AoE 依序爆。",
+                            "tips": ["進最後生成的", "等第一個爆完再進"]
+                        },
+                        {
+                            "name": "Lifesbreath",
+                            "type": "other",
+                            "description": "中央線 AoE + 蝴蝶交替面向兩半場放線 AoE。命中 Doom 需補滿血。",
+                            "tips": ["站蝴蝶後", { "text": "Doom 補滿血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Loving Embrace",
+                            "type": "aoe",
+                            "description": "翅膀發光 = 該側半場 cleave。第二次 Lifesbreath 時同時用。",
+                            "tips": ["看翅膀繞對側", "蝴蝶解完馬上轉移"]
+                        },
+                        {
+                            "name": "Benevolence",
+                            "type": "stack",
+                            "description": "疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Still Embrace",
+                            "type": "spread",
+                            "description": "玩家圓 AoE 散開。",
+                            "tips": ["分散"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

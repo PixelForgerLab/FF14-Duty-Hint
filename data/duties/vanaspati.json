@@ -1,6 +1,6 @@
 {
     "id": "vanaspati",
-    "name": "末日樹海萬相森國",
+    "name": "梵那斯帕提",
     "nameEn": "Vanaspati",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,125 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 86 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）終末攫奪者：Mouth Off 5 嘴 2 閉合（安全）；Misdirection 旋轉手指期間移動跟手指方向；左/右看 Boss 抬哪手。",
+        "2）終末破壞者：水球可變蛤蟆免火；Aether Spray 火 = 鑽水球免火、水 = 中央或抗擊退。",
+        "3）斯瓦爾巴努：紅圈/藍三角看自己 debuff，跑對應 AoE 對側；隕石階段 4 列 3 連，先內後內後外。"
+    ],
+    "notes": "6.0 第三個 MSQ 副本（Lv 85-86）。Svarbhanu 隕石階段是核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "終末攫奪者",
+            "nameEn": "Terminus Snatcher",
+            "mnemonic": ["5 嘴 2 閉合", "Misdirection 看手指", "看 Boss 抬手"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Last Gasp",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Mouth Off",
+                            "type": "aoe",
+                            "description": "場邊 5 嘴，2 閉合 = 安全位。",
+                            "tips": ["站閉合嘴後"]
+                        },
+                        {
+                            "name": "What Is Left / Right",
+                            "type": "aoe",
+                            "description": "Boss 抬左/右手 = 該側半場 AoE。",
+                            "tips": ["看抬手方向繞對側"]
+                        },
+                        {
+                            "name": "Lost Hope (Misdirection)",
+                            "type": "other",
+                            "description": "方向亂跑 debuff（旋轉手指）。",
+                            "tips": ["看手指方向決定按鍵"]
+                        },
+                        {
+                            "name": "Wallow",
+                            "type": "spread",
+                            "description": "全員散開（與 What Is Left/Right 同時）。",
+                            "tips": ["閃方向同時散開"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "終末破壞者",
+            "nameEn": "Terminus Wrecker",
+            "mnemonic": ["水球變蛤蟆免火", "Spray 火鑽水球、水站中央"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Total Wreck",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Poison Heart",
+                            "type": "stack",
+                            "description": "疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Unholy Water",
+                            "type": "other",
+                            "description": "6 個水球，鑽進去變蛤蟆免火（同時水抗下）。",
+                            "tips": ["看下一個 Aether Siphon 決定是否鑽"]
+                        },
+                        {
+                            "name": "Aether Spray - 火",
+                            "type": "raidwide",
+                            "description": "全體火 AoE，水球內免疫。",
+                            "tips": ["先鑽水球"]
+                        },
+                        {
+                            "name": "Aether Spray - 水",
+                            "type": "other",
+                            "description": "場中放射狀擊退。",
+                            "tips": ["站正中央", "或抗擊退"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "斯瓦爾巴努",
+            "nameEn": "Svarbhanu",
+            "mnemonic": ["紅圈/藍三角看自己 debuff", "隕石 4 列 3 連"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Aetherial Disruption",
+                            "type": "aoe",
+                            "description": "4 條線把場分四象限，2 紅 2 藍。看自己 debuff（紅圈 or 藍三角）決定跑對應顏色或對側。",
+                            "tips": ["看 debuff 顏色", "跑對側 AoE"]
+                        },
+                        {
+                            "name": "Crumbling Sky",
+                            "type": "other",
+                            "description": "擊退 + 圓 AoE 散開（後段同時）。",
+                            "tips": ["抗擊退 + 散開"]
+                        },
+                        {
+                            "name": "隕石階段",
+                            "type": "other",
+                            "description": "Boss 退場放 3 波隕石，4 列只留 1 列安全。模式：2-3-1 或 3-2-4（內 → 對側內 → 外）。",
+                            "tips": ["記模式跟著跑", "先內 1 格，再對側內 2 格，最後外側"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

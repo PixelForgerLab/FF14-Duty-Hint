@@ -1,6 +1,6 @@
 {
     "id": "tower_of_zot",
-    "name": "異形樓閣佐特塔",
+    "name": "佐特之塔",
     "nameEn": "The Tower of Zot",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,140 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 82 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）米妮督瓦：12 條窄錐站縫；甜甜圈貼 Boss、Bio III 朝 Boss 對側半場；Transmute 看標記位置預判。",
+        "2）桑督瓦：Berserk 球留缺口 + 站牆邊；Manusya Stop 散開單獨吃 Prapti；Confuse 找真本體。",
+        "3）秦督瓦（合戰）：Delta Attack 看訊息選機制（冰窄錐 / 雷十字+疊機 / 火甜甜圈+散開）；先打 Cinduruva 否則會復活姊妹。"
+    ],
+    "notes": "6.0 第一個 MSQ 副本（Lv 81-82）。Magus Sisters（FFIV 致敬 3 女巫）。Delta Attack 看文字訊息判斷元素是這座副本的核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "米妮督瓦",
+            "nameEn": "Minduruva",
+            "mnemonic": ["12 窄錐 = 站縫", "甜甜圈 = 貼 Boss", "Transmute 看標記位置"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Manusya Bio (TB)",
+                            "type": "tankbuster",
+                            "description": "坦補 + 高傷 DoT 中毒。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" },
+                                { "text": "立刻 Esuna", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Manusya Blizzard III",
+                            "type": "aoe",
+                            "description": "Boss 中心放 12 條窄錐 AoE。",
+                            "tips": ["站到窄錐之間的縫"]
+                        },
+                        {
+                            "name": "Manusya Fire III",
+                            "type": "aoe",
+                            "description": "大甜甜圈 AoE，只有貼身 Boss 安全。",
+                            "tips": ["貼 Boss"]
+                        },
+                        {
+                            "name": "Manusya Thunder III",
+                            "type": "aoe",
+                            "description": "從 Boss 四方向發射 AoE 朝外。",
+                            "tips": ["遠離 Boss 或站對角線"]
+                        },
+                        {
+                            "name": "Manusya Bio III",
+                            "type": "aoe",
+                            "description": "覆蓋全場除了 Boss 朝近牆的半場。",
+                            "tips": ["跑到 Boss 與近牆之間"]
+                        },
+                        {
+                            "name": "Transmute 系列",
+                            "type": "other",
+                            "description": "把法術存到標記位置延後爆。",
+                            "tips": ["看標記位置預判 AoE"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "桑督瓦",
+            "nameEn": "Sanduruva",
+            "mnemonic": ["Berserk 球 = 找缺口貼牆", "Stop = 散開單獨吃線", "Confuse 找真本體"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Isitva Siddhi (TB)",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Prapti Siddhi",
+                            "type": "aoe",
+                            "description": "對每個玩家依序大線 AoE。",
+                            "tips": ["看標記閃線"]
+                        },
+                        {
+                            "name": "Manusya Berserk",
+                            "type": "aoe",
+                            "description": "5 個球圍場，留一個缺口；中標 Berserk 失控。",
+                            "tips": ["跑缺口", "貼牆躲爆"]
+                        },
+                        {
+                            "name": "Manusya Stop",
+                            "type": "spread",
+                            "description": "每人被凍住單獨吃 Prapti 線 AoE。",
+                            "tips": ["分散站", "撐血", { "text": "持續補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Manusya Confuse",
+                            "type": "aoe",
+                            "description": "5 個分身偽裝 Boss，只有 1 個真實。",
+                            "tips": ["看誰沒做 emote", "或看 DoT debuff", "再貼牆躲球爆"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "秦督瓦（合戰）",
+            "nameEn": "Cinduruva / Magus Sisters",
+            "mnemonic": ["Delta Attack 看文字", "先打 Cinduruva"],
+            "phases": [
+                {
+                    "name": "三姊妹合戰",
+                    "mechanics": [
+                        {
+                            "name": "Samsara",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Delta Attack: 冰",
+                            "type": "aoe",
+                            "description": "「冰封大地」= 12 窄錐 + 冰柱掉落。",
+                            "tips": ["站縫 + 閃預警"]
+                        },
+                        {
+                            "name": "Delta Attack: 雷",
+                            "type": "stack",
+                            "description": "「雷霆風暴」= 每 boss 十字錐 + 線 AoE + 全員疊機。",
+                            "tips": ["閃十字", "全員疊"]
+                        },
+                        {
+                            "name": "Delta Attack: 火",
+                            "type": "spread",
+                            "description": "「無盡烈焰」= 兩個甜甜圈 AoE 中心安全 + 線 AoE + 散開標記。",
+                            "tips": ["先站第一甜甜圈安全位", "閃線", "再散開"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

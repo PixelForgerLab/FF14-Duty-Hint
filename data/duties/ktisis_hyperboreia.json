@@ -1,6 +1,6 @@
 {
     "id": "ktisis_hyperboreia",
-    "name": "創造環境極北造物院",
+    "name": "希貝爾波雷亞創造區",
     "nameEn": "Ktisis Hyperboreia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,119 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 88 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）萊薩：Frostbite and Seek 看坑洞無腳印 = Boss 會出現的位置，站 Boss 後。",
+        "2）拉冬王：Inhale 後看哪些頭膨脹 = 該方向錐 AoE；中頭 vs 側頭決定哪邊安全。",
+        "3）赫耳墨斯：Hermetica 板子分多種模式（同列、雙列、Double 視線、Quadruple 順序 90 度）；Double/Quadruple 看 Boss buff。"
+    ],
+    "notes": "6.0 第四個 MSQ 副本（Lv 87-88）。Hermes 風魔導場長。Hermetica 4 種模式為核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "萊薩",
+            "nameEn": "Lyssa",
+            "mnemonic": ["看無腳印的坑站 Boss 後", "冰柱站縫"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Frostbite and Seek",
+                            "type": "aoe",
+                            "description": "Boss 消失後從 6 個坑之一冒出大 AoE，看無腳印坑判斷。",
+                            "tips": ["找無腳印的坑", "站該坑後方"]
+                        },
+                        {
+                            "name": "Icicall",
+                            "type": "aoe",
+                            "description": "3 冰柱貼身 AoE + 線 AoE（場邊或中央）。",
+                            "tips": ["閃冰柱貼身 + 線"]
+                        },
+                        {
+                            "name": "Heavy Smash",
+                            "type": "stack",
+                            "description": "疊機標記。",
+                            "tips": ["全員疊（冰柱清後）"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "拉冬王",
+            "nameEn": "Ladon Lord",
+            "mnemonic": ["看哪些頭膨脹", "中頭膨脹 = 前安全"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Inhale + Pyric Breath",
+                            "type": "aoe",
+                            "description": "1-2 顆頭膨脹 = 該方向 120 度錐 AoE。",
+                            "tips": ["看膨脹頭找未膨脹頭側", "側頭膨脹 = 站 Boss 正前"]
+                        },
+                        {
+                            "name": "Pyric Spheres",
+                            "type": "aoe",
+                            "description": "4 顆球十字線 AoE。",
+                            "tips": ["站球間"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "赫耳墨斯",
+            "nameEn": "Hermes",
+            "mnemonic": ["Hermetica 4 模式", "看 Double/Quadruple buff"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Trismegistos",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "True Tornado (TB)",
+                            "type": "tankbuster",
+                            "description": "坦補 + Double = 腳下圓 AoE。",
+                            "tips": [{ "text": "Double 時離開", "role": "tank" }]
+                        },
+                        {
+                            "name": "True Bravery",
+                            "type": "other",
+                            "description": "可中斷 - Boss 加增傷 buff 20 秒。",
+                            "tips": ["DPS interrupt"]
+                        },
+                        {
+                            "name": "True Aero (線 AoE)",
+                            "type": "spread",
+                            "description": "全員線 AoE 散開 + Double 後再加 1 條。",
+                            "tips": ["分散 + 移開"]
+                        },
+                        {
+                            "name": "True Aero II (點 AoE)",
+                            "type": "spread",
+                            "description": "全員點 AoE + Quadruple 後再加 1 個。",
+                            "tips": ["分散 + 移開"]
+                        },
+                        {
+                            "name": "Meteor",
+                            "type": "other",
+                            "description": "4 角預警隕石擋 Hermetica。",
+                            "tips": ["跑中央減傷"]
+                        },
+                        {
+                            "name": "Hermetica（板子）",
+                            "type": "aoe",
+                            "description": "板子線 AoE 多種模式：①單邊安全 ②穿中央 ③Double 利用隕石遮蔽 ④Quadruple 4 段 90 度。",
+                            "tips": ["看板子位置與 Buff 判斷模式", "Quadruple = 找前兩段都安全象限，第二段後移對角"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
