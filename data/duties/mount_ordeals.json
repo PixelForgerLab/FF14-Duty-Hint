@@ -1,6 +1,6 @@
 {
     "id": "mount_ordeals",
-    "name": "盧比坎特殲滅戰",
+    "name": "魯比坎特殲滅戰",
     "nameEn": "Mount Ordeals",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -10,59 +10,103 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Ordeal of Purgation：跟著火球藍引線預判 cone 方向；Penance debuff 到時不能動。",
+        "2）Adds Phase：先打 Greater Flamesent（Ghastly Torch 全體傷+Burns）。",
+        "3）Phase 2 Flamerake：旋轉箭頭停止時 = 線 AoE 朝向，看終點預判閃對側。",
+        "4）Soulscald：藍線 AoE 在剛剛紅線位置再放一次（穿越整個場）。"
+    ],
+    "notes": "6.3 EW 第二個 Archfiend trial（Lv 90，ilvl 595）。Rubicante 火焰之皇。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "魯比坎特",
+            "nameEn": "Rubicante",
+            "mnemonic": ["看引線預判 cone", "Penance 結束前找好位", "先打 Greater Flamesent"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Inferno",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Ordeal of Purgation",
+                            "type": "aoe",
+                            "description": "同心三圈 + 藍引線指引火球路徑，Penance 結束會被鎖位置。",
+                            "tips": ["看藍引線追蹤 cone 終點", "預先到安全位"]
+                        },
+                        {
+                            "name": "Shattering Heat",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Arch Inferno + Conflagration/Radial Flagration",
+                            "type": "aoe",
+                            "description": "中央 AoE + 兩組旋轉 AoE + 額外線/錐 AoE。",
+                            "tips": ["跟著旋轉縫跑"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Adds Phase",
+                    "mechanics": [
+                        {
+                            "name": "Greater Flamesent + Flamesent",
+                            "type": "other",
+                            "description": "1 大 + 3 小要打完，Rubicante's Power 100 = 團滅。",
+                            "tips": [
+                                "先打大的（持續 Burns DoT）",
+                                { "text": "全力 burst", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Blazing Rapture",
+                            "type": "raidwide",
+                            "description": "Phase 結尾全體大傷。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Inferno (散開)",
+                            "type": "spread",
+                            "description": "散開標記 + 流血 DoT。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Flamerake",
+                            "type": "aoe",
+                            "description": "旋轉箭頭停止位置 = 線 AoE，外擴。",
+                            "tips": ["看停止方向", "AoE 後跑剛剛安全位"]
+                        },
+                        {
+                            "name": "Soulscald / Scalding Fleet",
+                            "type": "spread",
+                            "description": "玩家線 AoE 散開 + 後續藍線 AoE 在原位再放。",
+                            "tips": ["分散誘導", "AoE 後馬上離開"]
+                        },
+                        {
+                            "name": "Dualfire",
+                            "type": "tankbuster",
+                            "description": "雙 T 大 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 拉開", "role": "tank" }]
+                        },
+                        {
+                            "name": "Sweeping Immolation",
+                            "type": "spread",
+                            "description": "半場 cleave + 散開。",
+                            "tips": ["先繞 cleave 再散"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

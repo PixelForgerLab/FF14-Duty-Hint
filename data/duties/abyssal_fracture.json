@@ -1,6 +1,6 @@
 {
     "id": "abyssal_fracture",
-    "name": "澤羅姆斯殲滅戰",
+    "name": "塞洛蒙殲滅戰",
     "nameEn": "The Abyssal Fracture",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -10,59 +10,135 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Abyssal Nox：HP 變 1 + Doom 10 秒需補滿；同時看光線位置躲圓 AoE。",
+        "2）Visceral Whirl：兩組十字線 AoE 留 2 個三角形安全位。",
+        "3）Big Bang 過場：場地縮小 + 多個 debuff（Big Bounce/Acceleration Bomb/Spread/Stack/HP penalty）。",
+        "4）Meteor Impact：拉繩到不重疊 + 不碰落下隕石。",
+        "5）Phase 2 Nostalgia：4 物理 + 2 + 1 魔法連續 raidwide。"
+    ],
+    "notes": "6.5 EW 最終 MSQ trial（Lv 90，ilvl 625）。Zeromus 為 FFIV 致敬最終 boss。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "塞洛蒙",
+            "nameEn": "Zeromus",
+            "mnemonic": ["Abyssal Nox 補滿避 Doom", "三角縫安全位", "Meteor Impact 拉繩"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Abyssal Nox",
+                            "type": "raidwide",
+                            "description": "HP 變 1 + Doom 10 秒 + 多個光線指圓 AoE。",
+                            "tips": [
+                                { "text": "立刻補滿", "role": "healer" },
+                                "找無光線位置躲"
+                            ]
+                        },
+                        {
+                            "name": "Sable Thread",
+                            "type": "stack",
+                            "description": "多段線疊機 6 次，靠近兩人吃更多傷。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Visceral Whirl",
+                            "type": "aoe",
+                            "description": "兩組十字線 AoE 留 2 個三角形安全。",
+                            "tips": ["跑三角縫"]
+                        },
+                        {
+                            "name": "Dark Matter",
+                            "type": "tankbuster",
+                            "description": "多段 AoE 坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Flare",
+                            "type": "stack",
+                            "description": "塔疊機 + 火球線 AoE。",
+                            "tips": ["全員疊踩塔", "閃火球線"]
+                        },
+                        {
+                            "name": "Nox",
+                            "type": "aoe",
+                            "description": "2 玩家 chasing AoE 3 段，引到場邊。",
+                            "tips": ["被點的人引場邊"]
+                        },
+                        {
+                            "name": "Void Bio",
+                            "type": "aoe",
+                            "description": "毒泡從北往南移動，找縫。",
+                            "tips": ["看毒泡速度差找縫"]
+                        },
+                        {
+                            "name": "Big Bang",
+                            "type": "other",
+                            "description": "場地縮小 + 多個 debuff（Big Bounce DoT/Acceleration Bomb/Spread/Stack/HP penalty -25%）。",
+                            "tips": [
+                                "閃圓 AoE",
+                                "Acceleration 結束前定住",
+                                "依序解 spread → stack"
+                            ]
+                        },
+                        {
+                            "name": "Meteor Impact",
+                            "type": "spread",
+                            "description": "中央隕石 + proximity 連繩，拉繩到非 spiky 狀態。",
+                            "tips": ["拉繩到極限", "不重疊"]
+                        },
+                        {
+                            "name": "Black Hole",
+                            "type": "other",
+                            "description": "角落黑洞 AoE 即死 + 旋轉線 AoE。",
+                            "tips": ["站線後", "遠離黑洞"]
+                        },
+                        {
+                            "name": "Void Meteor + Meteor Impact",
+                            "type": "spread",
+                            "description": "4 個角隕石 + 繩 AoE，繩別經過隕石。",
+                            "tips": ["看繩變紅", "避開隕石"]
+                        },
+                        {
+                            "name": "Big Crunch",
+                            "type": "other",
+                            "description": "回到原場地 + Big Bounce DoT。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Rend the Rift",
+                            "type": "raidwide",
+                            "description": "Phase 過場全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Nostalgia",
+                            "type": "raidwide",
+                            "description": "4 物理 (Bury) + 2 魔法 (Roar) + 1 重 (Primal Roar)。",
+                            "tips": [
+                                { "text": "持續減傷 + 連補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Flow of the Abyss + Akh Rhai",
+                            "type": "aoe",
+                            "description": "場邊裂縫線 AoE + 玩家落點 AoE 留持續傷害。",
+                            "tips": ["閃裂縫 + 拉開"]
+                        },
+                        {
+                            "name": "Chasmic Nails",
+                            "type": "aoe",
+                            "description": "5 個錐 AoE 依序爆。",
+                            "tips": ["跟前一個爆完位置"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

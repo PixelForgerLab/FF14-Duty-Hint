@@ -1,6 +1,6 @@
 {
     "id": "voidcast_dais",
-    "name": "高貝扎殲滅戰",
+    "name": "格貝爾殲滅戰",
     "nameEn": "The Voidcast Dais",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -10,59 +10,116 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Crescent Blade：180 度前 cleave，繞 Boss 後。",
+        "2）Arctic Assault：兩組對角象限 AoE，找箭頭站位。",
+        "3）Phase 2 Meteor：補職擊退標記，其他人踩塔；補職連繩龍後拉開。",
+        "4）Gale Sphere：4 分身連續線 AoE，找前兩個再對位後兩個的安全。"
+    ],
+    "notes": "6.4 EW 第三個 Archfiend trial（Lv 90，ilvl 615）。Golbez 黑暗騎士。FFIV 致敬。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "格貝爾",
+            "nameEn": "Golbez",
+            "mnemonic": ["Crescent Blade 繞 Boss 後", "Meteor 補職擊退、其他踩塔", "Gale Sphere 找前 2 安全"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Terrastorm",
+                            "type": "aoe",
+                            "description": "角落巨石 AoE。",
+                            "tips": ["遠離角落"]
+                        },
+                        {
+                            "name": "Crescent Blade",
+                            "type": "aoe",
+                            "description": "前方 180 度 cleave。",
+                            "tips": ["繞 Boss 後"]
+                        },
+                        {
+                            "name": "Arctic Assault",
+                            "type": "aoe",
+                            "description": "兩組對角象限 AoE，找箭頭找安全。",
+                            "tips": ["看箭頭背面"]
+                        },
+                        {
+                            "name": "Void Meteor",
+                            "type": "tankbuster",
+                            "description": "雙 T 多段 AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 拉開", "role": "tank" }]
+                        },
+                        {
+                            "name": "Lingering Spark",
+                            "type": "spread",
+                            "description": "玩家圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Binding Cold",
+                            "type": "raidwide",
+                            "description": "全體傷 + 凍傷 DoT。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Black Fang",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Shadow Crescent",
+                            "type": "aoe",
+                            "description": "強化 Crescent Blade + 緊接點 AoE。",
+                            "tips": ["先繞後再閃點"]
+                        },
+                        {
+                            "name": "Burning Shade",
+                            "type": "spread",
+                            "description": "全員散開。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Meteor Phase",
+                            "type": "stack",
+                            "description": "東西塔 + 補職擊退標記。被擊退進塔分擔 / 補職連龍後線 AoE。",
+                            "tips": [
+                                { "text": "1 補職留中央被擊退", "role": "healer" },
+                                "其他人擠到一邊踩塔"
+                            ]
+                        },
+                        {
+                            "name": "Double Meteor",
+                            "type": "aoe",
+                            "description": "南北 2 個漸減 AoE。",
+                            "tips": ["跑對側"]
+                        },
+                        {
+                            "name": "Gale Sphere",
+                            "type": "aoe",
+                            "description": "4 分身依順序放線 AoE。",
+                            "tips": ["先找前 2 安全位", "再切到後 2 安全位"]
+                        },
+                        {
+                            "name": "Void Stardust",
+                            "type": "aoe",
+                            "description": "對角圓 AoE。",
+                            "tips": ["走邊 + 回中央"]
+                        },
+                        {
+                            "name": "Eventide Fall",
+                            "type": "stack",
+                            "description": "雙補線 AoE 光小隊分擔。",
+                            "tips": ["光小隊各疊一邊"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": "storms_crown",
-    "name": "巴爾巴莉希婭殲滅戰",
-    "nameEn": "Storm\u0027s Crown",
+    "name": "巴爾巴莉香殲滅戰",
+    "nameEn": "Storm's Crown",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
@@ -10,59 +10,86 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Savage Barbery：紅劍弧形=線、紅劍環繞=甜甜圈；Hair Raid 站劍後。",
+        "2）Teasing Tangles：被綁定到 AoE 內 + Secret Breeze 兩組錐 AoE 交錯。",
+        "3）Phase 2：Catabasis 大傷 + 多重 AoE + Boulder Break 雙 T 拉開。",
+        "4）Touchdown 別碰場邊風牆（Windburn DoT）。"
+    ],
+    "notes": "6.2 EW 第一個 Archfiend trial（Lv 90，ilvl 585）。Barbariccia 暴風女王。FFIV 致敬。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "巴爾巴莉香",
+            "nameEn": "Barbariccia",
+            "mnemonic": ["紅劍弧=線、環=甜甜圈", "Tangled 別離 AoE 太遠"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Void Aero IV",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Savage Barbery + Hair Raid",
+                            "type": "aoe",
+                            "description": "紅劍弧 = 線、環 = 甜甜圈；劍丟到位置後跳過去放錐 AoE。",
+                            "tips": ["看紅劍形狀躲第一段", "Hair Raid 站劍後"]
+                        },
+                        {
+                            "name": "Void Aero III",
+                            "type": "tankbuster",
+                            "description": "雙 T 分擔。",
+                            "tips": [{ "text": "MT/OT 集中", "role": "tank" }]
+                        },
+                        {
+                            "name": "Teasing Tangles + Secret Breeze",
+                            "type": "aoe",
+                            "description": "4 個 AoE 把人綁起來 + 兩組交錯錐 AoE。",
+                            "tips": ["先在 AoE 縫站", "綁住後依錐縫位移"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2",
+                    "mechanics": [
+                        {
+                            "name": "Catabasis",
+                            "type": "raidwide",
+                            "description": "Boss 跳起來再砸下大傷。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Blow Away + 衝鋒",
+                            "type": "aoe",
+                            "description": "分身連續衝鋒 + 多 AoE。",
+                            "tips": ["看分身衝鋒方向找縫"]
+                        },
+                        {
+                            "name": "Boulder + Boulder Break",
+                            "type": "tankbuster",
+                            "description": "玩家 AoE 標記 + 雙 T 巨石坦補。",
+                            "tips": [
+                                "AoE 拉場邊",
+                                { "text": "雙 T 分開吃 Boulder Break", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Tousle",
+                            "type": "aoe",
+                            "description": "場中央外擴 AoE 球，命中擊飛 + 易傷。",
+                            "tips": ["跑邊閃球"]
+                        },
+                        {
+                            "name": "Touchdown",
+                            "type": "other",
+                            "description": "擊退到場邊（風牆 Windburn）。",
+                            "tips": ["位置調好別碰場邊風牆"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
