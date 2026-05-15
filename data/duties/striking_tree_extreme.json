@@ -1,13 +1,73 @@
 {
-    "id": "striking_tree_extreme",
-    "name": "拉姆殲殛戰",
-    "nameEn": "The Striking Tree (Extreme)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "striking_tree_extreme",
+  "name": "拉姆殲殛戰",
+  "nameEn": "The Striking Tree (Extreme)",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "拉姆絕境戰 (Ex)",
+    "Chain Lightning：點名後散開",
+    "Judgment Bolt：全體大雷",
+    "場上水晶踩取 buff",
+    "後期會召喚仙女援軍"
+  ],
+  "notes": "Primal 拉姆的絕境戰版本。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "拉姆 (Ex)",
+      "nameEn": "Ramuh",
+      "mnemonic": [
+        "Judgment Bolt：全體高傷",
+        "Chain Lightning：散開避免連鎖",
+        "踩水晶獲 buff",
+        "仙女召喚 → DPS 清"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Judgment Bolt",
+              "type": "raidwide",
+              "description": "全體大型雷攻擊。",
+              "tips": [
+                { "text": "AoE 滿血滿條治療", "role": "healer" },
+                { "text": "T 開減傷", "role": "tank" }
+              ]
+            },
+            {
+              "name": "Chain Lightning",
+              "type": "spread",
+              "description": "被點名玩家會跳電。",
+              "tips": [
+                "被點名快離開隊伍",
+                "互相散開"
+              ]
+            },
+            {
+              "name": "水晶 buff",
+              "type": "other",
+              "description": "場上水晶玩家踩可獲增益。",
+              "tips": [
+                "DPS 切換踩水晶獲 buff"
+              ]
+            },
+            {
+              "name": "仙女召喚",
+              "type": "other",
+              "description": "Boss 召喚仙女援軍。",
+              "tips": [
+                "DPS 切清仙女"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
