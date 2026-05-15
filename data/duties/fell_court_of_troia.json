@@ -1,6 +1,6 @@
 {
     "id": "fell_court_of_troia",
-    "name": "異界孤城特羅亞宮廷",
+    "name": "特羅亞冥宮",
     "nameEn": "The Fell Court of Troia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,112 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Evil Dreamers：Unite Mare 殺一隻創造安全位；Endless Nightmare 全力打大魔避免融合擴大。",
+        "2）Beatrice：Eye of Troia 凝視結束加 Doom 需解；後段 4 個方向凝視。Beatific Scorn 看圖案順序爆。",
+        "3）Scarmiglione：Rotten Rampage 4 組 AoE + Brain Rot 疊 3 變殭屍；Creeping Decay 打 Necroserfs 否則 Corruptor's Pitch 即死。"
+    ],
+    "notes": "6.2 EW 第二個 post-MSQ 副本（Lv 90，ilvl 575）。Scarmiglione 為 FFIV 致敬 Archfiend。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "夢魘群",
+            "nameEn": "Evil Dreamers",
+            "mnemonic": ["殺一隻創造縫", "Endless Nightmare 全力打"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Dark Vision",
+                            "type": "aoe",
+                            "description": "場外夢魘線 AoE。",
+                            "tips": ["閃線"]
+                        },
+                        {
+                            "name": "Unite Mare",
+                            "type": "aoe",
+                            "description": "多隻夢魘 + 圓 AoE 覆蓋全場，殺一隻創造安全位。",
+                            "tips": ["快殺一隻"]
+                        },
+                        {
+                            "name": "Endless Nightmare",
+                            "type": "other",
+                            "description": "大夢魘融合小夢魘變更大，cast 完團滅。",
+                            "tips": ["全力打大魔", "別讓小魔融合"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "貝雅特麗采",
+            "nameEn": "Beatrice",
+            "mnemonic": ["凝視 + Doom 解", "Beatific Scorn 看順序"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Eye of Troia",
+                            "type": "other",
+                            "description": "凝視光圈收斂中央 → Doom debuff。後段 4 個方向。",
+                            "tips": [
+                                "看圈位置背對",
+                                { "text": "Esuna 解 Doom", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Beatific Scorn",
+                            "type": "aoe",
+                            "description": "線燒地後爆圓 AoE，依施法順序爆（紫→橘）。",
+                            "tips": ["看圓變色預判"]
+                        },
+                        {
+                            "name": "Hush",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "斯卡米里恩",
+            "nameEn": "Scarmiglione",
+            "mnemonic": ["Brain Rot 別疊 3", "Necroserfs 必清"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Rotten Rampage",
+                            "type": "aoe",
+                            "description": "4 組 AoE 交錯 + Brain Rot debuff。3 層 = Zombification。",
+                            "tips": ["跟著預警跑", "別連續吃 3 段"]
+                        },
+                        {
+                            "name": "Blighted Bedevilment",
+                            "type": "other",
+                            "description": "中央擊退 + 場邊毒池。太近中央即死。",
+                            "tips": ["站中等距離", "閃毒池"]
+                        },
+                        {
+                            "name": "Blighted Bladework + Sweep",
+                            "type": "aoe",
+                            "description": "Boss 跳起插劍 → 朝中央寬線 AoE。",
+                            "tips": ["看劍位置躲圓", "然後跑 Boss 後"]
+                        },
+                        {
+                            "name": "Creeping Decay + Necroserfs",
+                            "type": "other",
+                            "description": "8 個 Necroserf 要打掉，Power 100 = Corruptor's Pitch 第 8 段即死。",
+                            "tips": [
+                                { "text": "AoE 集火 Necroserf", "role": "dps" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

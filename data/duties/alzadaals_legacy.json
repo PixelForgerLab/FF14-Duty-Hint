@@ -1,7 +1,7 @@
 {
     "id": "alzadaals_legacy",
-    "name": "近東祕寶阿爾扎達爾海底遺跡羣",
-    "nameEn": "Alzadaal\u0027s Legacy",
+    "name": "阿爾扎達爾遺產",
+    "nameEn": "Alzadaal's Legacy",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
@@ -10,59 +10,107 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Ambujam：Tentacle Dig 看水波軌跡 → 走外圍 = 對側安全、走內圈 = 同側安全。",
+        "2）Armored Chariot：Articulated Bits 看死爪 1 或 2 點數 = 先後順序，找未發射爪子的縫。",
+        "3）Kapikulu：Spin Out 旋轉手指 + 線 AoE，預判方向。Wild Weave 看連繩顏色決定球爆位置。"
+    ],
+    "notes": "6.1 EW 第一個 post-MSQ 副本（Lv 90，ilvl 560）。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "安布雅姆",
+            "nameEn": "Ambujam",
+            "mnemonic": ["看水波軌跡", "外圍=對側、內圈=同側"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Tentacle Dig",
+                            "type": "aoe",
+                            "description": "觸手沉水中繞 hitbox。看水波路徑：走外圍=對側安全、走內圈=同側安全。",
+                            "tips": ["看波紋從哪邊開始 + 路徑類型"]
+                        },
+                        {
+                            "name": "Toxic Fountain",
+                            "type": "aoe",
+                            "description": "3 組圓 AoE 依序爆 + 擊退。",
+                            "tips": ["閃 + 抗擊退"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "裝甲戰車",
+            "nameEn": "Armored Chariot",
+            "mnemonic": ["看死爪 1/2 點", "找未發射爪子的縫"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Articulated Bits",
+                            "type": "aoe",
+                            "description": "角落死爪 + 1/2 點數標示順序，盾牌反射雷射成 cone AoE。",
+                            "tips": ["看點數順序", "站未發射方向"]
+                        },
+                        {
+                            "name": "Graviton Cannon",
+                            "type": "spread",
+                            "description": "玩家圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Rail Cannon",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "卡皮庫魯",
+            "nameEn": "Kapikulu",
+            "mnemonic": ["Spin Out 旋轉手指", "Wild Weave 看繩色"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Spin Out",
+                            "type": "other",
+                            "description": "拉至北 + 旋轉手指 10 秒 + Dizzy 2 秒。第二次配 Basting Blade 線 AoE。",
+                            "tips": ["看手指方向", "預判線 AoE 落點"]
+                        },
+                        {
+                            "name": "Wild Weave",
+                            "type": "aoe",
+                            "description": "黃綠繩 + Boss 連一根繩，相同顏色球爆。",
+                            "tips": ["看繩色避開該色球"]
+                        },
+                        {
+                            "name": "Magnitude Opus",
+                            "type": "stack",
+                            "description": "疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Rotary Gale",
+                            "type": "spread",
+                            "description": "玩家圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Crewel Slice",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

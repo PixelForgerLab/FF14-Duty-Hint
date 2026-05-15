@@ -1,6 +1,6 @@
 {
     "id": "smileton",
-    "name": "樂園都市笑笑鎮",
+    "name": "幸福微笑園",
     "nameEn": "Smileton",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,113 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Face：Lines of Fire 必須交替吃 Smiley/Frowny debuff（同色 2 次擊飛、3 次死亡）；Upside Down 翻轉顏色。",
+        "2）Frameworker：Leap Forward 跑對牆；Omnidimensional Onslaught 先閃基本後閃對角。",
+        "3）Big Cheese：Explosives Distribution 看箭頭判斷炸彈走多遠；Disassembler 看 Boss 左/右。"
+    ],
+    "notes": "6.0 EW 第一個 post-MSQ 副本（Lv 90，ilvl 540）。Loporrits 月兔的幸福樂園。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "笑臉",
+            "nameEn": "Face",
+            "mnemonic": ["交替 Smiley/Frowny", "Upside Down 翻顏色"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Lines of Fire",
+                            "type": "other",
+                            "description": "場外笑臉雕像線 AoE 強制玩家對齊，獲得 Smiley（藍）或 Frowny（紅）debuff，必須交替。",
+                            "tips": ["看上次 debuff 顏色", "下次選對應方向", "同色 2 次擊飛、3 次死"]
+                        },
+                        {
+                            "name": "Off My Lawn",
+                            "type": "spread",
+                            "description": "擊退 + 點 AoE，後續加 Lines of Fire 組合。",
+                            "tips": ["散開 + 用抗擊退"]
+                        },
+                        {
+                            "name": "Upside Down",
+                            "type": "other",
+                            "description": "場外臉翻轉，藍/紅顏色互換。",
+                            "tips": ["記新顏色對應"]
+                        },
+                        {
+                            "name": "Heart On Fire IV",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "框架師",
+            "nameEn": "Frameworker",
+            "mnemonic": ["Leap Forward 跑對牆", "Onslaught 先基本後對角"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Leap Forward",
+                            "type": "aoe",
+                            "description": "Boss 朝面向跳 + 範圍 AoE。",
+                            "tips": ["跑對牆"]
+                        },
+                        {
+                            "name": "Print Workers",
+                            "type": "aoe",
+                            "description": "2 個小怪複製 Leap Forward。",
+                            "tips": ["看小怪朝向避"]
+                        },
+                        {
+                            "name": "Omnidimensional Onslaught",
+                            "type": "aoe",
+                            "description": "錐 AoE 先基本方向再對角。",
+                            "tips": ["先進對角縫，再進基本"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "大芝士",
+            "nameEn": "The Big Cheese",
+            "mnemonic": ["看箭頭數量判斷炸彈距離", "Disassembler 看 Boss 左右"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Explosives Distribution",
+                            "type": "aoe",
+                            "description": "兩個輸送帶炸彈：單箭頭=近半場、多箭頭=遠半場。",
+                            "tips": ["看箭頭數量判斷"]
+                        },
+                        {
+                            "name": "Right/Left Disassembler",
+                            "type": "aoe",
+                            "description": "Boss 左/右 cleave。",
+                            "tips": ["看名稱繞對側"]
+                        },
+                        {
+                            "name": "Dispense + Explosive Power",
+                            "type": "other",
+                            "description": "場上炸彈引爆。",
+                            "tips": ["遠離炸彈"]
+                        },
+                        {
+                            "name": "Piercing Missile",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

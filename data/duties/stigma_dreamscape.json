@@ -1,6 +1,6 @@
 {
     "id": "stigma_dreamscape",
-    "name": "電腦夢境斯提格瑪四",
+    "name": "司提瑪夢境",
     "nameEn": "The Stigma Dreamscape",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,125 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Proto-Omega：箭頭指向 = 該側 cleave；Electric Slide 站近 Boss 避免被擊飛。",
+        "2）Arch-Lambda：4 次衝鋒 → Wave Cannon；Auto-mobile Sniper 看球數量分散站位。",
+        "3）Stigma-4：螺旋=點、甜甜圈=貼身；Mindhack 方向 debuff 看 Boss 變形預判朝向。"
+    ],
+    "notes": "6.0 EW 第二個 post-MSQ 副本（Lv 90，ilvl 540）。Omicron 機械主題。Mindhack 方向錯亂是核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "原型歐米茄",
+            "nameEn": "Proto-Omega",
+            "mnemonic": ["看箭頭 = cleave 方向", "Electric Slide 站近 Boss"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Side / Rear / Forward Cannons / Interceptors",
+                            "type": "aoe",
+                            "description": "依箭頭方向 cleave 全場。",
+                            "tips": ["看箭頭繞對側"]
+                        },
+                        {
+                            "name": "Chemical Missile",
+                            "type": "spread",
+                            "description": "非坦點 AoE 留岩漿。",
+                            "tips": ["拉開 + 別站岩漿"]
+                        },
+                        {
+                            "name": "Electric Slide",
+                            "type": "other",
+                            "description": "玩家擊退 + Boss 跳。",
+                            "tips": ["站近 Boss 避免擊出牆"]
+                        },
+                        {
+                            "name": "Guided Missile",
+                            "type": "aoe",
+                            "description": "飛彈追蹤玩家落地留岩漿。",
+                            "tips": ["引到場邊"]
+                        },
+                        {
+                            "name": "Mustard Bomb",
+                            "type": "tankbuster",
+                            "description": "重坦補。",
+                            "tips": [{ "text": "減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿契蘭姆達",
+            "nameEn": "Arch-Lambda",
+            "mnemonic": ["4 次衝鋒 → Wave Cannon", "Sniper 看球數量"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Wheel",
+                            "type": "tankbuster",
+                            "description": "坦補。",
+                            "tips": [{ "text": "減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Auto-mobile Assault Cannon",
+                            "type": "aoe",
+                            "description": "Boss 4 次衝鋒撞牆轉向。",
+                            "tips": ["跑非衝鋒路線"]
+                        },
+                        {
+                            "name": "Wave Cannon",
+                            "type": "aoe",
+                            "description": "終點半場前 cleave。",
+                            "tips": ["跑 Boss 後"]
+                        },
+                        {
+                            "name": "Auto-mobile Sniper Cannon",
+                            "type": "spread",
+                            "description": "中央線 AoE + 玩家球數量標記。",
+                            "tips": ["站對應球數位置", "別讓雷射打到隊友"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "司提瑪 4",
+            "nameEn": "Stigma-4",
+            "mnemonic": ["螺旋=點、甜甜圈=貼身", "Mindhack 看 Boss 變形"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "AI Takeover",
+                            "type": "other",
+                            "description": "3 種召喚物：Omega Frame（cleave + Self-Destruct）、Hybrid Dragon（火錐+Self-Destruct）、Proto-Rocket Punch（6 個 Rush 線 AoE）。",
+                            "tips": ["看小怪類型應對"]
+                        },
+                        {
+                            "name": "Boss 變形",
+                            "type": "aoe",
+                            "description": "螺旋=點 AoE 跑遠；甜甜圈=貼身。",
+                            "tips": ["看圖形預判"]
+                        },
+                        {
+                            "name": "Mindhack",
+                            "type": "other",
+                            "description": "方向錯亂 debuff，移動朝指定方向跑。看 Boss 變形預判要面向哪邊。",
+                            "tips": ["先決定面向", "讓自己自動跑安全位"]
+                        },
+                        {
+                            "name": "Atomic Ray",
+                            "type": "raidwide",
+                            "description": "全體 AoE + 流血。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

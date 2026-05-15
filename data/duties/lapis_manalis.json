@@ -1,6 +1,6 @@
 {
     "id": "lapis_manalis",
-    "name": "雪山奧窟冥魂石洞",
+    "name": "拉皮斯·瑪納利斯",
     "nameEn": "Lapis Manalis",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -10,59 +10,146 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 副本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 4 人 副本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Albion：Call of the Mountain 看哪邊雪動避開；Roar of Albion 躲冰塊後。",
+        "2）Galatea Magna：Waxing/Waning Cycle 點 AoE 接甜甜圈或反之；Tenebrism 4 塔踩 + 凝視別看人。",
+        "3）Cagnazzo：Hydraulic Ram 看 telegraph 預警順序；Cursed Tide 打 Fearsome Flotsam DPS check。"
+    ],
+    "notes": "6.3 EW 第三個 post-MSQ 副本（Lv 90，ilvl 590）。Cagnazzo 為 FFIV 致敬水之魔王。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "阿爾比恩",
+            "nameEn": "Albion",
+            "mnemonic": ["看雪動方向", "Roar 躲冰塊後"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Call of the Mountain",
+                            "type": "aoe",
+                            "description": "東西側雪動 = 該方向線 AoE 衝鋒（依序兩次）。",
+                            "tips": ["看雪動位置避線"]
+                        },
+                        {
+                            "name": "Left / Right Slam",
+                            "type": "aoe",
+                            "description": "Boss 左/右半場 cleave，預警很短。",
+                            "tips": ["看名稱繞對側"]
+                        },
+                        {
+                            "name": "Knock on Ice",
+                            "type": "other",
+                            "description": "場上 3 個冰塊。",
+                            "tips": ["記住冰塊位置（後面要當掩體）"]
+                        },
+                        {
+                            "name": "Icebreaker",
+                            "type": "aoe",
+                            "description": "Boss 對冰塊放圓 AoE。",
+                            "tips": ["閃 + 知道哪冰塊會破"]
+                        },
+                        {
+                            "name": "Roar of Albion",
+                            "type": "raidwide",
+                            "description": "全體 AoE，躲冰塊後免疫。",
+                            "tips": ["躲未破冰塊後"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "迦拉忒亞·瑪格娜",
+            "nameEn": "Galatea Magna",
+            "mnemonic": ["Cycle 點接甜甜圈", "Tenebrism 凝視"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Waxing Cycle",
+                            "type": "aoe",
+                            "description": "點 AoE → 甜甜圈 AoE。",
+                            "tips": ["先跑遠再回中央"]
+                        },
+                        {
+                            "name": "Waning Cycle",
+                            "type": "aoe",
+                            "description": "甜甜圈 AoE → 點 AoE。",
+                            "tips": ["先貼中央再跑遠"]
+                        },
+                        {
+                            "name": "Soul Scythe",
+                            "type": "aoe",
+                            "description": "Boss 跳基本方向放圓 AoE。",
+                            "tips": ["看朝向避"]
+                        },
+                        {
+                            "name": "Soul Nebula + Scarecrow Chase",
+                            "type": "aoe",
+                            "description": "東西 portal 連繩順序 + 十字 AoE。",
+                            "tips": ["看點數順序", "站中央或對應安全位"]
+                        },
+                        {
+                            "name": "Tenebrism",
+                            "type": "other",
+                            "description": "4 塔依序踩 + 凝視 debuff。",
+                            "tips": ["分配踩塔", "背對隊友避免石化"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "卡格納佐",
+            "nameEn": "Cagnazzo",
+            "mnemonic": ["看 telegraph 順序", "DPS check Fearsome Flotsam"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Antediluvian",
+                            "type": "other",
+                            "description": "3 組泡泡 + 中央擊退 Body Slam（無法抗擊退）。",
+                            "tips": ["閃泡泡同時站到安全位避擊退"]
+                        },
+                        {
+                            "name": "Hydraulic Ram",
+                            "type": "aoe",
+                            "description": "多個 telegraph 預警依序爆。",
+                            "tips": ["記順序"]
+                        },
+                        {
+                            "name": "Hydrofall",
+                            "type": "stack",
+                            "description": "疊機。",
+                            "tips": ["全員疊"]
+                        },
+                        {
+                            "name": "Cursed Tide + Fearsome Flotsam",
+                            "type": "other",
+                            "description": "Neap Tide 點/Spring Tide 疊 debuff + 4 個小怪要打完。",
+                            "tips": [
+                                "看 debuff 種類站位",
+                                { "text": "DPS 集火 Flotsam", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Voidcleaver",
+                            "type": "aoe",
+                            "description": "4 portal 連繩玩家放錐 AoE。",
+                            "tips": ["分散拉繩"]
+                        },
+                        {
+                            "name": "Void Torrent",
+                            "type": "tankbuster",
+                            "description": "線坦補。",
+                            "tips": [{ "text": "拉遠 + 減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
