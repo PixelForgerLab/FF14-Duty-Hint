@@ -1,13 +1,83 @@
 {
-    "id": "dzemael_darkhold",
-    "name": "山中戰線澤梅爾要塞",
-    "nameEn": "Dzemael Darkhold",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 46,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "dzemael_darkhold",
+  "name": "山中戰線澤梅爾要塞",
+  "nameEn": "Dzemael Darkhold",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 47,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Lava Scorpion：熔岩蠍 boss，閃熔岩 AoE",
+    "Batraal：邪神 boss，注意 debuff",
+    "場上有冰雪元素需小心"
+  ],
+  "notes": "等級 44 的 4 人副本（澤梅爾要塞）。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "熔巖蠍",
+      "nameEn": "Lava Scorpion",
+      "mnemonic": [
+        "熔岩蠍 boss，閃尾部毒液",
+        "腳下熔岩 AoE 走開"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下熔岩圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體火傷。",
+              "tips": [
+                { "text": "預判補血", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巴特拉爾",
+      "nameEn": "Batraal",
+      "mnemonic": [
+        "邪神 boss，注意 debuff",
+        "閃 AoE 圓圈與直線"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Tankbuster",
+              "type": "tankbuster",
+              "description": "對主 T 的單體大傷。",
+              "tips": [
+                { "text": "T 開減傷", "role": "tank" },
+                { "text": "立刻補血", "role": "healer" }
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

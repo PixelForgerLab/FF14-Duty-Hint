@@ -1,13 +1,84 @@
 {
-    "id": "castrum_meridianum",
-    "name": "神兵要塞帝國南方堡",
-    "nameEn": "Castrum Meridianum",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 60,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "castrum_meridianum",
+  "name": "神兵要塞帝國南方堡",
+  "nameEn": "Castrum Meridianum",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "MSQ 主線必跑副本（蓋烏斯戰）",
+    "途中有多個帝國魔導兵打小怪",
+    "最終 Boss 莉維亞：閃 AoE + 召喚物",
+    "DPS 注意打破解奧義機"
+  ],
+  "notes": "等級 50 的 8 人 MSQ 副本（紅蓮之解放者前奏）。劇情副本，跟著走即可。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "魔導獵手",
+      "nameEn": "Magitek Predator",
+      "mnemonic": [
+        "帝國機械 boss，普通打"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "莉維亞·薩斯·尤尼烏斯",
+      "nameEn": "Livia sas Junius",
+      "mnemonic": [
+        "帝國女將軍",
+        "閃 AoE + 召喚機械援軍",
+        "DPS 清援軍"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "召喚援軍",
+              "type": "other",
+              "description": "戰鬥中會召喚帝國援軍。",
+              "tips": [
+                "DPS 切換清援軍",
+                { "text": "T 拉好援軍集中", "role": "tank" }
+              ]
+            },
+            {
+              "name": "腳下 AoE",
+              "type": "aoe",
+              "description": "腳下圓圈 AoE。",
+              "tips": [
+                "看到圓圈走出去"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
