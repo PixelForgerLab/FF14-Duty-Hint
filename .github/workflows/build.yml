@@ -1,0 +1,67 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Publish (win-x64, framework-dependent)
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          dotnet publish src/FF14DutyHint/FF14DutyHint.csproj `
+            -c Release `
+            -r win-x64 `
+            --self-contained false `
+            -p:PublishSingleFile=true `
+            -p:DebugType=embedded `
+            -o publish/win-x64
+
+      - name: Copy duty data into publish
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          Copy-Item -Path data -Destination publish/win-x64/data -Recurse -Force
+
+      - name: Zip publish artifacts
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          Compress-Archive -Path publish/win-x64/* -DestinationPath "FF14DutyHint-$tag-win-x64.zip" -Force
+
+      - name: Upload build artifact (CI)
+        if: github.event_name != 'push' || !startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@v4
+        with:
+          name: FF14DutyHint-CI
+          path: src/FF14DutyHint/bin/Release/**/*
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: FF14DutyHint-*-win-x64.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

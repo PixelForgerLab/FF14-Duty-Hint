@@ -1,0 +1,214 @@
+﻿<Window x:Class="FF14DutyHint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FF14DutyHint"
+        xmlns:conv="clr-namespace:FF14DutyHint.Converters"
+        xmlns:models="clr-namespace:FF14DutyHint.Models"
+        mc:Ignorable="d"
+        Title="FF14 Duty Hint"
+        Height="640" Width="480"
+        MinHeight="200" MinWidth="320"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="True"
+        ResizeMode="CanResizeWithGrip"
+        FontFamily="Microsoft JhengHei UI, Segoe UI, Yu Gothic UI">
+
+    <Window.Resources>
+        <conv:MechanicTypeToBrushConverter x:Key="TypeToBrush"/>
+        <conv:MechanicTypeToLabelConverter x:Key="TypeToLabel"/>
+        <conv:CollectionToVisibilityConverter x:Key="CollectionToVis"/>
+        <conv:StringToVisibilityConverter x:Key="StringToVis"/>
+    </Window.Resources>
+
+    <Border Background="{StaticResource OverlayBg}"
+            CornerRadius="8"
+            BorderBrush="#33FFFFFF"
+            BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 標題列 (拖拽區) -->
+            <Border x:Name="TitleBar"
+                    Grid.Row="0"
+                    Background="#22FFFFFF"
+                    CornerRadius="8,8,0,0"
+                    MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="12,6">
+                        <TextBlock Text="✦" Foreground="{StaticResource Accent}" FontSize="14" VerticalAlignment="Center"/>
+                        <TextBlock Text="FF14 副本提示" Foreground="{StaticResource TextBrush}"
+                                   FontSize="13" FontWeight="SemiBold" Margin="6,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,2,4,2">
+                        <Button Content="副本" Style="{StaticResource ChromeButton}" Click="SelectDuty_Click" ToolTip="選擇副本 (Ctrl+D)"/>
+                        <Button Content="設定" Style="{StaticResource ChromeButton}" Click="OpenSettings_Click" ToolTip="設定 (Ctrl+,)"/>
+                        <Button Content="—" Style="{StaticResource ChromeButton}" Click="Minimize_Click" ToolTip="最小化"/>
+                        <Button Content="✕" Style="{StaticResource ChromeButton}" Click="Close_Click" ToolTip="關閉"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- 副本標題 -->
+            <Border Grid.Row="1" Padding="12,8" BorderBrush="#22FFFFFF" BorderThickness="0,0,0,1">
+                <StackPanel>
+                    <TextBlock x:Name="DutyNameText"
+                               Text="（尚未選擇副本）"
+                               Foreground="{StaticResource Accent}"
+                               FontWeight="Bold"
+                               FontSize="{Binding HeaderFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                               TextWrapping="Wrap"/>
+                    <TextBlock x:Name="DutyMetaText"
+                               Foreground="{StaticResource MutedTextBrush}"
+                               FontSize="11"
+                               Margin="0,2,0,0"
+                               Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={StaticResource StringToVis}}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- 內容區 -->
+            <ScrollViewer Grid.Row="2"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Padding="12,8">
+                <StackPanel>
+                    <!-- 副本層級備註 -->
+                    <Border x:Name="DutyNotesBorder"
+                            Background="#22FFFFFF"
+                            CornerRadius="4"
+                            Padding="8,6"
+                            Margin="0,0,0,8"
+                            Visibility="Collapsed">
+                        <TextBlock x:Name="DutyNotesText"
+                                   Foreground="{StaticResource TextBrush}"
+                                   FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                   TextWrapping="Wrap"/>
+                    </Border>
+
+                    <!-- Boss / Phase / Mechanic -->
+                    <ItemsControl x:Name="BossList">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type models:Boss}">
+                                <Border Margin="0,0,0,10" Background="#11FFFFFF" CornerRadius="6" Padding="0">
+                                    <StackPanel>
+                                        <!-- Boss header -->
+                                        <Border Background="#22FFFFFF" CornerRadius="6,6,0,0" Padding="10,6">
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Name}"
+                                                           Foreground="{StaticResource Accent}"
+                                                           FontWeight="Bold"
+                                                           FontSize="{Binding BossFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                                <TextBlock Text="{Binding NameEn}"
+                                                           Foreground="{StaticResource MutedTextBrush}"
+                                                           FontSize="11"
+                                                           Visibility="{Binding NameEn, Converter={StaticResource StringToVis}}"/>
+                                                <TextBlock Text="{Binding Notes}"
+                                                           Foreground="{StaticResource TextBrush}"
+                                                           Margin="0,4,0,0"
+                                                           TextWrapping="Wrap"
+                                                           FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                           Visibility="{Binding Notes, Converter={StaticResource StringToVis}}"/>
+                                            </StackPanel>
+                                        </Border>
+
+                                        <!-- Phases -->
+                                        <ItemsControl ItemsSource="{Binding Phases}" Margin="6">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate DataType="{x:Type models:Phase}">
+                                                    <Border Margin="0,4" Padding="6,4">
+                                                        <StackPanel>
+                                                            <TextBlock Text="{Binding Name}"
+                                                                       Foreground="{StaticResource TextBrush}"
+                                                                       FontWeight="SemiBold"
+                                                                       FontSize="{Binding PhaseFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                                       Margin="0,0,0,4"/>
+                                                            <TextBlock Text="{Binding Notes}"
+                                                                       Foreground="{StaticResource MutedTextBrush}"
+                                                                       Margin="0,0,0,4"
+                                                                       TextWrapping="Wrap"
+                                                                       FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                                       Visibility="{Binding Notes, Converter={StaticResource StringToVis}}"/>
+
+                                                            <!-- Mechanics -->
+                                                            <ItemsControl ItemsSource="{Binding Mechanics}">
+                                                                <ItemsControl.ItemTemplate>
+                                                                    <DataTemplate DataType="{x:Type models:Mechanic}">
+                                                                        <Border Margin="0,3" Background="#0CFFFFFF" CornerRadius="4" Padding="6,4">
+                                                                            <StackPanel>
+                                                                                <StackPanel Orientation="Horizontal">
+                                                                                    <Border Background="{Binding Type, Converter={StaticResource TypeToBrush}}"
+                                                                                            CornerRadius="3" Padding="5,1" Margin="0,0,6,0">
+                                                                                        <TextBlock Text="{Binding Type, Converter={StaticResource TypeToLabel}}"
+                                                                                                   Foreground="#1A1A1F"
+                                                                                                   FontSize="11"
+                                                                                                   FontWeight="Bold"/>
+                                                                                    </Border>
+                                                                                    <TextBlock Text="{Binding Name}"
+                                                                                               Foreground="{StaticResource TextBrush}"
+                                                                                               FontWeight="SemiBold"
+                                                                                               FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                                                               VerticalAlignment="Center"/>
+                                                                                </StackPanel>
+                                                                                <TextBlock Text="{Binding Description}"
+                                                                                           Foreground="{StaticResource TextBrush}"
+                                                                                           Margin="0,3,0,0"
+                                                                                           TextWrapping="Wrap"
+                                                                                           FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                                                           Visibility="{Binding Description, Converter={StaticResource StringToVis}}"/>
+                                                                                <ItemsControl ItemsSource="{Binding Tips}" Margin="8,2,0,0"
+                                                                                              Visibility="{Binding Tips, Converter={StaticResource CollectionToVis}}">
+                                                                                    <ItemsControl.ItemTemplate>
+                                                                                        <DataTemplate>
+                                                                                            <StackPanel Orientation="Horizontal" Margin="0,1">
+                                                                                                <TextBlock Text="•" Foreground="{StaticResource Accent}" Margin="0,0,4,0"/>
+                                                                                                <TextBlock Text="{Binding}"
+                                                                                                           Foreground="{StaticResource MutedTextBrush}"
+                                                                                                           TextWrapping="Wrap"
+                                                                                                           FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                                                                            </StackPanel>
+                                                                                        </DataTemplate>
+                                                                                    </ItemsControl.ItemTemplate>
+                                                                                </ItemsControl>
+                                                                            </StackPanel>
+                                                                        </Border>
+                                                                    </DataTemplate>
+                                                                </ItemsControl.ItemTemplate>
+                                                            </ItemsControl>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- 空狀態 -->
+                    <TextBlock x:Name="EmptyHintText"
+                               Text="點選右上「副本」按鈕，選擇要顯示的副本提示。"
+                               Foreground="{StaticResource MutedTextBrush}"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               Margin="16,32"
+                               FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Window>

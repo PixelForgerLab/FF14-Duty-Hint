@@ -1,0 +1,119 @@
+{
+  "id": "p9s_anabaseios",
+  "name": "絕望樂園 第一層：零式 (P9S)",
+  "nameEn": "Anabaseios: The Ninth Circle (Savage)",
+  "expansion": "6.4 曉月之終途",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 645,
+  "notes": "P9S 是絕望樂園第一個 Boss 戰，重點機制：兩段 Limit Cut、星辰核爆、八方位 AoE 與 Boss 雙形態切換。",
+  "bosses": [
+    {
+      "name": "Kokytos (科基托斯)",
+      "nameEn": "Kokytos",
+      "notes": "形態會在「巨型」與「正常」間切換，影響部分機制的範圍。",
+      "phases": [
+        {
+          "name": "P1 起手 → Ascendant Fist",
+          "notes": "首套機制串：全體 → 坦克 → 站位連線。",
+          "mechanics": [
+            {
+              "name": "Beastly Roar",
+              "type": "raidwide",
+              "description": "戰鬥起手的全體 AoE，配合 Boss 變身。",
+              "tips": ["奶開 AoE 減傷", "T 上盾減傷"]
+            },
+            {
+              "name": "Ascendant Fist",
+              "type": "tankbuster",
+              "description": "對主 T 的接力坦克爆擊，連續兩段。",
+              "tips": [
+                "兩 T 必須對換仇恨（switch）",
+                "建議第二下由副 T 接，避免疊 debuff"
+              ]
+            },
+            {
+              "name": "Diamond Dust 連線",
+              "type": "stack",
+              "description": "點名兩位玩家連線分擔大傷。",
+              "tips": ["被點名者快速集合分擔", "其餘人散開避免被掃到"]
+            }
+          ]
+        },
+        {
+          "name": "P2 Limit Cut 1 (數字斬擊)",
+          "notes": "全員被點 1-8 號數字，依序被砍。",
+          "mechanics": [
+            {
+              "name": "Limit Cut 編號",
+              "type": "spread",
+              "description": "每位玩家頭上會出現 1~8 號，按順序被 Boss 進行劍擊。",
+              "tips": [
+                "1-4 號在第一波，5-8 號在第二波",
+                "被砍時面向外側避免格擋反彈傷害到隊友",
+                "落點預定俗稱「IN/OUT 走法」，預先和隊伍對好"
+              ]
+            },
+            {
+              "name": "Levinstrike Pinwheel",
+              "type": "aoe",
+              "description": "四個外圈雷電 AoE，搭配 Limit Cut 走位。",
+              "tips": ["注意雷標位置，避免站到中後被掃"]
+            }
+          ]
+        },
+        {
+          "name": "P3 巨人化 → 第二套星辰核爆",
+          "notes": "Boss 變大，AoE 範圍同步擴大。",
+          "mechanics": [
+            {
+              "name": "Archaic Demolish",
+              "type": "stack",
+              "description": "四人為一組分擔的兩個集合圈。",
+              "tips": ["兩坦各帶一組", "DPS/奶分配時注意距離"]
+            },
+            {
+              "name": "Comet (彗星)",
+              "type": "aoe",
+              "description": "場地四角會落下大型 AoE 彗星，留下毒區。",
+              "tips": ["避開毒區同時注意分散站位"]
+            },
+            {
+              "name": "Two Minds (記憶機制)",
+              "type": "other",
+              "description": "依照之前 Boss 的記憶機制 (集合 / 散開)，做出對應走位。",
+              "tips": [
+                "若上一次是「集合」，這次就要「散開」",
+                "團隊請事先約好「先後順序」以免混亂"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P4 二段 Limit Cut (字符紋章版)",
+          "notes": "比 P2 更複雜的數字+紋章組合。",
+          "mechanics": [
+            {
+              "name": "Limit Cut 2",
+              "type": "spread",
+              "description": "再來一次數字斬擊，並搭配新的範圍標記。",
+              "tips": ["參考第一次走位，並注意新增的雷標", "確保面向外側"]
+            }
+          ]
+        },
+        {
+          "name": "P5 收尾",
+          "notes": "Enrage 倒計時，輸出全開。",
+          "mechanics": [
+            {
+              "name": "Final Beastly Roar",
+              "type": "raidwide",
+              "description": "結尾全體 AoE，傷害較高。",
+              "tips": ["保留減傷給最後一次", "奶媽提前 GCD"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

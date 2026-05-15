@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "FF14DutyHint.duty.v1",
+  "title": "FF14 Duty Hint Schema",
+  "type": "object",
+  "required": ["id", "name", "bosses"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "唯一 ID，建議使用小寫英數+底線，例如 p9s_anabaseios。"
+    },
+    "name": {
+      "type": "string",
+      "description": "副本中文名稱。"
+    },
+    "nameEn": { "type": "string", "description": "副本英文名稱（可選）。" },
+    "expansion": { "type": "string", "description": "版本 / 資料片，例：6.4 曉月之終途。" },
+    "type": {
+      "type": "string",
+      "description": "raid / trial / dungeon / variant / criterion / ...",
+      "examples": ["raid", "trial", "dungeon"]
+    },
+    "playerCount": { "type": "integer", "minimum": 1, "maximum": 24 },
+    "iLvlSync": { "type": ["integer", "null"], "minimum": 0 },
+    "notes": { "type": "string" },
+    "bosses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "phases"],
+        "properties": {
+          "name": { "type": "string" },
+          "nameEn": { "type": "string" },
+          "notes": { "type": "string" },
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "mechanics"],
+              "properties": {
+                "name": { "type": "string" },
+                "notes": { "type": "string" },
+                "mechanics": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["name", "description"],
+                    "properties": {
+                      "name": { "type": "string" },
+                      "type": {
+                        "type": "string",
+                        "enum": ["raidwide", "tankbuster", "stack", "spread", "aoe", "other"]
+                      },
+                      "description": { "type": "string" },
+                      "tips": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

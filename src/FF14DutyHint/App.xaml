@@ -1,0 +1,53 @@
+﻿<Application x:Class="FF14DutyHint.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FF14DutyHint"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- 色票 -->
+        <Color x:Key="OverlayBgColor">#1A1A1F</Color>
+        <Color x:Key="AccentColor">#FFB347</Color>
+        <Color x:Key="TextColor">#F0F0F0</Color>
+        <Color x:Key="MutedTextColor">#A0A0A8</Color>
+
+        <SolidColorBrush x:Key="OverlayBg" Color="{StaticResource OverlayBgColor}"/>
+        <SolidColorBrush x:Key="Accent" Color="{StaticResource AccentColor}"/>
+        <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}"/>
+        <SolidColorBrush x:Key="MutedTextBrush" Color="{StaticResource MutedTextColor}"/>
+
+        <!-- 機制類型顏色 -->
+        <SolidColorBrush x:Key="MechRaidwide" Color="#FFD27F"/>
+        <SolidColorBrush x:Key="MechTankbuster" Color="#E57373"/>
+        <SolidColorBrush x:Key="MechStack" Color="#81C784"/>
+        <SolidColorBrush x:Key="MechSpread" Color="#64B5F6"/>
+        <SolidColorBrush x:Key="MechAoe" Color="#BA68C8"/>
+        <SolidColorBrush x:Key="MechOther" Color="#90A4AE"/>
+
+        <!-- 標題列按鈕樣式 -->
+        <Style x:Key="ChromeButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="{TemplateBinding Background}" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#33FFFFFF"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#55FFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
