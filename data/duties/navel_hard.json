@@ -1,13 +1,75 @@
 {
-    "id": "navel_hard",
-    "name": "泰坦殲滅戰",
-    "nameEn": "The Navel (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "navel_hard",
+  "name": "泰坦殲滅戰",
+  "nameEn": "The Navel (Hard)",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "泰坦土神戰",
+    "Geocrush：Boss 跳場中、擊退要靠邊",
+    "Landslide：閃直線擊退",
+    "Weight of the Land：散開避腳下 AoE"
+  ],
+  "notes": "Primal 泰坦的殲滅戰版本。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "泰坦",
+      "nameEn": "Titan",
+      "mnemonic": [
+        "Geocrush：Boss 跳場中 → 擊退，靠邊站",
+        "Landslide：閃前方直線（擊退）",
+        "Weight of the Land：腳下圓圈 AoE，散開",
+        "Tumult：5 連地震，連續減傷",
+        "場地會變圓 → 注意不要被推下"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Geocrush（跳擊）",
+              "type": "raidwide",
+              "description": "Boss 跳到中央，落地造成大 AoE + 擊退。",
+              "tips": [
+                "往場邊跑準備站擊退位置",
+                "靠近場邊以免被推下台"
+              ]
+            },
+            {
+              "name": "Landslide（地裂）",
+              "type": "aoe",
+              "description": "直線 AoE 配合擊退效果。",
+              "tips": [
+                "閃到線外",
+                "若被擊退，注意不要掉場"
+              ]
+            },
+            {
+              "name": "Weight of the Land",
+              "type": "spread",
+              "description": "玩家腳下出現黃色圓圈 AoE。",
+              "tips": [
+                "散開避免重疊",
+                "離開圈前才會結算傷害"
+              ]
+            },
+            {
+              "name": "Tumult（連環地震）",
+              "type": "raidwide",
+              "description": "5 連擊全體 AoE。",
+              "tips": [
+                { "text": "奶連續加血", "role": "healer" },
+                "盡量縮減傷 CD"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

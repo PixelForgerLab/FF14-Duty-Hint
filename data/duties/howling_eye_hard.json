@@ -1,13 +1,81 @@
 {
-    "id": "howling_eye_hard",
-    "name": "迦樓羅殲滅戰",
-    "nameEn": "The Howling Eye (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "howling_eye_hard",
+  "name": "迦樓羅殲滅戰",
+  "nameEn": "The Howling Eye (Hard)",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "迦樓羅風神戰",
+    "Wicked Wheel：Boss 中心 AoE，外圈躲",
+    "Spiny Plumes（羽毛）：被點名拉場邊",
+    "Mistral Song：主 T 大減傷"
+  ],
+  "notes": "Primal 迦樓羅的殲滅戰版本。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "迦樓羅",
+      "nameEn": "Garuda",
+      "mnemonic": [
+        "Wicked Wheel：Boss 中心 AoE，跑外圈",
+        "Mistral Song：主 T 大減傷",
+        "Spiny Plumes：羽毛拉場邊 dump",
+        "Vacuum Slice：閃前方扇形"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Wicked Wheel",
+              "type": "aoe",
+              "description": "Boss 中心圓形 AoE，需離開 Boss 周圍。",
+              "tips": [
+                "跑到場邊外圈",
+                "不要站 Boss 腳下"
+              ]
+            },
+            {
+              "name": "Mistral Song",
+              "type": "tankbuster",
+              "description": "對主 T 的單體大傷。",
+              "tips": [
+                { "text": "T 開大減傷", "role": "tank" },
+                { "text": "立刻補血", "role": "healer" }
+              ]
+            },
+            {
+              "name": "Spiny Plumes（羽毛）",
+              "type": "other",
+              "description": "場上出現羽毛，會吸引玩家並留下毒區。",
+              "tips": [
+                "指定玩家拉羽毛到場邊",
+                "其餘人不要被羽毛吸到"
+              ]
+            },
+            {
+              "name": "Vacuum Slice",
+              "type": "aoe",
+              "description": "前方扇形大 AoE。",
+              "tips": [
+                "看 Boss 面向，閃到背後或側面"
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體風傷。",
+              "tips": [
+                { "text": "AoE 預先治療", "role": "healer" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
