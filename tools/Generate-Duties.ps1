@@ -69,6 +69,8 @@ New-Item -ItemType Directory -Force -Path $tempDir | Out-Null
 Write-Host "==> 下載 ContentFinderCondition CSVs" -ForegroundColor Cyan
 $baseUrl = "https://raw.githubusercontent.com/xivapi/ffxiv-datamining/master/csv"
 Invoke-DownloadCsv -Url "$baseUrl/en/ContentFinderCondition.csv" -OutFile "$tempDir\cfc_en.csv"
+Invoke-DownloadCsv -Url "https://raw.githubusercontent.com/thewakingsands/ffxiv-datamining-cn/master/ContentFinderCondition.csv" -OutFile "$tempDir\cfc_cn.csv"
+Invoke-DownloadCsv -Url "https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/STCharacters.txt" -OutFile "$tempDir\opencc_st.txt"
 
 # --- 解析 CSV (用 .NET TextFieldParser 處理引號) ---
 Add-Type -AssemblyName "Microsoft.VisualBasic"
@@ -103,7 +105,80 @@ function Read-Csv {
 
 Write-Host "==> 解析 CSV" -ForegroundColor Cyan
 $rows = Read-Csv -Path "$tempDir\cfc_en.csv"
-Write-Host "  讀取 $($rows.Count) 列"
+Write-Host "  讀取 $($rows.Count) 列 (EN)"
+
+# --- 解析 CN CSV，建立 ID → 繁體中文名稱對應表 ---
+Write-Host "==> 解析 CN CSV 並轉換為繁體中文" -ForegroundColor Cyan
+
+# 載入 OpenCC STCharacters 字符對應表（簡→繁）
+$openccMap = @{}
+$openccLines = [System.IO.File]::ReadAllLines("$tempDir\opencc_st.txt", [System.Text.UTF8Encoding]::new($false))
+foreach ($line in $openccLines) {
+    if ([string]::IsNullOrWhiteSpace($line) -or $line.StartsWith('#')) { continue }
+    $parts = $line.Split("`t")
+    if ($parts.Count -ge 2) {
+        $simp = $parts[0]
+        # 第二欄可能含多個選項以空白分隔，取第一個 (OpenCC 慣例為最通用選擇)
+        $tradOptions = $parts[1].Split(' ')
+        $openccMap[$simp] = $tradOptions[0]
+    }
+}
+Write-Host "  OpenCC 字符對應表：$($openccMap.Count) 筆"
+
+function Convert-SimplifiedToTraditional {
+    param([string]$Text)
+    if ([string]::IsNullOrEmpty($Text)) { return $Text }
+    $sb = New-Object System.Text.StringBuilder ($Text.Length)
+    foreach ($c in $Text.ToCharArray()) {
+        $cs = [string]$c
+        if ($openccMap.ContainsKey($cs)) {
+            [void]$sb.Append($openccMap[$cs])
+        } else {
+            [void]$sb.Append($c)
+        }
+    }
+    return $sb.ToString()
+}
+
+# 清理 SE Cangjie/Coinach 在資料中嵌入的控制字元/私有區字元
+function Remove-NonStandardChars {
+    param([string]$Text)
+    if ([string]::IsNullOrEmpty($Text)) { return $Text }
+    $sb = New-Object System.Text.StringBuilder ($Text.Length)
+    foreach ($c in $Text.ToCharArray()) {
+        $code = [int][char]$c
+        $keep = ($code -ge 0x0020 -and $code -le 0x007E) -or `
+                ($code -ge 0x00A1 -and $code -le 0x00FF) -or `
+                ($code -ge 0x4E00 -and $code -le 0x9FFF) -or `
+                ($code -ge 0x3400 -and $code -le 0x4DBF) -or `
+                ($code -ge 0x3000 -and $code -le 0x303F) -or `
+                ($code -ge 0xFF00 -and $code -le 0xFFEF)
+        if ($keep) { [void]$sb.Append($c) }
+    }
+    return $sb.ToString().Trim()
+}
+
+# 讀 CN CSV 文字後逐行抓 CJK 引號字串
+$cnIdToTcName = @{}
+$cnContent = [System.IO.File]::ReadAllText("$tempDir\cfc_cn.csv", [System.Text.UTF8Encoding]::new($false))
+$cnLines = $cnContent -split "`n"
+for ($i = 3; $i -lt $cnLines.Count; $i++) {
+    $line = $cnLines[$i]
+    if ([string]::IsNullOrWhiteSpace($line)) { continue }
+    $idMatch = [System.Text.RegularExpressions.Regex]::Match($line, '^(\d+),')
+    if (-not $idMatch.Success) { continue }
+    $id = $idMatch.Groups[1].Value
+    $nameMatch = [System.Text.RegularExpressions.Regex]::Match($line, '"([^"]*[\u4E00-\u9FFF][^"]*)"')
+    if ($nameMatch.Success) {
+        $simplifiedName = $nameMatch.Groups[1].Value
+        $cleaned = Remove-NonStandardChars -Text $simplifiedName
+        $traditionalName = Convert-SimplifiedToTraditional -Text $cleaned
+        if (-not [string]::IsNullOrWhiteSpace($traditionalName)) {
+            $cnIdToTcName[$id] = $traditionalName
+        }
+    }
+}
+Write-Host "  讀取中文名稱 $($cnIdToTcName.Count) 筆 → 已轉繁體" -ForegroundColor Green
 
 # --- 過濾出實際副本 ---
 # Ultimates (ContentType=28) 的 IsInDutyFinder 是 False，需要特殊處理
@@ -204,6 +279,13 @@ foreach ($d in $duties) {
     $typeInfo = $ContentTypeMap[$d.ContentType]
     $type = $typeInfo.Type
 
+    # 取得繁體中文名稱
+    $cnId = $d.Id
+    $displayName = $name
+    if ($cnIdToTcName.ContainsKey($cnId)) {
+        $displayName = $cnIdToTcName[$cnId]
+    }
+
     # 推算人數：以 ContentType 為主，搭配 ContentMemberType 區分 alliance raid
     # (xivapi 的 ContentMemberType 對 trials 有時不準，所以採用 ContentType 為基準)
     $cmt = $d.ContentMemberType
@@ -240,7 +322,7 @@ foreach ($d in $duties) {
 
     $duty = [ordered]@{
         id           = $slug
-        name         = $name
+        name         = $displayName
         nameEn       = $name
         expansion    = $expansion
         type         = $type
