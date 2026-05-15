@@ -10,59 +10,134 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 100 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）一階：雙刃前後 cleave 看劍光順序；Vorpal Trail 線 AoE 來回。",
+        "2）二階場地縮小成 4x4 格，外平台 Vollok 預警會 Sync 到中央。",
+        "3）Gateway + Blade Warp：藍繩決定線 AoE 最終位置；Half Circuit 結合內/外 + 左/右。"
+    ],
+    "notes": "DT 7.0 MSQ 終戰（Lv 100，ilvl 680），單人 Duty Support 可解。二階機制看似複雜其實是「外平台預告 + 同步到中央」的固定圖案。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "佐拉加",
+            "nameEn": "Zoraal Ja",
+            "mnemonic": ["二階看劍光內/外", "Sync 將外平台 AoE 滑進中央", "藍繩決定線 AoE 行/列"],
+            "phases": [
+                {
+                    "name": "Phase 1（人形）",
+                    "mechanics": [
+                        {
+                            "name": "Soul Overflow",
+                            "type": "raidwide",
+                            "description": "全體魔法傷害。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Double-edged Swords",
+                            "type": "aoe",
+                            "description": "前 180 度 + 後 180 度 cleave（或反順）。",
+                            "tips": ["看劍光順序", "繞側等第一刀後再轉位"]
+                        },
+                        {
+                            "name": "Patricidal Pique",
+                            "type": "tankbuster",
+                            "description": "魔法坦補。",
+                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Calamity's Edge",
+                            "type": "aoe",
+                            "description": "全體物理傷，將 NPC 變為黃色能量噴泉（Burst 圓 AoE）。",
+                            "tips": ["遠離 NPC 位置"]
+                        },
+                        {
+                            "name": "Vorpal Trail",
+                            "type": "aoe",
+                            "description": "四面牆線 AoE 朝中央匯聚再向外擴張，同時 Boss 放 Double-edged Swords。",
+                            "tips": ["閃線 AoE 同時看劍光繞 Boss"]
+                        },
+                        {
+                            "name": "終局組合",
+                            "type": "aoe",
+                            "description": "Soul Overflow + Calamity's Edge + Double-edged Swords 組合。",
+                            "tips": ["遠離 NPC 圓 AoE", "繞 Boss 後/前 cleave"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2（變身）",
+                    "mechanics": [
+                        {
+                            "name": "Smiting Circuit",
+                            "type": "aoe",
+                            "description": "看 Boss 劍位置：劍在 hitbox 內 = 貼身 AoE（要離開）；劍在外 = 甜甜圈（要貼身）。",
+                            "tips": ["劍內 → 跑遠", "劍外 → 貼 Boss"]
+                        },
+                        {
+                            "name": "Dawn of an Age",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 場地縮小成 4x4 中央格 + 4 個對角外平台（會跌死）。",
+                            "tips": ["別跌下中央"]
+                        },
+                        {
+                            "name": "Vollok",
+                            "type": "aoe",
+                            "description": "在中央場地或外平台召喚劍陣（金字塔形）放方形 AoE。",
+                            "tips": ["看劍陣形找安全格"]
+                        },
+                        {
+                            "name": "Bitter Reaping",
+                            "type": "tankbuster",
+                            "description": "兩 T 都中的魔法坦補。",
+                            "tips": [
+                                { "text": "MT 與 OT 都開減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Sync",
+                            "type": "aoe",
+                            "description": "外平台預警的方形 AoE 同步「滑進」中央同位置。",
+                            "tips": ["看外平台預警位置", "找對應中央安全格"]
+                        },
+                        {
+                            "name": "Gateway",
+                            "type": "other",
+                            "description": "藍繩連結外平台的行/列與中央場地不同的行/列。",
+                            "tips": ["跟著繩看哪個外行 → 哪個中央行"]
+                        },
+                        {
+                            "name": "Blade Warp / Forged Track",
+                            "type": "aoe",
+                            "description": "外平台召喚 2 把劍朝中央放線 AoE，最終位置由 Gateway 藍繩決定。",
+                            "tips": ["跟著繩追蹤 AoE 最終位置"]
+                        },
+                        {
+                            "name": "Half Full",
+                            "type": "aoe",
+                            "description": "Boss 半場 cleave，看哪邊劍發光。",
+                            "tips": ["看劍光繞對側"]
+                        },
+                        {
+                            "name": "Half Circuit",
+                            "type": "aoe",
+                            "description": "Smiting Circuit（內/外）+ Half Full（左/右）組合，可能再接散開標記。",
+                            "tips": ["先判斷劍內外", "再判斷半場方向", "再散開"]
+                        },
+                        {
+                            "name": "Duty's Edge",
+                            "type": "stack",
+                            "description": "四段線疊機 AoE。",
+                            "tips": [
+                                { "text": "全員疊靠 + 減傷", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Vollok (8x2 雙平台)",
+                            "type": "aoe",
+                            "description": "兩相鄰外平台各 8 劍，Sync 後中央只剩一象限安全；第二次組合 Half Full。",
+                            "tips": ["先找安全象限", "再閃半場 cleave"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

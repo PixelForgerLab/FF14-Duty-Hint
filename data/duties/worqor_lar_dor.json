@@ -10,59 +10,178 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "黃金的遺產 (Dawntrail) 的 討伐戰",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 94 的 8 人 討伐戰。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）動作預告：繞場=甜甜圈、舉爪=貼身 AoE、張口=錐 AoE（北角安全）。",
+        "2）雷階：站發光格漂浮 + 看 Arcane Sphere 線縫；冰階：跑避崩雪 + 持續移動避凍。",
+        "3）Ruin Foretold 打三色信標：火/雷/冰，沒打完團滅。"
+    ],
+    "notes": "DT 7.0 中期 MSQ 大戰（Lv 94），單人 Duty Support 可解。Valigarmanda 的「動作預告」是其特色，需習慣看身體動作而非地面預警。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "瓦利伽曼達",
+            "nameEn": "Valigarmanda",
+            "mnemonic": ["看身體動作預告", "雷階站發光格", "冰階別停下"],
+            "phases": [
+                {
+                    "name": "基本場地",
+                    "mechanics": [
+                        {
+                            "name": "Strangling Coil（繞場）",
+                            "type": "aoe",
+                            "description": "Boss 繞場代表甜甜圈 AoE，中央安全。",
+                            "tips": ["跑到場中央"]
+                        },
+                        {
+                            "name": "Slithering Strike（舉爪）",
+                            "type": "aoe",
+                            "description": "Boss 把爪舉在場上 = 大貼身 AoE。",
+                            "tips": ["跑到場邊（遠程距離）"]
+                        },
+                        {
+                            "name": "Susurrant Breath（張口）",
+                            "type": "aoe",
+                            "description": "Boss 張口蓄能 = 寬錐 AoE，北角安全。",
+                            "tips": ["跑到北邊兩個角落"]
+                        },
+                        {
+                            "name": "Ice Talon",
+                            "type": "tankbuster",
+                            "description": "兩 T 坦補 + 凍傷 15 秒。",
+                            "tips": [{ "text": "MT/OT 都開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Skyruin",
+                            "type": "raidwide",
+                            "description": "全體魔法傷 + 進入雷或冰階段 + DoT 12 秒。",
+                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "雷階段",
+                    "mechanics": [
+                        {
+                            "name": "Thunderous Breath",
+                            "type": "aoe",
+                            "description": "全場 AoE，只能站在發光格漂浮避免。",
+                            "tips": ["站到發光格上獲得 Levitation"]
+                        },
+                        {
+                            "name": "Hail of Feathers",
+                            "type": "raidwide",
+                            "description": "場上落 4 根羽毛，各放全體魔法傷。",
+                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                        },
+                        {
+                            "name": "Blighted Bolt",
+                            "type": "aoe",
+                            "description": "發光格上的玩家被打小圓 AoE，同時羽毛爆貼身 AoE。",
+                            "tips": ["離開發光格", "遠離羽毛"]
+                        },
+                        {
+                            "name": "Arcane Lightning",
+                            "type": "aoe",
+                            "description": "5 個球橫向線 AoE 留 1 個安全縫。重複時可能加 Thunderous Breath，需站發光格 + 安全縫。",
+                            "tips": ["先找線縫", "再判斷是否要站發光格"]
+                        }
+                    ]
+                },
+                {
+                    "name": "冰階段",
+                    "mechanics": [
+                        {
+                            "name": "Avalanche（崩雪）",
+                            "type": "aoe",
+                            "description": "東南或西南方向藍箭頭預告崩雪 AoE，會擊退。",
+                            "tips": ["跑到對角", "或用抗擊退"]
+                        },
+                        {
+                            "name": "Freezing Dust",
+                            "type": "other",
+                            "description": "Freezing Up debuff 2 秒，不持續移動會被冰凍。",
+                            "tips": ["持續走動到 debuff 結束"]
+                        },
+                        {
+                            "name": "Arcane Chilling Cataclysm",
+                            "type": "aoe",
+                            "description": "2 個球各放 8 條基本/對角線 AoE 星狀，需找雙球同時的安全縫。",
+                            "tips": ["看清楚兩組線疊加位置", "找縫鑽"]
+                        }
+                    ]
+                },
+                {
+                    "name": "中段",
+                    "mechanics": [
+                        {
+                            "name": "Ruinfall",
+                            "type": "stack",
+                            "description": "場中央雙 T 疊機塔 + 北方擊退 + 南方圓 AoE。",
+                            "tips": [
+                                { "text": "兩 T 踩塔疊機", "role": "tank" },
+                                "其他人北方位置避擊退到 AoE",
+                                "或用抗擊退"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "正常場地 2（Beacons）",
+                    "mechanics": [
+                        {
+                            "name": "Ruin Foretold",
+                            "type": "other",
+                            "description": "召喚 3 個信標（火/雷/冰），需在 Ruinous Power 到 100 前打完。期間錐 AoE + Calamitous Cry 線疊機。",
+                            "tips": ["全員集火信標", "保持疊靠分擔疊機", "邊閃錐 AoE"]
+                        },
+                        {
+                            "name": "Tulidisaster",
+                            "type": "raidwide",
+                            "description": "三段全體傷。沒打完信標會團滅。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Perpetual Conflagaration",
+                            "type": "other",
+                            "description": "全員獲得 DoT + 易傷直到結束。",
+                            "tips": [{ "text": "全程補血提速", "role": "healer" }]
+                        },
+                        {
+                            "name": "Eruption",
+                            "type": "aoe",
+                            "description": "三組圓 AoE 點兩名玩家。",
+                            "tips": ["被點的人引到場邊"]
+                        }
+                    ]
+                },
+                {
+                    "name": "二輪雷/冰階段",
+                    "mechanics": [
+                        {
+                            "name": "二輪雷：Thunderous Breath + Arcane Spheres",
+                            "type": "aoe",
+                            "description": "需站發光格 + 線縫的交集。",
+                            "tips": ["找雙條件交集點"]
+                        },
+                        {
+                            "name": "二輪雷：Susurrant Breath + Arcane Spheres",
+                            "type": "aoe",
+                            "description": "先閃線 AoE 再跑北角。",
+                            "tips": ["先線後角"]
+                        },
+                        {
+                            "name": "二輪冰：Avalanche + Arcane Spheres",
+                            "type": "aoe",
+                            "description": "同時躲崩雪 + 星狀線 AoE。",
+                            "tips": ["遠離崩雪 + 找線縫"]
+                        },
+                        {
+                            "name": "二輪冰：Freezing Dust + Arcane Spheres",
+                            "type": "aoe",
+                            "description": "邊閃線 AoE 邊保持移動。",
+                            "tips": ["別停下"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
