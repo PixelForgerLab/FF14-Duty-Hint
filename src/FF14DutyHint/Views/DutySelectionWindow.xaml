@@ -47,6 +47,86 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- ComboBox 主體 (摺疊時看到的 selection box) -->
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+            <Border x:Name="Bd"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="22"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Grid.Column="1"
+                          x:Name="Arrow"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Data="M 0 0 L 4 4 L 8 0 Z"
+                          Fill="#F0F0F0"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Bd" Property="Background" Value="#33FFFFFF"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter TargetName="Bd" Property="Background" Value="#33FFFFFF"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="#22FFFFFF"/>
+            <Setter Property="Foreground" Value="#F0F0F0"/>
+            <Setter Property="BorderBrush" Value="#44FFFFFF"/>
+            <Setter Property="Padding" Value="6,3"/>
+            <Setter Property="TextElement.Foreground" Value="#F0F0F0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton x:Name="ToggleButton"
+                                          Template="{StaticResource ComboBoxToggleButton}"
+                                          Focusable="False"
+                                          ClickMode="Press"
+                                          Background="{TemplateBinding Background}"
+                                          BorderBrush="{TemplateBinding BorderBrush}"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <ContentPresenter x:Name="ContentSite"
+                                              IsHitTestVisible="False"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                                              Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              TextElement.Foreground="{TemplateBinding Foreground}"/>
+                            <Popup x:Name="Popup"
+                                   Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True"
+                                   Focusable="False"
+                                   PopupAnimation="Slide">
+                                <Border x:Name="DropDownBorder"
+                                        Background="#1A1A1F"
+                                        BorderBrush="#44FFFFFF"
+                                        BorderThickness="1"
+                                        MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"
+                                        MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <ScrollViewer SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid Margin="12">
         <Grid.RowDefinitions>
@@ -66,11 +146,7 @@
         <DockPanel Grid.Row="1" Margin="0,0,0,6">
             <TextBlock Text="版本：" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="0,0,6,0"/>
             <ComboBox x:Name="ExpansionCombo"
-                      SelectionChanged="ExpansionCombo_SelectionChanged"
-                      Background="#22FFFFFF"
-                      Foreground="{StaticResource TextBrush}"
-                      BorderBrush="#44FFFFFF"
-                      Padding="6,3"/>
+                      SelectionChanged="ExpansionCombo_SelectionChanged"/>
         </DockPanel>
 
         <!-- 類型篩選按鈕 row -->
