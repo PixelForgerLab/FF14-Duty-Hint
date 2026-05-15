@@ -14,7 +14,7 @@ public enum DutyQuality
     /// <summary>需要更新，有部分內容但不完整或可能過時。</summary>
     NeedsUpdate,
 
-    /// <summary>優秀，內容完整且經過驗證。</summary>
+    /// <summary>完整，內容完整且經過驗證。</summary>
     Excellent
 }
 

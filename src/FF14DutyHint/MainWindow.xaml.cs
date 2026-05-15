@@ -217,7 +217,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             DutyMetaInline.Inlines.Add(new System.Windows.Documents.InlineUIContainer(
                 BuildBadge(duty.Quality switch
                 {
-                    Models.DutyQuality.Excellent => "優秀",
+                    Models.DutyQuality.Excellent => "完整",
                     Models.DutyQuality.NeedsUpdate => "需更新",
                     Models.DutyQuality.Skeleton => "骨架",
                     _ => ""
@@ -346,6 +346,18 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
 
         BossList.ItemsSource = bosses;
+
+        // 簡易模式下隱藏副本標題（包含名稱、徽章、meta）— 讓內容更專注於簡易提示
+        DutyHeaderBorder.Visibility = _settings.MnemonicOnly ? Visibility.Collapsed : Visibility.Visible;
+        // 簡易模式下也隱藏副本層級備註（保留 mnemonic 區塊）
+        if (_settings.MnemonicOnly)
+        {
+            DutyNotesBorder.Visibility = Visibility.Collapsed;
+        }
+        else if (!string.IsNullOrWhiteSpace(duty.Notes))
+        {
+            DutyNotesBorder.Visibility = Visibility.Visible;
+        }
 
         // 空狀態提示：MnemonicOnly 模式下若副本與所有 boss 都沒有簡易內容 → 顯示「無簡易」提示
         bool anyMnemonicContent =

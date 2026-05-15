@@ -127,7 +127,7 @@ public class QualityToLabelConverter : IValueConverter
     {
         return value switch
         {
-            DutyQuality.Excellent => "優秀",
+            DutyQuality.Excellent => "完整",
             DutyQuality.NeedsUpdate => "需更新",
             DutyQuality.Skeleton => "骨架",
             _ => string.Empty
