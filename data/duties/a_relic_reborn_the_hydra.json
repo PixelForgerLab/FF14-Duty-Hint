@@ -1,13 +1,48 @@
 {
-    "id": "a_relic_reborn_the_hydra",
-    "name": "海德拉討伐戰",
-    "nameEn": "A Relic Reborn: the Hydra",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "notes": "（此副本為自動生成骨架，歡迎透過 PR 補充機制提示！）",
-    "bosses": []
+  "id": "a_relic_reborn_the_hydra",
+  "name": "海德拉討伐戰",
+  "nameEn": "A Relic Reborn: the Hydra",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "needs-update",
+  "mnemonic": [
+    "Relic 武器任務 trial",
+    "Hydra：3 頭蛇，每頭打掉再生",
+    "DPS 全力清頭"
+  ],
+  "notes": "ARR Relic 武器任務副本（4 人）。⚠️ AI 預填內容。",
+  "bosses": [
+    {
+      "name": "海德拉",
+      "nameEn": "Hydra",
+      "mnemonic": [
+        "3 頭蛇 boss",
+        "打掉頭會再生",
+        "DPS 切換清頭"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "多頭機制",
+              "type": "other",
+              "description": "Boss 有多個頭，打掉一個會減少攻擊但會再生。",
+              "tips": ["DPS 切換打頭", { "text": "T 控制 boss 仇恨", "role": "tank" }]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全體傷害。",
+              "tips": [{ "text": "預判補血", "role": "healer" }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
