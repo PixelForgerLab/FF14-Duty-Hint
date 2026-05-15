@@ -91,6 +91,9 @@ foreach ($file in $files) {
     }
     $json = $reordered | ConvertTo-Json -Depth 15
     $json = [System.Text.RegularExpressions.Regex]::Replace($json, '":\s{2,}', '": ')
+    # 修正 PowerShell ConvertTo-Json 的 single-element-array unwrap 問題
+    # "tips": "xxx" → "tips": ["xxx"]
+    $json = [System.Text.RegularExpressions.Regex]::Replace($json, '"tips":\s*"((?:[^"\\]|\\.)*)"(\s*[,}])', '"tips": ["$1"]$2')
     [System.IO.File]::WriteAllText($path, $json, $utf8)
     Write-Host "  Upgraded $totalUpgraded tips" -ForegroundColor Green
 }
