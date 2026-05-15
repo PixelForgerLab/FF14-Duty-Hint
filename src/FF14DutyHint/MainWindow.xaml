@@ -23,6 +23,8 @@
         <conv:MechanicTypeToLabelConverter x:Key="TypeToLabel"/>
         <conv:CollectionToVisibilityConverter x:Key="CollectionToVis"/>
         <conv:StringToVisibilityConverter x:Key="StringToVis"/>
+        <conv:TipToDisplayConverter x:Key="TipToDisplay"/>
+        <conv:TipRoleToBrushConverter x:Key="TipRoleToBrush"/>
     </Window.Resources>
 
     <Border Background="{StaticResource OverlayBg}"
@@ -56,6 +58,14 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,2,4,2">
+                        <Button x:Name="RoleToggleButton" Content="全角色"
+                                Style="{StaticResource ChromeButton}"
+                                Click="RoleToggle_Click"
+                                ToolTip="角色篩選"/>
+                        <Button x:Name="MnemonicToggleButton" Content="全部"
+                                Style="{StaticResource ChromeButton}"
+                                Click="MnemonicToggle_Click"
+                                ToolTip="顯示模式"/>
                         <Button Content="副本" Style="{StaticResource ChromeButton}" Click="SelectDuty_Click" ToolTip="選擇副本 (Ctrl+D)"/>
                         <Button Content="設定" Style="{StaticResource ChromeButton}" Click="OpenSettings_Click" ToolTip="設定 (Ctrl+,)"/>
                         <Button Content="—" Style="{StaticResource ChromeButton}" Click="Minimize_Click" ToolTip="最小化"/>
@@ -130,6 +140,30 @@
                           HorizontalScrollBarVisibility="Disabled"
                           Padding="12,8">
                 <StackPanel>
+                    <!-- 副本層級口訣 -->
+                    <Border x:Name="DutyMnemonicBorder"
+                            Background="#33FFB347"
+                            BorderBrush="#FFB347"
+                            BorderThickness="0,0,0,2"
+                            CornerRadius="4"
+                            Padding="10,6"
+                            Margin="0,0,0,8"
+                            Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="💡 口訣"
+                                       Foreground="{StaticResource Accent}"
+                                       FontWeight="Bold"
+                                       Margin="0,0,8,0"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock x:Name="DutyMnemonicText"
+                                       Foreground="{StaticResource TextBrush}"
+                                       FontWeight="SemiBold"
+                                       FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                       TextWrapping="Wrap"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+
                     <!-- 副本層級備註 -->
                     <Border x:Name="DutyNotesBorder"
                             Background="#22FFFFFF"
@@ -160,6 +194,26 @@
                                                            Foreground="{StaticResource MutedTextBrush}"
                                                            FontSize="11"
                                                            Visibility="{Binding NameEn, Converter={StaticResource StringToVis}}"/>
+                                                <!-- Boss 口訣 -->
+                                                <Border Background="#33FFB347"
+                                                        BorderBrush="#FFB347"
+                                                        BorderThickness="3,0,0,0"
+                                                        CornerRadius="2"
+                                                        Padding="6,3"
+                                                        Margin="0,6,0,2"
+                                                        Visibility="{Binding Mnemonic, Converter={StaticResource StringToVis}}">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="💡"
+                                                                   Foreground="{StaticResource Accent}"
+                                                                   Margin="0,0,6,0"
+                                                                   VerticalAlignment="Center"/>
+                                                        <TextBlock Text="{Binding Mnemonic}"
+                                                                   Foreground="{StaticResource TextBrush}"
+                                                                   FontWeight="SemiBold"
+                                                                   TextWrapping="Wrap"
+                                                                   FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                                                    </StackPanel>
+                                                </Border>
                                                 <TextBlock Text="{Binding Notes}"
                                                            Foreground="{StaticResource TextBrush}"
                                                            Margin="0,4,0,0"
@@ -216,10 +270,14 @@
                                                                                 <ItemsControl ItemsSource="{Binding Tips}" Margin="8,2,0,0"
                                                                                               Visibility="{Binding Tips, Converter={StaticResource CollectionToVis}}">
                                                                                     <ItemsControl.ItemTemplate>
-                                                                                        <DataTemplate>
+                                                                                        <DataTemplate DataType="{x:Type models:Tip}">
                                                                                             <StackPanel Orientation="Horizontal" Margin="0,1">
+                                                                                                <Rectangle Width="3"
+                                                                                                           VerticalAlignment="Stretch"
+                                                                                                           Margin="0,2,4,2"
+                                                                                                           Fill="{Binding ., Converter={StaticResource TipRoleToBrush}}"/>
                                                                                                 <TextBlock Text="•" Foreground="{StaticResource Accent}" Margin="0,0,4,0"/>
-                                                                                                <TextBlock Text="{Binding}"
+                                                                                                <TextBlock Text="{Binding ., Converter={StaticResource TipToDisplay}}"
                                                                                                            Foreground="{StaticResource MutedTextBrush}"
                                                                                                            TextWrapping="Wrap"
                                                                                                            FontSize="{Binding BodyFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>

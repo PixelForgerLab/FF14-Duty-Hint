@@ -171,6 +171,52 @@ public class UserSourceToVisibilityConverter : IValueConverter
 }
 
 /// <summary>
+/// Tip → 顯示文字（含角色前綴）。
+/// </summary>
+public class TipToDisplayConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        if (value is Tip tip)
+        {
+            if (tip.Role == PlayerRole.Universal)
+            {
+                return tip.Text;
+            }
+            return $"[{tip.Role.ToDisplayLabel()}] {tip.Text}";
+        }
+        return value?.ToString() ?? string.Empty;
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
+/// Tip → 角色標籤前綴的色彩 Brush。
+/// </summary>
+public class TipRoleToBrushConverter : IValueConverter
+{
+    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        if (value is Tip tip)
+        {
+            return tip.Role switch
+            {
+                PlayerRole.Tank => new SolidColorBrush(Color.FromRgb(0xE5, 0x73, 0x73)),
+                PlayerRole.Healer => new SolidColorBrush(Color.FromRgb(0x81, 0xC7, 0x84)),
+                PlayerRole.Dps => new SolidColorBrush(Color.FromRgb(0xFF, 0xC1, 0x07)),
+                _ => Brushes.Transparent
+            };
+        }
+        return Brushes.Transparent;
+    }
+
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+        => throw new NotSupportedException();
+}
+
+/// <summary>
 /// DutySource => 顯示用標籤。
 /// </summary>
 public class SourceToLabelConverter : IValueConverter
@@ -188,4 +234,6 @@ public class SourceToLabelConverter : IValueConverter
     public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
         => throw new NotSupportedException();
 }
+
+
 

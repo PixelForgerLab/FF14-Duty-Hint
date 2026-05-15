@@ -22,5 +22,6 @@ public class Mechanic
     public string Description { get; set; } = string.Empty;
 
     [JsonPropertyName("tips")]
-    public List<string> Tips { get; set; } = new();
+    public List<Tip> Tips { get; set; } = new();
 }
+

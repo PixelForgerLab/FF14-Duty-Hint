@@ -14,9 +14,14 @@ public class Boss
     [JsonPropertyName("nameEn")]
     public string? NameEn { get; set; }
 
+    /// <summary>一句話口訣，可在「只看口訣」模式顯示。</summary>
+    [JsonPropertyName("mnemonic")]
+    public string? Mnemonic { get; set; }
+
     [JsonPropertyName("notes")]
     public string? Notes { get; set; }
 
     [JsonPropertyName("phases")]
     public List<Phase> Phases { get; set; } = new();
 }
+

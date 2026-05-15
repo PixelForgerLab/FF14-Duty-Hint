@@ -29,6 +29,10 @@
       "enum": ["excellent", "needs-update", "skeleton"],
       "description": "副本提示品質：excellent=完整可信；needs-update=部分內容但需校對更新；skeleton=只有基本資料"
     },
+    "mnemonic": {
+      "type": "string",
+      "description": "副本層級的一句話口訣，可在「只看口訣」模式快速回顧"
+    },
     "notes": { "type": "string" },
     "bosses": {
       "type": "array",
@@ -38,6 +42,7 @@
         "properties": {
           "name": { "type": "string" },
           "nameEn": { "type": "string" },
+          "mnemonic": { "type": "string", "description": "Boss 層級的一句話口訣" },
           "notes": { "type": "string" },
           "phases": {
             "type": "array",
@@ -61,7 +66,23 @@
                       "description": { "type": "string" },
                       "tips": {
                         "type": "array",
-                        "items": { "type": "string" }
+                        "items": {
+                          "oneOf": [
+                            { "type": "string", "description": "通用 tip (所有角色都看得到)" },
+                            {
+                              "type": "object",
+                              "required": ["text"],
+                              "properties": {
+                                "text": { "type": "string" },
+                                "role": {
+                                  "type": "string",
+                                  "enum": ["tank", "healer", "dps", "universal"],
+                                  "description": "tip 只對此角色顯示；universal 或省略 = 全部"
+                                }
+                              }
+                            }
+                          ]
+                        }
                       }
                     }
                   }
@@ -74,3 +95,4 @@
     }
   }
 }
+

@@ -34,8 +34,25 @@
 | `jobLevelSync` | ⬜ | int | 職業等級需求（由產生器自動填入） |
 | `highEnd` | ⬜ | bool | 是否為高難度（Savage / Ultimate / Chaotic）|
 | `quality` | ⬜ | string | 提示品質：`excellent` / `needs-update` / `skeleton`（見下方說明）|
+| `mnemonic` | ⬜ | string | 副本層級一句話口訣（會在「只看口訣」模式顯示） |
 | `notes` | ⬜ | string | 副本整體備註 |
 | `bosses` | ✅ | array | Boss 列表 |
+
+### Boss 層級
+
+```json
+{
+  "name": "Kokytos",
+  "nameEn": "Kokytos",
+  "mnemonic": "Plummet → Liquid Hell → Conflag → Death Sentence",
+  "notes": "Boss 整體備註",
+  "phases": [ /* ... */ ]
+}
+```
+
+| 欄位 | 說明 |
+|---|---|
+| `mnemonic` | Boss 層級的一句話口訣 |
 
 ## 🏅 品質標籤 (`quality`)
 
@@ -80,10 +97,47 @@
   "description": "兩段坦克爆擊",
   "tips": [
     "兩 T 必須換仇恨",
-    "建議副 T 接第二下"
+    { "text": "建議副 T 接第二下", "role": "tank" },
+    { "text": "受擊後立刻補血或盾", "role": "healer" }
   ]
 }
 ```
+
+### Tips（兩種寫法）
+
+每個 tip 可以是**字串**或**物件**：
+
+**字串形式**（通用，所有角色看得到）：
+```json
+"tips": ["第一個 tip", "第二個 tip"]
+```
+
+**物件形式**（指定角色）：
+```json
+"tips": [
+  { "text": "主 T 開大型減傷", "role": "tank" },
+  { "text": "立刻補血或盾", "role": "healer" },
+  { "text": "保留爆發給此波", "role": "dps" },
+  { "text": "全員注意走位", "role": "universal" }
+]
+```
+
+**混用也可以**：
+```json
+"tips": [
+  "通用提示（會永遠顯示）",
+  { "text": "只給坦克看的", "role": "tank" }
+]
+```
+
+| `role` 值 | 顯示對象 |
+|---|---|
+| `tank` | 偏好角色為「坦克」時顯示 |
+| `healer` | 偏好角色為「奶媽」時顯示 |
+| `dps` | 偏好角色為「DPS」時顯示 |
+| `universal` 或省略 | 所有角色都顯示 |
+
+> 使用者可在主視窗右上「全角色 / 坦克 / 奶媽 / DPS」按鈕切換，或在設定中選擇。
 
 ## 🎨 機制類型 (`type`)
 

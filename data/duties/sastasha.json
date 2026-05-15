@@ -1,52 +1,58 @@
 {
-    "id": "sastasha",
-    "name": "天然要害沙斯塔夏溶洞",
-    "nameEn": "Sastasha",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 18,
-    "highEnd": false,
-    "quality": "excellent",
-    "notes": "新手第一個 4 人本（範例副本，作為其他 JSON 的模板）。本檔案示範了如何撰寫完整的 boss / phase / mechanic 結構。",
-    "bosses": [
-                   {
-                       "name": "黑鯊海盜團船長",
-                       "nameEn": "Captain Madison",
-                       "notes": "戰鬥中會召喚兩條鯊魚加入戰場。",
-                       "phases": [
-                                      {
-                                          "name": "戰鬥全程",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "選擇正確的閘門",
-                                                                "type": "other",
-                                                                "description": "戰鬥前需要先擊破 4 個珊瑚色閘門開關之一，但只有正確顏色才能開啟通道。",
-                                                                "tips": [
-                                                                             "觀察房間內鯊魚雕像的顏色，與該色相同的開關就是正解",
-                                                                             "若開錯閘門會召喚一條額外的鯊魚"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Bloody Cleave",
-                                                                "type": "tankbuster",
-                                                                "description": "對當前仇恨第一目標施放的扇形範圍攻擊。",
-                                                                "tips": [
-                                                                             "坦克注意減傷，奶媽留意 HP"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全圖無法閃避的傷害。",
-                                                                "tips": [
-                                                                             "奶媽記得 AoE 加血"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "sastasha",
+  "name": "天然要害沙斯塔夏溶洞",
+  "nameEn": "Sastasha",
+  "expansion": "2.x 重生之境 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 18,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": "選對閘門 + 看鯊魚雕像顏色",
+  "notes": "新手第一個 4 人本（範例副本，作為其他 JSON 的模板）。本檔案示範了如何撰寫完整的 boss / phase / mechanic 結構，包含口訣與角色標籤 tip。",
+  "bosses": [
+    {
+      "name": "黑鯊海盜團船長",
+      "nameEn": "Captain Madison",
+      "mnemonic": "正確閘門 → 打 Boss → 全體 AoE 開減傷",
+      "notes": "戰鬥中會召喚兩條鯊魚加入戰場。",
+      "phases": [
+        {
+          "name": "戰鬥全程",
+          "mechanics": [
+            {
+              "name": "選擇正確的閘門",
+              "type": "other",
+              "description": "戰鬥前需要先擊破 4 個珊瑚色閘門開關之一，但只有正確顏色才能開啟通道。",
+              "tips": [
+                "觀察房間內鯊魚雕像的顏色，與該色相同的開關就是正解",
+                "若開錯閘門會召喚一條額外的鯊魚"
+              ]
+            },
+            {
+              "name": "Bloody Cleave",
+              "type": "tankbuster",
+              "description": "對當前仇恨第一目標施放的扇形範圍攻擊。",
+              "tips": [
+                { "text": "面向場外吃，避免掃到隊友", "role": "tank" },
+                { "text": "適時開減傷（如盾陣、原初解放）", "role": "tank" },
+                { "text": "主 T 受擊後立刻補血或盾", "role": "healer" }
+              ]
+            },
+            {
+              "name": "全體 AoE",
+              "type": "raidwide",
+              "description": "全圖無法閃避的傷害。",
+              "tips": [
+                { "text": "預判全體傷害，預先 AoE 治療", "role": "healer" },
+                { "text": "可主動開減傷支援團隊", "role": "tank" },
+                "看到準備動作後可開 LB 或群盾"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

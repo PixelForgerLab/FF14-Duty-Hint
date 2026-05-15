@@ -18,6 +18,9 @@ public partial class SettingsWindow : Window
     /// <summary>資料來源變更（自訂資料夾）— 主視窗需重新載入副本。</summary>
     public event Action? DataSourceChanged;
 
+    /// <summary>顯示模式變更（口訣切換、角色篩選）— 主視窗需重新渲染。</summary>
+    public event Action? DisplayModeChanged;
+
     public SettingsWindow(AppSettings settings)
     {
         InitializeComponent();
@@ -26,7 +29,18 @@ public partial class SettingsWindow : Window
         OpacitySlider.Value = settings.Opacity;
         FontSizeSlider.Value = settings.FontSize;
         TopmostCheck.IsChecked = settings.Topmost;
+        MnemonicOnlyCheck.IsChecked = settings.MnemonicOnly;
         CustomFolderTextBox.Text = settings.CustomDutyFolder ?? string.Empty;
+
+        var role = (settings.PreferredRole ?? "all").ToLowerInvariant();
+        switch (role)
+        {
+            case "tank": RoleTankRadio.IsChecked = true; break;
+            case "healer": RoleHealerRadio.IsChecked = true; break;
+            case "dps": RoleDpsRadio.IsChecked = true; break;
+            default: RoleAllRadio.IsChecked = true; break;
+        }
+
         UpdateValueTexts();
         UpdateCustomFolderWarning();
         _initialized = true;
@@ -78,6 +92,24 @@ public partial class SettingsWindow : Window
         if (!_initialized) return;
         _settings.Topmost = TopmostCheck.IsChecked == true;
         AppearanceChanged?.Invoke(_settings);
+    }
+
+    private void MnemonicOnlyCheck_Changed(object sender, RoutedEventArgs e)
+    {
+        if (!_initialized) return;
+        _settings.MnemonicOnly = MnemonicOnlyCheck.IsChecked == true;
+        DisplayModeChanged?.Invoke();
+    }
+
+    private void Role_Changed(object sender, RoutedEventArgs e)
+    {
+        if (!_initialized) return;
+        _settings.PreferredRole =
+            RoleTankRadio.IsChecked == true ? "tank" :
+            RoleHealerRadio.IsChecked == true ? "healer" :
+            RoleDpsRadio.IsChecked == true ? "dps" :
+            "all";
+        DisplayModeChanged?.Invoke();
     }
 
     private void OpenUserFolder_Click(object sender, RoutedEventArgs e)

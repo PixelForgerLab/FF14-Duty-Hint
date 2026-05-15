@@ -150,6 +150,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     private const string NoDutyHint = "👈 點選右上「副本」按鈕，選擇要顯示的副本提示。";
     private const string NoMechanicsHint = "🚧 此副本目前沒有詳細機制提示。\n\n你可以到 GitHub 透過 PR 貢獻你的攻略筆記！\nhttps://github.com/PixelForgerLab/FF14-Duty-Hint\n\n或者點右上「副本」選擇其他副本。";
+    private const string MnemonicOnlyNoneHint = "ℹ 此副本（與每個 Boss）目前沒有口訣資料。\n\n切換到「全部」模式即可看到完整機制。";
 
     private void SetDuty(Duty? duty)
     {
@@ -164,6 +165,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             BossList.ItemsSource = null;
             QualityBadge.Visibility = Visibility.Collapsed;
             SourceBadge.Visibility = Visibility.Collapsed;
+            DutyMnemonicBorder.Visibility = Visibility.Collapsed;
             EmptyHintText.Text = NoDutyHint;
             EmptyHintText.Visibility = Visibility.Visible;
             return;
@@ -180,10 +182,19 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         if (duty.HighEnd) metaParts.Add("★ 高難度");
         DutyMetaText.Text = string.Join("  ·  ", metaParts);
 
-        // 品質徽章
         ApplyQualityBadge(duty.Quality);
-        // 來源徽章
         ApplySourceBadge(duty);
+
+        // 副本口訣
+        if (!string.IsNullOrWhiteSpace(duty.Mnemonic))
+        {
+            DutyMnemonicText.Text = duty.Mnemonic;
+            DutyMnemonicBorder.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            DutyMnemonicBorder.Visibility = Visibility.Collapsed;
+        }
 
         if (!string.IsNullOrWhiteSpace(duty.Notes))
         {
@@ -195,18 +206,137 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             DutyNotesBorder.Visibility = Visibility.Collapsed;
         }
 
-        BossList.ItemsSource = duty.Bosses;
+        RenderBossList(duty);
+
+        _settings.LastDutyId = duty.Id;
+        UpdateMnemonicToggleButton();
+        UpdateRoleToggleButton();
+    }
+
+    /// <summary>
+    /// 根據目前 PreferredRole + MnemonicOnly 設定，重新組裝顯示用的 Boss 清單。
+    /// 不會修改原始 duty 資料。
+    /// </summary>
+    private void RenderBossList(Duty duty)
+    {
+        var userRole = PlayerRoleExtensions.ParseRole(_settings.PreferredRole);
+        bool filterByRole = !string.Equals(_settings.PreferredRole, "all", StringComparison.OrdinalIgnoreCase);
+
+        var bosses = new List<Boss>();
+        foreach (var boss in duty.Bosses)
+        {
+            var bossCopy = new Boss
+            {
+                Name = boss.Name,
+                NameEn = boss.NameEn,
+                Mnemonic = boss.Mnemonic,
+                Notes = boss.Notes,
+                Phases = new List<Phase>()
+            };
+
+            if (_settings.MnemonicOnly)
+            {
+                // 只看口訣模式：保留 boss header，不顯示 phases
+                bosses.Add(bossCopy);
+                continue;
+            }
+
+            foreach (var phase in boss.Phases)
+            {
+                var phaseCopy = new Phase
+                {
+                    Name = phase.Name,
+                    Notes = phase.Notes,
+                    Mechanics = new List<Mechanic>()
+                };
+
+                foreach (var mech in phase.Mechanics)
+                {
+                    var mechCopy = new Mechanic
+                    {
+                        Name = mech.Name,
+                        Type = mech.Type,
+                        Description = mech.Description,
+                        Tips = filterByRole
+                            ? mech.Tips.Where(t => t.Role == PlayerRole.Universal || t.Role == userRole).ToList()
+                            : mech.Tips
+                    };
+                    phaseCopy.Mechanics.Add(mechCopy);
+                }
+                bossCopy.Phases.Add(phaseCopy);
+            }
+            bosses.Add(bossCopy);
+        }
+
+        BossList.ItemsSource = bosses;
+
+        // 空狀態提示
+        bool anyContent = bosses.Count > 0 && !(
+            _settings.MnemonicOnly &&
+            string.IsNullOrWhiteSpace(duty.Mnemonic) &&
+            bosses.All(b => string.IsNullOrWhiteSpace(b.Mnemonic))
+        );
+
         if (duty.Bosses.Count == 0)
         {
             EmptyHintText.Text = NoMechanicsHint;
+            EmptyHintText.Visibility = Visibility.Visible;
+        }
+        else if (_settings.MnemonicOnly && !anyContent)
+        {
+            EmptyHintText.Text = MnemonicOnlyNoneHint;
             EmptyHintText.Visibility = Visibility.Visible;
         }
         else
         {
             EmptyHintText.Visibility = Visibility.Collapsed;
         }
+    }
 
-        _settings.LastDutyId = duty.Id;
+    private void UpdateMnemonicToggleButton()
+    {
+        MnemonicToggleButton.Content = _settings.MnemonicOnly ? "口訣" : "全部";
+        MnemonicToggleButton.ToolTip = _settings.MnemonicOnly
+            ? "目前：只看口訣（按一下切換為全部）"
+            : "目前：全部顯示（按一下切換為只看口訣）";
+    }
+
+    private void UpdateRoleToggleButton()
+    {
+        var role = PlayerRoleExtensions.ParseRole(_settings.PreferredRole);
+        bool all = string.Equals(_settings.PreferredRole, "all", StringComparison.OrdinalIgnoreCase);
+        RoleToggleButton.Content = all ? "全角色" : role.ToDisplayLabel();
+        RoleToggleButton.ToolTip = all
+            ? "目前：顯示全角色 tip（按一下切換）"
+            : $"目前：只顯示 {role.ToDisplayLabel()} + 通用 tip（按一下切換）";
+    }
+
+    private void MnemonicToggle_Click(object sender, RoutedEventArgs e)
+    {
+        _settings.MnemonicOnly = !_settings.MnemonicOnly;
+        if (_currentDuty is not null)
+        {
+            RenderBossList(_currentDuty);
+        }
+        UpdateMnemonicToggleButton();
+    }
+
+    private void RoleToggle_Click(object sender, RoutedEventArgs e)
+    {
+        // 循環：all -> tank -> healer -> dps -> all
+        var current = (_settings.PreferredRole ?? "all").ToLowerInvariant();
+        _settings.PreferredRole = current switch
+        {
+            "all" => "tank",
+            "tank" => "healer",
+            "healer" => "dps",
+            _ => "all"
+        };
+        if (_currentDuty is not null)
+        {
+            RenderBossList(_currentDuty);
+        }
+        UpdateRoleToggleButton();
     }
 
     private void ApplyQualityBadge(DutyQuality q)
@@ -285,6 +415,15 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         dlg.DataSourceChanged += () =>
         {
             ReloadDuties();
+        };
+        dlg.DisplayModeChanged += () =>
+        {
+            if (_currentDuty is not null)
+            {
+                RenderBossList(_currentDuty);
+            }
+            UpdateMnemonicToggleButton();
+            UpdateRoleToggleButton();
         };
         dlg.ShowDialog();
         SettingsService.Save(_settings);

@@ -41,6 +41,10 @@ public class Duty
     [JsonPropertyName("quality")]
     public string? QualityRaw { get; set; }
 
+    /// <summary>副本整體一句話口訣。</summary>
+    [JsonPropertyName("mnemonic")]
+    public string? Mnemonic { get; set; }
+
     [JsonPropertyName("notes")]
     public string? Notes { get; set; }
 

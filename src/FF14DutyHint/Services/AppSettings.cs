@@ -37,5 +37,16 @@ public class AppSettings
     /// </summary>
     [JsonPropertyName("customDutyFolder")]
     public string? CustomDutyFolder { get; set; }
+
+    /// <summary>
+    /// 偏好角色（用於過濾 tips）："tank" / "healer" / "dps" / "all"。
+    /// 預設 all = 顯示所有角色 tip。
+    /// </summary>
+    [JsonPropertyName("preferredRole")]
+    public string? PreferredRole { get; set; } = "all";
+
+    /// <summary>「只看口訣」模式（隱藏 phases / mechanics）。</summary>
+    [JsonPropertyName("mnemonicOnly")]
+    public bool MnemonicOnly { get; set; }
 }
 
