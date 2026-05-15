@@ -1,6 +1,6 @@
 {
     "id": "abyssos_the_sixth_circle",
-    "name": "萬魔殿 煉淨之獄2",
+    "name": "煉獄 6",
     "nameEn": "Abyssos: The Sixth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,66 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Aetheric Polyominoid：4 針掉落 + 不規則安全格，站非閃爍格。",
+        "2）Transmission：被連繩玩家面向場外讓錐 AoE 出場。",
+        "3）Strophe Ixou：Boss 旋轉 360 度 + 前後錐 AoE，跟著旋轉方向跑。",
+        "4）Aetherial Exchange：Polyominoid Sigma 配對交換位置 + 某些無安全位。"
+    ],
+    "notes": "6.2 EW Pandæmonium Abyssos 第 6 層（Lv 90，ilvl 585）。Hegemone。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "黑格莫尼",
+            "nameEn": "Hegemone",
+            "mnemonic": ["看格安全", "連繩面向場外", "旋轉跟方向"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Aetheric Polyominoid",
+                            "type": "aoe",
+                            "description": "4 個針指示 + 不規則格 AoE 圖案。",
+                            "tips": ["站非閃爍格"]
+                        },
+                        {
+                            "name": "Choros Ixou",
+                            "type": "aoe",
+                            "description": "Boss 雙手指 EW 或 NS = 該方向錐 AoE。",
+                            "tips": ["遠離指向方向"]
+                        },
+                        {
+                            "name": "Transmission",
+                            "type": "other",
+                            "description": "被連繩玩家獲得 Glossomorph，倒數結束被凍住放錐 AoE。",
+                            "tips": ["被點的人面向場外", "讓錐出場"]
+                        },
+                        {
+                            "name": "Strophe Ixou",
+                            "type": "aoe",
+                            "description": "Boss 旋轉 360 度 + 前後錐 AoE。",
+                            "tips": ["跟旋轉方向同步跑"]
+                        },
+                        {
+                            "name": "Dark Ashes",
+                            "type": "spread",
+                            "description": "玩家圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Aetherial Exchange + Polyominoid Sigma",
+                            "type": "aoe",
+                            "description": "Polyominoid 兩兩配對交換位置，某些無安全。",
+                            "tips": ["看配對預測新位置"]
+                        },
+                        {
+                            "name": "Synergy",
+                            "type": "tankbuster",
+                            "description": "雙 T 坦補。",
+                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

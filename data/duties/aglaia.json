@@ -1,6 +1,6 @@
 {
     "id": "aglaia",
-    "name": "燦爛神域阿格萊亞",
+    "name": "幻光之鄉 阿格萊亞",
     "nameEn": "Aglaia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,103 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）拜瑞拓：Byregot's Strike 中央擊退 + 場地縮塊；Levinforge 預判紫鎚移動 + Spire 中 3 列 AoE。",
+        "2）剎迦使者：Lightning Bolt 看雙線轉 90 度。",
+        "3）剎迦：Advent of the Eighth 看哪邊紅藍 portal 被打；Beacon 擊退到手指地面避雷。",
+        "4）雙獅：Slash and Burn 看點數順序（圓 or 甜甜圈）。",
+        "5）阿澤瑪：Warden's Prominence 看太陽位置。"
+    ],
+    "notes": "6.1 EW Alliance Raid（Lv 90，ilvl 565）。Myths of the Realm 第 1 部，Eorzea 十二神主題。Byregot/Rhalgr/Azeyma + 2 boss 戰鬥。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "拜瑞拓",
+            "nameEn": "Byregot",
+            "mnemonic": ["看擊退方向", "預判紫鎚"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Byregot's Strike + Builder's Build",
+                            "type": "other",
+                            "description": "中央擊退 + 4 條錐 AoE。",
+                            "tips": ["位置調好 + 看錐方向"]
+                        },
+                        {
+                            "name": "Levinforge",
+                            "type": "aoe",
+                            "description": "紫鎚生成線 AoE，可被推開。",
+                            "tips": ["預判紫鎚軌跡"]
+                        },
+                        {
+                            "name": "Byregot's Spire",
+                            "type": "aoe",
+                            "description": "中 3 列 AoE + 場邊鎚推塊。",
+                            "tips": ["站邊側", "預判推動結果"]
+                        },
+                        {
+                            "name": "Reproduce + Cloud to Ground",
+                            "type": "aoe",
+                            "description": "5 分身放圓 AoE 線，閃電的更快。",
+                            "tips": ["站慢線位置", "快線過後切換"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "剎迦",
+            "nameEn": "Rhalgr",
+            "mnemonic": ["看 portal 顏色", "Beacon 站手指線"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Advent of the Eighth",
+                            "type": "aoe",
+                            "description": "兩 portal + Boss 打對應半場。Broken World 火球加複雜化。",
+                            "tips": ["看 Boss 手準備打哪邊"]
+                        },
+                        {
+                            "name": "Rhalgr's Beacon",
+                            "type": "other",
+                            "description": "中央擊退 + 5 條手指地面（防擊退）。",
+                            "tips": ["站手指線位置避免被擊飛"]
+                        },
+                        {
+                            "name": "Bronze Work",
+                            "type": "aoe",
+                            "description": "兩組錐 AoE 依序爆。",
+                            "tips": ["站第二組位置，第一組爆後移開"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿澤瑪",
+            "nameEn": "Azeyma",
+            "mnemonic": ["看太陽 + 鎖", "Wardens Warmth 3 T"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Warden's Warmth",
+                            "type": "tankbuster",
+                            "description": "3 T 坦補。",
+                            "tips": [{ "text": "3 T 都減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Warden's Prominence",
+                            "type": "aoe",
+                            "description": "太陽位置 = 該方向 AoE。",
+                            "tips": ["看太陽繞對側"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

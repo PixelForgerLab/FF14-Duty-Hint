@@ -1,6 +1,6 @@
 {
     "id": "asphodelos_the_third_circle",
-    "name": "萬魔殿 邊境之獄3",
+    "name": "煉獄 3",
     "nameEn": "Asphodelos: The Third Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,103 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Experimental Fireplume：大球=中央 AoE 跑場邊；小旋轉球=場邊 AoE 跑中央。",
+        "2）Darkened Fire：4 玩家被點需踩 4 個暗火避免 raid wide。",
+        "3）Sunbird 階段：DPS 不能讓 2 個太接近死（會疊圓，最終 Dead Rebirth 團滅）。",
+        "4）Devouring Brand：場地變十字（4 個半場安全）。"
+    ],
+    "notes": "6.01 EW Pandæmonium 第 3 層（Lv 90，ilvl 565）。Phoinix 鳳凰。Sunbird 處理是核心。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "鳳凰",
+            "nameEn": "Phoinix",
+            "mnemonic": ["大球=跑邊、小球=跑中", "Sunbird 別讓圓疊", "Brand 十字場"],
+            "phases": [
+                {
+                    "name": "Phase 1",
+                    "mechanics": [
+                        {
+                            "name": "Experimental Fireplume",
+                            "type": "aoe",
+                            "description": "大球=中央 AoE；小旋轉球=邊緣旋轉 AoE + 中央 1 個。",
+                            "tips": ["大=跑邊", "小=跑中央"]
+                        },
+                        {
+                            "name": "Heat of Condemnation",
+                            "type": "tankbuster",
+                            "description": "雙 T AoE 坦補。",
+                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                        },
+                        {
+                            "name": "Darkened Fire + Brightened Fire",
+                            "type": "other",
+                            "description": "4 暗火 + 4 玩家被點要踩到，沒踩到 = Darkened Blaze raid AoE。",
+                            "tips": ["被點的人踩暗火"]
+                        },
+                        {
+                            "name": "Left/Right Cinderwing",
+                            "type": "aoe",
+                            "description": "Boss 左/右半場 cleave。",
+                            "tips": ["看名稱繞對側"]
+                        },
+                        {
+                            "name": "Trail of Condemnation",
+                            "type": "aoe",
+                            "description": "Boss 飛邊邊衝鋒中央。",
+                            "tips": ["跑側面"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2 - Sunbird",
+                    "mechanics": [
+                        {
+                            "name": "Sunbird 雙對",
+                            "type": "other",
+                            "description": "2 對 Sunbird 各有綠圓，死亡後變 Sparkfledged。圓互相重疊 → Dead Rebirth 大傷或團滅。",
+                            "tips": [
+                                { "text": "DPS 控制傷害不讓圓疊", "role": "dps" },
+                                "Rear/Fore Carve 看小怪面向"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3",
+                    "mechanics": [
+                        {
+                            "name": "Fledgling Flight",
+                            "type": "aoe",
+                            "description": "Sparkfledged 各放 1/4 場 AoE。",
+                            "tips": ["看 fledged 位置躲"]
+                        },
+                        {
+                            "name": "Experimental Charplume",
+                            "type": "spread",
+                            "description": "全員紫散開。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Devouring Brand",
+                            "type": "aoe",
+                            "description": "基本方向火柱漸增直到場地變十字。",
+                            "tips": ["跑十字格內"]
+                        },
+                        {
+                            "name": "Searing Breeze",
+                            "type": "aoe",
+                            "description": "玩家圓 AoE。",
+                            "tips": ["分散"]
+                        },
+                        {
+                            "name": "Flare of Condemnation",
+                            "type": "spread",
+                            "description": "全員紫散開（接 Trail of Condemnation 之後）。",
+                            "tips": ["閃完衝鋒後散開"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

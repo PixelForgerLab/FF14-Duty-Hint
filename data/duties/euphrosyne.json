@@ -1,6 +1,6 @@
 {
     "id": "euphrosyne",
-    "name": "喜悅神域歐芙洛緒涅",
+    "name": "至福之鄉 歐芙洛緒涅",
     "nameEn": "Euphrosyne",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,95 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）諾菲卡：花田 = 點 AoE / 森林 = 甜甜圈；Floral Haze 方向 debuff 看 Boss 變形預判朝向。",
+        "2）雙神 Althyk + Nymeia：別讓兩個 boss 太近（Sibling Revelry 增傷）；Spinner's Wheel 看卡片 debuff。",
+        "3）哈林姆萊伊：時間倒流機制 + 過去/未來位置切換。"
+    ],
+    "notes": "6.3 EW Alliance Raid（Lv 90，ilvl 595）。Myths of the Realm 第 2 部。Nophica + Althyk/Nymeia + Halone（時間之神）。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "諾菲卡",
+            "nameEn": "Nophica",
+            "mnemonic": ["花田 = 點 / 森林 = 甜甜圈", "Floral Haze 預判朝向"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Matron's Plenty + The Giving Land",
+                            "type": "aoe",
+                            "description": "場地變花田或森林。花田 = 點 AoE Spring Flowers；森林 = 甜甜圈 Summer Shade。",
+                            "tips": ["看場地顏色"]
+                        },
+                        {
+                            "name": "Floral Haze",
+                            "type": "other",
+                            "description": "方向錯亂 debuff，看 Boss 變形預判要面向哪邊。",
+                            "tips": ["預判朝向"]
+                        },
+                        {
+                            "name": "Matron's Breath",
+                            "type": "aoe",
+                            "description": "3-6 個藍/金信標依順序爆。要站對應色信標附近。",
+                            "tips": ["看顏色 + 倒數點"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "阿爾席克 + 妮姆梅雅",
+            "nameEn": "Althyk + Nymeia",
+            "mnemonic": ["別讓兩 boss 太近", "看 Spinner's Wheel 卡片"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Arcane Triumph (8 分鐘 enrage)",
+                            "type": "other",
+                            "description": "8 分鐘內必須打完。",
+                            "tips": [{ "text": "全力 DPS", "role": "dps" }]
+                        },
+                        {
+                            "name": "Sibling Revelry",
+                            "type": "other",
+                            "description": "兩 boss 太近會獲得增傷 + 減傷 buff。",
+                            "tips": ["拉開兩個 boss"]
+                        },
+                        {
+                            "name": "Spinner's Wheel",
+                            "type": "other",
+                            "description": "卡片 debuff：Attraction 面向 / Reversed 不面向 / Fever 停動 / Reversed 持續動。",
+                            "tips": ["看卡片決定行為"]
+                        },
+                        {
+                            "name": "Mythril Greataxe",
+                            "type": "aoe",
+                            "description": "Althyk 對玩家錐 AoE。",
+                            "tips": ["看朝向繞"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "哈林姆萊伊",
+            "nameEn": "Halone",
+            "mnemonic": ["時間機制", "看 cutscene 過場後"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "時間操控",
+                            "type": "other",
+                            "description": "Halone 戰鬥涉及時間倒流 + 過去/未來位置切換。",
+                            "tips": ["跟著機制提示走"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

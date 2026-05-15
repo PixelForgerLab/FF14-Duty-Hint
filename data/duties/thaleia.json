@@ -1,6 +1,6 @@
 {
     "id": "thaleia",
-    "name": "榮華神域塔利亞",
+    "name": "歡笑之鄉 塔莉亞",
     "nameEn": "Thaleia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,107 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 24 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）薩里亞克：Hieroglyphika 旋轉看箭頭預判安全格；Tetraktys 場地變三角 + 三角板爆。",
+        "2）林姆蘭：Surging Wave 擊退進長廊 + 水牆關閉，往主場跑；Trident 6 段點 AoE 依序。",
+        "3）奧斯崇：Wandering Volley 看箭頭 + 弓兵連繩；終戰場景變化複雜。"
+    ],
+    "notes": "6.5 EW Alliance Raid 終戰（Lv 90，ilvl 625）。Myths of the Realm 第 3 部 + 終戰。Thaliak + Llymlaen + Oschon。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "薩里亞克",
+            "nameEn": "Thaliak",
+            "mnemonic": ["三角板爆", "Hieroglyphika 旋轉"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Tetraktys",
+                            "type": "aoe",
+                            "description": "場地變三角，藍三角板會爆，綠三角 4 個板爆。",
+                            "tips": ["看顏色找安全板"]
+                        },
+                        {
+                            "name": "Tetraktuos Kosmos",
+                            "type": "aoe",
+                            "description": "塔牆倒下成線 AoE。",
+                            "tips": ["看牆朝向避"]
+                        },
+                        {
+                            "name": "Hieroglyphika",
+                            "type": "other",
+                            "description": "全場 AoE 留 2 格安全 + 旋轉箭頭預示安全格旋轉位置。",
+                            "tips": ["站到旋轉後安全位"]
+                        },
+                        {
+                            "name": "Rheognosis",
+                            "type": "other",
+                            "description": "場外分身擊退。",
+                            "tips": ["站牆邊或抗擊退"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "林姆蘭",
+            "nameEn": "Llymlaen",
+            "mnemonic": ["Surging Wave 站綠標", "Trident 點 AoE 順序"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Navigator's Trident",
+                            "type": "aoe",
+                            "description": "左/右 cleave 順序 + 中央線 AoE + 擊退到長廊。",
+                            "tips": ["依序避 cleave", "預擊退到長廊"]
+                        },
+                        {
+                            "name": "Surging Wave",
+                            "type": "other",
+                            "description": "紫圈即死 + 大擊退到長廊（站綠標）。",
+                            "tips": ["遠離紫圈", "站綠標"]
+                        },
+                        {
+                            "name": "長廊水牆",
+                            "type": "other",
+                            "description": "長廊後方水牆關閉，被困即死 + 海泡。",
+                            "tips": ["快速往主場跑", "閃海泡"]
+                        },
+                        {
+                            "name": "Torrential Tridents",
+                            "type": "aoe",
+                            "description": "6 個三叉戟依序爆點 AoE。",
+                            "tips": ["從最後一個三叉戟開始", "進剛爆位置"]
+                        },
+                        {
+                            "name": "Denizens of the Deep",
+                            "type": "aoe",
+                            "description": "兩小怪幫忙放線 AoE。",
+                            "tips": ["看小怪位置避"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "奧斯崇",
+            "nameEn": "Oschon",
+            "mnemonic": ["看箭頭", "弓兵連繩"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Wandering Volley",
+                            "type": "aoe",
+                            "description": "箭頭線 AoE + 弓兵連繩玩家。",
+                            "tips": ["看箭頭避", "拉繩"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

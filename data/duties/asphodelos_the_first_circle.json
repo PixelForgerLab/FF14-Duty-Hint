@@ -1,6 +1,6 @@
 {
     "id": "asphodelos_the_first_circle",
-    "name": "萬魔殿 邊境之獄1",
+    "name": "煉獄 1",
     "nameEn": "Asphodelos: The First Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,59 +10,54 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-                     "曉月之終途 (Endwalker) 的 團本",
-                     "通用提示：閃地面 AoE、注意 tankbuster、預判全體傷",
-                     "⚠️ 詳細機制待社群補充 (PR welcome)"
-                 ],
-    "notes": "Lv 90 的 8 人 團本。⚠️ AI 預填通用 stub，詳細 boss 名稱與機制待社群 PR 補充。",
+        "1）Gaoler's Flail：看 Boss 哪手揮鞭 = 該側半場，後面會無 cast 預警組合。",
+        "2）Pitiless Flail：被點的人站近 Boss，後面要疊機。",
+        "3）Intemperance：火/冰 debuff 要交替（吃對立色），別站場中央十字。",
+        "4）Aetherchain：球顏色 = 該色格爆，跑對色格；後段配 Aetherflail 半場 cleave。"
+    ],
+    "notes": "6.01 EW Pandæmonium 第 1 層（Lv 90，ilvl 565）。Erichthonios 守衛者。Pandæmonium 主線開頭。資料整理自 Console Games Wiki。",
     "bosses": [
-                   {
-                       "name": "Boss",
-                       "nameEn": "Boss",
-                       "mnemonic": [
-                                        "待社群補充 Boss 名稱與機制"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE（FF14 通用機制）。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "Tankbuster",
-                                                                "type": "tankbuster",
-                                                                "description": "對主 T 的單體大傷。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "T 開減傷",
-                                                                                 "role": "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text": "立刻補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "厄里克托尼俄斯",
+            "nameEn": "Erichthonios",
+            "mnemonic": ["看鞭子手", "火/冰交替", "球色看格色"],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Gaoler's Flail",
+                            "type": "aoe",
+                            "description": "Boss 揮左/右手鞭 = 該側半場 cleave。",
+                            "tips": ["看手繞對側"]
+                        },
+                        {
+                            "name": "Pitiless Flail",
+                            "type": "stack",
+                            "description": "玩家線 AoE 擊退 + 後續疊機。",
+                            "tips": ["被點的人站近 Boss", "其他人閃線", "AoE 後快回中央疊"]
+                        },
+                        {
+                            "name": "Intemperance + Intemperate Torrent",
+                            "type": "other",
+                            "description": "全員火/冰 debuff，4 個象限 3 層水晶輪流爆。需吃對立色（吃火者站冰水晶下方 = 吃冰）。",
+                            "tips": ["看自己 debuff 顏色找對色水晶", "別站場中央十字", "每次切換顏色找對應水晶"]
+                        },
+                        {
+                            "name": "Aetherchain + Aetherflail",
+                            "type": "aoe",
+                            "description": "場分藍紅色塊 + 球顏色 = 該色格爆，後段配半場 cleave。",
+                            "tips": ["看球色站對色格", "看鞭子手繞半場"]
+                        },
+                        {
+                            "name": "Heavy Hand / Warden's Wrath",
+                            "type": "tankbuster",
+                            "description": "坦補 + 後續全體 AoE。",
+                            "tips": [{ "text": "減傷", "role": "tank" }, { "text": "預判補血", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
