@@ -17,6 +17,36 @@
         <conv:QualityToVisibilityConverter x:Key="QualityToVis"/>
         <conv:UserSourceToVisibilityConverter x:Key="UserSourceToVis"/>
         <conv:SourceToLabelConverter x:Key="SourceToLabel"/>
+
+        <!-- ComboBox dropdown 配色 (避免白底白字看不到) -->
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="#1A1A1F"/>
+            <Setter Property="Foreground" Value="#F0F0F0"/>
+            <Setter Property="Padding" Value="8,3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="Bd"
+                                Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#33FFFFFF"/>
+                            </Trigger>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#33FFFFFF"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#55FFB347"/>
+                                <Setter Property="Foreground" Value="#1A1A1F"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid Margin="12">
         <Grid.RowDefinitions>
