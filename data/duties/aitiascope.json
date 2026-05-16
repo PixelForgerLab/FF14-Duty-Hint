@@ -1,182 +1,51 @@
 {
-    "id":  "aitiascope",
-    "name":  "星海深幽尋因星晶鏡",
-    "nameEn":  "The Aitiascope",
-    "expansion":  "6.x 曉月之終途 (Endwalker)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  89,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 The Watcher (監視者)：場上多 AoE + 點名分散。",
-                     "2）B2 Lahabrea：暗影球 + 凝視 + 點名直線。",
-                     "3）B3 Fandaniel：3 場景轉換 + 終末詩歌 + 流星。"
-                 ],
-    "notes":  "EW 6.0 MSQ dungeon (Lv 89)。Ascian 因果視鏡；Lahabrea + Fandaniel 雙阿斯托遜 boss。",
-    "bosses":  [
-                   {
-                       "name":  "監視者",
-                       "nameEn":  "The Watcher",
-                       "phases":  [
-                                      {
-                                          "name":  "B1 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "AoE 圓圈",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多圓 → 走縫；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Spread 散標",
-                                                                "type":  "spread",
-                                                                "description":  "點名玩家散開 AoE；被點名玩家拉開分散站位5米以上。",
-                                                                "tips":  [
-                                                                             "分散"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT buster；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Raid-wide 全屏",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "AoE 圓圈 → 走縫",
-                                        "Spread 散標 → 散開",
-                                        "Tankbuster 死刑 → MT 開減傷",
-                                        "Raid-wide 全屏 → 全員減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "拉哈布雷亞",
-                       "nameEn":  "Lahabrea",
-                       "phases":  [
-                                      {
-                                          "name":  "B2 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Dark Sphere 暗影球",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多暗球 AoE → 走縫；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Gaze 凝視",
-                                                                "type":  "gaze",
-                                                                "description":  "Boss 凝視 → 全員背對；看到讀條按相機背對boss避免石化。",
-                                                                "tips":  [
-                                                                             "背對 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Line AoE 直線",
-                                                                "type":  "aoe",
-                                                                "description":  "點名玩家直線 AoE；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "被點往場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Cleave 扇形",
-                                                                "type":  "cone",
-                                                                "description":  "MT 扇形；MT朝場邊面外 近戰站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Dark Sphere 暗影球 → 走縫",
-                                        "Gaze 凝視 → 背對",
-                                        "Line AoE 直線 → 走縫",
-                                        "Cleave 扇形 → MT 朝外"
-                                    ]
-                   },
-                   {
-                       "name":  "范達涅爾",
-                       "nameEn":  "Fandaniel",
-                       "phases":  [
-                                      {
-                                          "name":  "B3 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Scene Transition 場景轉換",
-                                                                "type":  "mechanic",
-                                                                "description":  "3 個場景輪換 + 不同機制；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "看場景特性"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Final Chorus 終末詩歌",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Meteor 流星",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多隕石落地 AoE；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑 buster；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Scene Transition 場景轉換 → 看預兆",
-                                        "Final Chorus 終末詩歌 → 全員減傷",
-                                        "Meteor 流星 → 走縫",
-                                        "Tankbuster 死刑 → MT 開減傷"
-                                    ]
-                   }
-               ]
+  "id": "aitiascope",
+  "name": "星海深幽尋因星晶鏡",
+  "nameEn": "The Aitiascope",
+  "expansion": "6.x 曉月之終焉 (Endwalker)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 89,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）B1：點名玩家直線 + 全屏 AoE",
+    "2）B2：場上塔 + 直線 + 圓 AoE 混合",
+    "3）B3 阿莫羅特鎖鏈：召喚分身 + 連線鏈接機制"
+  ],
+  "notes": "EW 6.0 主線副本（Lv 89），亞馬瑞特之路的最終夢境。資料來源：灰機 星海深幽寻因星晶镜/1 /2 /B（命名與技能 S→T）+ CGW Aitiascope walkthrough。",
+  "bosses": [
+    {
+      "name": "暴憐者", "nameEn": "Aspect of Mercy",
+      "phases": [{"name": "B1 主戰", "mechanics": [
+        {"name": "點名直線 Line AoE", "type": "aoe", "description": "點名玩家直線 AoE；被點往場邊。", "tips": [{"text": "被點移", "role": "dps"}]},
+        {"name": "raidwide 全屏 AoE", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]},
+        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體 buster；大減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
+        {"name": "spread 圓 AoE", "type": "spread", "description": "全員點名圓；散開。", "tips": [{"text": "散開", "role": "dps"}]}
+      ]}],
+      "mnemonic": ["直線 → 場邊", "tankbuster → MT 大減傷"]
+    },
+    {
+      "name": "輕視者", "nameEn": "Aspect of Indignation",
+      "phases": [{"name": "B2 主戰", "mechanics": [
+        {"name": "塔 Tower", "type": "stack", "description": "場上塔需踩；無人 → 大爆炸。", "tips": [{"text": "指定踩塔", "role": "tank"}]},
+        {"name": "直線 + 圓 混合", "type": "aoe", "description": "場上直線 + 圓 AoE 預兆；找雙安全。", "tips": [{"text": "找雙縫", "role": "dps"}]},
+        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體；減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
+        {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]}
+      ]}],
+      "mnemonic": ["塔 → 踩", "直線+圓 → 找縫"]
+    },
+    {
+      "name": "阿莫羅特之鎖", "nameEn": "Amaurotine Strider",
+      "phases": [{"name": "B3 主戰", "mechanics": [
+        {"name": "召喚分身", "type": "add", "description": "boss 召喚分身 add；分配擊殺。", "tips": [{"text": "速秒", "role": "dps"}]},
+        {"name": "連線鎖鏈 Chains", "type": "mechanic", "description": "玩家連線鎖鏈；拉開拉斷。", "tips": [{"text": "拉開拉斷", "role": "tank"}]},
+        {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]},
+        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體；減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
+        {"name": "spread", "type": "spread", "description": "全員散開圓 AoE。", "tips": [{"text": "散", "role": "dps"}]}
+      ]}],
+      "mnemonic": ["分身 → 秒", "鎖鏈 → 拉斷"]
+    }
+  ]
 }
