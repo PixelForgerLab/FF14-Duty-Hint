@@ -1,75 +1,34 @@
 {
     "id": "minstrels_ballad_endsingers_aria",
-    "name": "終末詠歌殲殛戰",
+    "name": "歌頌終末者討滅絕境戰",
     "nameEn": "The Minstrel's Ballad: Endsinger's Aria",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 605,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Endsinger EX：加強 Hubris + Aetherial Gain。",
-        "2）Ultima Aether 球機制強化。",
-        "3）Despair: Final Hours：場地縮小 + 多重 AoE。",
-        "4）狂暴：Outburst 終局全屏即死。"
+        "1）Endsinger EX = Aetheric Boom 全屏強化 + Polyglot 多元素連發。",
+        "2）Endingsymphony 雙 boss 模式 + 連 line AoE。",
+        "3）Ultimate Fate 多 segment + tile + 機制鏈。",
+        "4）Telos MT cone + Magic Vuln。",
+        "5）Eschaton 末段連發 + 強壓 DPS。"
     ],
-    "notes": "EW 6.1 Endsinger EX (Lv 90, ilvl 605)。歌頌終末者 EX。",
+    "notes": "EW 6.05 Endsinger EX (Lv 90)。Endsinger 強化版。",
     "bosses": [
         {
             "name": "歌頌終末者",
             "nameEn": "The Endsinger",
-            "mnemonic": [
-                "Aetherial Gain 以太屬性 buff。",
-                "Hubris 場地多重 AoE + 玩家位置記憶。",
-                "Despair: Final Hours 場地縮小。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Aetherial Gain 以太獲得",
-                            "type": "other",
-                            "description": "玩家獲不同以太屬性 buff。",
-                            "tips": ["依 buff 顏色站位"]
-                        },
-                        {
-                            "name": "Hubris (EX) 傲慢",
-                            "type": "aoe",
-                            "description": "場地多重 AoE + 玩家位置記憶 + 連發。",
-                            "tips": ["移動避開記憶位置"]
-                        },
-                        {
-                            "name": "Ultima 終級",
-                            "type": "aoe",
-                            "description": "Aether 球 + 大爆炸 AoE 強化。",
-                            "tips": ["離開球範圍"]
-                        },
-                        {
-                            "name": "Elegeia 哀歌",
-                            "type": "stack",
-                            "description": "分擔圓 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Despair: Final Hours 絕望終時",
-                            "type": "other",
-                            "description": "場地縮小 + 多重 AoE。",
-                            "tips": ["保持中央"]
-                        },
-                        {
-                            "name": "Outburst (Enrage) 爆發",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Endsinger EX", "mechanics": [
+                { "name": "Aetheric Boom 強化", "type": "raidwide", "description": "高傷全屏 + 流血。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] },
+                { "name": "Aetheric Polyglot", "type": "other", "description": "場上多元素 AoE 組合連發 (火/雷/冰)。", "tips": ["看元素 → 對應位"] },
+                { "name": "Endingsymphony", "type": "aoe", "description": "雙 boss 模式 + 連 line AoE 穿場。", "tips": ["走縫避線"] },
+                { "name": "Ultimate Fate", "type": "other", "description": "場分多 segment + tile 機制 + 機制鏈。", "tips": ["看 tile 站對位"] },
+                { "name": "Telos MT", "type": "tankbuster", "description": "MT cone buster + Magic Vuln 連 hit。", "tips": [{ "text": "MT 開減傷或換手", "role": "tank" }] },
+                { "name": "Eschaton 末段", "type": "raidwide", "description": "末段大全屏連發。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
         }
     ]
 }

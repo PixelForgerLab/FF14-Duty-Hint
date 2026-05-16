@@ -1,6 +1,6 @@
 {
     "id": "thaleia",
-    "name": "豐穰之園塔莉亞",
+    "name": "豐饒之神",
     "nameEn": "Thaleia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,164 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Thaliak 塔利亞克：知識之神 + 水箭機制。",
-        "2）Llymlaen 利姆萊妮：海之神 + 鯨魚 + 海嘯。",
-        "3）Oschon 奧夏：旅之神 + 山岳 AoE。",
-        "4）Rhalgr 拉爾戈 + 終戰：破壞之神 + 全 12 神最終戰。"
+        "1）B1 Llymlaen = 海神波浪 + 雙坦 line + 召海 add。",
+        "2）B2 Oschon = 旅神山頂 cone + 線 + 召旅伴 add。",
+        "3）B3 Althyk + Nald (時間 + 商業) = 雙 boss 切換 + 時間反轉 + 多元素。"
     ],
-    "notes": "EW 6.5 24 人 alliance raid (Lv 90)。Twelve series 第三部 (終)。4 boss：Thaliak → Llymlaen → Oschon → Rhalgr/12 神終戰。",
+    "notes": "EW 6.5 Alliance Raid (Lv 90)。Myths of the Realm 第三彈 = 海 / 旅 / 時+商。",
     "bosses": [
         {
-            "name": "塔利亞克",
-            "nameEn": "Thaliak",
-            "mnemonic": [
-                "知識之神。",
-                "水箭散開 + 河流機制。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Water Arrow 水箭",
-                            "type": "spread",
-                            "description": "玩家圓 AoE 散開。",
-                            "tips": ["clock 散開"]
-                        },
-                        {
-                            "name": "River of Knowledge 知識之河",
-                            "type": "aoe",
-                            "description": "場上水流 AoE。",
-                            "tips": ["閃水流路徑"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "利姆萊妮",
+            "name": "Llymlaen 海神",
             "nameEn": "Llymlaen",
-            "mnemonic": [
-                "海之神。",
-                "Sea Spray 海嘯擊退。",
-                "Krakens 海怪召喚。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Sea Spray 海嘯",
-                            "type": "aoe",
-                            "description": "場上海嘯 AoE + 擊退。",
-                            "tips": ["預判擊退方向"]
-                        },
-                        {
-                            "name": "Krakens 海怪",
-                            "type": "other",
-                            "description": "場上海怪小怪。",
-                            "tips": [
-                                { "text": "DPS 擊殺", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Tidal Wave", "type": "aoe", "description": "場上多 line 海浪 AoE。", "tips": ["走縫避線"] },
+                { "name": "Trident Cleave", "type": "tankbuster", "description": "雙坦 line buster 三叉戟。", "tips": [{ "text": "雙坦分坦各開減傷", "role": "tank" }] },
+                { "name": "Summon Sea Add", "type": "other", "description": "召海怪 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
         },
         {
-            "name": "奧夏",
+            "name": "Oschon 旅神",
             "nameEn": "Oschon",
-            "mnemonic": [
-                "旅之神。",
-                "山岳 AoE + 弓箭機制。",
-                "Mountain Fire 山火。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Mountain Fire 山火",
-                            "type": "aoe",
-                            "description": "場上山火 AoE。",
-                            "tips": ["閃火位置"]
-                        },
-                        {
-                            "name": "Arrow Volley 箭雨",
-                            "type": "aoe",
-                            "description": "場上箭雨 AoE。",
-                            "tips": ["散開避免重疊"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Mountain Cone", "type": "aoe", "description": "Boss cone AoE 山頂風。", "tips": ["看朝向 → 站側"] },
+                { "name": "Wanderer's Path line", "type": "aoe", "description": "場上 line AoE 旅途多方向。", "tips": ["走縫避線"] },
+                { "name": "Summon Wanderer", "type": "other", "description": "召旅伴 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
         },
         {
-            "name": "拉爾戈 + 終戰",
-            "nameEn": "Rhalgr + Final",
-            "mnemonic": [
-                "破壞之神拉爾戈。",
-                "終戰：12 神聯合機制。",
-                "Star Crash 星墜 + Hand of the Destroyer。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Star Crash 星墜",
-                            "type": "raidwide",
-                            "description": "全屏隕石 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Hand of the Destroyer 破壞者之手",
-                            "type": "aoe",
-                            "description": "場上巨手 AoE。",
-                            "tips": ["閃巨手位置"]
-                        },
-                        {
-                            "name": "12 神聯合機制",
-                            "type": "other",
-                            "description": "12 神同時放招。",
-                            "tips": [
-                                "關注多方向預警",
-                                { "text": "全員減傷 + LB", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Enrage",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "name": "Althyk + Nald (時+商)",
+            "nameEn": "Althyk and Nald",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Time Reverse", "type": "other", "description": "時間反轉 → 連 cast 倒帶解 previous 機制。", "tips": ["記住前段 → 反向解"] },
+                { "name": "Dual Cleave", "type": "aoe", "description": "雙 boss 切換 cone AoE。", "tips": ["看 active boss"] },
+                { "name": "Aetheric Burst", "type": "raidwide", "description": "全屏 + 多元素 AoE。", "tips": [{ "text": "全員減傷 + 看元素位", "role": "healer" }] },
+                { "name": "Eschaton 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
         }
     ]
 }

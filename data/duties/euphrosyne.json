@@ -1,6 +1,6 @@
 {
     "id": "euphrosyne",
-    "name": "歡樂之園尤芙洛西妮",
+    "name": "歡愉",
     "nameEn": "Euphrosyne",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,148 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Nophica 諾菲卡：自然之神 + 植物 AoE。",
-        "2）Althyk + Nymeia 阿爾忒克 + 妮美雅：時間 + 命運雙頭目。",
-        "3）Halone 哈羅妮 (EW 版)：槍 + 盾組合。",
-        "4）Menphina 蒙菲娜 + Azeyma 阿澤瑪：月 + 太陽雙神。"
+        "1）B1 Nophica = 大地花瓣 + 召花 add + 全屏。",
+        "2）B2 Halone = 三女神鬥神槍 + line + 雙坦集合。",
+        "3）B3 Menphina = 月光圈 + 凝視 + 雙刀 cone。"
     ],
-    "notes": "EW 6.3 24 人 alliance raid (Lv 90)。Twelve series 第二部。4 boss：Nophica → Althyk+Nymeia → Halone → Menphina+Azeyma。",
+    "notes": "EW 6.3 Alliance Raid (Lv 90)。Myths of the Realm 第二彈 = 大地 / 戰神 / 月神。",
     "bosses": [
         {
-            "name": "諾菲卡",
+            "name": "Nophica 大地母神",
             "nameEn": "Nophica",
-            "mnemonic": [
-                "自然之神。",
-                "植物 AoE + 大鎌機制。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Floral Haze 花霧",
-                            "type": "other",
-                            "description": "場上植物 AoE + 持續傷害。",
-                            "tips": ["避開植物範圍"]
-                        },
-                        {
-                            "name": "Great Scythe 大鎌",
-                            "type": "aoe",
-                            "description": "大鎌 cleave AoE。",
-                            "tips": ["閃對側"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Petal Storm", "type": "aoe", "description": "場上多 花瓣 AoE 圈散。", "tips": ["走縫避圈"] },
+                { "name": "Summon Flower add", "type": "other", "description": "召花 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Bloom Burst", "type": "raidwide", "description": "全屏 + 大地傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
         },
         {
-            "name": "阿爾忒克 + 妮美雅",
-            "nameEn": "Althyk & Nymeia",
-            "mnemonic": [
-                "時間 + 命運雙頭目。",
-                "Spinner's Wheel + Time Bomb。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Time Bomb 時間炸彈",
-                            "type": "other",
-                            "description": "場上時間炸彈倒數爆。",
-                            "tips": ["遠離炸彈位置"]
-                        },
-                        {
-                            "name": "Spinner's Wheel 紡織",
-                            "type": "other",
-                            "description": "線繩配對機制。",
-                            "tips": ["依顏色配對"]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
+            "name": "Halone 戰神",
+            "nameEn": "Halone",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Tetragrammaton", "type": "aoe", "description": "Boss line 神槍 AoE 多方向。", "tips": ["走縫避線"] },
+                { "name": "Spear of the Fury", "type": "tankbuster", "description": "雙坦集合 stack 分擔 buster。", "tips": [{ "text": "雙坦集合 + 開減傷", "role": "tank" }] },
+                { "name": "Frost Burst", "type": "raidwide", "description": "全屏 + 冰傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
         },
         {
-            "name": "哈羅妮 (EW)",
-            "nameEn": "Halone (EW)",
-            "mnemonic": [
-                "槍 + 盾組合。",
-                "Frost Aegis 冰盾。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Frost Aegis 冰盾",
-                            "type": "other",
-                            "description": "盾擊 + 反射機制。",
-                            "tips": ["看盾朝向"]
-                        },
-                        {
-                            "name": "Lance Strike 槍擊",
-                            "type": "aoe",
-                            "description": "場上槍 AoE。",
-                            "tips": ["閃槍位置"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "蒙菲娜 + 阿澤瑪",
-            "nameEn": "Menphina & Azeyma",
-            "mnemonic": [
-                "月 + 太陽雙神。",
-                "Phase 切換明 / 暗。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Lunar Phase 月相",
-                            "type": "aoe",
-                            "description": "月之機制 + 半場 AoE。",
-                            "tips": ["閃月光路徑"]
-                        },
-                        {
-                            "name": "Solar Flare 太陽閃焰",
-                            "type": "aoe",
-                            "description": "太陽 AoE + 圓爆。",
-                            "tips": ["閃太陽位置"]
-                        },
-                        {
-                            "name": "Enrage 全屏即死",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "name": "Menphina 月神",
+            "nameEn": "Menphina",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Moonlight 圈", "type": "spread", "description": "場上多 AoE 圈散落。", "tips": ["散避圈"] },
+                { "name": "Twin Blade Cone", "type": "aoe", "description": "Boss 雙刀 cone AoE 多方向。", "tips": ["看朝向 → 站側"] },
+                { "name": "Lunar Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Eclipse 全屏", "type": "raidwide", "description": "末段大全屏 + 流血。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] }
+            ]}]
         }
     ]
 }

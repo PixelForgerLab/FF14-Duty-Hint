@@ -1,75 +1,34 @@
 {
     "id": "mount_ordeals_extreme",
-    "name": "試煉之山殲殛戰",
+    "name": "苦難之山 (極)",
     "nameEn": "Mount Ordeals (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 615,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Rubicante EX：加強 Conflagration + Crepuscular Light 黎明光。",
-        "2）Phlegethon 火川：場上火川流動 + 阻擋移動。",
-        "3）斗篷模式切換：closed/open 不同機制。",
-        "4）狂暴：Ultimate Pyre 終局秒殺。"
+        "1）Rubicante EX = Inferno 強化 + Flames of Hell 多段 cone。",
+        "2）Flamerake MT 連 buster 強化。",
+        "3）Hand of Hell 召大量火 add + 連 line。",
+        "4）Dancing Flares 強化版 多 AoE + 散標。",
+        "5）Conflag Strike 強化 + 連發 cone。"
     ],
-    "notes": "EW 6.3 Archfiend EX (Lv 90, ilvl 615)。Rubicante EX。",
+    "notes": "DT 6.3 Rubicante EX (Lv 90)。Rubicante 強化版。",
     "bosses": [
         {
             "name": "魯比坎特",
             "nameEn": "Rubicante",
-            "mnemonic": [
-                "Crepuscular Light：黎明光擊退機制。",
-                "Phlegethon 火川流動 + 阻擋。",
-                "斗篷模式判定 closed/open 機制。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Conflagration (EX) 大火災",
-                            "type": "aoe",
-                            "description": "場上多重火 AoE。",
-                            "tips": ["閃火位置"]
-                        },
-                        {
-                            "name": "Crepuscular Light 黎明光",
-                            "type": "other",
-                            "description": "Boss 為心擊退 + 圓 AoE。",
-                            "tips": ["預判擊退方向"]
-                        },
-                        {
-                            "name": "Phlegethon 火川",
-                            "type": "other",
-                            "description": "場上火川流動 + 阻擋移動 + 持續傷害。",
-                            "tips": ["利用火川間隙移動"]
-                        },
-                        {
-                            "name": "Inferno (EX) 地獄火",
-                            "type": "spread",
-                            "description": "玩家圓 AoE + 火耐降低。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "Cape Flap 斗篷展開",
-                            "type": "other",
-                            "description": "boss 斗篷 closed (大圓爆) 或 open (donut + 拖拉)。",
-                            "tips": ["看斗篷狀態預判"]
-                        },
-                        {
-                            "name": "Ultimate Pyre (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Rubicante EX", "mechanics": [
+                { "name": "Inferno 強化", "type": "raidwide", "description": "全屏 + 火傷強化。", "tips": [{ "text": "全員強減傷 + 連補", "role": "healer" }] },
+                { "name": "Flames of Hell (多段)", "type": "aoe", "description": "Boss 連續 cone AoE。", "tips": ["看朝向 → 連續移位"] },
+                { "name": "Flamerake 連 buster", "type": "tankbuster", "description": "MT 連段 buster + Vuln 疊。", "tips": [{ "text": "MT 開無敵或換手", "role": "tank" }] },
+                { "name": "Hand of Hell + 連線", "type": "other", "description": "召大量火 add + 連 line AoE 穿場。", "tips": [{ "text": "DPS 殺 add + 走縫", "role": "dps" }] },
+                { "name": "Conflag Strike 強化", "type": "aoe", "description": "場除東西外火灘 + 連 cone。", "tips": ["東西安全點 + 看 boss 朝向"] },
+                { "name": "Dancing Flares 強化", "type": "spread", "description": "多 AoE 圈散場 + 散標。", "tips": ["散避圈 + 不互打"] }
+            ]}]
         }
     ]
 }

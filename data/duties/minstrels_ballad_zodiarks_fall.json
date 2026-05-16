@@ -1,78 +1,35 @@
 {
     "id": "minstrels_ballad_zodiarks_fall",
-    "name": "極夜詠歌殲殛戰",
+    "name": "索德雷恩討滅絕境戰",
     "nameEn": "The Minstrel's Ballad: Zodiark's Fall",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 595,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Zodiark EX：加強 Algedon + 多 Cold Sentence。",
-        "2）Phaseshift 場地分區強化 + 黑紫配對。",
-        "3）Adikia 多重 AoE 預兆連發。",
-        "4）Paradeigma：場地召喚怪 + Aether 機制。",
-        "5）狂暴：Astral Eclipse 終局即死。"
+        "1）Zodiark EX = 強化版 Algedon 全屏連發 + Astral Eclipse 雙色站位。",
+        "2）Adikia 雙坦 line + Phobos 凝視。",
+        "3）Paradeigma 召大量分身 + 雙頭蛇 line 多波。",
+        "4）Exoteric Pattern α/β/γ 機制鏈強化。",
+        "5）Algedon 末段連發 + 強壓 DPS check。"
     ],
-    "notes": "EW 6.1 Zodiark EX (Lv 90, ilvl 595)。索德雷恩 EX。",
+    "notes": "EW 6.05 Zodiark EX (Lv 90)。Zodiark 強化版。",
     "bosses": [
         {
             "name": "索德雷恩",
             "nameEn": "Zodiark",
-            "mnemonic": [
-                "Algedon 分擔強化版。",
-                "Phaseshift 場地黑紫分區。",
-                "Paradeigma 召喚機制。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Algedon (EX) 痛苦",
-                            "type": "stack",
-                            "description": "場中央分擔圓 + 邊緣 AoE。",
-                            "tips": ["全員疊中央"]
-                        },
-                        {
-                            "name": "Cold Sentence (EX) 寒冷判決",
-                            "type": "stack",
-                            "description": "連線 2 玩家分擔 (多次)。",
-                            "tips": [{ "text": "兩 T 站近接", "role": "tank" }]
-                        },
-                        {
-                            "name": "Phaseshift (EX) 相位變換",
-                            "type": "other",
-                            "description": "場地分區 + 黑/紫配對機制強化。",
-                            "tips": ["依配色找安全區"]
-                        },
-                        {
-                            "name": "Adikia (EX) 不義",
-                            "type": "aoe",
-                            "description": "多重 AoE 預兆連發。",
-                            "tips": ["跟預兆移動"]
-                        },
-                        {
-                            "name": "Paradeigma 範式",
-                            "type": "other",
-                            "description": "場地召喚怪 + Aether 機制。",
-                            "tips": [
-                                { "text": "DPS 擊殺召喚物", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Astral Eclipse (Enrage)",
-                            "type": "raidwide",
-                            "description": "全屏即死。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Zodiark EX", "mechanics": [
+                { "name": "Algedon 強化", "type": "raidwide", "description": "高傷全屏 + 流血，需強減傷。", "tips": [{ "text": "全員強減傷 + 連補", "role": "healer" }] },
+                { "name": "Astral Eclipse 雙色", "type": "other", "description": "場分光暗 + 玩家對應色站位。", "tips": ["看光暗 → 站對色"] },
+                { "name": "Adikia line", "type": "tankbuster", "description": "雙坦 line buster + Magic Vuln。", "tips": [{ "text": "雙坦分坦或換手", "role": "tank" }] },
+                { "name": "Phobos 凝視", "type": "other", "description": "Boss 凝視 → 看 = 致命。", "tips": ["背對 boss"] },
+                { "name": "Paradeigma 多波", "type": "other", "description": "召大量分身 + 雙頭蛇 line AoE 多波。", "tips": ["看分身 + 走縫"] },
+                { "name": "Exoteric Pattern α/β/γ", "type": "other", "description": "機制鏈強化版 (3 段 + 連發)。", "tips": ["照固定順序解"] },
+                { "name": "Algedon 末段", "type": "raidwide", "description": "末段連發全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
         }
     ]
 }

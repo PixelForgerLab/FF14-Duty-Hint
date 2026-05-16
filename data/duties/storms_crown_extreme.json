@@ -1,77 +1,32 @@
 {
     "id": "storms_crown_extreme",
-    "name": "風暴之冠殲殛戰",
+    "name": "風暴之冠 (極)",
     "nameEn": "Storm's Crown (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 605,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Barbariccia EX：加強 Tornado + 4 段 Triclip。",
-        "2）Hair Raid 髮絲攻擊：場上玩家被髮絲鎖定。",
-        "3）Wicked Wheel 邪輪：擴散環形 + 風刀。",
-        "4）狂暴：Deadly Twister 終局秒殺。"
+        "1）Barbariccia EX = Whirlwind 強化 + Hair Cleave 連 cleave。",
+        "2）Hair Raid 多 line AoE + 連發旋風。",
+        "3）Aerial Storm 強化 + 連擊退。",
+        "4）Massive Landslide 連發 + 配 line。"
     ],
-    "notes": "EW 6.2 Archfiend EX (Lv 90, ilvl 605)。Barbariccia EX。",
+    "notes": "DT 6.2 Barbariccia EX (Lv 90)。Barbariccia 強化版。",
     "bosses": [
         {
             "name": "芭芭莉夏",
             "nameEn": "Barbariccia",
-            "mnemonic": [
-                "EX 強化 Tornado + 4 段 Triclip。",
-                "Hair Raid 髮絲攻擊機制。",
-                "Wicked Wheel 邪輪。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Tornado (EX) 龍捲",
-                            "type": "other",
-                            "description": "多個小龍捲 + 玩家位置圓 AoE。",
-                            "tips": ["避開龍捲 + 散開"]
-                        },
-                        {
-                            "name": "Triclip (EX) 4 段斬",
-                            "type": "aoe",
-                            "description": "4 段扇形 cleave。",
-                            "tips": ["閃 4 個方向"]
-                        },
-                        {
-                            "name": "Hair Raid 髮絲攻擊",
-                            "type": "other",
-                            "description": "場上玩家被髮絲鎖定 → 攻擊。",
-                            "tips": ["看標記預判"]
-                        },
-                        {
-                            "name": "Wicked Wheel 邪輪",
-                            "type": "aoe",
-                            "description": "Boss 為心擴散環形 AoE + 風刀。",
-                            "tips": ["閃環形位置"]
-                        },
-                        {
-                            "name": "Maelstrom (EX)",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Deadly Twister (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Barbariccia EX", "mechanics": [
+                { "name": "Whirlwind 強化", "type": "other", "description": "場上召多旋風 + 連續擊退 + line AoE 多方向。", "tips": ["卡縫隙 + 抗擊退"] },
+                { "name": "Hair Cleave 連", "type": "aoe", "description": "Boss 髮絲連 cone 半場 cleave 多段。", "tips": ["看朝向 → 站對側"] },
+                { "name": "Hair Raid 多 line", "type": "aoe", "description": "場上連 line AoE 髮絲穿場。", "tips": ["走縫避連線"] },
+                { "name": "Aerial Storm 強化", "type": "raidwide", "description": "全屏 + 連擊退 + 流血。", "tips": [{ "text": "全員強減傷 + 連補", "role": "healer" }] },
+                { "name": "Massive Landslide 連", "type": "other", "description": "連大擊退 + line AoE 配合。", "tips": ["抗擊退或卡邊"] }
+            ]}]
         }
     ]
 }

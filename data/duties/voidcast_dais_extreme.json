@@ -1,75 +1,33 @@
 {
     "id": "voidcast_dais_extreme",
-    "name": "黑闇祭殿殲殛戰",
+    "name": "虛空召喚台 (極)",
     "nameEn": "The Voidcast Dais (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 625,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Golbez EX：加強 Crescent Blade + Eventide Triad。",
-        "2）Phases of the Shadow：黑暗 phase 切換多種 AoE。",
-        "3）Cloak of Darkness：場地分區 + 黑暗區域。",
-        "4）狂暴：Astral Anomaly 全屏即死。"
+        "1）Golbez EX = Black Fang 連 buster + Cosmic Sigil 強化暗陣。",
+        "2）Summon Shadow Dragon + 連 line AoE 強化。",
+        "3）Phantom Rush 連衝鋒 + cleave 多段。",
+        "4）Aetheric Boom + Megaflare 末段強壓。"
     ],
-    "notes": "EW 6.4 Archfiend EX (Lv 90, ilvl 625)。Golbez EX。",
+    "notes": "DT 6.4 Golbez EX (Lv 90)。Golbez 強化版。",
     "bosses": [
         {
             "name": "哥布茲",
             "nameEn": "Golbez",
-            "mnemonic": [
-                "Eventide Triad：3 段組合機制。",
-                "Phases of the Shadow：黑暗 phase 切換。",
-                "Cloak of Darkness：場地分區。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Crescent Blade (EX) 半月斬",
-                            "type": "aoe",
-                            "description": "180° cleave (EX 強化版)。",
-                            "tips": ["繞 boss 後"]
-                        },
-                        {
-                            "name": "Eventide Triad 三重組合",
-                            "type": "other",
-                            "description": "3 段組合機制 (扇形 + 圓 + 直線)。",
-                            "tips": ["看 cast 順序預判"]
-                        },
-                        {
-                            "name": "Phases of the Shadow 暗相",
-                            "type": "other",
-                            "description": "黑暗 phase 切換多種 AoE。",
-                            "tips": ["記憶 phase 順序"]
-                        },
-                        {
-                            "name": "Cloak of Darkness 黑暗外套",
-                            "type": "aoe",
-                            "description": "場地分區 + 黑暗區域。",
-                            "tips": ["找安全分區站"]
-                        },
-                        {
-                            "name": "Mist Dragon (EX) 霧龍",
-                            "type": "aoe",
-                            "description": "Mist Dragon 分身 + 增強機制。",
-                            "tips": ["看分身朝向"]
-                        },
-                        {
-                            "name": "Astral Anomaly (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Golbez EX", "mechanics": [
+                { "name": "Black Fang 連 buster", "type": "tankbuster", "description": "MT 連段 cone buster + 暗 debuff。", "tips": [{ "text": "MT 開無敵或換手", "role": "tank" }] },
+                { "name": "Summon Shadow Dragon", "type": "aoe", "description": "召暗龍 + 連 line AoE 多段穿場。", "tips": ["走縫避連線"] },
+                { "name": "Cosmic Sigil 強化", "type": "aoe", "description": "場上暗魔法陣 → 多 AoE 圈 + 連發。", "tips": ["走縫避陣"] },
+                { "name": "Phantom Rush 連衝鋒", "type": "aoe", "description": "Boss 連衝鋒 line + cleave 多段。", "tips": ["側步 + 看朝向移位"] },
+                { "name": "Aetheric Boom + 散", "type": "raidwide", "description": "全屏 + 場上散標 AoE。", "tips": [{ "text": "全員減傷 + 散開", "role": "healer" }] },
+                { "name": "Megaflare 末段", "type": "raidwide", "description": "末段大全屏連發。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
         }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "aglaia",
-    "name": "光之園阿格萊亞",
+    "name": "華麗的閃光",
     "nameEn": "Aglaia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,151 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Byregot 比利哥：手藝 boss + 鐵鎚機制。",
-        "2）Nymeia 妮美雅：命運紡織 + 線繩配對。",
-        "3）Halone 哈羅妮：盾擊 + 三方向 cleave。",
-        "4）Trinity (3 神聯合)：3 主神同時對戰，組合機制。"
+        "1）B1 Byregot = 雷錘 line + 召工匠 add + 全屏。",
+        "2）B2 Nymeia = 紡織輪盤 + tether 玩家 + 多色機制。",
+        "3）B3 Azeyma = 太陽光線 + 凝視 + 4 cardinal 光柱。"
     ],
-    "notes": "EW 6.1 24 人 alliance raid (Lv 90)。Twelve series 第一部，三神之園阿格萊亞 (Aglaia)。4 boss：Byregot → Nymeia → Halone → Trinity。",
+    "notes": "EW 6.1 Alliance Raid (Lv 90)。Myths of the Realm 第一彈 = 工匠 / 命運 / 太陽女神。",
     "bosses": [
         {
-            "name": "比利哥",
+            "name": "Byregot 工匠神",
             "nameEn": "Byregot",
-            "mnemonic": [
-                "Hammer 鐵鎚機制。",
-                "Bygone Bolt：直線雷射。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Hammer Strike 鐵鎚",
-                            "type": "aoe",
-                            "description": "場上鐵鎚 AoE。",
-                            "tips": ["閃鎚位置"]
-                        },
-                        {
-                            "name": "Byregot's Strike 雷射",
-                            "type": "aoe",
-                            "description": "直線雷射 AoE。",
-                            "tips": ["閃直線預警"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Hammer line", "type": "aoe", "description": "Boss 雷錘 line AoE 多方向。", "tips": ["走縫避線"] },
+                { "name": "Summon Craftsman add", "type": "other", "description": "召工匠 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Forge Burst", "type": "raidwide", "description": "全屏 + 場上多 AoE 圈。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] }
+            ]}]
         },
         {
-            "name": "妮美雅",
+            "name": "Nymeia 命運女神",
             "nameEn": "Nymeia",
-            "mnemonic": [
-                "命運紡織機制。",
-                "線繩配對。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Spinner's Wheel 紡織",
-                            "type": "other",
-                            "description": "場上線繩 + 配對機制。",
-                            "tips": ["依線繩顏色配對"]
-                        },
-                        {
-                            "name": "Web Tug 拉繩",
-                            "type": "other",
-                            "description": "拉繩牽引玩家。",
-                            "tips": ["預判牽引方向"]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Spinning Wheel", "type": "other", "description": "場上紡織輪盤旋轉 + 多色 AoE。", "tips": ["看輪盤 → 對應位"] },
+                { "name": "Fate Tether", "type": "other", "description": "tether 玩家 + 強制位移。", "tips": ["看 tether 走位"] },
+                { "name": "Aetheric Boom", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
         },
         {
-            "name": "哈羅妮",
-            "nameEn": "Halone",
-            "mnemonic": [
-                "三盾擊 + cleave 機制。",
-                "Tempering Lance 槍 AoE。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Tempering Lance 鎖槍",
-                            "type": "aoe",
-                            "description": "對玩家位置直線 AoE。",
-                            "tips": ["散開避免重疊"]
-                        },
-                        {
-                            "name": "Three-pronged Spear 三叉戟",
-                            "type": "aoe",
-                            "description": "三方向 cleave。",
-                            "tips": ["找安全方向"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "三神聯合",
-            "nameEn": "Eulogia (Trinity)",
-            "mnemonic": [
-                "3 主神同時對戰 (Byregot + Nymeia + Halone)。",
-                "組合機制：每個神同時放招。",
-                "終戰 Trinity 大招。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Combined Attack 組合攻擊",
-                            "type": "other",
-                            "description": "3 神同時放招。",
-                            "tips": ["關注 3 個方向 + 預判機制疊加"]
-                        },
-                        {
-                            "name": "Trinity 大招",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [
-                                { "text": "全員減傷 + LB", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Enrage",
-                            "type": "raidwide",
-                            "description": "狂暴 AoE。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "name": "Azeyma 太陽女神",
+            "nameEn": "Azeyma",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Solar Ray", "type": "aoe", "description": "Boss line 光線 AoE。", "tips": ["側步閃"] },
+                { "name": "Sun Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Cardinal Pillar", "type": "aoe", "description": "場 4 cardinal 光柱 AoE。", "tips": ["站 intercardinal"] },
+                { "name": "Radiant Flame", "type": "raidwide", "description": "全屏 + 強光傷。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] }
+            ]}]
         }
     ]
 }
