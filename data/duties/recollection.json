@@ -1,198 +1,242 @@
 {
-    "id": "recollection",
-    "name": "永恆女王殲滅戰",
-    "nameEn": "Recollection",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": 700,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）合法武力：左右手按順序發光 → 半場 AoE。",
-        "2）以太稅：場地網格 + 3 次扇形吸入致死 (左/中/右不重複)。",
-        "3）終端發射：點名跟隨圓 AoE 預兆 + 王權圓舞曲。",
-        "4）虛景切換 (風/土)：風 = 沙漏 + 強風橫向擊退；土 = 兩塊不相連 + 重力異常 + 護城牆需穿洞。",
-        "5）絕對君權：4 DPS 距離衰減 + 制動/石化光 + 紅三角集合機制。",
-        "6）P2 王冠之力 (環形)、放逐射線 (5 連 + 扇形)、金曦之決意。"
-    ],
-    "notes": "DT 7.0 MSQ Trial (Lv 100, ilvl 700)。Sphene (永恆女王) Normal。MSQ 第二個 trial。雙形態：P1 多元素場地切換 + P2 王冠形態。核心：以太稅扇形吸入 + 護城牆洞穿越 + 絕對君權多重 debuff 解。",
-    "bosses": [
-        {
-            "name": "永恆女王",
-            "nameEn": "Sphene (Eternal Queen)",
-            "mnemonic": [
-                "合法武力：兩次發光順序決定半場順序 (也可能同邊兩次)。",
-                "以太稅 3 次扇形吸入：左/中/右不重複。",
-                "風世界：強風從一側橫向擊退；下行突風 = 場上一點為心擊退。",
-                "土世界：重力異常時不會跌落；護城牆必須從洞穿過。",
-                "絕對君權：石化光 = 背對 boss；制動 = 待 debuff 結束；紅三角 = 集合分擔。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - 基礎機制",
-                    "mechanics": [
-                        {
-                            "name": "合法武力 / Legitimate Force",
-                            "type": "aoe",
-                            "description": "兩手按順序先後兩次發光 → 對左/右半場 AoE。可能兩次同邊。",
-                            "tips": ["看發光順序預判"]
-                        },
-                        {
-                            "name": "訴諸武力 / Force of Will",
-                            "type": "tankbuster",
-                            "description": "對 1 仇高傷單體。",
-                            "tips": [
-                                { "text": "MT 開減傷接", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "王土 / Reign of Tural",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "以太稅 / Aether Tax",
-                            "type": "other",
-                            "description": "Boss「我們需要以太！」→ 場地網格 + 全員持續傷 + 場地左/中/右扇形吸入致死 (3 次不重複)。",
-                            "tips": ["看扇形扭曲位置 → 跑對側"]
-                        },
-                        {
-                            "name": "終端發射 / Terminal Beam",
-                            "type": "aoe",
-                            "description": "Boss「展開小型單位！」→ 點名所有玩家跟隨圓 AoE → 範圍圈出綠箭頭 → 王權圓舞曲魔法 AoE。",
-                            "tips": ["看箭頭預判位置移動"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P1 - 風之世界",
-                    "mechanics": [
-                        {
-                            "name": "虛景切換 (風) / Vista Shift",
-                            "type": "raidwide",
-                            "description": "Boss「欣賞聯結起來的世界吧！」→ 全屏 AoE + 場地變沙漏形。走出活動範圍跌落致死。",
-                            "tips": [
-                                { "text": "減傷 + 注意沙漏邊界", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "終端發射 (風世界版) / Terminal Beam",
-                            "type": "aoe",
-                            "description": "左半場炮台 + 連線 2 名玩家 (位置被牽引) → 直線 AoE。",
-                            "tips": ["連線者拉動炮台到安全角度"]
-                        },
-                        {
-                            "name": "下行突風 / Downburst",
-                            "type": "other",
-                            "description": "場上一點為心全屏擊退。親疏自行/沉穩詠唱有效。",
-                            "tips": ["預判擊退方向 + 開抗擊退"]
-                        },
-                        {
-                            "name": "王權殘暴 / Tyrannical Sovereignty",
-                            "type": "aoe",
-                            "description": "召喚數個終端機組成圓 → 環形 AoE 對範圍外。",
-                            "tips": ["站圓內安全區"]
-                        },
-                        {
-                            "name": "強風 / Mighty Whirlwind",
-                            "type": "aoe",
-                            "description": "AoE + 從場一側橫向擊退接近場地寬度。",
-                            "tips": ["預判擊退方向往一側站"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P1 - 土之世界",
-                    "mechanics": [
-                        {
-                            "name": "虛景切換 (土) / Vista Shift",
-                            "type": "raidwide",
-                            "description": "全屏 + 場地變左右兩塊不相連矩形。全員獲重力異常 (高度提升不會跌落)。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" },
-                                "保留重力異常別摔落"
-                            ]
-                        },
-                        {
-                            "name": "護城牆 / Wallcrasher",
-                            "type": "other",
-                            "description": "Boss 召喚牆 + 上下方形孔。牆撞向玩家未從洞穿過 = 激突物理傷 + 受傷加重 + 擊退至即死區。",
-                            "tips": [
-                                "看牆洞位置調整高度穿過",
-                                "**重力異常時可飛起來穿洞**"
-                            ]
-                        },
-                        {
-                            "name": "重力扭曲 (失去 / 獲得浮力)",
-                            "type": "other",
-                            "description": "提示「重力發生扭曲，身體開始失去浮力...」= 重力異常消失。後續再次獲得 = 重力異常恢復。",
-                            "tips": ["看提示判斷是否可以飛"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P1 - 絕對君權",
-                    "mechanics": [
-                        {
-                            "name": "絕對君權 / Absolute Authority",
-                            "type": "other",
-                            "description": "Boss「空間控制完成！開始進行抹除！」→ 4 DPS 距離衰減傷 + 4 D/T 15s 制動 + 雙補 18s 石化光 (未背對 = 1s 石化)。同時紅三角集合點名 + 多輪圓 AoE。",
-                            "tips": [
-                                "4 DPS 拉外圍",
-                                { "text": "補職背對 boss", "role": "healer" },
-                                "紅三角者集合分擔"
-                            ]
-                        },
-                        {
-                            "name": "分治法 / Divide and Conquer",
-                            "type": "aoe",
-                            "description": "Boss「超越死亡吧！」→ 8 連直線 AoE 不可閃 → 全員再次直線。",
-                            "tips": ["散開讓直線不重疊"]
-                        },
-                        {
-                            "name": "絕對君權 (P2 切換版)",
-                            "type": "raidwide",
-                            "description": "Boss 血量低時跳過複讀，只判定距離衰減 + 全員擊倒進入 P2。",
-                            "tips": [
-                                { "text": "DPS 推血將 boss 推到階段切換", "role": "dps" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - 王冠形態",
-                    "mechanics": [
-                        {
-                            "name": "王冠之力 / Crown of the Queen",
-                            "type": "aoe",
-                            "description": "對 boss 前方小圓區外環形 AoE。",
-                            "tips": ["貼 boss 正前方"]
-                        },
-                        {
-                            "name": "放逐射線 / Banishray",
-                            "type": "aoe",
-                            "description": "5 連全屏 AoE + boss 前方 5 塊扇形區先後 2 次。",
-                            "tips": [
-                                { "text": "全員大減傷 + 連補", "role": "healer" },
-                                "看扇形方向移動"
-                            ]
-                        },
-                        {
-                            "name": "金曦之決意 / Aurora Resolve",
-                            "type": "raidwide",
-                            "description": "Boss 最終 AoE 機制。",
-                            "tips": [
-                                { "text": "減傷", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "recollection",
+    "name":  "永恆女王殲滅戰 - 永恆女王斯費納",
+    "nameEn":  "Recollection - Queen Eternal",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  700,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）合法武力：左右手按順序發光 → 半場 AoE。",
+                     "2）以太稅：場地網格 + 3 次扇形吸入致死 (左/中/右不重複)。",
+                     "3）終端發射：點名跟隨圓 AoE 預兆 + 王權圓舞曲。",
+                     "4）虛景切換 (風/土)：風 = 沙漏 + 強風橫向擊退；土 = 兩塊不相連 + 重力異常 + 護城牆需穿洞。",
+                     "5）絕對君權：4 DPS 距離衰減 + 制動/石化光 + 紅三角集合機制。",
+                     "6）P2 王冠之力 (環形)、放逐射線 (5 連 + 扇形)、金曦之決意。"
+                 ],
+    "notes":  "DT 7.0 MSQ Trial (Lv 100, ilvl 700)。Sphene (永恆女王) Normal。MSQ 第二個 trial。雙形態：P1 多元素場地切換 + P2 王冠形態。核心：以太稅扇形吸入 + 護城牆洞穿越 + 絕對君權多重 debuff 解。",
+    "bosses":  [
+                   {
+                       "name":  "永恆女王",
+                       "nameEn":  "Sphene (Eternal Queen)",
+                       "mnemonic":  [
+                                        "合法武力：兩次發光順序決定半場順序 (也可能同邊兩次)。",
+                                        "以太稅 3 次扇形吸入：左/中/右不重複。",
+                                        "風世界：強風從一側橫向擊退；下行突風 = 場上一點為心擊退。",
+                                        "土世界：重力異常時不會跌落；護城牆必須從洞穿過。",
+                                        "絕對君權：石化光 = 背對 boss；制動 = 待 debuff 結束；紅三角 = 集合分擔。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - 基礎機制",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "合法武力 / Legitimate Force",
+                                                                "type":  "aoe",
+                                                                "description":  "兩手按順序先後兩次發光 → 對左/右半場 AoE。可能兩次同邊。",
+                                                                "tips":  [
+                                                                             "看發光順序預判"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "訴諸武力 / Force of Will",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇高傷單體。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷接",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "王土 / Reign of Tural",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "以太稅 / Aether Tax",
+                                                                "type":  "other",
+                                                                "description":  "Boss「我們需要以太！」→ 場地網格 + 全員持續傷 + 場地左/中/右扇形吸入致死 (3 次不重複)。",
+                                                                "tips":  [
+                                                                             "看扇形扭曲位置 → 跑對側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "終端發射 / Terminal Beam",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss「展開小型單位！」→ 點名所有玩家跟隨圓 AoE → 範圍圈出綠箭頭 → 王權圓舞曲魔法 AoE。",
+                                                                "tips":  [
+                                                                             "看箭頭預判位置移動"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P1 - 風之世界",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "虛景切換 (風) / Vista Shift",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss「欣賞聯結起來的世界吧！」→ 全屏 AoE + 場地變沙漏形。走出活動範圍跌落致死。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 注意沙漏邊界",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "終端發射 (風世界版) / Terminal Beam",
+                                                                "type":  "aoe",
+                                                                "description":  "左半場炮台 + 連線 2 名玩家 (位置被牽引) → 直線 AoE。",
+                                                                "tips":  [
+                                                                             "連線者拉動炮台到安全角度"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "下行突風 / Downburst",
+                                                                "type":  "other",
+                                                                "description":  "場上一點為心全屏擊退。親疏自行/沉穩詠唱有效。",
+                                                                "tips":  [
+                                                                             "預判擊退方向 + 開抗擊退"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "王權殘暴 / Tyrannical Sovereignty",
+                                                                "type":  "aoe",
+                                                                "description":  "召喚數個終端機組成圓 → 環形 AoE 對範圍外。",
+                                                                "tips":  [
+                                                                             "站圓內安全區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "強風 / Mighty Whirlwind",
+                                                                "type":  "aoe",
+                                                                "description":  "AoE + 從場一側橫向擊退接近場地寬度。",
+                                                                "tips":  [
+                                                                             "預判擊退方向往一側站"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P1 - 土之世界",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "虛景切換 (土) / Vista Shift",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 + 場地變左右兩塊不相連矩形。全員獲重力異常 (高度提升不會跌落)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "保留重力異常別摔落"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "護城牆 / Wallcrasher",
+                                                                "type":  "other",
+                                                                "description":  "Boss 召喚牆 + 上下方形孔。牆撞向玩家未從洞穿過 = 激突物理傷 + 受傷加重 + 擊退至即死區。",
+                                                                "tips":  [
+                                                                             "看牆洞位置調整高度穿過",
+                                                                             "**重力異常時可飛起來穿洞**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "重力扭曲 (失去 / 獲得浮力)",
+                                                                "type":  "other",
+                                                                "description":  "提示「重力發生扭曲，身體開始失去浮力...」= 重力異常消失。後續再次獲得 = 重力異常恢復。",
+                                                                "tips":  [
+                                                                             "看提示判斷是否可以飛"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P1 - 絕對君權",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "絕對君權 / Absolute Authority",
+                                                                "type":  "other",
+                                                                "description":  "Boss「空間控制完成！開始進行抹除！」→ 4 DPS 距離衰減傷 + 4 D/T 15s 制動 + 雙補 18s 石化光 (未背對 = 1s 石化)。同時紅三角集合點名 + 多輪圓 AoE。",
+                                                                "tips":  [
+                                                                             "4 DPS 拉外圍",
+                                                                             {
+                                                                                 "text":  "補職背對 boss",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "紅三角者集合分擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "分治法 / Divide and Conquer",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss「超越死亡吧！」→ 8 連直線 AoE 不可閃 → 全員再次直線。",
+                                                                "tips":  [
+                                                                             "散開讓直線不重疊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "絕對君權 (P2 切換版)",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 血量低時跳過複讀，只判定距離衰減 + 全員擊倒進入 P2。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 推血將 boss 推到階段切換",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - 王冠形態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "王冠之力 / Crown of the Queen",
+                                                                "type":  "aoe",
+                                                                "description":  "對 boss 前方小圓區外環形 AoE。",
+                                                                "tips":  [
+                                                                             "貼 boss 正前方"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "放逐射線 / Banishray",
+                                                                "type":  "aoe",
+                                                                "description":  "5 連全屏 AoE + boss 前方 5 塊扇形區先後 2 次。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員大減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "看扇形方向移動"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "金曦之決意 / Aurora Resolve",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 最終 AoE 機制。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

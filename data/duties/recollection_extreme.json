@@ -1,296 +1,344 @@
 {
-    "id": "recollection_extreme",
-    "name": "永恆女王憶想殲殛戰",
-    "nameEn": "Recollection (Extreme)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": 720,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）合法武力：左右手按順序發光 → 半場 AoE (先上後下)。",
-        "2）分治法：8 連直線 AoE 不重複玩家 → 後續對同位置再放 1 次。",
-        "3）以太稅：場地網格 + 3 次扇形吸入致死 + 俱是君恩雙補分擔。",
-        "4）三世界切換 (風/土/冰)：風 = 沙漏 + 東/西風紋擊退；土 = 兩塊浮空裝置 + 8 土圈；冰 = 三長條 + 4 冰橋。",
-        "5）絕對君權：引爆 (接觸他人) + 光爆 (距離衰減) + 重爆 (分擔圓)。",
-        "6）激進切換：2 種場地疊加旋轉 + 玩家被擊飛降落新場地。",
-        "7）狂暴：絕對保全強制秒殺。"
-    ],
-    "notes": "DT 7.x EX 第三隻 (Lv 100, ilvl 720)。Sphene (永恆女王) EX，DT MSQ Sphene 復活版本。核心：三世界場地切換 (風/土/冰) + 絕對君權三種引爆 + 激進切換場地疊加。boss 血量 <2.5% 觸發永恆君權，若 HP=1 進入第二形態，否則團滅。",
-    "bosses": [
-        {
-            "name": "永恆女王",
-            "nameEn": "Sphene (Eternal Queen)",
-            "mnemonic": [
-                "合法武力：先發光手臂 = 上側半場先，後發光 = 下側半場後。",
-                "風世界沙漏 + 東/西風紋 = 反向擊退；土世界浮空裝置 = 重力異常免摔；冰世界 4 冰橋 = 單人通行。",
-                "絕對君權：引爆 (找隊友靠近)、光爆 (跑外圍)、重爆 (分擔)。",
-                "激進切換：場地疊加 → 玩家擊飛降落新場地。",
-                "Boss 血 <2.5% 進入第二形態（HP=1 觸發），否則永恆君權團滅。"
-            ],
-            "phases": [
-                {
-                    "name": "Phase 1 - 基礎機制",
-                    "mechanics": [
-                        {
-                            "name": "合法武力 / Legitimate Force",
-                            "type": "aoe",
-                            "description": "左右兩手按隨機順序發光 → 按發光順序對左/右半場 AoE + 受傷加重。先發光 = 上側 (先發動)；後發光 = 下側。",
-                            "tips": ["記住兩手發光順序預判半場移動"]
-                        },
-                        {
-                            "name": "訴諸武力 / Force of Will",
-                            "type": "tankbuster",
-                            "description": "點 1 仇 2 次單體高傷 + 打擊耐性降低。",
-                            "tips": [
-                                { "text": "兩 T 換手吃或無敵", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "王土 / Reign of Tural",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "分治法 / Divide and Conquer",
-                            "type": "aoe",
-                            "description": "Boss「超越死亡吧！」→ 對 8 名玩家不重複 8 次直線 AoE + 9s 魔法受傷加重 → 後續對覆蓋範圍再放 1 次。",
-                            "tips": [
-                                "8 人按指派順序誘導直線到場邊",
-                                "之後避開先前覆蓋區"
-                            ]
-                        },
-                        {
-                            "name": "終端發射 / Terminal Beam",
-                            "type": "aoe",
-                            "description": "Boss「展開小型單位！」→ 場地 4 邊各 1 雷射炮塔 + 連線 2 玩家 (中點為炮塔位置) → 前方直線 AoE。同時 Boss 點所有玩家圓 AoE + 魔法受傷加重。",
-                            "tips": ["連線者拉動炮塔角度", "其他人散開避免雷射 + 圓 AoE 重疊"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2 - 以太稅",
-                    "mechanics": [
-                        {
-                            "name": "以太稅 / Aether Tax",
-                            "type": "other",
-                            "description": "Boss「我們需要以太！」→ 場地網格 + 全員持續傷害 + 場地左/中/右扇形依序扭曲吸入致死。共 3 次不重複。",
-                            "tips": [
-                                "看哪個扇形扭曲 → 跑到對側",
-                                { "text": "持續高傷 → 連補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "俱是君恩 / Beneficence",
-                            "type": "stack",
-                            "description": "每次以太稅吸入後對 2 補職分擔直線 AoE。",
-                            "tips": [
-                                { "text": "雙補帶 3-4 人分擔", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 3 - 風之世界",
-                    "mechanics": [
-                        {
-                            "name": "虛景切換 (風) / Vista Shift",
-                            "type": "raidwide",
-                            "description": "Boss「欣賞聯結起來的世界吧！」→ 全屏高傷 + 擊飛 + 場地變沙漏形 (走出活動範圍跌落)。",
-                            "tips": [
-                                { "text": "減傷 + 預判落地", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "風之律法 / Wind Law",
-                            "type": "stack",
-                            "description": "點 2 補職分擔圓 AoE + 19s 東風紋/西風紋。倒數結束時被點玩家被擊退反向 + 留下大龍卷風。",
-                            "tips": [
-                                "東風紋 = 向西擊退 (站東邊)",
-                                "西風紋 = 向東擊退 (站西邊)",
-                                "**禁止觸碰大龍卷風**"
-                            ]
-                        },
-                        {
-                            "name": "折磨之鏈 / Suffering Chain",
-                            "type": "other",
-                            "description": "T/H 與 D 連 22s 苦痛鎖鏈，未拉斷 = 受傷。",
-                            "tips": ["支援職 + DPS 配對拉開拉斷"]
-                        },
-                        {
-                            "name": "世界破碎 / World's End",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 場地還原。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 4 - 土之世界",
-                    "mechanics": [
-                        {
-                            "name": "虛景切換 (土) / Vista Shift",
-                            "type": "raidwide",
-                            "description": "全屏 + 擊飛 + 場地變左右兩塊不相連矩形。1T+1H+2D 落左、其餘 4 人落右。兩側中央有浮空裝置 (重力異常 + 固定，免跌落)。",
-                            "tips": ["熟悉左右兩側分組"]
-                        },
-                        {
-                            "name": "土之律法 + 8 土圈 / Earth Law + Bombs",
-                            "type": "other",
-                            "description": "場地周圍紫色光效 (無實際效果) + 兩側各 4 = 8 個土圈，每個需 1 名**無重力異常**玩家踩。漏踩 = 大爆炸全屏。",
-                            "tips": [
-                                "**無重力異常**玩家踩土圈",
-                                "有重力異常的浮空者不能踩"
-                            ]
-                        },
-                        {
-                            "name": "重力帝國 / Domain of Gravity",
-                            "type": "aoe",
-                            "description": "場中心分界，兩側各連 1 玩家 45° 扇形 + 點 1 玩家圓 AoE。同時 4 土圈再現。",
-                            "tips": [
-                                "兩側連線者拉外側放扇形",
-                                "其他人散開避圓 + 4 人踩土圈"
-                            ]
-                        },
-                        {
-                            "name": "隕石衝擊 / Meteor Impact",
-                            "type": "spread",
-                            "description": "全員隕石標記。地板玩家 = 圓 AoE + 落岩石；浮空玩家 = 單體無圓 AoE。岩石互近自爆全屏。共 2 次。",
-                            "tips": [
-                                "地板玩家分散 (岩石不要靠近)",
-                                "浮空玩家可避免落岩石"
-                            ]
-                        },
-                        {
-                            "name": "重力炸裂 / Gravity Burst",
-                            "type": "aoe",
-                            "description": "兩側手中各 4 = 8 重力球 → 每次對兩側各 1 玩家高傷小圓 AoE。**無重力異常 + 岩石後**可抵擋 (清除岩石)。",
-                            "tips": ["利用岩石擋重力炸裂"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 5 - 絕對君權",
-                    "mechanics": [
-                        {
-                            "name": "絕對君權 / Absolute Authority",
-                            "type": "other",
-                            "description": "Boss「空間控制完成！開始進行抹除！」→ 全員 14s 引爆 + 4 支援職或 4 DPS 10s 光爆 + 1 反組 14s 重爆。全員持續傷害 + 4 人腳下圓 AoE × 4 次 + 最後全屏 + 擊退。",
-                            "tips": [
-                                "引爆：與其他玩家接觸降傷",
-                                "光爆：跑外圍 (距離衰減全屏)",
-                                "重爆：找 3-4 人分擔",
-                                { "text": "連補 + 大盾", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 6 - 冰之世界",
-                    "mechanics": [
-                        {
-                            "name": "虛景切換 (冰) / Vista Shift",
-                            "type": "raidwide",
-                            "description": "全屏 + 擊飛 + 場地變 3 長條矩形 (出現時無冰橋)。",
-                            "tips": [
-                                { "text": "減傷", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "冰之律法 + 冰橋 / Ice Law",
-                            "type": "other",
-                            "description": "全員 4s 雪花標記倒數 → 1s 冷卻 (不動 = 12s 凍結)。場上 4 塊冰橋每塊最多 1 人通行 (2 人 = 碎裂)。",
-                            "tips": [
-                                "**持續移動**",
-                                "1 人 1 冰橋通行"
-                            ]
-                        },
-                        {
-                            "name": "突進 / Charge",
-                            "type": "aoe",
-                            "description": "場南 4 冰柱 + 場東/西 4 冰柱 → 連線 4 支援 + 4 DPS 直線 AoE。粉色 = 高傷 + 受傷加重；紫色 = 中傷。",
-                            "tips": [
-                                "被連線玩家拉開距離變紫色",
-                                "中途死亡 = 飛散圓 AoE 高傷"
-                            ]
-                        },
-                        {
-                            "name": "陰鬱風暴 / Soulchill",
-                            "type": "stack",
-                            "description": "點玩家分擔直線 + 連線 2 玩家可截 → 大圓 AoE + 24s 冰耐降低。共 4 次。",
-                            "tips": [
-                                "首次點補職",
-                                "T 截連線承接圓 AoE"
-                            ]
-                        },
-                        {
-                            "name": "永恆君權 / Eternal Authority",
-                            "type": "raidwide",
-                            "description": "Boss HP <2.5% 觸發。HP=1 → 全屏 + 切換第二形態；HP≠1 → 強制秒殺團滅。",
-                            "tips": [
-                                { "text": "DPS 必須將 HP 精準推到 1", "role": "dps" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 7 - 激進切換",
-                    "mechanics": [
-                        {
-                            "name": "激進切換 / Drastic Vista Shift",
-                            "type": "other",
-                            "description": "Boss「欣、欣賞...聯結起來的、的的世界吧！」→ 場地左右隨機出現風/土/冰 2 種疊加 + 旋轉 + 玩家擊飛降落新位置 + 點所有玩家圓 AoE。共 2 次 (第二次必為剩餘 2 種)。",
-                            "tips": [
-                                "看 2 種場地哪邊有冰橋判定位置",
-                                "降落後立刻處理新場地機制"
-                            ]
-                        },
-                        {
-                            "name": "空間扭曲 / Spatial Distortion",
-                            "type": "aoe",
-                            "description": "場前 2 或 3 組向前移動的步進圓 AoE。",
-                            "tips": ["跟著步進移動到後方"]
-                        },
-                        {
-                            "name": "女王之手 / Queen's Hand",
-                            "type": "other",
-                            "description": "兩側生塔 → 1 玩家踩接高傷。漏踩 = 超高傷全屏 + 場前變即死區 + boss 後移。",
-                            "tips": ["2 人各踩 1 塔"]
-                        },
-                        {
-                            "name": "垂死的記憶 / Last Memory",
-                            "type": "raidwide",
-                            "description": "8 連全屏 AoE。",
-                            "tips": [
-                                { "text": "連續大減傷 + 補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "放逐射線 / Banishray",
-                            "type": "stack",
-                            "description": "點隨機玩家 8 連分擔直線 (最後一次間隔長 + 高傷)。",
-                            "tips": [
-                                "全員疊接 8 連分擔"
-                            ]
-                        },
-                        {
-                            "name": "絕對保全 (Enrage)",
-                            "type": "raidwide",
-                            "description": "Boss「超越死亡吧！」狂暴技強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "recollection_extreme",
+    "name":  "永恆女王憶想殲殛戰 - 永恆女王斯費納",
+    "nameEn":  "Recollection (Extreme) - Queen Eternal",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  720,
+    "jobLevelSync":  100,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）合法武力：左右手按順序發光 → 半場 AoE (先上後下)。",
+                     "2）分治法：8 連直線 AoE 不重複玩家 → 後續對同位置再放 1 次。",
+                     "3）以太稅：場地網格 + 3 次扇形吸入致死 + 俱是君恩雙補分擔。",
+                     "4）三世界切換 (風/土/冰)：風 = 沙漏 + 東/西風紋擊退；土 = 兩塊浮空裝置 + 8 土圈；冰 = 三長條 + 4 冰橋。",
+                     "5）絕對君權：引爆 (接觸他人) + 光爆 (距離衰減) + 重爆 (分擔圓)。",
+                     "6）激進切換：2 種場地疊加旋轉 + 玩家被擊飛降落新場地。",
+                     "7）狂暴：絕對保全強制秒殺。"
+                 ],
+    "notes":  "DT 7.x EX 第三隻 (Lv 100, ilvl 720)。Sphene (永恆女王) EX，DT MSQ Sphene 復活版本。核心：三世界場地切換 (風/土/冰) + 絕對君權三種引爆 + 激進切換場地疊加。boss 血量 \u003c2.5% 觸發永恆君權，若 HP=1 進入第二形態，否則團滅。",
+    "bosses":  [
+                   {
+                       "name":  "永恆女王",
+                       "nameEn":  "Sphene (Eternal Queen)",
+                       "mnemonic":  [
+                                        "合法武力：先發光手臂 = 上側半場先，後發光 = 下側半場後。",
+                                        "風世界沙漏 + 東/西風紋 = 反向擊退；土世界浮空裝置 = 重力異常免摔；冰世界 4 冰橋 = 單人通行。",
+                                        "絕對君權：引爆 (找隊友靠近)、光爆 (跑外圍)、重爆 (分擔)。",
+                                        "激進切換：場地疊加 → 玩家擊飛降落新場地。",
+                                        "Boss 血 \u003c2.5% 進入第二形態（HP=1 觸發），否則永恆君權團滅。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "Phase 1 - 基礎機制",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "合法武力 / Legitimate Force",
+                                                                "type":  "aoe",
+                                                                "description":  "左右兩手按隨機順序發光 → 按發光順序對左/右半場 AoE + 受傷加重。先發光 = 上側 (先發動)；後發光 = 下側。",
+                                                                "tips":  [
+                                                                             "記住兩手發光順序預判半場移動"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "訴諸武力 / Force of Will",
+                                                                "type":  "tankbuster",
+                                                                "description":  "點 1 仇 2 次單體高傷 + 打擊耐性降低。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 換手吃或無敵",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "王土 / Reign of Tural",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "分治法 / Divide and Conquer",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss「超越死亡吧！」→ 對 8 名玩家不重複 8 次直線 AoE + 9s 魔法受傷加重 → 後續對覆蓋範圍再放 1 次。",
+                                                                "tips":  [
+                                                                             "8 人按指派順序誘導直線到場邊",
+                                                                             "之後避開先前覆蓋區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "終端發射 / Terminal Beam",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss「展開小型單位！」→ 場地 4 邊各 1 雷射炮塔 + 連線 2 玩家 (中點為炮塔位置) → 前方直線 AoE。同時 Boss 點所有玩家圓 AoE + 魔法受傷加重。",
+                                                                "tips":  [
+                                                                             "連線者拉動炮塔角度",
+                                                                             "其他人散開避免雷射 + 圓 AoE 重疊"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 2 - 以太稅",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "以太稅 / Aether Tax",
+                                                                "type":  "other",
+                                                                "description":  "Boss「我們需要以太！」→ 場地網格 + 全員持續傷害 + 場地左/中/右扇形依序扭曲吸入致死。共 3 次不重複。",
+                                                                "tips":  [
+                                                                             "看哪個扇形扭曲 → 跑到對側",
+                                                                             {
+                                                                                 "text":  "持續高傷 → 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "俱是君恩 / Beneficence",
+                                                                "type":  "stack",
+                                                                "description":  "每次以太稅吸入後對 2 補職分擔直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙補帶 3-4 人分擔",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 3 - 風之世界",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "虛景切換 (風) / Vista Shift",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss「欣賞聯結起來的世界吧！」→ 全屏高傷 + 擊飛 + 場地變沙漏形 (走出活動範圍跌落)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 預判落地",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "風之律法 / Wind Law",
+                                                                "type":  "stack",
+                                                                "description":  "點 2 補職分擔圓 AoE + 19s 東風紋/西風紋。倒數結束時被點玩家被擊退反向 + 留下大龍卷風。",
+                                                                "tips":  [
+                                                                             "東風紋 = 向西擊退 (站東邊)",
+                                                                             "西風紋 = 向東擊退 (站西邊)",
+                                                                             "**禁止觸碰大龍卷風**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "折磨之鏈 / Suffering Chain",
+                                                                "type":  "other",
+                                                                "description":  "T/H 與 D 連 22s 苦痛鎖鏈，未拉斷 = 受傷。",
+                                                                "tips":  [
+                                                                             "支援職 + DPS 配對拉開拉斷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "世界破碎 / World\u0027s End",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE + 場地還原。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 4 - 土之世界",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "虛景切換 (土) / Vista Shift",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 + 擊飛 + 場地變左右兩塊不相連矩形。1T+1H+2D 落左、其餘 4 人落右。兩側中央有浮空裝置 (重力異常 + 固定，免跌落)。",
+                                                                "tips":  [
+                                                                             "熟悉左右兩側分組"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "土之律法 + 8 土圈 / Earth Law + Bombs",
+                                                                "type":  "other",
+                                                                "description":  "場地周圍紫色光效 (無實際效果) + 兩側各 4 = 8 個土圈，每個需 1 名**無重力異常**玩家踩。漏踩 = 大爆炸全屏。",
+                                                                "tips":  [
+                                                                             "**無重力異常**玩家踩土圈",
+                                                                             "有重力異常的浮空者不能踩"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "重力帝國 / Domain of Gravity",
+                                                                "type":  "aoe",
+                                                                "description":  "場中心分界，兩側各連 1 玩家 45° 扇形 + 點 1 玩家圓 AoE。同時 4 土圈再現。",
+                                                                "tips":  [
+                                                                             "兩側連線者拉外側放扇形",
+                                                                             "其他人散開避圓 + 4 人踩土圈"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "隕石衝擊 / Meteor Impact",
+                                                                "type":  "spread",
+                                                                "description":  "全員隕石標記。地板玩家 = 圓 AoE + 落岩石；浮空玩家 = 單體無圓 AoE。岩石互近自爆全屏。共 2 次。",
+                                                                "tips":  [
+                                                                             "地板玩家分散 (岩石不要靠近)",
+                                                                             "浮空玩家可避免落岩石"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "重力炸裂 / Gravity Burst",
+                                                                "type":  "aoe",
+                                                                "description":  "兩側手中各 4 = 8 重力球 → 每次對兩側各 1 玩家高傷小圓 AoE。**無重力異常 + 岩石後**可抵擋 (清除岩石)。",
+                                                                "tips":  [
+                                                                             "利用岩石擋重力炸裂"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 5 - 絕對君權",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "絕對君權 / Absolute Authority",
+                                                                "type":  "other",
+                                                                "description":  "Boss「空間控制完成！開始進行抹除！」→ 全員 14s 引爆 + 4 支援職或 4 DPS 10s 光爆 + 1 反組 14s 重爆。全員持續傷害 + 4 人腳下圓 AoE × 4 次 + 最後全屏 + 擊退。",
+                                                                "tips":  [
+                                                                             "引爆：與其他玩家接觸降傷",
+                                                                             "光爆：跑外圍 (距離衰減全屏)",
+                                                                             "重爆：找 3-4 人分擔",
+                                                                             {
+                                                                                 "text":  "連補 + 大盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 6 - 冰之世界",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "虛景切換 (冰) / Vista Shift",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 + 擊飛 + 場地變 3 長條矩形 (出現時無冰橋)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "冰之律法 + 冰橋 / Ice Law",
+                                                                "type":  "other",
+                                                                "description":  "全員 4s 雪花標記倒數 → 1s 冷卻 (不動 = 12s 凍結)。場上 4 塊冰橋每塊最多 1 人通行 (2 人 = 碎裂)。",
+                                                                "tips":  [
+                                                                             "**持續移動**",
+                                                                             "1 人 1 冰橋通行"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "突進 / Charge",
+                                                                "type":  "aoe",
+                                                                "description":  "場南 4 冰柱 + 場東/西 4 冰柱 → 連線 4 支援 + 4 DPS 直線 AoE。粉色 = 高傷 + 受傷加重；紫色 = 中傷。",
+                                                                "tips":  [
+                                                                             "被連線玩家拉開距離變紫色",
+                                                                             "中途死亡 = 飛散圓 AoE 高傷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "陰鬱風暴 / Soulchill",
+                                                                "type":  "stack",
+                                                                "description":  "點玩家分擔直線 + 連線 2 玩家可截 → 大圓 AoE + 24s 冰耐降低。共 4 次。",
+                                                                "tips":  [
+                                                                             "首次點補職",
+                                                                             "T 截連線承接圓 AoE"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "永恆君權 / Eternal Authority",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss HP \u003c2.5% 觸發。HP=1 → 全屏 + 切換第二形態；HP≠1 → 強制秒殺團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 必須將 HP 精準推到 1",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 7 - 激進切換",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "激進切換 / Drastic Vista Shift",
+                                                                "type":  "other",
+                                                                "description":  "Boss「欣、欣賞...聯結起來的、的的世界吧！」→ 場地左右隨機出現風/土/冰 2 種疊加 + 旋轉 + 玩家擊飛降落新位置 + 點所有玩家圓 AoE。共 2 次 (第二次必為剩餘 2 種)。",
+                                                                "tips":  [
+                                                                             "看 2 種場地哪邊有冰橋判定位置",
+                                                                             "降落後立刻處理新場地機制"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "空間扭曲 / Spatial Distortion",
+                                                                "type":  "aoe",
+                                                                "description":  "場前 2 或 3 組向前移動的步進圓 AoE。",
+                                                                "tips":  [
+                                                                             "跟著步進移動到後方"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "女王之手 / Queen\u0027s Hand",
+                                                                "type":  "other",
+                                                                "description":  "兩側生塔 → 1 玩家踩接高傷。漏踩 = 超高傷全屏 + 場前變即死區 + boss 後移。",
+                                                                "tips":  [
+                                                                             "2 人各踩 1 塔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "垂死的記憶 / Last Memory",
+                                                                "type":  "raidwide",
+                                                                "description":  "8 連全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "連續大減傷 + 補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "放逐射線 / Banishray",
+                                                                "type":  "stack",
+                                                                "description":  "點隨機玩家 8 連分擔直線 (最後一次間隔長 + 高傷)。",
+                                                                "tips":  [
+                                                                             "全員疊接 8 連分擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "絕對保全 (Enrage)",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss「超越死亡吧！」狂暴技強制秒殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段 DPS check",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

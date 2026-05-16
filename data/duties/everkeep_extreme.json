@@ -1,226 +1,257 @@
 {
-    "id": "everkeep_extreme",
-    "name": "佐拉加殲殛戰",
-    "nameEn": "Everkeep (Extreme)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": 710,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）多向斬：×字 AoE + 場地黃色黑線 → 直線 AoE 沿線擴張。",
-        "2）後/前躍半身殘：boss 跳後/前一步 + 半場 cleave + 場前覆蓋 (前躍會轉身)。",
-        "3）新曦世紀：場地縮 4×4 + 周圍生外圈場地。同步 = 雙牙劍方塊 AoE。",
-        "4）附魔通路：綠/紅/藍線決定雙牙劍移動後 AoE (風 1 格直 + 擊退 / 火 3 格直 / 蓝 1 格直)。",
-        "5）情感投射：藍線推雙牙劍變圓/環 AoE；紅線分擔線解被投影 debuff。",
-        "6）責任之刃 + 火焰鏈：T/H + D 配對，拉斷火焰鏈。",
-        "7）狂暴：自我實現 9.7s 強制團滅。"
-    ],
-    "notes": "DT 7.0 EX 第二隻 (Lv 100, ilvl 710)。Zoraal Ja (佐拉加) EX，DT MSQ 終 boss EX 版本。核心：場地外圍陷阱出血 + 多向斬十字 + 場地縮放 4×4 + 附魔通路 (風/火/藍線) + 情感投射 (利刃/爆發)。",
-    "bosses": [
-        {
-            "name": "佐拉加",
-            "nameEn": "Zoraal Ja",
-            "mnemonic": [
-                "前躍 = 朝場前轉身放 cleave；後躍 = 朝場後不轉。看背後劍發光側決定半場。",
-                "新曦世紀：場地變 4x4 + 外圍生 4 塊外場 (第 1/3 次)。",
-                "附魔通路：綠線 = 風 (1 格直 + 擊退)；紅線 = 火 (3 格直)；藍線 = 利刃 (1 格直)。",
-                "情感投射·爆發：被投影 debuff 倒數，接觸紅色分擔線解除。",
-                "場地外圍陷阱踩到 = 15s 出血。"
-            ],
-            "phases": [
-                {
-                    "name": "Phase 1 - 基礎",
-                    "mechanics": [
-                        {
-                            "name": "自我實現 / Actualization",
-                            "type": "raidwide",
-                            "description": "全場無屬性魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "多向斬 / Forte Soul",
-                            "type": "aoe",
-                            "description": "×字範圍 AoE + 場地出黃線預示 → 沿線擴張直線 AoE。",
-                            "tips": [
-                                "閃 × 字",
-                                "看黑線預判直線方向移動到安全格"
-                            ]
-                        },
-                        {
-                            "name": "後躍半身殘 / Backstep Half-bisection",
-                            "type": "aoe",
-                            "description": "Boss 背後一側劍發光 → 向後跳一步 + 對場前覆蓋 cleave (後向斬) + 對發光側半場 cleave。",
-                            "tips": [
-                                "看劍發光側決定半場安全",
-                                "boss 模型位移 ≠ 目標圈位移 (目標圈不變)"
-                            ]
-                        },
-                        {
-                            "name": "前躍半身殘 / Forwardstep Half-bisection",
-                            "type": "aoe",
-                            "description": "Boss 背後劍發光 → 向前跳一步 + **轉身**對場內 cleave (前向斬) + 對發光側半場 cleave (隨轉向變化)。",
-                            "tips": [
-                                "前躍會轉身，預判實際攻擊側",
-                                "繞到 boss 後/反側"
-                            ]
-                        },
-                        {
-                            "name": "弒君之怒行 / Drum of Vengeance",
-                            "type": "aoe",
-                            "description": "Boss 對隨機 2 名玩家連線可截 → 連線玩家高傷圓 AoE + 火耐降低。",
-                            "tips": [
-                                { "text": "兩 T 截連線承接", "role": "tank" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2 - 新曦世紀 (4x4 + 同步)",
-                    "mechanics": [
-                        {
-                            "name": "新曦世紀 / Dawn of an Age",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 場地縮成 4x4 方格區域。第 1 / 3 次使用會在場地四周生成 4 塊和中心相同的外圍場地。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" },
-                                "記憶外圈場地位置"
-                            ]
-                        },
-                        {
-                            "name": "無敵刃 + 同步 / Drum Cataract + Sync",
-                            "type": "aoe",
-                            "description": "周圍場地隨機插下雙牙劍 (各 4 把不重複) → 同步：相鄰外場地 2 把劍發光 → 對應主場地相同位置方形 AoE。",
-                            "tips": ["看外場地劍位置 → 找主場地對應安全格"]
-                        },
-                        {
-                            "name": "附魔通路 / Bewitched Path",
-                            "type": "other",
-                            "description": "外場與主場樞紐連線：NW+NE 場 4 列出綠色風線 + 紅色火線各 2 條；SW+SE 場 4 列出藍線一對一連。",
-                            "tips": ["記憶 4 種線位置"]
-                        },
-                        {
-                            "name": "利刃召喚 / Sword Summon",
-                            "type": "aoe",
-                            "description": "NW/NE 各 1 把雙牙劍 + SW/SE 各 2 把雙牙劍。沿直線運動到樞紐，從另一樞紐出現放對應 AoE：綠線 = 暴風刃 (1 格直 + 擊退) / 紅線 = 烈火刃 (3 格寬直) / 藍線 = 利刃衝 (1 格直)。",
-                            "tips": [
-                                "風火連線後雙牙劍必覆蓋場中央 2 列之一",
-                                "看顏色預判 AoE 寬度"
-                            ]
-                        },
-                        {
-                            "name": "無敵裂斬 (3T 標記版) / Sword's Edge",
-                            "type": "aoe",
-                            "description": "所有玩家頭頂 3T 標記 → 玩家所在方格內方形 AoE。",
-                            "tips": ["分散到不同方格"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 3 - 情感投射",
-                    "mechanics": [
-                        {
-                            "name": "情感投射：利刃 / Projection of Sin: Sword",
-                            "type": "aoe",
-                            "description": "場上 16 把雙牙劍 + SW + NE 場邊各出蓝色直線 (圓形或環形標記) → 向對側移動 → 接觸雙牙劍觸發無敵之圓/環 AoE。連發 2 次。",
-                            "tips": [
-                                "看標記預判圓/環 AoE",
-                                "找劍線移動軌跡的安全交叉點"
-                            ]
-                        },
-                        {
-                            "name": "情感投射：爆發 / Projection of Sin: Burst",
-                            "type": "stack",
-                            "description": "全員 50s 被投影 debuff + 場北分擔紅線朝南移。被投影玩家接觸紅線 = 圓 AoE 分擔 + 解 debuff。倒數結束未解 = 極高傷全屏。",
-                            "tips": [
-                                "全員依序接觸紅線",
-                                "**禁止單人接觸** (傷害分擔)",
-                                { "text": "必須在 debuff 結束前全員解除", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "憤恨之風 / Wrath of Zoral",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 3 次高傷風範圍 + 魔法受傷加重。",
-                            "tips": [
-                                { "text": "兩 T 換手吃", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "回旋半身殘 / Circular Half-bisection",
-                            "type": "aoe",
-                            "description": "Boss 抬一側手臂發光 + 目標圈內或外 2 把劍 → 圓/環 AoE + 半場 cleave。",
-                            "tips": [
-                                "看 2 劍位置判定圓 vs 環",
-                                "看光側預判半場"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 4 - 終戰",
-                    "mechanics": [
-                        {
-                            "name": "新曦世紀 (2nd) / Dawn of an Age 2",
-                            "type": "raidwide",
-                            "description": "全屏 + 場地 4x4 + NW 或 NE 生 1 塊外場。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "無敵之擊 / Sword Strike",
-                            "type": "stack",
-                            "description": "點 4 支援職或 4 DPS 雙人分擔圓 + 風耐降低 + 起飛落原地 + 分擔玩家被擊飛。<2 人傷害大增。",
-                            "tips": [
-                                "2 人配對分擔",
-                                "預判落點位置"
-                            ]
-                        },
-                        {
-                            "name": "無敵刃 + 同步 (方格交點)",
-                            "type": "aoe",
-                            "description": "場上方格交點插下雙牙劍 → 發光對相鄰 4 格方形 AoE + 投射到另一場地相同位置。",
-                            "tips": ["找劍間隙站"]
-                        },
-                        {
-                            "name": "暴風 + 烈風 / Vortex",
-                            "type": "other",
-                            "description": "兩側場地各生 1 個綠色風圈烈風。觸碰 = 單體風 AoE + 擊飛 + 風耐降低。",
-                            "tips": ["**禁止觸碰風圈**"]
-                        },
-                        {
-                            "name": "責任之刃 / Sword of Responsibility",
-                            "type": "stack",
-                            "description": "點隨機 4 次直線分擔 AoE。",
-                            "tips": [
-                                "全員疊接 4 連分擔"
-                            ]
-                        },
-                        {
-                            "name": "火焰鏈 / Fire Chain",
-                            "type": "other",
-                            "description": "T/H 與 D 連 15s 火焰鏈，未拉斷 = 受傷。",
-                            "tips": [
-                                "支援職 + DPS 配對",
-                                "拉開距離拉斷鏈"
-                            ]
-                        },
-                        {
-                            "name": "自我實現 (Enrage)",
-                            "type": "raidwide",
-                            "description": "9.7s 讀條強制團滅。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "everkeep_extreme",
+    "name":  "佐拉加殲殛戰 - 佐拉加",
+    "nameEn":  "Everkeep (Extreme) - Zoraal Ja",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  710,
+    "jobLevelSync":  100,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）多向斬：×字 AoE + 場地黃色黑線 → 直線 AoE 沿線擴張。",
+                     "2）後/前躍半身殘：boss 跳後/前一步 + 半場 cleave + 場前覆蓋 (前躍會轉身)。",
+                     "3）新曦世紀：場地縮 4×4 + 周圍生外圈場地。同步 = 雙牙劍方塊 AoE。",
+                     "4）附魔通路：綠/紅/藍線決定雙牙劍移動後 AoE (風 1 格直 + 擊退 / 火 3 格直 / 蓝 1 格直)。",
+                     "5）情感投射：藍線推雙牙劍變圓/環 AoE；紅線分擔線解被投影 debuff。",
+                     "6）責任之刃 + 火焰鏈：T/H + D 配對，拉斷火焰鏈。",
+                     "7）狂暴：自我實現 9.7s 強制團滅。"
+                 ],
+    "notes":  "DT 7.0 EX 第二隻 (Lv 100, ilvl 710)。Zoraal Ja (佐拉加) EX，DT MSQ 終 boss EX 版本。核心：場地外圍陷阱出血 + 多向斬十字 + 場地縮放 4×4 + 附魔通路 (風/火/藍線) + 情感投射 (利刃/爆發)。",
+    "bosses":  [
+                   {
+                       "name":  "佐拉加",
+                       "nameEn":  "Zoraal Ja",
+                       "mnemonic":  [
+                                        "前躍 = 朝場前轉身放 cleave；後躍 = 朝場後不轉。看背後劍發光側決定半場。",
+                                        "新曦世紀：場地變 4x4 + 外圍生 4 塊外場 (第 1/3 次)。",
+                                        "附魔通路：綠線 = 風 (1 格直 + 擊退)；紅線 = 火 (3 格直)；藍線 = 利刃 (1 格直)。",
+                                        "情感投射·爆發：被投影 debuff 倒數，接觸紅色分擔線解除。",
+                                        "場地外圍陷阱踩到 = 15s 出血。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "Phase 1 - 基礎",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "自我實現 / Actualization",
+                                                                "type":  "raidwide",
+                                                                "description":  "全場無屬性魔法 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "多向斬 / Forte Soul",
+                                                                "type":  "aoe",
+                                                                "description":  "×字範圍 AoE + 場地出黃線預示 → 沿線擴張直線 AoE。",
+                                                                "tips":  [
+                                                                             "閃 × 字",
+                                                                             "看黑線預判直線方向移動到安全格"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "後躍半身殘 / Backstep Half-bisection",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 背後一側劍發光 → 向後跳一步 + 對場前覆蓋 cleave (後向斬) + 對發光側半場 cleave。",
+                                                                "tips":  [
+                                                                             "看劍發光側決定半場安全",
+                                                                             "boss 模型位移 ≠ 目標圈位移 (目標圈不變)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "前躍半身殘 / Forwardstep Half-bisection",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 背後劍發光 → 向前跳一步 + **轉身**對場內 cleave (前向斬) + 對發光側半場 cleave (隨轉向變化)。",
+                                                                "tips":  [
+                                                                             "前躍會轉身，預判實際攻擊側",
+                                                                             "繞到 boss 後/反側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "弒君之怒行 / Drum of Vengeance",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 對隨機 2 名玩家連線可截 → 連線玩家高傷圓 AoE + 火耐降低。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 截連線承接",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 2 - 新曦世紀 (4x4 + 同步)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "新曦世紀 / Dawn of an Age",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE + 場地縮成 4x4 方格區域。第 1 / 3 次使用會在場地四周生成 4 塊和中心相同的外圍場地。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "記憶外圈場地位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "無敵刃 + 同步 / Drum Cataract + Sync",
+                                                                "type":  "aoe",
+                                                                "description":  "周圍場地隨機插下雙牙劍 (各 4 把不重複) → 同步：相鄰外場地 2 把劍發光 → 對應主場地相同位置方形 AoE。",
+                                                                "tips":  [
+                                                                             "看外場地劍位置 → 找主場地對應安全格"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "附魔通路 / Bewitched Path",
+                                                                "type":  "other",
+                                                                "description":  "外場與主場樞紐連線：NW+NE 場 4 列出綠色風線 + 紅色火線各 2 條；SW+SE 場 4 列出藍線一對一連。",
+                                                                "tips":  [
+                                                                             "記憶 4 種線位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "利刃召喚 / Sword Summon",
+                                                                "type":  "aoe",
+                                                                "description":  "NW/NE 各 1 把雙牙劍 + SW/SE 各 2 把雙牙劍。沿直線運動到樞紐，從另一樞紐出現放對應 AoE：綠線 = 暴風刃 (1 格直 + 擊退) / 紅線 = 烈火刃 (3 格寬直) / 藍線 = 利刃衝 (1 格直)。",
+                                                                "tips":  [
+                                                                             "風火連線後雙牙劍必覆蓋場中央 2 列之一",
+                                                                             "看顏色預判 AoE 寬度"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "無敵裂斬 (3T 標記版) / Sword\u0027s Edge",
+                                                                "type":  "aoe",
+                                                                "description":  "所有玩家頭頂 3T 標記 → 玩家所在方格內方形 AoE。",
+                                                                "tips":  [
+                                                                             "分散到不同方格"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 3 - 情感投射",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "情感投射：利刃 / Projection of Sin: Sword",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 16 把雙牙劍 + SW + NE 場邊各出蓝色直線 (圓形或環形標記) → 向對側移動 → 接觸雙牙劍觸發無敵之圓/環 AoE。連發 2 次。",
+                                                                "tips":  [
+                                                                             "看標記預判圓/環 AoE",
+                                                                             "找劍線移動軌跡的安全交叉點"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "情感投射：爆發 / Projection of Sin: Burst",
+                                                                "type":  "stack",
+                                                                "description":  "全員 50s 被投影 debuff + 場北分擔紅線朝南移。被投影玩家接觸紅線 = 圓 AoE 分擔 + 解 debuff。倒數結束未解 = 極高傷全屏。",
+                                                                "tips":  [
+                                                                             "全員依序接觸紅線",
+                                                                             "**禁止單人接觸** (傷害分擔)",
+                                                                             {
+                                                                                 "text":  "必須在 debuff 結束前全員解除",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "憤恨之風 / Wrath of Zoral",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇 3 次高傷風範圍 + 魔法受傷加重。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 換手吃",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "回旋半身殘 / Circular Half-bisection",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 抬一側手臂發光 + 目標圈內或外 2 把劍 → 圓/環 AoE + 半場 cleave。",
+                                                                "tips":  [
+                                                                             "看 2 劍位置判定圓 vs 環",
+                                                                             "看光側預判半場"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Phase 4 - 終戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "新曦世紀 (2nd) / Dawn of an Age 2",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 + 場地 4x4 + NW 或 NE 生 1 塊外場。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "無敵之擊 / Sword Strike",
+                                                                "type":  "stack",
+                                                                "description":  "點 4 支援職或 4 DPS 雙人分擔圓 + 風耐降低 + 起飛落原地 + 分擔玩家被擊飛。\u003c2 人傷害大增。",
+                                                                "tips":  [
+                                                                             "2 人配對分擔",
+                                                                             "預判落點位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "無敵刃 + 同步 (方格交點)",
+                                                                "type":  "aoe",
+                                                                "description":  "場上方格交點插下雙牙劍 → 發光對相鄰 4 格方形 AoE + 投射到另一場地相同位置。",
+                                                                "tips":  [
+                                                                             "找劍間隙站"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "暴風 + 烈風 / Vortex",
+                                                                "type":  "other",
+                                                                "description":  "兩側場地各生 1 個綠色風圈烈風。觸碰 = 單體風 AoE + 擊飛 + 風耐降低。",
+                                                                "tips":  [
+                                                                             "**禁止觸碰風圈**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "責任之刃 / Sword of Responsibility",
+                                                                "type":  "stack",
+                                                                "description":  "點隨機 4 次直線分擔 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接 4 連分擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "火焰鏈 / Fire Chain",
+                                                                "type":  "other",
+                                                                "description":  "T/H 與 D 連 15s 火焰鏈，未拉斷 = 受傷。",
+                                                                "tips":  [
+                                                                             "支援職 + DPS 配對",
+                                                                             "拉開距離拉斷鏈"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "自我實現 (Enrage)",
+                                                                "type":  "raidwide",
+                                                                "description":  "9.7s 讀條強制團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段 DPS check",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
