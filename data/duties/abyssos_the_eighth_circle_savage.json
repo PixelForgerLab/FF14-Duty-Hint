@@ -10,79 +10,128 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）P8S P1 = Hephaistos 多形態轉換 (Snakes/Sphinx/Gorgon/Centaur)。",
-        "2）Quadruple Form 四形態組合機制。",
-        "3）P2 = Hephaistos II 心臟 + Inferno 多段地獄火。",
-        "4）Trinity 三相機制。",
-        "5）狂暴：Ultimate Hephaistos 終局秒殺。"
+        "1）P8S P1 Hephaistos = (Conceptual) Flare 系列 + Reforged Reflection 4 形態 (Snake/Sphinx/Gorgon/Centaur)。",
+        "2）Sunforge = 蛇召中線、鳳召兩側，記是哪隻召。",
+        "3）Blazing Footfalls = Trailblaze + Quadrupedal Impact + Trailblaze + Crush 四段固定順序。",
+        "4）Gorgomanteia + Into the Shadows = 第一段 = 2 Gorgon、第二段 = 4 Gorgon，看 First in Line 順序背對。",
+        "5）Tetraflare / Fourfold Fires = 集合 / 四角分擔。",
+        "6）P2 = High Concept 數學 + Natural Alignment 雙 debuff 半場各處理。",
+        "7）Twist Nature = 看雙條哪個先跑完，先解先發機制。",
+        "8）狂暴 Ektothermos 連續全屏。"
     ],
-    "notes": "EW 6.21 P8 Savage (Lv 90, ilvl 635)。Hephaistos Savage = P8S。Pandaemonium Abyssos 終戰。雙形態。",
+    "notes": "EW 6.21 P8 Savage (Lv 90, ilvl 635)。雙階段：P1 Hephaistos 多形態 + P2 Hephaistos II + High Concept 著名數學題。",
     "bosses": [
         {
             "name": "赫菲斯托斯",
             "nameEn": "Hephaistos",
             "mnemonic": [
-                "Snakes 蛇 / Sphinx 司芬克斯 / Gorgon 戈耳貢 / Centaur 馬人 4 形態。",
-                "Quadruple Form：4 種混合處理。",
-                "P2 Heart：3 連 Inferno 地獄火。",
-                "Trinity 三相機制。"
+                "Conceptual Flare 系列 = 看後綴 (Octa/Tetra/Diflare) 決定分擔形式。",
+                "4 形態：蛇凝視、Sphinx 前後 cleave、Gorgon 凝視、Centaur 衝鋒。",
+                "Blazing Footfalls 4 段固定 Trail/Impact/Trail/Crush。",
+                "Sunforge = 蛇中、鳳兩側。"
             ],
             "phases": [
                 {
-                    "name": "P1 - Hephaistos",
+                    "name": "P1 - Hephaistos 多形態 + Concept",
                     "mechanics": [
                         {
-                            "name": "Snake Form (Savage) 蛇形態",
-                            "type": "other",
-                            "description": "蛇變色配對 + 凝視。",
-                            "tips": ["背對 + 配色"]
+                            "name": "Genesis of Flame 創生焰",
+                            "type": "raidwide",
+                            "description": "不可閃全屏 AoE，高傷需減傷。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Sphinx Form 司芬克斯",
+                            "name": "(Conceptual) Flare 系列",
+                            "type": "other",
+                            "description": "Conceptual Diflare = 雙補分擔；Octaflare = 八人散；Tetraflare = 集合；之後配合形態解。",
+                            "tips": ["看後綴判斷分擔形式", { "text": "雙補 Diflare 分坦兩側", "role": "healer" }]
+                        },
+                        {
+                            "name": "Volcanic Torches 火炬",
                             "type": "aoe",
-                            "description": "司芬克斯形態 cleave。",
-                            "tips": ["看朝向"]
+                            "description": "四面牆召藍火沿線移動，留下安全路徑，需提前看路徑走位。",
+                            "tips": ["看路徑預判最終安全區"]
                         },
                         {
-                            "name": "Gorgon Form 戈耳貢",
-                            "type": "other",
-                            "description": "戈耳貢凝視 + 石化機制。",
-                            "tips": ["背對 boss"]
-                        },
-                        {
-                            "name": "Centaur Form 馬人",
+                            "name": "Sunforge 鍛日",
                             "type": "aoe",
-                            "description": "馬人衝鋒直線 AoE。",
-                            "tips": ["閃突進路徑"]
+                            "description": "蛇召 = 中線直線 AoE、鳳召 = 兩側直線 AoE；依召喚物站對應安全區。",
+                            "tips": ["蛇 = 站兩側、鳳 = 站中央"]
                         },
                         {
-                            "name": "Quadruple Form 四形態",
+                            "name": "Reforged Reflection 變形 (Snake/Centaur)",
                             "type": "other",
-                            "description": "4 形態同時或連續處理。",
-                            "tips": ["依形態順序處理"]
+                            "description": "P1 初始變蛇或馬人 + 帶 Footprint 擊退 (中→外) + 對應形態招式 (Snake Kick 中爆 / Centaur 衝鋒)。",
+                            "tips": ["抗擊退 + 看形態", "Snake = 站外、Centaur = 看路徑"]
+                        },
+                        {
+                            "name": "Blazing Footfalls 灼足",
+                            "type": "other",
+                            "description": "四連招固定：Trailblaze 中線殺 → Quadrupedal Impact (擊退誘) → Trailblaze → Quadrupedal Crush (大爆位)，需依序避路徑 + 對應擊退。",
+                            "tips": ["Impact 抗擊退或誘到安全角、Crush 跑離爆位"]
+                        },
+                        {
+                            "name": "Gorgomanteia + Into the Shadows",
+                            "type": "other",
+                            "description": "第一次：2 組 Gorgon (90 或 180° 出生)，依 First in Line 順序背對；第二次：4 Gorgon + Eye of Gorgon + Crown of Gorgon。",
+                            "tips": ["First in Line debuff 數字 = 背對順序", "雙凝視 debuff 各自處理"]
+                        },
+                        {
+                            "name": "Manifold Flames / Nest of Flamevipers / Tetraflare / Fourfold Fires",
+                            "type": "spread",
+                            "description": "Manifold = DPS 或 T/H 中型 AoE 散；Nest = 全員線 AoE；Tetraflare = T/H 或 DPS stack；Fourfold = 四角分擔。",
+                            "tips": ["依職能 + cast 名選位"]
                         }
                     ]
                 },
                 {
-                    "name": "P2 - Hephaistos II Heart",
+                    "name": "P2 - Hephaistos II + High Concept",
                     "mechanics": [
                         {
-                            "name": "Inferno (3 連)",
+                            "name": "Aioniopyr 永焰",
                             "type": "raidwide",
-                            "description": "3 連地獄火全屏 AoE。",
-                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                            "description": "不可閃全屏 + 流血，高傷需強力減傷。",
+                            "tips": [{ "text": "全員減傷 + 流血續補", "role": "healer" }]
                         },
                         {
-                            "name": "Trinity 三相",
+                            "name": "Natural Alignment 自然調諧",
                             "type": "other",
-                            "description": "3 種機制配對 (火 + 雷 + 大地)。",
-                            "tips": ["依屬性處理"]
+                            "description": "兩位 T/H 或兩位 DPS 掛 Natural Alignment (高 DoT + 半場 AoE) + 中間轉換機制；中標兩人各佔半場。",
+                            "tips": ["中標兩人分東西半場 + 開減傷", "其他人到另一半"]
                         },
                         {
-                            "name": "Ultimate Hephaistos (Enrage)",
+                            "name": "Twist Nature 自然旋轉",
+                            "type": "other",
+                            "description": "場上 sigil 旋轉 + 雙計量條，先跑完的決定第一段機制，後跑完決定第二段。",
+                            "tips": ["看雙條速度判斷 → 第一段提前站定點"]
+                        },
+                        {
+                            "name": "Ashing Blaze 灰燼焰",
+                            "type": "aoe",
+                            "description": "Boss 半身亮火 → 同邊半場 AoE；需轉到對側半場。",
+                            "tips": ["看 boss 哪側亮 → 跑對側"]
+                        },
+                        {
+                            "name": "End of Days 終末",
+                            "type": "other",
+                            "description": "西牆 3 個 Illusory Hephaistos 線 AoE 打整列；只留一兩列安全。",
+                            "tips": ["看哪列無預警站該列"]
+                        },
+                        {
+                            "name": "High Concept 高概念",
+                            "type": "other",
+                            "description": "P8S 著名數學題：全員依 debuff (Long/Short Conceptual + 染色 + 數字)分組進不同 tower、塔、地圖位完成連鎖；死人 = 滅。",
+                            "tips": [
+                                "照固定預設配對圖 (DPS / 補 / 坦各組)",
+                                { "text": "死亡 = 之後分擔失敗 = 全滅", "role": "healer" },
+                                "標記人主導第二段移位"
+                            ]
+                        },
+                        {
+                            "name": "Ektothermos / Limitless Desolation (Enrage)",
                             "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
+                            "description": "末段連續 Ektothermos 全屏 + 狂暴 Limitless Desolation 滅團。",
+                            "tips": [{ "text": "末段 DPS check 催爆發", "role": "dps" }]
                         }
                     ]
                 }

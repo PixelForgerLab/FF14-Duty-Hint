@@ -1,6 +1,6 @@
 {
     "id": "anabaseios_the_tenth_circle_savage",
-    "name": "萬魔殿 荒天之獄零式2",
+    "name": "萬魔殿 天獄之闕零式2",
     "nameEn": "Anabaseios: The Tenth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,61 +10,112 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）P10S = P10N + Pandæmonium Form 變身機制。",
-        "2）Silken Coffin 絲棺 + 配色傳遞。",
-        "3）Tail Thrust 尾衝 + 雙形態組合。",
-        "4）Ashing Blaze 灰燼烈焰：場地分區。",
-        "5）狂暴：Final Form 終局秒殺。"
+        "1）P10S Pandæmonium 蜘蛛 = Wicked Step 雙坦塔 + Entangling Web 4 蛛網。",
+        "2）Pandæmoniac Pillars 8 塔 = 3/2/3 排列，每塔一人踩。",
+        "3）Silkspit 全員蛛網 AoE + Magic Vuln Up，連補。",
+        "4）Pandæmoniac Bonds / Meltdown = debuff 計時 + line stack / orange marker 散開組合。",
+        "5）Touchdown 中台爆 → 全員跳側台。",
+        "6）Pandæmonic Web = 3 web + 1 stack 組合分擔。",
+        "7）Harrowing Hell = 高傷多段全屏，雙坦前排吃，雙補強補。",
+        "8）狂暴重複 Wicked Step + Harrowing Hell + 擊退。"
     ],
-    "notes": "EW 6.41 P10 Savage (Lv 90, ilvl 665)。Pandaemonium Savage = P10S。",
+    "notes": "EW 6.4 P10 Savage (Lv 90, ilvl 650)。Pandæmonium 蜘蛛形態 + 多重 platform。",
     "bosses": [
         {
-            "name": "萬魔殿主",
-            "nameEn": "Pandaemonium",
+            "name": "萬魔殿蜘蛛",
+            "nameEn": "Pandæmonium",
             "mnemonic": [
-                "Silken Coffin 絲棺 + 配色傳遞解。",
-                "Pandæmonium Form 變身切換。",
-                "Tail Thrust 尾衝 + 雙形態。"
+                "Wicked Step = 雙坦各吃一塔 + DoT。",
+                "Pillars 3/2/3 = 8 人各踩一塔。",
+                "Pandæmoniac Bonds = debuff 計時順序處理。",
+                "Touchdown = 中台死，跳側台。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Step / Pillars / Bonds (前半)",
                     "mechanics": [
                         {
-                            "name": "Silken Coffin 絲棺",
-                            "type": "other",
-                            "description": "玩家獲不同顏色 buff → 配對傳遞解。",
-                            "tips": ["依顏色配對處理"]
+                            "name": "Wicked Step 邪步",
+                            "type": "tankbuster",
+                            "description": "場左右各召一個 tankbuster 塔，雙坦各吃一個 + DoT debuff，需減傷。",
+                            "tips": [
+                                { "text": "MT/OT 各踩一塔 + 開減傷", "role": "tank" },
+                                { "text": "DoT 後續補補", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Pandæmonium Form 變身",
-                            "type": "other",
-                            "description": "Boss 變身切換多形態。",
-                            "tips": ["看形態預判機制"]
-                        },
-                        {
-                            "name": "Tail Thrust 尾衝",
-                            "type": "aoe",
-                            "description": "後方 cleave。",
-                            "tips": ["繞 boss 前"]
-                        },
-                        {
-                            "name": "Ashing Blaze 灰燼烈焰",
-                            "type": "aoe",
-                            "description": "場地分區 AoE。",
-                            "tips": ["找安全區"]
-                        },
-                        {
-                            "name": "Beastly Roar (Savage)",
+                            "name": "Entangling Web 蛛網",
                             "type": "spread",
-                            "description": "強化散開機制。",
-                            "tips": ["clock 散開"]
+                            "description": "雙坦 + 1 補 + 1 DPS 共 4 人吃 telegraphed 圓 AoE，幾秒後位置鎖定，需走離 AoE。",
+                            "tips": ["中標 4 人散開向外 → 提前移動", "之後 web 留場供後段架橋"]
                         },
                         {
-                            "name": "Final Form (Enrage)",
+                            "name": "Pandæmoniac Pillars 萬魔塔",
+                            "type": "stack",
+                            "description": "中台 8 塔 (左 3、中 2、右 3)，每塔一人踩，缺人 = 大傷 + 後續 AoE。",
+                            "tips": ["固定 8 人各踩一塔 + 後續閃 AoE"]
+                        },
+                        {
+                            "name": "Silkspit 絲噴",
+                            "type": "spread",
+                            "description": "全員大型 telegraphed web AoE + Magic Vuln Up，需散開 + 強力盾減傷。",
+                            "tips": ["散開 8 方", { "text": "盾減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Pandæmoniac Bonds 萬魔絆",
+                            "type": "other",
+                            "description": "全員掛多種 debuff (Dæmoniac/Duodæmoniac Bonds)，計時器到期依序解 (line stack / pair / spread 等)。",
+                            "tips": ["看 debuff 圖示 + 計時順序處理"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Meltdown / Touchdown / Harrowing Hell (後半)",
+                    "mechanics": [
+                        {
+                            "name": "Pandæmoniac Meltdown 熔毀",
+                            "type": "stack",
+                            "description": "一人 line stack 標 + 兩人 orange overhead；無 orange 的玩家擋住 line + orange 兩人到對側。",
+                            "tips": ["分擔組擋線、orange 跑兩側"]
+                        },
+                        {
+                            "name": "Touchdown 著陸",
+                            "type": "aoe",
+                            "description": "中央 telegraphed 擴張 AoE 殺中台所有人，需跳到兩側小台。",
+                            "tips": ["前置 Web 鋪橋 → 跳側台"]
+                        },
+                        {
+                            "name": "Pandæmoniac Turrets 萬魔炮塔",
+                            "type": "stack",
+                            "description": "中台 8 塔 (北 4 + 南 4)，每塔一人踩。",
+                            "tips": ["分 4+4 各踩一塔"]
+                        },
+                        {
+                            "name": "Pandæmonic Ray 萬魔光線",
+                            "type": "aoe",
+                            "description": "Boss 朝一側 cleave 半場，中標掛 Hysteria (短亂跑)，需到對側躲。",
+                            "tips": ["看朝向跑對側"]
+                        },
+                        {
+                            "name": "Pandæmonic Web 萬魔網",
+                            "type": "spread",
+                            "description": "3 random 玩家吃 Entangling Web 散標 + 1 玩家吃 Steel Web stack；散標散開、stack 集合分擔。",
+                            "tips": ["3 散開、5 集合 stack"]
+                        },
+                        {
+                            "name": "Harrowing Hell 苦痛地獄",
                             "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
+                            "description": "極高傷多段物理全屏，雙坦需站最前吃，雙補強補 + 連環減傷。",
+                            "tips": [
+                                { "text": "雙坦站最前 + 開強力減傷", "role": "tank" },
+                                { "text": "強補 + 連連補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Parted Plumes + Enrage",
+                            "type": "aoe",
+                            "description": "末段：圈中持續 AoE + 旋轉 cleave 圍繞中圈；狂暴 Harrowing Hell 連發 + 擊退收尾。",
+                            "tips": ["全員圍中圈轉位 + 末段 burst"]
                         }
                     ]
                 }
