@@ -1,100 +1,45 @@
 {
-    "id":  "limitless_blue_extreme",
-    "name":  "蒼藍深淵殲殛戰",
-    "nameEn":  "The Limitless Blue (Extreme)",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "aoe",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Bismarck：Turbulence",
-                     "2）Dead Water/Wind / Wet/Dry Fin",
-                     "3）Thunder"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) aoe (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "A 90-second stacking debuff. Deals minor damage-over-time and a burst of damage every time a stack is added. The higher the stack count, the more the ...",
-                                                                "name":  "Turbulence",
-                                                                "tips":  [
-                                                                             "疊接分擔"
-                                                                         ],
-                                                                "type":  "stack"
-                                                            },
-                                                            {
-                                                                "description":  "Four players will be debuffed by Will of the Wind and the other four Will of the Water. If players attack the sanuwa matching the color of their debuf...",
-                                                                "name":  "Dead Water/Wind",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "A high damage frontal cleave. Ensure the sanuwa are facing away from the rest of the party.",
-                                                                "name":  "Wet/Dry Fin",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Blue AoE water circles created by Ul\u0027Sanuwa. A large orb of water will drop onto these locations, dealing heavy damage to players standing inside.",
-                                                                "name":  "Baleen Bomb",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tornadoes created by So\u0027Suwa. Spawns at a random corner of the platform and slowly moves across to the opposite side. Deals minor damage but stuns pla...",
-                                                                "name":  "Vacuum Wave",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Clouds will be a dark yellow and weather will be showersShowers. Bismarck casts Sharp Gust, a knockback from the center of the platform, and afterward...",
-                                                                "name":  "Wind",
-                                                                "tips":  [
-                                                                             "預判擊退方向或開 Arm\u0027s Length"
-                                                                         ],
-                                                                "type":  "knockback"
-                                                            },
-                                                            {
-                                                                "description":  "Clouds are a normal grey and weather is rain Rain. Bismarck casts Primal Tears, a high damage unmarked AoE in the center, and afterwards Deep Draught,...",
-                                                                "name":  "Water",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Clouds will be purple and weather is thunderstorms Thunderstorms. Bismarck casts Lightning Bolt, striking 4 random players with unmarked AoEs. Afterwa...",
-                                                                "name":  "Thunder",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Bismarck",
-                       "nameEn":  "Bismarck",
-                       "mnemonic":  [
-                                        "Turbulence",
-                                        "Dead Water/Wind",
-                                        "Wet/Dry Fin"
-                                    ]
-                   }
-               ]
+    "id": "limitless_blue_extreme",
+    "name": "蒼藍深淵殲殛戰",
+    "nameEn": "The Limitless Blue (Extreme)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）P1 同 Hard 但需 2 名 healer 開 Dragonkiller cannons (10 秒內)；ranged 1 人開 Magitek Field Generator 擋 Cetacean Rage。",
+        "2）站 Bismarck 上吃 Turbulence DoT，5 stacks 會死 → 撐 3 stacks 內打 Chitin (Bismarck 鎖只 25 秒)。",
+        "3）P2 Sanuwa 機制：Will of the Wind / Will of the Water debuff → **攻擊相反顏色 sanuwa 否則反傷**。Dead Water/Wind 3 次後 enrage。",
+        "4）P3 Nat'mai 大 Vundu boss + 兩小 Vundu，無 Generator 場地不可再減傷。"
+    ],
+    "notes": "HW 3.0 trial EX Lv 60 ilvl 175。Bismarck EX，需高度配合 cannons。資料來源：CGW (The Limitless Blue (Extreme))。",
+    "bosses": [
+        {
+            "name": "Bismarck 比斯馬克",
+            "nameEn": "Bismarck",
+            "mnemonic": ["2 healer 開 Dragonkiller (10 秒內)", "Turbulence 5 stacks 致死", "Sanuwa Will of Wind/Water 攻擊相反顏色"],
+            "phases": [
+                { "name": "P1 開場", "mechanics": [
+                    { "name": "Dragonkiller Cannons", "type": "other", "description": "**指派 2 名 healer 開砲**，10 秒內未開 → 失效。先 DPS 兩 adds 才能用。", "tips": [{ "text": "Healer 1+2 立刻啟砲", "role": "healer" }] },
+                    { "name": "Cetacean Rage + Magitek Field Generator", "type": "other", "description": "1 名 ranged 開 Generator 擋 Bismarck 撞擊。", "tips": [{ "text": "DPS 開 Generator", "role": "dps" }] },
+                    { "name": "Turbulence 紊流 (站 boss 上)", "type": "other", "description": "站 Bismarck 上獲 Turbulence DoT，每 10 秒堆 1 stack，**5 stacks 會殺非 tank**。1 stack 立即給。", "tips": ["盡量 3 stacks 內打掉 Chitin", { "text": "DPS 開 CD 全力 burst", "role": "dps" }] }
+                ]},
+                { "name": "P2 Sanuwa", "mechanics": [
+                    { "name": "Ul'Sanuwa (藍水) + So'Suwa (綠風)", "type": "other", "description": "雙 adds 太近 = Vulnerability Down。需分坦對側。", "tips": [{ "text": "MT/OT 拉到對側朝外", "role": "tank" }] },
+                    { "name": "Dead Water / Dead Wind", "type": "other", "description": "4 名 Will of the Wind + 4 名 Will of the Water debuff。**攻擊與 debuff 同色的 sanuwa = 傷害反彈**。應打相反色。Tank 可能需互換。", "tips": ["看 debuff 顏色換 sanuwa；tank swap 如需要"] },
+                    { "name": "Wet/Dry Fin 前方錐", "type": "aoe", "description": "sanuwa 前方錐高傷。", "tips": [{ "text": "Tank 把 sanuwa 朝外", "role": "tank" }] },
+                    { "name": "Baleen Bomb 鯨鬚炸彈", "type": "aoe", "description": "Ul'sanuwa 場上藍色水圓 → 水球落下高傷。", "tips": ["閃預警"] },
+                    { "name": "Vacuum Wave 真空波", "type": "other", "description": "So'Suwa 場角召龍捲 + 走向對側，碰到暈。", "tips": ["閃龍捲路徑"] },
+                    { "name": "Dead Water/Wind ×3 → Enrage", "type": "raidwide", "description": "3 次後 Bismarck 回來 wipe。", "tips": [{ "text": "限時殺光 sanuwa", "role": "dps" }] }
+                ]},
+                { "name": "P3 終局", "mechanics": [
+                    { "name": "Breach Blast", "type": "raidwide", "description": "Bismarck 回來全屏。**Generator 損壞，無減傷**。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                    { "name": "Nat'mai + 兩 Vundu", "type": "other", "description": "三 Vunu 出來，大型 Nat'mai 為終 boss。", "tips": [{ "text": "DPS 集火 Nat'mai", "role": "dps" }, "閃 Vundu 擊退"] }
+                ]}
+            ]
+        }
+    ]
 }

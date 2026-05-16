@@ -1,103 +1,46 @@
 {
-    "id":  "thok_ast_thok_hard",
-    "name":  "托克托克殲滅戰",
-    "nameEn":  "Thok ast Thok (Hard)",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "aoe",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Ravana：Prelude to Slaughter",
-                     "2）Slaughter / Revenge",
-                     "3）Prelude to Slaughter and Slaughter"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) aoe (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Uses this after the first 100 Bloodlust.",
-                                                                "name":  "Prelude to Slaughter",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Another sequence of AoEs: #1 AoE that comes out of him in a linear fashion two-ways (i.",
-                                                                "name":  "Slaughter",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Every now and then, Ravana will buff himself for 5s to increase his Parry and will deal damage back to attackers from certain directions, though this ...",
-                                                                "name":  "Revenge",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Ultimate ability and phase transition, just enjoy the lightshow.",
-                                                                "name":  "Chandrahas",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Targets a player and throws linear AoE towards them, damaging anyone in its path.",
-                                                                "name":  "Surpanakha",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Another sequence of AoEs: #1 Several players will be marked with a white icon, they need to spread around the room away from each other, Ravana will r...",
-                                                                "name":  "Swift Slaughter",
-                                                                "tips":  [
-                                                                             "全員散開"
-                                                                         ],
-                                                                "type":  "spread"
-                                                            },
-                                                            {
-                                                                "description":  "Raid-wide AoE, maybe use it twice in a row.",
-                                                                "name":  "Atma-Linga",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "focus on dodging AoE.",
-                                                                "name":  "Prelude to Slaughter and Slaughter",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Ravana",
-                       "nameEn":  "Ravana",
-                       "mnemonic":  [
-                                        "Prelude to Slaughter",
-                                        "Slaughter",
-                                        "Revenge"
-                                    ]
-                   }
-               ]
+    "id": "thok_ast_thok_hard",
+    "name": "托克托克殲滅戰",
+    "nameEn": "Thok ast Thok (Hard)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 58,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Ravana 拉瓦納 (蜂巢之主)：Bloodlust 條每 100 → boss 堆 Damage Up (軟 enrage)。",
+        "2）Slaughter 系列 AoE：紫圈兩人散開對側、十字火爆炸後留火痕 → 短時間可穿過 / 對 Surpanakha 紅標衝鋒站直線外。",
+        "3）Phase 切換 Chandrahas 多 adds (Moon Gana 火/Spirit Gana 冰)：**Moon Gana 優先殺**，否則 Falling Laughter 全屏。",
+        "4）Buff 切換：攻擊 buff = Slaughter / 防禦 buff = Pillars+Surpanakha+Rose / 無 buff = 砍 tank。"
+    ],
+    "notes": "HW 3.0 trial Hard Lv 58 ilvl 130。Ravana (拉瓦納) Normal。Bloodlust 系統。資料來源：CGW (Thok ast Thok (Hard))。",
+    "bosses": [
+        {
+            "name": "Ravana 拉瓦納",
+            "nameEn": "Ravana",
+            "mnemonic": ["Bloodlust 軟 enrage", "Slaughter 紫圈兩人散開", "Chandrahas Moon Gana 優先"],
+            "phases": [
+                { "name": "P1 主戰", "mechanics": [
+                    { "name": "Cleave 普攻", "type": "aoe", "description": "Ravana 普攻前方錐。", "tips": [{ "text": "MT 朝場外", "role": "tank" }] },
+                    { "name": "Prelude to Slaughter 屠殺序曲", "type": "aoe", "description": "AoE 序列：#1 近圓 → #2 多條直線火 (有空檔) → #3 場地除中央外 AoE。", "tips": ["先後處理 → 站中央"] },
+                    { "name": "Slaughter 屠殺", "type": "aoe", "description": "AoE 序列：#1 前後直線擊退 → #2/#3 十字火 + 兩玩家紫圈 (對側散開避免疊死) → 火十字爆後留火痕，數秒內可穿過。", "tips": ["紫圈兩人對側散", "趁火痕短時間穿過"] },
+                    { "name": "Revenge 復仇", "type": "other", "description": "短時間 buff 自己增 Parry + 反傷，可忽略。", "tips": ["不痛"] }
+                ]},
+                { "name": "Chandrahas (60% 過場)", "mechanics": [
+                    { "name": "Moon Gana / Spirit Gana adds", "type": "other", "description": "兩 adds 詠唱 Falling Laughter。**Moon Gana (火) 快、Spirit Gana (冰) 慢**，先殺 Moon Gana。", "tips": [{ "text": "DPS 順序 Moon → Spirit", "role": "dps" }] },
+                    { "name": "Falling Laughter 落笑", "type": "raidwide", "description": "未殺光 adds → 全屏致死。", "tips": ["限時殺光"] }
+                ]},
+                { "name": "P2 防禦/攻擊 buff 切換", "mechanics": [
+                    { "name": "Buff 切換", "type": "other", "description": "攻擊 buff = Slaughter / 防禦 buff = Pillars + Surpanakha + Rose / 無 buff = 砍 tank。", "tips": ["看 buff icon 預判機制"] },
+                    { "name": "Pillars of Heaven 天柱", "type": "knockback", "description": "全屏 + 擊退。", "tips": ["Arm's Length / 注意方向"] },
+                    { "name": "Surpanakha 蘇潘娜卡", "type": "aoe", "description": "對 OT (或主仇恨) 連續 3 條直線 AoE。", "tips": [{ "text": "OT 拉到場邊朝外", "role": "tank" }] },
+                    { "name": "Rose of Hate / Rose of Conquest", "type": "other", "description": "Rose of Hate 直線 AoE + 4 紫球連繩 4 玩家 (碰到爆 + vuln)。", "tips": ["閃直線 + 別碰紫球"] },
+                    { "name": "Swift Slaughter 迅速屠殺", "type": "aoe", "description": "AoE 序列：#1 白標玩家散開 (boss 衝過) → #2 場外圈 (站中央) → #3 場中央 (站邊緣)。", "tips": ["看順序走位"] },
+                    { "name": "Atma-Linga 阿特瑪靈伽", "type": "raidwide", "description": "全屏 AoE，可能連放兩次。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+                ]}
+            ]
+        }
+    ]
 }

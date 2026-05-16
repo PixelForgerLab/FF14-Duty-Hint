@@ -10,42 +10,44 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Hoary Boulder + Coultenet 雙人組：雙坦各拉一隻。",
-        "2）B2 Zu 大鳥：Skyward Tether 拉繩去舔石化雕像解 debuff。",
-        "3）B3 Siren 海妖：Songbird 召喚的鳥需殺；Torment 紫圈擊退。"
+        "1）B1 Ghrah Luminary：Corruption 連繩 + Prey 標記 → 跑到場邊巡邏 mob 旁傳遞 debuff，附身 mob 變敵體血量低速殺；蜘蛛死後留毒池要拉開殺。",
+        "2）B2 8th Order Patriarch Be Gu：場上 fissure 漏 aether → 拉 Corrupted Gel add 殺在裂縫上塞洞；後段召 Kobold + 紫 Alchemy Engine 連繩 boss 必殺。",
+        "3）B3 Progenitrix + Progenitor：Progenitrix 召灰 Bomb + Lava Bomb → 灰 Bomb 立刻殺；Progenitor 召灰 Bomb + 藍 Remedy Bomb 連繩 → 打藍 Bomb 推開讓灰 Bomb 有時間殺。"
     ],
-    "notes": "HW 3.1 dungeon Hard (Lv 60, ilvl 175)。Pharos Sirius 重製版。",
+    "notes": "HW 3.1 dungeon Hard Lv 60 ilvl 175。Pharos Sirius 重製版。資料來源：CGW (Pharos Sirius (Hard))。",
     "bosses": [
         {
-            "name": "Hoary Boulder + Coultenet 雙人組",
-            "nameEn": "Hoary Boulder + Coultenet",
-            "mnemonic": ["雙人組分坦", "物攻 / 法系"],
+            "name": "Ghrah Luminary 光明者",
+            "nameEn": "Ghrah Luminary",
+            "mnemonic": ["Prey 連繩 → 跑場邊巡邏 mob 傳遞", "蜘蛛 mob 死留毒池"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Mighty Smash 重擊 (Boulder)", "type": "tankbuster", "description": "Boulder 對 MT 物理 tankbuster。", "tips": [{ "text": "MT 接 Boulder", "role": "tank" }] },
-                { "name": "Strike 'em Down 一網打盡 (Coultenet)", "type": "aoe", "description": "Coultenet 場上多重圓 AoE。", "tips": [{ "text": "OT 接 Coultenet", "role": "tank" }, "閃預警"] },
-                { "name": "Trumpet Blast 號角", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Corruption + Prey 連繩", "type": "other", "description": "Corruption 連繩標記玩家上 Prey → Aetheric Mimicry 詠唱 → **跑到場邊巡邏 mob 旁傳遞 debuff** → 該 mob 變敵且血低易殺。", "tips": ["被標者跑場邊到巡邏 mob 旁"] },
+                { "name": "蜘蛛 mob 毒池", "type": "other", "description": "被附身的蜘蛛死後留小毒池。", "tips": ["拉到場邊再殺，避免毒池在中央"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "Zu 大鳥",
-            "nameEn": "Zu",
-            "mnemonic": ["拉繩到石化雕像", "Stone Gaze 視線"],
+            "name": "8th Order Patriarch Be Gu",
+            "nameEn": "8th Order Patriarch Be Gu",
+            "mnemonic": ["Fissure 漏 aether → 拉 Corrupted Gel 殺在裂縫塞洞", "後段 Kobold + 紫 Alchemy Engine 連繩必殺"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Skyward Tether 拉繩", "type": "other", "description": "Zu 對玩家拉繩，玩家需拉到場上石化雕像旁讓繩斷掉，否則被高傷拉飛。", "tips": ["被點名拉到雕像"] },
-                { "name": "Stone Gaze 石化凝視", "type": "other", "description": "Zu 凝視前方，看到的玩家被石化。", "tips": ["背對 boss"] },
-                { "name": "Pinion 翼擊", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] }
+                { "name": "Room-wide AoE + Fissure 裂縫", "type": "raidwide", "description": "Boss 全屏 AoE 開地板裂縫，持續漏 aether。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Corrupted Gel 塞洞", "type": "other", "description": "拉 Corrupted Gel add 殺在 fissure 上塞洞。", "tips": ["把 Gel 拉到裂縫上殺"] },
+                { "name": "Kobold + Alchemy Engine", "type": "other", "description": "後段召 Kobold + 紫色 Alchemy Engine 連繩 boss 給 buff，**Engine 必殺**。", "tips": [{ "text": "DPS 優先紫 Engine", "role": "dps" }] }
             ]}]
         },
         {
-            "name": "Siren 海妖",
-            "nameEn": "Siren",
-            "mnemonic": ["Songbird 召鳥", "Torment 擊退"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Songbird 鳴鳥", "type": "other", "description": "場上召喚 Songbird 小怪，未殺會給 boss 增益。", "tips": [{ "text": "DPS 速殺鳥", "role": "dps" }] },
-                { "name": "Torment 折磨", "type": "knockback", "description": "場上紫色圓 + 擊退。", "tips": ["閃紫圈或預判擊退方向"] },
-                { "name": "Siren's Song 歌聲", "type": "raidwide", "description": "全屏 AoE，被命中會受魅惑。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Devour 吞噬", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "name": "Progenitrix + Progenitor",
+            "nameEn": "Progenitrix and Progenitor",
+            "mnemonic": ["Progenitrix 灰 Bomb 立刻殺", "Progenitor 藍 Remedy Bomb 推開讓灰 Bomb 殺"],
+            "phases": [
+                { "name": "P1 Progenitrix", "mechanics": [
+                    { "name": "灰 Bomb + Lava Bomb 召喚", "type": "other", "description": "場邊召灰 Bomb + 熔岩 Bomb。", "tips": [{ "text": "DPS 立刻殺灰 Bomb", "role": "dps" }, "閃熔岩"] }
+                ]},
+                { "name": "P2 Progenitor", "mechanics": [
+                    { "name": "灰 Bomb + 藍 Remedy Bomb", "type": "other", "description": "Progenitrix 死後 Progenitor 出，召灰 Bomb + 藍 Remedy Bomb (連繩朝灰 Bomb)。**打藍 Bomb 推它** → 灰 Bomb 有時間殺。", "tips": ["藍 Bomb 打傷會被推開", { "text": "DPS 一起處理灰 + 藍", "role": "dps" }] }
+                ]}
+            ]
         }
     ]
 }
