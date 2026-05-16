@@ -1,75 +1,39 @@
 {
-    "id":  "dancing_plague",
-    "name":  "舞蹈瘟疫",
-    "nameEn":  "The Dancing Plague",
-    "expansion":  "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  70,
-    "highEnd":  false,
-    "quality":  "good",
-    "mnemonic":  [
-                     "1）Titania = Phantom Out / Inversive 配對機制。",
-                     "2）Mist Cone + Bramble Spread 散圈。",
-                     "3）Dot 點點 + Tether 玩家 + 線。",
-                     "4）Phantom Rush + Fae Light 全屏。"
-                 ],
-    "notes":  "ShB 5.0 MSQ trial (Lv 70)。Titania 仙王。",
-    "bosses":  [
-                   {
-                       "name":  "蒂坦妮亞",
-                       "nameEn":  "Titania",
-                       "phases":  [
-                                      {
-                                          "name":  "Titania",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Phantom Out / Inversive 幻象",
-                                                                "type":  "other",
-                                                                "description":  "幻象配對 → 對應位站。",
-                                                                "tips":  [
-                                                                             "看 cast 名"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mist Cone 霧扇形",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss cone 霧 AoE。",
-                                                                "tips":  [
-                                                                             "看朝向 → 站側"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bramble Spread 荊棘散",
-                                                                "type":  "spread",
-                                                                "description":  "場上多 AoE 圈散。",
-                                                                "tips":  [
-                                                                             "散避圈"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tether line 連結",
-                                                                "type":  "other",
-                                                                "description":  "tether 玩家 + line AoE。",
-                                                                "tips":  [
-                                                                             "看 tether 走位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Phantom Rush + Fae Light 仙光",
-                                                                "type":  "raidwide",
-                                                                "description":  "末段大全屏。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + 強補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "dancing_plague",
+    "name": "舞蹈瘟疫 - 緹坦妮婭",
+    "nameEn": "The Dancing Plague - Titania",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Titania = 仙女女王 (ShB 5.0 Eulmore MSQ trial)。",
+        "2）Bright Sabbath 明亮安息：raid-wide + 點名遠離。",
+        "3）Phantom Rune 幻影符文：3 個顏色標記 → 對應位置處理。",
+        "4）Mors Certa 必死之劫：MT cleave。",
+        "5）Frondesce 葉茂：場上多 AoE 散落。",
+        "6）Adds (Pucks 妖精) → 速殺。",
+        "7）Hard Mist 硬霧 → 全屏 + 視野模糊 → 走縫。",
+        "8）Bewitching Bound 巫術束縛 → 連線兩人撞球解。"
+    ],
+    "notes": "ShB 5.0 MSQ trial - 舞蹈瘟疫 (Lv 70)。Titania 仙女女王，3 階段戰。",
+    "bosses": [
+        {
+            "name": "緹坦妮婭",
+            "nameEn": "Titania",
+            "phases": [{ "name": "Titania 主戰", "mechanics": [
+                { "name": "Bright Sabbath 明亮安息", "type": "raidwide", "description": "全屏 AoE + 點名玩家遠離。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Phantom Rune 幻影符文", "type": "mechanic", "description": "場上 3 個顏色標記 → 對應位置處理。", "tips": ["看顏色找對應點"] },
+                { "name": "Mors Certa 必死之劫", "type": "cone", "description": "MT 扇形 cleave。", "tips": [{ "text": "MT 朝場邊", "role": "tank" }] },
+                { "name": "Frondesce 葉茂", "type": "aoe", "description": "場上多個 AoE 圓圈散落。", "tips": ["看圈走縫"] },
+                { "name": "Puck adds 妖精", "type": "add", "description": "場邊召喚妖精 add → 速殺。", "tips": [{ "text": "DPS AoE 殲滅", "role": "dps" }] },
+                { "name": "Hard Mist 硬霧", "type": "raidwide", "description": "全屏 AoE + 視野模糊。", "tips": [{ "text": "補大團補", "role": "healer" }, "走縫"] },
+                { "name": "Bewitching Bound 巫術束縛", "type": "mechanic", "description": "連線 2 人撞球解。", "tips": ["連線者撞球"] },
+                { "name": "Phantom Rune Final 最終符文", "type": "raidwide", "description": "末段加強符文機制 + 全屏。", "tips": [{ "text": "全員減傷 + 補極限", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }

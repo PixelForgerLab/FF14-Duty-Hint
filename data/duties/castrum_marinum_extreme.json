@@ -1,89 +1,39 @@
 {
-    "id":  "castrum_marinum_extreme",
-    "name":  "馬里納姆魔導要塞 (極)",
-    "nameEn":  "Castrum Marinum (Extreme)",
-    "expansion":  "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  80,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Emerald Weapon EX = Magitek Ray 強化 + Burst Cone 連發。",
-                     "2）Photon Stream 連發 + 召大量機甲 add。",
-                     "3）Phantom Out 多段 + 散圈 + 強化牆。",
-                     "4）Magitek Burst 末段強壓 + 連 DPS check。"
-                 ],
-    "notes":  "ShB 5.3 Emerald Weapon EX (Lv 80)。Emerald Weapon 強化版。",
-    "bosses":  [
-                   {
-                       "name":  "魔導祖母綠",
-                       "nameEn":  "The Emerald Weapon",
-                       "phases":  [
-                                      {
-                                          "name":  "Emerald Weapon EX",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Magitek Ray 強化",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 連 line 雷射 AoE 多段。",
-                                                                "tips":  [
-                                                                             "連續側步"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Burst Cone 連發",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 連 cone AoE 多方向。",
-                                                                "tips":  [
-                                                                             "看朝向移位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Summon Mecha 多波",
-                                                                "type":  "other",
-                                                                "description":  "召大量小機甲 → DPS 全力殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 殺 add",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Photon Stream 連發",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 + 連發 + 散標。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員強減傷 + 散",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Phantom Out 幻象",
-                                                                "type":  "spread",
-                                                                "description":  "場上多 AoE 圈 + 反射牆。",
-                                                                "tips":  [
-                                                                             "走縫避圈 + 看牆"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magitek Burst 末段",
-                                                                "type":  "raidwide",
-                                                                "description":  "末段大全屏連發。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段催爆發",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "castrum_marinum_extreme",
+    "name": "馬里納姆魔導要塞 (殲殛戰) - 翠玉神兵",
+    "nameEn": "Castrum Marinum (Extreme) - The Emerald Weapon",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Emerald Weapon EX 強化版；新增 Forward / Side Cannon 朝向加農。",
+        "2）Magnetism + Repel 強化磁鐵：4 連 → 看 debuff 預判走位。",
+        "3）Optimized Hawkblaster 雙 buster + 後續 cleave。",
+        "4）Sidereal Glow 天體輝光：全屏 + 場上多 AoE。",
+        "5）Stoneskin Bombs 石膚炸彈：場邊出現炸彈 → 撞掉避免爆炸。",
+        "6）Aetheroplasm 4 連散標。",
+        "7）Diffractive Laser 衍射雷射：場邊直線 AoE → 順序走位。",
+        "8）Final: Sidereal Vision Phase 2 enrage。"
+    ],
+    "notes": "ShB 5.3 蠻神 Extreme - 馬里納姆魔導要塞殲殛戰 (Lv 80, ilvl 520)。Emerald EX；磁鐵組合密度提升。",
+    "bosses": [
+        {
+            "name": "翠玉神兵",
+            "nameEn": "The Emerald Weapon",
+            "phases": [{ "name": "Emerald EX 主戰", "mechanics": [
+                { "name": "Optimized Hawkblaster + Cleave 雙 buster", "type": "tankbuster", "description": "MT 雙重 buster + 後續扇形 cleave。", "tips": [{ "text": "MT 大減傷 + ST swap", "role": "tank" }] },
+                { "name": "Magnetism + Repel 4 連磁鐵", "type": "mechanic", "description": "4 連磁鐵 debuff → 看圖示預判走位。", "tips": ["看 debuff 圖示走"] },
+                { "name": "Aetheroplasm 4 連散標", "type": "spread", "description": "點名玩家 4 連圓形 AoE → 散開。", "tips": ["分散 5m+"] },
+                { "name": "Optical Sight 光學瞄準", "type": "aoe", "description": "點名直線雷射 → 場邊。", "tips": ["被點走場邊"] },
+                { "name": "Sidereal Glow 天體輝光", "type": "raidwide", "description": "全屏 + 場上多 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Stoneskin Bombs 石膚炸彈", "type": "mechanic", "description": "場邊炸彈出現 → 撞掉避免全屏爆炸。", "tips": [{ "text": "DPS 撞掉炸彈", "role": "dps" }] },
+                { "name": "Diffractive Laser 衍射雷射", "type": "aoe", "description": "場邊直線 AoE → 順序走位。", "tips": ["看順序預判"] },
+                { "name": "Sidereal Vision Phase 2 (enrage)", "type": "raidwide", "description": "末段全屏 enrage。", "tips": [{ "text": "全員減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }

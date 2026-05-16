@@ -1,90 +1,38 @@
 {
-    "id":  "voidcast_dais",
-    "name":  "虛空召喚台",
-    "nameEn":  "The Voidcast Dais",
-    "expansion":  "6.x 曉月之終途 (Endwalker)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  90,
-    "highEnd":  false,
-    "quality":  "good",
-    "mnemonic":  [
-                     "1）Golbez = 暗系魔法 + Black Fang 雙坦 cone buster。",
-                     "2）Summon Shadow Dragon = 召暗龍 + line AoE 穿場。",
-                     "3）Aetheric Boom 全屏 + 場上散標。",
-                     "4）Cosmic Sigil = 場暗陣 → 多 AoE 圈。",
-                     "5）Phantom Rush = 衝鋒 line + 連 cleave。"
-                 ],
-    "notes":  "DT 6.4 Archfiend trial (Lv 90)。Golbez 暗黑魔將 (FF4 致敬)。",
-    "bosses":  [
-                   {
-                       "name":  "哥布茲",
-                       "nameEn":  "Golbez",
-                       "phases":  [
-                                      {
-                                          "name":  "Golbez",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Black Fang 黑牙",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT cone buster + 暗 debuff + Vuln。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Summon Shadow Dragon 召暗龍",
-                                                                "type":  "aoe",
-                                                                "description":  "召暗龍 + line AoE 穿場。",
-                                                                "tips":  [
-                                                                             "走縫避線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aetheric Boom 以太爆",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 + 散標。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + 散",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Cosmic Sigil 宇宙符印",
-                                                                "type":  "aoe",
-                                                                "description":  "場上召暗魔法陣 → 多 AoE 圈。",
-                                                                "tips":  [
-                                                                             "走縫避陣"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Phantom Rush 幻象衝鋒",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 衝鋒 line AoE + 連 cleave。",
-                                                                "tips":  [
-                                                                             "側步閃 + 看朝向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Megaflare 巨閃光",
-                                                                "type":  "raidwide",
-                                                                "description":  "末段大全屏。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + 強補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "voidcast_dais",
+    "name": "虛空召喚台 - 戈爾貝薩",
+    "nameEn": "The Voidcast Dais - Golbez",
+    "expansion": "6.x 曉月之終途 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Golbez = EW 6.3 MSQ Lv 90 trial；FF4 主反派。",
+        "2）Black Fang 黑牙：MT cleave。",
+        "3）Cloak of Shadow 影披風：全屏 + 場上分身。",
+        "4）Phases of the Shadow 影之相：4 個分身依序攻擊 → 看順序。",
+        "5）Void Aero 虛空風：場邊風 → Arm's Length。",
+        "6）Terrastorm 大地暴：場上多 AoE → 走縫。",
+        "7）Adds: Void Geryon → 速殺。",
+        "8）Final: Cosmic Memory 宇宙記憶 enrage 全屏。"
+    ],
+    "notes": "EW 6.3 MSQ trial - 虛空召喚台 (Lv 90)。Golbez；FF4 主反派之戰，2 階段 + 影分身機制。",
+    "bosses": [
+        {
+            "name": "戈爾貝薩",
+            "nameEn": "Golbez",
+            "phases": [{ "name": "Golbez 主戰", "mechanics": [
+                { "name": "Black Fang 黑牙", "type": "cone", "description": "MT 扇形 cleave。", "tips": [{ "text": "MT 朝場邊", "role": "tank" }] },
+                { "name": "Cloak of Shadow 影披風", "type": "raidwide", "description": "全屏 + 場上分身。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Phases of the Shadow 影之相 (4 分身)", "type": "mechanic", "description": "4 個分身依序攻擊 → 看順序走位。", "tips": ["預判每分身方向"] },
+                { "name": "Void Aero 虛空風", "type": "knockback", "description": "場邊風 → 擊退。", "tips": ["Arm's Length"] },
+                { "name": "Terrastorm 大地暴", "type": "aoe", "description": "場上多 AoE 圓 → 走縫。", "tips": ["看圈走"] },
+                { "name": "Void Geryon adds", "type": "add", "description": "虛空 add → 速殺。", "tips": [{ "text": "DPS AoE 殲滅", "role": "dps" }] },
+                { "name": "Cosmic Memory 宇宙記憶 (enrage)", "type": "raidwide", "description": "末段全屏 enrage。", "tips": [{ "text": "全員減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }
