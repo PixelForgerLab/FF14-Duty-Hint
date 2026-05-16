@@ -1,51 +1,45 @@
 {
     "id": "stigma_dreamscape",
-    "name": "汙名夢境",
+    "name": "斯帝格瑪夢境",
     "nameEn": "The Stigma Dreamscape",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 95,
+    "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Magitek Maagrann 魔導裝甲：磁性吸引 + 直線砲擊。",
-        "2）Engels (魔導機甲)：搖晃 + 雙手機制。",
-        "3）Lunar Bahamut 月球巴哈姆特：縮小版巴哈 + 流星 + Megaflare。"
+        "1）B1 Magitek Magrann = 4 cone + 召飛機 add + 全屏。",
+        "2）B2 Engels = 雷射 line + Magitek Missile 散 + 召小機甲。",
+        "3）B3 Lunar Bahamut = Akh Morn 多 hit stack + Megaflare + Flatten 全屏 + 凝視。"
     ],
-    "notes": "EW 6.2 post-MSQ dungeon (Lv 95)。位於 Garlemald 月之地汙名夢境。FFXIV 致敬 + Engels 機械戰。3 boss。",
+    "notes": "EW 6.25 後期 dungeon (Lv 90)。Garlemald 月球機甲夢境。Lunar Bahamut 致敬 FF4。",
     "bosses": [
         {
             "name": "魔導裝甲 Magrann",
             "nameEn": "Magitek Magrann",
-            "mnemonic": [
-                "磁性吸引 + 直線砲擊。",
-                "Cannon 多砲位。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Magnetism 磁性",
-                            "type": "other",
-                            "description": "玩家被吸引/排斥。",
-                            "tips": ["預判磁性方向"]
-                        },
-                        {
-                            "name": "Cannon 砲擊",
+                            "name": "Magitek Cannon (4 cone)",
                             "type": "aoe",
-                            "description": "場上多砲位直線 AoE。",
-                            "tips": ["閃直線"]
+                            "description": "場上 4 方向 cone AoE。",
+                            "tips": ["看 cone 位站縫"]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Summon Aircraft",
+                            "type": "other",
+                            "description": "召飛機 add → DPS 速殺。",
+                            "tips": [{ "text": "DPS 殺 add", "role": "dps" }]
+                        },
+                        {
+                            "name": "Magitek Burst",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -54,35 +48,27 @@
         {
             "name": "Engels (魔導機甲)",
             "nameEn": "Engels",
-            "mnemonic": [
-                "雙手機械機制。",
-                "搖晃震場。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Double-Punch 雙拳",
+                            "name": "Magitek Ray line",
                             "type": "aoe",
-                            "description": "雙手 AoE 攻擊。",
-                            "tips": ["閃雙手攻擊位置"]
+                            "description": "Boss line AoE 雷射穿場。",
+                            "tips": ["側面"]
                         },
                         {
-                            "name": "Quake 地震",
-                            "type": "raidwide",
-                            "description": "全體 AoE 震場。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "name": "Magitek Missile 散",
+                            "type": "spread",
+                            "description": "全員下 AoE 圈散。",
+                            "tips": ["散到場周"]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Summon Mecha add",
+                            "type": "other",
+                            "description": "召小機甲 → DPS 殺。",
+                            "tips": [{ "text": "DPS 殺 add", "role": "dps" }]
                         }
                     ]
                 }
@@ -91,44 +77,35 @@
         {
             "name": "月球巴哈姆特",
             "nameEn": "Lunar Bahamut",
-            "mnemonic": [
-                "縮小版巴哈姆特機制。",
-                "Megaflare 百萬核爆 + 流星。",
-                "Akh Morn 連續分擔。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Megaflare 百萬核爆",
-                            "type": "aoe",
-                            "description": "玩家位置圓 AoE + 全體 AoE 組合。",
-                            "tips": ["散開避免重疊"]
-                        },
-                        {
-                            "name": "Meteor 流星",
-                            "type": "other",
-                            "description": "場上流星小怪 + 必須擊殺。",
-                            "tips": [
-                                { "text": "DPS 集火擊殺", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Akh Morn 死亡輪迴",
+                            "name": "Akh Morn 多 hit",
                             "type": "stack",
-                            "description": "對 1 仇分擔圓 AoE。",
+                            "description": "前 2 名 enmity 連 hit stack 分擔。",
                             "tips": [
-                                { "text": "兩 T 連 H 分擔", "role": "tank" }
+                                { "text": "雙坦 stack 分擔多 hit", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Flatten 夷為平地",
-                            "type": "tankbuster",
-                            "description": "對 1 仇高傷單體。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Megaflare 散",
+                            "type": "spread",
+                            "description": "全員下 AoE 圈散。",
+                            "tips": ["散到場周"]
+                        },
+                        {
+                            "name": "Flatten 全屏",
+                            "type": "raidwide",
+                            "description": "全屏 + 凝視 → 看 boss = 石化。",
+                            "tips": [{ "text": "全員減傷 + 背對", "role": "healer" }]
+                        },
+                        {
+                            "name": "Gigaflare",
+                            "type": "raidwide",
+                            "description": "末段大全屏。",
+                            "tips": [{ "text": "全員減傷 + 強補", "role": "healer" }]
                         }
                     ]
                 }

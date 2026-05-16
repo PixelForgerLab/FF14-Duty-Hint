@@ -6,46 +6,40 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 93,
+    "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Lyngbakr 林格巴克爾 (大鯨)：水柱 + 漩渦。",
-        "2）Thaliak 塔利亞克：水箭 + 河流機制。",
-        "3）Ambrosa 安布羅薩：水流 + 心愛 buff 機制。"
+        "1）B1 Lyngbakr 鯨 = 衝鋒 line + Bubble 場上水球 + 噴水。",
+        "2）B2 Thaliak = Aetherial Aetherflow 流場分 + line AoE + 多 puddle。",
+        "3）B3 Ambrosa = Lily of the Valley 花瓣 cone + 全屏 + 春之氣息全員散標。"
     ],
-    "notes": "EW 6.35 post-MSQ dungeon (Lv 93)。位於以太之泉。3 boss 水主題。",
+    "notes": "DT 6.45 後期 dungeon (Lv 90)。Thavnair 水底洞穴。",
     "bosses": [
         {
             "name": "林格巴克爾",
             "nameEn": "Lyngbakr",
-            "mnemonic": [
-                "巨型水鯨。",
-                "水柱 + 漩渦 AoE。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Water Pillar 水柱",
+                            "name": "Charge 衝鋒",
                             "type": "aoe",
-                            "description": "場上水柱 AoE。",
-                            "tips": ["離開水柱位置"]
+                            "description": "Boss 朝玩家 line 衝鋒 AoE。",
+                            "tips": ["側步閃線"]
                         },
                         {
-                            "name": "Whirlpool 漩渦",
-                            "type": "other",
-                            "description": "場上漩渦吸引玩家。",
-                            "tips": ["預判吸引方向"]
+                            "name": "Bubble 水球",
+                            "type": "aoe",
+                            "description": "場上召水球 → 爆 AoE 圈。",
+                            "tips": ["走縫避球"]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Whirlpool",
+                            "type": "raidwide",
+                            "description": "全屏 + 場上漩渦 AoE。",
+                            "tips": [{ "text": "全員減傷 + 走外", "role": "healer" }]
                         }
                     ]
                 }
@@ -54,33 +48,27 @@
         {
             "name": "塔利亞克",
             "nameEn": "Thaliak",
-            "mnemonic": [
-                "水箭散開機制。",
-                "Hydroball 水球連線。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Water Arrow 水箭",
+                            "name": "Aetherial Aetherflow",
+                            "type": "other",
+                            "description": "場上分 segment 區 + 強制位移到對應段。",
+                            "tips": ["看流方向 + 站對段"]
+                        },
+                        {
+                            "name": "Aetheric Beam",
+                            "type": "aoe",
+                            "description": "Boss line AoE 穿場。",
+                            "tips": ["站側面"]
+                        },
+                        {
+                            "name": "Pool Puddle",
                             "type": "spread",
-                            "description": "玩家圓 AoE 標記。",
-                            "tips": ["散開 clock"]
-                        },
-                        {
-                            "name": "Hydroball 水球",
-                            "type": "stack",
-                            "description": "連線玩家分擔圓 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "場上多 puddle AoE 散開。",
+                            "tips": ["散避 puddle"]
                         }
                     ]
                 }
@@ -89,33 +77,27 @@
         {
             "name": "安布羅薩",
             "nameEn": "Ambrosa",
-            "mnemonic": [
-                "水流場地機制。",
-                "心愛 buff 配對。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Water Flow 水流",
-                            "type": "other",
-                            "description": "場上水流方向影響移動。",
-                            "tips": ["預判水流方向"]
+                            "name": "Lily of the Valley",
+                            "type": "aoe",
+                            "description": "Boss 花瓣 cone AoE 多方向。",
+                            "tips": ["看朝向 → 站非 cone"]
                         },
                         {
-                            "name": "Beloved Buff 心愛 buff",
-                            "type": "other",
-                            "description": "玩家獲 buff 配對機制。",
-                            "tips": ["依 buff 配對站位"]
+                            "name": "Aetheric Breath 全屏",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Spring of Life 散標",
+                            "type": "spread",
+                            "description": "全員下 AoE 圈散。",
+                            "tips": ["散到場周"]
                         }
                     ]
                 }

@@ -1,51 +1,45 @@
 {
     "id": "fell_court_of_troia",
-    "name": "墮落特洛伊宮廷",
+    "name": "特洛伊亞秘庭",
     "nameEn": "The Fell Court of Troia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 91,
+    "jobLevelSync": 92,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Scarmiglione 史卡米利歐尼：弓箭手 boss + 毒霧。",
-        "2）Cagnazzo 卡格諾佐 (FFIV 蟾蜍王)：水球 + 大波。",
-        "3）Barbariccia 芭芭莉夏：風龍捲機制。"
+        "1）B1 Scarmiglione (黏液) = Decay 毒灘 + 召小怪 + 全屏。",
+        "2）B2 Cagnazzo (水) = Tsunami 擊退 + Watery Grave puddle + line water cone。",
+        "3）B3 Barbariccia (風) = Whirlwind 旋場 + 髮絲 cleave + 全屏。"
     ],
-    "notes": "EW 6.1 MSQ post-MSQ dungeon (Lv 91)。FFIV 致敬 (Archfiends of Elements)。3 boss：Scarmiglione → Cagnazzo → Barbariccia。",
+    "notes": "DT 6.5 MSQ dungeon (Lv 92)。FF4 四天王致敬 (Scarmiglione + Cagnazzo + Barbariccia)。",
     "bosses": [
         {
             "name": "史卡米利歐尼",
             "nameEn": "Scarmiglione",
-            "mnemonic": [
-                "Toxic Cloud 毒霧 + 弓箭直線。",
-                "Skull Dasher 衝鋒直線。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Toxic Cloud 毒霧",
+                            "name": "Decay 衰敗",
                             "type": "other",
-                            "description": "場上毒霧區 + 持續傷害。",
-                            "tips": ["離開毒霧"]
+                            "description": "場上多 puddle 毒灘 + 持續傷。",
+                            "tips": ["走縫避灘"]
                         },
                         {
-                            "name": "Skull Dasher 骨突擊",
-                            "type": "aoe",
-                            "description": "直線衝鋒 AoE。",
-                            "tips": ["閃直線"]
+                            "name": "Putrid Breath",
+                            "type": "tankbuster",
+                            "description": "MT cone 毒 buster + 流血。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         },
                         {
-                            "name": "Reaping Wind 收割之風",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "name": "Raise 召 add",
+                            "type": "other",
+                            "description": "Boss 召小怪 → DPS 殺。",
+                            "tips": [{ "text": "DPS 速殺 add", "role": "dps" }]
                         }
                     ]
                 }
@@ -54,31 +48,27 @@
         {
             "name": "卡格諾佐",
             "nameEn": "Cagnazzo",
-            "mnemonic": [
-                "Antediluvian：場上水球 + 倒數爆。",
-                "Voidcleaver 半場 cleave。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Antediluvian 大洪水",
-                            "type": "other",
-                            "description": "場上水球生成 + 倒數爆水 AoE。",
-                            "tips": ["離開水球範圍"]
-                        },
-                        {
-                            "name": "Voidcleaver 虛無斬",
-                            "type": "aoe",
-                            "description": "半場 cleave。",
-                            "tips": ["閃對側"]
-                        },
-                        {
                             "name": "Tsunami 海嘯",
+                            "type": "other",
+                            "description": "大水牆擊退 + 留 puddle。",
+                            "tips": ["抗擊退或卡邊"]
+                        },
+                        {
+                            "name": "Water Cone 雙",
                             "type": "aoe",
-                            "description": "一側場地擊退海嘯。",
-                            "tips": ["預判擊退方向"]
+                            "description": "Boss 前後雙 cone water AoE。",
+                            "tips": ["站側面"]
+                        },
+                        {
+                            "name": "Watery Grave",
+                            "type": "spread",
+                            "description": "場上多 puddle AoE 散開。",
+                            "tips": ["散避 puddle"]
                         }
                     ]
                 }
@@ -87,33 +77,27 @@
         {
             "name": "芭芭莉夏",
             "nameEn": "Barbariccia",
-            "mnemonic": [
-                "Tornado 風龍捲 + 場上小龍捲。",
-                "Triclip 三段 cleave。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Tornado 龍捲",
+                            "name": "Whirlwind 旋場",
                             "type": "other",
-                            "description": "場上小龍捲 + 玩家位置圓 AoE。",
-                            "tips": ["避開龍捲 + 散開"]
+                            "description": "場上召旋風 + 擊退 + line AoE 多方向。",
+                            "tips": ["卡縫隙 + 抗擊退"]
                         },
                         {
-                            "name": "Triclip 三段斬",
+                            "name": "Hair Cleave",
                             "type": "aoe",
-                            "description": "3 段扇形 cleave 連發。",
-                            "tips": ["閃 3 個方向"]
+                            "description": "Boss 髮絲 cone 半場 cleave。",
+                            "tips": ["看朝向 → 站對側"]
                         },
                         {
-                            "name": "Maelstrom 漩渦",
+                            "name": "Aerial Storm 全屏",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "全屏 + 強風持續傷。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         }
                     ]
                 }

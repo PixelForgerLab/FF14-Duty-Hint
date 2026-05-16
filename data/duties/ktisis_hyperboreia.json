@@ -1,53 +1,45 @@
 {
     "id": "ktisis_hyperboreia",
-    "name": "極北之地",
+    "name": "極北的造物機關",
     "nameEn": "Ktisis Hyperboreia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 87,
+    "jobLevelSync": 88,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Lyssa 萊薩 (動物製造者)：召喚動物機制。",
-        "2）Ladon Lord 拉登王 (海德拉) + Hippokampos：水柱 + 龍息扇形。",
-        "3）Hermes (在 Elpis)：飛行版本，與 The Dead Ends 不同流派。"
+        "1）B1 Lyssa = Burning Slash 半場 cleave + 召動物 add + 全屏。",
+        "2）B2 Ladon Lord + Hippokampos = 雙頭龍三色頭，依顏色預判攻擊。",
+        "3）B3 Hermes (Elpis 版) = Wing Beat 飛起 + Star 多 AoE + 雙劍 line。"
     ],
-    "notes": "EW 6.0 MSQ 第四個 dungeon (Lv 87)。位於 Elpis 古代世界北部極寒之地。3 boss。",
+    "notes": "EW 6.0 Elpis 區造物機關 dungeon (Lv 88)。Endwalker 神話劇情關。",
     "bosses": [
         {
             "name": "萊薩",
             "nameEn": "Lyssa",
-            "mnemonic": [
-                "召喚動物機制 + 控制流派。",
-                "Frigid Stone：場上散開圓。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Animal Summon 召喚動物",
+                            "name": "Burning Slash",
+                            "type": "aoe",
+                            "description": "Boss 半場火 cleave。",
+                            "tips": ["看朝向 → 站對側"]
+                        },
+                        {
+                            "name": "Summon Beast",
                             "type": "other",
-                            "description": "召喚動物小怪 + 對玩家發動 AoE。",
-                            "tips": [
-                                { "text": "DPS 集火擊殺", "role": "dps" }
-                            ]
+                            "description": "召獸 add → DPS 殺。",
+                            "tips": [{ "text": "DPS 殺 add", "role": "dps" }]
                         },
                         {
-                            "name": "Frigid Stone 寒石",
-                            "type": "spread",
-                            "description": "場上多個圓 AoE。",
-                            "tips": ["散開避免重疊"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Beastly Roar",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -56,33 +48,27 @@
         {
             "name": "拉登王 + 海馬獸",
             "nameEn": "Ladon Lord + Hippokampos",
-            "mnemonic": [
-                "雙頭目：拉登 (3 頭蛇 / 海德拉)。",
-                "三方向 breath 攻擊。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Triple Breath 三重吐息",
+                            "name": "Triple Head 三色頭",
                             "type": "aoe",
-                            "description": "3 頭分別發動扇形 AoE。",
-                            "tips": ["閃 3 個扇形位置"]
+                            "description": "三頭依顏色出不同 cone (火/冰/雷)，看哪顆亮預判。",
+                            "tips": ["看亮頭 → 對應屬性站"]
                         },
                         {
-                            "name": "Water Pillar 水柱",
-                            "type": "aoe",
-                            "description": "場上水柱 AoE。",
-                            "tips": ["離開水柱位置"]
+                            "name": "Hippokampos cleave",
+                            "type": "tankbuster",
+                            "description": "Hippokampos MT cone buster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         },
                         {
-                            "name": "全體 AoE",
+                            "name": "Aetheric Boom",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -91,35 +77,33 @@
         {
             "name": "赫密斯 (Elpis 版)",
             "nameEn": "Hermes",
-            "mnemonic": [
-                "Trismegistos 全屏。",
-                "飛行機制 + 隕石。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Trismegistos 三重至聖",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 連補", "role": "healer" }
-                            ]
+                            "name": "Wing Beat",
+                            "type": "other",
+                            "description": "Boss 飛起 + 擊退 + 落地 PBAoE。",
+                            "tips": ["抗擊退 + 跑遠落點"]
                         },
                         {
-                            "name": "Flying Meteor 飛行隕石",
-                            "type": "aoe",
-                            "description": "場上隕石小怪 + 圓 AoE。",
-                            "tips": [
-                                { "text": "DPS 擊殺", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "散開機制",
+                            "name": "Star Shower",
                             "type": "spread",
-                            "description": "玩家身上圓 AoE 標記。",
-                            "tips": ["散開 clock 位"]
+                            "description": "場上多 AoE 圈散落。",
+                            "tips": ["走縫避圈"]
+                        },
+                        {
+                            "name": "Twin Swords line",
+                            "type": "aoe",
+                            "description": "雙劍 line AoE 穿場。",
+                            "tips": ["走縫隙避"]
+                        },
+                        {
+                            "name": "Dynamis Sphere",
+                            "type": "raidwide",
+                            "description": "全屏 + 強流血。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         }
                     ]
                 }

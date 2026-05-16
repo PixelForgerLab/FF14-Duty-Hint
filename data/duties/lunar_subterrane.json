@@ -1,51 +1,45 @@
 {
     "id": "lunar_subterrane",
-    "name": "月之底",
+    "name": "月之地下道",
     "nameEn": "The Lunar Subterrane",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 99,
+    "jobLevelSync": 91,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Durante 杜蘭特：劍 + 鏡子分身機制。",
-        "2）Antifaesia (Antifaesya) 反法艾：場地縮小 + 多重 AoE。",
-        "3）Golbez 哥布茲 (Archfiend) + Lugaes：黑暗龍捲 + Mist Dragon 分身。"
+        "1）B1 Durante = 鋼鐵巨人 cone + 連環踩 + 召小 add。",
+        "2）B2 Antifaesia = 雙生仙女 + 不可分散位 + line AoE。",
+        "3）B3 Golbez (Archfiend 形態) = 暗系魔法 + 召黑龍 + 大全屏 + 雙坦 cone。"
     ],
-    "notes": "EW 6.4 post-MSQ dungeon (Lv 99)。位於月之底部，FFIV 致敬。3 boss：Durante → Antifaesia → Golbez (Archfiend 完整版)。",
+    "notes": "DT 6.5 MSQ dungeon (Lv 91)。月球地下 + Golbez 暗黑魔將。FF4 致敬。",
     "bosses": [
         {
             "name": "杜蘭特",
             "nameEn": "Durante",
-            "mnemonic": [
-                "劍 + 鏡子分身機制。",
-                "雙劍斬 cleave。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Mirror Image 鏡像",
+                            "name": "Iron Fist",
                             "type": "aoe",
-                            "description": "分身鏡像 cleave。",
-                            "tips": ["看分身朝向預判"]
+                            "description": "Boss cone AoE 鋼鐵拳。",
+                            "tips": ["站側面"]
                         },
                         {
-                            "name": "Double Slash 雙劍斬",
-                            "type": "aoe",
-                            "description": "雙段 cleave。",
-                            "tips": ["閃 2 段位置"]
+                            "name": "Stomp 踩",
+                            "type": "raidwide",
+                            "description": "全屏 + 場上多 AoE 圈。",
+                            "tips": [{ "text": "全員減傷 + 避圈", "role": "healer" }]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Summon Adds",
+                            "type": "other",
+                            "description": "召小 add → DPS 殺。",
+                            "tips": [{ "text": "DPS 速殺 add", "role": "dps" }]
                         }
                     ]
                 }
@@ -54,33 +48,27 @@
         {
             "name": "反法艾",
             "nameEn": "Antifaesia",
-            "mnemonic": [
-                "場地縮小機制。",
-                "多重 AoE 預兆。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Shrink Arena 場地縮小",
-                            "type": "other",
-                            "description": "場地縮小範圍。",
-                            "tips": ["保持中央"]
-                        },
-                        {
-                            "name": "Multi AoE 多重 AoE",
+                            "name": "Twin Cleave",
                             "type": "aoe",
-                            "description": "場上多重 AoE 預兆 + 爆。",
-                            "tips": ["跟著預兆移動"]
+                            "description": "雙生仙女各 cone 攻擊不同方向。",
+                            "tips": ["看 boss 朝向 → 跑安全位"]
                         },
                         {
-                            "name": "全體 AoE",
+                            "name": "Linked Aether",
+                            "type": "other",
+                            "description": "兩本體 tether → 不可走太遠。",
+                            "tips": ["保持兩 boss 距離"]
+                        },
+                        {
+                            "name": "Aetheric Boom",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -89,39 +77,33 @@
         {
             "name": "哥布茲 (Archfiend 形態)",
             "nameEn": "Golbez (Archfiend)",
-            "mnemonic": [
-                "完整 Archfiend 形態。",
-                "Black Star 黑暗龍捲。",
-                "Mist Dragon 霧龍分身。",
-                "Genesis Rock 創世岩石。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Black Star 黑暗龍捲",
-                            "type": "aoe",
-                            "description": "場上黑暗龍捲 + 圓 AoE。",
-                            "tips": ["離開龍捲位置"]
+                            "name": "Black Fang",
+                            "type": "tankbuster",
+                            "description": "MT cone buster + 暗 debuff。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         },
                         {
-                            "name": "Mist Dragon 霧龍",
+                            "name": "Summon Dragon",
                             "type": "other",
-                            "description": "Mist Dragon 分身發動扇形 AoE。",
-                            "tips": ["看分身朝向"]
+                            "description": "召黑龍 + line AoE 穿場。",
+                            "tips": ["走縫隙"]
                         },
                         {
-                            "name": "Genesis Rock 創世岩石",
-                            "type": "aoe",
-                            "description": "場上岩石 AoE。",
-                            "tips": ["閃岩石位置"]
+                            "name": "Dark Burst 全屏",
+                            "type": "raidwide",
+                            "description": "全屏 + 場散標。",
+                            "tips": [{ "text": "全員減傷 + 散開", "role": "healer" }]
                         },
                         {
-                            "name": "Cosmic Rays 宇宙射線",
+                            "name": "Cosmic Sigil",
                             "type": "aoe",
-                            "description": "場上多重直線 AoE。",
-                            "tips": ["閃直線預警"]
+                            "description": "場上召暗魔法陣 → 多 AoE 圈。",
+                            "tips": ["走縫避陣"]
                         }
                     ]
                 }
