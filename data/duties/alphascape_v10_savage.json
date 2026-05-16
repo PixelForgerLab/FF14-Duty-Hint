@@ -10,22 +10,24 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）O9S Chaos：四元素 (火水雷土) 形態切換 → 對應不同 AoE。",
-        "2）Limit Break 玩家組合擊：Chaos 給 BLM/SMN/MNK 等職業 LB 操作。",
-        "3）Disaster Zone 場地擴散 + Forked Lightning 雷球追蹤。"
+        "1）O9S Chaos 混沌：四元素 (火/水/雷/土) 形態切換 → 各形態不同 AoE。",
+        "2）Limit Break Player Tag：BLM/SMN/MNK 等職業會被 Chaos 給 LB 指令，要按特定時機放。",
+        "3）Disaster Zone 場地擴散 + Forked Lightning 雷球追蹤 → 拉開。",
+        "4）狂暴：Damocles 達摩克利斯之劍 必須限時殺。"
     ],
-    "notes": "Omega Savage O9S (Lv 70, ilvl 385)。",
+    "notes": "Omega Savage O9S Lv 70 ilvl 385。Chaos (混沌) Savage。資料來源：玩家手記 (CGW 此頁面資料較少)。",
     "bosses": [
         {
             "name": "Chaos 混沌",
             "nameEn": "Chaos",
-            "mnemonic": ["四元素形態", "玩家 LB 操作", "Disaster Zone"],
+            "mnemonic": ["四元素形態切換", "LB 玩家配合放", "Damocles 限時殺"],
             "phases": [{ "name": "主戰", "mechanics": [
                 { "name": "Element Switch 元素切換", "type": "other", "description": "Boss 切換火/水/雷/土，每形態不同 AoE。", "tips": ["看形態預判"] },
                 { "name": "Forked Lightning 分叉雷", "type": "other", "description": "雷球追蹤玩家。", "tips": ["拉開"] },
                 { "name": "Disaster Zone 災區", "type": "aoe", "description": "場地擴散 AoE。", "tips": ["閃預警"] },
+                { "name": "Limit Break Player 玩家 LB", "type": "other", "description": "Chaos 對 BLM/SMN/MNK 等職業給 LB 指令需特定時機放。", "tips": [{ "text": "指定 LB 玩家配合 timing", "role": "dps" }] },
                 { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+                { "name": "Damocles + Enrage", "type": "raidwide", "description": "達摩克利斯之劍狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
             ]}]
         }
     ]

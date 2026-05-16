@@ -10,21 +10,26 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）Midgardsormr 大蛇：Cauterize 火焰跨場直線 + 召小龍。",
-        "2）Ginnungagap 黑色虛無：場地分區黑/白；Touchdown 落地。",
-        "3）Akh Morn 連擊 tankbuster。"
+        "1）Midgardsormr Ambient Aether 旋轉組合：橫橫 = 近圓 (跑遠) / 橫直 = 甜甜圈 (貼 boss) / 直直 = 十字直線 (跑角落)。",
+        "2）旋轉時 boss 不動，全員預先就位。",
+        "3）Earth Shaker (Ambient + 4 直線) + Thunderstorm (4 AoE + 留地圈)；Akh Morn 多次連續 stack。",
+        "4）Ice-Storm 兩玩家在腳下留漸大冰池 (Frostbite) → 拉外圈角落。",
+        "5）Cauterize + Scarlet Thread：boss 從場邊衝場 + 場內網格直線 AoE 同時。"
     ],
-    "notes": "Omega Normal O10 (Lv 70)。",
+    "notes": "Omega Normal O10 Lv 70。Midgardsormr (大蛇) 重戰。資料來源：CGW (Alphascape V2.0)。",
     "bosses": [
         {
             "name": "Midgardsormr 大蛇",
-            "nameEn": "Midgardsormr",
-            "mnemonic": ["Cauterize 火直線", "黑白分區"],
+            "nameEn": "Midgardsormr (Alphascape)",
+            "mnemonic": ["旋轉 H+H 跑遠/H+V 貼/V+V 跑角", "Akh Morn 多 hit stack 不要散", "Ice-Storm 拉角落", "Cauterize + Scarlet Thread 同時躲"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Cauterize 灼燒", "type": "aoe", "description": "boss 飛離場地放跨場直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Hatch 孵化", "type": "other", "description": "場上召喚小龍 adds。", "tips": [{ "text": "DPS 處理", "role": "dps" }] },
-                { "name": "Ginnungagap 黑白虛無", "type": "other", "description": "場地分黑白區，需依 buff 站對區。", "tips": ["看 debuff 顏色"] },
-                { "name": "Akh Morn 連擊", "type": "tankbuster", "description": "多重 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Ambient Aether 環境以太 (旋轉)", "type": "other", "description": "Boss 旋轉兩次決定攻擊：橫+橫 = 近圓 (跑遠)；橫+直 = 甜甜圈 (進 hitbox)；直+直 = 十字直線 (跑角落)。**旋轉時 boss 不動 / 不普攻**，所有人可預先就位。", "tips": ["看旋轉組合預判位置"] },
+                { "name": "Ambient Aether + Earth Shaker", "type": "other", "description": "旋轉 + 4 玩家被 Earth Shaker 標記 → 4 條直線。**先解旋轉 + 4 直線拉開**。", "tips": ["拉直線 + 閃旋轉攻擊"] },
+                { "name": "Akh Morn 阿克莫恩", "type": "stack", "description": "stack 標記但**多 hit**，**全員留在標記者身上**直到全部 hit 結束。", "tips": ["不要中途散開"] },
+                { "name": "Ambient Aether + Thunderstorm", "type": "spread", "description": "旋轉 + 4 玩家雷標記 → 4 AoE → 留地圈會持續雷。", "tips": ["散開 + 跑出地圈"] },
+                { "name": "Ambient Aether (V+V 強制十字)", "type": "aoe", "description": "Phase 切換固定雙直線旋轉。", "tips": ["跑角落"] },
+                { "name": "Ice-Storm 冰風暴", "type": "other", "description": "2 玩家標記，腳下漸大冰池 (Frostbite)。", "tips": ["拉到外圈角落放"] },
+                { "name": "Cauterize + Scarlet Thread", "type": "aoe", "description": "Cauterize boss 從場邊衝場跨場 + 同時 Scarlet Thread 火球網格直線 (Suppuration debuff)。", "tips": ["看 boss 落點預判路徑 + 閃網格"] }
             ]}]
         }
     ]

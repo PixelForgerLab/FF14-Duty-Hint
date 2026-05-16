@@ -10,21 +10,30 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）Alte Roite 龍：Levinbolt 雷球追蹤；Stack 玩家身上要拉開。",
-        "2）Wing 翅膀分裂出來要打掉；Akh Morn 多重 tankbuster。",
-        "3）Final Skyfall 全屏 AoE。"
+        "1）Alte Roite (FF5)：Wyrm Tail tankbuster；Flame 召火球可被 Downburst 移動。",
+        "2）Twin Bolt 拉繩 → OT 站 MT 旁分擔。",
+        "3）Breathwing 擊退 → 跑回 boss。Thin Ice 結冰、Levinbolt 散開、Blaze stack。",
+        "4）The Classical Elements 階段切換 + Charybdis 血量歸 1 後立刻 Roar 全屏。"
     ],
-    "notes": "Omega Normal O1 (Lv 70)。FF5 致敬，Alte Roite 龍化。",
+    "notes": "Omega Normal O1 Lv 70。FF5 致敬，Alte Roite 龍化。資料來源：CGW (Deltascape V1.0)。",
     "bosses": [
         {
-            "name": "Alte Roite 龍",
+            "name": "Alte Roite 阿爾鐵·羅伊蒂",
             "nameEn": "Alte Roite",
-            "mnemonic": ["雷球 + 翅膀分裂", "Akh Morn 連 buster"],
+            "mnemonic": ["Wyrm Tail tankbuster", "Twin Bolt OT 共擔", "Breathwing 擊退 → 跑回", "Charybdis 1HP → Roar"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Levinbolt 雷球", "type": "other", "description": "場上雷球追蹤隨機玩家。", "tips": ["拉開"] },
-                { "name": "Wing Split 翅膀分裂", "type": "other", "description": "Boss 翅膀分出 add 要打掉。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
-                { "name": "Akh Morn 連擊", "type": "tankbuster", "description": "多次連續 tankbuster。", "tips": [{ "text": "MT 開大減傷或共擔", "role": "tank" }] },
-                { "name": "Skyfall 落天", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Wyrm Tail 龍尾", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Flame + Fire Orbs", "type": "aoe", "description": "全屏 + 召火球 (圓 AoE，碰到堆 vuln)，可被 Downburst 推動。", "tips": ["閃火球"] },
+                { "name": "Roar 咆嘯", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Breathwing 翼吐息", "type": "knockback", "description": "Boss 跳到場邊後擊退。", "tips": ["朝 boss 移動 → 擊退後再過去"] },
+                { "name": "Twin Bolt 雙重雷", "type": "tankbuster", "description": "Tankbuster + 對 MT 旁玩家連繩傷害。", "tips": [{ "text": "OT 站 MT 旁共擔", "role": "tank" }] },
+                { "name": "Clamp 鉗夾", "type": "knockback", "description": "前方直線 + 擊退。", "tips": ["閃直線"] },
+                { "name": "Thin Ice 薄冰", "type": "other", "description": "場地結冰，移動會滑。", "tips": ["小步移動"] },
+                { "name": "Levinbolt 雷球", "type": "spread", "description": "全員 puddle AoE 散開。", "tips": ["散開"] },
+                { "name": "Blaze 焚燒", "type": "stack", "description": "Stack 標記。", "tips": ["疊接"] },
+                { "name": "Downburst 暴風", "type": "other", "description": "中央龍捲，玩家被擊退；站太靠中央 = 慢死，太遠 = 擊飛場外。", "tips": ["站中央外圈緣"] },
+                { "name": "The Classical Elements 古典元素", "type": "other", "description": "階段切換，組合 Fire Orbs / Thin Ice / Levinbolt / Blaze / Downburst。", "tips": ["看 phase 跟機制"] },
+                { "name": "Charybdis 卡律布狄斯", "type": "raidwide", "description": "全員血量歸 1，接著 Roar。", "tips": [{ "text": "Healer 立刻 AoE 補滿", "role": "healer" }] }
             ]}]
         }
     ]

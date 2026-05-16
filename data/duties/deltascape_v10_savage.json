@@ -10,23 +10,43 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）O1S Alte Roite：強化雷球 + 翅膀分裂 + 多重 Akh Morn。",
-        "2）Holy 神聖標記疊接；Levinbolt 多球追蹤要拉開。",
-        "3）Skyfall enrage 全屏狂暴秒殺。"
+        "1）O1S Alte Roite：9:45 enrage，需 raid DPS ~19500。",
+        "2）The Classical Elements 4 階段 — 中央 Downburst 站對 + Flame Inside/Outside / Levinbolt / Blaze 順序變化。",
+        "3）Flame Inside = 外圈站等 Levinbolt → 進內；Flame Outside = 內圈站等 Levinbolt → 退外。",
+        "4）Twin Bolt OT 必須貼 MT 共擔；Clamp 直線無 telegraph 會擊飛場外。",
+        "5）Charybdis 全血歸 1 + Roar 全屏 → healer 立刻補滿。"
     ],
-    "notes": "Omega Savage O1S (Lv 70, ilvl 345)。",
+    "notes": "Omega Savage O1S Lv 70 ilvl 345。Alte Roite Savage。資料來源：CGW (Deltascape V1.0 (Savage))。",
     "bosses": [
         {
             "name": "Alte Roite (Savage)",
             "nameEn": "Alte Roite",
-            "mnemonic": ["強化 EX 機制"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Levinbolt (S) 多球", "type": "other", "description": "多隻雷球追蹤。", "tips": ["拉開"] },
-                { "name": "Wing Split (S)", "type": "other", "description": "翅膀 adds 強化。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
-                { "name": "Akh Morn (S) 連擊", "type": "tankbuster", "description": "多重 tankbuster。", "tips": [{ "text": "MT/OT 共擔", "role": "tank" }] },
-                { "name": "Holy 神聖", "type": "stack", "description": "玩家被點名疊接。", "tips": ["全員疊接"] },
-                { "name": "Skyfall Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "mnemonic": ["9:45 enrage", "Classical Elements 4 階段", "Flame Inside/Outside 走位", "Charybdis + Roar"],
+            "phases": [
+                { "name": "P1 Classical Elements 1", "mechanics": [
+                    { "name": "中央 Downburst", "type": "other", "description": "站中央外圈緣，被擊退到外圈後立刻跑回避火球。", "tips": ["站邊緣外退"] },
+                    { "name": "Flame Inside / Outside", "type": "aoe", "description": "Inside = 外圈先 Levinbolt 後 → 進內；Outside = 內圈 Levinbolt 後 → 退外。", "tips": ["按 Inside/Outside 順序走"] },
+                    { "name": "Levinbolt 散開", "type": "spread", "description": "全員各自落雷 AoE。", "tips": ["拉開 8 點位"] }
+                ]},
+                { "name": "P2 CE 2", "mechanics": [
+                    { "name": "Outer Ring Missing Cardinal", "type": "other", "description": "P2 外圈一條方位缺火，疊到那邊外圈。", "tips": ["找缺口疊"] }
+                ]},
+                { "name": "P3 CE 3", "mechanics": [
+                    { "name": "Inner Ring Flames", "type": "other", "description": "看內圈火環，站兩火球之間中央偏外，Downburst 後進入。", "tips": ["站火球縫隙"] },
+                    { "name": "Blaze 取代 Levinbolt", "type": "stack", "description": "Healer 接 stack 分擔。", "tips": [{ "text": "Healer stack", "role": "healer" }] }
+                ]},
+                { "name": "P4 CE 4 + Enrage", "mechanics": [
+                    { "name": "與 CE 1 相同 + Blaze 取代", "type": "other", "description": "CE 4 與 CE 1 機制相同但用 Blaze 取代 Levinbolt。", "tips": ["按 P1 走位 + healer 接 stack"] },
+                    { "name": "Flame Enrage (9:45)", "type": "raidwide", "description": "9:45 火球全爆，wipe。", "tips": [{ "text": "末段全力 burst", "role": "dps" }] }
+                ]},
+                { "name": "通用機制", "mechanics": [
+                    { "name": "Wyrm Tail (×2 + 雙)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                    { "name": "Twin Bolt", "type": "tankbuster", "description": "OT 必須站 MT 旁共擔。", "tips": [{ "text": "OT 貼 MT 共擔", "role": "tank" }] },
+                    { "name": "Clamp", "type": "knockback", "description": "前方直線無 telegraph → 擊飛場外 = 死。", "tips": ["閃 boss 朝向"] },
+                    { "name": "Breath Wing", "type": "knockback", "description": "boss 跳到場邊後擊退 → 跟 boss 跳的方向跑。", "tips": ["往 boss 落點靠"] },
+                    { "name": "Charybdis → Roar", "type": "raidwide", "description": "HP 歸 1 + 接全屏。", "tips": [{ "text": "Healer 立刻全 AoE 補", "role": "healer" }] }
+                ]}
+            ]
         }
     ]
 }

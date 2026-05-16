@@ -10,23 +10,43 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）Omega-M (機械) + Omega-F (人形) 雙形態：M 用直線砲、F 用法術。",
-        "2）Diffuse Wave Cannon 分散直線；Beyond Strength 強力擊退。",
-        "3）Quote Mechanic：呼叫前 boss 機制 (Bahamut/Alexander 等)。"
+        "1）Omega Opening：Mustard Bomb tankbuster (小範圍 → 非 T 不站旁)；Ballistic Impact 散開 + Flame Thrower 8 錐同時。",
+        "2）Wave Cannon — **Larboard = boss 左 = 玩家向左走避**；boss 會轉向再放二次騙人。",
+        "3）Peripheral Synthesis Rocket Punch adds 撞牆推進 → **用 Omega Jammer (Duty Action) 打掉**。",
+        "4）Add Phase (~70%)：Level Checker 召 + 全場電池圖。Executable #1 八個圈每人站一個解 Looper；#2 圈中心 PBAoE → 外圈 → 圓圈各 2 人解。Force Quit 限時殺。",
+        "5）Delta Attack：對 Conductive Focus 用 Omega Jammer 充能 → 100% 護盾擋 Delta Attack。"
     ],
-    "notes": "Omega Normal O11 (Lv 70)。Omega 雙形態。",
+    "notes": "Omega Normal O11 Lv 70。Omega (機械神) 重戰。資料來源：CGW (Alphascape V3.0)。",
     "bosses": [
         {
-            "name": "Omega-M + Omega-F",
-            "nameEn": "Omega-M + Omega-F",
-            "mnemonic": ["雙形態", "Quote 引用前 boss"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Diffuse Wave Cannon 分散波砲", "type": "aoe", "description": "場上多重直線砲擊。", "tips": ["閃直線"] },
-                { "name": "Beyond Strength 超越力量", "type": "knockback", "description": "強力擊退。", "tips": ["預判方向"] },
-                { "name": "Quote Mechanic 引用機制", "type": "other", "description": "Boss 召喚前 boss 機制 (Bahamut, Alexander 等)。", "tips": ["記前 boss 機制"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "name": "Omega 歐米茄",
+            "nameEn": "Omega (boss)",
+            "mnemonic": [
+                "Mustard Bomb tankbuster + 小範圍",
+                "Wave Cannon Larboard = boss 左 (轉向騙)",
+                "Peripheral Synthesis 用 Omega Jammer 打 Rocket Punch",
+                "Executable #1 各人圈 / #2 中心 + 外圈避 + 圓圈 2 人解",
+                "Delta Attack Conductive Focus 充能"
+            ],
+            "phases": [
+                { "name": "Opening", "mechanics": [
+                    { "name": "Atomic Ray 原子射線", "type": "raidwide", "description": "全屏無法迴避。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                    { "name": "Mustard Bomb 芥子彈", "type": "tankbuster", "description": "對 MT 高傷 + 小範圍。", "tips": [{ "text": "MT 開減傷，非 T 別站旁", "role": "tank" }] },
+                    { "name": "Ballistic Impact + Flame Thrower", "type": "spread", "description": "Ballistic 全員圓 AoE 散開 + 留火池 Burns；同時 Flame Thrower 8 個錐 → 站錐縫。", "tips": ["散開 + 找錐縫"] },
+                    { "name": "Wave Cannon 波砲", "type": "aoe", "description": "Larboard (左舷) = boss 左側 / Starboard = boss 右側。**Larboard 玩家可向自己左閃 (boss 面對 = 玩家)**。boss 會轉向再放二次。", "tips": ["記 boss 朝向"] },
+                    { "name": "Peripheral Synthesis Rocket Punch", "type": "other", "description": "場邊召 Rocket Punch 牆推進，需用 **Omega Jammer (Duty Action)** 打掉約半血。", "tips": [{ "text": "DPS 用 Omega Jammer", "role": "dps" }] }
+                ]},
+                { "name": "Add Phase (~70%)", "mechanics": [
+                    { "name": "Electro Puddles", "type": "other", "description": "Omega 離場留中央 + 場邊電池 → 站到即死。", "tips": ["閃藍池"] },
+                    { "name": "Level Checker + Executable #1", "type": "other", "description": "場上召 Level Checker。Executable #1 = 8 個圓圈每人站 1 個解 Looper debuff。", "tips": ["全員分配站圓"] },
+                    { "name": "Executable #2", "type": "other", "description": "中心 PBAoE → 4 個內圓 (兩人各) + 外圈 → 跑離中心 → 跑回 → 2 人/圓解 Looper。", "tips": ["順序：離中央 → 進內圈 → 站圓"] },
+                    { "name": "Force Quit 強制結束", "type": "raidwide", "description": "Level Checker 長詠唱 = wipe。", "tips": [{ "text": "DPS 限時殺", "role": "dps" }] }
+                ]},
+                { "name": "Delta Attack", "mechanics": [
+                    { "name": "Conductive Focus + Omega Jammer", "type": "other", "description": "場中央友軍 Conductive Focus → 全員用 Duty Action 充 Electromagnetic Induction 條 → 100% 護盾擋 Delta Attack。", "tips": ["全員 spam Omega Jammer"] },
+                    { "name": "Delta Attack 三角攻擊", "type": "raidwide", "description": "Omega 終局，未充滿 = wipe。", "tips": [{ "text": "全員配合充能", "role": "dps" }] }
+                ]}
+            ]
         }
     ]
 }
