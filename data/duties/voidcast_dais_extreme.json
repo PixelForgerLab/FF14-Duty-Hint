@@ -1,34 +1,71 @@
 {
     "id": "voidcast_dais_extreme",
-    "name": "格貝爾殲殛戰",
+    "name": "黑闇祭殿殲殛戰",
     "nameEn": "The Voidcast Dais (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 625,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Gale Sphere 多分身",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Golbez EX：加強 Crescent Blade + Eventide Triad。",
+        "2）Phases of the Shadow：黑暗 phase 切換多種 AoE。",
+        "3）Cloak of Darkness：場地分區 + 黑暗區域。",
+        "4）狂暴：Astral Anomaly 全屏即死。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 635）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.4 Archfiend EX (Lv 90, ilvl 625)。Golbez EX。",
     "bosses": [
         {
-            "name": "格貝爾",
+            "name": "哥布茲",
             "nameEn": "Golbez",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "Eventide Triad：3 段組合機制。",
+                "Phases of the Shadow：黑暗 phase 切換。",
+                "Cloak of Darkness：場地分區。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Crescent Blade (EX) 半月斬",
+                            "type": "aoe",
+                            "description": "180° cleave (EX 強化版)。",
+                            "tips": ["繞 boss 後"]
+                        },
+                        {
+                            "name": "Eventide Triad 三重組合",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "3 段組合機制 (扇形 + 圓 + 直線)。",
+                            "tips": ["看 cast 順序預判"]
+                        },
+                        {
+                            "name": "Phases of the Shadow 暗相",
+                            "type": "other",
+                            "description": "黑暗 phase 切換多種 AoE。",
+                            "tips": ["記憶 phase 順序"]
+                        },
+                        {
+                            "name": "Cloak of Darkness 黑暗外套",
+                            "type": "aoe",
+                            "description": "場地分區 + 黑暗區域。",
+                            "tips": ["找安全分區站"]
+                        },
+                        {
+                            "name": "Mist Dragon (EX) 霧龍",
+                            "type": "aoe",
+                            "description": "Mist Dragon 分身 + 增強機制。",
+                            "tips": ["看分身朝向"]
+                        },
+                        {
+                            "name": "Astral Anomaly (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

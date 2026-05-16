@@ -1,34 +1,71 @@
 {
     "id": "minstrels_ballad_endsingers_aria",
-    "name": "終末歌詠者殲殛戰",
+    "name": "終末詠歌殲殛戰",
     "nameEn": "The Minstrel's Ballad: Endsinger's Aria",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 605,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Elegeia/Elenchos 機制更密",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Endsinger EX：加強 Hubris + Aetherial Gain。",
+        "2）Ultima Aether 球機制強化。",
+        "3）Despair: Final Hours：場地縮小 + 多重 AoE。",
+        "4）狂暴：Outburst 終局全屏即死。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 605）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.1 Endsinger EX (Lv 90, ilvl 605)。歌頌終末者 EX。",
     "bosses": [
         {
-            "name": "終末歌詠者",
+            "name": "歌頌終末者",
             "nameEn": "The Endsinger",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "Aetherial Gain 以太屬性 buff。",
+                "Hubris 場地多重 AoE + 玩家位置記憶。",
+                "Despair: Final Hours 場地縮小。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Aetherial Gain 以太獲得",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "玩家獲不同以太屬性 buff。",
+                            "tips": ["依 buff 顏色站位"]
+                        },
+                        {
+                            "name": "Hubris (EX) 傲慢",
+                            "type": "aoe",
+                            "description": "場地多重 AoE + 玩家位置記憶 + 連發。",
+                            "tips": ["移動避開記憶位置"]
+                        },
+                        {
+                            "name": "Ultima 終級",
+                            "type": "aoe",
+                            "description": "Aether 球 + 大爆炸 AoE 強化。",
+                            "tips": ["離開球範圍"]
+                        },
+                        {
+                            "name": "Elegeia 哀歌",
+                            "type": "stack",
+                            "description": "分擔圓 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "Despair: Final Hours 絕望終時",
+                            "type": "other",
+                            "description": "場地縮小 + 多重 AoE。",
+                            "tips": ["保持中央"]
+                        },
+                        {
+                            "name": "Outburst (Enrage) 爆發",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

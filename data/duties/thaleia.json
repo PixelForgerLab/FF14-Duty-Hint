@@ -1,6 +1,6 @@
 {
     "id": "thaleia",
-    "name": "歡笑之鄉 塔莉亞",
+    "name": "豐穰之園塔莉亞",
     "nameEn": "Thaleia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,105 +8,160 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）薩里亞克：Hieroglyphika 旋轉看箭頭預判安全格；Tetraktys 場地變三角 + 三角板爆。",
-        "2）林姆蘭：Surging Wave 擊退進長廊 + 水牆關閉，往主場跑；Trident 6 段點 AoE 依序。",
-        "3）奧斯崇：Wandering Volley 看箭頭 + 弓兵連繩；終戰場景變化複雜。"
+        "1）Thaliak 塔利亞克：知識之神 + 水箭機制。",
+        "2）Llymlaen 利姆萊妮：海之神 + 鯨魚 + 海嘯。",
+        "3）Oschon 奧夏：旅之神 + 山岳 AoE。",
+        "4）Rhalgr 拉爾戈 + 終戰：破壞之神 + 全 12 神最終戰。"
     ],
-    "notes": "6.5 EW Alliance Raid 終戰（Lv 90，ilvl 625）。Myths of the Realm 第 3 部 + 終戰。Thaliak + Llymlaen + Oschon。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.5 24 人 alliance raid (Lv 90)。Twelve series 第三部 (終)。4 boss：Thaliak → Llymlaen → Oschon → Rhalgr/12 神終戰。",
     "bosses": [
         {
-            "name": "薩里亞克",
+            "name": "塔利亞克",
             "nameEn": "Thaliak",
-            "mnemonic": ["三角板爆", "Hieroglyphika 旋轉"],
+            "mnemonic": [
+                "知識之神。",
+                "水箭散開 + 河流機制。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Tetraktys",
+                            "name": "Water Arrow 水箭",
+                            "type": "spread",
+                            "description": "玩家圓 AoE 散開。",
+                            "tips": ["clock 散開"]
+                        },
+                        {
+                            "name": "River of Knowledge 知識之河",
                             "type": "aoe",
-                            "description": "場地變三角，藍三角板會爆，綠三角 4 個板爆。",
-                            "tips": ["看顏色找安全板"]
+                            "description": "場上水流 AoE。",
+                            "tips": ["閃水流路徑"]
                         },
                         {
-                            "name": "Tetraktuos Kosmos",
-                            "type": "aoe",
-                            "description": "塔牆倒下成線 AoE。",
-                            "tips": ["看牆朝向避"]
-                        },
-                        {
-                            "name": "Hieroglyphika",
-                            "type": "other",
-                            "description": "全場 AoE 留 2 格安全 + 旋轉箭頭預示安全格旋轉位置。",
-                            "tips": ["站到旋轉後安全位"]
-                        },
-                        {
-                            "name": "Rheognosis",
-                            "type": "other",
-                            "description": "場外分身擊退。",
-                            "tips": ["站牆邊或抗擊退"]
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "林姆蘭",
+            "name": "利姆萊妮",
             "nameEn": "Llymlaen",
-            "mnemonic": ["Surging Wave 站綠標", "Trident 點 AoE 順序"],
+            "mnemonic": [
+                "海之神。",
+                "Sea Spray 海嘯擊退。",
+                "Krakens 海怪召喚。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Navigator's Trident",
+                            "name": "Sea Spray 海嘯",
                             "type": "aoe",
-                            "description": "左/右 cleave 順序 + 中央線 AoE + 擊退到長廊。",
-                            "tips": ["依序避 cleave", "預擊退到長廊"]
+                            "description": "場上海嘯 AoE + 擊退。",
+                            "tips": ["預判擊退方向"]
                         },
                         {
-                            "name": "Surging Wave",
+                            "name": "Krakens 海怪",
                             "type": "other",
-                            "description": "紫圈即死 + 大擊退到長廊（站綠標）。",
-                            "tips": ["遠離紫圈", "站綠標"]
+                            "description": "場上海怪小怪。",
+                            "tips": [
+                                { "text": "DPS 擊殺", "role": "dps" }
+                            ]
                         },
                         {
-                            "name": "長廊水牆",
-                            "type": "other",
-                            "description": "長廊後方水牆關閉，被困即死 + 海泡。",
-                            "tips": ["快速往主場跑", "閃海泡"]
-                        },
-                        {
-                            "name": "Torrential Tridents",
-                            "type": "aoe",
-                            "description": "6 個三叉戟依序爆點 AoE。",
-                            "tips": ["從最後一個三叉戟開始", "進剛爆位置"]
-                        },
-                        {
-                            "name": "Denizens of the Deep",
-                            "type": "aoe",
-                            "description": "兩小怪幫忙放線 AoE。",
-                            "tips": ["看小怪位置避"]
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "奧斯崇",
+            "name": "奧夏",
             "nameEn": "Oschon",
-            "mnemonic": ["看箭頭", "弓兵連繩"],
+            "mnemonic": [
+                "旅之神。",
+                "山岳 AoE + 弓箭機制。",
+                "Mountain Fire 山火。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Wandering Volley",
+                            "name": "Mountain Fire 山火",
                             "type": "aoe",
-                            "description": "箭頭線 AoE + 弓兵連繩玩家。",
-                            "tips": ["看箭頭避", "拉繩"]
+                            "description": "場上山火 AoE。",
+                            "tips": ["閃火位置"]
+                        },
+                        {
+                            "name": "Arrow Volley 箭雨",
+                            "type": "aoe",
+                            "description": "場上箭雨 AoE。",
+                            "tips": ["散開避免重疊"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "拉爾戈 + 終戰",
+            "nameEn": "Rhalgr + Final",
+            "mnemonic": [
+                "破壞之神拉爾戈。",
+                "終戰：12 神聯合機制。",
+                "Star Crash 星墜 + Hand of the Destroyer。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Star Crash 星墜",
+                            "type": "raidwide",
+                            "description": "全屏隕石 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Hand of the Destroyer 破壞者之手",
+                            "type": "aoe",
+                            "description": "場上巨手 AoE。",
+                            "tips": ["閃巨手位置"]
+                        },
+                        {
+                            "name": "12 神聯合機制",
+                            "type": "other",
+                            "description": "12 神同時放招。",
+                            "tips": [
+                                "關注多方向預警",
+                                { "text": "全員減傷 + LB", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

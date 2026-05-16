@@ -1,91 +1,66 @@
 {
     "id": "storms_crown",
-    "name": "巴爾巴莉香殲滅戰",
+    "name": "風暴之冠殲滅戰",
     "nameEn": "Storm's Crown",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 595,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Savage Barbery：紅劍弧形=線、紅劍環繞=甜甜圈；Hair Raid 站劍後。",
-        "2）Teasing Tangles：被綁定到 AoE 內 + Secret Breeze 兩組錐 AoE 交錯。",
-        "3）Phase 2：Catabasis 大傷 + 多重 AoE + Boulder Break 雙 T 拉開。",
-        "4）Touchdown 別碰場邊風牆（Windburn DoT）。"
+        "1）Barbariccia 芭芭莉夏 (Archfiend 風)：Tornado 龍捲 + Aero Surge 散開。",
+        "2）Wind Bullet：場上多重風彈 AoE。",
+        "3）Triclip：3 段 cleave 連發。"
     ],
-    "notes": "6.2 EW 第一個 Archfiend trial（Lv 90，ilvl 585）。Barbariccia 暴風女王。FFIV 致敬。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.2 Archfiend trial (Lv 90, ilvl 595)。Barbariccia (FFIV 風 Archfiend) Normal。",
     "bosses": [
         {
-            "name": "巴爾巴莉香",
+            "name": "芭芭莉夏",
             "nameEn": "Barbariccia",
-            "mnemonic": ["紅劍弧=線、環=甜甜圈", "Tangled 別離 AoE 太遠"],
+            "mnemonic": [
+                "Tornado 龍捲 + 玩家位置散開。",
+                "Triclip 三段 cleave。",
+                "Maelstrom 漩渦 + 擊退。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Void Aero IV",
+                            "name": "Tornado 龍捲",
+                            "type": "other",
+                            "description": "場上小龍捲 + 玩家位置圓 AoE。",
+                            "tips": ["避開龍捲 + 散開"]
+                        },
+                        {
+                            "name": "Triclip 三段斬",
+                            "type": "aoe",
+                            "description": "3 段扇形 cleave。",
+                            "tips": ["閃 3 個方向"]
+                        },
+                        {
+                            "name": "Wind Bullet 風彈",
+                            "type": "spread",
+                            "description": "場上多重風彈 AoE。",
+                            "tips": ["散開 clock 位"]
+                        },
+                        {
+                            "name": "Maelstrom 漩渦",
                             "type": "raidwide",
                             "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Savage Barbery + Hair Raid",
-                            "type": "aoe",
-                            "description": "紅劍弧 = 線、環 = 甜甜圈；劍丟到位置後跳過去放錐 AoE。",
-                            "tips": ["看紅劍形狀躲第一段", "Hair Raid 站劍後"]
-                        },
-                        {
-                            "name": "Void Aero III",
-                            "type": "tankbuster",
-                            "description": "雙 T 分擔。",
-                            "tips": [{ "text": "MT/OT 集中", "role": "tank" }]
-                        },
-                        {
-                            "name": "Teasing Tangles + Secret Breeze",
-                            "type": "aoe",
-                            "description": "4 個 AoE 把人綁起來 + 兩組交錯錐 AoE。",
-                            "tips": ["先在 AoE 縫站", "綁住後依錐縫位移"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Catabasis",
-                            "type": "raidwide",
-                            "description": "Boss 跳起來再砸下大傷。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Blow Away + 衝鋒",
-                            "type": "aoe",
-                            "description": "分身連續衝鋒 + 多 AoE。",
-                            "tips": ["看分身衝鋒方向找縫"]
-                        },
-                        {
-                            "name": "Boulder + Boulder Break",
-                            "type": "tankbuster",
-                            "description": "玩家 AoE 標記 + 雙 T 巨石坦補。",
                             "tips": [
-                                "AoE 拉場邊",
-                                { "text": "雙 T 分開吃 Boulder Break", "role": "tank" }
+                                { "text": "減傷 + 補滿", "role": "healer" }
                             ]
                         },
                         {
-                            "name": "Tousle",
-                            "type": "aoe",
-                            "description": "場中央外擴 AoE 球，命中擊飛 + 易傷。",
-                            "tips": ["跑邊閃球"]
-                        },
-                        {
-                            "name": "Touchdown",
-                            "type": "other",
-                            "description": "擊退到場邊（風牆 Windburn）。",
-                            "tips": ["位置調好別碰場邊風牆"]
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }

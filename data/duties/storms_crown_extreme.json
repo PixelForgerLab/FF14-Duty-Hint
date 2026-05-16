@@ -1,34 +1,73 @@
 {
     "id": "storms_crown_extreme",
-    "name": "巴爾巴莉香殲殛戰",
+    "name": "風暴之冠殲殛戰",
     "nameEn": "Storm's Crown (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 605,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Hair 機制更複雜",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Barbariccia EX：加強 Tornado + 4 段 Triclip。",
+        "2）Hair Raid 髮絲攻擊：場上玩家被髮絲鎖定。",
+        "3）Wicked Wheel 邪輪：擴散環形 + 風刀。",
+        "4）狂暴：Deadly Twister 終局秒殺。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 615）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.2 Archfiend EX (Lv 90, ilvl 605)。Barbariccia EX。",
     "bosses": [
         {
-            "name": "巴爾巴莉香",
+            "name": "芭芭莉夏",
             "nameEn": "Barbariccia",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "EX 強化 Tornado + 4 段 Triclip。",
+                "Hair Raid 髮絲攻擊機制。",
+                "Wicked Wheel 邪輪。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Tornado (EX) 龍捲",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "多個小龍捲 + 玩家位置圓 AoE。",
+                            "tips": ["避開龍捲 + 散開"]
+                        },
+                        {
+                            "name": "Triclip (EX) 4 段斬",
+                            "type": "aoe",
+                            "description": "4 段扇形 cleave。",
+                            "tips": ["閃 4 個方向"]
+                        },
+                        {
+                            "name": "Hair Raid 髮絲攻擊",
+                            "type": "other",
+                            "description": "場上玩家被髮絲鎖定 → 攻擊。",
+                            "tips": ["看標記預判"]
+                        },
+                        {
+                            "name": "Wicked Wheel 邪輪",
+                            "type": "aoe",
+                            "description": "Boss 為心擴散環形 AoE + 風刀。",
+                            "tips": ["閃環形位置"]
+                        },
+                        {
+                            "name": "Maelstrom (EX)",
+                            "type": "raidwide",
+                            "description": "全體高傷 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Deadly Twister (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

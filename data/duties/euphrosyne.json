@@ -1,6 +1,6 @@
 {
     "id": "euphrosyne",
-    "name": "至福之鄉 歐芙洛緒涅",
+    "name": "歡樂之園尤芙洛西妮",
     "nameEn": "Euphrosyne",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,93 +8,144 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）諾菲卡：花田 = 點 AoE / 森林 = 甜甜圈；Floral Haze 方向 debuff 看 Boss 變形預判朝向。",
-        "2）雙神 Althyk + Nymeia：別讓兩個 boss 太近（Sibling Revelry 增傷）；Spinner's Wheel 看卡片 debuff。",
-        "3）哈林姆萊伊：時間倒流機制 + 過去/未來位置切換。"
+        "1）Nophica 諾菲卡：自然之神 + 植物 AoE。",
+        "2）Althyk + Nymeia 阿爾忒克 + 妮美雅：時間 + 命運雙頭目。",
+        "3）Halone 哈羅妮 (EW 版)：槍 + 盾組合。",
+        "4）Menphina 蒙菲娜 + Azeyma 阿澤瑪：月 + 太陽雙神。"
     ],
-    "notes": "6.3 EW Alliance Raid（Lv 90，ilvl 595）。Myths of the Realm 第 2 部。Nophica + Althyk/Nymeia + Halone（時間之神）。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.3 24 人 alliance raid (Lv 90)。Twelve series 第二部。4 boss：Nophica → Althyk+Nymeia → Halone → Menphina+Azeyma。",
     "bosses": [
         {
             "name": "諾菲卡",
             "nameEn": "Nophica",
-            "mnemonic": ["花田 = 點 / 森林 = 甜甜圈", "Floral Haze 預判朝向"],
+            "mnemonic": [
+                "自然之神。",
+                "植物 AoE + 大鎌機制。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Matron's Plenty + The Giving Land",
-                            "type": "aoe",
-                            "description": "場地變花田或森林。花田 = 點 AoE Spring Flowers；森林 = 甜甜圈 Summer Shade。",
-                            "tips": ["看場地顏色"]
-                        },
-                        {
-                            "name": "Floral Haze",
+                            "name": "Floral Haze 花霧",
                             "type": "other",
-                            "description": "方向錯亂 debuff，看 Boss 變形預判要面向哪邊。",
-                            "tips": ["預判朝向"]
+                            "description": "場上植物 AoE + 持續傷害。",
+                            "tips": ["避開植物範圍"]
                         },
                         {
-                            "name": "Matron's Breath",
+                            "name": "Great Scythe 大鎌",
                             "type": "aoe",
-                            "description": "3-6 個藍/金信標依順序爆。要站對應色信標附近。",
-                            "tips": ["看顏色 + 倒數點"]
+                            "description": "大鎌 cleave AoE。",
+                            "tips": ["閃對側"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "阿爾席克 + 妮姆梅雅",
-            "nameEn": "Althyk + Nymeia",
-            "mnemonic": ["別讓兩 boss 太近", "看 Spinner's Wheel 卡片"],
+            "name": "阿爾忒克 + 妮美雅",
+            "nameEn": "Althyk & Nymeia",
+            "mnemonic": [
+                "時間 + 命運雙頭目。",
+                "Spinner's Wheel + Time Bomb。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Arcane Triumph (8 分鐘 enrage)",
+                            "name": "Time Bomb 時間炸彈",
                             "type": "other",
-                            "description": "8 分鐘內必須打完。",
-                            "tips": [{ "text": "全力 DPS", "role": "dps" }]
+                            "description": "場上時間炸彈倒數爆。",
+                            "tips": ["遠離炸彈位置"]
                         },
                         {
-                            "name": "Sibling Revelry",
+                            "name": "Spinner's Wheel 紡織",
                             "type": "other",
-                            "description": "兩 boss 太近會獲得增傷 + 減傷 buff。",
-                            "tips": ["拉開兩個 boss"]
+                            "description": "線繩配對機制。",
+                            "tips": ["依顏色配對"]
                         },
                         {
-                            "name": "Spinner's Wheel",
-                            "type": "other",
-                            "description": "卡片 debuff：Attraction 面向 / Reversed 不面向 / Fever 停動 / Reversed 持續動。",
-                            "tips": ["看卡片決定行為"]
-                        },
-                        {
-                            "name": "Mythril Greataxe",
-                            "type": "aoe",
-                            "description": "Althyk 對玩家錐 AoE。",
-                            "tips": ["看朝向繞"]
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "哈林姆萊伊",
-            "nameEn": "Halone",
-            "mnemonic": ["時間機制", "看 cutscene 過場後"],
+            "name": "哈羅妮 (EW)",
+            "nameEn": "Halone (EW)",
+            "mnemonic": [
+                "槍 + 盾組合。",
+                "Frost Aegis 冰盾。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "時間操控",
+                            "name": "Frost Aegis 冰盾",
                             "type": "other",
-                            "description": "Halone 戰鬥涉及時間倒流 + 過去/未來位置切換。",
-                            "tips": ["跟著機制提示走"]
+                            "description": "盾擊 + 反射機制。",
+                            "tips": ["看盾朝向"]
+                        },
+                        {
+                            "name": "Lance Strike 槍擊",
+                            "type": "aoe",
+                            "description": "場上槍 AoE。",
+                            "tips": ["閃槍位置"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "蒙菲娜 + 阿澤瑪",
+            "nameEn": "Menphina & Azeyma",
+            "mnemonic": [
+                "月 + 太陽雙神。",
+                "Phase 切換明 / 暗。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Lunar Phase 月相",
+                            "type": "aoe",
+                            "description": "月之機制 + 半場 AoE。",
+                            "tips": ["閃月光路徑"]
+                        },
+                        {
+                            "name": "Solar Flare 太陽閃焰",
+                            "type": "aoe",
+                            "description": "太陽 AoE + 圓爆。",
+                            "tips": ["閃太陽位置"]
+                        },
+                        {
+                            "name": "Enrage 全屏即死",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

@@ -1,34 +1,71 @@
 {
     "id": "mount_ordeals_extreme",
-    "name": "魯比坎特殲殛戰",
+    "name": "試煉之山殲殛戰",
     "nameEn": "Mount Ordeals (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 615,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Ordeal of Purgation 多火球路徑",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Rubicante EX：加強 Conflagration + Crepuscular Light 黎明光。",
+        "2）Phlegethon 火川：場上火川流動 + 阻擋移動。",
+        "3）斗篷模式切換：closed/open 不同機制。",
+        "4）狂暴：Ultimate Pyre 終局秒殺。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 625）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.3 Archfiend EX (Lv 90, ilvl 615)。Rubicante EX。",
     "bosses": [
         {
             "name": "魯比坎特",
             "nameEn": "Rubicante",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "Crepuscular Light：黎明光擊退機制。",
+                "Phlegethon 火川流動 + 阻擋。",
+                "斗篷模式判定 closed/open 機制。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Conflagration (EX) 大火災",
+                            "type": "aoe",
+                            "description": "場上多重火 AoE。",
+                            "tips": ["閃火位置"]
+                        },
+                        {
+                            "name": "Crepuscular Light 黎明光",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "Boss 為心擊退 + 圓 AoE。",
+                            "tips": ["預判擊退方向"]
+                        },
+                        {
+                            "name": "Phlegethon 火川",
+                            "type": "other",
+                            "description": "場上火川流動 + 阻擋移動 + 持續傷害。",
+                            "tips": ["利用火川間隙移動"]
+                        },
+                        {
+                            "name": "Inferno (EX) 地獄火",
+                            "type": "spread",
+                            "description": "玩家圓 AoE + 火耐降低。",
+                            "tips": ["散開 clock 位"]
+                        },
+                        {
+                            "name": "Cape Flap 斗篷展開",
+                            "type": "other",
+                            "description": "boss 斗篷 closed (大圓爆) 或 open (donut + 拖拉)。",
+                            "tips": ["看斗篷狀態預判"]
+                        },
+                        {
+                            "name": "Ultimate Pyre (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

@@ -1,35 +1,71 @@
 {
     "id": "minstrels_ballad_hydaelyns_call",
-    "name": "海德林殲殛戰",
+    "name": "光輝詠歌殲殛戰",
     "nameEn": "The Minstrel's Ballad: Hydaelyn's Call",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 595,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Dawn Mantle 武器切換更快",
-        "Crystallize 多重組合",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Hydaelyn EX：加強 Equinox 黑白半場。",
+        "2）Echoes 回響 + 多重 AoE 預兆。",
+        "3）Crystalline Blessing：場上水晶 buff 機制強化。",
+        "4）狂暴：Magos's Radiance 終局全屏。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 605）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.1 Hydaelyn EX (Lv 90, ilvl 595)。海德林 EX。",
     "bosses": [
         {
             "name": "海德林",
             "nameEn": "Hydaelyn",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "Equinox 黑白半場交替 + 順序判定。",
+                "Echoes 玩家位置記憶 + 回響爆。",
+                "Crystalline Blessing 水晶配對。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Echoes (EX) 回響",
+                            "type": "aoe",
+                            "description": "場上散開 AoE + 倒數爆 + 記憶位置。",
+                            "tips": ["散開 + 移動避免回響"]
+                        },
+                        {
+                            "name": "Equinox (EX) 春分",
+                            "type": "aoe",
+                            "description": "黑/白半場 cleave 連發。",
+                            "tips": ["看顏色順序預判"]
+                        },
+                        {
+                            "name": "Heros' Sundering 英雄分離",
+                            "type": "stack",
+                            "description": "分擔圓 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "Crystalline Blessing 結晶祝福",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "場上水晶 buff + 配對機制。",
+                            "tips": ["依顏色配對站位"]
+                        },
+                        {
+                            "name": "Aetheric Pulse 以太脈衝",
+                            "type": "aoe",
+                            "description": "全體 + 散開組合 AoE。",
+                            "tips": ["散開 + 減傷"]
+                        },
+                        {
+                            "name": "Magos's Radiance (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

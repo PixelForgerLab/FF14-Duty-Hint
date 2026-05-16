@@ -1,108 +1,64 @@
 {
     "id": "mount_ordeals",
-    "name": "魯比坎特殲滅戰",
+    "name": "試煉之山殲滅戰",
     "nameEn": "Mount Ordeals",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 605,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Ordeal of Purgation：跟著火球藍引線預判 cone 方向；Penance debuff 到時不能動。",
-        "2）Adds Phase：先打 Greater Flamesent（Ghastly Torch 全體傷+Burns）。",
-        "3）Phase 2 Flamerake：旋轉箭頭停止時 = 線 AoE 朝向，看終點預判閃對側。",
-        "4）Soulscald：藍線 AoE 在剛剛紅線位置再放一次（穿越整個場）。"
+        "1）Rubicante 魯比坎特 (Archfiend 火)：火焰機制 + 斗篷展開。",
+        "2）Conflagration 大火災：場上多重火 AoE。",
+        "3）Inferno 地獄火：圓 AoE + 散開。"
     ],
-    "notes": "6.3 EW 第二個 Archfiend trial（Lv 90，ilvl 595）。Rubicante 火焰之皇。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.3 Archfiend trial (Lv 90, ilvl 605)。Rubicante (FFIV 火 Archfiend) Normal。",
     "bosses": [
         {
             "name": "魯比坎特",
             "nameEn": "Rubicante",
-            "mnemonic": ["看引線預判 cone", "Penance 結束前找好位", "先打 Greater Flamesent"],
+            "mnemonic": [
+                "Conflagration 大火災。",
+                "Inferno 地獄火圓 + 散開。",
+                "Flames of Hell 地獄之火 cleave。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Inferno",
+                            "name": "Conflagration 大火災",
+                            "type": "aoe",
+                            "description": "場上多重火 AoE。",
+                            "tips": ["閃火位置"]
+                        },
+                        {
+                            "name": "Inferno 地獄火",
+                            "type": "spread",
+                            "description": "玩家圓 AoE 散開。",
+                            "tips": ["散開 clock"]
+                        },
+                        {
+                            "name": "Flames of Hell 地獄之火",
+                            "type": "aoe",
+                            "description": "半場 cleave。",
+                            "tips": ["閃對側"]
+                        },
+                        {
+                            "name": "全體 AoE",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Ordeal of Purgation",
-                            "type": "aoe",
-                            "description": "同心三圈 + 藍引線指引火球路徑，Penance 結束會被鎖位置。",
-                            "tips": ["看藍引線追蹤 cone 終點", "預先到安全位"]
-                        },
-                        {
-                            "name": "Shattering Heat",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Arch Inferno + Conflagration/Radial Flagration",
-                            "type": "aoe",
-                            "description": "中央 AoE + 兩組旋轉 AoE + 額外線/錐 AoE。",
-                            "tips": ["跟著旋轉縫跑"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Adds Phase",
-                    "mechanics": [
-                        {
-                            "name": "Greater Flamesent + Flamesent",
-                            "type": "other",
-                            "description": "1 大 + 3 小要打完，Rubicante's Power 100 = 團滅。",
+                            "description": "對 1 仇 tankbuster。",
                             "tips": [
-                                "先打大的（持續 Burns DoT）",
-                                { "text": "全力 burst", "role": "dps" }
+                                { "text": "MT 開減傷", "role": "tank" }
                             ]
-                        },
-                        {
-                            "name": "Blazing Rapture",
-                            "type": "raidwide",
-                            "description": "Phase 結尾全體大傷。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Inferno (散開)",
-                            "type": "spread",
-                            "description": "散開標記 + 流血 DoT。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Flamerake",
-                            "type": "aoe",
-                            "description": "旋轉箭頭停止位置 = 線 AoE，外擴。",
-                            "tips": ["看停止方向", "AoE 後跑剛剛安全位"]
-                        },
-                        {
-                            "name": "Soulscald / Scalding Fleet",
-                            "type": "spread",
-                            "description": "玩家線 AoE 散開 + 後續藍線 AoE 在原位再放。",
-                            "tips": ["分散誘導", "AoE 後馬上離開"]
-                        },
-                        {
-                            "name": "Dualfire",
-                            "type": "tankbuster",
-                            "description": "雙 T 大 AoE 坦補。",
-                            "tips": [{ "text": "MT/OT 拉開", "role": "tank" }]
-                        },
-                        {
-                            "name": "Sweeping Immolation",
-                            "type": "spread",
-                            "description": "半場 cleave + 散開。",
-                            "tips": ["先繞 cleave 再散"]
                         }
                     ]
                 }

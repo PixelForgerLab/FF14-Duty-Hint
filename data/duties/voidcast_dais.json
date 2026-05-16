@@ -1,121 +1,65 @@
 {
     "id": "voidcast_dais",
-    "name": "格貝爾殲滅戰",
+    "name": "黑闇祭殿殲滅戰",
     "nameEn": "The Voidcast Dais",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 615,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Crescent Blade：180 度前 cleave，繞 Boss 後。",
-        "2）Arctic Assault：兩組對角象限 AoE，找箭頭站位。",
-        "3）Phase 2 Meteor：補職擊退標記，其他人踩塔；補職連繩龍後拉開。",
-        "4）Gale Sphere：4 分身連續線 AoE，找前兩個再對位後兩個的安全。"
+        "1）Golbez 哥布茲 (Archfiend 黑暗)：Black Star 黑暗龍捲 + Mist Dragon。",
+        "2）Arctic Assault：兩組對角象限 AoE。",
+        "3）Meteor + 連線：補職擊退 + 龍連繩。"
     ],
-    "notes": "6.4 EW 第三個 Archfiend trial（Lv 90，ilvl 615）。Golbez 黑暗騎士。FFIV 致敬。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 Archfiend trial (Lv 90, ilvl 615)。Golbez (FFIV 黑暗 Archfiend) Normal。",
     "bosses": [
         {
-            "name": "格貝爾",
+            "name": "哥布茲",
             "nameEn": "Golbez",
-            "mnemonic": ["Crescent Blade 繞 Boss 後", "Meteor 補職擊退、其他踩塔", "Gale Sphere 找前 2 安全"],
+            "mnemonic": [
+                "Crescent Blade 半月斬 cleave。",
+                "Arctic Assault 兩組對角象限 AoE。",
+                "Mist Dragon 霧龍分身。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Terrastorm",
+                            "name": "Crescent Blade 半月斬",
                             "type": "aoe",
-                            "description": "角落巨石 AoE。",
-                            "tips": ["遠離角落"]
+                            "description": "180° 前 cleave。",
+                            "tips": ["繞 boss 後"]
                         },
                         {
-                            "name": "Crescent Blade",
+                            "name": "Arctic Assault 北極攻擊",
                             "type": "aoe",
-                            "description": "前方 180 度 cleave。",
-                            "tips": ["繞 Boss 後"]
+                            "description": "兩組對角象限 AoE。",
+                            "tips": ["看箭頭找安全象限"]
                         },
                         {
-                            "name": "Arctic Assault",
+                            "name": "Mist Dragon 霧龍",
                             "type": "aoe",
-                            "description": "兩組對角象限 AoE，找箭頭找安全。",
-                            "tips": ["看箭頭背面"]
+                            "description": "Mist Dragon 分身發動扇形 AoE。",
+                            "tips": ["看分身朝向"]
                         },
                         {
-                            "name": "Void Meteor",
-                            "type": "tankbuster",
-                            "description": "雙 T 多段 AoE 坦補。",
-                            "tips": [{ "text": "MT/OT 拉開", "role": "tank" }]
-                        },
-                        {
-                            "name": "Lingering Spark",
-                            "type": "spread",
-                            "description": "玩家圓 AoE。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Binding Cold",
-                            "type": "raidwide",
-                            "description": "全體傷 + 凍傷 DoT。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Black Fang",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Shadow Crescent",
-                            "type": "aoe",
-                            "description": "強化 Crescent Blade + 緊接點 AoE。",
-                            "tips": ["先繞後再閃點"]
-                        },
-                        {
-                            "name": "Burning Shade",
-                            "type": "spread",
-                            "description": "全員散開。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Meteor Phase",
-                            "type": "stack",
-                            "description": "東西塔 + 補職擊退標記。被擊退進塔分擔 / 補職連龍後線 AoE。",
+                            "name": "Meteor 流星",
+                            "type": "other",
+                            "description": "補職擊退標記 + 場上塔 + 龍連繩。",
                             "tips": [
-                                { "text": "1 補職留中央被擊退", "role": "healer" },
-                                "其他人擠到一邊踩塔"
+                                { "text": "補職拉開避免擊退到塔", "role": "healer" },
+                                "其他人踩塔 + T 接連繩"
                             ]
                         },
                         {
-                            "name": "Double Meteor",
+                            "name": "Gale Sphere 風球",
                             "type": "aoe",
-                            "description": "南北 2 個漸減 AoE。",
-                            "tips": ["跑對側"]
-                        },
-                        {
-                            "name": "Gale Sphere",
-                            "type": "aoe",
-                            "description": "4 分身依順序放線 AoE。",
-                            "tips": ["先找前 2 安全位", "再切到後 2 安全位"]
-                        },
-                        {
-                            "name": "Void Stardust",
-                            "type": "aoe",
-                            "description": "對角圓 AoE。",
-                            "tips": ["走邊 + 回中央"]
-                        },
-                        {
-                            "name": "Eventide Fall",
-                            "type": "stack",
-                            "description": "雙補線 AoE 光小隊分擔。",
-                            "tips": ["光小隊各疊一邊"]
+                            "description": "4 分身連續線 AoE。",
+                            "tips": ["找前兩個再對位後兩個的安全"]
                         }
                     ]
                 }

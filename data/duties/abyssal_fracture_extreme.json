@@ -1,34 +1,76 @@
 {
     "id": "abyssal_fracture_extreme",
-    "name": "塞洛蒙殲殛戰",
+    "name": "深淵裂界殲殛戰",
     "nameEn": "The Abyssal Fracture (Extreme)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 635,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化",
-        "Big Bang/Big Crunch 組合更密",
-        "詳細請參考 Hector Hectorson 攻略"
+        "1）Zeromus EX：加強 Big Bang + Almagest 終級魔法。",
+        "2）Black Hole + Meteor 雙重組合。",
+        "3）Sable Thread：黑線連線機制。",
+        "4）Nostalgia：場地記憶機制。",
+        "5）狂暴：Ultimate Death 全屏即死。"
     ],
-    "notes": "EW Archfiend / MSQ trial EX 版本（ilvl 645）。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson 動畫攻略。",
+    "notes": "EW 6.5 Archfiend EX (Lv 90, ilvl 635)。Zeromus EX。EW 最終 EX 副本。",
     "bosses": [
         {
-            "name": "塞洛蒙",
+            "name": "傑洛姆斯",
             "nameEn": "Zeromus",
-            "mnemonic": ["保留 normal 機制 + 強化"],
+            "mnemonic": [
+                "Almagest 終級魔法 (全屏即死級)。",
+                "Sable Thread 黑線連線。",
+                "Nostalgia 場地記憶機制。"
+            ],
             "phases": [
                 {
-                    "name": "EX 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Savage 強化機制",
+                            "name": "Big Bang (EX) 大爆炸",
+                            "type": "raidwide",
+                            "description": "全屏高傷 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 大盾", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Almagest 終級魔法",
+                            "type": "raidwide",
+                            "description": "全屏即死級 AoE。",
+                            "tips": [
+                                { "text": "全員減傷 + LB3", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Black Hole + Meteor",
                             "type": "other",
-                            "description": "Savage 版本所有 normal 機制加速 + 加新機制。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "黑洞 + 隕石組合機制。",
+                            "tips": ["反方向跑 + 閃隕石"]
+                        },
+                        {
+                            "name": "Sable Thread 黑線",
+                            "type": "other",
+                            "description": "黑線連線玩家機制。",
+                            "tips": ["拉開拉斷"]
+                        },
+                        {
+                            "name": "Nostalgia 鄉愁",
+                            "type": "other",
+                            "description": "場地記憶機制 → 後續 AoE 在記憶位置。",
+                            "tips": ["**不要原地不動**"]
+                        },
+                        {
+                            "name": "Ultimate Death (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }
