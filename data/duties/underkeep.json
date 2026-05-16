@@ -1,166 +1,44 @@
 {
     "id": "underkeep",
-    "name": "王城古跡永護塔底",
+    "name": "深底地宮",
     "nameEn": "The Underkeep",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 760,
+    "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-        "1）巨蟻獸：跳到場外時看沙瀑後位置；最後 Almighty Racket + 散開組合。",
-        "2）士兵 S0：六分身六角形按時針順序消失，最後消失的決定 cleave 方向。",
-        "3）法力亞·皮拉：紫繩線蘭花連橘球放十字 AoE；藍繩立方塊沿軌道走撞球觸發。"
+        "1）DT 7.3 post-MSQ 副本 (Lv 100)。",
+        "2）3 boss + 全屏 AoE + 散開 + 分擔基礎機制。",
+        "3）詳細機制待補充。"
     ],
-    "notes": "DT 7.2 新副本（Lv 100，ilvl 705），Level Cap roulette。法力亞·皮拉的座標機制是這座副本的特色。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.3 post-MSQ 副本 (Lv 100)。位於深底地宮。3 boss。Quality 為 needs-update 因 wiki 資料尚未完整。",
     "bosses": [
         {
-            "name": "巨蟻獸",
-            "nameEn": "Gargant",
-            "mnemonic": ["跳場外時注意沙瀑", "繞 Boss 後方躲半場 cleave"],
+            "name": "Boss 1",
+            "nameEn": "Boss 1",
+            "mnemonic": ["待補充詳細機制"],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Chilling Chirp",
+                            "name": "全體 AoE",
                             "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Almighty Racket",
-                            "type": "aoe",
-                            "description": "Boss 面向玩家 180 度前方 cleave。",
-                            "tips": ["跑到 Boss 後方"]
-                        },
-                        {
-                            "name": "Aerial Assault",
-                            "type": "aoe",
-                            "description": "Boss 跳場外爬行（會被沙瀑遮蔽），停下後從該位置寬線 AoE 衝鋒過場。",
-                            "tips": ["保持眼睛盯著 Boss 位置", "預判衝鋒方向繞側"]
-                        },
-                        {
-                            "name": "AoE 組合",
-                            "type": "spread",
-                            "description": "Chilling Chirp 加兩個對角圓 AoE，接 Almighty Racket 半場 cleave，再三個圓 AoE + Sedimentary Debris 散開標記。",
-                            "tips": ["先閃對角圓", "繞 Boss 後", "再散開避開地面圓"]
-                        },
-                        {
-                            "name": "Earthsong / Sphere Shatter",
-                            "type": "aoe",
-                            "description": "場上 7 顆沙球輪流爆點 AoE，第二組 6 顆。Boss 同時在場外移動。",
-                            "tips": ["跟著沙球縫隙跑", "記住 Boss 在場外位置"]
-                        },
-                        {
-                            "name": "Trap Jaws",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "對主 T 物理坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "士兵 S0",
-            "nameEn": "Soldier S0",
-            "mnemonic": ["看劍光哪側", "六角形按時針消失"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Field of Scorn",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Thunderous Slash",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Sector Bisector",
-                            "type": "aoe",
-                            "description": "Boss 劍對左或右發光，6 個分身排成六角形。分身依順/逆時針順序消失，最後消失的那個位置會放半場 cleave。",
-                            "tips": ["看劍光方向（左/右半場）", "找最後消失分身的對側"]
-                        },
-                        {
-                            "name": "Ordered Fire / Static Force",
-                            "type": "spread",
-                            "description": "場外 4 個方塊放線 AoE 留一象限安全；同時玩家錐 AoE 散開標記。",
-                            "tips": ["散到安全象限", "之後可往場中央調整"]
-                        },
-                        {
-                            "name": "Sector Bisector (進階)",
-                            "type": "spread",
-                            "description": "8 個分身不規則排列，多數消失後 Boss 放 Electric Excess 散開標記。",
-                            "tips": ["看最後消失分身位置", "在半場 cleave 安全側散開"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "法力亞·皮拉",
-            "nameEn": "Valia Pira",
-            "mnemonic": ["紫繩=橘球", "藍繩=立方塊沿軌道", "球被立方塊撞=十字 AoE"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Entropic Sphere",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Coordinate March",
-                            "type": "aoe",
-                            "description": "紫繩標記 2 格生成橘球；藍繩生成從南邊沿軌道移動的立方塊。立方塊撞橘球觸發十字 AoE（打到該行+該列）。",
-                            "tips": ["看橘球位置預判十字 AoE", "可在第一個 AoE 爆完往中央閃避"]
-                        },
-                        {
-                            "name": "Turrets / 線 AoE",
-                            "type": "aoe",
-                            "description": "東牆 4 個砲塔有 2 個發光，放線 AoE 各覆蓋一行。",
-                            "tips": ["找沒發光的砲塔對應行"]
-                        },
-                        {
-                            "name": "Electric Field",
-                            "type": "spread",
-                            "description": "玩家錐 AoE 標記 + 地面錐 AoE 預警，全部擴張，要散到夠遠縫隙。",
-                            "tips": ["看清楚預警縫隙", "完全分散"]
-                        },
-                        {
-                            "name": "Neutralize Front Lines / Hypercharged Light",
-                            "type": "spread",
-                            "description": "Boss 對基本方向 180 度 cleave + 全員散開標記。",
-                            "tips": ["在 Boss 後方散開"]
-                        },
-                        {
-                            "name": "Coordinate March + Bloodmarch",
-                            "type": "aoe",
-                            "description": "立方塊開始移動時 Boss 用 Bloodmarch 把一顆橘球傳送到另一軌道（箭頭預告）。該球先爆。",
-                            "tips": ["跟著傳送方向預判第一個爆點", "再閃第二個"]
-                        },
-                        {
-                            "name": "Deterrent Pulse",
-                            "type": "stack",
-                            "description": "線疊機 AoE。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Coordinate March (3 球 + 砲塔)",
-                            "type": "aoe",
-                            "description": "3 個橘球 + 砲塔線 AoE + Bloodmarch 組合。順序：第 1 球 → 砲塔 → 第 2 球（傳送球）→ 第 3 球。",
-                            "tips": ["記順序", "依序找安全格"]
+                            "description": "對 1 仇單體高傷。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }

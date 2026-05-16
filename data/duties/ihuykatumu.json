@@ -1,6 +1,6 @@
 {
     "id": "ihuykatumu",
-    "name": "叢林競流生息河岸",
+    "name": "伊烏伊卡圖姆",
     "nameEn": "Ihuykatumu",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "dungeon",
@@ -8,147 +8,178 @@
     "iLvlSync": null,
     "jobLevelSync": 92,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）普努提之王：扇形 Hydrowave 看朝向；Resurface 退到對岸躲遠處 AoE。",
-        "2）瞌睡蟲：種子變藤蔓線 AoE，看箭頭預判；Mimiclot 召喚物優先處理。",
-        "3）阿波勒翁：吃完小怪每階段強化；蝗群跳牆四線 AoE 站西南或東南。"
+        "1）Prime Punutiy 普努提王：水波扇形 + Resurface 西側持久錐 + Song of the Punutiy 4 小怪點名。",
+        "2）Drowsie 慵懶獸：睡眠開戰 + Drowsy Dance 4 種子發芽 + Spit 多色小怪變身。",
+        "3）Apollyon 阿波倫 (神鳥)：吃 puma/ocelot 加成劍翼；吃 sandworm 加成爪 + Windwhistle 旋風 add 配 Cutting Wind 8 線。"
     ],
-    "notes": "DT 第一座 MSQ 副本（Lv 91-92）。三個 boss 都有強烈視覺預警，跟著箭頭走基本可過。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 MSQ 第一個副本 (Lv 91-92, ilvl ~)。位於 Yak T'el (亞克泰魯) 區域。3 boss：水生 Prime Punutiy → 植物 Drowsie → 風神鳥 Apollyon。失誤 = 受傷加重疊層 (1 分鐘)。",
     "bosses": [
         {
-            "name": "普努提之王",
+            "name": "普努提王",
             "nameEn": "Prime Punutiy",
-            "mnemonic": ["看扇形朝向", "Resurface 退到對岸"],
+            "mnemonic": [
+                "Hydrowave 扇形看 boss 朝向。",
+                "Resurface：boss 西側持久錐 → 多圓/線 AoE → Ihuykatumu Flytrap donut。",
+                "Song of the Punutiy：4 小怪點名 (2 大圓 + 1 中圓 + 1 扇形)，散開避免重疊。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Punutiy Press",
+                            "name": "Punutiy Press 拍擊",
                             "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Hydrowave",
+                            "name": "Hydrowave 水浪",
                             "type": "aoe",
-                            "description": "面向玩家的扇形 AoE。",
-                            "tips": ["看 Boss 朝向繞側"]
+                            "description": "朝玩家扇形 AoE。",
+                            "tips": ["看 boss 朝向繞側"]
                         },
                         {
-                            "name": "Resurface",
+                            "name": "Resurface 出水",
                             "type": "other",
-                            "description": "Boss 退到西側深水，吸入碎屑後生成多個圓/線 AoE，最後 Flytrap 小怪放甜甜圈 AoE。",
-                            "tips": ["跟著預警跑", "甜甜圈站貼小怪內側"]
+                            "description": "Boss 移西側 → 持久錐形 AoE (重型 debuff) → 多圓 + 直線 AoE 預兆 → Ihuykatumu Flytrap 食蟲花 donut AoE。",
+                            "tips": [
+                                "閃西側錐",
+                                "看圓 + 直線預兆移動",
+                                "貼食蟲花閃 donut"
+                            ]
                         },
                         {
-                            "name": "Song of the Punutiy",
-                            "type": "spread",
-                            "description": "召喚 4 隻小怪，分別連繩玩家放大/中圓 AoE 與扇形 AoE。",
-                            "tips": ["四人分散站位避免重疊", "小怪解綁後優先打"]
+                            "name": "Song of the Punutiy 歌",
+                            "type": "other",
+                            "description": "4 小怪 (2 大魚 + 1 小魚 + 1 普通) 連線玩家：2 大圓 (Punutiy Flop)、1 中圓 + 1 扇形 (Hydrowave)。隨後小怪可選 → 擊殺。",
+                            "tips": [
+                                "4 人散開避免 AoE 重疊",
+                                { "text": "DPS 集火擊殺小怪", "role": "dps" }
+                            ]
                         },
                         {
-                            "name": "Shore Shaker",
+                            "name": "Shore Shaker 岸震",
                             "type": "aoe",
-                            "description": "貼身 AoE 之後接兩個同心甜甜圈 AoE。",
-                            "tips": ["先跑遠", "看甜甜圈安全圈進出"]
+                            "description": "貼身圓 → 2 圈同心 donut AoE。",
+                            "tips": ["先跑遠 → 站第一 donut 安全圈"]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "瞌睡蟲",
+            "name": "慵懶獸",
             "nameEn": "Drowsie",
-            "mnemonic": ["看藤蔓箭頭", "Mimiclot 優先清"],
+            "mnemonic": [
+                "起戰前睡眠中，拉動開戰。",
+                "Sow 撒種 → Drowsy Dance 4 種子發芽 Ivy → Wallop 線 AoE 兩次 (第二次更大)。",
+                "Spit 吐：3 色小怪 (紅/藍/綠) 變身 Mimiclot，擊殺。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Uppercut",
+                            "name": "Uppercut 上勾拳",
                             "type": "tankbuster",
-                            "description": "對主 T 的單體大傷。",
+                            "description": "對 1 仇單體高傷。",
                             "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "及時補血", "role": "healer" }
+                                { "text": "MT 開減傷", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Sow → Drowsy Dance",
+                            "name": "Sow + Drowsy Dance 撒種 + 慵懶之舞",
                             "type": "aoe",
-                            "description": "撒 4 顆種子變成藤蔓小怪，依箭頭方向施放線 AoE Wallop。",
-                            "tips": ["看橘色箭頭預判藤蔓朝向", "第二輪藤蔓會放大或轉向，安全位變小"]
+                            "description": "場上 4 種子 → Ihuykatumu Ivy 小怪生成 + 朝向預警 → Wallop 線 AoE → 小怪變大 + Wallop 範圍更大。",
+                            "tips": [
+                                "閃前方線 AoE",
+                                "預判第二次更大範圍"
+                            ]
                         },
                         {
-                            "name": "Sneeze",
+                            "name": "Sneeze 噴嚏",
                             "type": "aoe",
-                            "description": "Boss 寬扇形噴嚏。",
-                            "tips": ["跑到 Boss 後方"]
+                            "description": "Boss 寬扇形 AoE。",
+                            "tips": ["繞 boss 側面"]
                         },
                         {
-                            "name": "Spit / Mimiclot",
+                            "name": "Spit 吐 / Mimiclot",
                             "type": "other",
-                            "description": "吐出多個 Clot 變成 Mimiclot 小怪，會生成圓 AoE 與單體散開標記 Flagrant Spread。",
-                            "tips": ["優先清 Mimiclot", "看到頭頂標記快速分散"]
+                            "description": "場上紅/藍/綠 Clots 變身為 Mimiclot 小怪 + 圓 AoE + 單體點名圓 AoE (Flagrant Spread)。",
+                            "tips": [
+                                { "text": "DPS 擊殺小怪", "role": "dps" },
+                                "散開避免重疊"
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "阿波勒翁",
+            "name": "阿波倫",
             "nameEn": "Apollyon",
-            "mnemonic": ["吃小怪會強化", "蝗群線 AoE 站西南/東南"],
+            "mnemonic": [
+                "Razor Zephyr：朝玩家寬直線 AoE。",
+                "吃 puma/ocelot 強化 → Swarming Locust 跳 3 次 + Blades of Famine 4 線。",
+                "吃 sandworm 強化 → Blade 扇形坦補 + Wind Sickle donut。",
+                "Windwhistle：Whirlwind add 旋轉 + Cutting Wind 8 線 (3 組)。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Razor Zephyr",
+                            "name": "Razor Zephyr 銳風",
                             "type": "aoe",
-                            "description": "對玩家方向的寬線 AoE。",
-                            "tips": ["看朝向繞側"]
+                            "description": "朝玩家寬直線 AoE。",
+                            "tips": ["閃直線預警"]
                         },
                         {
-                            "name": "Blade",
+                            "name": "Blade 刀刃",
                             "type": "tankbuster",
-                            "description": "對主 T 的高傷坦補。",
+                            "description": "對 1 仇高傷 tankbuster。",
                             "tips": [
-                                { "text": "大減傷", "role": "tank" },
-                                { "text": "預補加 shield", "role": "healer" }
+                                { "text": "MT 開減傷", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "High Wind",
-                            "type": "raidwide",
-                            "description": "全體物理傷，同時也會殺掉場上小怪。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Swarming Locust / Blades of Famine",
-                            "type": "aoe",
-                            "description": "Boss 跳到場邊跳三次後放四條線 AoE 覆蓋大部分場地，安全位在西南與東南角。會重複一次。",
-                            "tips": ["站到西南或東南角", "兩輪都是同樣安全位"]
-                        },
-                        {
-                            "name": "Levinsickle",
-                            "type": "aoe",
-                            "description": "4 個圓 AoE，其中 2 個會留下持續閃電 AoE，各生成兩組連續扇形 AoE。",
-                            "tips": ["往第一組安全位跑", "持續閃電不能踩"]
-                        },
-                        {
-                            "name": "Thunder III",
-                            "type": "spread",
-                            "description": "全員散開標記。",
-                            "tips": ["四方向分散"]
-                        },
-                        {
-                            "name": "Windwhistle",
+                            "name": "High Wind + 進食加成",
                             "type": "other",
-                            "description": "召喚旋轉的旋風小怪，碰到會擊退；同時放 8 線 AoE 星狀爆裂。Boss 期間還會穿插 Razor Zephyr 與 Thunder III 散開。",
-                            "tips": ["遠離旋風", "看星狀線 AoE 間隙閃避", "散開時別撞到旋風"]
+                            "description": "全體物理 AoE 殺小怪 (puma/ocelot 或 sandworm)，boss 進食強化。puma 加成 = 翅膀更鋒利；sandworm 加成 = 爪更強。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Swarming Locust + Blades of Famine",
+                            "type": "aoe",
+                            "description": "Boss 跳場邊 3 次 + 4 條直線 AoE (覆蓋大半場，安全在 SW/SE)。重複。",
+                            "tips": ["跑 SW/SE 安全角"]
+                        },
+                        {
+                            "name": "Levinsickle 雷霹鐮",
+                            "type": "aoe",
+                            "description": "4 圓 AoE 中 2 個留下雷區 → 各 2 組 4 連扇形 AoE。",
+                            "tips": ["閃圓進入第一組扇形安全"]
+                        },
+                        {
+                            "name": "Thunder III 暴雷",
+                            "type": "spread",
+                            "description": "每名玩家散開標記。",
+                            "tips": ["8 人 clock 散開"]
+                        },
+                        {
+                            "name": "Windwhistle + Cutting Wind 旋風",
+                            "type": "other",
+                            "description": "Whirlwind 小怪旋轉 → 中心傷 + 擊退 + 8 條 Cutting Wind 線 (3 組星狀圖案)。期間 boss 放 Razor Zephyr + Thunder III。",
+                            "tips": [
+                                "**不要踩 Whirlwind**",
+                                "走 Cutting Wind 線間隙"
+                            ]
                         }
                     ]
                 }

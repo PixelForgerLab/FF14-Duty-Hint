@@ -1,6 +1,6 @@
 {
     "id": "worqor_zormor",
-    "name": "通天絕壁沃刻佐莫山",
+    "name": "圖拉夜空",
     "nameEn": "Worqor Zormor",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "dungeon",
@@ -8,159 +8,193 @@
     "iLvlSync": null,
     "jobLevelSync": 94,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）紐曲爾：被冰凍的小怪 AoE 會延後，先躲沒凍的，再回去躲凍的。",
-        "2）卡德爾尤爾：水晶碎片顏色決定安全方向（黃=點 AoE、綠=甜甜圈、紫=線）。",
-        "3）古爾夫爾爾：橘球必須吃掉避免 Boss 疊增傷；超過 6 層可用坦 LB 救。"
+        "1）Ryoqor Terteh 棉花獸：Fluffle Up 召小怪 + Cold Feet 凍住 2 小怪延遲 → 站凍小怪前。",
+        "2）Kahderyor 巨石風龍：Earthen Shot/Wind Shot 散開/donut 配岩石碎片 + Seed Crystals 結晶必須擊碎。",
+        "3）Gurfurlur 黎明之選：Stonework 火/水變化 + Arcane Stomp 玩家吃球避免 boss 疊 buff = 團滅。"
     ],
-    "notes": "DT 第二座 MSQ 副本（Lv 93-94）。卡德爾尤爾的水晶顏色機制是新手最常翻車處。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 MSQ 第三個副本 (Lv 93-94)。位於 Worqor Zormor 山頂。3 boss：Ryoqor Terteh (棉花獸) → Kahderyor (風龍) → Gurfurlur (黎明之選)。失誤 = 受傷加重疊層。",
     "bosses": [
         {
-            "name": "紐曲爾·特爾特",
+            "name": "Ryoqor Terteh (棉花獸)",
             "nameEn": "Ryoqor Terteh",
-            "mnemonic": ["冰凍小怪延後放", "先閃沒凍的再回去"],
+            "mnemonic": [
+                "Fluffle Up：召喚 4 小怪指向 → AoE。",
+                "Cold Feet：boss 凍住 2 小怪 → 未凍小怪先放 AoE → 站凍小怪前。",
+                "最後：圓 + 線混合，找凍 Rorrlo + 凍 Qorrlo 同象限站。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Frosting Fracas",
+                            "name": "Frosting Fracas 霜凍喧囂",
                             "type": "raidwide",
-                            "description": "全體魔法傷害並在場邊生成危險 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }, "不要靠場邊"]
+                            "description": "全體魔法 + 場邊危險 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Fluffle Up / Cold Feet",
+                            "name": "Fluffle Up 召喚棉花",
                             "type": "aoe",
-                            "description": "召喚 4 隻小怪指示扇形或圓 AoE，其中 2 隻會被冰凍延後施放。",
-                            "tips": ["先站到沒冰凍的小怪前躲", "等他們放完再回去原本不安全的位置"]
+                            "description": "4 個 Rorrlo Teh 小怪指向預警 → 兩兩放扇形 AoE 覆蓋象限 (Ice Scream)。",
+                            "tips": ["看指向預判象限"]
                         },
                         {
-                            "name": "Snowscoop / Sparkling Sprinkling",
+                            "name": "Cold Feet 冰凍",
+                            "type": "other",
+                            "description": "Boss 凍住 2 小怪延遲。未凍 2 小怪先放 AoE → 再換凍小怪。",
+                            "tips": ["先站凍小怪前", "再閃到原本不安全位置"]
+                        },
+                        {
+                            "name": "Fluffle Up 圓版本",
+                            "type": "aoe",
+                            "description": "4 個 Qorrlo Teh 兩兩放貼身圓 AoE (Frozen Swirl)。",
+                            "tips": ["先站凍小怪附近"]
+                        },
+                        {
+                            "name": "Snowscoop 雪滾",
                             "type": "spread",
-                            "description": "雪球小怪放線 AoE，玩家同時頭上散開標記。",
-                            "tips": ["線 AoE 間隙閃避", "四人散開不重疊"]
+                            "description": "Snowball 小怪場邊放 2 組直線 AoE (Snow Boulder) + 全員散開標記 (Sparkling Sprinkling)。",
+                            "tips": ["閃線同時不重疊"]
+                        },
+                        {
+                            "name": "Fluffle Up + Cold Feet 混合",
+                            "type": "other",
+                            "description": "4 Rorrlo + 4 Qorrlo + 圓/線 AoE 混合。站凍 Rorrlo 朝向象限 + 凍 Qorrlo 中央 → 等未凍放完 → 移到可見安全空間。",
+                            "tips": ["找雙凍象限 + 避其他圓 AoE"]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "卡德爾尤爾",
+            "name": "Kahderyor (風龍)",
             "nameEn": "Kahderyor",
-            "mnemonic": ["水晶顏色決定形狀", "黃=點、綠=甜甜圈、紫=線"],
+            "mnemonic": [
+                "Earthen Shot 黃色 (散開) + Wind Shot 綠色 (疊接 donut)。",
+                "Crystalline Crush 塔留岩石碎片 → Earthen/Wind Shot 配對。",
+                "Seed Crystals：散開標記 + 結晶 → 必須擊碎 Crystalline Debris 否則陣亡。",
+                "Sharpened Sights：凝視 + 接下來 2 招 (圓 + donut)。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Wind Unbound",
+                            "name": "Wind Unbound 解放之風",
                             "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Crystalline Crush",
+                            "name": "Crystalline Crush 結晶粉碎",
                             "type": "stack",
-                            "description": "高塔疊機標記，命中後留下水晶碎片。",
-                            "tips": ["靠塔吃 AoE"]
+                            "description": "場上 stack 標記塔 → 留下結晶碎片。",
+                            "tips": ["全員疊塔分擔"]
                         },
                         {
-                            "name": "Earthen Shot / 黃色水晶",
+                            "name": "Earthen Shot 大地射擊",
                             "type": "spread",
-                            "description": "玩家散開標記；黃色水晶碎片放大範圍點 AoE。",
-                            "tips": ["散開避免重疊", "遠離黃色水晶"]
+                            "description": "每名玩家散開標記。岩石碎片配對放黃色貼身圓 AoE。",
+                            "tips": ["散開避開黃色圓"]
                         },
                         {
-                            "name": "Wind Shot / 綠色水晶",
+                            "name": "Wind Shot 風射擊",
                             "type": "stack",
-                            "description": "玩家甜甜圈 AoE；綠色水晶碎片放甜甜圈 AoE，安全位是水晶內部。",
-                            "tips": ["全員疊到綠色水晶內部"]
+                            "description": "每名玩家 donut 標記。岩石碎片配對綠色 donut → 全員疊綠 donut 安全圈。",
+                            "tips": ["疊綠色 donut 中心"]
                         },
                         {
-                            "name": "Crystalline Storm / 紫色水晶",
+                            "name": "Crystalline Storm 結晶風暴",
                             "type": "aoe",
-                            "description": "3 條窄線 AoE 留下紫色碎片，下次 Earthen Shot 時碎片放寬線 AoE 留窄安全區。",
-                            "tips": ["站到紫色水晶之間的窄安全帶"]
+                            "description": "3 條窄線 AoE → 留下紫色岩石碎片。",
+                            "tips": ["閃 3 線"]
                         },
                         {
-                            "name": "Seed Crystals",
-                            "type": "spread",
-                            "description": "玩家頭頂散開標記後被水晶包住，必須打破身上的 Crystalline Debris 否則死亡。",
-                            "tips": ["馬上攻擊自己身上的水晶", "DPS 也要幫忙打隊友身上的"]
-                        },
-                        {
-                            "name": "Sharpened Sights",
+                            "name": "Seed Crystals 種子結晶",
                             "type": "other",
-                            "description": "下兩次點 AoE 或甜甜圈會結合凝視攻擊 Eye of the Fierce。",
-                            "tips": ["背對 Boss 躲凝視", "同時注意 AoE 形狀"]
+                            "description": "全員散開標記 → 變 Crystal Burden (動作慢) → 過期 = 陣亡。必須擊破 Crystalline Debris 解除。",
+                            "tips": [
+                                { "text": "DPS 速擊破自己的結晶", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Sharpened Sights 銳化視野",
+                            "type": "other",
+                            "description": "獲凝視 buff (Eye of the Fierce) + 接下來 2 招 (Stalagmite Circle 圓 + Cyclonic Ring donut)。",
+                            "tips": ["背對 boss 同時閃圓/donut"]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "古爾夫爾爾",
+            "name": "Gurfurlur (黎明之選)",
             "nameEn": "Gurfurlur",
-            "mnemonic": ["橘球必須吃掉", "Damage Up 太多會團滅，可坦 LB"],
+            "mnemonic": [
+                "Stonework 火/水：水 = 一側擊退 (抗擊退)；火 = 階梯式方格 AoE + 散開標記。",
+                "Sledgehammer：3 連線 stack，補打療癒抗。",
+                "Arcane Stomp：球向 boss 移動，玩家**必須吃球**否則 boss 疊 buff 團滅。",
+                "Enduring Glory：可用 tank LB1 拯救。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Heaving Haymaker",
+                            "name": "Heaving Haymaker 重擊",
                             "type": "raidwide",
-                            "description": "全體魔法傷害並在場邊生成危險 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 + 場邊危險 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 遠離邊", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Stonework (水)",
+                            "name": "Stonework 石工 (水)",
                             "type": "other",
-                            "description": "場邊出現水的元素圖案，造成擊退與魔法傷害。",
-                            "tips": ["朝中心預先位移", "可用抗擊退技能免疫"]
+                            "description": "場上小方格變水 → Great Flood 一側擊退 + 魔法傷。",
+                            "tips": ["開抗擊退或預判落點"]
                         },
                         {
-                            "name": "Stonework (火)",
+                            "name": "Stonework 石工 (火)",
                             "type": "spread",
-                            "description": "連續方格 AoE 從中心擴散到全場（類似 Eden Gate Sepulture 的火山），玩家同時散開標記。",
-                            "tips": ["跟著未爆的格子跑", "散開不重疊"]
+                            "description": "場上小方格變火 → 階梯式方格 AoE 覆蓋全場 + 全員 Volcanic Drop 散開標記。",
+                            "tips": [
+                                "跟著階梯方向移動",
+                                "散開避免標記重疊"
+                            ]
                         },
                         {
-                            "name": "Sledgehammer",
+                            "name": "Sledgehammer 大鎚",
                             "type": "stack",
-                            "description": "三段線疊機 AoE。",
+                            "description": "3 連線 stack AoE。",
                             "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "全員疊靠補職減傷", "role": "healer" }
+                                "全員疊接",
+                                { "text": "補打療癒抗", "role": "healer" }
                             ]
                         },
                         {
-                            "name": "Arcane Stomp",
+                            "name": "Arcane Stomp 奧術踏",
                             "type": "other",
-                            "description": "場上出現多個橘球緩慢飄向 Boss，被 Boss 吃到會疊 Damage Up。被玩家踩到則玩家獲得 Damage Up。",
-                            "tips": ["盡量分配踩光所有橘球", "讓 Boss 吃到 6 顆以上會團滅"]
+                            "description": "場上多球向 boss 移動 → 球到 boss 疊 Damage Up，過多 = 下次攻擊團滅。**玩家必須吃球**。",
+                            "tips": [
+                                { "text": "全員去吃球阻擋", "role": "dps" },
+                                "玩家吃球也獲傷害提高 buff"
+                            ]
                         },
                         {
-                            "name": "Enduring Glory",
+                            "name": "Enduring Glory 永續榮光",
                             "type": "raidwide",
-                            "description": "全體魔法傷害。Boss 疊太多 Damage Up 就會團滅。",
+                            "description": "全體魔法 AoE。Boss 疊 Damage Up 過多 = 團滅。**可用 tank LB1 救援**。",
                             "tips": [
-                                { "text": "Boss 超過 6 層可用坦 LB 救", "role": "tank" },
-                                { "text": "盡量別讓 Boss 吃球", "role": "dps" }
+                                { "text": "T LB1 大盾", "role": "tank" },
+                                { "text": "減傷 + 連補", "role": "healer" }
                             ]
-                        },
-                        {
-                            "name": "Stonework (風)",
-                            "type": "other",
-                            "description": "場中出現風的元素圖案，造成擊退與魔法傷害；同時生成 4 個移動龍捲風。",
-                            "tips": ["閃避龍捲風", "用抗擊退技能", "第二次擊退也要小心"]
-                        },
-                        {
-                            "name": "Stonework (火+水)",
-                            "type": "other",
-                            "description": "同時生成火與水圖案，兩種攻擊組合一起放。",
-                            "tips": ["朝中心位移避免擊退", "同時跟著未爆格子跑", "散開不重疊"]
                         }
                     ]
                 }

@@ -1,208 +1,180 @@
 {
     "id": "yuweyawata_field_station",
-    "name": "廢棄據點玉韋亞瓦塔實驗站",
+    "name": "尤威亞瓦塔野外實驗場",
     "nameEn": "Yuweyawata Field Station",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 730,
+    "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）林布盧 Zaghnal：水晶被丟出後爆中心圓 + 多線 AoE；Raw Electrope 小怪要打掉。",
-        "2）監視官卡尼洛卡：旋轉手指 Misdirection 期間 WASD 方向被改；牆邊吸魔力衰減傷害。",
-        "3）露尼皮亞蒂：場地變空心環不能跌；橘色螺旋線預判圓 AoE 順序。"
+        "1）Lindblum Zaghnal 林德布隆扎格納：Gore + Caber Toss 水晶投擲 + Raw Electrope 小怪 DPS check。",
+        "2）Overseer Kanilokka 卡尼洛卡監察：Phantom Flood 場地縮 + Lost Hope 暫時方向錯亂 + Necrohazard 必須站牆邊。",
+        "3）Lunipyati 路尼皮亞蒂 (Tural Vidraal)：Raging Claw 多段 cleave + 後續機制。"
     ],
-    "notes": "DT 7.1 新副本（Lv 100，ilvl 690）。露尼皮亞蒂的環狀場地是這座副本特色。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.1 post-MSQ 副本 (Lv 100)。位於 Yuweyawata 野外實驗場。3 boss：林德布隆扎格納 → 卡尼洛卡 → Lunipyati。失誤 = 受傷加重疊層。",
     "bosses": [
         {
-            "name": "林布盧 Zaghnal",
+            "name": "Lindblum Zaghnal",
             "nameEn": "Lindblum Zaghnal",
-            "mnemonic": ["水晶位置=線 AoE 原點", "Raw Electrope 打掉避免疊雷易傷"],
+            "mnemonic": [
+                "Gore + Caber Toss：boss 推水晶 → 3 條直線 AoE + 水晶飛到新位置大圓 AoE。",
+                "Raw Electrope 小怪 DPS check：兩個同時 Electrify = 團滅。",
+                "Lightning Storm：全員散開標記。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Electrical Overload",
+                            "name": "Electrical Overload 電過載",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Gore + Caber Toss",
+                            "name": "Gore + Caber Toss 水晶投擲",
                             "type": "aoe",
-                            "description": "Boss 推水晶，水晶放 3 組線 AoE 之後被丟到新位置（黃箭頭預告）放大圓 AoE。",
-                            "tips": ["看箭頭預判圓 AoE 中心"]
+                            "description": "Boss 推大水晶 → 3 條直線 AoE 預兆 → 投水晶到新位置 + 大圓 AoE (黃箭頭預示) + 額外小直線 AoE。",
+                            "tips": [
+                                "閃直線 + 跑出大圓"
+                            ]
                         },
                         {
-                            "name": "水晶持續線 AoE",
-                            "type": "aoe",
-                            "description": "新位置水晶繼續放大小線 AoE。",
-                            "tips": ["看線找縫"]
-                        },
-                        {
-                            "name": "Lightning Storm",
+                            "name": "Lightning Storm 雷風暴",
                             "type": "spread",
                             "description": "全員散開標記。",
-                            "tips": ["散開不重疊"]
+                            "tips": ["散開 clock 位"]
                         },
                         {
-                            "name": "Gore (地面)",
-                            "type": "other",
-                            "description": "Boss 將電引入地面，Sparking Fissure 連續全體傷。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                            "name": "Sparking Fissure 電裂",
+                            "type": "raidwide",
+                            "description": "boss 持續放電多波全體魔法 AoE。",
+                            "tips": [
+                                { "text": "連補 + 減傷", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Raw Electrope 召喚",
+                            "name": "Raw Electrope 原始電以太",
                             "type": "other",
-                            "description": "多隻小怪生成有進度條，cast 完 Electrify 全體傷加魔法易傷；同時放兩次會團滅。",
-                            "tips": ["優先打進度條快的", "切勿讓兩個同時 cast"]
+                            "description": "場上多個 Electrope 小怪生成 + 進度條。讀完 Electrify = 全體魔法 + 魔耐降低。**2 個同時讀完 = 團滅**。",
+                            "tips": [
+                                { "text": "DPS 優先擊殺進度高的小怪", "role": "dps" },
+                                "閃同時生成的圓 AoE"
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "監視官卡尼洛卡",
+            "name": "Overseer Kanilokka",
             "nameEn": "Overseer Kanilokka",
-            "mnemonic": ["Misdirection 旋轉慢", "Necrohazard 站牆邊免傷"],
+            "mnemonic": [
+                "Free Spirits：場邊危險 AoE，踩入重型 + 出血 + 傷害降低。",
+                "Phantom Flood：donut 留場中小圓 → 場地縮。",
+                "Dark II：6 扇形 + 交替安全空隙 → 第二組在第一組安全區。",
+                "Lost Hope：方向錯亂 17s + Necrohazard 中央近爆 → 必須走到牆邊。",
+                "Telltale Tears：3 人散開標記在小圓內。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Free Spirits",
+                            "name": "Free Spirits 自由靈魂",
                             "type": "raidwide",
-                            "description": "全體魔法傷，場邊生成持續傷害 AoE（流血 + 易傷 + 緩速）。",
-                            "tips": ["別站場邊"]
+                            "description": "全體魔法 + 場邊危險 AoE (重型 + 出血 + 傷害降低)。",
+                            "tips": [
+                                { "text": "減傷 + 遠離場邊", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "橘紅曲線 AoE",
+                            "name": "Phantom Flood + Dark II 暗冥",
                             "type": "aoe",
-                            "description": "多個橘紅色曲線連續爆。",
-                            "tips": ["跟著預警跑"]
+                            "description": "Donut AoE 留下持久 AoE 場地縮小 + 6 扇形交替預兆 → 第二組在第一組安全。",
+                            "tips": [
+                                "看 6 扇形找安全空隙",
+                                "第二組移到第一組原安全區"
+                            ]
                         },
                         {
-                            "name": "Phantom Flood",
-                            "type": "aoe",
-                            "description": "甜甜圈 AoE，場地壓縮成小圓。",
-                            "tips": ["站近 Boss"]
-                        },
-                        {
-                            "name": "Dark II",
-                            "type": "aoe",
-                            "description": "6 個錐 AoE 留交錯縫，第二組在第一組安全位。",
-                            "tips": ["先到第一安全位", "第一組爆完馬上移到下個"]
-                        },
-                        {
-                            "name": "Telltale Tears",
+                            "name": "Telltale Tears 哀涕",
                             "type": "spread",
-                            "description": "3 名玩家散開標記，需在小圓內分散。",
-                            "tips": ["小圓內最大化散開"]
+                            "description": "3 人散開標記在小圓內。",
+                            "tips": ["3 人各佔一角"]
                         },
                         {
-                            "name": "Lost Hope / Temporary Misdirection",
+                            "name": "Lost Hope + Necrohazard 失望 + 死靈危險",
                             "type": "other",
-                            "description": "17 秒方向錯亂 debuff，移動方向跟著旋轉手指。比其他副本旋轉慢。",
-                            "tips": ["慢慢按方向鍵", "看手指方向決定按鍵"]
+                            "description": "17s 暫時方向錯亂 (移動方向被旋轉箭頭控制) + Boss 中央近爆 AoE → 必須走到牆邊。3 條彎曲路徑通過場邊危險 AoE 到牆。",
+                            "tips": [
+                                "依旋轉箭頭調整移動",
+                                "**站到牆邊**避免近爆"
+                            ]
                         },
                         {
-                            "name": "Necrohazard",
-                            "type": "other",
-                            "description": "中央漸減 AoE，場邊三條曲徑通往牆。需走到牆邊（必須完全貼牆）才能減傷。",
-                            "tips": ["走曲徑到牆", "完全貼牆", "場邊流血會疊加致命"]
-                        },
-                        {
-                            "name": "Bloodburst",
+                            "name": "Bloodburst 血爆",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Dark II + Soul Douse",
+                            "name": "Soul Douse + Dark II 雙重",
                             "type": "stack",
-                            "description": "Dark II 加疊機標記。",
-                            "tips": ["先閃 Dark II", "再全員疊"]
+                            "description": "Dark II 重複 + stack 標記隨機玩家。",
+                            "tips": ["閃扇形 + 全員疊接 stack"]
                         },
                         {
-                            "name": "Dark Souls",
+                            "name": "Dark Souls 暗魂",
                             "type": "tankbuster",
-                            "description": "魔法坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                            "description": "魔法 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "露尼皮亞蒂",
+            "name": "Lunipyati (Tural Vidraal)",
             "nameEn": "Lunipyati",
-            "mnemonic": ["環場別跌中央", "橘螺旋線=圓 AoE 順序", "繞 Boss 後躲 Raging Claw"],
+            "mnemonic": [
+                "Raging Claw：朝玩家 180° 多段 cleave。",
+                "後續機制持續發展。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Raging Claw",
+                            "name": "Raging Claw 狂爪",
                             "type": "aoe",
-                            "description": "Boss 對玩家方向 180 度多段 cleave。",
-                            "tips": ["跑到 Boss 後方"]
+                            "description": "朝隨機玩家 180° 多段 cleave。",
+                            "tips": ["繞到 boss 後"]
                         },
                         {
-                            "name": "Leporine Loaf",
-                            "type": "raidwide",
-                            "description": "全體魔法傷，場邊生成 AoE 縮小場地成圓。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "橘色曲線 / Leaping Earth",
-                            "type": "aoe",
-                            "description": "從場中央生成 4 條曲線，圓 AoE 沿曲線螺旋向外。最後 Boss 自己出一條長曲線。",
-                            "tips": ["跟著曲線軌跡走中間層"]
-                        },
-                        {
-                            "name": "Boulder Dance (箭頭)",
-                            "type": "aoe",
-                            "description": "3 條紅色曲箭頭預示沙蟲軌跡，原點 + 終點都有圓 AoE。",
-                            "tips": ["找沒箭頭的區域"]
-                        },
-                        {
-                            "name": "Jagged Edge (散)",
-                            "type": "spread",
-                            "description": "搭配箭頭機制的散開標記。",
-                            "tips": ["在安全角散開"]
-                        },
-                        {
-                            "name": "Crater Carve",
-                            "type": "other",
-                            "description": "Boss 摧毀場中央留下環形場地，掉進中央即死。",
-                            "tips": ["切勿用突進技過洞", "Boss 跳邊時別亂衝"]
-                        },
-                        {
-                            "name": "Beastly Roar",
-                            "type": "other",
-                            "description": "Boss 腳邊漸減 AoE，需跑到對面減傷；之後沿環產生順/逆時針圓 AoE。",
-                            "tips": ["跑到 Boss 對側", "按反方向繞環閃 AoE", "用 Sprint"]
-                        },
-                        {
-                            "name": "Raging Claw + Jagged Edge + Turali Stone IV",
-                            "type": "spread",
-                            "description": "Boss 跳到新位置後 cleave + 散開標記 + 疊機。",
-                            "tips": ["先繞 Boss 後", "再散開", "再疊"]
-                        },
-                        {
-                            "name": "Sonic Howl",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Slabber",
+                            "name": "基本 tankbuster",
                             "type": "tankbuster",
-                            "description": "魔法坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                            "description": "對 1 仇單體高傷。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         }
                     ]
                 }
