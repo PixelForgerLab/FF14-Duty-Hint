@@ -1,64 +1,38 @@
 {
-    "id":  "containment_bay_s1t7",
-    "name":  "兵器隔離倉 S1T7",
-    "nameEn":  "Containment Bay S1T7",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Sephirot：",
-                     "2） / ",
-                     "3）"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) trial (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Sephirot",
-                       "nameEn":  "Sephirot",
-                       "mnemonic":  [
-
-                                    ]
-                   }
-               ]
+    "id": "containment_bay_s1t7",
+    "name": "兵器隔離倉 S1T7",
+    "nameEn": "Containment Bay S1T7",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Sephirot 鎖菲洛：無詠唱條 + 無地面預警，看招式名判斷。",
+        "2）Fiendish Rage 4 箭頭標記疊接；Ratzon 綠標散開；Ain 手臂推 180° 範圍要疊背後。",
+        "3）60% 召 Cochma + Binah adds 先殺 Binah。",
+        "4）P2：Pillar of Mercy 藍圈站旁邊（不站裡面）避免擊飛出場。"
+    ],
+    "notes": "HW 3.2 trial (Lv 60)。Sephirot (鎖菲洛) Normal。整場無詠唱條無預警。",
+    "bosses": [
+        {
+            "name": "Sephirot 鎖菲洛",
+            "nameEn": "Sephirot",
+            "mnemonic": ["無 cast bar / 預警", "Fiendish Rage 疊接", "Ratzon 散開", "Ain 站背後"],
+            "phases": [
+                { "name": "P1 主戰", "mechanics": [
+                    { "name": "Fiendish Rage 凶猛狂怒", "type": "stack", "description": "1 名玩家被 4 箭頭標記，全員疊上去分擔。", "tips": ["全員疊在標記者身上"] },
+                    { "name": "Ratzon 拉森", "type": "spread", "description": "~6 名玩家被綠色 AoE 標記，散開避免重疊。", "tips": ["全員散開"] },
+                    { "name": "Ain 阿因", "type": "aoe", "description": "boss 面向隨機玩家舉手 → 180° 推力範圍，無詠唱條。", "tips": ["DPS/Healer 站 boss 背後"] },
+                    { "name": "Cochma + Binah Adds (60%)", "type": "other", "description": "Phase 切換時召兩隻 adds，先殺 Binah。", "tips": [{ "text": "DPS 先 Binah 後 Cochma", "role": "dps" }] }
+                ]},
+                { "name": "P2 (60%)", "mechanics": [
+                    { "name": "Pillar of Mercy 慈悲之柱", "type": "knockback", "description": "藍圈出現拳擊 + 擊退，站旁邊不站裡面以免被擊飛出場。", "tips": ["站靠中央側"] },
+                    { "name": "Da'at 縮場", "type": "other", "description": "場地縮小盡量保中央。", "tips": ["注意邊緣"] }
+                ]}
+            ]
+        }
+    ]
 }

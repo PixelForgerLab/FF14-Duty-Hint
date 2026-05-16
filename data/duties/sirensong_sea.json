@@ -9,21 +9,42 @@
     "jobLevelSync": 61,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Sea Devil：水手機制 + 範圍 AoE。", "2）B2 Lugat：場上水 AoE 多重。", "3）B3 Lorelei：歌聲魅惑 + 多重 AoE。"],
+    "mnemonic": [
+        "1）B1 Captain Madison + Sea Devil：船長 + 鬼魂雙形態。",
+        "2）B2 Lugat 海中怪：Hydroball 水球分擔機制。",
+        "3）B3 Lorelei 海妖：Diabolic Gate 黑色傳送圈會把人吸去；Boundless Sea 全屏。"
+    ],
     "notes": "SB 4.0 第一個 MSQ 迷宮 (Lv 61)。",
     "bosses": [
-        { "name": "Sea Devil", "nameEn": "Sea Devil", "mnemonic": ["水手 + 範圍"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "範圍 AoE", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Lugat", "nameEn": "Lugat", "mnemonic": ["水 AoE 多重"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Water Spout 水柱", "type": "aoe", "description": "場上多重水柱 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Lorelei", "nameEn": "Lorelei", "mnemonic": ["歌聲 + 魅惑"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Siren's Song 歌聲", "type": "other", "description": "魅惑機制 + 看視線。", "tips": ["背對 boss"] },
-            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "Captain Madison + Sea Devil",
+            "nameEn": "Captain Madison",
+            "mnemonic": ["船長 + 鬼魂雙形態", "Cannon Fire 砲擊"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Cannon Fire 砲擊", "type": "aoe", "description": "場上多重砲擊圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Storm 風暴", "type": "other", "description": "場上召喚風暴龍捲，碰到會被擊飛。", "tips": ["閃龍捲"] },
+                { "name": "Black Ice 黑冰", "type": "aoe", "description": "腳下凍結，被命中 Slow。", "tips": ["移動避開"] }
+            ]}]
+        },
+        {
+            "name": "Lugat 海中怪",
+            "nameEn": "Lugat",
+            "mnemonic": ["Hydroball 水球分擔"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Hydroball 水球", "type": "stack", "description": "被點名玩家頭頂有水球，全員疊接分擔。", "tips": ["全員疊在水球者身上"] },
+                { "name": "Water III 水III", "type": "aoe", "description": "場上水 AoE 圓。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Lorelei 海妖",
+            "nameEn": "Lorelei",
+            "mnemonic": ["Diabolic Gate 傳送圈", "Siren's Song 歌聲"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Diabolic Gate 黑色傳送圈", "type": "other", "description": "場上出現黑色傳送圈，會把玩家吸入並 traffic 到場外。", "tips": ["移動避開傳送圈"] },
+                { "name": "Siren's Song 海妖歌聲", "type": "other", "description": "詠唱期間玩家不能看 boss，否則被魅惑攻擊隊友。", "tips": ["背對 boss"] },
+                { "name": "Boundless Sea 無垠之海", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

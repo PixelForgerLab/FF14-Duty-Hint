@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v30",
-    "name": "歐米茄秘境 阿爾法區 三層",
+    "name": "歐米茄秘境 阿爾法區 V3.0",
     "nameEn": "Alphascape V3.0",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,24 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）Omega-M & Omega-F：男女雙形態 + 模擬機制。", "2）多重 FF references 機制。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O11 (Lv 70)。",
+    "mnemonic": [
+        "1）Omega-M (機械) + Omega-F (人形) 雙形態：M 用直線砲、F 用法術。",
+        "2）Diffuse Wave Cannon 分散直線；Beyond Strength 強力擊退。",
+        "3）Quote Mechanic：呼叫前 boss 機制 (Bahamut/Alexander 等)。"
+    ],
+    "notes": "Omega Normal O11 (Lv 70)。Omega 雙形態。",
     "bosses": [
-        { "name": "Omega-M & Omega-F", "nameEn": "Omega-M & Omega-F", "mnemonic": ["雙形態"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-            { "name": "FF Reference 機制", "type": "other", "description": "場上多重模擬機制。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "Omega-M + Omega-F",
+            "nameEn": "Omega-M + Omega-F",
+            "mnemonic": ["雙形態", "Quote 引用前 boss"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Diffuse Wave Cannon 分散波砲", "type": "aoe", "description": "場上多重直線砲擊。", "tips": ["閃直線"] },
+                { "name": "Beyond Strength 超越力量", "type": "knockback", "description": "強力擊退。", "tips": ["預判方向"] },
+                { "name": "Quote Mechanic 引用機制", "type": "other", "description": "Boss 召喚前 boss 機制 (Bahamut, Alexander 等)。", "tips": ["記前 boss 機制"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

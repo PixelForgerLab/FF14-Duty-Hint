@@ -1,108 +1,50 @@
 {
-    "id":  "sastasha_hard",
-    "name":  "薩斯塔夏 (零式)",
-    "nameEn":  "Sastasha (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "aoe",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Karlabos：Slime",
-                     "2）B2 Captain Madison (Hard)：",
-                     "3）B3 Kraken (Sastasha (Hard))：Ink Jet"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Slime",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Karlabos",
-                       "nameEn":  "Karlabos",
-                       "mnemonic":  [
-                                        "Slime"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Captain Madison (Hard)",
-                       "nameEn":  "Captain Madison (Hard)",
-                       "mnemonic":  [
-
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "AoE attacks are not worth dodging.",
-                                                                "name":  "Ink Jet",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Kraken (Sastasha (Hard))",
-                       "nameEn":  "Kraken (Sastasha (Hard))",
-                       "mnemonic":  [
-                                        "Ink Jet"
-                                    ]
-                   }
-               ]
+    "id": "sastasha_hard",
+    "name": "薩斯塔夏（零式）",
+    "nameEn": "Sastasha (Hard)",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Madison：Cyclone 旋風 + 召喚海怪。",
+        "2）B2 Karlabos：Aqua Ball 水球分擔 + Paralyze Tail 麻痺。",
+        "3）B3 Kraken 巨魷：場地分區水柱 + 觸手 + Tentacle Spray 噴墨。"
+    ],
+    "notes": "ARR 2.2 dungeon Hard (Lv 50, ilvl 90)。Sastasha 重製版。",
+    "bosses": [
+        {
+            "name": "Captain Madison",
+            "nameEn": "Captain Madison",
+            "mnemonic": ["旋風 + 召海怪"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Cyclone 旋風", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Sea Monsters 召海怪", "type": "other", "description": "場上召喚水手小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Karlabos 巨蝦",
+            "nameEn": "Karlabos",
+            "mnemonic": ["水球分擔 + 麻痺尾"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Aqua Ball 水球", "type": "stack", "description": "玩家頭上水球需分擔。", "tips": ["全員疊接"] },
+                { "name": "Paralyze Tail 麻痺尾", "type": "tankbuster", "description": "Tankbuster + 麻痺。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Kraken 巨魷",
+            "nameEn": "Kraken",
+            "mnemonic": ["水柱 + 觸手 + 噴墨"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Geyser 水柱", "type": "aoe", "description": "場上多重水柱 AoE 分區。", "tips": ["閃預警"] },
+                { "name": "Tentacles 觸手", "type": "other", "description": "場上召喚觸手 adds。", "tips": [{ "text": "DPS 速殺觸手", "role": "dps" }] },
+                { "name": "Tentacle Spray 噴墨", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "bardams_mettle",
-    "name": "巴爾達姆試煉場",
+    "name": "巴爾達姆的試煉",
     "nameEn": "Bardam's Mettle",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
@@ -9,21 +9,43 @@
     "jobLevelSync": 65,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Yol：場上 AoE + 飛行機制。", "2）B2 Marauder：場上多重 AoE。", "3）B3 Bardam：場上箭矢 + 多重 AoE。"],
-    "notes": "SB 4.0 Azim Steppe 試煉場 (Lv 65)。",
+    "mnemonic": [
+        "1）B1 Yol：High Wind 大風擊退；Wing Cutter 翼割。",
+        "2）B2 Sa Va：Mythril Pierce 直線；Iron Tempest 圓 AoE。",
+        "3）B3 Bardam：Comet 隕石依星座圖案落，記順序躲。"
+    ],
+    "notes": "SB 4.0 dungeon (Lv 65)。位於 Azim Steppe，巴爾達姆試煉之地。",
     "bosses": [
-        { "name": "Yol", "nameEn": "Yol", "mnemonic": ["飛行 + AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "Wing Cutter 翼割", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Marauder", "nameEn": "Marauder", "mnemonic": ["多重 AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Bardam", "nameEn": "Bardam", "mnemonic": ["箭矢 + AoE"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Arrows 箭矢", "type": "aoe", "description": "場上多重箭矢 AoE。", "tips": ["閃預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Yol 大鵰",
+            "nameEn": "Yol",
+            "mnemonic": ["High Wind 擊退"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "High Wind 大風", "type": "knockback", "description": "從 boss 中心擊退。", "tips": ["靠中央站或開 Arm's Length"] },
+                { "name": "Wing Cutter 翼割", "type": "aoe", "description": "場上多重直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Sa Va 武士",
+            "nameEn": "Sa Va",
+            "mnemonic": ["雙武器形態"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Mythril Pierce 秘銀刺", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Iron Tempest 鐵風暴", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Bardam 巴爾達姆",
+            "nameEn": "Bardam",
+            "mnemonic": ["Comet 星座圖案"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Comet 隕石", "type": "aoe", "description": "場上依星座圖案落下隕石，需按順序閃。", "tips": ["記星座順序"] },
+                { "name": "Bardam's Ring 環", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

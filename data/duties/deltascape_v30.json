@@ -1,6 +1,6 @@
 {
     "id": "deltascape_v30",
-    "name": "歐米茄秘境 三角區 三層",
+    "name": "歐米茄秘境 三角區 V3.0",
     "nameEn": "Deltascape V3.0",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,24 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）Halicarnassus (FF5)：女王 + 多重變形機制。", "2）Form Shift 形態切換：每形態不同 AoE。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O3 (Lv 70)。FF5 致敬。",
+    "mnemonic": [
+        "1）Halicarnassus：場地變棋盤，每塊棋盤有圖案 → Cards Will Tell 出牌決定。",
+        "2）Form Shift 形態切換 (圖書館員/帽子/麵包) → 不同 AoE 模式。",
+        "3）Maze Maker 迷宮 + Twister 龍捲風散開。"
+    ],
+    "notes": "Omega Normal O3 (Lv 70)。FF5 Halicarnassus 致敬。",
     "bosses": [
-        { "name": "Halicarnassus", "nameEn": "Halicarnassus", "mnemonic": ["變形 + AoE"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Form Shift 形態切換", "type": "other", "description": "Boss 切換形態 + AoE。", "tips": ["看形態預判"] },
-            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "Halicarnassus 哈利卡納索斯",
+            "nameEn": "Halicarnassus",
+            "mnemonic": ["棋盤出牌", "形態切換", "迷宮 + 龍捲"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Cards Will Tell 出牌", "type": "other", "description": "場地變棋盤格，依出牌花色決定安全格。", "tips": ["看牌站對格"] },
+                { "name": "Form Shift 形態切換", "type": "other", "description": "Boss 變圖書館員/帽子/麵包等形態，每形態有不同 AoE。", "tips": ["看形態預判"] },
+                { "name": "Maze Maker 迷宮", "type": "other", "description": "場地變迷宮限定移動路徑。", "tips": ["跟通道走"] },
+                { "name": "Twister 龍捲風", "type": "spread", "description": "玩家頭頂龍捲，需散開拉到場邊。", "tips": ["散開"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
     ]
 }

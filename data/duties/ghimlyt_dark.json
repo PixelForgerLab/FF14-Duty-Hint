@@ -1,6 +1,6 @@
 {
     "id": "ghimlyt_dark",
-    "name": "基姆利暗鬱地",
+    "name": "基姆利特暗黑地",
     "nameEn": "The Ghimlyt Dark",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
@@ -9,21 +9,43 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Magitek Predator：直線砲擊。", "2）B2 Magitek Death Claw：場上爪 AoE + 抓取。", "3）B3 Julia + Garlemald：劍 + 多重 AoE + 二階段。"],
-    "notes": "SB 4.5 MSQ 終戰 dungeon (Lv 70)。",
+    "mnemonic": [
+        "1）B1 Magitek Death Claw 巨爪：Vengeful Will 拉人 + Death Claw 抓取。",
+        "2）B2 Magitek Predator + Reaper：兩坦各拉，Magitek Ray 直線雷射。",
+        "3）B3 Julia + Annia 雙女武神：劍 + 槍配合，Empty Wave 全屏。"
+    ],
+    "notes": "SB 4.5 MSQ 終戰 dungeon (Lv 70)。Ghimlyt 戰役的入口。",
     "bosses": [
-        { "name": "Magitek Predator", "nameEn": "Magitek Predator", "mnemonic": ["直線砲擊"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "Magitek Ray", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Magitek Death Claw", "nameEn": "Magitek Death Claw", "mnemonic": ["爪 + 抓取"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Claw 爪", "type": "other", "description": "場上爪抓取 + AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Julia & Annia", "nameEn": "Julia & Annia", "mnemonic": ["雙劍 + AoE"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Sword AoE", "type": "aoe", "description": "多重劍 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Magitek Death Claw 死亡之爪",
+            "nameEn": "Magitek Death Claw",
+            "mnemonic": ["Death Claw 抓取"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Death Claw 死亡之爪", "type": "other", "description": "場上爪抓取玩家拖到中央。", "tips": ["被抓的玩家準備中央 AoE"] },
+                { "name": "Vengeful Will 報復意志", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Drill Cannons 鑽機砲", "type": "aoe", "description": "場上直線砲擊。", "tips": ["閃直線"] }
+            ]}]
+        },
+        {
+            "name": "Magitek Predator + Magitek Reaper",
+            "nameEn": "Magitek Predator + Magitek Reaper",
+            "mnemonic": ["雙機甲分坦"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Magitek Ray 雷射", "type": "aoe", "description": "場上直線雷射。", "tips": ["閃直線"] },
+                { "name": "Magitek Missiles 飛彈", "type": "spread", "description": "場上多重圓 AoE 散開。", "tips": ["全員散開"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "對主仇恨 tankbuster。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Julia + Annia 雙女武神",
+            "nameEn": "Julia + Annia",
+            "mnemonic": ["雙女武神 劍 + 槍"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Empty Wave 空洞波", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Empty Refrain 空洞副歌", "type": "stack", "description": "玩家分擔疊接。", "tips": ["全員疊接"] },
+                { "name": "Empty Dimension 空洞次元", "type": "aoe", "description": "場上甜甜圈 AoE，貼近 boss 安全。", "tips": ["貼緊 boss"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "對 MT。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
     ]
 }

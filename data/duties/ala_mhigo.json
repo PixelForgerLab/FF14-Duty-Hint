@@ -9,21 +9,62 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Magitek Predator：直線砲擊。", "2）B2 Aulus mal Asina：科學家機制 + AoE。", "3）B3 Zenos yae Galvus：劍術 + 直線 + Aetheric Slash。"],
-    "notes": "SB 4.0 MSQ 終戰 dungeon (Lv 70)。Zenos 首戰。",
+    "mnemonic": [
+        "1）B1 Magitek Scorpion 魔導蠍：Target Search 圓標跟隨玩家 6 秒後爆並留水窪，引到場邊放掉。",
+        "2）B2 Aulus mal Asina：Mindjack 把所有人擊飛並 Out of Body 出竅，需慢慢走回中央肉身，避開 Death Claw + Prototype Bit 直線雷射，趕路被命中會暈。",
+        "3）B3 Zenos yae Galvus 澤諾斯：外圈紅環會給 Damage Down 堆疊。Storm 近圓跑開、Swell 擊退站近、Sword 直線不要疊。Vein Splitter 四影分身 + Lightless Spark 錐 AoE。",
+        "4）Zenos 15% 開始讀 Ultima → 三隻 adds 限時殺，The Swell 會踢人到外圈紅環。"
+    ],
+    "notes": "SB 4.0 MSQ 終戰 dungeon Lv 70。Zenos 與光之戰士的首戰。資料來源：CGW (Ala Mhigo (Duty))。",
     "bosses": [
-        { "name": "Magitek Predator", "nameEn": "Magitek Predator", "mnemonic": ["直線砲擊"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "Magitek Ray", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Aulus mal Asina", "nameEn": "Aulus mal Asina", "mnemonic": ["科學家 + AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Zenos yae Galvus", "nameEn": "Zenos yae Galvus", "mnemonic": ["劍術 + Aetheric Slash"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Aetheric Slash 以太斬", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
-            { "name": "Vein Splitter 脈裂", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Magitek Scorpion 魔導蠍",
+            "nameEn": "Magitek Scorpion",
+            "mnemonic": ["Electromagnetic Field 全屏", "Target Search 圓跟隨", "Tail Laser 前後直線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Electromagnetic Field 電磁場", "type": "raidwide", "description": "中等全屏 AoE。", "tips": [{ "text": "補血", "role": "healer" }] },
+                { "name": "Target Search 目標搜索", "type": "spread", "description": "每名玩家腳下出現圓標跟隨 6 秒後爆並留下危險水窪。", "tips": ["引到場邊放掉，避開後續走位"] },
+                { "name": "Tail Laser 尾部雷射", "type": "aoe", "description": "Boss 前後直線雷射 AoE。", "tips": ["閃前後直線，站側邊"] }
+            ]}]
+        },
+        {
+            "name": "Aulus mal Asina 奧魯斯",
+            "nameEn": "Aulus mal Asina",
+            "mnemonic": ["Order to Charge → Order to Fire 三圓重疊內安全", "Magitek Disruptor 吸入 + Mindjack 出竅", "Demimagicks 點名 + 大圓重疊"],
+            "phases": [
+                { "name": "主戰", "mechanics": [
+                    { "name": "Mana Burst 法力爆發", "type": "raidwide", "description": "中等全屏 AoE。", "tips": [{ "text": "補血", "role": "healer" }] },
+                    { "name": "Order to Charge → Order to Fire 蓄能 → 開火", "type": "aoe", "description": "場上先擺三架無人機，AoE 大圓爆完後三個更大圓重疊；**安全區在三圓重疊內**。", "tips": ["先閃預兆 → 找三圓重疊的內側站"] },
+                    { "name": "Magitek Disruptor 魔導干擾器", "type": "other", "description": "暈眩玩家 + 吸入場中央，接 Mindjack。", "tips": ["準備迎接出竅階段"] },
+                    { "name": "Mindjack 心智劫持", "type": "other", "description": "擊退 + 玩家『出竅 (Out of Body)』需慢慢走回中央肉身。Prototype Death Claw 慢慢跟著玩家近戰會暈，Prototype Bit 場上射直線雷射也會暈。寧可繞遠路也別趕路被命中。", "tips": ["避開 Death Claw + Bit 雷射", "復活肉身後優先打 Death Claw"] },
+                    { "name": "Demimagicks 半魔法", "type": "aoe", "description": "對每人點名 + 大圓 AoE 多重疊。", "tips": ["走位散開避重疊"] }
+                ]}
+            ]
+        },
+        {
+            "name": "Zenos yae Galvus 澤諾斯",
+            "nameEn": "Zenos yae Galvus",
+            "mnemonic": [
+                "外圈紅環 → Damage Down 堆疊不要碰",
+                "Storm 近圓跑開、Swell 擊退站近、Sword 直線不要疊",
+                "Vein Splitter 四影分身 → Lightless Spark 錐",
+                "15% Ultima 三 adds 限時殺，Swell 會踢人到外圈"
+            ],
+            "phases": [
+                { "name": "P1 開始 ~ 15%", "mechanics": [
+                    { "name": "外圈紅環", "type": "other", "description": "場外圈造成傷害 + 堆疊 Damage Down debuff。", "tips": ["不要被擊退到外圈"] },
+                    { "name": "Art of the Storm 風暴技", "type": "aoe", "description": "以 Zenos 為中心 PBAoE。", "tips": ["遠離 boss"] },
+                    { "name": "Art of the Swell 巨浪技", "type": "knockback", "description": "玩家被擊退。", "tips": ["靠近 boss 避免被推到外圈"] },
+                    { "name": "Art of the Sword 劍術", "type": "aoe", "description": "對每人直線 AoE。", "tips": ["全員散開不要疊起多重命中"] },
+                    { "name": "Vein Splitter 裂脈擊", "type": "aoe", "description": "Zenos 周圍 PBAoE + 場上四個影分身分別大圓 AoE (影分身近 Zenos 處不重疊)。Zenos 跳到一名玩家連繩，幾秒後 Lightless Spark。", "tips": ["站影分身與 boss 連線間隙安全區"] },
+                    { "name": "Lightless Spark 闇之火花", "type": "aoe", "description": "對連繩玩家錐形 AoE。", "tips": ["被連繩者拉開到無人處"] },
+                    { "name": "Concentrativity 集氣", "type": "raidwide", "description": "全屏 AoE 高傷。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                    { "name": "Unmoving Troika 不動三勢", "type": "tankbuster", "description": "無預警 tankbuster，唯一線索是 boss 喊「Kill!」。", "tips": [{ "text": "聽到喊 Kill MT 立刻開減傷", "role": "tank" }] }
+                ]},
+                { "name": "P2 15% Ultima 階段", "mechanics": [
+                    { "name": "Aether Transfer 以太轉移條 + 三 adds", "type": "other", "description": "Zenos 召喚三隻 adds (Ame-no-Habakiri 用 Art of the Sword、The Swell 用 Art of the Swell、The Storm 用 Art of the Storm)，限時殺光否則 Ultima 團滅。", "tips": [{ "text": "三隻 adds 順序不重要，全力 burst", "role": "dps" }, "The Swell 會把人踢到外圈紅環，小心位置"] }
+                ]}
+            ]
+        }
     ]
 }

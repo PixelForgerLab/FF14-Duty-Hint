@@ -1,130 +1,50 @@
 {
-    "id":  "tamtara_deepcroft_hard",
-    "name":  "坦塔拉墓地 (零式)",
-    "nameEn":  "The Tam-Tara Deepcroft (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "other",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Liavinne (Boss)：DO NOT ATTACK THEM",
-                     "2）B2 Spare Body：",
-                     "3）B3 Avere Bravearm (Boss)："
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ", kite them.",
-                                                                "name":  "DO NOT ATTACK THEM",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Liavinne (Boss)",
-                       "nameEn":  "Liavinne (Boss)",
-                       "mnemonic":  [
-                                        "DO NOT ATTACK THEM"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Spare Body",
-                       "nameEn":  "Spare Body",
-                       "mnemonic":  [
-
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Avere Bravearm (Boss)",
-                       "nameEn":  "Avere Bravearm (Boss)",
-                       "mnemonic":  [
-
-                                    ]
-                   }
-               ]
+    "id": "tamtara_deepcroft_hard",
+    "name": "坦塔拉墓地（零式）",
+    "nameEn": "The Tam-Tara Deepcroft (Hard)",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Manor Sentry 莊園守衛：Reaping Wind 旋斬。",
+        "2）B2 Manor Jester 小丑：Dark Mist 黑霧 + Pox 病毒。",
+        "3）B3 Marcechamp + ghosts：召喚 Edda 婚禮鬼新娘 + 切勿攻擊婚禮夥伴 (會被詛咒)。"
+    ],
+    "notes": "ARR 2.2 dungeon Hard (Lv 50, ilvl 90)。坦塔拉墓地 Edda 鬼新娘 quest 終戰。**重要：不要攻擊 Edda 的婚禮夥伴！會給高傷 DoT。**",
+    "bosses": [
+        {
+            "name": "Manor Sentry 莊園守衛",
+            "nameEn": "Manor Sentry",
+            "mnemonic": ["旋斬"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Reaping Wind 旋斬", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Manor Jester 小丑",
+            "nameEn": "Manor Jester",
+            "mnemonic": ["黑霧 + 病毒"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Dark Mist 黑霧", "type": "aoe", "description": "場上多重黑霧 AoE。", "tips": ["閃預警"] },
+                { "name": "Pox 病毒", "type": "other", "description": "玩家被點名給 Pox debuff。", "tips": [{ "text": "解 debuff", "role": "healer" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Marcechamp + Edda 鬼新娘",
+            "nameEn": "Marcechamp / Edda",
+            "mnemonic": ["不可攻擊婚禮夥伴", "Edda 召喚鬼"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Wedding Mates 婚禮夥伴", "type": "other", "description": "場上有 Edda 的「婚禮夥伴」NPC。**攻擊它們會給高傷 DoT debuff**。", "tips": [{ "text": "不要攻擊婚禮夥伴！只打 Marcechamp / Edda", "role": "dps" }] },
+                { "name": "Edda 鬼新娘形態", "type": "other", "description": "Marcechamp 倒下後 Edda 變鬼形態出來。", "tips": ["專心打 Edda"] },
+                { "name": "Dark Mist 黑霧", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }

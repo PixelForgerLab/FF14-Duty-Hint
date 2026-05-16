@@ -1,64 +1,48 @@
 {
-    "id":  "final_steps_of_faith",
-    "name":  "信仰的終末",
-    "nameEn":  "The Final Steps of Faith",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Nidhogg：",
-                     "2） / ",
-                     "3）"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) trial (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Nidhogg",
-                       "nameEn":  "Nidhogg",
-                       "mnemonic":  [
-
-                                    ]
-                   }
-               ]
+    "id": "final_steps_of_faith",
+    "name": "信仰的終末",
+    "nameEn": "The Final Steps of Faith",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）P1 龍形：Hot Wing/Hot Tail 翼/尾線；玩家腳下出洞要散開，boss 飛走後跟著光跑避火痕。",
+        "2）P2 Adds DPS check：中間 add 隨機 cleave 不可坦；兩翼 adds 拉外側避免 cone 命中玩家。",
+        "3）P3 人形：Akh Morn tankbuster 分擔；Geirskogul 直線跨場；隕石散開到場邊。",
+        "4）P4 Estinien 重組機制 + Final Steps 限時 DPS race。"
+    ],
+    "notes": "HW 3.0 MSQ 終戰 trial (Lv 60)。Nidhogg 4-phase 戰，HW 主線終 boss。",
+    "bosses": [
+        {
+            "name": "Nidhogg 尼德霍格",
+            "nameEn": "Nidhogg",
+            "mnemonic": ["P1 龍 + 火痕", "P2 Adds DPS", "P3 Akh Morn / Geirskogul", "P4 Estinien"],
+            "phases": [
+                { "name": "P1 龍形", "mechanics": [
+                    { "name": "Hot Wing 灼翼", "type": "aoe", "description": "雙翼下兩條直線 AoE。", "tips": ["閃 boss 兩側"] },
+                    { "name": "Hot Tail 灼尾", "type": "aoe", "description": "沿 boss 朝向的跨場直線 AoE。", "tips": ["閃 boss 前後"] },
+                    { "name": "Deafening Bellow 震耳咆嘯", "type": "raidwide", "description": "全屏 4k 傷害，後期連放 2 次。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                    { "name": "Hole + Fire Trail 火痕", "type": "aoe", "description": "玩家腳下出洞，boss 飛走後沿軌跡留火痕。", "tips": ["集合中央 → 散開閃洞 → 跟光跑避火痕"] }
+                ]},
+                { "name": "P2 Adds (DPS check)", "mechanics": [
+                    { "name": "Middle Add 中間雜兵", "type": "other", "description": "不可坦的中間 add 隨機 cleave 玩家。", "tips": ["閃前方 telegraph"] },
+                    { "name": "Side Adds 翼 adds", "type": "other", "description": "兩翼 adds 由 tank 拉到場邊，cone 朝外。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] },
+                    { "name": "Transition DPS Race", "type": "raidwide", "description": "限時內未殺光 adds 會 wipe。", "tips": [{ "text": "全力 burst + Limit Break", "role": "dps" }] }
+                ]},
+                { "name": "P3 人形", "mechanics": [
+                    { "name": "Akh Morn 阿克莫恩", "type": "tankbuster", "description": "高傷 tankbuster 可分擔。", "tips": [{ "text": "MT/OT 共擔", "role": "tank" }] },
+                    { "name": "Geirskogul 蓋爾斯戈爾", "type": "aoe", "description": "從 boss 指向隨機玩家的直線 AoE。", "tips": ["閃直線"] },
+                    { "name": "Meteor 隕石散開", "type": "spread", "description": "場上多重圓 AoE。", "tips": ["散開"] }
+                ]},
+                { "name": "P4 Estinien", "mechanics": [
+                    { "name": "機制重組", "type": "other", "description": "前 3 階段機制混合連發。", "tips": ["按順序處理"] },
+                    { "name": "Final Steps DPS Race", "type": "raidwide", "description": "最後階段限時打死。", "tips": [{ "text": "全力 DPS", "role": "dps" }] }
+                ]}
+            ]
+        }
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v40",
-    "name": "歐米茄秘境 阿爾法區 四層",
+    "name": "歐米茄秘境 阿爾法區 V4.0",
     "nameEn": "Alphascape V4.0",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,14 +9,31 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）Omega 終形態：多重 FF boss 形態切換。", "2）Form Cycle：FF1-15 references。", "3）終局：Sigma + Cosmos。"],
-    "notes": "Omega Normal O12 (Lv 70)。Omega raid 終戰。",
+    "mnemonic": [
+        "1）Omega 終形態：4-phase 戰。",
+        "2）P1 仿 Bahamut Megaflare；P2 仿 Cruise Chaser Limit Break；P3 仿 Alphascape M/F。",
+        "3）P4 真實 Omega：Cosmo Memory 全屏終局。"
+    ],
+    "notes": "Omega Normal O12 (Lv 70)。Omega raid 終戰，召喚前 boss 機制。",
     "bosses": [
-        { "name": "Omega", "nameEn": "Omega", "mnemonic": ["終局 + 多形態"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Form Cycle 形態切換", "type": "other", "description": "場上多重 FF boss 形態。", "tips": ["看形態預判"] },
-            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Omega 終形態",
+            "nameEn": "Omega",
+            "mnemonic": ["4-phase", "Cosmo Memory 終局"],
+            "phases": [
+                { "name": "P1 仿 Bahamut", "mechanics": [
+                    { "name": "Megaflare 兆級閃焰", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                ]},
+                { "name": "P2 仿 Cruise Chaser", "mechanics": [
+                    { "name": "Limit Break 大招", "type": "other", "description": "Boss 模仿 Cruise Chaser 雷射。", "tips": ["閃預警"] }
+                ]},
+                { "name": "P3 仿 M/F", "mechanics": [
+                    { "name": "Quote 機制重複", "type": "other", "description": "再次混合雙形態機制。", "tips": ["看招預判"] }
+                ]},
+                { "name": "P4 真實 Omega", "mechanics": [
+                    { "name": "Cosmo Memory 宇宙記憶", "type": "raidwide", "description": "終局全屏。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+                ]}
+            ]
+        }
     ]
 }

@@ -9,21 +9,43 @@
     "jobLevelSync": 69,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Magitek Scorpion：場上多重砲擊。", "2）B2 Magna Roader：場上石頭 + 移動。", "3）B3 Inferno：火球 + 多重 AoE。"],
-    "notes": "SB 4.0 帝國要塞 (Lv 69)。",
+    "mnemonic": [
+        "1）B1 Magitek Rearguard：Magitek Discharger 雷射 + 全屏。",
+        "2）B2 Magnus the Mechanic：場上 4 Magitek Sentries 召喚 + Magic Pulse 衝鋒。",
+        "3）B3 Inferno 火元素：Hellfire 火 + Pyric Sphere 火球追蹤；Vacuum Wave 擊退。"
+    ],
+    "notes": "SB 4.0 dungeon (Lv 69)。Castrum Abania 帝國要塞。",
     "bosses": [
-        { "name": "Magitek Scorpion", "nameEn": "Magitek Scorpion", "mnemonic": ["砲擊"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "Magitek 砲擊", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Magna Roader", "nameEn": "Magna Roader", "mnemonic": ["石頭 + 移動"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Boulder 石頭", "type": "other", "description": "場上滾動石頭。", "tips": ["跑開石頭"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Inferno", "nameEn": "Inferno", "mnemonic": ["火球 + AoE"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Fire Ball 火球", "type": "aoe", "description": "場上多重火球 AoE。", "tips": ["閃預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Magitek Rearguard",
+            "nameEn": "Magitek Rearguard",
+            "mnemonic": ["雷射 + 全屏"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Magitek Discharger 放電", "type": "aoe", "description": "場上直線雷射。", "tips": ["閃直線"] },
+                { "name": "Heat Cannon 熱砲", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Magnus the Mechanic 機械師",
+            "nameEn": "Magnus the Mechanic",
+            "mnemonic": ["召 Sentry + 衝鋒"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Magitek Sentries 哨兵", "type": "other", "description": "場上召喚 4 隻 Sentry。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
+                { "name": "Magic Pulse 魔法脈衝", "type": "aoe", "description": "場上直線衝鋒 AoE。", "tips": ["閃直線"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Inferno 火元素",
+            "nameEn": "Inferno",
+            "mnemonic": ["火球追蹤 + 擊退"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Hellfire 地獄火", "type": "aoe", "description": "場上多重火圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Pyric Sphere 火球", "type": "other", "description": "火球追蹤玩家。", "tips": ["被追的玩家跑到場邊放掉"] },
+                { "name": "Vacuum Wave 真空波", "type": "knockback", "description": "全屏擊退。", "tips": ["靠中央或 Arm's Length"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
     ]
 }

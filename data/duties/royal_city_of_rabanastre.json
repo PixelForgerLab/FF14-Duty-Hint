@@ -9,25 +9,54 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Mateus the Corrupt：場上多重 AoE。", "2）B2 Hashmal：石巨人 + 重力機制。", "3）B3 Rofocale：場上多重 AoE + 召喚。", "4）B4 Argath：終局 + 多重 AoE。"],
-    "notes": "SB 4.1 FFXII Ivalice raid 第一部 alliance (Lv 70)。",
+    "mnemonic": [
+        "1）B1 Mateus 馬提烏斯：場上水柱凍結 + Frigid Pulse 圓擴散；玩家凍結需被打醒。",
+        "2）B2 Hashmal 哈修瑪爾 (魯帕加重力獅)：Earthen Heart 心臟 + Gigantomachy 全屏 + Earth Hammer 直線。",
+        "3）B3 Rofocale 羅夫卡萊：召喚 Bull 公牛衝撞 + Trample 踩踏。",
+        "4）B4 Argath 阿爾加斯：場上多重 AoE + Time Bomb 計時炸彈 + Pulsar Burst 終局。"
+    ],
+    "notes": "SB 4.1 FFXII Ivalice raid 第 1 部 alliance (Lv 70, ilvl 305)。",
     "bosses": [
-        { "name": "Mateus the Corrupt", "nameEn": "Mateus the Corrupt", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Hashmal", "nameEn": "Hashmal", "mnemonic": ["石巨人 + 重力"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Gravity 重力", "type": "other", "description": "場上重力機制。", "tips": ["跟預兆移動"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Rofocale", "nameEn": "Rofocale", "mnemonic": ["AoE + 召喚"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Adds", "type": "other", "description": "場上召喚體。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] }
-        ]}]},
-        { "name": "Argath", "nameEn": "Argath", "mnemonic": ["終局 + AoE"], "phases": [{ "name": "B4", "mechanics": [
-            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Mateus 馬提烏斯",
+            "nameEn": "Mateus the Corrupt",
+            "mnemonic": ["水柱凍結 + 圓擴散"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Frigid Pulse 寒冰脈衝", "type": "aoe", "description": "Boss 周圍圓擴散 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Frozen Players 凍結", "type": "other", "description": "玩家被凍結成冰塊，需被打醒。", "tips": [{ "text": "DPS 打破冰", "role": "dps" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Hashmal 哈修瑪爾",
+            "nameEn": "Hashmal",
+            "mnemonic": ["心臟 + 全屏 + 直線錘"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Earthen Heart 大地心臟", "type": "other", "description": "場上召喚心臟必須處理。", "tips": [{ "text": "DPS 集火心臟", "role": "dps" }] },
+                { "name": "Gigantomachy 巨人之戰", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Earth Hammer 大地之錘", "type": "aoe", "description": "直線錘擊 AoE。", "tips": ["閃直線"] }
+            ]}]
+        },
+        {
+            "name": "Rofocale 羅夫卡萊",
+            "nameEn": "Rofocale",
+            "mnemonic": ["公牛召喚衝撞"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Bull Summon 召喚公牛", "type": "other", "description": "場上召喚 Bull 衝撞玩家。", "tips": ["閃衝撞路徑"] },
+                { "name": "Trample 踩踏", "type": "aoe", "description": "場上圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Argath 阿爾加斯",
+            "nameEn": "Argath",
+            "mnemonic": ["計時炸彈 + Pulsar 終局"],
+            "phases": [{ "name": "B4", "mechanics": [
+                { "name": "Time Bomb 計時炸彈", "type": "other", "description": "玩家被炸彈標記，倒數爆炸。", "tips": ["被標跑開"] },
+                { "name": "Inspiriting Embrace 鼓舞擁抱", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Pulsar Burst 脈衝爆發", "type": "raidwide", "description": "終局大招。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
     ]
 }

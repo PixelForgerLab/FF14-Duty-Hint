@@ -10,48 +10,52 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Meng-Chiang 孟江：場上多重 AoE。",
-        "2）B2 Knave of Hearts：撲克牌機制。",
-        "3）B3 Red Girl：NieR 終局機制。",
-        "4）B4 Her Inflorescence：花機制 + 多重 AoE。"
+        "1）B1 The Knave of Hearts：撲克牌主題；Cards Will Tell 出牌依牌面決定機制；Cocking Hammer tankbuster。",
+        "2）B2 紅女兒 Red Girl：場上多重黑色文字「LIE/TRUTH」要選對；Lone Wolf 召小怪。",
+        "3）B3 The Warrior of Light (4th)：Brionac 標記 + Empty Wave 全屏 + Aether Blast 直線。",
+        "4）B4 Meng Sisters + Her Inflorescence：花朵召喚 + 場地分區 + 終局大招。"
     ],
-    "notes": "ShB 5.5 NieR 系列 alliance raid 終章 (Lv 80)。包含 4 個 boss。",
+    "notes": "ShB 5.5 NieR 系列 alliance raid 終章 (Lv 80, ilvl 510)。4 個 boss。",
     "bosses": [
         {
-            "name": "Meng-Chiang",
-            "nameEn": "Meng-Chiang",
-            "mnemonic": ["多重 AoE"],
+            "name": "The Knave of Hearts 紅心傑克",
+            "nameEn": "The Knave of Hearts",
+            "mnemonic": ["撲克牌主題", "Cards Will Tell 出牌"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "場上多重 AoE", "type": "aoe", "description": "閃預警。", "tips": ["跟預兆"] }
+                { "name": "Cards Will Tell 出牌", "type": "other", "description": "依出的牌面決定機制 (數字/花色)。", "tips": ["看牌面判斷"] },
+                { "name": "Cocking Hammer 槍栓", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Knave of Hearts",
-            "nameEn": "Knave of Hearts",
-            "mnemonic": ["撲克牌機制"],
+            "name": "Red Girl 紅女兒",
+            "nameEn": "Red Girl",
+            "mnemonic": ["LIE/TRUTH 文字選擇", "Lone Wolf 召小怪"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "撲克牌 AoE", "type": "aoe", "description": "場上撲克牌 AoE。", "tips": ["閃預警"] },
+                { "name": "True/False 真假", "type": "other", "description": "場地出現 LIE 與 TRUTH 兩塊區域，要選對的站。", "tips": ["看 buff 決定真假區"] },
+                { "name": "Lone Wolf 孤狼", "type": "other", "description": "召喚 NieR 雜兵小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
                 { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "Red Girl",
-            "nameEn": "Red Girl",
-            "mnemonic": ["NieR 終局機制"],
+            "name": "The Warrior of Light",
+            "nameEn": "The Warrior of Light",
+            "mnemonic": ["Brionac 標記 + 直線 + 全屏"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "NieR 風格 AoE", "type": "aoe", "description": "場上多重 AoE。", "tips": ["跟預兆移動"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Brionac 布列歐納克", "type": "aoe", "description": "玩家被標記後地面圓 AoE。", "tips": ["被標跑開"] },
+                { "name": "Empty Wave 空洞波", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Aether Blast 以太爆", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] }
             ]}]
         },
         {
-            "name": "Her Inflorescence",
-            "nameEn": "Her Inflorescence",
-            "mnemonic": ["花機制 + AoE"],
+            "name": "Meng Sisters + Her Inflorescence",
+            "nameEn": "Meng Sisters / Her Inflorescence",
+            "mnemonic": ["花朵召喚 + 場地分區", "終局大招"],
             "phases": [{ "name": "B4", "mechanics": [
-                { "name": "Flower AoE", "type": "aoe", "description": "場上花 AoE 連發。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Flower Summon 花朵", "type": "other", "description": "場上召喚花朵 adds。", "tips": [{ "text": "DPS 處理", "role": "dps" }] },
+                { "name": "Area Divide 場地分區", "type": "other", "description": "場地分為不同區域，需依顏色站位。", "tips": ["看區域顏色站"] },
+                { "name": "Sublime Embrace 至高擁抱", "type": "raidwide", "description": "終局大招全屏。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         }
     ]

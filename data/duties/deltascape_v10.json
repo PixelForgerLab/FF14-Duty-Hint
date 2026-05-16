@@ -1,6 +1,6 @@
 {
     "id": "deltascape_v10",
-    "name": "歐米茄秘境 三角區",
+    "name": "歐米茄秘境 三角區 V1.0",
     "nameEn": "Deltascape V1.0",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,23 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）Alte Roite (FF5)：龍 + 多重 AoE。", "2）Dragon Breath 龍息：場上多重 AoE。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O1 (Lv 70)。FF5 致敬。",
+    "mnemonic": [
+        "1）Alte Roite 龍：Levinbolt 雷球追蹤；Stack 玩家身上要拉開。",
+        "2）Wing 翅膀分裂出來要打掉；Akh Morn 多重 tankbuster。",
+        "3）Final Skyfall 全屏 AoE。"
+    ],
+    "notes": "Omega Normal O1 (Lv 70)。FF5 致敬，Alte Roite 龍化。",
     "bosses": [
-        { "name": "Alte Roite", "nameEn": "Alte Roite", "mnemonic": ["龍 + AoE"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Dragon Breath 龍息", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Alte Roite 龍",
+            "nameEn": "Alte Roite",
+            "mnemonic": ["雷球 + 翅膀分裂", "Akh Morn 連 buster"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Levinbolt 雷球", "type": "other", "description": "場上雷球追蹤隨機玩家。", "tips": ["拉開"] },
+                { "name": "Wing Split 翅膀分裂", "type": "other", "description": "Boss 翅膀分出 add 要打掉。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "Akh Morn 連擊", "type": "tankbuster", "description": "多次連續 tankbuster。", "tips": [{ "text": "MT 開大減傷或共擔", "role": "tank" }] },
+                { "name": "Skyfall 落天", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

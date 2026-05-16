@@ -1,64 +1,49 @@
 {
-    "id":  "navel",
-    "name":  "大地之臍",
-    "nameEn":  "The Navel",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  36,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Titan：",
-                     "2） / ",
-                     "3）"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) trial (Lv 36)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Titan",
-                       "nameEn":  "Titan",
-                       "mnemonic":  [
-
-                                    ]
-                   }
-               ]
+    "id": "navel",
+    "name": "大地之臍",
+    "nameEn": "The Navel",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 36,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）80% Titan 跳起，回來時場外圈崩塌變紅環掉下去 = 即死；可站靠紅環邊減傷。",
+        "2）Landslide 山崩直線擊退要靠中央，被擊飛出場 = 即死。",
+        "3）50% Titan 再跳一次後心臟外露 (Heart) → DPS 全力集火，否則 Tumult 強制團滅。",
+        "4）Granite Gaol 花崗石牢隨機囚禁玩家要打破；若被囚者剛好在 Landslide 路徑上，先讓 Landslide 過再破石牢避免一解放就被擊飛。",
+        "5）Heart 死後 Titan 多一招天花板落石 (Weight of the Land 圓 AoE)。"
+    ],
+    "notes": "ARR 2.0 MSQ trial Lv 36。Titan (泰坦)「岩之巨人」Normal。場地會逐漸縮小，被擊退到紅環 = 即死。資料來源：CGW (The Navel) + 灰機 (泰坦讨伐战/B)。",
+    "bosses": [
+        {
+            "name": "Titan 泰坦",
+            "nameEn": "Titan",
+            "mnemonic": [
+                "80% / 50% 兩次跳起，每次場地縮小",
+                "Landslide 山崩 → 站近中央",
+                "Heart 心臟 = DPS 全力集火避免 Tumult 團滅",
+                "Granite Gaol 石牢 → 破才能解救隊友"
+            ],
+            "phases": [
+                { "name": "P1 80% 前", "mechanics": [
+                    { "name": "Rock Buster 碎岩", "type": "tankbuster", "description": "對 MT 方向釋放的物理扇形 AoE，無讀條無預警。", "tips": [{ "text": "MT 注意面向避免誤傷隊友、適時開減傷", "role": "tank" }] },
+                    { "name": "Tumult 怒震", "type": "raidwide", "description": "全屏無讀條 AoE。", "tips": [{ "text": "補血", "role": "healer" }] },
+                    { "name": "Weight of the Land 大地之重", "type": "aoe", "description": "讀條技，可見圓形 AoE。", "tips": ["走位閃預兆"] }
+                ]},
+                { "name": "P2 80% Geocrush 後", "mechanics": [
+                    { "name": "Geocrush 大地粉碎", "type": "other", "description": "Titan 跳上天 → 落地時以場中央為點全屏 AoE (距離衰減傷害)，外圈紅環區地面崩塌成懸崖。", "tips": ["盡量遠離落點但避開紅環，會掉下去即死"] },
+                    { "name": "Landslide 地裂", "type": "knockback", "description": "讀條技，可見直線 AoE，附加擊退；因場地縮小極易被打下懸崖。", "tips": ["看 telegraph 走位回避，或開 Arm's Length / Surecast"] },
+                    { "name": "Rock Throw 落岩", "type": "aoe", "description": "核心機制：(1) 場外圍掉一圈小岩 + 中央落一顆 → 依落下順序爆炸；先觀察第 1 顆爆點，第 1 顆爆完跑到它原位置躲後續。(2) 三排岩石依序爆 → 跑到最後一排等第 1 排爆完再衝到第 1 排安全區。", "tips": ["走到先爆岩石的『已爆位置』躲後續", "千萬不要在第 2 排等第 1 排爆，間隔極短"] }
+                ]},
+                { "name": "P3 50% Heart 階段", "mechanics": [
+                    { "name": "Heart of the Mountain 泰坦的核心", "type": "other", "description": "第二次 Geocrush 後 Titan 無敵化，胸部露出心臟。長時間未擊殺後續 AoE 強制團滅。", "tips": [{ "text": "DPS 全力集火心臟", "role": "dps" }] },
+                    { "name": "Granite Gaol 花崗石牢", "type": "other", "description": "點名隨機 1 人關進石牢無法行動，需其他人集火打破。會與衝拳組合：若被關隊友在衝拳路徑上，暫停集火，等衝拳判定後再破石牢，否則隊友被解放瞬間被擊飛出場。", "tips": ["看石牢與衝拳路徑判斷時機"] },
+                    { "name": "Earthen Fury 大地之怒", "type": "raidwide", "description": "心臟未擊殺的狂暴 AoE，全屏。", "tips": [{ "text": "減傷 + 補滿，但心臟未死則直接團滅", "role": "healer" }] }
+                ]}
+            ]
+        }
+    ]
 }

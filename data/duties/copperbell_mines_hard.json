@@ -1,130 +1,51 @@
 {
-    "id":  "copperbell_mines_hard",
-    "name":  "銅鈴銅山 (零式)",
-    "nameEn":  "Copperbell Mines (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "aoe",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Hecatoncheir Mastermind：",
-                     "2）B2 Biggy：Plaincracker",
-                     "3）B3 Ouranos："
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Hecatoncheir Mastermind",
-                       "nameEn":  "Hecatoncheir Mastermind",
-                       "mnemonic":  [
-
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ", a high-damage cone attack directed at the tank, so avoid standing in front of the boss.",
-                                                                "name":  "Plaincracker",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Biggy",
-                       "nameEn":  "Biggy",
-                       "mnemonic":  [
-                                        "Plaincracker"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Ouranos",
-                       "nameEn":  "Ouranos",
-                       "mnemonic":  [
-
-                                    ]
-                   }
-               ]
+    "id": "copperbell_mines_hard",
+    "name": "銅鈴銅山（零式）",
+    "nameEn": "Copperbell Mines (Hard)",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Kottos 巨人：Lumbering Leap 跳擊圓；Catapult 投擲。",
+        "2）B2 Atomos 食肉花：Devour 吞噬玩家 + Tendril 觸鬚抽打。",
+        "3）B3 Gyges the Great：Grand Slam 大擊 + Gigantic Smash + 召石巨人。"
+    ],
+    "notes": "ARR 2.2 dungeon Hard (Lv 50, ilvl 95)。Copperbell 重製版。",
+    "bosses": [
+        {
+            "name": "Kottos 巨人",
+            "nameEn": "Kottos",
+            "mnemonic": ["跳擊 + 投擲"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Lumbering Leap 巨擊跳", "type": "aoe", "description": "Boss 跳到玩家身上落地大圓 AoE。", "tips": ["被點名跑開"] },
+                { "name": "Catapult 投擲", "type": "knockback", "description": "玩家被抓起拋出。", "tips": ["近戰小心被抓"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Atomos 食肉花",
+            "nameEn": "Atomos",
+            "mnemonic": ["吞噬 + 觸鬚"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Devour 吞噬", "type": "other", "description": "玩家被吞入需隊友打外圍救出。", "tips": [{ "text": "DPS 救隊友", "role": "dps" }] },
+                { "name": "Tendril 觸鬚抽打", "type": "aoe", "description": "場上多重觸鬚 AoE。", "tips": ["閃預警"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Gyges the Great 偉大尤格斯",
+            "nameEn": "Gyges the Great",
+            "mnemonic": ["大擊 + 召石巨人"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Grand Slam 大擊", "type": "aoe", "description": "Boss 周圍大圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Gigantic Smash 巨擊", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Lesser Adds 石巨人小怪", "type": "other", "description": "場上召喚石巨人小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }

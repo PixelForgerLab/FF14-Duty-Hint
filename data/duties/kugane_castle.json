@@ -1,6 +1,6 @@
 {
     "id": "kugane_castle",
-    "name": "黃金港城堡",
+    "name": "黃金港城",
     "nameEn": "Kugane Castle",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
@@ -9,21 +9,43 @@
     "jobLevelSync": 70,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Genbu：場上水 AoE。", "2）B2 Yamabuki：忍者 + 多重 AoE。", "3）B3 Gyodo：場上多重武士 AoE。"],
-    "notes": "SB 4.1 dungeon (Lv 70)。",
+    "mnemonic": [
+        "1）B1 Genbu Roshu 守將：Edged Cyclone 旋風 + 召喚忍者。",
+        "2）B2 Magatsu-no-Mitama：Bunkai 分裂 + Hateful Visage 視線。",
+        "3）B3 Yojimbo 用心棒：Zantetsuken 直線秒殺 + Daimyo Strike tankbuster。"
+    ],
+    "notes": "SB 4.1 dungeon (Lv 70, ilvl 295)。黃金港主城堡，3 個 boss。",
     "bosses": [
-        { "name": "Genbu", "nameEn": "Genbu", "mnemonic": ["水 AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Yamabuki", "nameEn": "Yamabuki", "mnemonic": ["忍者 + AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Ninja AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Gyodo", "nameEn": "Gyodo", "mnemonic": ["武士 + AoE"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Samurai Slash", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Genbu Roshu 守將",
+            "nameEn": "Genbu Roshu",
+            "mnemonic": ["旋風 + 忍者"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Edged Cyclone 銳利旋風", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Ninja Summon 召忍者", "type": "other", "description": "場上召喚忍者小怪。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Magatsu-no-Mitama 邪靈",
+            "nameEn": "Magatsu-no-Mitama",
+            "mnemonic": ["分裂 + 視線"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Bunkai 分裂", "type": "other", "description": "Boss 分裂出影分身，需擊殺。", "tips": [{ "text": "DPS 集火影分身", "role": "dps" }] },
+                { "name": "Hateful Visage 怨恨之相", "type": "other", "description": "視線攻擊，看到會被石化。", "tips": ["背對 boss"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Yojimbo 用心棒",
+            "nameEn": "Yojimbo",
+            "mnemonic": ["Zantetsuken 直線秒殺"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Zantetsuken 斬鐵劍", "type": "aoe", "description": "直線跨場 AoE，被命中極高傷害。", "tips": ["閃直線"] },
+                { "name": "Daimyo Strike 大名斬", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Daigoro 召喚狗", "type": "other", "description": "Yojimbo 召喚狗 Daigoro，需擊殺。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

@@ -1,29 +1,51 @@
 {
     "id": "fractal_continuum_hard",
-    "name": "次元邊境遺跡 究極之鐘 (零式)",
+    "name": "次元邊境遺跡（零式）",
     "nameEn": "The Fractal Continuum (Hard)",
-    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 70,
+    "jobLevelSync": 60,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Tester ZERO：機械 + 多重砲擊。", "2）B2 Tester Stahl：場上多重 AoE。", "3）B3 Hard-as-Steel：場上多重 AoE 連發。"],
-    "notes": "SB 4.3 dungeon Hard (Lv 70)。Fractal Continuum 重製。",
+    "mnemonic": [
+        "1）B1 Pluto Twins 雙機甲：分坦 + Refrigerate 冰凍區。",
+        "2）B2 Lugus：Magitek Ray 雷射 + 召喚機械兵。",
+        "3）B3 Apollyon：場地分區 + Solar Wind 全屏 + Lunar Cry 召月光獸。"
+    ],
+    "notes": "HW 3.4 dungeon Hard (Lv 60, ilvl 235)。次元邊境遺跡重製版。",
     "bosses": [
-        { "name": "Tester ZERO", "nameEn": "Tester ZERO", "mnemonic": ["機械 + 砲擊"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "Magitek 砲擊", "type": "aoe", "description": "多重砲擊。", "tips": ["閃直線"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Tester Stahl", "nameEn": "Tester Stahl", "mnemonic": ["AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Hard-as-Steel", "nameEn": "Hard-as-Steel", "mnemonic": ["AoE 連發"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "AoE 連發", "type": "aoe", "description": "場上多重。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Pluto Twins 雙機甲",
+            "nameEn": "Pluto Twins",
+            "mnemonic": ["分坦 + 冰凍"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Refrigerate 冷凍區", "type": "aoe", "description": "場上冰凍圓 AoE。", "tips": ["閃預警"] },
+                { "name": "Magitek Ray 雷射", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+                { "name": "雙坦 Tankbuster", "type": "tankbuster", "description": "對主仇恨。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Lugus",
+            "nameEn": "Lugus",
+            "mnemonic": ["雷射 + 召機械"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Magitek Ray", "type": "aoe", "description": "場上多重雷射。", "tips": ["閃直線"] },
+                { "name": "Magitek Sentries 哨兵", "type": "other", "description": "場上召喚機械兵 adds。", "tips": [{ "text": "DPS 處理", "role": "dps" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Apollyon",
+            "nameEn": "Apollyon",
+            "mnemonic": ["分區 + 月光獸"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Solar Wind 太陽風", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Lunar Cry 月之嘆", "type": "other", "description": "場上召喚月光獸。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "場地分區", "type": "other", "description": "場上不同區塊有不同 AoE 效果。", "tips": ["看 boss 動作選邊"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        }
     ]
 }

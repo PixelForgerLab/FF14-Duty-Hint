@@ -1,6 +1,6 @@
 {
     "id": "deltascape_v10_savage",
-    "name": "歐米茄秘境 三角區 (零式)",
+    "name": "歐米茄秘境 三角區 V1.0（零式）",
     "nameEn": "Deltascape V1.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,24 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O1S Alte Roite 強化龍機制。", "2）強化 Dragon Breath + AoE 連發。", "3）狂暴：終局秒殺。"],
+    "mnemonic": [
+        "1）O1S Alte Roite：強化雷球 + 翅膀分裂 + 多重 Akh Morn。",
+        "2）Holy 神聖標記疊接；Levinbolt 多球追蹤要拉開。",
+        "3）Skyfall enrage 全屏狂暴秒殺。"
+    ],
     "notes": "Omega Savage O1S (Lv 70, ilvl 345)。",
     "bosses": [
-        { "name": "Alte Roite", "nameEn": "Alte Roite", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Dragon Breath (S)", "type": "aoe", "description": "強化 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "Alte Roite (Savage)",
+            "nameEn": "Alte Roite",
+            "mnemonic": ["強化 EX 機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Levinbolt (S) 多球", "type": "other", "description": "多隻雷球追蹤。", "tips": ["拉開"] },
+                { "name": "Wing Split (S)", "type": "other", "description": "翅膀 adds 強化。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "Akh Morn (S) 連擊", "type": "tankbuster", "description": "多重 tankbuster。", "tips": [{ "text": "MT/OT 共擔", "role": "tank" }] },
+                { "name": "Holy 神聖", "type": "stack", "description": "玩家被點名疊接。", "tips": ["全員疊接"] },
+                { "name": "Skyfall Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

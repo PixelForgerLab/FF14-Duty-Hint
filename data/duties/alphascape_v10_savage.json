@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v10_savage",
-    "name": "歐米茄秘境 阿爾法區 (零式)",
+    "name": "歐米茄秘境 阿爾法區 V1.0（零式）",
     "nameEn": "Alphascape V1.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,24 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O9S Chaos 強化混沌機制。", "2）強化元素輪轉 + AoE 連發。", "3）狂暴：終局秒殺。"],
+    "mnemonic": [
+        "1）O9S Chaos：四元素 (火水雷土) 形態切換 → 對應不同 AoE。",
+        "2）Limit Break 玩家組合擊：Chaos 給 BLM/SMN/MNK 等職業 LB 操作。",
+        "3）Disaster Zone 場地擴散 + Forked Lightning 雷球追蹤。"
+    ],
     "notes": "Omega Savage O9S (Lv 70, ilvl 385)。",
     "bosses": [
-        { "name": "Chaos", "nameEn": "Chaos", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Element Cycle (S)", "type": "aoe", "description": "強化元素 AoE。", "tips": ["跟元素"] },
-            { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "Chaos 混沌",
+            "nameEn": "Chaos",
+            "mnemonic": ["四元素形態", "玩家 LB 操作", "Disaster Zone"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Element Switch 元素切換", "type": "other", "description": "Boss 切換火/水/雷/土，每形態不同 AoE。", "tips": ["看形態預判"] },
+                { "name": "Forked Lightning 分叉雷", "type": "other", "description": "雷球追蹤玩家。", "tips": ["拉開"] },
+                { "name": "Disaster Zone 災區", "type": "aoe", "description": "場地擴散 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

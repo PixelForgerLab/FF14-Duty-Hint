@@ -6,24 +6,46 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 70,
+    "jobLevelSync": 65,
     "highEnd": false,
     "quality": "excellent",
-    "mnemonic": ["1）B1 Iron Wolves：多重 AoE。", "2）B2 Riggs：場上拳 AoE。", "3）B3 The Bull-headed：場上多重拳 + AoE。"],
-    "notes": "SB 4.1 dungeon (Lv 70)。",
+    "mnemonic": [
+        "1）B1 Ivon Coeurlfist：Coeurl Snarl 圓 + Crackle 雷。",
+        "2）B2 Banh Thi the Wallowing Wreck：Magnitude 5.0 全屏地震 + Earth Shaker 落地。",
+        "3）B3 Grand Master Globo：Ultimate Wahdo 連續拳擊 + 力量條疊滿放大招。"
+    ],
+    "notes": "SB 4.1 dungeon (Lv 65)。Yanxia 拳鬥場。",
     "bosses": [
-        { "name": "Iron Wolves", "nameEn": "Iron Wolves", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Riggs", "nameEn": "Riggs", "mnemonic": ["拳 AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Fist AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "The Bull-headed", "nameEn": "The Bull-headed", "mnemonic": ["拳 + AoE"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "拳 AoE", "type": "aoe", "description": "多重拳 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Ivon Coeurlfist",
+            "nameEn": "Ivon Coeurlfist",
+            "mnemonic": ["豹拳 + 雷"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Coeurl Snarl 豹咆嘯", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Crackle 雷擊", "type": "aoe", "description": "場上雷 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Banh Thi the Wallowing Wreck",
+            "nameEn": "Banh Thi",
+            "mnemonic": ["地震 + 落地"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Magnitude 5.0 五級地震", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Earth Shaker 大地震動", "type": "aoe", "description": "對玩家落下圓 AoE。", "tips": ["被點名跑開"] },
+                { "name": "Boulder Toss 投石", "type": "aoe", "description": "場上多重落石。", "tips": ["閃預警"] }
+            ]}]
+        },
+        {
+            "name": "Grand Master Globo 大師",
+            "nameEn": "Grand Master Globo",
+            "mnemonic": ["拳擊連發 + 力量條"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Ultimate Wahdo 終極連擊", "type": "aoe", "description": "boss 連續拳擊場上多區。", "tips": ["跟預兆"] },
+                { "name": "Power Meter 力量條", "type": "other", "description": "Boss 力量條疊滿放大招。", "tips": ["注意條進度"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }
