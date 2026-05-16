@@ -1,162 +1,113 @@
 {
-    "id":  "aac_heavyweight_m4",
-    "name":  "阿卡狄亞登天鬥技場 重量級4",
-    "nameEn":  "AAC Heavyweight M4",
-    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  100,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）流血：boss 一側手臂化為血肉之蛇 (左手先)，發動半場災變吐息。",
-                     "2）極饿伸展：蛇延展放前方 120° 扇形。",
-                     "3）細胞落地：3 肉塊膨脹 → 圓 AoE 大爆炸。",
-                     "4）殘暴拘束：3 圈大蛇環繞中場 → 蛻鳞環形 → 巨蟒絞纏秒殺仍在內者。",
-                     "5）細胞附身 (多種)：引爆細胞、爆風細胞 (前/後)、大爆炸 分擔圓、指向性衝擊波。",
-                     "6）野性分裂：4 組 4 方圓 AoE → 大蛇穿出地板 → 震場破壞地板 + 大蛇束縛。"
-                 ],
-    "notes":  "DT 7.4 AAC 重量級 4 (M4, Lv 100)。Lindwurm (林德布魯姆) Normal。AAC Heavyweight 終戰。阿卡狄亞的老板，注入大蛇靈魂變身。自愈因子 = 第一次被擊倒會復活但血量鎖 1。",
-    "bosses":  [
-                   {
-                       "name":  "林德布魯姆",
-                       "nameEn":  "Lindwurm",
-                       "mnemonic":  [
-                                        "蛇手臂半場：第一次必定左手；流血 → 災變吐息 → 極饿伸展。",
-                                        "細胞附身多種：引爆 (圓 AoE)、爆風前/後 (擊退)、大爆炸 (分擔圓)、指向性衝擊波 (面向窄扇)。",
-                                        "殘暴拘束：大蛇環繞 3 圈 + 收緊絞纏，必須在外側。",
-                                        "野性分裂：4 方圓 AoE → 蛇穿地板 → 震場破壞 + 大蛇束縛禁跳。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "補天之手 / Hand of Reclamation",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "流血 + 災變吐息 / Bleeding + Cataclysm Breath",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 一側手臂化為血肉之蛇 (第一次必定左手) → 蛇手臂半場 AoE。",
-                                                                "tips":  [
-                                                                             "看哪側手臂化蛇",
-                                                                             "閃對側半場"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "極饿伸展 / Hungering Stretch",
-                                                                "type":  "aoe",
-                                                                "description":  "蛇延展頭放東/西側 → 前方大範圍 120° 扇形 AoE。",
-                                                                "tips":  [
-                                                                             "閃前方扇形，繞側"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "細胞落地 / Cell Drop",
-                                                                "type":  "aoe",
-                                                                "description":  "無讀條場中 3 個肉塊落下 → 膨脹 → 圓 AoE 大爆炸。",
-                                                                "tips":  [
-                                                                             "看肉塊位置散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "殘暴拘束 / Brutal Bind",
-                                                                "type":  "other",
-                                                                "description":  "全員吸至場中 + 5s 止步。大蛇環繞中場 3 圈放蛻鳞環形 AoE → 第 3 圈後收緊纏繞放巨蟒絞纏秒殺仍在內者。",
-                                                                "tips":  [
-                                                                             "止步結束立刻往外側跑",
-                                                                             "**禁止留在大蛇環繞範圍內**"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "臟腑爆裂 / Bowel Burst",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 2 T 高傷圓 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 拉開避免互相波及",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "細胞附身 (引爆) / Cell Infection",
-                                                                "type":  "spread",
-                                                                "description":  "全員 28s 引爆細胞 (6s 可見) → 各自圓 AoE。",
-                                                                "tips":  [
-                                                                             "散開 clock 位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "濺血 / Spray of Gore",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE + 兩條手臂都化作血蛇。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "野性分裂 / Feral Division",
-                                                                "type":  "other",
-                                                                "description":  "場中 4 組對角 4 方排列圓 AoE → 大蛇穿出 + 地板 AoE 預兆 → 震場破壞 4 塊地板 + 全員大蛇束縛 (禁跳)。",
-                                                                "tips":  [
-                                                                             "看 4 方位置散開避大蛇穿越",
-                                                                             "震場時離開預兆地板"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "分裂災變 / Divided Cataclysm",
-                                                                "type":  "aoe",
-                                                                "description":  "每列場地中有 2 列生成巨蛇 → 覆蓋該列的直線 AoE。",
-                                                                "tips":  [
-                                                                             "看哪 2 列生成 → 走無蛇列"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "滴液災變 / Drop Cataclysm",
-                                                                "type":  "spread",
-                                                                "description":  "點所有玩家圓 AoE。",
-                                                                "tips":  [
-                                                                             "散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "細胞附身 (組合) / Cell Combo",
-                                                                "type":  "other",
-                                                                "description":  "32s 引爆細胞·指向 (面向窄扇) + 7s 爆風細胞前/後 (擊退) + 16s 引爆細胞·大爆炸 (分擔圓)。",
-                                                                "tips":  [
-                                                                             "指向：面向預定方向放扇",
-                                                                             "爆風前/後：站位讓擊退到安全格",
-                                                                             {
-                                                                                 "text":  "大爆炸：4 人分擔",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "細胞失控 (物理/魔法) / Cell Mutation",
-                                                                "type":  "other",
-                                                                "description":  "物理：5 次場地每列直線 AoE + 點所有玩家圓 AoE。魔法：無讀條，手臂蛇蓄力大半場 (4 列) 直線 AoE。",
-                                                                "tips":  [
-                                                                             "看 boss 哪手蓄力預判方向",
-                                                                             "閃直線同時散開"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "aac_heavyweight_m4",
+  "name": "阿卡狄亞登天鬥技場 重量級4",
+  "nameEn": "AAC Heavyweight M4",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 745,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）流血 / 灾變吐息 → 看哪隻手變蛇 → 對應半場 AoE",
+    "2）極饿伸展 → 蛇延展到場邊放扇形 → 跑對側",
+    "3）細胞落地 → 場中 3 個肉塊膨脹爆炸",
+    "4）殘暴拘束 → 全員被拉場中，蛇繞 3 圈，從頭尾缺口逃出",
+    "5）細胞附身 → 看 debuff 種類（指向 / 大爆炸 / 爆風前後）",
+    "6）野性分裂 / 震場 → 4 塊地板消失"
+  ],
+  "notes": "DT 7.4 阿卡狄亞登天鬥技場 重量級4（M12 普通），重量級最終戰。Boss 林德布魯姆（Lindblum）變形 + 雙手蛇 + 細胞附身機制。資料來源：灰機 阿卡狄亚登天斗技场 重量级4/B（命名與技能 S→T）+ CGW Lindblum walkthrough。",
+  "bosses": [
+    {
+      "name": "林德布魯姆",
+      "nameEn": "Lindblum",
+      "phases": [
+        {
+          "name": "P1：流血 + 灾變 + 殘暴拘束",
+          "mechanics": [
+            {
+              "name": "補天之手 Mend the Sky",
+              "type": "raidwide",
+              "description": "全屏 AoE 大傷害；團補 + 全員減傷。",
+              "tips": [{"text": "團補 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "流血 + 灾變吐息 Bleed + Catastrophe Breath",
+              "type": "aoe",
+              "description": "boss 一側手臂變血肉之蛇（第一次必定左手），化為蛇的手臂發動半場 AoE。看哪隻手變色 → 跑反側半場。",
+              "tips": [{"text": "看蛇方向 → 反側半場", "role": "dps"}]
+            },
+            {
+              "name": "極饿伸展 Ravenous Reach",
+              "type": "cone",
+              "description": "蛇延展頭部至東/西側，發動前方大範圍 120° 扇形 AoE。看蛇頭位置跑對側。",
+              "tips": [{"text": "看蛇頭 → 跑對側", "role": "dps"}]
+            },
+            {
+              "name": "細胞落地 Cell Drop",
+              "type": "aoe",
+              "description": "無吟唱在場中央落 3 個肉塊，快速膨脹發動大爆炸圓 AoE。看落點立即拉開。",
+              "tips": [{"text": "看肉塊位置 → 立刻退場邊", "role": "dps"}]
+            },
+            {
+              "name": "殘暴拘束 + 蜕鳞 Brutal Restraint",
+              "type": "mechanic",
+              "description": "所有玩家被吸至場中並被『止步』5 秒。大蛇進場環繞 3 圈，蛇身帶碰撞，頭與尾位置未閉合是逃脫口。3 圈後收緊 → 仍在內者秒殺『巨蟒絞纏』。需從頭尾缺口逃出。",
+              "tips": [{"text": "止步 → 找頭尾缺口逃", "role": "tank"}]
+            },
+            {
+              "name": "髒腑爆裂 Visceral Burst",
+              "type": "tankbuster",
+              "description": "對雙 T 釋放高傷圓形 AoE；雙 T 拉開站，各自開大減傷。",
+              "tips": [{"text": "雙 T 拉開 + 大減傷", "role": "tank"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：細胞附身 + 野性分裂",
+          "mechanics": [
+            {
+              "name": "細胞附身 Cell Infusion（基本）",
+              "type": "spread",
+              "description": "全員附 28 秒『引爆細胞』，剩 6 秒可見，到期釋放圓形 AoE。各自拉開散位。",
+              "tips": [{"text": "8 方位散開", "role": "dps"}]
+            },
+            {
+              "name": "野性分裂 + 震場 Wild Split + Shock",
+              "type": "mechanic",
+              "description": "場中生 4 組對角排列、各 4 方形排列的圓形 AoE，大蛇穿出並在地板留預兆。震場 → 4 塊地板消失（內人秒殺）+ 全員『大蛇束縛』禁跳。後修復部分地板使各區可通行。",
+              "tips": [{"text": "避免站預兆地板", "role": "dps"}]
+            },
+            {
+              "name": "分裂灾變 Split Catastrophe",
+              "type": "aoe",
+              "description": "每列場地 2 列前/後方生巨蛇，發動覆蓋該列的直線 AoE。看蛇位置跑無蛇列。",
+              "tips": [{"text": "跑無蛇縱列", "role": "dps"}]
+            },
+            {
+              "name": "細胞附身（指向/爆風/大爆炸）",
+              "type": "mechanic",
+              "description": "全員 32 秒『引爆細胞：指向』前/後/左/右窄扇形；4 人 7 秒『爆風細胞：前/後』向指定方向擊退；1 人 16 秒『大爆炸』可分攤圓。需依 debuff 類型對應走位 + 配對。",
+              "tips": [{"text": "看 debuff 類型 → 對應面向", "role": "tank"}, {"text": "大爆炸者集合分攤", "role": "healer"}]
+            },
+            {
+              "name": "細胞失控 Cell Outburst",
+              "type": "mechanic",
+              "description": "boss 被擊倒一次後復活（血鎖 1）。細胞失控物理：分 5 次每列發動直線 AoE + 點名所有玩家圓形。魔法版：兩手變蛇之一長時間蓄力，發動覆蓋大半場（4 列）直線 AoE。",
+              "tips": [{"text": "DPS 競賽完成擊倒 → 細胞失控階段", "role": "dps"}]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "流血 → 看手變蛇方向跑反側",
+        "極饿伸展 → 看蛇頭跑對側",
+        "細胞落地 → 退離場中央",
+        "殘暴拘束 → 找頭尾缺口逃",
+        "細胞附身指向 → 看面向",
+        "野性分裂 → 避預兆地板"
+      ]
+    }
+  ]
 }

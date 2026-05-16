@@ -1,178 +1,118 @@
 {
-    "id": "aac_light-heavyweight_m2_savage",
-    "name": "阿卡狄亞零式登天鬥技場 輕量級2",
-    "nameEn": "AAC Light-heavyweight M2 (Savage)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）一般機制：殺人斬 (1+2 仇 90° 扇形) + 殺人針 (1 仇 2 人分擔)。",
-        "2）甜心旋風/烈風：場邊毒液點 + 存儲的毒液滴落/毒液雨判定。",
-        "3）蜂蜂演唱會三幕：首演 (塔 + 求愛) → 再演 (心病 + 心傷) → 三演 (毒素膨脹 + 塔)。",
-        "4）心醉魂迷層數：4 層 = 進奉 (上艦長)，每次發動為 boss +1 永久 buff (蜂蜂女王)。",
-        "5）黑心：α/β 劇毒接觸引爆解 debuff (α =α 接 β 解；β = β 接 α 解)。"
-    ],
-    "notes": "DT 7.05 AAC 輕量級 2 零式 (M2S, Lv 100, ilvl 700)。Honey B. Lovely (蜂蜂小甜心) Savage。核心：管理「心醉魂迷」debuff 層數（4 層 = 進奉動彈不得 + boss 永久回血加傷）。3 場演唱會 (首演/再演/三演) 連發塔 + 點名機制。黑心階段 α/β 劇毒配對。",
-    "bosses": [
+  "id": "aac_light-heavyweight_m2_savage",
+  "name": "阿卡狄亞零式登天鬥技場 輕量級2",
+  "nameEn": "AAC Light-heavyweight M2 (Savage)",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 725,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）殺人斬（一二仇）/ 殺人針（一仇 2 人分攤）→ 雙 T 接 buster",
+    "2）甜心旋風（環） + 甜心烈風（直線）+ 毒液雨/滴落 連動",
+    "3）演唱會三幕：首演（11 塔）→ 再演（爱之滴/雨 + 心病）→ 三演（毒素膨脹）",
+    "4）心醉魂迷管理 → 4 顆爱心 = 进奉（无法行动 + 永久強化 boss）",
+    "5）告警信息素 → 第一次箭頭引導 + 第二次毒圈 + 小蜂刺分攤",
+    "6）黑心 → 爱意剧毒 α（麻痹）/ β（即死）分組分散處理"
+  ],
+  "notes": "DT 7.0 阿卡狄亞零式登天鬥技場 輕量級2（M2S）High-End raid。Boss 蜂蜂小甜心（Honey B. Lovely）零式版，三幕演唱會 + 黑心。最關鍵：避免心醉魂迷 4 層觸發进奉強化 boss。資料來源：灰機 阿卡狄亚零式登天斗技场 轻量级2/B（命名與技能 S→T）+ CGW Honey B. Lovely (Savage) walkthrough。",
+  "bosses": [
+    {
+      "name": "蜂蜂小甜心（零式）",
+      "nameEn": "Honey B. Lovely (Savage)",
+      "phases": [
         {
-            "name": "蜂蜂小甜心",
-            "nameEn": "Honey B. Lovely",
-            "mnemonic": [
-                "心醉魂迷層數絕對不能滿 4 = 進奉 6 秒 + boss 永久 buff。",
-                "毒液滴落 = 4 人 2-2 分擔；毒液雨 = 全員各自圓。",
-                "甜心旋風 = donut + 8 毒液 (正點外 + 斜點內)；甜心烈風 = 直線 + 8 毒液 (東西列)。",
-                "α/β 劇毒：α 接 β 互引爆解；錯接 = 全屏大爆炸 + 受傷加重。",
-                "狂暴：骤然心痛 → 全員奴役 + boss 16 層紅顏禍水 → 蜂蜂落幕曲秒殺。"
-            ],
-            "phases": [
-                {
-                    "name": "一般機制",
-                    "mechanics": [
-                        {
-                            "name": "甜言蜜語 / Honeyed Speech",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "殺人斬 / Killer Sting",
-                            "type": "tankbuster",
-                            "description": "對 1+2 仇同時放 90° 扇形高傷斬擊 + 3s 斬擊耐性降低。",
-                            "tips": [
-                                { "text": "MT/OT 站對側互背向", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "殺人針 / Drop Dead",
-                            "type": "tankbuster",
-                            "description": "對 1 仇可分擔圓形 AoE。",
-                            "tips": [
-                                { "text": "兩 T 一起接", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "毒液滴落 / Venom Pour",
-                            "type": "stack",
-                            "description": "存儲對 4 名 (T+H 或 4 DPS) 玩家 2 人分擔的圓形毒 AoE。",
-                            "tips": ["依指派 pair 分擔"]
-                        },
-                        {
-                            "name": "毒液雨 / Venom Rain",
-                            "type": "spread",
-                            "description": "存儲對每人各自圓形毒 AoE。",
-                            "tips": ["8 人 clock 散開"]
-                        },
-                        {
-                            "name": "甜心旋風 / Honey Tornado",
-                            "type": "aoe",
-                            "description": "donut AoE + 場上 8 毒液點 (正點外 + 斜點內) + 釋放存儲的毒液技能 + 10s 毒耐性大幅降低。",
-                            "tips": ["貼 boss 站閃 donut", "避開 8 毒液點"]
-                        },
-                        {
-                            "name": "甜心烈風 / Honey Beeline",
-                            "type": "aoe",
-                            "description": "前後直線 AoE + 8 毒液 (東西列) + 釋放存儲的毒液技能。",
-                            "tips": ["往南北側閃", "避開東西毒液"]
-                        }
-                    ]
-                },
-                {
-                    "name": "蜂蜂演唱會",
-                    "mechanics": [
-                        {
-                            "name": "首演 / Bee Stinger 1",
-                            "type": "other",
-                            "description": "全屏 AoE + 全隊 8 層心醉魂迷 (好感+愛意)。隨後溫柔地愛我 (11 塔分 6 輪) + 求愛 (甜甜的心移動) + 第二次溫柔地愛我 (4 人分擔)。",
-                            "tips": [
-                                "塔必須 1 人踩，否則大爆炸全員 +1 層",
-                                "求愛時躲場邊的甜甜的心"
-                            ]
-                        },
-                        {
-                            "name": "再演 / Bee Stinger 2",
-                            "type": "other",
-                            "description": "賦予 2 支援 + 2 DPS 1 層好感。愛之滴/愛之雨 (替代毒液滴落/雨) + 溫柔地愛我 (4 人分擔 + 心傷 + 兩塔)。",
-                            "tips": [
-                                "心病 4 人分擔（最少層數玩家被點）",
-                                "心傷不可閃需開大盾",
-                                "兩塔各 1 人踩"
-                            ]
-                        },
-                        {
-                            "name": "三演 / Bee Stinger 3",
-                            "type": "other",
-                            "description": "4 人 26s 毒素膨脹 + 4 人 45s 毒素膨脹。倒數 5s 時南北或東西 4 塔（共 2 次）。期間夾愛之滴/雨 + 環/圓心連心 + 旋風/烈風。",
-                            "tips": [
-                                "26s 組先處理散開分塔",
-                                "45s 組接力散開",
-                                "進塔 1 人踩"
-                            ]
-                        },
-                        {
-                            "name": "環環心連心 / Heart-Stopper",
-                            "type": "aoe",
-                            "description": "4 正點 45° 扇形 + 環形 → 4 正點寬十字 → 4 斜點 45° 扇形 + 圓 AoE。",
-                            "tips": ["閃環 → 站正點外 → 閃斜點 + 圓"]
-                        },
-                        {
-                            "name": "圓圓心連心 / Heart-Burst",
-                            "type": "aoe",
-                            "description": "4 斜點 45° 扇形 + 圓 AoE → 4 正點寬十字 → 4 正點 45° 扇形 + 環。",
-                            "tips": ["閃圓 → 站斜點外 → 閃正點 + 環"]
-                        },
-                        {
-                            "name": "蜂蜂落幕曲 / Bee Sting",
-                            "type": "raidwide",
-                            "description": "全屏 AoE 結束當前演唱會。",
-                            "tips": [
-                                { "text": "減傷補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "告警信息素 + 黑心",
-                    "mechanics": [
-                        {
-                            "name": "告警信息素 (第一次) / Pheromone Trail",
-                            "type": "aoe",
-                            "description": "場邊召喚甜甜小蜜蜂 16 隻，依序對玩家放綠箭頭預警，沿箭頭釋放直線突刺 AoE + 擊退 + 突刺耐性降低。",
-                            "tips": ["全員不斷移動避開 16 連箭頭"]
-                        },
-                        {
-                            "name": "告警信息素 (第二次)",
-                            "type": "aoe",
-                            "description": "場邊每 90° 4 隻甜甜小蜜蜂 × 6 次直線突刺。同時毒液 4 連點名 + 小蜂刺分擔圓。",
-                            "tips": [
-                                "閃 6 連直線",
-                                "毒液被點走場邊放圈"
-                            ]
-                        },
-                        {
-                            "name": "黑心 / Sweet Treat (Inky)",
-                            "type": "other",
-                            "description": "全屏 AoE + boss 黑化 + 全員賦予隨機不重複 12/28/44/62s 的 α 或 β 劇毒。α = 倒數爆麻痹；β = 倒數爆陣亡。α/β 接觸引爆 + 全屏 AoE 解 debuff。",
-                            "tips": [
-                                "α 玩家 (粉色) 與 β 玩家 (紫色) 配對接觸引爆",
-                                "**禁止同色接觸**",
-                                "甜言蜜語每 17s 一次共 4 次"
-                            ]
-                        },
-                        {
-                            "name": "骤然心痛 (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴技。全員奴役 + boss 16 層紅顏禍水 → 蜂蜂落幕曲秒殺全隊。",
-                            "tips": ["DPS check"]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：一般機制（殺人斬/針 + 旋風/烈風）",
+          "mechanics": [
+            {
+              "name": "甜言蜜語 Sweet Talk",
+              "type": "raidwide",
+              "description": "全屏魔法 AoE；團補 + 全員減傷。",
+              "tips": [{"text": "團補 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "殺人斬 Murder Slash",
+              "type": "tankbuster",
+              "description": "對一二仇雙 T 同時釋放 90° 扇形高傷物理斬擊，附 3 秒斬擊耐性降低。雙 T 拉開站 + 大減傷。",
+              "tips": [{"text": "雙 T 拉開接 + 大減傷", "role": "tank"}]
+            },
+            {
+              "name": "殺人針 Murder Needle",
+              "type": "stack",
+              "description": "對一仇 2 人分攤高傷圓 AoE；雙 T 重疊接。",
+              "tips": [{"text": "雙 T 重疊分攤", "role": "tank"}]
+            },
+            {
+              "name": "毒液雨 / 滴落 + 旋風/烈風 連動",
+              "type": "mechanic",
+              "description": "boss 獲蜂蜂劇毒 buff 後儲存毒液雨（全員圓）或滴落（4 人分攤），隨後接甜心旋風（環形 + 毒液球碎裂）或甜心烈風（直線 + 毒液球碎裂）一起釋放。看儲存的是哪個 + 走位（環 → 中央 / 直線 → 兩側）。",
+              "tips": [{"text": "毒液雨 → 散；滴落 → 分組接", "role": "tank"}, {"text": "看旋風/烈風決定中/側", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：蜂蜂演唱會三幕",
+          "mechanics": [
+            {
+              "name": "心醉魂迷管理（爱心槽）",
+              "type": "mechanic",
+              "description": "演唱會階段玩家持續扣血，吃 AoE / 機制會累積爱心。1→4 顆對應好感/爱意/爱慕/奴役。滿 4 顆 → 进奉狀態無法行動 6 秒，且 boss 永久 +3% 傷害 + 回血。整場必須控制每人爱心 ≤ 3 顆，避免任何人被进奉。",
+              "tips": [{"text": "監控全員爱心，提前清缓衝", "role": "healer"}, {"text": "失誤 = 永久強化 boss = 累積疊死", "role": "tank"}]
+            },
+            {
+              "name": "首演：11 塔 + 求爱 + 心病",
+              "type": "mechanic",
+              "description": "全員獲 8 層好感/爱意 buff。隨機 6 輪塔（共 11 個），塔內玩家爱心 +1；無人 → 大爆炸全員 +1。求爱：boss 圓 AoE + 甜甜的心球向場邊/boss 移動，碰玩家 = 爱心 +1。心病：點名最少爱心玩家分攤圓，4 人分攤 → 每人 +1（少於 4 人會隨機加）。",
+              "tips": [{"text": "塔人員固定 → 11 塔輪流", "role": "tank"}, {"text": "求爱閃球軌跡", "role": "dps"}]
+            },
+            {
+              "name": "再演：爱之滴/雨 + 環環/圓圓心連心",
+              "type": "mechanic",
+              "description": "爱之滴（4 人分攤）/ 爱之雨（全員散）儲存。環環心連心 = 正點扇 + 環 → 大十字 → 斜點扇 + 圓；圓圓心連心 = 反序。看名稱判斷組合走位。",
+              "tips": [{"text": "看連心類型 → 預判走位", "role": "dps"}]
+            },
+            {
+              "name": "三演：毒素膨脹分組 + 雙塔",
+              "type": "spread",
+              "description": "4 人 26s + 4 人 45s 毒素膨脹（圓 AoE + 魔法易傷 + 爱心 +1）。第一組到期前場上出 4 塔（南北/東西方向），需踩塔避免大爆炸。第二組到期前再 4 塔。",
+              "tips": [{"text": "分兩組 → 各組到期前散開接圓", "role": "tank"}, {"text": "26s 組先踩塔", "role": "healer"}]
+            }
+          ]
+        },
+        {
+          "name": "P3：告警信息素 + 黑心",
+          "mechanics": [
+            {
+              "name": "告警信息素 Pheromone Alert（第一次）",
+              "type": "aoe",
+              "description": "場邊召出多隻甜甜小蜜蜂，每隻向隨機玩家放綠色箭頭預警（共 16 次），隨後沿箭頭方向釋放直線突刺 AoE 並擊退。",
+              "tips": [{"text": "看箭頭 → 持續移動避線", "role": "dps"}]
+            },
+            {
+              "name": "告警信息素（第二次）+ 毒液 + 小蜂刺",
+              "type": "mechanic",
+              "description": "場邊每 90° 召 1 個共 4 隻蜜蜂，向前釋放 6 次直線突刺 AoE。同時點名 T/H/D 各 1 人圓形 AoE + 魔法易傷 + 留毒圈。小蜂刺：T/H/D 各 1 人分攤圓。",
+              "tips": [{"text": "T/H/D 各組同類接機制", "role": "tank"}]
+            },
+            {
+              "name": "黑心 Black Heart",
+              "type": "mechanic",
+              "description": "全屏 AoE，boss 變黑化。賦予全員隨機 12/28/44/62 秒『爱意剧毒 α 或 β』。α 到期 → 麻痹 15 秒；β 到期 → 即死。需依時間排列順序處理 α/β 配對。",
+              "tips": [{"text": "α 麻痹預備治療；β 即死，依時間配對", "role": "healer"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "殺人斬 → 雙 T 拉開；殺人針 → 雙 T 重疊",
+        "心醉魂迷 ≤ 3 顆，避免进奉",
+        "首演 → 11 塔輪流",
+        "再演 → 爱之滴/雨 + 連心類型",
+        "三演 → 毒素膨脹 26/45s 分組",
+        "黑心 → α 麻痹、β 即死，看時間"
+      ]
+    }
+  ]
 }

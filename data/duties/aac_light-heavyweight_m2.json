@@ -1,111 +1,100 @@
 {
-    "id": "aac_light-heavyweight_m2",
-    "name": "阿卡狄亞登天鬥技場 輕量級2",
-    "nameEn": "AAC Light-heavyweight M2",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）甜心旋風 (donut) / 烈風 (前後直線) / 突風 (雙 T 扇形)。",
-        "2）蜂蜂演唱會：爱心槽 3 顆滿 = 痴迷狀態無法行動 6s。",
-        "3）溫柔地愛我：心傷圓 + 炸裂塔 + 心震 + 求愛甜甜的心。",
-        "4）毒液雨 (散開) / 滴落 (分擔) 後接旋風/烈風組合。"
-    ],
-    "notes": "DT 7.0 AAC 輕量級 2 Normal (Lv 100)。Honey B. Lovely (蜂蜂小甜心) 簡化版機制。場地外圍陷阱踩到 15s 感電。",
-    "bosses": [
+  "id": "aac_light-heavyweight_m2",
+  "name": "阿卡狄亞登天鬥技場 輕量級2",
+  "nameEn": "AAC Light-heavyweight M2",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 705,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）甜心旋風（環）+ 烈風（直線）→ 看指針預判，看蜂蜂劇毒升傷害",
+    "2）甜心突風 → 雙 T 接扇形",
+    "3）演唱會階段：管理愛心槽不可滿，會痴迷無法行動",
+    "4）溫柔地愛我 → 心傷/炸裂/心震/碎裂組合機制",
+    "5）告警信息素 → 場邊召喚蜜蜂直線 AoE"
+  ],
+  "notes": "DT 7.0 阿卡狄亞登天鬥技場 輕量級2（M2 普通）。Boss 蜂蜂小甜心（Honey B. Lovely）使用愛心槽機制 + 蜂蜂演唱會。資料來源：灰機 阿卡狄亚登天斗技场 轻量级2/B（命名與技能 S→T）+ CGW Honey B. Lovely walkthrough。",
+  "bosses": [
+    {
+      "name": "蜂蜂小甜心",
+      "nameEn": "Honey B. Lovely",
+      "phases": [
         {
-            "name": "蜂蜂小甜心",
-            "nameEn": "Honey B. Lovely",
-            "mnemonic": [
-                "甜心旋風 = donut；甜心烈風 = 前後直線；甜心突風 = 雙 T 扇形。",
-                "爱心槽避免疊滿 = 痴迷 + 持續傷害。",
-                "毒液雨 = 散開；毒液滴落 = 分擔。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "甜言蜜語 / Honeyed Speech",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "甜心旋風 / Honey Tornado",
-                            "type": "aoe",
-                            "description": "周身環形指針 → donut AoE + 15s 持續傷害。",
-                            "tips": ["貼 boss 站"]
-                        },
-                        {
-                            "name": "甜心烈風 / Honey Beeline",
-                            "type": "aoe",
-                            "description": "身上立指針 → 前後直線 AoE + 15s 持續傷害。",
-                            "tips": ["往南北側閃"]
-                        },
-                        {
-                            "name": "甜心突風 / Honey Burst",
-                            "type": "tankbuster",
-                            "description": "點名雙 T 30° 扇形高傷。",
-                            "tips": [{ "text": "兩 T 站對側互背", "role": "tank" }]
-                        },
-                        {
-                            "name": "蜂蜂演唱會 / Bee Stinger Concert",
-                            "type": "other",
-                            "description": "全屏 AoE + 場地改變 + 全員 3 爱心槽。",
-                            "tips": ["看 boss 變大可愛甜心狀態"]
-                        },
-                        {
-                            "name": "溫柔地愛我 (組合技) / Tender Love",
-                            "type": "other",
-                            "description": "心傷圓 + 炸裂塔 (踩或大爆炸) + 心震圓 + 碎裂甜甜的心 + 九連環 AoE。",
-                            "tips": [
-                                "塔分配 1 人踩",
-                                "閃甜甜的心移動路徑",
-                                "九連環從外向內"
-                            ]
-                        },
-                        {
-                            "name": "心病 + 求愛 + 飛吻",
-                            "type": "stack",
-                            "description": "心病 2 人分擔 + 求愛貼身圓 + 飛吻前方扇形。",
-                            "tips": [
-                                "心病 4 人分擔",
-                                "求愛跑遠",
-                                "飛吻繞 boss 側"
-                            ]
-                        },
-                        {
-                            "name": "毒液雨 / Venom Rain",
-                            "type": "spread",
-                            "description": "boss 獲蜂蜂劇毒 → 旋風/烈風後散開圓 AoE + 毒耐降低。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "毒液滴落 / Venom Pour",
-                            "type": "stack",
-                            "description": "boss 獲蜂蜂劇毒 → 旋風/烈風後分擔圓 AoE + 毒耐降低。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "碎裂 (毒液版) / Shatter",
-                            "type": "aoe",
-                            "description": "Boss 帶劇毒時旋風/烈風後場上散落毒液 → 圓 AoE + 12s 猛毒。",
-                            "tips": ["閃毒液位置"]
-                        },
-                        {
-                            "name": "告警信息素 / Pheromone Trail",
-                            "type": "aoe",
-                            "description": "場周召喚甜甜小蜜蜂 → 依序直線 AoE + 擊退 + 受傷加重。",
-                            "tips": ["不斷移動避開"]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：甜心旋風 + 烈風",
+          "mechanics": [
+            {
+              "name": "甜言蜜語 Sweet Talk",
+              "type": "raidwide",
+              "description": "全屏魔法 AoE；團補 + 減傷。",
+              "tips": [{"text": "團補 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "甜心旋風 Honey Tornado",
+              "type": "aoe",
+              "description": "boss 周圍出現環形指針，隨後對周圍發動環形 AoE，附 15 秒 DoT。蜂蜂劇毒下變魔法傷害。看指針 → 預判環/中心安全位。",
+              "tips": [{"text": "看指針 → 跑安全圈內", "role": "dps"}]
+            },
+            {
+              "name": "甜心烈風 Honey Gale",
+              "type": "aoe",
+              "description": "boss 身上指針立起，對自身前後發動直線 AoE。看指針方向跑側面。",
+              "tips": [{"text": "看指針 → 跑垂直方向", "role": "dps"}]
+            },
+            {
+              "name": "甜心突風 Honey Burst",
+              "type": "tankbuster",
+              "description": "點名雙 T 約 30° 扇形高傷 AoE；雙 T 分開站各自接 + 大減傷。",
+              "tips": [{"text": "雙 T 分接 + 大減傷", "role": "tank"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：蜂蜂演唱會（愛心槽管理）",
+          "mechanics": [
+            {
+              "name": "蜂蜂演唱會 + 愛心槽",
+              "type": "mechanic",
+              "description": "boss 賦予『可愛小甜心』buff 並改變場地，全員頭頂出 3 個愛心槽。多技能會填充愛心，滿 3 個 → 痴迷無法行動 6 秒。需控制不要吃到太多愛心。",
+              "tips": [{"text": "避免吃多餘 AoE 累積愛心", "role": "dps"}, {"text": "監控玩家愛心槽", "role": "healer"}]
+            },
+            {
+              "name": "溫柔地愛我 Tender Love（組合）",
+              "type": "mechanic",
+              "description": "心傷（點名圓形 + 愛心）→ 炸裂（場上塔需踩 + 愛心）→ 心震（圓形 AoE + 愛心）→ 碎裂（甜心移動接觸玩家爆 + 愛心）→ 心震九連環。需逐步處理，避免吃多輪。",
+              "tips": [{"text": "塔指定 4 人踩，其他閃 AoE", "role": "tank"}]
+            },
+            {
+              "name": "心病 Heart Disease",
+              "type": "stack",
+              "description": "點名 2 名玩家分攤魔法 AoE + 魔法易傷 Debuff，每分攤 4 顆愛心對參與玩家各加 1 顆。分攤人數不足會多分到一人。",
+              "tips": [{"text": "點名者集合 4 人分攤", "role": "healer"}]
+            },
+            {
+              "name": "毒液雨 / 毒液滴落 Venom Rain / Drip",
+              "type": "mechanic",
+              "description": "boss 蜂蜂劇毒下『甜心旋風/烈風』後附帶分散圓 AoE（毒液雨 = 分散）或分攤圓（毒液滴落 = 集合），並附 5 秒『毒耐性大降』Debuff。",
+              "tips": [{"text": "毒液雨 → 8 方位散；毒液滴落 → 集合", "role": "tank"}]
+            },
+            {
+              "name": "告警信息素 Pheromone Alert",
+              "type": "aoe",
+              "description": "場邊召出多隻甜甜小蜜蜂，按出現順序釋放直線 AoE『盲目的愛』。第二次使用會改朝隨機玩家發射。",
+              "tips": [{"text": "看蜜蜂順序找縫", "role": "dps"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "甜心旋風 → 看指針進圈內",
+        "甜心烈風 → 跑垂直",
+        "甜心突風 → 雙 T 分接",
+        "演唱會 → 避免愛心爆滿",
+        "心病 → 4 人分攤",
+        "告警信息素 → 看蜜蜂順序"
+      ]
+    }
+  ]
 }

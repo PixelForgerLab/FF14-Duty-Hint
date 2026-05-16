@@ -1,138 +1,137 @@
 {
-    "id": "aac_heavyweight_m2",
-    "name": "阿卡狄亞登天鬥技場 重量級2",
-    "nameEn": "AAC Heavyweight M2",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）兄弟同心：炽紅 + 深藍同時擊殺到 1 HP 才結束戰鬥。",
-        "2）炽紅 = 火屬性 (空中旋火/火浪回切/騰火踏浪)；深藍 = 水屬性 (深海衝擊/驚濤駭浪)。",
-        "3）極限炫技：雙 boss 不可選 → 極限兄弟距離衰減直線 + 7 連全體 AoE。",
-        "4）火/水蛇奪浪：連線 1T+1H+2D 賦予屬性 debuff，跟著 boss 路徑移動。",
-        "5）火屬性攻擊留下火傷區，吃水屬性攻擊 = 極限以太爆。"
-    ],
-    "notes": "DT 7.4 AAC 重量級 2 (M2, Lv 100)。Red Hot (炽紅) + Deep Blue (深藍) 雙頭目戰，溫差兄弟 / Daring Devils。核心：雙 boss 同時保持 HP 平衡（兄弟同心 buff 一人到 1 被另一人保護）+ 火水屬性配對機制。",
-    "bosses": [
+  "id": "aac_heavyweight_m2",
+  "name": "阿卡狄亞登天鬥技場 重量級2",
+  "nameEn": "AAC Heavyweight M2",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 745,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）兄弟同心 → 兩 boss 體力均到 1 才會結束",
+    "2）熾紅 → 點名一仇分攤；深蓝 → 點名 T 分攤，雙 T 接",
+    "3）火傷區域留下要踩水生成極限以太 add",
+    "4）騰火踏浪 → 4 座塔，需要踩塔",
+    "5）火/水蛇奪浪 → 看路徑與終點，被連線者面向場邊"
+  ],
+  "notes": "DT 7.4 阿卡狄亞登天鬥技場 重量級2（M10 普通）。雙 boss 戰：熾紅 Fiery Red + 深藍 Deep Blue。兄弟同心機制：兩人都掉到 1 血才會結束。資料來源：灰機 阿卡狄亚登天斗技场 重量级2/B（命名與技能 S→T）+ CGW Fiery Red & Deep Blue walkthrough。",
+  "bosses": [
+    {
+      "name": "熾紅",
+      "nameEn": "Fiery Red",
+      "phases": [
         {
-            "name": "炽紅 + 深藍",
-            "nameEn": "Red Hot + Deep Blue",
-            "mnemonic": [
-                "兄弟同心：一人到 1 不會倒，另一人保護吃傷害。需雙倒才結束。",
-                "炽紅火屬性 (火傷區) + 深藍水屬性 (極限以太爆)。",
-                "極限炫技：場邊衰減直線 + 7 連全屏。",
-                "火/水蛇奪浪：1T+1H+2D 連線跟著路徑跑。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "兄弟同心 / Brotherhood",
-                            "type": "other",
-                            "description": "炽紅與深藍同時在場時平均分配體力。任一到 1 不會倒下，另一人保護替接傷害。雙倒才結束戰鬥。",
-                            "tips": [
-                                { "text": "DPS 必須平衡兩 boss HP", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "鬥志昂揚 / Spirit Boost",
-                            "type": "raidwide",
-                            "description": "炽紅/深藍各自發動全體魔法 AoE。火屬性會留下火傷 dot 區域。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" },
-                                "避開火傷區"
-                            ]
-                        },
-                        {
-                            "name": "炽焰衝擊 / Fervid Pulse",
-                            "type": "tankbuster",
-                            "description": "炽紅點 1 仇分擔圓 AoE，突進至該玩家位置 6m 圓。",
-                            "tips": [
-                                { "text": "兩 T 站近一起接", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "深海衝擊 / Tidal Pulse",
-                            "type": "tankbuster",
-                            "description": "深藍點 1 T 圓 AoE，突進該玩家位置 6m 圓。",
-                            "tips": [
-                                { "text": "副 T 接深藍仇恨", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "空中旋火 / Aerial Inferno",
-                            "type": "spread",
-                            "description": "炽紅點所有玩家 5m 火屬性圓 AoE。",
-                            "tips": ["散開 5m+"]
-                        },
-                        {
-                            "name": "火浪回切 / Backdraft",
-                            "type": "aoe",
-                            "description": "炽紅點 2 名玩家 60° 扇形火 AoE。",
-                            "tips": ["被點者走場邊"]
-                        },
-                        {
-                            "name": "騰火踏浪 / Burning Steps",
-                            "type": "other",
-                            "description": "4 個火塔每隔 2s 出現 + 炽紅依序移動發動圓 AoE。無人踩 = 大爆炸全體 AoE + 受傷加重。",
-                            "tips": ["4 人各踩 1 塔"]
-                        },
-                        {
-                            "name": "驚濤駭浪 / Tidal Wave",
-                            "type": "aoe",
-                            "description": "深藍與場一側連線，巨浪出現 → 隨機左/中/右 1/3 處跳出 → 全體水 AoE + 直線 15m 範圍 + 擊退。",
-                            "tips": ["看連線側 + 預判跳點"]
-                        },
-                        {
-                            "name": "浪尖轉體 / Crashing Wave",
-                            "type": "aoe",
-                            "description": "深藍轉場地一側 + 腳下箭頭 → 移到該位置 + 120° 扇形水 AoE。",
-                            "tips": ["看箭頭預判扇形方向"]
-                        },
-                        {
-                            "name": "空中旋水 / Aerial Tide",
-                            "type": "aoe",
-                            "description": "深藍為心 8 方 30° 扇形 → 互補 15° 扇形 8 次依序。",
-                            "tips": ["跟扇形旋轉預判"]
-                        },
-                        {
-                            "name": "極限炫技 / Limit Break",
-                            "type": "raidwide",
-                            "description": "兩 boss 不可選 → 極限兄弟距離衰減直線 + 7 連全體 AoE (最後一次最高)。",
-                            "tips": [
-                                "離開直線預警區",
-                                { "text": "全員減傷 + 連補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "火蛇奪浪 / Sweltering Snake",
-                            "type": "other",
-                            "description": "炽紅連線 1T+1H+2D 賦予火蛇奪浪 + 免方向。場地火屬性路徑 + 2 隨機火標記玩家。Boss 沿路徑移動 + 終點對標記者 30° 扇形。",
-                            "tips": [
-                                "連線 4 人跟著 boss 路徑同向移動",
-                                "標記者站終點位置誘導扇形"
-                            ]
-                        },
-                        {
-                            "name": "水蛇奪浪 / Frigid Snake",
-                            "type": "other",
-                            "description": "深藍版本同火蛇奪浪邏輯，水屬性路徑 + 標記 + 終點扇形。",
-                            "tips": ["連線 4 人跟著 boss 移動", "標記誘導扇形"]
-                        },
-                        {
-                            "name": "極限以太 / Elemental Burst",
-                            "type": "other",
-                            "description": "火傷區受到水屬性攻擊時生成極限以太球 9m 圓 AoE + 60s 受傷加重。",
-                            "tips": ["避免水攻擊打到火傷區"]
-                        }
-                    ]
-                }
-            ]
+          "name": "火屬性 P1",
+          "mechanics": [
+            {
+              "name": "鬥志昂揚 Up in Flames",
+              "type": "raidwide",
+              "description": "全體 AoE 大傷害；準備團補 + 全員減傷。",
+              "tips": [{"text": "團補 + 全員減傷", "role": "healer"}]
+            },
+            {
+              "name": "熾焰衝擊 Fiery Strike",
+              "type": "stack",
+              "description": "點名第一仇恨分攤圓形高傷 AoE；boss 突進至該玩家位置。全員集中分攤。",
+              "tips": [{"text": "全員集合到 T 身上", "role": "tank"}]
+            },
+            {
+              "name": "空中旋火 Spin Burn",
+              "type": "spread",
+              "description": "點名所有玩家圓形 AoE（火屬性）；各自拉開散位。",
+              "tips": [{"text": "8 方位散開", "role": "dps"}]
+            },
+            {
+              "name": "騰火踏浪 Tow Flame",
+              "type": "stack",
+              "description": "場地中間四角依序出現 4 座火屬性塔，boss 移動發動分攤圓 AoE。塔內無人 → 大爆炸全體大傷。指定 4 人各踩一塔。",
+              "tips": [{"text": "預指派 4 人塔位", "role": "tank"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "熾焰衝擊 → 全員集中",
+        "空中旋火 → 8 方位散開",
+        "騰火踏浪 → 4 人各踩塔"
+      ]
+    },
+    {
+      "name": "深藍",
+      "nameEn": "Deep Blue",
+      "phases": [
+        {
+          "name": "水屬性 P1",
+          "mechanics": [
+            {
+              "name": "深海衝擊 Deep Sea Strike",
+              "type": "tankbuster",
+              "description": "點名第一仇恨 T 圓形高傷 AoE；boss 突進。MT 開大減傷接。",
+              "tips": [{"text": "MT 開大減傷", "role": "tank"}]
+            },
+            {
+              "name": "驚濤駭浪 Stormy Seas",
+              "type": "aoe",
+              "description": "boss 與場地一側連線生成巨浪；變不可選中後隨機從左/中/右 1/3 處發動全體 + 直線寬 15 米 AoE（擊退）。看終點預判方向。",
+              "tips": [{"text": "全員開抗擊退 + 跑安全縫", "role": "tank"}]
+            },
+            {
+              "name": "浪尖轉體 Spin",
+              "type": "cone",
+              "description": "boss 轉向場地一側，腳下出箭頭該側出浪花。boss 移動至該位置並對場中發動 120° 扇形 AoE。",
+              "tips": [{"text": "看箭頭方向 → 避開扇形", "role": "dps"}]
+            },
+            {
+              "name": "空中旋水 Spin Water",
+              "type": "aoe",
+              "description": "boss 為中心先 8 方 30° 扇形，再互補 15° 扇形依序發動。記順序找縫站。",
+              "tips": [{"text": "依扇形順序找縫", "role": "dps"}]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "深海衝擊 → MT 大減傷",
+        "驚濤駭浪 → 抗擊退 + 安全縫",
+        "浪尖轉體 → 避扇形",
+        "空中旋水 → 找順序縫"
+      ]
+    },
+    {
+      "name": "雙體機制（共同階段）",
+      "nameEn": "Joint Phase",
+      "phases": [
+        {
+          "name": "P2：雙 boss 同登場",
+          "mechanics": [
+            {
+              "name": "兄弟同心 Brotherly Bond",
+              "type": "mechanic",
+              "description": "雙 boss 同時在場時體力平均分配。其中一人降至 1 不倒，另一人會『保護』代為承受。兩人都掉到 1 才結束。需均勻分攤輸出。",
+              "tips": [{"text": "T 拉穩兩 boss 拉開站", "role": "tank"}, {"text": "DPS 均勻分散輸出", "role": "dps"}]
+            },
+            {
+              "name": "極限炫技 Extreme Technique",
+              "type": "raidwide",
+              "description": "雙體變不可選中後距離衰減直線 AoE + 連續 7 次全體 AoE，最後一次伤害最高。團補 + 全員減傷 7 次。",
+              "tips": [{"text": "連 7 次團補 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "火蛇/水蛇奪浪 Snake Surf",
+              "type": "mechanic",
+              "description": "boss 連線 1T+1H+2D，賦予奪浪 Debuff。場地出火/水屬性路徑與終點，被連線玩家面向終點接 30° 扇形 AoE。火屬性版必須遠離火傷區，水屬性版類似。",
+              "tips": [{"text": "被連線者面向終點 + 拉開", "role": "tank"}]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "兄弟同心 → 兩 boss 都掉 1 才結束",
+        "極限炫技 → 7 連團補",
+        "火/水蛇 → 連線者面向終點"
+      ]
+    }
+  ]
 }

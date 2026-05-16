@@ -1,110 +1,96 @@
 {
-    "id": "aac_light-heavyweight_m3",
-    "name": "阿卡狄亞登天鬥技場 輕量級3",
-    "nameEn": "AAC Light-heavyweight M3",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）野蠻碎擊：4 連全屏 (打藥後 6 連)。",
-        "2）拳面猛擊：非 1 仇 T 分擔圓。",
-        "3）野蠻碎頸臂：衝場邊舉手 → 前方 + 半場直線 + 輕度腦震盪。",
-        "4）野蠻爆炸：4 塔擊退。",
-        "5）打藥後：碎頸臂連擊 (兩次方向) + 超華麗野蠻旋火 (爆彈雨)。"
-    ],
-    "notes": "DT 7.0 AAC 輕量級 3 Normal (Lv 100)。Brute Bomber (野蠻爆彈) 簡化版機制。場地外圍陷阱踩到 15s 火傷。輕度腦震盪二次受擊 = 脑震盪行動受限。",
-    "bosses": [
+  "id": "aac_light-heavyweight_m3",
+  "name": "阿卡狄亞登天鬥技場 輕量級3",
+  "nameEn": "AAC Light-heavyweight M3",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 705,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）野蠻碎擊 4/6 連 → 打藥後變 6 連",
+    "2）拳面猛擊 → ST 分攤接 buster",
+    "3）野蠻碎頸臂 → 衝向場邊抬手 → 半場直線",
+    "4）致命毒霧 → 270° 範圍，跑 boss 背側",
+    "5）野蠻爆炸 4 塔 → 4 人各踩，無人踩 → 大爆炸",
+    "6）打藥後機制強化 → 碎頸臂連擊（連兩段）"
+  ],
+  "notes": "DT 7.0 阿卡狄亞登天鬥技場 輕量級3（M3 普通）。Boss 野蠻爆彈（Brute Bomber）使用打藥（doping）強化機制。資料來源：灰機 阿卡狄亚登天斗技场 轻量级3/B（命名與技能 S→T）+ CGW Brute Bomber walkthrough。",
+  "bosses": [
+    {
+      "name": "野蠻爆彈",
+      "nameEn": "Brute Bomber",
+      "phases": [
         {
-            "name": "野蠻爆彈",
-            "nameEn": "Brute Bomber",
-            "mnemonic": [
-                "輕度腦震盪 + 二次同攻擊 = 脑震盪行動受限。",
-                "打藥後機制強化 (4 連 → 6 連 / 半場 → 兩次方向)。",
-                "爆炸塔：4 人各踩 1 塔，無人 = 大爆炸全屏。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "野蠻碎擊 / Brutal Smash",
-                            "type": "raidwide",
-                            "description": "4 連全屏物理 AoE (打藥後 6 連)。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "拳面猛擊 / Knuckle Sandwich",
-                            "type": "tankbuster",
-                            "description": "非 1 仇 T 2 人分擔圓。",
-                            "tips": [{ "text": "兩 T 站近一起接", "role": "tank" }]
-                        },
-                        {
-                            "name": "野蠻碎頸臂 / Bouts of Brutality",
-                            "type": "aoe",
-                            "description": "衝場邊 + 轉向 + 舉一側手 → 前方 + 該半場大直線 AoE + 45s 輕度腦震盪 + 15s 持續傷害。",
-                            "tips": [
-                                "看舉手側預判半場",
-                                "**避免重複受擊 = 腦震盪**"
-                            ]
-                        },
-                        {
-                            "name": "致命毒霧 / Lethal Mist",
-                            "type": "aoe",
-                            "description": "前方 + 兩側 270° 範圍魔法 + 21s 中毒 + 60s 受傷加重。",
-                            "tips": ["跑 boss 後方"]
-                        },
-                        {
-                            "name": "野蠻爆炸 / Brutal Blowout",
-                            "type": "other",
-                            "description": "場上 4 座塔 → 踩入小魔法傷 + 中心為起點擊退。無人 = 大爆炸全屏。",
-                            "tips": ["4 人各踩 1 塔"]
-                        },
-                        {
-                            "name": "野蠻旋火 / Brutal Whirl",
-                            "type": "aoe",
-                            "description": "旋轉扇形 AoE。",
-                            "tips": ["跟著旋轉移動"]
-                        },
-                        {
-                            "name": "引線爆彈 / Fuse Field",
-                            "type": "other",
-                            "description": "場上長短引線爆彈怪 → 自爆貼身圓 AoE。",
-                            "tips": ["離開爆彈位置"]
-                        },
-                        {
-                            "name": "打藥 / Steroids",
-                            "type": "other",
-                            "description": "Boss 獲得打藥 buff 強化機制。",
-                            "tips": ["接下來機制強化版"]
-                        },
-                        {
-                            "name": "碎頸臂連擊 / Brutal Combo",
-                            "type": "aoe",
-                            "description": "野蠻碎頸臂強化版：衝場邊後對隨機左右方向再衝 1 次。",
-                            "tips": ["預判第二次方向"]
-                        },
-                        {
-                            "name": "野蠻灼燒 / Brutal Burn",
-                            "type": "stack",
-                            "description": "點 1 人分擔。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "超華麗野蠻旋火 / Brutal Smash Surge",
-                            "type": "aoe",
-                            "description": "野蠻旋火基礎 + 向外擴散圓 + 環 AoE 爆彈雨 + 3 次玩家位置圓 AoE。",
-                            "tips": [
-                                "跟著旋轉同時閃爆彈雨",
-                                "散開避免重疊"
-                            ]
-                        }
-                    ]
-                }
-            ]
+          "name": "主戰（打藥前後變化）",
+          "mechanics": [
+            {
+              "name": "野蠻碎擊 Barbaric Crusher（4/6 連）",
+              "type": "raidwide",
+              "description": "全場 4 連物理 AoE，打藥後變 6 連。連續團補 + 減傷。",
+              "tips": [{"text": "團補連發 + 各自盾", "role": "healer"}]
+            },
+            {
+              "name": "拳面猛擊 Knuckle Strike",
+              "type": "stack",
+              "description": "點名 ST 2 人分攤高傷圓 AoE；ST 站定接 + 大減傷。",
+              "tips": [{"text": "ST 站定接 + 大減傷", "role": "tank"}]
+            },
+            {
+              "name": "野蠻碎頸臂 Vine Bash",
+              "type": "aoe",
+              "description": "boss 衝向場邊 → 轉向場中舉起一側手臂 → 對自身前方 + 手臂半場直線 AoE。附『輕度腦震盪』，再吃會『腦震盪』6 秒。看抬手方向跑對側。",
+              "tips": [{"text": "看抬手 → 跑對側", "role": "dps"}, {"text": "已腦震盪不要再吃", "role": "healer"}]
+            },
+            {
+              "name": "致命毒霧 Lethal Mist",
+              "type": "cone",
+              "description": "boss 前方 + 兩側 270° 範圍魔法 AoE 附中毒 + 受傷加重。背後 90° 為安全。",
+              "tips": [{"text": "全員跑 boss 背側 90°", "role": "tank"}]
+            },
+            {
+              "name": "野蠻爆炸 Tower 4 連",
+              "type": "stack",
+              "description": "場上 4 座塔下落造成魔法 AoE 並擊退踩塔者。無人踩 → 大爆炸全屏高傷。指定 4 人各踩一塔。",
+              "tips": [{"text": "預指派 4 人塔位 + 抗擊退", "role": "tank"}]
+            },
+            {
+              "name": "野蠻旋火 Brutal Spin Burn",
+              "type": "aoe",
+              "description": "boss 釋放旋轉扇形 AoE。看旋轉方向避開。",
+              "tips": [{"text": "看旋轉方向 → 跑反側", "role": "dps"}]
+            },
+            {
+              "name": "引線爆彈 Fuse Bomb",
+              "type": "aoe",
+              "description": "場內出現多個引線爆彈 add，吟唱自爆後對自身周圍魔法 AoE。看引線長短處理時間差。",
+              "tips": [{"text": "看引線 → 短引線先處理", "role": "dps"}]
+            },
+            {
+              "name": "打藥 + 強化機制",
+              "type": "mechanic",
+              "description": "boss 使用『打藥』buff 強化機制：野蠻碎擊變 6 連；碎頸臂變『連擊』（衝鋒後再向左/右釋放一次）；旋火變超華麗（外擴圓 + 環形 + 點名圓三輪）。",
+              "tips": [{"text": "打藥後注意連擊版", "role": "tank"}]
+            },
+            {
+              "name": "野蠻灼燒 Brutal Burn",
+              "type": "stack",
+              "description": "點名一人分攤伤害；全員集合到該玩家。",
+              "tips": [{"text": "看標記 → 集中", "role": "healer"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "野蠻碎擊 → 4/6 連團補",
+        "拳面猛擊 → ST 接分攤",
+        "碎頸臂 → 看抬手跑對側",
+        "致命毒霧 → 跑 boss 背側",
+        "爆炸 4 塔 → 4 人各踩",
+        "打藥 → 機制強化版"
+      ]
+    }
+  ]
 }
