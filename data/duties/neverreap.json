@@ -1,104 +1,46 @@
 {
-    "id":  "neverreap",
-    "name":  "天輪之首",
-    "nameEn":  "Neverreap",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "knockback",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Nunyenunc：Feather Squall / Nunyenunc\u0027s Shadow",
-                     "2）B2 Canu Vanu：Morrowcloud / Sacred Totem",
-                     "3）B3 Waukkeon：Turbine"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) knockback (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "AoE.",
-                                                                "name":  "Feather Squall",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "and kill it.",
-                                                                "name":  "Nunyenunc\u0027s Shadow",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Nunyenunc",
-                       "nameEn":  "Nunyenunc",
-                       "mnemonic":  [
-                                        "Feather Squall",
-                                        "Nunyenunc\u0027s Shadow"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "targets random player and inflicts Bleed, healer needs to cleanse this.",
-                                                                "name":  "Morrowcloud",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "marks players, they will drop a totem in their place, a few seconds later, he will cast Totem Chant, a big purple circle will spawn in a random place,...",
-                                                                "name":  "Sacred Totem",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Canu Vanu",
-                       "nameEn":  "Canu Vanu",
-                       "mnemonic":  [
-                                        "Morrowcloud",
-                                        "Sacred Totem"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ", a party-wide AoE and knockback.",
-                                                                "name":  "Turbine",
-                                                                "tips":  [
-                                                                             "預判擊退方向或開 Arm\u0027s Length"
-                                                                         ],
-                                                                "type":  "knockback"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Waukkeon",
-                       "nameEn":  "Waukkeon",
-                       "mnemonic":  [
-                                        "Turbine"
-                                    ]
-                   }
-               ]
+    "id": "neverreap",
+    "name": "永不收割之原",
+    "nameEn": "Neverreap",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Nunyenunc 努涅努克 = Wind Cleave 風 cone + 召小怪 + 全屏。",
+        "2）B2 Canu Vanu 卡努瓦努 = Aetheric Burst 全屏 + 多 AoE 圈 + 凝視。",
+        "3）B3 Waukkeon 瓦寇昂 = 大型鳥 + Charge 衝鋒 + Spread 散標 + 全屏。"
+    ],
+    "notes": "HW 3.0 dungeon (Lv 60)。Sea of Clouds 浮空島區。",
+    "bosses": [
+        {
+            "name": "努涅努克",
+            "nameEn": "Nunyenunc",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Wind Cleave 風斬", "type": "aoe", "description": "Boss cone 風 AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Summon Add 召小怪", "type": "other", "description": "召小怪 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Wind Burst 風爆", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "卡努瓦努",
+            "nameEn": "Canu Vanu",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Aetheric Burst 以太爆", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
+                { "name": "Spread AoE 散圈", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] },
+                { "name": "Death Gaze 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] }
+            ]}]
+        },
+        {
+            "name": "瓦寇昂",
+            "nameEn": "Waukkeon",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line AoE。", "tips": ["側步閃"] },
+                { "name": "Wind Burst 風爆 + 散標", "type": "spread", "description": "全屏 + 場上多 AoE 圈散。", "tips": [{ "text": "全員減傷 + 散避圈", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

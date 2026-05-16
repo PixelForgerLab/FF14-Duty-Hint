@@ -1,134 +1,46 @@
 {
-    "id":  "haukke_manor",
-    "name":  "霍克宅邸",
-    "nameEn":  "Haukke Manor",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "aoe",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  31,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Manor Claviger：Sweet Steel / Void Fire II / Dark Mist",
-                     "2）B2 Manor Steward：Ice Spikes / Soul Drain",
-                     "3）B3 Lady Amandine：Void Fire III / Void Thunder III / Dark Mist"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 31)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "is an untelegraphed cone AoE melee attack.",
-                                                                "name":  "Sweet Steel",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "is an interruptible AoE spell, typically targeted on a player at range from the boss (ranged DPS, healer).",
-                                                                "name":  "Void Fire II",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "is a large PBAoE spell. This spell can be avoided by stunning Claviger.",
-                                                                "name":  "Dark Mist",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Manor Claviger",
-                       "nameEn":  "Manor Claviger",
-                       "mnemonic":  [
-                                        "Sweet Steel",
-                                        "Void Fire II",
-                                        "Dark Mist"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "(Jester) is an interruptible spell.",
-                                                                "name":  "Ice Spikes",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "(Steward) is a large PBAoE spell. This spell can be avoided by stunning Steward.",
-                                                                "name":  "Soul Drain",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Manor Steward",
-                       "nameEn":  "Manor Steward",
-                       "mnemonic":  [
-                                        "Ice Spikes",
-                                        "Soul Drain"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "is an interruptible spell.",
-                                                                "name":  "Void Fire III",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "is an interruptible tankbuster.",
-                                                                "name":  "Void Thunder III",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "is a large PBAoE spell. This spell can be avoided by stunning Lady Amandine.",
-                                                                "name":  "Dark Mist",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Lady Amandine",
-                       "nameEn":  "Lady Amandine",
-                       "mnemonic":  [
-                                        "Void Fire III",
-                                        "Void Thunder III",
-                                        "Dark Mist"
-                                    ]
-                   }
-               ]
+    "id": "haukke_manor",
+    "name": "豪克的洋館",
+    "nameEn": "Haukke Manor",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 31,
+    "highEnd": false,
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Manor Claviger 鑰匙管家 = 持鑰小怪 + Glower 凝視 + 召小蝙蝠 add。",
+        "2）B2 Manor Steward 莊園管家 = Sweep 橫掃 + 召小怪 + 全屏。",
+        "3）B3 Lady Amandine 阿曼丁夫人 = Void Fire III 火 AoE + Bloody Caress 愛撫 buster + 召分身。"
+    ],
+    "notes": "ARR 2.0 dungeon (Lv 31)。豪克伯爵洋館鬼宅。",
+    "bosses": [
+        {
+            "name": "鑰匙管家",
+            "nameEn": "Manor Claviger",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Glower 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Summon Bat 召蝙蝠", "type": "other", "description": "召小蝙蝠 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "莊園管家",
+            "nameEn": "Manor Steward",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Sweep 橫掃", "type": "aoe", "description": "Boss cone 橫掃 AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Summon Add 召小怪", "type": "other", "description": "召小怪 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Aether Burst 全屏", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "阿曼丁夫人",
+            "nameEn": "Lady Amandine",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Void Fire III 暗火 III", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] },
+                { "name": "Bloody Caress 鮮血愛撫", "type": "tankbuster", "description": "MT 強 buster + Bleed。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Shadow Clones 暗影分身", "type": "other", "description": "召分身 + 同步攻擊。", "tips": ["看本體 + 避分身"] }
+            ]}]
+        }
+    ]
 }
