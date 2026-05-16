@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_litany",
-    "name": "伊甸的約束 連禱之章",
+    "name": "希望樂土的伊甸 再生2",
     "nameEn": "Eden's Promise: Litany",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,23 +8,67 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Fatebreaker 命運破壞者：火冰雙屬性切換。",
-        "2）Burning Chains 燃燒鎖鏈：場上 tether。",
-        "3）Powder Mark 火藥印記：tankbuster。"
+        "1）E10N Eden's Promise (4 足影) = Implosion 看影方向。",
+        "2）Stand-Up PBAoE + Giga Slash 左右影位。",
+        "3）Umbra Smash MT buster。",
+        "4）Shadowcleave 全員 cleave → 鐘位散。",
+        "5）Dual Spell + Shadowkeeper = stack 集合 + 分身斬。"
     ],
-    "notes": "Eden Normal E10 (Lv 80)。Eden's Promise 第二場 - Fatebreaker。",
+    "notes": "ShB 5.2 E10 Normal (Lv 80, ilvl 485)。Eden's Promise 影獸形。",
     "bosses": [
         {
-            "name": "Fatebreaker",
-            "nameEn": "Fatebreaker",
-            "mnemonic": ["火冰切換 + 鎖鏈 + 火藥印記"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Burning Chains 燃燒鎖鏈", "type": "other", "description": "場上玩家 tether 機制。", "tips": ["拉開破鎖"] },
-                { "name": "Fire/Ice AoE", "type": "aoe", "description": "火冰雙屬性 AoE。", "tips": ["看屬性閃預警"] },
-                { "name": "Powder Mark 火藥印記", "type": "tankbuster", "description": "Tankbuster + debuff。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "name": "希望樂土",
+            "nameEn": "Eden's Promise",
+            "mnemonic": [
+                "Implosion 看影。",
+                "Giga Slash 看持劍手 + 影位避。",
+                "Shadowcleave 鐘位散。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Eden's Promise",
+                    "mechanics": [
+                        {
+                            "name": "Deepshadow Nova",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Implosion",
+                            "type": "aoe",
+                            "description": "Boss 抬頭或尾 + 召影；攻擊朝影方向，需站影對側。",
+                            "tips": ["看影位 → 跑對側"]
+                        },
+                        {
+                            "name": "Stand-Up + Giga Slash",
+                            "type": "aoe",
+                            "description": "Stand-Up = PBAoE 跑遠；Giga Slash = 看持劍手 + 影位該側出 → 跑對側。",
+                            "tips": ["跑遠 + 看劍手"]
+                        },
+                        {
+                            "name": "Umbra Smash",
+                            "type": "tankbuster",
+                            "description": "MT 四段斬 buster + 疊層 debuff。",
+                            "tips": [{ "text": "MT 開無敵或雙坦換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Shadowcleave",
+                            "type": "spread",
+                            "description": "全員 cleave AoE → 鐘位散站邊。",
+                            "tips": ["鐘位 8 方散"]
+                        },
+                        {
+                            "name": "Dual Spell + Shadowkeeper",
+                            "type": "stack",
+                            "description": "玩家 stack + 分身在後 cleave，集合 stack 讓分身集中後爆。",
+                            "tips": ["全員集合 → 影集中"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

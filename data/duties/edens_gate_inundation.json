@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_inundation",
-    "name": "伊甸的覺醒 飛濺之章",
+    "name": "希望樂土的伊甸 共鳴3",
     "nameEn": "Eden's Gate: Inundation",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,23 +8,67 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Leviathan 利維亞桑：水 + 浪潮機制。",
-        "2）Tsunami 海嘯：左右舷判定。",
-        "3）Wave Cannon 浪潮砲：直線 AoE。"
+        "1）E3N Leviathan = Tidal Roar 全屏 + Rip Current MT 雙段 buster。",
+        "2）Tidal Wave 東或西水牆擊退 (抗擊退或站對側)。",
+        "3）Undersea Quake 場破一半，只留兩塊台。",
+        "4）Temporary Current 對角 line AoE，跑安全角。",
+        "5）Drenching Pulse + Freak Wave 集中誘 → 散開。"
     ],
-    "notes": "Eden Normal E3 (Lv 80)。Eden's Gate 第三場 - Leviathan 重製。",
+    "notes": "ShB 5.05 E3 Normal (Lv 80, ilvl 430)。Leviathan 水形 boss。場縮小 + 水擊退。",
     "bosses": [
         {
-            "name": "Leviathan",
+            "name": "利維坦",
             "nameEn": "Leviathan",
-            "mnemonic": ["水 + 浪潮 + 舷"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Tsunami 海嘯", "type": "other", "description": "左右舷判定，站對側避免擊飛。", "tips": ["看 boss 位置選邊"] },
-                { "name": "Wave Cannon 浪潮砲", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "mnemonic": [
+                "Tidal Roar 全屏 + Rip Current MT 雙段。",
+                "Undersea Quake 場破一半。",
+                "Drenching → Freak Wave 集中誘後散。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Leviathan",
+                    "mechanics": [
+                        {
+                            "name": "Tidal Roar",
+                            "type": "raidwide",
+                            "description": "不可閃全屏 + 後續 Tidal Wave。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Rip Current",
+                            "type": "tankbuster",
+                            "description": "MT 雙段 buster + 強 debuff，需 MT 開無敵或換手。",
+                            "tips": [{ "text": "MT 開無敵或換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Tidal Wave",
+                            "type": "other",
+                            "description": "東或西出水牆擊退；抗擊退或站對側避。",
+                            "tips": ["看牆位 → 站對側"]
+                        },
+                        {
+                            "name": "Undersea Quake",
+                            "type": "other",
+                            "description": "Boss 破場一半 (只留兩塊台)；要站不破的台。",
+                            "tips": ["看哪兩塊亮 → 站該塊"]
+                        },
+                        {
+                            "name": "Temporary Current",
+                            "type": "aoe",
+                            "description": "Boss 移到斜角 + 對角 line AoE。",
+                            "tips": ["看朝向 → 對角閃"]
+                        },
+                        {
+                            "name": "Drenching Pulse + Freak Wave",
+                            "type": "spread",
+                            "description": "Drenching = 中央誘地圈 → Freak Wave = spread AoE 散，先集後散。",
+                            "tips": ["先集中誘 → 再散"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

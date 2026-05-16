@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_eternity",
-    "name": "伊甸的約束 永遠之章",
+    "name": "希望樂土的伊甸 再生4",
     "nameEn": "Eden's Promise: Eternity",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,23 +8,100 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Eden's Promise 伊甸的約束 (最終形態)：吸取前 11 場機制。",
-        "2）多重元素混合 AoE。",
-        "3）Maleficium 邪惡咒語：全屏終局。"
+        "1）E12N Eden's Promise + Oracle of Darkness 雙階段。",
+        "2）Eden: Maleficium 全屏 + Junction Shiva (散) / Titan (stack)。",
+        "3）4 水晶 Cast/Stock/Release = 記四元素安全位。",
+        "4）Diamond Dust + Ice Floe (雙補 stack) + Ice Pillar (散) — 滑冰。",
+        "5）Earthen Fury + Bomb Boulders。",
+        "6）Oracle: Hell's Judgment 血降 1 → Shockwave Pulsar；Black Halo MT cone；Shellcrusher stack / Spirit Taker spread。",
+        "7）Relativity 系列 = Spell-in-Waiting debuff 配解。",
+        "8）Apocalypse 光束移動。"
     ],
-    "notes": "Eden Normal E12 (Lv 80)。Eden 系列終戰。",
+    "notes": "ShB 5.3 E12 Normal (Lv 80, ilvl 495)。Eden's Promise + Oracle 雙 boss 戰。",
     "bosses": [
         {
-            "name": "Eden's Promise",
+            "name": "希望樂土",
             "nameEn": "Eden's Promise",
-            "mnemonic": ["吸取前 11 場機制", "多重元素混合"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Element Mix 多重元素", "type": "aoe", "description": "場上多種元素 AoE 混合。", "tips": ["看預兆移動"] },
-                { "name": "全體 AoE 連發", "type": "raidwide", "description": "多重全屏。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Maleficium 邪惡咒語", "type": "raidwide", "description": "終局全屏 AoE。", "tips": [{ "text": "全減傷", "role": "healer" }] }
-            ]}]
+            "mnemonic": [
+                "4 水晶 Cast/Stock/Release。",
+                "Junction Shiva 散 / Junction Titan stack。",
+                "Diamond Dust 滑冰。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Eden Cast/Stock",
+                    "mechanics": [
+                        {
+                            "name": "Maleficium + Cast/Stock/Release",
+                            "type": "other",
+                            "description": "Maleficium 全屏；Cast = 即發、Stock = 儲存、Release = 釋放，4 水晶各 1 元素 (Leviathan 中央 / Garuda 斜 / Ramuh 遠 PBAoE / Ifrit 前後)。",
+                            "tips": ["記四元素安全位"]
+                        },
+                        {
+                            "name": "Junction Shiva / Titan",
+                            "type": "other",
+                            "description": "Shiva = 全員 spread；Titan = 雙補 stack light party。",
+                            "tips": [{ "text": "Titan 集合 / Shiva 散", "role": "healer" }]
+                        },
+                        {
+                            "name": "Diamond Dust + Bomb Boulders",
+                            "type": "raidwide",
+                            "description": "Diamond Dust 全屏 + 場結冰滑；Bomb Boulders 邊緣炸彈依色站位。",
+                            "tips": ["滑冰 → 安全方向 → 鬆手"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "暗之神諭",
+            "nameEn": "Oracle of Darkness",
+            "mnemonic": [
+                "Hell's Judgment 血降 1。",
+                "Relativity + Apocalypse 光束。",
+                "Darkest Dance + Black Halo。"
+            ],
+            "phases": [
+                {
+                    "name": "P2 - Oracle of Darkness",
+                    "mechanics": [
+                        {
+                            "name": "Hell's Judgment + Shockwave Pulsar",
+                            "type": "raidwide",
+                            "description": "血降至 1 + 全屏，需立即強補。",
+                            "tips": [{ "text": "強補 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Darkest Dance + Black Halo",
+                            "type": "other",
+                            "description": "Darkest Dance 跳遠人 + 擊退；Black Halo MT cone buster。",
+                            "tips": [
+                                { "text": "MT 轉外 + 抗擊退", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Shellcrusher / Spirit Taker",
+                            "type": "other",
+                            "description": "Shellcrusher 全員 stack；Spirit Taker 中標單獨吃，散開。",
+                            "tips": ["Shellcrusher 集 / Spirit 散"]
+                        },
+                        {
+                            "name": "Relativity 系列",
+                            "type": "other",
+                            "description": "全屏 + Spell-in-Waiting debuff (Aero / Blizzard / Holy / Fire) 計時解。",
+                            "tips": ["看 debuff 計時"]
+                        },
+                        {
+                            "name": "Apocalypse 光束",
+                            "type": "aoe",
+                            "description": "場上光束依方向掃，需跟著移動避。",
+                            "tips": ["跟光束方向"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

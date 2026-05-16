@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_resurrection",
-    "name": "伊甸的覺醒 復生之章",
+    "name": "希望樂土的伊甸 共鳴1",
     "nameEn": "Eden's Gate: Resurrection",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,23 +8,70 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Eden Prime 伊甸·至尊：場地分區 + 多重 AoE。",
-        "2）Vice and Virtue 善惡：場上分區決定生死。",
-        "3）Eternal Stillness 永久止息：全屏 AoE。"
+        "1）E1N Eden Prime = Spear of Paradise MT 雙段 + Eden's Flare donut (站 boss 內)。",
+        "2）Vice & Virtue Orbs = 4 標散開留 dark puddle。",
+        "3）Vice & Virtue Tank Blasts = 雙坦分坦 line。",
+        "4）Pure Light = boss 衝角 → 站 boss 後 (場邊死)。",
+        "5）Delta Attack = boss PBAoE + + 形 line + 個人 AoE，只有角安。"
     ],
-    "notes": "Eden Normal E1 (Lv 80)。Eden's Gate 第一場。",
+    "notes": "ShB 5.0 E1 Normal (Lv 80, ilvl 425)。Eden Prime 入門。場邊觸殺。",
     "bosses": [
         {
-            "name": "Eden Prime",
+            "name": "始源伊甸",
             "nameEn": "Eden Prime",
-            "mnemonic": ["分區 + 善惡 + AoE"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Vice and Virtue 善惡", "type": "other", "description": "場地分區決定安全區。", "tips": ["看光暗判斷站位"] },
-                { "name": "Eternal Stillness 永久止息", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "mnemonic": [
+                "Spear of Paradise 雙段 buster。",
+                "Vice & Virtue Orbs 4 散開。",
+                "Pure Light 站 boss 後。",
+                "Delta Attack 站角。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Eden Prime",
+                    "mechanics": [
+                        {
+                            "name": "Spear of Paradise + Eden's Gravity",
+                            "type": "tankbuster",
+                            "description": "Spear of Paradise = MT 雙段 buster；Eden's Gravity = 全屏。",
+                            "tips": [{ "text": "MT 開減傷或換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Vice & Virtue (Orbs)",
+                            "type": "spread",
+                            "description": "4 玩家標雲球 + AoE 圈 → 散開避互打 + 留 dark puddle 不被踩。",
+                            "tips": ["4 標散到四角 → 不踩 puddle"]
+                        },
+                        {
+                            "name": "Eden's Flare",
+                            "type": "aoe",
+                            "description": "Boss 下 donut AoE，需站 Eden hitbox 內避。",
+                            "tips": ["貼 boss 站"]
+                        },
+                        {
+                            "name": "Vice & Virtue (Tank Blasts)",
+                            "type": "tankbuster",
+                            "description": "雙坦 tether + 橘標 → 直線 AoE，需雙坦分位避互打 + 不對隊。",
+                            "tips": [
+                                { "text": "雙坦 90 度分坦 + 朝外", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Pure Light",
+                            "type": "aoe",
+                            "description": "Boss 衝角 + cast 大 cone AoE，需站 boss 正後 (不可碰場邊)。",
+                            "tips": ["跑到 boss 後 + 避場邊"]
+                        },
+                        {
+                            "name": "Delta Attack",
+                            "type": "other",
+                            "description": "Boss PBAoE + + 形 line AoE + 全員下 AoE 標；只有四角 safe，需散到角。",
+                            "tips": ["散開到四角 + 不互打"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

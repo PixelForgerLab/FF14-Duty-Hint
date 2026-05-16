@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_anamorphosis",
-    "name": "伊甸的約束 變形之章",
+    "name": "希望樂土的伊甸 再生3",
     "nameEn": "Eden's Promise: Anamorphosis",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,23 +8,63 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Oracle of Darkness 暗之預言者：暗 + 玩家變形機制。",
-        "2）Darkest Dance 暗影之舞：擊退機制。",
-        "3）Spirit Taker 靈魂掠奪者：場上多重 AoE。"
+        "1）E11N Fatebreaker = Elemental Break 全員 cleave 鐘位散。",
+        "2）Burnt Strike = 中央前後 line + 元素 (火/雷/光)。",
+        "3）Bound of Faith = tether buster 依屬性 (火單/雷 AoE/光 stack)。",
+        "4）Burnished Glory 全屏 + 流血。",
+        "5）Shifting Sky = 龍 aura → 反色為安全 panel。"
     ],
-    "notes": "Eden Normal E11 (Lv 80)。Eden's Promise 第三場。",
+    "notes": "ShB 5.3 E11 Normal (Lv 80, ilvl 495)。Fatebreaker 命運破壞者。元素 + 龍 aura 反色機制。",
     "bosses": [
         {
-            "name": "Oracle of Darkness",
-            "nameEn": "Oracle of Darkness",
-            "mnemonic": ["暗 + 變形 + 擊退"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Darkest Dance 暗影之舞", "type": "knockback", "description": "擊退機制。", "tips": ["預判擊退方向"] },
-                { "name": "Spirit Taker 靈魂掠奪者", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "name": "命運破壞者",
+            "nameEn": "Fatebreaker",
+            "mnemonic": [
+                "Elemental Break 鐘位散。",
+                "Burnt Strike 中央前後 line。",
+                "Shifting Sky 看龍 aura 反色。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Fatebreaker",
+                    "mechanics": [
+                        {
+                            "name": "Elemental Break",
+                            "type": "spread",
+                            "description": "全員 cleave AoE → 鐘位散站邊。",
+                            "tips": ["鐘位 8 方散"]
+                        },
+                        {
+                            "name": "Burnt Strike",
+                            "type": "aoe",
+                            "description": "Boss 中央 + 前後 line AoE，需到兩側。",
+                            "tips": ["看朝向 → 站左右側"]
+                        },
+                        {
+                            "name": "Bound of Faith",
+                            "type": "tankbuster",
+                            "description": "玩家 tether + bind 受擊；火 = 單體、雷 = AoE 圈、光 = stack 分擔。",
+                            "tips": [
+                                { "text": "看 aura 屬性處理", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Burnished Glory + Powder Mark",
+                            "type": "tankbuster",
+                            "description": "Burnished Glory 全屏 + 流血；Powder Mark MT 高傷 + 後續爆 AoE。",
+                            "tips": [{ "text": "MT/OT 換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Shifting Sky / Right of Heavens",
+                            "type": "other",
+                            "description": "召龍 + 場 panel；安全為龍 aura 反色 panel。",
+                            "tips": ["看龍 aura → 反色 panel"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
