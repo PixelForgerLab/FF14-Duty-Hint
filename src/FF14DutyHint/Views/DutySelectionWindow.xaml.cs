@@ -90,12 +90,30 @@ public partial class DutySelectionWindow : Window
                 (d.Expansion?.Contains(keyword, StringComparison.OrdinalIgnoreCase) ?? false));
         }
 
-        var filtered = query.ToList();
+        var filtered = query
+            .OrderBy(d => d.Expansion ?? string.Empty, StringComparer.Ordinal)
+            .ThenBy(d => GetTypeSortOrder(d.Type))
+            .ThenBy(d => d.JobLevelSync ?? 0)
+            .ThenBy(d => d.NameEn ?? d.Name ?? string.Empty, StringComparer.OrdinalIgnoreCase)
+            .ToList();
         DutyListBox.ItemsSource = filtered;
 
         ResultCountText.Text = filtered.Count == _allDuties.Count
             ? $"全部 {filtered.Count} 個副本"
             : $"{filtered.Count} / {_allDuties.Count} 個副本";
+    }
+
+    private static int GetTypeSortOrder(string? type)
+    {
+        return (type ?? string.Empty).ToLowerInvariant() switch
+        {
+            "dungeon" => 1,
+            "trial" => 2,
+            "raid" => 3,
+            "alliance" => 4,
+            "ultimate" => 5,
+            _ => 9
+        };
     }
 
     private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)

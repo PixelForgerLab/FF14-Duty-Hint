@@ -128,8 +128,8 @@ public class QualityToLabelConverter : IValueConverter
         return value switch
         {
             DutyQuality.Excellent => "完整",
-            DutyQuality.NeedsUpdate => "需更新",
-            DutyQuality.Skeleton => "骨架",
+            DutyQuality.NeedsUpdate => "待補充",
+            DutyQuality.Skeleton => "骨幹",
             _ => string.Empty
         };
     }

@@ -1,259 +1,286 @@
 {
-    "id": "porta_decumana",
-    "name": "邊緣禁區 - 究極神兵",
-    "nameEn": "Porta Decumana - The Ultima Weapon",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P1 = 三神 phase 輪替：泰坦 / 迦樓羅 / 伊弗利特 之力，依序剝離。",
-        "2）80% 土神結束：花崗岩送葬 + 土神的激怒 → 等光之加護解。",
-        "3）58% 風神結束：風神障壁 + 處決風刃 → 等光之加護解。",
-        "4）35% 火神結束：光輝大炎柱 → 等光之加護解；之後 P2 開始。",
-        "5）P2：團滅從 P2 重開無需重打 P1。",
-        "6）以太炸彈：場邊兩兩連線 → 主動撞掉其中一個避免炸彈爆炸全屏。",
-        "7）追蹤射線 = MT 死刑 + 自控射線 = 散標 + 集束雷射 = 分攤。",
-        "8）30%：究極讀條 → 光之加護 3x 攻擊 + 充滿極限技 → 全爆推完。"
-    ],
-    "notes": "ARR 2.x MSQ 最終戰 - 究極神兵破壞作戰 (Lv 50)。P1 三神階段為劇情殼，主戰場在 P2。團滅從 P2 重開。",
-    "bosses": [
-        {
-            "name": "究極神兵",
-            "nameEn": "The Ultima Weapon",
-            "mnemonic": [
-                "三神剝離：等讀條 → 等光之加護解",
-                "P2 = 真正戰場，團滅從 P2 重開",
-                "以太炸彈撞掉 = 避全屏 / 不撞 = 滅",
-                "30% 究極 → 光之加護爆發推完"
-            ],
-            "phases": [
-                {
-                    "name": "P1 土神階段 (100–80%)",
-                    "mechanics": [
-                        {
-                            "name": "Earthen Fury 大地之怒",
-                            "type": "raidwide",
-                            "description": "召喚究極泰坦同時釋放全屏 AoE。",
-                            "tips": [
-                                { "text": "全員集合補補療", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Earthen Shatter 大地粉碎",
-                            "type": "aoe",
-                            "description": "究極泰坦躍向隨機場邊，落點距離衰減 AoE 有預警，遠離即可。",
-                            "tips": [
-                                "看預警往對側場邊跑"
-                            ]
-                        },
-                        {
-                            "name": "Landslide 地裂",
-                            "type": "knockback",
-                            "description": "究極泰坦向隨機玩家方向直線 AoE + 擊退（有預警）；泰坦離開後究極神兵也會放一次。",
-                            "tips": [
-                                "看預警側閃",
-                                "預判第二次的位置"
-                            ]
-                        },
-                        {
-                            "name": "Weight of the Land 大地之重",
-                            "type": "aoe",
-                            "description": "地板出現流沙範圍提示，及時離開。",
-                            "tips": [
-                                "看圈走"
-                            ]
-                        },
-                        {
-                            "name": "Granite Funeral 花崗岩送葬 + Earthen Wrath 土神的激怒",
-                            "type": "raidwide",
-                            "description": "HP 約 80% 時，神兵無敵 + 拘束玩家持續 10% 當前血每秒 dot + 讀條全屏 AoE 土神的激怒 + 花崗岩墳墓讀條。利用光之加護將土神之力剝離後結束。",
-                            "tips": [
-                                "等劇情自動發動光之加護",
-                                { "text": "補保住所有人不被拘束秒殺", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P1 風神階段 (80–58%)",
-                    "mechanics": [
-                        {
-                            "name": "Aerial Blast 大氣爆發",
-                            "type": "raidwide",
-                            "description": "召喚究極迦樓羅同時全屏 AoE。",
-                            "tips": [
-                                { "text": "補大團補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Eye of the Storm 颱風眼",
-                            "type": "knockback",
-                            "description": "場中央創造颱風眼，外圍週期性傷害 + 向中心擊退，有預警；待在場中央即可。",
-                            "tips": [
-                                "全員擠中央",
-                                "不要試圖跑出"
-                            ]
-                        },
-                        {
-                            "name": "Wicked Wheel 寒風之嘯",
-                            "type": "aoe",
-                            "description": "迦樓羅出現在隨機場邊，自身為圓心大範圍 AoE 有預警；同時躲避此技與颱風眼。",
-                            "tips": [
-                                "保持中央避颱風眼",
-                                "看清迦樓羅位置往對角閃"
-                            ]
-                        },
-                        {
-                            "name": "Wind Barrier 風神障壁 + Decimating Edge 處決風刃",
-                            "type": "raidwide",
-                            "description": "HP 約 58% 時，神兵免疫一切傷害並讀條處決風刃全屏 AoE。光之加護剝離風神之力後結束。",
-                            "tips": [
-                                "等劇情解 → 全員集合準備光之加護"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P1 火神階段 (58–35%)",
-                    "mechanics": [
-                        {
-                            "name": "Hellfire 地獄之火炎",
-                            "type": "raidwide",
-                            "description": "召喚究極伊弗利特同時全屏 AoE。",
-                            "tips": [
-                                { "text": "補大團補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Radiant Plume 光輝炎柱",
-                            "type": "aoe",
-                            "description": "地板出現火柱範圍提示，及時離開。",
-                            "tips": [
-                                "走縫"
-                            ]
-                        },
-                        {
-                            "name": "Vulcan Burst 火神爆裂",
-                            "type": "knockback",
-                            "description": "究極伊弗利特出現場中，將所有玩家向場邊擊退。",
-                            "tips": [
-                                "Arm's Length 可免位移",
-                                "貼中心吃最短擊退"
-                            ]
-                        },
-                        {
-                            "name": "Radiant Megaflare 光輝大炎柱",
-                            "type": "raidwide",
-                            "description": "HP 約 35% 時，神兵直接讀條全屏 AoE；光之加護剝離火神之力後結束 P1。",
-                            "tips": [
-                                "等劇情解",
-                                "P1 結束後不會用任何技能，直接進入 P2 動畫"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - 究極神兵真正力量 (35–30%)",
-                    "mechanics": [
-                        {
-                            "name": "Homing Lasers 追蹤射線",
-                            "type": "tankbuster",
-                            "description": "對 MT 高額傷害，有紅色點名提示。",
-                            "tips": [
-                                { "text": "MT 必開大減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Magitek Laser 魔導雷射",
-                            "type": "aoe",
-                            "description": "Boss 朝身前、左前、右前發射雷射，掃過區域產生爆炸。",
-                            "tips": [
-                                "閃過 3 個雷射方向"
-                            ]
-                        },
-                        {
-                            "name": "Citadel Buster 自控射線",
-                            "type": "spread",
-                            "description": "點名每名玩家造成 AoE 傷害，有點名範圍提示，全員散開。",
-                            "tips": [
-                                "全員分散 5m 以上"
-                            ]
-                        },
-                        {
-                            "name": "Magitek Detonation 魔導核爆",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [
-                                { "text": "補大團補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Aetheric Wave 以太波動",
-                            "type": "knockback",
-                            "description": "將所有玩家向場邊擊退。",
-                            "tips": [
-                                "Arm's Length 可免",
-                                "貼中央吃最短"
-                            ]
-                        },
-                        {
-                            "name": "Aetheric Bombs 以太炸彈",
-                            "type": "mechanic",
-                            "description": "場邊出現兩兩連線的以太炸彈，觸碰會爆炸 (小傷) 並消除連線對；連線炸彈相撞前主動撞掉一個避免炸彈爆炸全屏高傷。",
-                            "tips": [
-                                "DPS / T 衝去撞掉每對其中一個",
-                                "不撞 → 全屏巨額傷害"
-                            ]
-                        },
-                        {
-                            "name": "Beam Cannon 集束雷射",
-                            "type": "stack",
-                            "description": "點名隨機玩家造成分攤傷害，有分攤提示。",
-                            "tips": [
-                                "全員集合分攤"
-                            ]
-                        },
-                        {
-                            "name": "Search Beam 攻城炮",
-                            "type": "aoe",
-                            "description": "Boss 轉向隨機方向，讀條完畢後向該方向發射雷射高額傷害，無範圍提示，需觀察面向躲避。",
-                            "tips": [
-                                "看 boss 朝向，站側後或對側"
-                            ]
-                        },
-                        {
-                            "name": "Magitek Bit 突擊加農炮",
-                            "type": "aoe",
-                            "description": "Boss 放出數個魔導浮游炮，對自身前方直線 AoE 有預警。",
-                            "tips": [
-                                "看清浮游炮朝向走縫"
-                            ]
-                        },
-                        {
-                            "name": "Magitek Ray 場邊爆炸",
-                            "type": "raidwide",
-                            "description": "場邊出現 4 個距離衰減 AoE 提示，靠場中央站位躲避。",
-                            "tips": [
-                                "全員擠中央"
-                            ]
-                        },
-                        {
-                            "name": "Ultima 究極 (30%)",
-                            "type": "raidwide",
-                            "description": "HP 30% 時 boss 回中央讀條究極，讀條期間玩家獲得光之加護 (攻擊 +3x + 充滿 3 段極限槽)；未在讀條完畢前擊殺則團滅。",
-                            "tips": [
-                                { "text": "DPS 全爆 + 開極限技推完", "role": "dps" },
-                                { "text": "T 開極限增傷或減傷", "role": "tank" },
-                                { "text": "補開極限補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "porta_decumana",
+    "name":  "邊緣禁區 - 究極神兵",
+    "nameEn":  "Porta Decumana - The Ultima Weapon",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）P1 = 三神 phase 輪替：泰坦 / 迦樓羅 / 伊弗利特 之力，依序剝離。",
+                     "2）80% 土神結束：花崗岩送葬 + 土神的激怒 → 等光之加護解。",
+                     "3）58% 風神結束：風神障壁 + 處決風刃 → 等光之加護解。",
+                     "4）35% 火神結束：光輝大炎柱 → 等光之加護解；之後 P2 開始。",
+                     "5）P2：團滅從 P2 重開無需重打 P1。",
+                     "6）以太炸彈：場邊兩兩連線 → 主動撞掉其中一個避免炸彈爆炸全屏。",
+                     "7）追蹤射線 = MT 死刑 + 自控射線 = 散標 + 集束雷射 = 分攤。",
+                     "8）30%：究極讀條 → 光之加護 3x 攻擊 + 充滿極限技 → 全爆推完。"
+                 ],
+    "notes":  "ARR 2.x MSQ 最終戰 - 究極神兵破壞作戰 (Lv 50)。P1 三神階段為劇情殼，主戰場在 P2。團滅從 P2 重開。",
+    "bosses":  [
+                   {
+                       "name":  "究極神兵",
+                       "nameEn":  "The Ultima Weapon",
+                       "mnemonic":  [
+                                        "三神剝離：等讀條 → 等光之加護解",
+                                        "P2 = 真正戰場，團滅從 P2 重開",
+                                        "以太炸彈撞掉 = 避全屏 / 不撞 = 滅",
+                                        "30% 究極 → 光之加護爆發推完"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 土神階段 (100–80%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Earthen Fury 大地之怒",
+                                                                "type":  "raidwide",
+                                                                "description":  "召喚究極泰坦同時釋放全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員集合補補療",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Earthen Shatter 大地粉碎",
+                                                                "type":  "aoe",
+                                                                "description":  "究極泰坦躍向隨機場邊，落點距離衰減 AoE 有預警，遠離即可。",
+                                                                "tips":  [
+                                                                             "看預警往對側場邊跑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Landslide 地裂",
+                                                                "type":  "knockback",
+                                                                "description":  "究極泰坦向隨機玩家方向直線 AoE + 擊退（有預警）；泰坦離開後究極神兵也會放一次。",
+                                                                "tips":  [
+                                                                             "看預警側閃",
+                                                                             "預判第二次的位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Weight of the Land 大地之重",
+                                                                "type":  "aoe",
+                                                                "description":  "地板出現流沙範圍提示，及時離開。",
+                                                                "tips":  [
+                                                                             "看圈走"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Granite Funeral 花崗岩送葬 + Earthen Wrath 土神的激怒",
+                                                                "type":  "raidwide",
+                                                                "description":  "HP 約 80% 時，神兵無敵 + 拘束玩家持續 10% 當前血每秒 dot + 讀條全屏 AoE 土神的激怒 + 花崗岩墳墓讀條。利用光之加護將土神之力剝離後結束。",
+                                                                "tips":  [
+                                                                             "等劇情自動發動光之加護",
+                                                                             {
+                                                                                 "text":  "補保住所有人不被拘束秒殺",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P1 風神階段 (80–58%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Aerial Blast 大氣爆發",
+                                                                "type":  "raidwide",
+                                                                "description":  "召喚究極迦樓羅同時全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Eye of the Storm 颱風眼",
+                                                                "type":  "knockback",
+                                                                "description":  "場中央創造颱風眼，外圍週期性傷害 + 向中心擊退，有預警；待在場中央即可。",
+                                                                "tips":  [
+                                                                             "全員擠中央",
+                                                                             "不要試圖跑出"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wicked Wheel 寒風之嘯",
+                                                                "type":  "aoe",
+                                                                "description":  "迦樓羅出現在隨機場邊，自身為圓心大範圍 AoE 有預警；同時躲避此技與颱風眼。",
+                                                                "tips":  [
+                                                                             "保持中央避颱風眼",
+                                                                             "看清迦樓羅位置往對角閃"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wind Barrier 風神障壁 + Decimating Edge 處決風刃",
+                                                                "type":  "raidwide",
+                                                                "description":  "HP 約 58% 時，神兵免疫一切傷害並讀條處決風刃全屏 AoE。光之加護剝離風神之力後結束。",
+                                                                "tips":  [
+                                                                             "等劇情解 → 全員集合準備光之加護"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P1 火神階段 (58–35%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Hellfire 地獄之火炎",
+                                                                "type":  "raidwide",
+                                                                "description":  "召喚究極伊弗利特同時全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Radiant Plume 光輝炎柱",
+                                                                "type":  "aoe",
+                                                                "description":  "地板出現火柱範圍提示，及時離開。",
+                                                                "tips":  [
+                                                                             "走縫"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vulcan Burst 火神爆裂",
+                                                                "type":  "knockback",
+                                                                "description":  "究極伊弗利特出現場中，將所有玩家向場邊擊退。",
+                                                                "tips":  [
+                                                                             "Arm\u0027s Length 可免位移",
+                                                                             "貼中心吃最短擊退"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Radiant Megaflare 光輝大炎柱",
+                                                                "type":  "raidwide",
+                                                                "description":  "HP 約 35% 時，神兵直接讀條全屏 AoE；光之加護剝離火神之力後結束 P1。",
+                                                                "tips":  [
+                                                                             "等劇情解",
+                                                                             "P1 結束後不會用任何技能，直接進入 P2 動畫"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - 究極神兵真正力量 (35–30%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Homing Lasers 追蹤射線",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 MT 高額傷害，有紅色點名提示。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 必開大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magitek Laser 魔導雷射",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 朝身前、左前、右前發射雷射，掃過區域產生爆炸。",
+                                                                "tips":  [
+                                                                             "閃過 3 個雷射方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Citadel Buster 自控射線",
+                                                                "type":  "spread",
+                                                                "description":  "點名每名玩家造成 AoE 傷害，有點名範圍提示，全員散開。",
+                                                                "tips":  [
+                                                                             "全員分散 5m 以上"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magitek Detonation 魔導核爆",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aetheric Wave 以太波動",
+                                                                "type":  "knockback",
+                                                                "description":  "將所有玩家向場邊擊退。",
+                                                                "tips":  [
+                                                                             "Arm\u0027s Length 可免",
+                                                                             "貼中央吃最短"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aetheric Bombs 以太炸彈",
+                                                                "type":  "mechanic",
+                                                                "description":  "場邊出現兩兩連線的以太炸彈，觸碰會爆炸 (小傷) 並消除連線對；連線炸彈相撞前主動撞掉一個避免炸彈爆炸全屏高傷。",
+                                                                "tips":  [
+                                                                             "DPS / T 衝去撞掉每對其中一個",
+                                                                             "不撞 → 全屏巨額傷害"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Beam Cannon 集束雷射",
+                                                                "type":  "stack",
+                                                                "description":  "點名隨機玩家造成分攤傷害，有分攤提示。",
+                                                                "tips":  [
+                                                                             "全員集合分攤"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Search Beam 攻城炮",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 轉向隨機方向，讀條完畢後向該方向發射雷射高額傷害，無範圍提示，需觀察面向躲避。",
+                                                                "tips":  [
+                                                                             "看 boss 朝向，站側後或對側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magitek Bit 突擊加農炮",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 放出數個魔導浮游炮，對自身前方直線 AoE 有預警。",
+                                                                "tips":  [
+                                                                             "看清浮游炮朝向走縫"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magitek Ray 場邊爆炸",
+                                                                "type":  "raidwide",
+                                                                "description":  "場邊出現 4 個距離衰減 AoE 提示，靠場中央站位躲避。",
+                                                                "tips":  [
+                                                                             "全員擠中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Ultima 究極 (30%)",
+                                                                "type":  "raidwide",
+                                                                "description":  "HP 30% 時 boss 回中央讀條究極，讀條期間玩家獲得光之加護 (攻擊 +3x + 充滿 3 段極限槽)；未在讀條完畢前擊殺則團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全爆 + 開極限技推完",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "T 開極限增傷或減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "補開極限補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

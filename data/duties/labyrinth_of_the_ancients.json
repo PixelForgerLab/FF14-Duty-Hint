@@ -1,54 +1,183 @@
 {
-    "id": "labyrinth_of_the_ancients",
-    "name": "古代迷宮",
-    "nameEn": "Labyrinth of the Ancients",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Bone Dragon：骨龍 + 場上多 AoE + 召喚骷髏 add。",
-        "2）B2 Thanatos：死神 + Damocles 達摩克利斯之劍 點名死刑。",
-        "3）B3 King Behemoth：貝希摩斯王 + Ecliptic Meteor 末日隕石 → 全員躲流星避免團滅。",
-        "4）B4 Phlegethon：火河 + 多重火屬性 + add 群。",
-        "5）24 人 raid 注意分組分配機制。"
-    ],
-    "notes": "ARR 2.3 Alliance raid - 水晶塔系列 1 (Lv 50)。古代迷宮；24 人團隊副本。",
-    "bosses": [
-        {
-            "name": "骨龍", "nameEn": "Bone Dragon",
-            "phases": [{ "name": "B1 主戰", "mechanics": [
-                { "name": "Bone Storm 骨風暴", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
-                { "name": "Skeleton Adds 骷髏 add", "type": "add", "description": "場上召喚骷髏 → 速殺。", "tips": [{ "text": "DPS AoE", "role": "dps" }] },
-                { "name": "Cleave 扇形", "type": "cone", "description": "MT 扇形。", "tips": [{ "text": "MT 朝外", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "塔納托斯", "nameEn": "Thanatos",
-            "phases": [{ "name": "B2 主戰", "mechanics": [
-                { "name": "Damocles 達摩克利斯之劍", "type": "mechanic", "description": "點名玩家頭頂掛劍 → 必須躲到場邊柱後避免死刑。", "tips": ["被點立刻躲柱後"] },
-                { "name": "Multi AoE 多 AoE", "type": "aoe", "description": "場上多 AoE → 走縫。", "tips": ["走縫"] },
-                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 死刑。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "貝希摩斯王", "nameEn": "King Behemoth",
-            "phases": [{ "name": "B3 主戰", "mechanics": [
-                { "name": "Ecliptic Meteor 末日隕石", "type": "raidwide", "description": "全屏團滅 AoE → 全員躲場上流星後面避免命中。", "tips": ["躲流星陰影"] },
-                { "name": "Comet 彗星", "type": "aoe", "description": "場上多隕石 AoE → 走縫。", "tips": ["走縫"] },
-                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 死刑。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "弗列革吞", "nameEn": "Phlegethon",
-            "phases": [{ "name": "B4 主戰", "mechanics": [
-                { "name": "Hellfire 地獄火炎", "type": "raidwide", "description": "全屏火 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
-                { "name": "Add Wave Adds 群", "type": "add", "description": "場邊多波 add → 三個小隊各打一波。", "tips": [{ "text": "DPS 集火 add", "role": "dps" }] },
-                { "name": "Multi AoE 多 AoE", "type": "aoe", "description": "場上多 AoE → 走縫。", "tips": ["走縫"] }
-            ]}]
-        }
-    ]
+    "id":  "labyrinth_of_the_ancients",
+    "name":  "古代迷宮",
+    "nameEn":  "Labyrinth of the Ancients",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "raid",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "skeleton",
+    "mnemonic":  [
+                     "1）B1 Bone Dragon：骨龍 + 場上多 AoE + 召喚骷髏 add。",
+                     "2）B2 Thanatos：死神 + Damocles 達摩克利斯之劍 點名死刑。",
+                     "3）B3 King Behemoth：貝希摩斯王 + Ecliptic Meteor 末日隕石 → 全員躲流星避免團滅。",
+                     "4）B4 Phlegethon：火河 + 多重火屬性 + add 群。",
+                     "5）24 人 raid 注意分組分配機制。"
+                 ],
+    "notes":  "ARR 2.3 Alliance raid - 水晶塔系列 1 (Lv 50)。古代迷宮；24 人團隊副本。",
+    "bosses":  [
+                   {
+                       "name":  "骨龍",
+                       "nameEn":  "Bone Dragon",
+                       "phases":  [
+                                      {
+                                          "name":  "B1 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Bone Storm 骨風暴",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Skeleton Adds 骷髏 add",
+                                                                "type":  "add",
+                                                                "description":  "場上召喚骷髏 → 速殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS AoE",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cleave 扇形",
+                                                                "type":  "cone",
+                                                                "description":  "MT 扇形。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 朝外",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "塔納托斯",
+                       "nameEn":  "Thanatos",
+                       "phases":  [
+                                      {
+                                          "name":  "B2 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Damocles 達摩克利斯之劍",
+                                                                "type":  "mechanic",
+                                                                "description":  "點名玩家頭頂掛劍 → 必須躲到場邊柱後避免死刑。",
+                                                                "tips":  [
+                                                                             "被點立刻躲柱後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Multi AoE 多 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場上多 AoE → 走縫。",
+                                                                "tips":  [
+                                                                             "走縫"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tankbuster 死刑",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 死刑。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "貝希摩斯王",
+                       "nameEn":  "King Behemoth",
+                       "phases":  [
+                                      {
+                                          "name":  "B3 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Ecliptic Meteor 末日隕石",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏團滅 AoE → 全員躲場上流星後面避免命中。",
+                                                                "tips":  [
+                                                                             "躲流星陰影"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Comet 彗星",
+                                                                "type":  "aoe",
+                                                                "description":  "場上多隕石 AoE → 走縫。",
+                                                                "tips":  [
+                                                                             "走縫"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tankbuster 死刑",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 死刑。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "弗列革吞",
+                       "nameEn":  "Phlegethon",
+                       "phases":  [
+                                      {
+                                          "name":  "B4 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Hellfire 地獄火炎",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏火 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Add Wave Adds 群",
+                                                                "type":  "add",
+                                                                "description":  "場邊多波 add → 三個小隊各打一波。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 集火 add",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Multi AoE 多 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場上多 AoE → 走縫。",
+                                                                "tips":  [
+                                                                             "走縫"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

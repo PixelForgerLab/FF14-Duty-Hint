@@ -1,258 +1,315 @@
 {
-    "id": "final_steps_of_faith",
-    "name": "信念終途 - 尼德霍格",
-    "nameEn": "The Final Steps of Faith - Nidhogg",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P1：真紅吐息 (MT 扇形) + 龍嘯 (全屏) + 恐懼咆哮 (脚下 AoE) + 燃燒之翼 (辣翅，兩側) + 燃燒之尾 (辣尾，前後)。",
-        "2）邪炎俯衝 + 恐懼咆哮 → 邪龍上天，找龍出現位置跑開；空降全屏。",
-        "3）P2：3 隻 add → MT 拉 9 點 (布羅賓雅克) + ST 拉 3 點 (法拉克) 開盾接順劈；暗影變種龍不需拉仇恨。",
-        "4）3 隻全殺 → 滅絕之詩全屏 → P3。",
-        "5）P3：絕滅 (MT 死刑) + 武神槍 (隨機直線) + 騰龍槍 (MT 連 2 段扇形)。",
-        "6）高跳：點名 5 人 → 場邊放陷阱 → 走出；分身武神槍 + 超級跳躍距離衰減。",
-        "7）腾龍槍 + 絕滅 + 騰龍槍組合 → 注意減傷。",
-        "8）武神槍 + 高跳組合 x2 → 恨怨之雷全屏 → P4。",
-        "9）P4：死亡輪迴 (5 段分攤) + 烈焰十字爆 (3 火球十字) + 恐懼咆哮 + 翼/尾循環。"
-    ],
-    "notes": "HW 3.3 MSQ trial - 信念終途 (Lv 60)。Nidhogg 附身 Estinien 之戰；4 階段，P3 開始機制密度大幅提升。",
-    "bosses": [
-        {
-            "name": "尼德霍格",
-            "nameEn": "Nidhogg",
-            "mnemonic": [
-                "P1 翼/尾 → 站肚子下左右橫跳",
-                "P2 三 add → MT/ST 各拉一隻順劈",
-                "P3 高跳放邊 + 武神槍走位",
-                "P4 死亡輪迴必集合 + 火球避十字"
-            ],
-            "phases": [
-                {
-                    "name": "P1 (100–80%)",
-                    "mechanics": [
-                        {
-                            "name": "Crimson Breath 真紅吐息",
-                            "type": "cone",
-                            "description": "對 MT 釋放無讀條扇形範圍攻擊。",
-                            "tips": [
-                                { "text": "MT 朝場邊", "role": "tank" },
-                                "近戰站側後"
-                            ]
-                        },
-                        {
-                            "name": "Dragon Roar 龍嘯",
-                            "type": "raidwide",
-                            "description": "無讀條全屏攻擊。",
-                            "tips": [
-                                { "text": "補大團補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Horrid Roar 恐懼咆哮",
-                            "type": "aoe",
-                            "description": "邪龍腳下出現紋章 → 點名數人腳下 AoE，迅速離開。",
-                            "tips": [
-                                "被點往場邊走",
-                                "看圈走"
-                            ]
-                        },
-                        {
-                            "name": "Cauterize 燃燒之翼 (辣翅)",
-                            "type": "aoe",
-                            "description": "邪龍固定在場中讀條，攻擊兩側翼狀範圍 → 站正前/正後安全。",
-                            "tips": [
-                                "站邪龍頭部或尾部下方",
-                                { "text": "近戰預先移到腹下", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Hot Tail 燃燒之尾 (辣尾)",
-                            "type": "aoe",
-                            "description": "向 boss 目標圈前後方向釋放的條狀範圍攻擊。",
-                            "tips": [
-                                "站邪龍兩側 (翼下) 安全",
-                                "與辣翅相反 → 看清讀條"
-                            ]
-                        },
-                        {
-                            "name": "Hot Tail + Horrid Roar 邪炎俯衝組合",
-                            "type": "aoe",
-                            "description": "邪龍上天不可選中，點名數人腳底 AoE，邪龍將俯衝半場；快找龍出現位置跑開。",
-                            "tips": [
-                                "看天空陰影預判龍出現方向",
-                                { "text": "T 帶隊跑到對側", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Touchdown 空降",
-                            "type": "raidwide",
-                            "description": "邪龍降落場中央，一次全屏攻擊；隨後上天召喚眷屬進 P2。",
-                            "tips": [
-                                { "text": "補大團補 + 補盾", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - Adds 階段",
-                    "mechanics": [
-                        {
-                            "name": "Shadow Hroptyr 暗影布羅賓雅克 (MT 9 點)",
-                            "type": "add",
-                            "description": "MT 拉 9 點方向；順劈攻擊 → 必須面外。",
-                            "tips": [
-                                { "text": "MT 拉到場邊面外", "role": "tank" },
-                                { "text": "DPS 集火 9 點 add", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Shadow Faflog 暗影法拉克 (ST 3 點)",
-                            "type": "add",
-                            "description": "ST 開盾拉 3 點方向；順劈攻擊 → 必須面外；ST 須開減傷接傷。",
-                            "tips": [
-                                { "text": "ST 開盾 / 鋼鐵 + 朝外", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Shadow Ferreous Drake 暗影變種龍 (中央)",
-                            "type": "add",
-                            "description": "不需要拉仇恨；交替使用撕裂利爪 (正面順劈) 與火球 (對最遠玩家圓形 AoE)；都可躲避。",
-                            "tips": [
-                                "看動作躲避",
-                                { "text": "DPS 處理 9/3 點兩隻後再清變種龍", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Song of Extinction 滅絕之詩",
-                            "type": "raidwide",
-                            "description": "三隻全擊殺後邪龍轉場使用，高傷害全屏攻擊 → 進入 P3。",
-                            "tips": [
-                                { "text": "全員集合補大團補", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 (50–25%)",
-                    "mechanics": [
-                        {
-                            "name": "Akh Morn 絕滅",
-                            "type": "tankbuster",
-                            "description": "對 MT 高傷害單體攻擊。",
-                            "tips": [
-                                { "text": "MT 必開大減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Geirskogul 武神槍",
-                            "type": "aoe",
-                            "description": "隨機選中一名玩家，向其當前位置釋放條狀範圍攻擊。",
-                            "tips": [
-                                "被點立即移動 → 把線拉到邊",
-                                "其他人遠離被點玩家當前位置"
-                            ]
-                        },
-                        {
-                            "name": "Dragon Charge 騰龍槍",
-                            "type": "tankbuster",
-                            "description": "對 MT 無讀條小範圍扇形攻擊；第一次連續釋放兩次。",
-                            "tips": [
-                                { "text": "MT 開減傷 + 補連續補療", "role": "tank" },
-                                { "text": "面外避免噴隊伍", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Spineshatter Dive 高跳",
-                            "type": "aoe",
-                            "description": "邪龍上天，點名 5 人釋放圓形 AoE 附帶陷阱區域；被點者前往場邊放置後迅速走出。",
-                            "tips": [
-                                "被點往場邊邊角放",
-                                "放後立即走出陷阱"
-                            ]
-                        },
-                        {
-                            "name": "Geirskogul + Hyper Dive 分身武神槍 + 超級跳躍",
-                            "type": "aoe",
-                            "description": "分身在場邊釋放條狀 AoE，邪龍隨機在一名玩家位置釋放距離衰減傷害。",
-                            "tips": [
-                                "看條狀方向移動",
-                                "找最遠位置避免衰減傷害"
-                            ]
-                        },
-                        {
-                            "name": "Dragon Charge 連續 (騰龍槍 + 絕滅 + 騰龍槍)",
-                            "type": "tankbuster",
-                            "description": "MT 拉邪龍回中央後 boss 釋放騰龍槍+絕滅+騰龍槍組合，注意減傷與回復。",
-                            "tips": [
-                                { "text": "MT 開所有大減傷", "role": "tank" },
-                                { "text": "補連續主動補療", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Wrath of Heaven 恨怨之雷",
-                            "type": "raidwide",
-                            "description": "邪龍上天，發動全屏傷害 → 進入 P4。",
-                            "tips": [
-                                { "text": "補大團補 + 大盾", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P4 (25–0%)",
-                    "mechanics": [
-                        {
-                            "name": "Hot Tail + Horrid Roar 開場組合",
-                            "type": "aoe",
-                            "description": "開場邪炎俯衝 + 恐懼咆哮；離開腳下陷阱並回避俯衝。",
-                            "tips": [
-                                "看天空找龍出現位置",
-                                "離開腳下圈"
-                            ]
-                        },
-                        {
-                            "name": "Touchdown 空降",
-                            "type": "raidwide",
-                            "description": "邪龍落地造成一次全屏攻擊。",
-                            "tips": [
-                                { "text": "補大團補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Death Sentence 死亡輪迴",
-                            "type": "stack",
-                            "description": "隨機點名一位玩家釋放可分攤圓形範圍攻擊；第一次 4 段，之後 5 段。",
-                            "tips": [
-                                "全員集合分攤",
-                                { "text": "減傷有什麼交什麼", "role": "tank" },
-                                { "text": "補極限補療", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Flaming Cross 烈焰十字爆 (十字火/炸彈)",
-                            "type": "aoe",
-                            "description": "場地隨機刷新三顆火球，數秒後爆炸造成大範圍十字形 AoE。",
-                            "tips": [
-                                "預判十字線方向 → 站非十字格",
-                                "與恐懼咆哮腳底 AoE 一起時要靈性走位"
-                            ]
-                        },
-                        {
-                            "name": "Cauterize / Hot Tail 循環",
-                            "type": "aoe",
-                            "description": "邪龍交替使用燃燒之翼 (翼) 與燃燒之尾 (尾)，在肚子下左右橫跳即可。",
-                            "tips": [
-                                "站肚子下，看讀條左右切換"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "final_steps_of_faith",
+    "name":  "信念終途 - 尼德霍格",
+    "nameEn":  "The Final Steps of Faith - Nidhogg",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）P1：真紅吐息 (MT 扇形) + 龍嘯 (全屏) + 恐懼咆哮 (脚下 AoE) + 燃燒之翼 (辣翅，兩側) + 燃燒之尾 (辣尾，前後)。",
+                     "2）邪炎俯衝 + 恐懼咆哮 → 邪龍上天，找龍出現位置跑開；空降全屏。",
+                     "3）P2：3 隻 add → MT 拉 9 點 (布羅賓雅克) + ST 拉 3 點 (法拉克) 開盾接順劈；暗影變種龍不需拉仇恨。",
+                     "4）3 隻全殺 → 滅絕之詩全屏 → P3。",
+                     "5）P3：絕滅 (MT 死刑) + 武神槍 (隨機直線) + 騰龍槍 (MT 連 2 段扇形)。",
+                     "6）高跳：點名 5 人 → 場邊放陷阱 → 走出；分身武神槍 + 超級跳躍距離衰減。",
+                     "7）腾龍槍 + 絕滅 + 騰龍槍組合 → 注意減傷。",
+                     "8）武神槍 + 高跳組合 x2 → 恨怨之雷全屏 → P4。",
+                     "9）P4：死亡輪迴 (5 段分攤) + 烈焰十字爆 (3 火球十字) + 恐懼咆哮 + 翼/尾循環。"
+                 ],
+    "notes":  "HW 3.3 MSQ trial - 信念終途 (Lv 60)。Nidhogg 附身 Estinien 之戰；4 階段，P3 開始機制密度大幅提升。",
+    "bosses":  [
+                   {
+                       "name":  "尼德霍格",
+                       "nameEn":  "Nidhogg",
+                       "mnemonic":  [
+                                        "P1 翼/尾 → 站肚子下左右橫跳",
+                                        "P2 三 add → MT/ST 各拉一隻順劈",
+                                        "P3 高跳放邊 + 武神槍走位",
+                                        "P4 死亡輪迴必集合 + 火球避十字"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 (100–80%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Crimson Breath 真紅吐息",
+                                                                "type":  "cone",
+                                                                "description":  "對 MT 釋放無讀條扇形範圍攻擊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 朝場邊",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "近戰站側後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Roar 龍嘯",
+                                                                "type":  "raidwide",
+                                                                "description":  "無讀條全屏攻擊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Horrid Roar 恐懼咆哮",
+                                                                "type":  "aoe",
+                                                                "description":  "邪龍腳下出現紋章 → 點名數人腳下 AoE，迅速離開。",
+                                                                "tips":  [
+                                                                             "被點往場邊走",
+                                                                             "看圈走"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cauterize 燃燒之翼 (辣翅)",
+                                                                "type":  "aoe",
+                                                                "description":  "邪龍固定在場中讀條，攻擊兩側翼狀範圍 → 站正前/正後安全。",
+                                                                "tips":  [
+                                                                             "站邪龍頭部或尾部下方",
+                                                                             {
+                                                                                 "text":  "近戰預先移到腹下",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hot Tail 燃燒之尾 (辣尾)",
+                                                                "type":  "aoe",
+                                                                "description":  "向 boss 目標圈前後方向釋放的條狀範圍攻擊。",
+                                                                "tips":  [
+                                                                             "站邪龍兩側 (翼下) 安全",
+                                                                             "與辣翅相反 → 看清讀條"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hot Tail + Horrid Roar 邪炎俯衝組合",
+                                                                "type":  "aoe",
+                                                                "description":  "邪龍上天不可選中，點名數人腳底 AoE，邪龍將俯衝半場；快找龍出現位置跑開。",
+                                                                "tips":  [
+                                                                             "看天空陰影預判龍出現方向",
+                                                                             {
+                                                                                 "text":  "T 帶隊跑到對側",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Touchdown 空降",
+                                                                "type":  "raidwide",
+                                                                "description":  "邪龍降落場中央，一次全屏攻擊；隨後上天召喚眷屬進 P2。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補 + 補盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - Adds 階段",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Shadow Hroptyr 暗影布羅賓雅克 (MT 9 點)",
+                                                                "type":  "add",
+                                                                "description":  "MT 拉 9 點方向；順劈攻擊 → 必須面外。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 拉到場邊面外",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "DPS 集火 9 點 add",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shadow Faflog 暗影法拉克 (ST 3 點)",
+                                                                "type":  "add",
+                                                                "description":  "ST 開盾拉 3 點方向；順劈攻擊 → 必須面外；ST 須開減傷接傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "ST 開盾 / 鋼鐵 + 朝外",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shadow Ferreous Drake 暗影變種龍 (中央)",
+                                                                "type":  "add",
+                                                                "description":  "不需要拉仇恨；交替使用撕裂利爪 (正面順劈) 與火球 (對最遠玩家圓形 AoE)；都可躲避。",
+                                                                "tips":  [
+                                                                             "看動作躲避",
+                                                                             {
+                                                                                 "text":  "DPS 處理 9/3 點兩隻後再清變種龍",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Song of Extinction 滅絕之詩",
+                                                                "type":  "raidwide",
+                                                                "description":  "三隻全擊殺後邪龍轉場使用，高傷害全屏攻擊 → 進入 P3。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員集合補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P3 (50–25%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Akh Morn 絕滅",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 MT 高傷害單體攻擊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 必開大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Geirskogul 武神槍",
+                                                                "type":  "aoe",
+                                                                "description":  "隨機選中一名玩家，向其當前位置釋放條狀範圍攻擊。",
+                                                                "tips":  [
+                                                                             "被點立即移動 → 把線拉到邊",
+                                                                             "其他人遠離被點玩家當前位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Charge 騰龍槍",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 MT 無讀條小範圍扇形攻擊；第一次連續釋放兩次。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷 + 補連續補療",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "面外避免噴隊伍",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Spineshatter Dive 高跳",
+                                                                "type":  "aoe",
+                                                                "description":  "邪龍上天，點名 5 人釋放圓形 AoE 附帶陷阱區域；被點者前往場邊放置後迅速走出。",
+                                                                "tips":  [
+                                                                             "被點往場邊邊角放",
+                                                                             "放後立即走出陷阱"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Geirskogul + Hyper Dive 分身武神槍 + 超級跳躍",
+                                                                "type":  "aoe",
+                                                                "description":  "分身在場邊釋放條狀 AoE，邪龍隨機在一名玩家位置釋放距離衰減傷害。",
+                                                                "tips":  [
+                                                                             "看條狀方向移動",
+                                                                             "找最遠位置避免衰減傷害"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Charge 連續 (騰龍槍 + 絕滅 + 騰龍槍)",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 拉邪龍回中央後 boss 釋放騰龍槍+絕滅+騰龍槍組合，注意減傷與回復。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開所有大減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "補連續主動補療",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wrath of Heaven 恨怨之雷",
+                                                                "type":  "raidwide",
+                                                                "description":  "邪龍上天，發動全屏傷害 → 進入 P4。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補 + 大盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P4 (25–0%)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Hot Tail + Horrid Roar 開場組合",
+                                                                "type":  "aoe",
+                                                                "description":  "開場邪炎俯衝 + 恐懼咆哮；離開腳下陷阱並回避俯衝。",
+                                                                "tips":  [
+                                                                             "看天空找龍出現位置",
+                                                                             "離開腳下圈"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Touchdown 空降",
+                                                                "type":  "raidwide",
+                                                                "description":  "邪龍落地造成一次全屏攻擊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補大團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Death Sentence 死亡輪迴",
+                                                                "type":  "stack",
+                                                                "description":  "隨機點名一位玩家釋放可分攤圓形範圍攻擊；第一次 4 段，之後 5 段。",
+                                                                "tips":  [
+                                                                             "全員集合分攤",
+                                                                             {
+                                                                                 "text":  "減傷有什麼交什麼",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "補極限補療",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Flaming Cross 烈焰十字爆 (十字火/炸彈)",
+                                                                "type":  "aoe",
+                                                                "description":  "場地隨機刷新三顆火球，數秒後爆炸造成大範圍十字形 AoE。",
+                                                                "tips":  [
+                                                                             "預判十字線方向 → 站非十字格",
+                                                                             "與恐懼咆哮腳底 AoE 一起時要靈性走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cauterize / Hot Tail 循環",
+                                                                "type":  "aoe",
+                                                                "description":  "邪龍交替使用燃燒之翼 (翼) 與燃燒之尾 (尾)，在肚子下左右橫跳即可。",
+                                                                "tips":  [
+                                                                             "站肚子下，看讀條左右切換"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

@@ -1,93 +1,117 @@
 {
-    "id": "bowl_of_embers",
-    "name": "火光之碗 - 伊弗利特",
-    "nameEn": "The Bowl of Embers - Ifrit",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 22,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）烈焰焚燒：MT 正前方扇形 AoE，無讀條 → MT 朝外站，隊伍待 boss 側後。",
-        "2）地火噴發：點名玩家腳下圓圈 → 被點者拉到場邊離隊。",
-        "3）光輝炎柱：場內多個圓圈 AoE → 看 telegraph 走縫。",
-        "4）火神之楔 → 地獄之火炎：boss 召喚 1 根楔，全員集火打掉；未打掉 = 全屏團滅。",
-        "5）火神爆裂：無預警圓形 + 擊退，回頭往中心拉。"
-    ],
-    "notes": "ARR 2.0 MSQ 蠻神戰 - 伊弗利特討伐戰 (Lv 22)。Ifrit 一階段戰；機制少但 nail 必打。Duty Support 適用 NPC 助手。",
-    "bosses": [
-        {
-            "name": "伊弗利特",
-            "nameEn": "Ifrit",
-            "mnemonic": [
-                "MT 朝外接 Incinerate",
-                "Eruption 被點離隊",
-                "Nail 必打 → 否則 Hellfire 團滅"
-            ],
-            "phases": [
-                {
-                    "name": "Ifrit 主戰",
-                    "mechanics": [
-                        {
-                            "name": "Incinerate 烈焰焚燒",
-                            "type": "cone",
-                            "description": "對 MT 正前方扇形噴火，瞬發無讀條無範圍提示。MT 應將 boss 朝場邊或外側固定。",
-                            "tips": [
-                                { "text": "MT 將 boss 面朝場邊，隊伍不要站正前方", "role": "tank" },
-                                { "text": "近戰 DPS 站側後不會吃到", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Vulcan Burst 火神爆裂",
-                            "type": "knockback",
-                            "description": "以 boss 為圓心的無預警圓形 AoE 含擊退，半徑大但可被打到場邊。",
-                            "tips": [
-                                "未到場邊時可忽略，被擊退到邊就走回",
-                                { "text": "Arm's Length / 抗擊退技能可免位移", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Eruption 地火噴發",
-                            "type": "aoe",
-                            "description": "讀條技能；隨機點名玩家腳下顯示紅圈 AoE，數秒後爆炸。",
-                            "tips": [
-                                "看到紅圈立刻離開原地",
-                                "被點者往場邊走避免波及隊友"
-                            ]
-                        },
-                        {
-                            "name": "Radiant Plume 光輝炎柱",
-                            "type": "aoe",
-                            "description": "讀條技能；場內生成多個圓形範圍 AoE 提示，數秒後爆發火柱。",
-                            "tips": [
-                                "確認所有紅圈位置後走縫隙",
-                                "中央處安全機率較高"
-                            ]
-                        },
-                        {
-                            "name": "Infernal Nail 火神之楔",
-                            "type": "add",
-                            "description": "Boss 在場內中央召喚 1 根火神之楔，全員需集火盡速打掉。若長時間未擊殺，隨後的 Hellfire 會強制團滅。",
-                            "tips": [
-                                { "text": "立刻切目標打 nail，輸出全爆", "role": "dps" },
-                                { "text": "T 與補同步打 nail，AoE 範圍打也行", "role": "tank" },
-                                { "text": "保留爆發給 nail 而非 boss", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Hellfire 地獄之火炎",
-                            "type": "raidwide",
-                            "description": "固定在 nail 召喚後使用的全屏 AoE。若 nail 未被打掉 = 強制團滅；打掉則僅承受全屏傷害。",
-                            "tips": [
-                                { "text": "全員減傷 + 大盾", "role": "healer" },
-                                { "text": "Hellfire 前確認補有 MP 補大量血", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "bowl_of_embers",
+    "name":  "火光之碗 - 伊弗利特",
+    "nameEn":  "The Bowl of Embers - Ifrit",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  22,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）烈焰焚燒：MT 正前方扇形 AoE，無讀條 → MT 朝外站，隊伍待 boss 側後。",
+                     "2）地火噴發：點名玩家腳下圓圈 → 被點者拉到場邊離隊。",
+                     "3）光輝炎柱：場內多個圓圈 AoE → 看 telegraph 走縫。",
+                     "4）火神之楔 → 地獄之火炎：boss 召喚 1 根楔，全員集火打掉；未打掉 = 全屏團滅。",
+                     "5）火神爆裂：無預警圓形 + 擊退，回頭往中心拉。"
+                 ],
+    "notes":  "ARR 2.0 MSQ 蠻神戰 - 伊弗利特討伐戰 (Lv 22)。Ifrit 一階段戰；機制少但 nail 必打。Duty Support 適用 NPC 助手。",
+    "bosses":  [
+                   {
+                       "name":  "伊弗利特",
+                       "nameEn":  "Ifrit",
+                       "mnemonic":  [
+                                        "MT 朝外接 Incinerate",
+                                        "Eruption 被點離隊",
+                                        "Nail 必打 → 否則 Hellfire 團滅"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "Ifrit 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Incinerate 烈焰焚燒",
+                                                                "type":  "cone",
+                                                                "description":  "對 MT 正前方扇形噴火，瞬發無讀條無範圍提示。MT 應將 boss 朝場邊或外側固定。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 將 boss 面朝場邊，隊伍不要站正前方",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "近戰 DPS 站側後不會吃到",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vulcan Burst 火神爆裂",
+                                                                "type":  "knockback",
+                                                                "description":  "以 boss 為圓心的無預警圓形 AoE 含擊退，半徑大但可被打到場邊。",
+                                                                "tips":  [
+                                                                             "未到場邊時可忽略，被擊退到邊就走回",
+                                                                             {
+                                                                                 "text":  "Arm\u0027s Length / 抗擊退技能可免位移",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Eruption 地火噴發",
+                                                                "type":  "aoe",
+                                                                "description":  "讀條技能；隨機點名玩家腳下顯示紅圈 AoE，數秒後爆炸。",
+                                                                "tips":  [
+                                                                             "看到紅圈立刻離開原地",
+                                                                             "被點者往場邊走避免波及隊友"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Radiant Plume 光輝炎柱",
+                                                                "type":  "aoe",
+                                                                "description":  "讀條技能；場內生成多個圓形範圍 AoE 提示，數秒後爆發火柱。",
+                                                                "tips":  [
+                                                                             "確認所有紅圈位置後走縫隙",
+                                                                             "中央處安全機率較高"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Infernal Nail 火神之楔",
+                                                                "type":  "add",
+                                                                "description":  "Boss 在場內中央召喚 1 根火神之楔，全員需集火盡速打掉。若長時間未擊殺，隨後的 Hellfire 會強制團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "立刻切目標打 nail，輸出全爆",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "T 與補同步打 nail，AoE 範圍打也行",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "保留爆發給 nail 而非 boss",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hellfire 地獄之火炎",
+                                                                "type":  "raidwide",
+                                                                "description":  "固定在 nail 召喚後使用的全屏 AoE。若 nail 未被打掉 = 強制團滅；打掉則僅承受全屏傷害。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷 + 大盾",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "Hellfire 前確認補有 MP 補大量血",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

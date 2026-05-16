@@ -1,172 +1,213 @@
 {
-    "id": "everkeep",
-    "name": "佐拉加殲滅戰",
-    "nameEn": "Everkeep",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": 690,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）雙鋒合刃：前後方向先後半場 cleave。",
-        "2）弒父之憤火：對 1 仇單體高傷。",
-        "3）民眾的幻影：8 個幻影 + 圓 AoE 爆炸。",
-        "4）利刃尋跡：場角雙牙劍螺旋向中心 + 反向回退。",
-        "5）P2 新曦世紀：場地 4x4 + 外圍生 4 塊外場 + 雙牙劍方形 AoE。",
-        "6）責任之刃：4 連直線分擔。"
-    ],
-    "notes": "DT 7.0 MSQ Trial (Lv 100, ilvl 690)。Zoraal Ja (佐拉加) Normal。DT MSQ 第二個 trial。雙形態：P1 武力鬥技形態 + P2 變身形態 (場地 4x4 + 外圍場地)。場地外圍陷阱踩到 15s 出血。",
-    "bosses": [
-        {
-            "name": "佐拉加",
-            "nameEn": "Zoraal Ja",
-            "mnemonic": [
-                "雙鋒合刃：前後半場順序 cleave。",
-                "民眾的幻影：8 個幻影散開避免互相重疊圓爆。",
-                "利刃尋跡：雙牙劍螺旋向心 → 反向回退。",
-                "P2 4x4 場地 + 外場：注意雙牙劍方塊 AoE。",
-                "場地外圍踩陷阱 = 出血 dot。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - 武力鬥技形態",
-                    "mechanics": [
-                        {
-                            "name": "靈魂超載 / Soul Overflow",
-                            "type": "raidwide",
-                            "description": "全場魔法 AoE + Boss 獲得傷害提高 buff。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "雙鋒合刃 / Two Sides Edge",
-                            "type": "aoe",
-                            "description": "Boss 前後方向先後半場 cleave。",
-                            "tips": ["先閃前 → 移到前；再閃後 → 移到後 (或反序)"]
-                        },
-                        {
-                            "name": "弒父之憤火 / Patricidal Pique",
-                            "type": "tankbuster",
-                            "description": "對 1 仇單體高傷。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "災祸斬 / Calamity's Edge",
-                            "type": "raidwide",
-                            "description": "全屏斬擊 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "民眾的幻影 + 爆炸 / NPC Phantoms",
-                            "type": "aoe",
-                            "description": "場上 8 個民眾幻影 → 各自為心圓 AoE 爆炸 + 受傷加重。",
-                            "tips": ["散開避免多個幻影重疊"]
-                        },
-                        {
-                            "name": "利刃尋跡 / Sword Trail",
-                            "type": "aoe",
-                            "description": "場 4 角雙牙劍 → 多次直線 AoE 螺旋向場中心 → 反向回到 4 角。",
-                            "tips": [
-                                "跟著螺旋方向同向走",
-                                "預判反向回退路徑"
-                            ]
-                        },
-                        {
-                            "name": "靈魂超載 → P2 切換",
-                            "type": "raidwide",
-                            "description": "Boss 到場北 + 全屏 AoE + 擊退 + 擊倒 → 過場 → P2。",
-                            "tips": [
-                                { "text": "減傷 + 預判擊倒", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - 變身形態",
-                    "mechanics": [
-                        {
-                            "name": "回旋懲擊 / Circling Strike",
-                            "type": "aoe",
-                            "description": "目標圈內或外 2 把劍 → 圓/環形 AoE + 受傷加重。",
-                            "tips": ["看 2 劍位置判定貼近 vs 拉遠"]
-                        },
-                        {
-                            "name": "新曦世紀 / Dawn of an Age",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 場地縮成 4x4 + 場地四周生 4 塊外場 (同主場相同)。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" },
-                                "記憶外場位置"
-                            ]
-                        },
-                        {
-                            "name": "無敵刃 / Sword Sacrifice",
-                            "type": "aoe",
-                            "description": "中心或外場隨機區域插下雙牙劍 → 自身為心方形 AoE + 受傷加重。",
-                            "tips": ["閃方形 AoE 位置"]
-                        },
-                        {
-                            "name": "憤恨收割 / Wrath Reaping",
-                            "type": "tankbuster",
-                            "description": "對 2 T 高傷風屬性單體。",
-                            "tips": [
-                                { "text": "兩 T 拉開站位 + 減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "同步 / Sync",
-                            "type": "aoe",
-                            "description": "外場雙牙劍發光 → 對應主場相同位置方形 AoE。",
-                            "tips": ["看外場劍位置 → 找主場安全格"]
-                        },
-                        {
-                            "name": "通路 + 利刃召喚 / Bewitched Sword",
-                            "type": "aoe",
-                            "description": "西北+西南 或 東北+東南外場場邊出 2 把雙牙劍 + boss 連線。沿直線到樞紐 + 從另一樞紐出現 → 1 格寬直線 AoE。",
-                            "tips": ["看連線位置預判 AoE 方向"]
-                        },
-                        {
-                            "name": "自我實現 / Actualization",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 場地還原。",
-                            "tips": [
-                                { "text": "減傷", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "半身殘 / Half Bisection",
-                            "type": "aoe",
-                            "description": "Boss 抬一側手臂發光 → 發光側半場 cleave。",
-                            "tips": ["看光側預判半場"]
-                        },
-                        {
-                            "name": "回旋半身殘 / Circular Half-bisection",
-                            "type": "aoe",
-                            "description": "Boss 抬手臂發光 + 目標圈內/外 2 把劍 → 圓/環形 + 半場 cleave。",
-                            "tips": ["判定圓/環 + 半場兩重機制"]
-                        },
-                        {
-                            "name": "爆炎 / Flames of Ire",
-                            "type": "spread",
-                            "description": "所有玩家圓 AoE 火屬性。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "責任之刃 / Sword of Responsibility",
-                            "type": "stack",
-                            "description": "點隨機玩家 4 連直線分擔 AoE。",
-                            "tips": ["全員疊接 4 連分擔"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "everkeep",
+    "name":  "佐拉加殲滅戰",
+    "nameEn":  "Everkeep",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  690,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）雙鋒合刃：前後方向先後半場 cleave。",
+                     "2）弒父之憤火：對 1 仇單體高傷。",
+                     "3）民眾的幻影：8 個幻影 + 圓 AoE 爆炸。",
+                     "4）利刃尋跡：場角雙牙劍螺旋向中心 + 反向回退。",
+                     "5）P2 新曦世紀：場地 4x4 + 外圍生 4 塊外場 + 雙牙劍方形 AoE。",
+                     "6）責任之刃：4 連直線分擔。"
+                 ],
+    "notes":  "DT 7.0 MSQ Trial (Lv 100, ilvl 690)。Zoraal Ja (佐拉加) Normal。DT MSQ 第二個 trial。雙形態：P1 武力鬥技形態 + P2 變身形態 (場地 4x4 + 外圍場地)。場地外圍陷阱踩到 15s 出血。",
+    "bosses":  [
+                   {
+                       "name":  "佐拉加",
+                       "nameEn":  "Zoraal Ja",
+                       "mnemonic":  [
+                                        "雙鋒合刃：前後半場順序 cleave。",
+                                        "民眾的幻影：8 個幻影散開避免互相重疊圓爆。",
+                                        "利刃尋跡：雙牙劍螺旋向心 → 反向回退。",
+                                        "P2 4x4 場地 + 外場：注意雙牙劍方塊 AoE。",
+                                        "場地外圍踩陷阱 = 出血 dot。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - 武力鬥技形態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "靈魂超載 / Soul Overflow",
+                                                                "type":  "raidwide",
+                                                                "description":  "全場魔法 AoE + Boss 獲得傷害提高 buff。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雙鋒合刃 / Two Sides Edge",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 前後方向先後半場 cleave。",
+                                                                "tips":  [
+                                                                             "先閃前 → 移到前；再閃後 → 移到後 (或反序)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "弒父之憤火 / Patricidal Pique",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇單體高傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "災祸斬 / Calamity\u0027s Edge",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏斬擊 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "民眾的幻影 + 爆炸 / NPC Phantoms",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 8 個民眾幻影 → 各自為心圓 AoE 爆炸 + 受傷加重。",
+                                                                "tips":  [
+                                                                             "散開避免多個幻影重疊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "利刃尋跡 / Sword Trail",
+                                                                "type":  "aoe",
+                                                                "description":  "場 4 角雙牙劍 → 多次直線 AoE 螺旋向場中心 → 反向回到 4 角。",
+                                                                "tips":  [
+                                                                             "跟著螺旋方向同向走",
+                                                                             "預判反向回退路徑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "靈魂超載 → P2 切換",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 到場北 + 全屏 AoE + 擊退 + 擊倒 → 過場 → P2。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 預判擊倒",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - 變身形態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "回旋懲擊 / Circling Strike",
+                                                                "type":  "aoe",
+                                                                "description":  "目標圈內或外 2 把劍 → 圓/環形 AoE + 受傷加重。",
+                                                                "tips":  [
+                                                                             "看 2 劍位置判定貼近 vs 拉遠"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "新曦世紀 / Dawn of an Age",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE + 場地縮成 4x4 + 場地四周生 4 塊外場 (同主場相同)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "記憶外場位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "無敵刃 / Sword Sacrifice",
+                                                                "type":  "aoe",
+                                                                "description":  "中心或外場隨機區域插下雙牙劍 → 自身為心方形 AoE + 受傷加重。",
+                                                                "tips":  [
+                                                                             "閃方形 AoE 位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "憤恨收割 / Wrath Reaping",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 2 T 高傷風屬性單體。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 拉開站位 + 減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "同步 / Sync",
+                                                                "type":  "aoe",
+                                                                "description":  "外場雙牙劍發光 → 對應主場相同位置方形 AoE。",
+                                                                "tips":  [
+                                                                             "看外場劍位置 → 找主場安全格"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "通路 + 利刃召喚 / Bewitched Sword",
+                                                                "type":  "aoe",
+                                                                "description":  "西北+西南 或 東北+東南外場場邊出 2 把雙牙劍 + boss 連線。沿直線到樞紐 + 從另一樞紐出現 → 1 格寬直線 AoE。",
+                                                                "tips":  [
+                                                                             "看連線位置預判 AoE 方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "自我實現 / Actualization",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE + 場地還原。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "半身殘 / Half Bisection",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 抬一側手臂發光 → 發光側半場 cleave。",
+                                                                "tips":  [
+                                                                             "看光側預判半場"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "回旋半身殘 / Circular Half-bisection",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 抬手臂發光 + 目標圈內/外 2 把劍 → 圓/環形 + 半場 cleave。",
+                                                                "tips":  [
+                                                                             "判定圓/環 + 半場兩重機制"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "爆炎 / Flames of Ire",
+                                                                "type":  "spread",
+                                                                "description":  "所有玩家圓 AoE 火屬性。",
+                                                                "tips":  [
+                                                                             "散開 clock 位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "責任之刃 / Sword of Responsibility",
+                                                                "type":  "stack",
+                                                                "description":  "點隨機玩家 4 連直線分擔 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接 4 連分擔"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
