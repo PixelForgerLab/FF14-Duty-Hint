@@ -1,117 +1,47 @@
 {
-    "id":  "sunken_temple_of_qarn_hard",
-    "name":  "卡恩沉沒之廟 (零式)",
-    "nameEn":  "The Sunken Temple of Qarn (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "other",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Damaged Adjudicator：",
-                     "2）B2 Sabotender Emperatriz：Cactguard",
-                     "3）B3 Vicegerent to the Warden：Curse of the Mummy / Mummification"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "場上多重 AoE。",
-                                                                "name":  "AoE 連發",
-                                                                "tips":  [
-                                                                             "閃預警"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster。",
-                                                                "name":  "Tankbuster",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "全屏。",
-                                                                "name":  "全屏 AoE",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Damaged Adjudicator",
-                       "nameEn":  "Damaged Adjudicator",
-                       "mnemonic":  [
-
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "on her and must be killed first.",
-                                                                "name":  "Cactguard",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Sabotender Emperatriz",
-                       "nameEn":  "Sabotender Emperatriz",
-                       "mnemonic":  [
-                                        "Cactguard"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Curse of the Mummy",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Mummification",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Vicegerent to the Warden",
-                       "nameEn":  "Vicegerent to the Warden",
-                       "mnemonic":  [
-                                        "Curse of the Mummy",
-                                        "Mummification"
-                                    ]
-                   }
-               ]
+    "id": "sunken_temple_of_qarn_hard",
+    "name": "卡恩沉沒神殿 (高難度)",
+    "nameEn": "Sunken Temple of Qarn (Hard)",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Damaged Adjudicator = 機械 cone + 雷射 + 召小機甲。",
+        "2）B2 Sabotender Emperatriz = 仙人掌女王 + 100,000 Needles + 召小仙人掌 + 散標。",
+        "3）B3 Vicegerent to the Warden = 守門人 + 多 cleave + 凝視 + 全屏。"
+    ],
+    "notes": "ARR 2.5 dungeon (Lv 50)。Qarn 古代神殿水底版。",
+    "bosses": [
+        {
+            "name": "Damaged Adjudicator",
+            "nameEn": "Damaged Adjudicator",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Magitek Cone", "type": "aoe", "description": "Boss 機械 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Laser Beam", "type": "aoe", "description": "Boss line 雷射 AoE。", "tips": ["側步閃"] },
+                { "name": "Summon Mecha", "type": "other", "description": "召小機甲 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Sabotender Emperatriz",
+            "nameEn": "Sabotender Emperatriz",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "100,000 Needles", "type": "tankbuster", "description": "MT 高傷 buster + 大量針刺。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Summon Cactus add", "type": "other", "description": "召小仙人掌 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Spike Spread", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            ]}]
+        },
+        {
+            "name": "Vicegerent to the Warden",
+            "nameEn": "Vicegerent to the Warden",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Multi Cleave", "type": "aoe", "description": "Boss 多 cleave AoE 連發。", "tips": ["看朝向 → 移位"] },
+                { "name": "Death Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Aether Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

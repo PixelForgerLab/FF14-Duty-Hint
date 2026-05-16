@@ -1,6 +1,6 @@
 {
     "id": "final_steps_of_faith",
-    "name": "信仰的終末",
+    "name": "信念終途",
     "nameEn": "The Final Steps of Faith",
     "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "trial",
@@ -8,41 +8,27 @@
     "iLvlSync": null,
     "jobLevelSync": 60,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）P1 龍形：Hot Wing/Hot Tail 翼/尾線；玩家腳下出洞要散開，boss 飛走後跟著光跑避火痕。",
-        "2）P2 Adds DPS check：中間 add 隨機 cleave 不可坦；兩翼 adds 拉外側避免 cone 命中玩家。",
-        "3）P3 人形：Akh Morn tankbuster 分擔；Geirskogul 直線跨場；隕石散開到場邊。",
-        "4）P4 Estinien 重組機制 + Final Steps 限時 DPS race。"
+        "1）Nidhogg = Akh Morn 多 hit stack + Cauterize 衝鋒。",
+        "2）Hot Tail 後 cone + Hot Wing 前 cone。",
+        "3）Geirskogul line + 召分身。",
+        "4）Spineshatter Dive 跳擊 + 全屏。",
+        "5）末段 Final Chorus 大全屏。"
     ],
-    "notes": "HW 3.0 MSQ 終戰 trial Lv 60。Nidhogg 4-phase 戰，HW 主線終 boss。資料來源：CGW (The Final Steps of Faith)。",
+    "notes": "HW 3.0 MSQ 最終 trial (Lv 60)。尼德霍格 vs 阿爾貝里克。",
     "bosses": [
         {
-            "name": "Nidhogg 尼德霍格",
+            "name": "尼德霍格",
             "nameEn": "Nidhogg",
-            "mnemonic": ["P1 龍 + 火痕", "P2 Adds DPS", "P3 Akh Morn / Geirskogul", "P4 Estinien"],
-            "phases": [
-                { "name": "P1 龍形", "mechanics": [
-                    { "name": "Hot Wing 灼翼", "type": "aoe", "description": "雙翼下兩條直線 AoE。", "tips": ["閃 boss 兩側"] },
-                    { "name": "Hot Tail 灼尾", "type": "aoe", "description": "沿 boss 朝向的跨場直線 AoE。", "tips": ["閃 boss 前後"] },
-                    { "name": "Deafening Bellow 震耳咆嘯", "type": "raidwide", "description": "全屏約 4k 傷害，後期連放 2 次。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                    { "name": "Hole + Fire Trail 火痕", "type": "aoe", "description": "玩家腳下出洞，boss 飛走後沿軌跡留火痕。", "tips": ["集合中央 → 散開閃洞 → 跟光跑避火痕"] }
-                ]},
-                { "name": "P2 Adds (DPS check)", "mechanics": [
-                    { "name": "Middle Add 中間雜兵", "type": "other", "description": "不可坦的中間 add 隨機 cleave 玩家。", "tips": ["閃前方 telegraph"] },
-                    { "name": "Side Adds 翼 adds", "type": "other", "description": "兩翼 adds 由 tank 拉到場邊，cone 朝外。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] },
-                    { "name": "Transition DPS Race", "type": "raidwide", "description": "限時內未殺光 adds 會 wipe。", "tips": [{ "text": "全力 burst + Limit Break", "role": "dps" }] }
-                ]},
-                { "name": "P3 人形", "mechanics": [
-                    { "name": "Akh Morn 阿克莫恩", "type": "tankbuster", "description": "高傷 tankbuster 可分擔。", "tips": [{ "text": "MT/OT 共擔", "role": "tank" }] },
-                    { "name": "Geirskogul 蓋爾斯戈爾", "type": "aoe", "description": "從 boss 指向隨機玩家的直線 AoE。", "tips": ["閃直線"] },
-                    { "name": "Meteor 隕石散開", "type": "spread", "description": "場上多重圓 AoE。", "tips": ["散開"] }
-                ]},
-                { "name": "P4 Estinien", "mechanics": [
-                    { "name": "機制重組", "type": "other", "description": "前 3 階段機制混合連發。", "tips": ["按順序處理"] },
-                    { "name": "Final Steps DPS Race", "type": "raidwide", "description": "最後階段限時打死。", "tips": [{ "text": "全力 DPS", "role": "dps" }] }
-                ]}
-            ]
+            "phases": [{ "name": "Nidhogg", "mechanics": [
+                { "name": "Akh Morn 多 hit", "type": "stack", "description": "前 2 名連 hit 分擔。", "tips": [{ "text": "雙坦 stack", "role": "tank" }] },
+                { "name": "Cauterize 衝鋒", "type": "aoe", "description": "Boss 飛起 line AoE 衝鋒。", "tips": ["看朝向 → 跑對側"] },
+                { "name": "Hot Tail / Wing", "type": "aoe", "description": "Hot Tail 後 cone / Hot Wing 前 cone。", "tips": ["看招式 → 站側"] },
+                { "name": "Geirskogul line", "type": "aoe", "description": "Boss line AoE 龍槍。", "tips": ["側面"] },
+                { "name": "Spineshatter Dive", "type": "aoe", "description": "Boss 跳擊 + 落地 PBAoE。", "tips": ["跑遠落點"] },
+                { "name": "Final Chorus 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

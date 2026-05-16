@@ -1,118 +1,56 @@
 {
-    "id":  "labyrinth_of_the_ancients",
-    "name":  "古之民迷宮",
-    "nameEn":  "The Labyrinth of the Ancients",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "other",
-    "playerCount":  24,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Bone Dragon：The other four focus on killing Atomos",
-                     "2）B2 Thanatos：Astral Realignment",
-                     "3）B3 King Behemoth：Ecliptic Meteor",
-                     "4）B4 Phlegethon：Ancient Flare / Rescue"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "The other four focus on killing Atomos",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Bone Dragon",
-                       "nameEn":  "Bone Dragon",
-                       "mnemonic":  [
-                                        "The other four focus on killing Atomos"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Astral Realignment",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Thanatos",
-                       "nameEn":  "Thanatos",
-                       "mnemonic":  [
-                                        "Astral Realignment"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Ecliptic Meteor",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "King Behemoth",
-                       "nameEn":  "King Behemoth",
-                       "mnemonic":  [
-                                        "Ecliptic Meteor"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ".",
-                                                                "name":  "Ancient Flare",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "players who may be lagging behind when running to the platform.",
-                                                                "name":  "Rescue",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Phlegethon",
-                       "nameEn":  "Phlegethon",
-                       "mnemonic":  [
-                                        "Ancient Flare",
-                                        "Rescue"
-                                    ]
-                   }
-               ]
+    "id": "labyrinth_of_the_ancients",
+    "name": "古代迷宮",
+    "nameEn": "Labyrinth of the Ancients",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 24,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Bone Dragon = 骨龍 + line AoE + 召骷髏 add。",
+        "2）B2 Thanatos = 死神 + Death Sentence + 凝視。",
+        "3）B3 King Behemoth = 比蒙王 + Ecliptic Meteor 大全屏 + Trumpet 召獸 add。",
+        "4）B4 Phlegethon = 火神 + 大 cone + 召分身。"
+    ],
+    "notes": "ARR 2.1 CT alliance Pt 1 (Lv 50)。Crystal Tower 首戰 - 古代迷宮。",
+    "bosses": [
+        {
+            "name": "Bone Dragon",
+            "nameEn": "Bone Dragon",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Bone Line", "type": "aoe", "description": "Boss line AoE 骨刺。", "tips": ["側面"] },
+                { "name": "Summon Skeleton", "type": "other", "description": "召骷髏 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Death Breath", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Thanatos",
+            "nameEn": "Thanatos",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Death Sentence", "type": "tankbuster", "description": "MT 強 buster + Doom debuff。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Death Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] }
+            ]}]
+        },
+        {
+            "name": "King Behemoth",
+            "nameEn": "King Behemoth",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Trumpet 召獸", "type": "other", "description": "Boss 召獸 add 圍場。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Ecliptic Meteor", "type": "raidwide", "description": "大全屏 + 場上召隕石。", "tips": [{ "text": "全員躲在隕石後", "role": "healer" }] },
+                { "name": "Comet Burst", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            ]}]
+        },
+        {
+            "name": "Phlegethon",
+            "nameEn": "Phlegethon",
+            "phases": [{ "name": "B4", "mechanics": [
+                { "name": "Fire Cone", "type": "aoe", "description": "Boss cone 火 AoE 多方向。", "tips": ["看朝向 → 站側"] },
+                { "name": "Shadow Clones", "type": "other", "description": "召分身 + 同步攻擊。", "tips": ["看本體 + 避分身"] },
+                { "name": "Inferno Burst", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

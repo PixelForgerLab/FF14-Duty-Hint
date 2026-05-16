@@ -1,6 +1,6 @@
 {
     "id": "aac_light-heavyweight_m1",
-    "name": "阿卡狄亞登天鬥技場 輕量級1",
+    "name": "AAC 中量級 M1",
     "nameEn": "AAC Light-heavyweight M1",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "raid",
@@ -8,97 +8,28 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）二連尖甲：左右爪輪發光，依序半場 cleave。",
-        "2）交叉尖甲：周身十字或 X 衝擊波 + 扇形 AoE。",
-        "3）捕鼠：地板被攻擊兩次破裂，跌落即死。",
-        "4）騰身開膛：點名擊飛 + 落點地板破壞。",
-        "5）猫跳尖甲：boss 移到箭頭位置後放半場 AoE。"
+        "1）Black Cat 黑貓 = 衝鋒 line + Cat Cleave 後 cone + 召小貓 add。",
+        "2）Soul Vacuum 中央 PBAoE 跑外。",
+        "3）Aether Spray 場上多 AoE 圈散。",
+        "4）Mighty Roar 全屏。",
+        "5）末段 Final Pounce 跳擊。"
     ],
-    "notes": "DT 7.0 AAC 輕量級 1 Normal (Lv 100)。Black Cat (黑貓) 簡化版機制。Savage 版本詳見 aac_light-heavyweight_m1_savage。",
+    "notes": "DT 7.0 AAC Cruiserweight Normal 1 (Lv 100)。Black Cat 黑貓 boss。",
     "bosses": [
         {
             "name": "黑貓",
             "nameEn": "Black Cat",
-            "mnemonic": [
-                "二連尖甲：看爪光順序閃半場。",
-                "交叉尖甲：看周身衝擊波方向閃扇形。",
-                "捕鼠：地板碎裂跌落，預判紅色提示順序。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "血腥抓撓 / Bloody Scratch",
-                            "type": "raidwide",
-                            "description": "全場物理 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "踩奶 / Biscuit Maker",
-                            "type": "tankbuster",
-                            "description": "對 1 仇單體高傷。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "二連尖甲 / One-two Paw",
-                            "type": "aoe",
-                            "description": "左右爪輪發光，依序左/右半場 + 15s 裂傷 DoT。",
-                            "tips": ["看爪光順序預判半場"]
-                        },
-                        {
-                            "name": "交叉尖甲 / Quadruple Crossing",
-                            "type": "aoe",
-                            "description": "周身十字或 X 字衝擊波 → 對應方向扇形 AoE。",
-                            "tips": ["看衝擊波方向閃扇形"]
-                        },
-                        {
-                            "name": "重爪爆發 / Heavy Claw Burst",
-                            "type": "stack",
-                            "description": "點隨機玩家分擔 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "捕鼠 / Mouser",
-                            "type": "other",
-                            "description": "場上紅色預警 → boss 依序攻擊地板，2 次破裂跌落即死。",
-                            "tips": ["看紅提示順序預判安全格"]
-                        },
-                        {
-                            "name": "騰身開膛 / Elevate and Eviscerate",
-                            "type": "other",
-                            "description": "點名玩家擊飛 + 落點地板破壞。",
-                            "tips": ["被點者預判落點到完整地板"]
-                        },
-                        {
-                            "name": "猫跳二連尖甲 / Leaping One-two Paw",
-                            "type": "aoe",
-                            "description": "場上箭頭連線 → boss 移到該位置後左右爪順序放半場 AoE。",
-                            "tips": ["看箭頭預判新位置 + 看爪光順序"]
-                        },
-                        {
-                            "name": "迅貓急襲 / Sneak Stomp",
-                            "type": "aoe",
-                            "description": "場上多直線衝鋒 + 大圓 AoE + 15s 裂傷 DoT。",
-                            "tips": ["閃直線 + 圓"]
-                        },
-                        {
-                            "name": "猫怪突風 / Cat-monster Surge",
-                            "type": "spread",
-                            "description": "全員散開圓 AoE。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "超暗影 / Overshadow",
-                            "type": "stack",
-                            "description": "點名分擔直線 AoE。",
-                            "tips": ["全員疊接"]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Black Cat", "mechanics": [
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line AoE。", "tips": ["側步閃"] },
+                { "name": "Cat Cleave (後 cone)", "type": "aoe", "description": "Boss 後 cone AoE 尾擺。", "tips": ["站 boss 前或側"] },
+                { "name": "Soul Vacuum", "type": "aoe", "description": "中央 PBAoE → 跑外圈。", "tips": ["跑場邊"] },
+                { "name": "Aether Spray 散", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] },
+                { "name": "Mighty Roar 全屏", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Summon Kitten add", "type": "other", "description": "召小貓 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Final Pounce 末段", "type": "aoe", "description": "末段跳擊 PBAoE + 全屏。", "tips": [{ "text": "跑遠落點 + 全員減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

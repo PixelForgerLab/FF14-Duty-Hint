@@ -1,59 +1,47 @@
 {
     "id": "aery",
-    "name": "天龍王城",
+    "name": "尼德霍格之巢",
     "nameEn": "The Aery",
     "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 55,
+    "jobLevelSync": 60,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）B1 Rangda 蘭達：Electric Cachexis 攻擊所有不在近戰範圍的玩家 → **全員貼近 boss**；Prey debuff 跑到場邊石柱解。",
-        "2）B2 Gyascutus：Inflammable Fumes 場地外圈紅環不可踩；場上煙圈會與 Proximity Pyre/Ashen Ouroboros 同時爆，找安全交集。Body Slam 擊退要靠中央。",
-        "3）B3 Nidhogg 尼德霍格 (6.2 後 Estinien 已移除)：Hot Tail 跨場直線 / Hot Wing 雙翼線；Cauterize boss 飛場外跨場線；50% Massacre 限時殺龍 adds；Sable Price 囚禁玩家要打破。"
+        "1）B1 Rangda = 龍形 + 衝鋒 + 召小龍 add。",
+        "2）B2 Gyascutus = 巨型龍 + 多 cleave + 凝視。",
+        "3）B3 Nidhogg 尼德霍格 = Akh Morn 多 hit + 大 cone + 全屏 + Cauterize 衝鋒。"
     ],
-    "notes": "HW 3.0 MSQ dungeon Lv 55 sync 56。Nidhogg 之巢。資料來源：CGW (The Aery)。",
+    "notes": "HW 3.0 MSQ dungeon (Lv 60)。Nidhogg 龍神之巢 (MSQ 後半重要劇情)。",
     "bosses": [
         {
-            "name": "Rangda 蘭達",
+            "name": "蘭達",
             "nameEn": "Rangda",
-            "mnemonic": ["Electric Cachexis 貼近 boss", "Prey debuff 跑場邊柱", "Leyak adds 速殺"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Electric Cachexis 電擊衰竭", "type": "raidwide", "description": "長詠唱，**攻擊所有不在近戰範圍的玩家**。", "tips": ["全員貼近 boss"] },
-                { "name": "Prey 獵物 debuff", "type": "other", "description": "被標記者跑到場邊高石柱接觸轉移。", "tips": ["立刻跑場邊柱"] },
-                { "name": "Leyak adds", "type": "other", "description": "場上召喚 Leyak 雜兵。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] }
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側步"] },
+                { "name": "Summon Dragonet", "type": "other", "description": "召小龍 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Aether Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Gyascutus 蓋亞斯庫圖斯",
+            "name": "蓋亞斯庫圖斯",
             "nameEn": "Gyascutus",
-            "mnemonic": ["Inflammable Fumes 外圈紅環不踩", "Proximity Pyre 圓 / Ashen Ouroboros 甜甜圈", "Body Slam 站近中央"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Proximity Pyre 近距烈焰", "type": "aoe", "description": "Boss 周圍近距圓 AoE。", "tips": ["遠離 boss"] },
-                { "name": "Ashen Ouroboros 灰燼咬尾", "type": "aoe", "description": "場地邊緣甜甜圈 AoE。", "tips": ["跑到中央"] },
-                { "name": "Inflammable Fumes 易燃煙霧", "type": "other", "description": "場地外圈紅環不可踩；場上有旋轉煙圈起初可踩；boss 接著放 Ouroboros 或 Pyre 時煙圈同步爆。", "tips": ["找煙圈外 + boss 攻擊外的安全交集"] },
-                { "name": "Crippling Blow 殘廢一擊", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Deafening Bellow 震耳咆嘯", "type": "raidwide", "description": "全屏無法迴避。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Body Slam 身體撞擊", "type": "knockback", "description": "從中央把所有玩家擊退。", "tips": ["站近中央或 Arm's Length"] }
+                { "name": "Multi Cleave", "type": "aoe", "description": "Boss 多 cleave AoE 連發。", "tips": ["看朝向 → 移位"] },
+                { "name": "Death Gaze", "type": "other", "description": "凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Dragon Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Nidhogg 尼德霍格",
+            "name": "尼德霍格",
             "nameEn": "Nidhogg",
-            "mnemonic": ["Hot Tail 跨場直線 / Hot Wing 雙翼線", "Cauterize boss 飛場外 + 直線", "Massacre 限時殺龍 adds"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Deafening Bellow", "type": "raidwide", "description": "全屏無法迴避。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Hot Tail 灼熱之尾", "type": "aoe", "description": "沿 Nidhogg 朝向的直線跨場 AoE。", "tips": ["閃 boss 前後直線"] },
-                { "name": "Hot Wing 灼熱之翼", "type": "aoe", "description": "雙翼下兩條直線 AoE。", "tips": ["閃 boss 兩側"] },
-                { "name": "Eyeball Markers 眼球標記", "type": "spread", "description": "Hot Tail/Wing 有時會在玩家腳下出眼球圓 AoE。", "tips": ["跑出圓"] },
-                { "name": "Cauterize 灼燒", "type": "aoe", "description": "Nidhogg 飛離場地放跨場直線。", "tips": ["閃直線"] },
-                { "name": "Horrid Roar 恐怖咆嘯", "type": "spread", "description": "Cauterize 同時在玩家腳下標記圓 AoE。", "tips": ["全員散開"] },
-                { "name": "The Scarlet Price 緋紅代價", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "The Sable Price 黑貂代價", "type": "other", "description": "隨機玩家被囚禁；Sable Weave 詠唱時要打掉囚牢。", "tips": [{ "text": "DPS 立刻打囚牢", "role": "dps" }] },
-                { "name": "Massacre 大屠殺 (50%)", "type": "other", "description": "Nidhogg 飛離場地召多隻龍 adds，Rancor 條 100% 全滅。", "tips": [{ "text": "全力擊殺 adds", "role": "dps" }] },
-                { "name": "Horrid Blaze 恐怖烈焰", "type": "stack", "description": "Massacre 後的疊接標記。", "tips": ["全員疊接"] }
+                { "name": "Akh Morn 多 hit", "type": "stack", "description": "前 2 名連 hit 分擔。", "tips": [{ "text": "雙坦 stack", "role": "tank" }] },
+                { "name": "Dragon Cone", "type": "aoe", "description": "Boss 大 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Cauterize 衝鋒", "type": "aoe", "description": "Boss 飛起 line AoE 衝鋒。", "tips": ["看朝向 → 跑對側"] },
+                { "name": "Dragon Roar", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
             ]}]
         }
     ]
