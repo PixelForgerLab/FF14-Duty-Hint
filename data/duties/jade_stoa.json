@@ -1,78 +1,219 @@
 {
-    "id":  "jade_stoa",
-    "name":  "翡翠之亭",
-    "nameEn":  "The Jade Stoa",
-    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  70,
-    "highEnd":  false,
-    "quality":  "good",
-    "mnemonic":  [
-                     "1）Byakko = Storm Pulse 全屏 + Sweep cone。",
-                     "2）Distant Clap 場上 line + 召虎影。",
-                     "3）Heavenly Strike 圈 AoE 跑外 + Hundredfold Havoc 多 AoE。",
-                     "4）Fire and Lightning 凝視 + 大全屏。"
-                 ],
-    "notes":  "SB 4.2 trial (Lv 70)。Byakko 白虎。",
-    "bosses":  [
-                   {
-                       "name":  "白虎",
-                       "nameEn":  "Byakko",
-                       "phases":  [
-                                      {
-                                          "name":  "Byakko",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Storm Pulse 風暴脈動",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 + 風傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Sweep 橫掃",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT cone buster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Distant Clap + 虎影",
-                                                                "type":  "aoe",
-                                                                "description":  "場上 line AoE + 召虎影分身。",
-                                                                "tips":  [
-                                                                             "走縫避線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Heavenly Strike 圈",
-                                                                "type":  "aoe",
-                                                                "description":  "中央 PBAoE → 跑外。",
-                                                                "tips":  [
-                                                                             "跑場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Fire and Lightning 凝視",
-                                                                "type":  "other",
-                                                                "description":  "Boss 凝視 → 背對。",
-                                                                "tips":  [
-                                                                             "背對 boss"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "jade_stoa",
+    "name": "翡翠之亭 - 白虎",
+    "nameEn": "The Jade Stoa - Byakko",
+    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）風雷波動全屏 + 天雷掌 MT 死刑 + 咒縛雷拘束 + 乾坤一擲砸場分攤。",
+        "2）無間地獄：紅球場中緩慢移動 → 碰到中招疊受傷加重 → 走縫。",
+        "3）詛咒之風：T/H/D 各 1 人被紅球包裹，互相距離過近 → 圓形作祟全屏 → 三個方向分散。",
+        "4）半獸舞踏：白虎分離出白帝 → 兩本體要分別處理。",
+        "5）荒彈：兩人橙標 → 3 次 AoE + 留黑泥陷阱；鐵爪斬白帝扇形。",
+        "6）雷轟 19.7s：白帝場中讀條，威力隨血量遞減 → 全員集火白帝。",
+        "7）荒魂藍球往白帝移動 → 拦截避免回血。",
+        "8）P2 場邊黃旋風 = 即死；荒彈不斷散落。",
+        "9）P3 百雷繚亂步進圓 + 旋體腳 270° + 爆彈低氣壓 (真空爪重合 → 真空刃全屏)。"
+    ],
+    "notes": "SB 4.2 蠻神 - 白虎詩魂戰 (Lv 70)。Byakko 四聖獸之一；3 階段戰，引入白帝分身與荒魂攔截機制。",
+    "bosses": [
+        {
+            "name": "白虎",
+            "nameEn": "Byakko",
+            "mnemonic": [
+                "詛咒之風 → T/H/D 三方向分散",
+                "雷轟讀條 → 集火白帝壓血",
+                "荒魂藍球攔截避免回血",
+                "P3 真空爪重合 → 真空刃全屏"
+            ],
+            "phases": [
+                {
+                    "name": "P1 (100–60%)",
+                    "mechanics": [
+                        {
+                            "name": "Wind and Lightning 風雷波動",
+                            "type": "raidwide",
+                            "description": "讀條 4s 全屏 AoE 傷害。",
+                            "tips": [
+                                { "text": "補大團補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Heavenly Strike 天雷掌",
+                            "type": "tankbuster",
+                            "description": "讀條 3.7s 對 MT 單體大傷害。",
+                            "tips": [
+                                { "text": "MT 開大減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Sweeping Slash 咒縛雷 + 乾坤一擲",
+                            "type": "stack",
+                            "description": "讀條對 MT 釋放緊握 + 眩暈 + 拘束；然後讀條 4.7s 將被拘束玩家砸向南或北端造成分攤 + 物理受傷加重 10s。",
+                            "tips": [
+                                "全員集合分攤砸落點",
+                                { "text": "MT 解除拘束後接 ST swap", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Infernal Hell 無間地獄",
+                            "type": "aoe",
+                            "description": "Boss 前往場中央連續釋放緩慢移動的紅色球體 → 碰到造成小 AoE 轟擊 + 90s 受傷加重。",
+                            "tips": [
+                                "走球縫，看球軌跡走位",
+                                "避免疊層"
+                            ]
+                        },
+                        {
+                            "name": "Storm Pulse 詛咒之風",
+                            "type": "mechanic",
+                            "description": "點名 1 T + 1 H + 1 DPS 各 1 名，被紅球包裹 + 10s 妖風 debuff；距離過近 → 圓形作祟全屏大傷害。",
+                            "tips": [
+                                "三人分三方向遠離彼此 (15m+)",
+                                { "text": "確認 debuff 後立即分散", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Levin Flash 雷火一閃",
+                            "type": "aoe",
+                            "description": "讀條 3.7s 直線 AoE。",
+                            "tips": [
+                                "走側避線"
+                            ]
+                        },
+                        {
+                            "name": "Half-beast Dance 半獸舞踏",
+                            "type": "add",
+                            "description": "白虎將自己手臂上的老虎分離出來，名為白帝；後續機制由 2 個本體共同產生。",
+                            "tips": [
+                                { "text": "T 拉白虎 + ST 拉白帝", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Wild Bolt 荒彈 / 鐵爪斬",
+                            "type": "aoe",
+                            "description": "白虎點名 2 人橙色標記，連 3 次 AoE 留下黑泥陷阱 (出血 10s)；白帝對其仇恨目標釋放扇形鐵爪斬。",
+                            "tips": [
+                                "被點往場邊邊角拉走",
+                                "避免站黑泥",
+                                { "text": "ST 將白帝朝外避免扇形掃到隊伍", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Distant Thunder 遠雷",
+                            "type": "aoe",
+                            "description": "白虎讀條 4.7s 釋放環形 AoE + 15s 麻痺。",
+                            "tips": [
+                                "貼近白虎站圓心安全",
+                                "麻痺中招 → 補 Esuna"
+                            ]
+                        },
+                        {
+                            "name": "Byakko Rush 白帝沖",
+                            "type": "raidwide",
+                            "description": "白帝原地跳起 → 點名 MT 藍色倒三角標記 → 全屏距離衰減傷害。",
+                            "tips": [
+                                "全員拉到白帝對側遠離",
+                                { "text": "MT 跟著白帝跑當誘餌", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Thunder Boom 雷轟",
+                            "type": "raidwide",
+                            "description": "讀條 19.7s 白虎跳走；白帝前往場地中央讀條全屏，威力隨白帝體力遞減；場邊出現荒魂藍球向白帝移動，碰到回血；玩家拦截 → 受小 AoE 轟擊 + 4s 物理伤害降低。",
+                            "tips": [
+                                { "text": "DPS 集火白帝壓血", "role": "dps" },
+                                { "text": "T 拦截荒魂避免回血", "role": "tank" },
+                                "雷轟前全員減傷"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 (60–30%)",
+                    "mechanics": [
+                        {
+                            "name": "Yellow Cyclone 場邊黃旋風",
+                            "type": "mechanic",
+                            "description": "場邊黃色旋風碰到直接死亡；boss 不斷釋放荒彈附加受傷加重。",
+                            "tips": [
+                                "全員待中央",
+                                "走位避開荒彈"
+                            ]
+                        },
+                        {
+                            "name": "Rotor Kick 旋體腳",
+                            "type": "aoe",
+                            "description": "白虎在場中釋放環形 AoE。",
+                            "tips": [
+                                "離 boss 8m+ 站邊圓"
+                            ]
+                        },
+                        {
+                            "name": "Byakko Descent 白帝降臨",
+                            "type": "knockback",
+                            "description": "白帝在場邊釋放直線 AoE + 擊退命中玩家。",
+                            "tips": [
+                                "看白帝位置 → 站側",
+                                "Arm's Length 可免擊退"
+                            ]
+                        },
+                        {
+                            "name": "Lightning Storm 迅雷風烈波",
+                            "type": "raidwide",
+                            "description": "白帝落地後釋放全屏大 AoE。",
+                            "tips": [
+                                { "text": "補大團補 + 補盾", "role": "healer" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 (30–0%)",
+                    "mechanics": [
+                        {
+                            "name": "Crashing Thunder 百雷繚亂",
+                            "type": "aoe",
+                            "description": "讀條 4.7s 場中央連線出現兩輪步進式圓形 AoE。",
+                            "tips": [
+                                "看圓圈走縫 → 預判第二輪位置"
+                            ]
+                        },
+                        {
+                            "name": "Rotor Kick 旋體腳 (270°)",
+                            "type": "cone",
+                            "description": "讀條 4.7s 對 boss 前方 270° AoE。",
+                            "tips": [
+                                "站 boss 正後方避免扇形"
+                            ]
+                        },
+                        {
+                            "name": "Pressure 爆彈低氣壓",
+                            "type": "mechanic",
+                            "description": "點名 T+H+D 各 1 名圓形 AoE (暴風) + 留下範圍逐漸擴大的紫色真空爪 AoE；若 AoE 範圍重合 → 消失時對全體真空刃 + 90s 受傷加重。",
+                            "tips": [
+                                "三人遠離分散",
+                                "真空爪預兆位置記憶，避免下次踩",
+                                { "text": "真空刃重合 → 補極限治療", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Thunder Boom 雷轟 (P3)",
+                            "type": "raidwide",
+                            "description": "白帝在場中央讀條 19.7s 全屏超大傷害；威力隨白帝體力遞減 + 8s 擊倒。",
+                            "tips": [
+                                { "text": "DPS 集火白帝壓血", "role": "dps" },
+                                { "text": "全員減傷 + 補療", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "id": "minstrels_ballad_tsukuyomis_pain",
-    "name": "月夜見討滅絕境戰",
-    "nameEn": "The Minstrel's Ballad: Tsukuyomi's Pain",
+    "name": "月夜見討滅絕境戰 - 月夜見",
+    "nameEn": "The Minstrel's Ballad: Tsukuyomi's Pain - Tsukuyomi",
     "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
     "type": "trial",
     "playerCount": 8,
@@ -10,24 +10,103 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Tsukuyomi EX = Moonset 連 + Dark Crescent 連段 + 多元素機制。",
-        "2）Veil of the Moon 連分身 + Lunar Dynamo 連 PBAoE。",
-        "3）Reflection 鏡子反射 + 凝視多段。",
-        "4）末段 Eclipse + 連 line AoE。"
+        "1）月夜見 = Yotsuyu 變身月夜女神；Tsukuyomi EX。",
+        "2）Veil of the Wraith 鬼影之紗：點名 1 人 → 與 Yotsuyu 同顯示分身 → 全員背對。",
+        "3）Dark Blade 暗影劍：直線 AoE → 看劍位走縫。",
+        "4）Moonsault 月翻：MT 死刑單體 buster。",
+        "5）Sairou 西樓 + Banishing Lance：場上多 AoE 連環。",
+        "6）Suijin 水神：擊退全屏 + 場邊水流 → Arm's Length 抗。",
+        "7）Banish 放逐：可分攤大 AoE → 全員集合。",
+        "8）Moonlight 月光：gaze 凝視 → 背對 boss + 月光圈不要踩。",
+        "9）Lunar Adds 月之 add：召喚月之 add (Foes of the Moon) → 速殺避免月燭點亮。",
+        "10）Final Phase: 8 Lunar Adds + Despair → enrage 處理。"
     ],
-    "notes": "SB 4.3 Tsukuyomi EX (Lv 70)。MSQ Tsukuyomi 強化絕境戰。",
+    "notes": "SB 4.3 MSQ Extreme - 月夜見討滅絕境戰 (Lv 70, ilvl 360)。Tsukuyomi EX；Yotsuyu 變身月之女神，gaze + 分身 + 月光圈為招牌。",
     "bosses": [
         {
             "name": "月夜見",
             "nameEn": "Tsukuyomi",
-            "phases": [{ "name": "Tsukuyomi EX", "mechanics": [
-                { "name": "Moonset 連", "type": "raidwide", "description": "全屏 + 連發。", "tips": [{ "text": "全員強減傷", "role": "healer" }] },
-                { "name": "Dark Crescent 連", "type": "tankbuster", "description": "雙坦 cone 連 buster。", "tips": [{ "text": "雙坦換手", "role": "tank" }] },
-                { "name": "Veil of the Moon 連分身", "type": "other", "description": "場上連分身 + line。", "tips": ["看本體 + 走縫"] },
-                { "name": "Lunar Dynamo 連", "type": "aoe", "description": "中央 PBAoE 連發。", "tips": ["跑場邊"] },
-                { "name": "Reflection 鏡子", "type": "other", "description": "鏡子反射攻擊 + 連凝視。", "tips": ["看鏡 + 背對"] },
-                { "name": "Eclipse 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Veil of Wraith = 分身 → 背對",
+                "Moonlight = gaze → 背對",
+                "Lunar Adds 速殺避免月燭",
+                "8 add 階段 + Despair = enrage"
+            ],
+            "phases": [
+                {
+                    "name": "Tsukuyomi EX 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Moonsault 月翻",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體死刑 buster。",
+                            "tips": [
+                                { "text": "MT 大減傷 + ST swap", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Veil of the Wraith 鬼影之紗 (分身)",
+                            "type": "mechanic",
+                            "description": "點名 1 人與 Tsukuyomi 同顯示分身 → 全員背對 boss + 分身。",
+                            "tips": [
+                                "看連線點名 → 背向旋轉",
+                                { "text": "補 Esuna 解石化", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Dark Blade 暗影劍",
+                            "type": "aoe",
+                            "description": "直線 AoE → 看劍位走縫。",
+                            "tips": [
+                                "預判劍劃方向"
+                            ]
+                        },
+                        {
+                            "name": "Suijin 水神 (擊退)",
+                            "type": "knockback",
+                            "description": "全屏擊退 + 場邊水流；不抗擊退 → 被吹下。",
+                            "tips": [
+                                "Arm's Length 必開",
+                                "貼中央吃最短"
+                            ]
+                        },
+                        {
+                            "name": "Banish 放逐",
+                            "type": "stack",
+                            "description": "點名分攤大 AoE → 全員集合分攤。",
+                            "tips": [
+                                "全員集合分攤"
+                            ]
+                        },
+                        {
+                            "name": "Moonlight 月光 (gaze)",
+                            "type": "gaze",
+                            "description": "Boss 凝視 → 全員背對 boss；場上月光圈 → 不要踩。",
+                            "tips": [
+                                "看到讀條按相機背對",
+                                "走縫避月光圈"
+                            ]
+                        },
+                        {
+                            "name": "Lunar Adds 月之 adds",
+                            "type": "add",
+                            "description": "Boss 召喚 Foes of the Moon → 必須速殺；未殺 → 月燭點亮 → 場上 AoE 增加。",
+                            "tips": [
+                                { "text": "DPS 速殺月之 add", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Final Phase: 8 Lunar Adds + Despair",
+                            "type": "raidwide",
+                            "description": "Final phase 召喚 8 Lunar adds + 釋放 Despair 全屏 → enrage。",
+                            "tips": [
+                                { "text": "全員爆發殺 add + boss", "role": "dps" },
+                                { "text": "補極限治療", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

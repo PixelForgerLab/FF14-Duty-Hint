@@ -1,7 +1,7 @@
 {
     "id": "minstrels_ballad_shinryus_domain",
-    "name": "神龍領域絕境戰",
-    "nameEn": "The Minstrel's Ballad: Shinryu's Domain",
+    "name": "神龍領域絕境戰 - 神龍",
+    "nameEn": "The Minstrel's Ballad: Shinryu's Domain - Shinryu",
     "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
     "type": "trial",
     "playerCount": 8,
@@ -10,24 +10,303 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Shinryu EX = Tail Smash 強化 + Sliver of Aether 大量分身。",
-        "2）Tidal Wave 連擊退 + Diamond Dust 連冰 AoE。",
-        "3）Akh Morn 強化多 hit + Wings of Salvation 連凝視。",
-        "4）末段 Levinbolt + Megaflare 強壓。"
+        "1）P1 場地 9 宮格；特定攻擊損壞小塊場地 → 中心壞 = 全壞。",
+        "2）4 目標：神龍 / 神龍的核心 / 左翼 / 右翼；核心持續恢復血量 → 必殺；殺核心對神龍造大量傷害。",
+        "3）烈焰鏈：2T、2N、兩組 2D 連線 → 各自扯斷避免持續傷害。",
+        "4）巨浪 + 5 水圈 (火耐 + 雷耐 -)；冰柱 (左翼) + 閃電 / 超新星 (右翼) 消除水圈。",
+        "5）大地吐息：扇形點名 1H + 1D；龍尾猛擊：綠色水晶 → 西/東側兩塊相鄰場地破壞。",
+        "6）灵龙連線 → 神龍詛咒；龍腾 = 全屏龍氣。",
+        "7）暗物質 (44%) = 動態演練 → 拘束變緊抱進 P2。",
+        "8）P2 神話決戰 + 空降 + 以太進度槽；光繭距離衰減 + 孵化白金/銀龍。",
+        "9）原恆星 100 槽 = 大幅提升傷害；尾部重擊中間區域額外傷害。",
+        "10）P3 24% 跳神龍背：擊殺左/右翼造成大量傷害；35s 制裁之雷 / 35s 地獄之火炎 = 強制團滅 (左/右翼讀條)。",
+        "11）70s 巨浪讀條 = 強制團滅最終 enrage。"
     ],
-    "notes": "SB 4.05 Shinryu EX (Lv 70)。Shinryu 強化版絕境戰。",
+    "notes": "SB 4.0 Ultimate - 神龍夢幻殲滅戰 (Lv 70, ilvl 365)。Shinryu Ultimate (Lv 70)；3 階段 + 9 宮格場地 + 跳背 mechanic + 71s 巨浪 enrage。",
     "bosses": [
         {
             "name": "神龍",
             "nameEn": "Shinryu",
-            "phases": [{ "name": "Shinryu EX", "mechanics": [
-                { "name": "Tail Smash 強化", "type": "tankbuster", "description": "MT line 連 buster。", "tips": [{ "text": "MT 換手", "role": "tank" }] },
-                { "name": "Sliver of Aether 強化", "type": "other", "description": "召大量分身 + 同步。", "tips": ["看本體 + 避分身"] },
-                { "name": "Tidal Wave 連", "type": "other", "description": "連擊退 + 場上多水灘。", "tips": ["抗擊退 + 避灘"] },
-                { "name": "Diamond Dust 連", "type": "spread", "description": "場上連冰 AoE 圈。", "tips": ["散避連圈"] },
-                { "name": "Akh Morn 強化", "type": "stack", "description": "前 2 名連多 hit 分擔。", "tips": [{ "text": "雙坦 stack", "role": "tank" }] },
-                { "name": "末段 Levinbolt + Megaflare", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "9 宮格場地破壞 → 中心壞 = 全壞",
+                "4 目標：殺核心對 boss 大傷害 (905k normal / 9M echo)",
+                "烈焰鏈分組扯斷",
+                "暗物質 = QTE 過場",
+                "P3 24% 跳背打翼",
+                "70s 巨浪 enrage"
+            ],
+            "phases": [
+                {
+                    "name": "P1 (100–44%)",
+                    "mechanics": [
+                        {
+                            "name": "Field 9 宮格 + 4 目標",
+                            "type": "mechanic",
+                            "description": "場地 9 宮格；特定攻擊損壞小塊場地，中心壞 = 全壞。戰鬥開始時 4 目標：神龍 / 神龍的核心 / 左翼 / 右翼；核心持續恢復血量，每殺一次核心增加最大 HP 1 層。",
+                            "tips": [
+                                "保護中心場地不被破壞",
+                                { "text": "DPS 必殺核心 → 對神龍造成 90261 (normal) / 896843 (echo) 大傷害", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Earthen Fury 大地之怒",
+                            "type": "raidwide",
+                            "description": "Boss 全屏 AoE + 破壞西側和東側兩塊場地 + 隨機 3 塊場地裂紋。",
+                            "tips": [
+                                { "text": "補大團補", "role": "healer" },
+                                "走中央列避免被破壞"
+                            ]
+                        },
+                        {
+                            "name": "Burning Chain 烈焰鏈",
+                            "type": "mechanic",
+                            "description": "2T / 2N / 兩組 2D 相連烈焰鏈；不扯斷則持續傷害 + 灼傷 1 層。",
+                            "tips": [
+                                "各組反方向走扯斷"
+                            ]
+                        },
+                        {
+                            "name": "Tidal Wave 巨浪 + 水圈",
+                            "type": "knockback",
+                            "description": "全屏 AoE + 場邊水柱擊退 + 5 個水圈 (火耐 +、雷耐 -)。",
+                            "tips": [
+                                "靠水柱避擊退",
+                                "選 1-2 水圈準備地獄之火炎"
+                            ]
+                        },
+                        {
+                            "name": "Ice Pillar 召喚冰柱 (左翼)",
+                            "type": "aoe",
+                            "description": "左翼在場地南側召喚 3 根不相鄰冰柱；落地圓形 AoE + 直線突刺擊退 + 60s 減速。",
+                            "tips": [
+                                "離冰柱落點",
+                                "看突刺方向側閃"
+                            ]
+                        },
+                        {
+                            "name": "Lightning 閃電 (右翼)",
+                            "type": "aoe",
+                            "description": "右翼對所有玩家圓形雷 AoE + 感電；消除範圍內水圈。",
+                            "tips": [
+                                "分散避免消除多個水圈"
+                            ]
+                        },
+                        {
+                            "name": "Supernova 超新星 (右翼)",
+                            "type": "stack",
+                            "description": "右翼點名 1 人可分攤圓形火 AoE；消除範圍內水圈。",
+                            "tips": [
+                                "全員集合分攤"
+                            ]
+                        },
+                        {
+                            "name": "Death Sentence 死亡輪迴",
+                            "type": "stack",
+                            "description": "對 MT 釋放可二人分攤的三次圓形 AoE。",
+                            "tips": [
+                                { "text": "ST 靠近 MT 分攤", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Tail Smash 龍尾猛擊",
+                            "type": "aoe",
+                            "description": "隨機玩家頭頂綠色水晶點名 → 龍尾從西或東側對其所在的兩塊相鄰場地發動 AoE → 破壞場地；尾巴可被攻擊（殺尾巴對神龍造成 135k / 1.8M 傷害）。",
+                            "tips": [
+                                "被點往安全格走",
+                                { "text": "DPS 切尾巴打血", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎",
+                            "type": "raidwide",
+                            "description": "火屬性全屏 + 20s 火傷；不持有火耐 + → 90s 受傷加重；消除所有水圈。",
+                            "tips": [
+                                "站水圈內降火傷",
+                                { "text": "補大團補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Judgment Bolt 制裁之雷",
+                            "type": "raidwide",
+                            "description": "雷屬性全屏 + 麻痺 30s；持有雷耐 - → 90s 受傷加重；消除所有水圈。",
+                            "tips": [
+                                "離開水圈避免雷耐疊",
+                                { "text": "補 Esuna 解麻痺", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Earth Breath 大地吐息",
+                            "type": "cone",
+                            "description": "點名 1H + 1D 扇形 AoE + 污泥。",
+                            "tips": [
+                                "被點往場邊朝外"
+                            ]
+                        },
+                        {
+                            "name": "Diamond Dust 鑽石星塵",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 冰面 → 5 個水圈生成。",
+                            "tips": [
+                                "結冰期間少動",
+                                "預判下次水圈位置"
+                            ]
+                        },
+                        {
+                            "name": "Sacred Dragon 灵龍",
+                            "type": "mechanic",
+                            "description": "靈龍連線 1 名玩家附加神龍詛咒；若靈龍回滿所有血量則停止連線 → 龍騰 → 龍氣全屏。",
+                            "tips": [
+                                { "text": "DPS 速殺靈龍 → 避免回滿", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Aether Cyclone 超級氣旋 / 大氣爆發",
+                            "type": "knockback",
+                            "description": "全屏 AoE 場中央小擊退 (超級氣旋) 或 大擊退 (大氣爆發)。",
+                            "tips": [
+                                "Arm's Length 可免擊退"
+                            ]
+                        },
+                        {
+                            "name": "Dark Matter 暗物質 (44%)",
+                            "type": "mechanic",
+                            "description": "神龍對所有玩家附加拘束進入動態演練；成功失去拘束 + 緊抱進入 P2。",
+                            "tips": [
+                                "按提示完成 QTE"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - 神話決戰 (44–25%)",
+                    "mechanics": [
+                        {
+                            "name": "Touchdown 空降 (P2 開場)",
+                            "type": "knockback",
+                            "description": "Boss 場地中心距離衰減 AoE + 遠距離擊飛。",
+                            "tips": [
+                                "貼中央吃最少",
+                                "Arm's Length 可免擊飛"
+                            ]
+                        },
+                        {
+                            "name": "Meteor Impact 隕石衝擊 (光繭)",
+                            "type": "aoe",
+                            "description": "光繭距離衰減 AoE；若兩光繭過近 → 自爆全屏爆炸性孵化；光繭孵化白金龍或銀龍。",
+                            "tips": [
+                                "分散光繭避免重疊",
+                                { "text": "T 拉小龍", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Platinum / Silver Dragon 白金龍 + 銀龍",
+                            "type": "add",
+                            "description": "白金龍：普攻 + 死刑 (MT 高傷)；銀龍：刺尾中毒 + 熾熱彌漫直線 + 火球圓形 + 雙重俯衝直線擊退。",
+                            "tips": [
+                                { "text": "MT 拉白金龍開減傷", "role": "tank" },
+                                { "text": "DPS 速殺銀龍避免持續灼傷", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Protostar 原恆星",
+                            "type": "raidwide",
+                            "description": "全屏 AoE；若以太積蓄量達 100 → 大幅提高傷害。",
+                            "tips": [
+                                { "text": "DPS 推輸出避免槽滿", "role": "dps" },
+                                { "text": "全員減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Tail Slam 尾部重擊",
+                            "type": "knockback",
+                            "description": "Boss 擊退 AoE；中間區域額外傷害。",
+                            "tips": [
+                                "不要站中央"
+                            ]
+                        },
+                        {
+                            "name": "Aether Ray 以太射線",
+                            "type": "aoe",
+                            "description": "左/右翼釋放直線 AoE + 2s 眩暈。",
+                            "tips": [
+                                "看翼方向站側"
+                            ]
+                        },
+                        {
+                            "name": "Breach 破碎",
+                            "type": "mechanic",
+                            "description": "Boss 抽出尾巴 → 身下黑色區域 → 進入 10s 死亡宣告。",
+                            "tips": [
+                                "離開黑色區域"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 (25–0%)",
+                    "mechanics": [
+                        {
+                            "name": "Akh Morn 萬億斬擊",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體暴擊 + 25s 物理受傷加重。",
+                            "tips": [
+                                { "text": "MT 大減傷 + ST swap", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Atomic Ray 原子射線",
+                            "type": "stack",
+                            "description": "對 4 DPS 可分攤圓形 AoE + 魔法受傷加重。",
+                            "tips": [
+                                "DPS 站邊分攤"
+                            ]
+                        },
+                        {
+                            "name": "Blizzard + Supernova + Lightning 翼三連",
+                            "type": "mechanic",
+                            "description": "左翼吹雪全屏 (不動 = 凍結 12s)；右翼超新星分攤 (持冻结 → 傷害減);右翼閃電記錄位置 (持冻结 → 90s 受傷加重)。",
+                            "tips": [
+                                "吹雪期間立刻移動避免凍結",
+                                "超新星集合分攤"
+                            ]
+                        },
+                        {
+                            "name": "Dark Breath 黑暗吐息 / 神龍嘯",
+                            "type": "aoe",
+                            "description": "黑暗吐息扇形 + 神龍嘯環形；都附加 60s 虛弱。",
+                            "tips": [
+                                "看扇/環圖示走位",
+                                { "text": "補 Esuna 解虛弱", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Dragon Back 跳背 (24%)",
+                            "type": "mechanic",
+                            "description": "24% 後場地出現跳到神龍背上的區域 → 玩家直接攻擊左翼和右翼。殺翼對神龍造成 541k / 6.1M 傷害。",
+                            "tips": [
+                                { "text": "DPS 全員跳背打翼", "role": "dps" },
+                                "保留爆發給翼"
+                            ]
+                        },
+                        {
+                            "name": "Tidal Wave 巨浪 (70s enrage)",
+                            "type": "raidwide",
+                            "description": "70s 讀條，擊飛所有玩家強制團滅。",
+                            "tips": [
+                                "DPS check：70s 內必殺"
+                            ]
+                        },
+                        {
+                            "name": "Judgment Bolt / Hellfire 35s enrage (左/右翼)",
+                            "type": "raidwide",
+                            "description": "35s 讀條，左翼制裁之雷或右翼地獄之火炎全屏強制團滅。",
+                            "tips": [
+                                "翼必先擊破"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
