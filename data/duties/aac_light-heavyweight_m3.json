@@ -8,91 +8,99 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Brutal Lariat：跳邊 + 一隻手發光 = 該邊+前 cleave，對側安全。",
-        "2）Murderous Mist：270 度前方錐毒 AoE，繞 Boss 後安全。",
-        "3）Fuses of Fury：短引信先爆、長引信後爆；分別找縫躲。",
-        "4）Doping Draught 後機制升級：Lariat × 2、Fire Spin → Infernal Spin（圓+漸減 + 點 AoE）。"
+        "1）野蠻碎擊：4 連全屏 (打藥後 6 連)。",
+        "2）拳面猛擊：非 1 仇 T 分擔圓。",
+        "3）野蠻碎頸臂：衝場邊舉手 → 前方 + 半場直線 + 輕度腦震盪。",
+        "4）野蠻爆炸：4 塔擊退。",
+        "5）打藥後：碎頸臂連擊 (兩次方向) + 超華麗野蠻旋火 (爆彈雨)。"
     ],
-    "notes": "DT 7.01 AAC 輕量級 3（Lv 100，ilvl 685）。Brute Bomber 暴力炸彈魔。火焰場邊有 Burns DoT。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 AAC 輕量級 3 Normal (Lv 100)。Brute Bomber (野蠻爆彈) 簡化版機制。場地外圍陷阱踩到 15s 火傷。輕度腦震盪二次受擊 = 脑震盪行動受限。",
     "bosses": [
         {
-            "name": "暴力炸彈魔",
+            "name": "野蠻爆彈",
             "nameEn": "Brute Bomber",
-            "mnemonic": ["看手光繞對側", "短引信先 / 長引信後", "Mist 跑 Boss 後"],
+            "mnemonic": [
+                "輕度腦震盪 + 二次同攻擊 = 脑震盪行動受限。",
+                "打藥後機制強化 (4 連 → 6 連 / 半場 → 兩次方向)。",
+                "爆炸塔：4 人各踩 1 塔，無人 = 大爆炸全屏。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Brutal Impact",
+                            "name": "野蠻碎擊 / Brutal Smash",
                             "type": "raidwide",
-                            "description": "4 段全體物理傷（後段變 6 段）。",
-                            "tips": [{ "text": "持續補血 + 減傷", "role": "healer" }]
+                            "description": "4 連全屏物理 AoE (打藥後 6 連)。",
+                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Knuckle Sandwich",
+                            "name": "拳面猛擊 / Knuckle Sandwich",
                             "type": "tankbuster",
-                            "description": "對副坦坦補需與主坦疊。",
-                            "tips": [{ "text": "MT/OT 集中疊", "role": "tank" }]
+                            "description": "非 1 仇 T 2 人分擔圓。",
+                            "tips": [{ "text": "兩 T 站近一起接", "role": "tank" }]
                         },
                         {
-                            "name": "Brutal Lariat",
+                            "name": "野蠻碎頸臂 / Bouts of Brutality",
                             "type": "aoe",
-                            "description": "Boss 跳邊 + 一手發光 = 該側 180 度 + 正面 AoE，再衝對側。",
-                            "tips": ["看手光繞對側", "預判衝鋒"]
-                        },
-                        {
-                            "name": "Murderous Mist",
-                            "type": "aoe",
-                            "description": "前方 270 度毒霧錐 AoE，後方安全。",
-                            "tips": ["跑到 Boss 後方"]
-                        },
-                        {
-                            "name": "Barbarous Barrage",
-                            "type": "stack",
-                            "description": "4 個塔每人踩 1 個 + 擊退。",
+                            "description": "衝場邊 + 轉向 + 舉一側手 → 前方 + 該半場大直線 AoE + 45s 輕度腦震盪 + 15s 持續傷害。",
                             "tips": [
-                                "1 人/塔",
-                                "用抗擊退或位置調整避免被推到火焰"
+                                "看舉手側預判半場",
+                                "**避免重複受擊 = 腦震盪**"
                             ]
                         },
                         {
-                            "name": "Fire Spin",
+                            "name": "致命毒霧 / Lethal Mist",
                             "type": "aoe",
-                            "description": "前方錐 AoE 旋轉 360 度，每個方向只打 1 次。",
-                            "tips": ["第一個爆完進原位安全到結束"]
+                            "description": "前方 + 兩側 270° 範圍魔法 + 21s 中毒 + 60s 受傷加重。",
+                            "tips": ["跑 boss 後方"]
                         },
                         {
-                            "name": "Fuses of Fury",
-                            "type": "aoe",
-                            "description": "場上炸彈：短引信先爆 + 長引信後爆，各放點 AoE。",
-                            "tips": ["先閃短引信", "再閃長引信"]
+                            "name": "野蠻爆炸 / Brutal Blowout",
+                            "type": "other",
+                            "description": "場上 4 座塔 → 踩入小魔法傷 + 中心為起點擊退。無人 = 大爆炸全屏。",
+                            "tips": ["4 人各踩 1 塔"]
                         },
                         {
-                            "name": "Doping Draught + Lariat Combo",
+                            "name": "野蠻旋火 / Brutal Whirl",
                             "type": "aoe",
-                            "description": "Boss 強化後 Lariat 連用 2 次，第二次可同側或對側。",
-                            "tips": ["每次都看手光繞"]
+                            "description": "旋轉扇形 AoE。",
+                            "tips": ["跟著旋轉移動"]
                         },
                         {
-                            "name": "Brutal Burn",
+                            "name": "引線爆彈 / Fuse Field",
+                            "type": "other",
+                            "description": "場上長短引線爆彈怪 → 自爆貼身圓 AoE。",
+                            "tips": ["離開爆彈位置"]
+                        },
+                        {
+                            "name": "打藥 / Steroids",
+                            "type": "other",
+                            "description": "Boss 獲得打藥 buff 強化機制。",
+                            "tips": ["接下來機制強化版"]
+                        },
+                        {
+                            "name": "碎頸臂連擊 / Brutal Combo",
+                            "type": "aoe",
+                            "description": "野蠻碎頸臂強化版：衝場邊後對隨機左右方向再衝 1 次。",
+                            "tips": ["預判第二次方向"]
+                        },
+                        {
+                            "name": "野蠻灼燒 / Brutal Burn",
                             "type": "stack",
-                            "description": "重疊機 AoE。",
-                            "tips": ["全員疊"]
+                            "description": "點 1 人分擔。",
+                            "tips": ["全員疊接"]
                         },
                         {
-                            "name": "Infernal Spin",
+                            "name": "超華麗野蠻旋火 / Brutal Smash Surge",
                             "type": "aoe",
-                            "description": "Fire Spin 升級版：加貼身漸減 + 同心甜甜圈 + 後段 3 組圓 AoE 點名。",
-                            "tips": ["先閃貼身", "進中央安全位", "閃圓 AoE"]
-                        },
-                        {
-                            "name": "Fuses + Lariat Combo / Barrage / Mist 組合",
-                            "type": "aoe",
-                            "description": "炸彈 + 各機制組合。",
-                            "tips": ["分階段解：先閃近端再閃遠端"]
+                            "description": "野蠻旋火基礎 + 向外擴散圓 + 環 AoE 爆彈雨 + 3 次玩家位置圓 AoE。",
+                            "tips": [
+                                "跟著旋轉同時閃爆彈雨",
+                                "散開避免重疊"
+                            ]
                         }
                     ]
                 }

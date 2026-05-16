@@ -8,112 +8,100 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）愛心倒數：被機制打到累計，3 顆就被魅惑暈眩；持續注意頭頂愛心數。",
-        "2）Tempting Twist = 甜甜圈、Honey Beeline = 線（側安全）。",
-        "3）毒階段：Splash of Venom 後 line 加毒球（爆後散開）；Drop of Venom 後 donut 加毒球（爆後疊機）。",
-        "4）Alarm Pheromones：場邊蜂群 → 兩象限被打（對角象限安全）。"
+        "1）甜心旋風 (donut) / 烈風 (前後直線) / 突風 (雙 T 扇形)。",
+        "2）蜂蜂演唱會：爱心槽 3 顆滿 = 痴迷狀態無法行動 6s。",
+        "3）溫柔地愛我：心傷圓 + 炸裂塔 + 心震 + 求愛甜甜的心。",
+        "4）毒液雨 (散開) / 滴落 (分擔) 後接旋風/烈風組合。"
     ],
-    "notes": "DT 7.01 AAC 輕量級 2（Lv 100，ilvl 685）。Honey B. Lovely 蜜糖蜂。愛心累計機制是這 boss 特色。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 AAC 輕量級 2 Normal (Lv 100)。Honey B. Lovely (蜂蜂小甜心) 簡化版機制。場地外圍陷阱踩到 15s 感電。",
     "bosses": [
         {
-            "name": "可愛蜜糖蜂",
+            "name": "蜂蜂小甜心",
             "nameEn": "Honey B. Lovely",
-            "mnemonic": ["看愛心倒數別 3", "Twist=甜甜圈 / Beeline=線", "毒球先閃再散/疊"],
+            "mnemonic": [
+                "甜心旋風 = donut；甜心烈風 = 前後直線；甜心突風 = 雙 T 扇形。",
+                "爱心槽避免疊滿 = 痴迷 + 持續傷害。",
+                "毒液雨 = 散開；毒液滴落 = 分擔。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Call Me Honey",
+                            "name": "甜言蜜語 / Honeyed Speech",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Tempting Twist",
+                            "name": "甜心旋風 / Honey Tornado",
                             "type": "aoe",
-                            "description": "甜甜圈 AoE（旋轉矛指示）。",
-                            "tips": ["貼 Boss 中心"]
+                            "description": "周身環形指針 → donut AoE + 15s 持續傷害。",
+                            "tips": ["貼 boss 站"]
                         },
                         {
-                            "name": "Honey Beeline",
+                            "name": "甜心烈風 / Honey Beeline",
                             "type": "aoe",
-                            "description": "前方線 AoE（旋轉矛指示），側安全。",
-                            "tips": ["跑 Boss 側面"]
+                            "description": "身上立指針 → 前後直線 AoE + 15s 持續傷害。",
+                            "tips": ["往南北側閃"]
                         },
                         {
-                            "name": "Honeyed Breeze",
+                            "name": "甜心突風 / Honey Burst",
                             "type": "tankbuster",
-                            "description": "雙 T 窄錐物理坦補。",
-                            "tips": [{ "text": "MT/OT 分散面對 Boss", "role": "tank" }]
+                            "description": "點名雙 T 30° 扇形高傷。",
+                            "tips": [{ "text": "兩 T 站對側互背", "role": "tank" }]
                         },
                         {
-                            "name": "Honey B. Live + 愛心倒數",
+                            "name": "蜂蜂演唱會 / Bee Stinger Concert",
                             "type": "other",
-                            "description": "頭頂愛心 gauge，被機制打到 +1，3 顆=被魅惑暈眩高傷。",
-                            "tips": ["注意愛心數", "盡量避免任何 AoE", "用補職清理"]
+                            "description": "全屏 AoE + 場地改變 + 全員 3 爱心槽。",
+                            "tips": ["看 boss 變大可愛甜心狀態"]
                         },
                         {
-                            "name": "Love Me Tender",
-                            "type": "spread",
-                            "description": "全員散開標記 + 4 個塔（後續可能更多）。被打到 +1 愛心。",
-                            "tips": ["散開不重疊", "4 人各踩 1 塔"]
+                            "name": "溫柔地愛我 (組合技) / Tender Love",
+                            "type": "other",
+                            "description": "心傷圓 + 炸裂塔 (踩或大爆炸) + 心震圓 + 碎裂甜甜的心 + 九連環 AoE。",
+                            "tips": [
+                                "塔分配 1 人踩",
+                                "閃甜甜的心移動路徑",
+                                "九連環從外向內"
+                            ]
                         },
                         {
-                            "name": "Loveseeker",
-                            "type": "aoe",
-                            "description": "貼身 AoE。",
-                            "tips": ["跑遠"]
-                        },
-                        {
-                            "name": "Love Me Tender (心 + 圓 AoE)",
-                            "type": "aoe",
-                            "description": "Boss 噴愛心 + 場邊愛心 + 多個圓 AoE。",
-                            "tips": ["邊閃心邊閃圓"]
-                        },
-                        {
-                            "name": "Blow Kiss",
-                            "type": "aoe",
-                            "description": "寬前方錐 AoE。",
-                            "tips": ["繞 Boss 後"]
-                        },
-                        {
-                            "name": "Love Me Tender (9 連圓)",
-                            "type": "aoe",
-                            "description": "9 個連續圓 AoE 外圍 + 1 個中央。",
-                            "tips": ["第一個爆完馬上進", "再跟順序跑"]
-                        },
-                        {
-                            "name": "Honey B. Finale",
-                            "type": "raidwide",
-                            "description": "全體傷 + 移除愛心 gauge。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Splash of Venom（毒線）",
-                            "type": "spread",
-                            "description": "Beeline 後留下毒球，爆完散開標記（毒抗下重疊致命）。",
-                            "tips": ["先閃 Beeline + 毒球", "再散開"]
-                        },
-                        {
-                            "name": "Drop of Venom（毒甜甜圈）",
+                            "name": "心病 + 求愛 + 飛吻",
                             "type": "stack",
-                            "description": "Twist 後留毒球，爆完疊機標記（毒抗下重疊致命）。",
-                            "tips": ["先閃 Twist + 毒球", "再回中央疊"]
+                            "description": "心病 2 人分擔 + 求愛貼身圓 + 飛吻前方扇形。",
+                            "tips": [
+                                "心病 4 人分擔",
+                                "求愛跑遠",
+                                "飛吻繞 boss 側"
+                            ]
                         },
                         {
-                            "name": "Alarm Pheromones",
-                            "type": "aoe",
-                            "description": "場邊 Groupbee 蜂群放線 AoE 穿過中央；後續對 2 個象限放（對角象限安全）。",
-                            "tips": ["跑到沒被打的對角"]
+                            "name": "毒液雨 / Venom Rain",
+                            "type": "spread",
+                            "description": "boss 獲蜂蜂劇毒 → 旋風/烈風後散開圓 AoE + 毒耐降低。",
+                            "tips": ["散開 clock 位"]
                         },
                         {
-                            "name": "Heartsies (二輪愛心)",
+                            "name": "毒液滴落 / Venom Pour",
                             "type": "stack",
-                            "description": "2 名玩家疊機，需要 4 人疊不然多扣愛心。",
-                            "tips": ["分 4 人疊每邊"]
+                            "description": "boss 獲蜂蜂劇毒 → 旋風/烈風後分擔圓 AoE + 毒耐降低。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "碎裂 (毒液版) / Shatter",
+                            "type": "aoe",
+                            "description": "Boss 帶劇毒時旋風/烈風後場上散落毒液 → 圓 AoE + 12s 猛毒。",
+                            "tips": ["閃毒液位置"]
+                        },
+                        {
+                            "name": "告警信息素 / Pheromone Trail",
+                            "type": "aoe",
+                            "description": "場周召喚甜甜小蜜蜂 → 依序直線 AoE + 擊退 + 受傷加重。",
+                            "tips": ["不斷移動避開"]
                         }
                     ]
                 }

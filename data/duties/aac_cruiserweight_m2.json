@@ -8,145 +8,73 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Single Style：4 種圖案=4 種機制（炸彈/翼炸彈/箭頭/標靶箭頭）。",
-        "2）沙漠階段：陽光 DoT + 仙人掌圓 AoE + 流沙陷阱（中央或邊角）。",
-        "3）河流階段：Taste of Thunder（在水會大傷散開致死）vs Taste of Fire（必須在水分擔疊機）。",
-        "4）Layer 大雷雨：Highlightning 圓 AoE，跑到另外象限躲，最多 3 段。"
+        "1）色彩狂熱：紅/藍雙槍最近/最遠 4m 圓，吃同色 = 二擊大爆。",
+        "2）雙手塗鴉：左手隨機 (炸彈/翅膀/魔界花/夢魔)，右手限定 → 1 角必安全。",
+        "3）沙漠風景：中暑 dot + 仙人掌爆。",
+        "4）糖糖之魂：4 輪小怪 (亩鼠+羊互強化、索取貓清 LB、羽環鳐連線水毒、炸脖龍秒殺 H)。",
+        "5）河流/雷雲/火山風景：糖糖火炎/閃雷 + 場景特性。"
     ],
-    "notes": "DT 7.2 AAC 中量級 2（Lv 100，ilvl 715）。Sugar Riot 藝術反叛者。畫風水主題。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.2 AAC 中量級 2 Normal (Lv 100)。Sugar Riot (狂熱糖潮) 簡化版。同 Savage 但少組合機制。",
     "bosses": [
         {
-            "name": "藝術反叛者",
+            "name": "狂熱糖潮",
             "nameEn": "Sugar Riot",
-            "mnemonic": ["4 圖案=4 機制", "沙漠 = DoT + 流沙", "河流：雷散開要乾，火疊要濕"],
+            "mnemonic": [
+                "色彩狂熱：高舉打最近、垂下打最遠；同色二擊爆。",
+                "雙手塗鴉 4 種固定模式，找 1 安全角。",
+                "糖糖之魂：亩鼠+羊 10m 內互強化 5 倍，分開。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Mousse Mural",
+                            "name": "慕斯怪大雨 / Mousse Rain",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全體魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Single Style: Paint Bomb",
+                            "name": "色彩狂熱 / Color Riot",
                             "type": "aoe",
-                            "description": "黃圓位置 + 橘繩 = 大圓 AoE。",
-                            "tips": ["遠離黃圓"]
+                            "description": "紅/藍雙槍打最近/最遠 4m 圓 + 同色 debuff 二擊大爆。",
+                            "tips": ["看槍高低 + 顏色，輪流誘導"]
                         },
                         {
-                            "name": "Single Style: Heaven Bomb",
+                            "name": "雙手塗鴉 / Two-handed Painting",
                             "type": "aoe",
-                            "description": "翼炸彈會向前跳半場後爆。",
-                            "tips": ["站到翼炸彈位置（跳之前）"]
+                            "description": "左/右手繪不同圖案 (炸彈/翅膀/魔界花/夢魔)，1 安全角。",
+                            "tips": ["找安全角站"]
                         },
                         {
-                            "name": "Single Style: Sweet Shot",
-                            "type": "aoe",
-                            "description": "場外箭頭線 AoE，找縫。",
-                            "tips": ["找箭頭間隔"]
-                        },
-                        {
-                            "name": "Single Style: Throw-up Target",
-                            "type": "aoe",
-                            "description": "標靶 + 後續箭頭朝標靶射。",
-                            "tips": ["遠離標靶連線"]
-                        },
-                        {
-                            "name": "Pudding Party",
-                            "type": "stack",
-                            "description": "5 段疊機 AoE。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Color Riot",
-                            "type": "tankbuster",
-                            "description": "雙坦圓 AoE 坦補（紅/藍色不影響）。",
-                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "沙漠階段",
-                    "mechanics": [
-                        {
-                            "name": "Layer: 陽光",
+                            "name": "糖心繪景：沙漠 / Desert Painting",
                             "type": "raidwide",
-                            "description": "Sweltering debuff 持續 DoT。",
-                            "tips": [{ "text": "全程持續補血", "role": "healer" }]
+                            "description": "場地變沙漠 + 中暑 dot + 仙人掌爆。",
+                            "tips": [{ "text": "持續補血解中暑", "role": "healer" }]
                         },
                         {
-                            "name": "Layer: 仙人掌",
-                            "type": "aoe",
-                            "description": "場上仙人掌生長後爆圓 AoE。",
-                            "tips": ["看生長位置遠離"]
-                        },
-                        {
-                            "name": "Layer: 流沙",
+                            "name": "糖糖之魂 (小怪戰) / Soul of Soulglaze",
                             "type": "other",
-                            "description": "中央或角落生成流沙漩渦，站太久即死。",
-                            "tips": ["看流沙位置跑到對位"]
+                            "description": "4 輪小怪：亩鼠+羊+索取貓+羽環鳐+炸脖龍。亩鼠+羊 10m 內互強化 5 倍。炸脖龍鎖 H 定身。",
+                            "tips": [
+                                "**亩鼠 + 羊分開拉**",
+                                "**炸脖龍打斷 + 快擊殺**",
+                                { "text": "DPS 集火處理", "role": "dps" }
+                            ]
                         },
                         {
-                            "name": "Mousse Touch-up",
-                            "type": "spread",
-                            "description": "散開標記。",
-                            "tips": ["分散"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Double Style 階段",
-                    "mechanics": [
-                        {
-                            "name": "Paint + Heaven Bomb",
-                            "type": "aoe",
-                            "description": "炸彈 + 翼炸彈組合。",
-                            "tips": ["站翼炸彈位置（跳前）"]
-                        },
-                        {
-                            "name": "Sweet Shot + Paint Bomb",
-                            "type": "aoe",
-                            "description": "箭頭線 + 炸彈組合，跑到沒箭頭也沒炸彈的列。",
-                            "tips": ["找雙重安全列"]
-                        },
-                        {
-                            "name": "Sweet Shot + Heaven Bomb",
-                            "type": "aoe",
-                            "description": "翼炸彈後 + 沒箭頭的列。",
-                            "tips": ["站翼炸彈後 + 沒箭頭列"]
-                        }
-                    ]
-                },
-                {
-                    "name": "河流階段",
-                    "mechanics": [
-                        {
-                            "name": "Sugarscape: 河流",
+                            "name": "糖糖火炎 + 閃雷",
                             "type": "other",
-                            "description": "場地變草地 + 3 條河流 + 3 座橋。站水中：火抗上 + 雷抗下 II。",
-                            "tips": ["記住水位置"]
+                            "description": "火 = 2H 分擔 6m 圓；雷 = 全員散開 6m 圓。",
+                            "tips": ["看左手判定", "雷時 8 人散開"]
                         },
                         {
-                            "name": "Taste of Thunder",
-                            "type": "spread",
-                            "description": "全員散開標記（雷魔法），站水中=大傷。",
-                            "tips": ["站陸地散開"]
-                        },
-                        {
-                            "name": "Taste of Fire",
-                            "type": "stack",
-                            "description": "雙補疊機（火魔法），不站水=大傷。",
-                            "tips": ["全員站水中分擔"]
-                        },
-                        {
-                            "name": "Layer: 雷雨",
-                            "type": "aoe",
-                            "description": "水變不能踩（Dropsy）+ 多個圓 AoE + 大雷雲 Highlightning 即死圓 AoE 3 段。",
-                            "tips": ["離開水", "跟雷雲對位躲"]
+                            "name": "藝術大亂鬥 (Enrage)",
+                            "type": "raidwide",
+                            "description": "全場塗鴉 + 翅膀 + 靶子 + 魔界花 + 夢魔強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

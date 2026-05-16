@@ -8,118 +8,105 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Sidewise Spark：看電方塊在哪側 = 半場 cleave 方向（尾巴指安全側）。",
-        "2）Shadows' Sabbath：分身複製半場 cleave，多個分身需逐一判斷。",
-        "3）大砲 Stampeding Thunder：站「沒被砲掃」的一列，再面對 Threefold/Fourfold/Fivefold Blast。",
-        "4）翅膀階段：Bewitching Flight 5 條線（紫線殘留無傷），逐一爆找縫。",
-        "5）20% 以下：場地剩一列，Wicked Hypercannon 持續疊傷直到擊殺（soft enrage）。"
+        "1）側方電火花：舉手側半場 cleave。",
+        "2）奔雷炮：場北合成大炮 → 5 連 + 1 次破壞場地。",
+        "3）三/四/五重加農炮：boss 前後炮管順序 + 數次狡詭加農炮。",
+        "4）魔女回翔：5 道翅膀雷射直線 + 雷線爆炸 + 雷炸。",
+        "5）獵殺女巫：螺旋大量 AoE。",
+        "6）最終：狡詭聚能加農炮 10 連分擔。"
     ],
-    "notes": "DT 7.01 AAC 輕量級 4（Lv 100，ilvl 685）。Wicked Thunder 雷霆女巫。電擊主題 + 雙翼第二形態。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 AAC 輕量級 4 Normal (Lv 100)。Wicked Thunder (狡雷) 簡化版機制。AAC LHW 終戰。雙形態：先 boss 機制 + 最終階段聚能加農炮分擔。",
     "bosses": [
         {
-            "name": "雷霆女巫",
+            "name": "狡雷",
             "nameEn": "Wicked Thunder",
-            "mnemonic": ["看電方塊側", "尾巴指安全", "翅膀紫線殘留無傷"],
+            "mnemonic": [
+                "宙斯之怒 = 全屏；側方電火花 = 舉手側半場。",
+                "奔雷炮：5 連半場 AoE + 場地破壞。",
+                "三/四/五重加農炮：看炮管順序預判前後。",
+                "魔女回翔：5 道翅膀雷射 + 留雷線爆炸。",
+                "boss < 20% HP 直接跳到最終狡詭聚能加農炮階段。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Wrath of Zeus",
+                            "name": "宙斯之怒 / Wrath of Zeus",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Sidewise Spark",
+                            "name": "側方電火花 / Sidewise Spark",
                             "type": "aoe",
-                            "description": "電方塊一側 = 該半場 cleave。",
-                            "tips": ["看方塊位置或尾巴指向找安全側"]
+                            "description": "Boss 舉手 → 該側半場 AoE + 60s 受傷加重。",
+                            "tips": ["看舉手側預判半場"]
                         },
                         {
-                            "name": "Shadows' Sabbath",
+                            "name": "黑色安息日 / Black Sabbath",
                             "type": "aoe",
-                            "description": "藍環掉下召喚分身放 Sidewise Spark；後續會召喚 4 個基本方向分身連續放 cleave + Boss 自己一次。",
-                            "tips": ["看方塊位置逐一解", "Boss 也要看"]
+                            "description": "場中召喚狡雷幻影 → 放 1 次側方電火花。",
+                            "tips": ["看幻影位置預判"]
                         },
                         {
-                            "name": "Wicked Jolt",
+                            "name": "狡詭搖盪 / Sidewise Spark",
                             "type": "tankbuster",
-                            "description": "線 AoE 魔法坦補。",
-                            "tips": [{ "text": "T 拉遠避免炸到隊友", "role": "tank" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "大砲階段",
-                    "mechanics": [
-                        {
-                            "name": "Stampeding Thunder + 大砲",
-                            "type": "other",
-                            "description": "Boss 跳北邊召喚大砲 + 旋轉指示三列；場地的三列會被打掉。",
-                            "tips": ["跑到沒被照到的那列"]
+                            "description": "對 1 仇高傷直線 AoE。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         },
                         {
-                            "name": "Threefold/Fourfold/Fivefold Blast",
+                            "name": "奔雷炮 / Wicked Bolt",
                             "type": "aoe",
-                            "description": "在剩下的列做 3/4/5 段半場 cleave，標記決定每次 cleave 邊。",
-                            "tips": ["看顏色（藍圓/橘三角）跟著切換邊"]
+                            "description": "Boss 場北合成大炮 → 對隨機左/右 3/4 半場 5 連 → 短暫停歇 1 次破壞場地。",
+                            "tips": ["跑對側 1/4 + 破壞區外"]
                         },
                         {
-                            "name": "Thunderslam / Thunderstorm",
-                            "type": "spread",
-                            "description": "Fivefold 後接圓 AoE 點名或散開（雷抗下重疊致命）。",
-                            "tips": ["散開不重疊"]
-                        }
-                    ]
-                },
-                {
-                    "name": "翅膀階段",
-                    "mechanics": [
-                        {
-                            "name": "Wicked Bolt",
-                            "type": "stack",
-                            "description": "5 段疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Bewitching Flight",
+                            "name": "三/四/五重加農炮 / Cannon Combo",
                             "type": "aoe",
-                            "description": "Boss 跳邊放 5 條線 AoE，紫線殘留無傷；隨機順序爆 + 圓 AoE 點名。",
-                            "tips": ["等一條爆再進原位", "看線寬度判斷"]
-                        },
-                        {
-                            "name": "Shadows' Sabbath (翅膀)",
-                            "type": "aoe",
-                            "description": "Boss + 一個翼分身放交叉線 AoE。",
-                            "tips": ["看雙方向線"]
-                        },
-                        {
-                            "name": "Witch Hunt",
-                            "type": "aoe",
-                            "description": "圓 AoE 內/外螺旋。",
-                            "tips": ["內旋 = 從中間-邊開始; 外旋 = 從邊開始"]
-                        },
-                        {
-                            "name": "Soaring Soulpress",
-                            "type": "stack",
-                            "description": "疊機標記。",
-                            "tips": ["全員疊"]
-                        }
-                    ]
-                },
-                {
-                    "name": "20% 以下（soft enrage）",
-                    "mechanics": [
-                        {
-                            "name": "Wicked Hypercannon",
-                            "type": "other",
-                            "description": "場地剩一列，Boss 全場 cleave 持續傷害。",
+                            "description": "Boss 移剩餘場地中央，前後炮管按順序顯示 → 對應方向放數次狡詭加農炮 + 15s 持續傷害。四重加：+ 雷炸隨機腳下圓 AoE。五重加：+ 雷暴散開圓 + 雷耐降低。",
                             "tips": [
-                                { "text": "全程減傷 + 連補", "role": "healer" },
-                                { "text": "DPS 爆發收尾", "role": "dps" }
+                                "看炮管順序預判前/後",
+                                "雷炸/雷暴散開 clock 位"
+                            ]
+                        },
+                        {
+                            "name": "狡詭落雷 / Sparking Salvo",
+                            "type": "stack",
+                            "description": "點名玩家 5 連分擔 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "魔女回翔 / Witchgleam",
+                            "type": "aoe",
+                            "description": "Boss 場北張翅 → 5 道翅膀雷射直線 → 留下雷線。雷線依序爆炸 + 多輪雷炸隨機玩家圓。第二次有分身一起發動。",
+                            "tips": [
+                                "閃 5 道雷射",
+                                "預判雷線爆炸順序",
+                                "雷炸散開"
+                            ]
+                        },
+                        {
+                            "name": "獵殺女巫 / Witch Hunt",
+                            "type": "aoe",
+                            "description": "螺旋順序大量 AoE 預兆 + 60s 受傷加重。",
+                            "tips": ["跟著螺旋方向移動"]
+                        },
+                        {
+                            "name": "碎魂躍 / Soulshatter",
+                            "type": "stack",
+                            "description": "點名分擔高傷 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "狡詭聚能加農炮 / Wicked Cannon",
+                            "type": "stack",
+                            "description": "Boss <20% HP 進入此階段。對前方場地 10 次分擔直線 AoE，期間穿插 2 次雷炸。重複到 boss 死。",
+                            "tips": [
+                                { "text": "全員前方疊接 + 連補", "role": "healer" },
+                                "閃雷炸圓 AoE"
                             ]
                         }
                     ]

@@ -8,124 +8,106 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Stoneringer：木棒=點 AoE、劍=甜甜圈，存起來後 Brutish Swing 釋放。",
-        "2）Spore Sac：藤蔓擴展 + Pulp Smash 疊機，Blooming Abomination 小怪要打但別清光（要躲 Quarry Swamp）。",
-        "3）Quarry Swamp 石化全場：必須躲在 Abomination 小怪屍體後。",
-        "4）Phase 2 場地長條 + 北/東北/西南 3 柱；Phase 3 場邊火 + 4 牆 + Lashing Lariat 線 cleave。"
+        "1）三場地過場：8-71 → 8-72 → 8-72 室內。",
+        "2）石製武器：棍棒 = 圓 (跑遠)；長刀 = 環 (貼近)。",
+        "3）近側/遠側揮打：跳最近/最遠 2 人分擔接。",
+        "4）孢囊 + 恨心花芽：打斷花芽避免颶風。",
+        "5）荊棘生死戰：boss/牆連線 + 距離 dot 分檔。"
     ],
-    "notes": "DT 7.2 AAC 中量級 3（Lv 100，ilvl 715）。Brute Abombinator（變異版 Brute Bomber）。3 階段不同場地。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.2 AAC 中量級 3 Normal (Lv 100)。Brute Abombinator (野蠻恨心) 簡化版。3 場地過場 + 武器類型判定 + 荊棘生死戰連線管理。",
     "bosses": [
         {
-            "name": "變異炸彈魔",
+            "name": "野蠻恨心",
             "nameEn": "Brute Abombinator",
-            "mnemonic": ["棒=點、劍=甜甜圈", "Quarry Swamp 躲小怪屍後", "3 階段不同場地"],
+            "mnemonic": [
+                "棍棒 = 圓跑遠；長刀 = 環貼近。",
+                "近側揮打 = 最近 2 人接；遠側 = 最遠 2 人接。",
+                "孢囊 → 恨心花芽出現 → 打斷花芽避免颶風全屏。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "Phase 1 - 8-71 號",
                     "mechanics": [
                         {
-                            "name": "Brutal Impact",
+                            "name": "野蠻碎擊 / Brutal Smash",
                             "type": "raidwide",
-                            "description": "3 段全體物理傷（後階段更多段）。",
+                            "description": "連 6 次全屏物理 AoE。",
                             "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Stoneringer",
+                            "name": "石製武器 + 近側/遠側揮打",
                             "type": "aoe",
-                            "description": "棒=點 AoE 存起來；劍=甜甜圈 AoE 存起來。",
-                            "tips": ["看武器類型預判"]
-                        },
-                        {
-                            "name": "Brutish Swing + Brutal Smash",
-                            "type": "tankbuster",
-                            "description": "副坦疊機 AoE 坦補 + 釋放存起來的點/甜甜圈。",
+                            "description": "棍棒 = 8m 圓；長刀 = 9m donut。跳最近/最遠 2 人分擔。",
                             "tips": [
-                                { "text": "副坦疊機後立刻位置調整", "role": "tank" }
+                                "看武器類型",
+                                { "text": "兩 T 站近/遠接", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Spore Sac + Pulp Smash",
-                            "type": "stack",
-                            "description": "4 個圓 AoE 召喚藤蔓擴展 + 疊機標記 + 8 條錐 AoE 從疊機點輻射。",
-                            "tips": ["看藤蔓終點找縫", "全員疊"]
-                        },
-                        {
-                            "name": "Blooming Abomination",
+                            "name": "孢囊 + 恨心花芽 / Spore Sac",
                             "type": "other",
-                            "description": "4 個藤蔓小怪，3 個放十字線 + 1 個放甜甜圈。要打掉但別清光（屍體要當 Quarry Swamp 掩體）。",
-                            "tips": ["AoE 打到剩 1 隻", "或留屍體當掩體"]
+                            "description": "4 個圓 AoE + 種子 + 花粉 + 花芽小怪 (可打斷)。",
+                            "tips": ["立刻打斷花芽避免颶風"]
                         },
                         {
-                            "name": "Quarry Swamp",
+                            "name": "種彈播撒 + 種彈重擊 / Seed Sowing",
                             "type": "other",
-                            "description": "全場石化 AoE，必須躲 Blooming Abomination 小怪/屍體後。",
-                            "tips": ["躲屍體後", "石化中受任何傷=即死"]
-                        },
-                        {
-                            "name": "Explosion",
-                            "type": "aoe",
-                            "description": "3 個漸減 AoE 形成三角形，順/逆時針出現。",
-                            "tips": ["跑到對角依旋轉避"]
-                        },
-                        {
-                            "name": "Neo Bombarian Special",
-                            "type": "other",
-                            "description": "全體傷 + 把玩家擊到下個場地。",
-                            "tips": ["站北邊", "讓擊退方向到北平台"]
+                            "description": "最近/最遠 4 人圓 AoE + 八向直線荊棘蔓延。",
+                            "tips": ["散開到 clock 位"]
                         }
                     ]
                 },
                 {
-                    "name": "Phase 2（長條場地）",
+                    "name": "Phase 2 - 8-72 號",
                     "mechanics": [
                         {
-                            "name": "Stoneringer + 柱位",
+                            "name": "藤蔓攀附 + 野蠻橫掃",
                             "type": "aoe",
-                            "description": "Boss 連柱跳移動 + 點/甜甜圈從新位置出。",
-                            "tips": ["看 Boss 連柱位置預判"]
+                            "description": "Boss 吸附建築 → 飛到對側建築發圓/環 AoE。",
+                            "tips": ["看 boss 飛向哪個建築預判"]
                         },
                         {
-                            "name": "Glower Power",
-                            "type": "spread",
-                            "description": "前方線 + 全員散開。",
-                            "tips": ["側面散開"]
+                            "name": "荊棘生死戰 / Thorns Battle",
+                            "type": "other",
+                            "description": "Boss 對 1 仇連線 + 荊棘 dot 距離分檔。",
+                            "tips": [{ "text": "T 中等距離維持低 dot", "role": "tank" }]
                         },
                         {
-                            "name": "Abominable Blink",
-                            "type": "tankbuster",
-                            "description": "T flare 標記。",
-                            "tips": [{ "text": "T 跑遠避免炸到隊友", "role": "tank" }]
+                            "name": "野蠻怒視 / Brutal Gaze",
+                            "type": "aoe",
+                            "description": "前方直線 + 全員圓 AoE 雷擊。",
+                            "tips": ["背對 boss + 散開"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3 - 室內",
+                    "mechanics": [
+                        {
+                            "name": "雙持石製武器",
+                            "type": "aoe",
+                            "description": "左右手棍棒 + 長刀 → 對隨機建築連線飛去。",
+                            "tips": ["看發光武器類型"]
                         },
                         {
-                            "name": "Powerslam",
+                            "name": "藤蔓碎頸臂",
+                            "type": "aoe",
+                            "description": "未持武器側手臂發光 → 半場直線 + 衝刺。",
+                            "tips": ["看光側預判半場"]
+                        },
+                        {
+                            "name": "野蠻衝 + 塔 / Brutal Surge",
+                            "type": "stack",
+                            "description": "場中央可分擔塔。無人 = 全屏超高傷。",
+                            "tips": ["全員疊塔分擔"]
+                        },
+                        {
+                            "name": "究極超豪華野蠻大亂擊 (Enrage)",
                             "type": "raidwide",
-                            "description": "全體物理傷 + 摧毀場地進入 Phase 3。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 3（火場邊）",
-                    "mechanics": [
-                        {
-                            "name": "Stoneringer 2",
-                            "type": "aoe",
-                            "description": "棒+劍同時生成，看哪個發光預示連牆 AoE 形狀。",
-                            "tips": ["看發光武器"]
-                        },
-                        {
-                            "name": "Lashing Lariat",
-                            "type": "aoe",
-                            "description": "一手發光 = 該側大線 cleave，留約 1/3 場安全。Boss 移到對牆。",
-                            "tips": ["看手光繞另一側"]
-                        },
-                        {
-                            "name": "Slaminator",
-                            "type": "stack",
-                            "description": "場中央 8 人疊機塔。",
-                            "tips": ["全員集中疊"]
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

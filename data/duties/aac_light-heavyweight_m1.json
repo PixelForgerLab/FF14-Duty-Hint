@@ -8,88 +8,93 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Mouser：4x4 格部分被打 0/1/2 次，2 次會破洞掉下；先觀察 9 段預警找安全格。",
-        "2）Black Cat Crossing：4 條線指示 = 錐 AoE 中心（不是線形），找對角無線方向。",
-        "3）Elevate and Eviscerate：被擊飛要落到完整格（未破損）；4 次依序點不同職業。",
-        "4）Copycat：分身機制（Predaceous Pounce 或 Eliminate）+ Boss 自己 stack/spread。"
+        "1）二連尖甲：左右爪輪發光，依序半場 cleave。",
+        "2）交叉尖甲：周身十字或 X 衝擊波 + 扇形 AoE。",
+        "3）捕鼠：地板被攻擊兩次破裂，跌落即死。",
+        "4）騰身開膛：點名擊飛 + 落點地板破壞。",
+        "5）猫跳尖甲：boss 移到箭頭位置後放半場 AoE。"
     ],
-    "notes": "DT 7.01 AAC 輕量級 1（Lv 100，ilvl 685）。Black Cat（FFXI Cath Palug 致敬）。4x4 場地會破洞是這 boss 特色。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.0 AAC 輕量級 1 Normal (Lv 100)。Black Cat (黑貓) 簡化版機制。Savage 版本詳見 aac_light-heavyweight_m1_savage。",
     "bosses": [
         {
             "name": "黑貓",
             "nameEn": "Black Cat",
-            "mnemonic": ["4x4 格觀察 Mouser", "Crossing 線=錐", "看擊飛箭頭找完整格"],
+            "mnemonic": [
+                "二連尖甲：看爪光順序閃半場。",
+                "交叉尖甲：看周身衝擊波方向閃扇形。",
+                "捕鼠：地板碎裂跌落，預判紅色提示順序。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Bloody Scratch",
+                            "name": "血腥抓撓 / Bloody Scratch",
                             "type": "raidwide",
-                            "description": "全體物理傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全場物理 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "One-two Paw",
-                            "type": "aoe",
-                            "description": "兩段半場 cleave，看左/右爪發光順序。",
-                            "tips": ["看爪光先後", "繞 Boss 另一側"]
-                        },
-                        {
-                            "name": "Black Cat Crossing",
-                            "type": "aoe",
-                            "description": "對角或基本方向 4 條線指示，但實際是錐 AoE。兩組依序。",
-                            "tips": ["線指示=錐 AoE 中心方向", "看對角方向找縫"]
-                        },
-                        {
-                            "name": "Biscuit Maker",
+                            "name": "踩奶 / Biscuit Maker",
                             "type": "tankbuster",
-                            "description": "對主 T 單體物理坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                            "description": "對 1 仇單體高傷。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         },
                         {
-                            "name": "Clawful",
+                            "name": "二連尖甲 / One-two Paw",
+                            "type": "aoe",
+                            "description": "左右爪輪發光，依序左/右半場 + 15s 裂傷 DoT。",
+                            "tips": ["看爪光順序預判半場"]
+                        },
+                        {
+                            "name": "交叉尖甲 / Quadruple Crossing",
+                            "type": "aoe",
+                            "description": "周身十字或 X 字衝擊波 → 對應方向扇形 AoE。",
+                            "tips": ["看衝擊波方向閃扇形"]
+                        },
+                        {
+                            "name": "重爪爆發 / Heavy Claw Burst",
                             "type": "stack",
-                            "description": "全員疊機 AoE。",
-                            "tips": ["全員疊"]
+                            "description": "點隨機玩家分擔 AoE。",
+                            "tips": ["全員疊接"]
                         },
                         {
-                            "name": "Mouser",
+                            "name": "捕鼠 / Mouser",
                             "type": "other",
-                            "description": "9 段 AoE 預警每段打 1 格，部分格 0/1/2 次。打 2 次=破洞會跌下。",
-                            "tips": ["先觀察 9 段預警", "找 0 或 1 次的格站", "每象限至少留 1 格"]
+                            "description": "場上紅色預警 → boss 依序攻擊地板，2 次破裂跌落即死。",
+                            "tips": ["看紅提示順序預判安全格"]
                         },
                         {
-                            "name": "Elevate and Eviscerate",
+                            "name": "騰身開膛 / Elevate and Eviscerate",
                             "type": "other",
-                            "description": "連繩玩家擊飛，落點看箭頭方向。落到破損格會把格踩破跌下；落到完整格會讓格變損傷。連用 4 次（同職業）。",
-                            "tips": ["拉箭頭往完整格", "別站隊友破損格"]
+                            "description": "點名玩家擊飛 + 落點地板破壞。",
+                            "tips": ["被點者預判落點到完整地板"]
                         },
                         {
-                            "name": "Shockwave",
-                            "type": "other",
-                            "description": "Boss 中心放射狀擊退。",
-                            "tips": ["位置調好讓被擊退方向有完整格", "別站破洞方向"]
-                        },
-                        {
-                            "name": "Predaceous Pounce",
+                            "name": "猫跳二連尖甲 / Leaping One-two Paw",
                             "type": "aoe",
-                            "description": "Boss 多段線+圓 AoE 連跳，依預警順序爆。",
-                            "tips": ["記順序找跳的縫"]
+                            "description": "場上箭頭連線 → boss 移到該位置後左右爪順序放半場 AoE。",
+                            "tips": ["看箭頭預判新位置 + 看爪光順序"]
                         },
                         {
-                            "name": "Leaping One-two Paw / Crossing",
+                            "name": "迅貓急襲 / Sneak Stomp",
                             "type": "aoe",
-                            "description": "Boss 滑到指定點再放 cleave/錐。注意不轉向。",
-                            "tips": ["看滑動終點預判面向", "繞對側"]
+                            "description": "場上多直線衝鋒 + 大圓 AoE + 15s 裂傷 DoT。",
+                            "tips": ["閃直線 + 圓"]
                         },
                         {
-                            "name": "Copycat",
+                            "name": "猫怪突風 / Cat-monster Surge",
                             "type": "spread",
-                            "description": "分身放 Elevate（連繩擊飛）+ Boss 放 Overshadow 線疊機。連用 4 次。",
-                            "tips": ["被擊飛的人不會被疊機打到（在空中）", "拉箭頭到完整格即可"]
+                            "description": "全員散開圓 AoE。",
+                            "tips": ["散開 clock 位"]
+                        },
+                        {
+                            "name": "超暗影 / Overshadow",
+                            "type": "stack",
+                            "description": "點名分擔直線 AoE。",
+                            "tips": ["全員疊接"]
                         }
                     ]
                 }
