@@ -1,6 +1,6 @@
 {
     "id": "wreath_of_snakes",
-    "name": "蛇環",
+    "name": "群蛇環繞",
     "nameEn": "The Wreath of Snakes",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -8,14 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Seiryu 青龍：水 + 多重 AoE。", "2）Coursing River 奔流之河：場上河流機制。", "3）Mountain Buster 山崩擊：tankbuster。"],
-    "notes": "SB 4.4 trial (Lv 70)。Seiryu (青龍) Normal。",
+    "quality": "good",
+    "mnemonic": [
+        "1）Tsukuyomi = Moonset 全屏 + Dark Crescent 雙坦 cone。",
+        "2）Moonlight 凝視 + 場上多 AoE 圈散。",
+        "3）Veil of the Moon = 連場分身 + line。",
+        "4）Lunar Dynamo = 中央 PBAoE 跑外。"
+    ],
+    "notes": "SB 4.3 trial (Lv 70)。Tsukuyomi 月夜見。",
     "bosses": [
-        { "name": "Seiryu", "nameEn": "Seiryu", "mnemonic": ["水 + 河流"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Water AoE", "type": "aoe", "description": "多重水 AoE。", "tips": ["閃預警"] },
-            { "name": "Coursing River 奔流之河", "type": "other", "description": "場地水流機制。", "tips": ["跟水流移動"] },
-            { "name": "Mountain Buster 山崩擊", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "月夜見",
+            "nameEn": "Tsukuyomi",
+            "phases": [{ "name": "Tsukuyomi", "mechanics": [
+                { "name": "Moonset 全屏", "type": "raidwide", "description": "全屏 + 暗傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Dark Crescent", "type": "tankbuster", "description": "雙坦 cone buster + 暗 debuff。", "tips": [{ "text": "雙坦分坦", "role": "tank" }] },
+                { "name": "Moonlight 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Veil of the Moon", "type": "other", "description": "場上分身 + line AoE 連發。", "tips": ["看本體 + 走縫"] },
+                { "name": "Lunar Dynamo", "type": "aoe", "description": "中央 PBAoE 跑外。", "tips": ["跑場邊"] }
+            ]}]
+        }
     ]
 }

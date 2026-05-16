@@ -1,6 +1,6 @@
 {
     "id": "jade_stoa_extreme",
-    "name": "翡翠迴廊殲殛戰",
+    "name": "翡翠之亭 (極)",
     "nameEn": "The Jade Stoa (Extreme)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -9,14 +9,25 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）Byakko EX：強化雷 + 老虎機制。", "2）Strident Roar 響亮咆哮：全屏 + AoE。", "3）狂暴：The White Tiger Stride 白虎大步。"],
-    "notes": "SB 4.2 Byakko EX (Lv 70)。",
+    "mnemonic": [
+        "1）Byakko EX = Storm Pulse 強化 + Sweep 連段。",
+        "2）Distant Clap 連 line + 大量虎影分身。",
+        "3）Heavenly Strike + Hundredfold Havoc 連發。",
+        "4）Fire and Lightning 連凝視 + Imperial Aether 末段強壓。"
+    ],
+    "notes": "SB 4.2 Byakko EX (Lv 70)。Byakko 強化版。",
     "bosses": [
-        { "name": "Byakko", "nameEn": "Byakko", "mnemonic": ["EX 強化雷"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Lightning (EX)", "type": "aoe", "description": "強化多重雷 AoE。", "tips": ["閃預警"] },
-            { "name": "Strident Roar 響亮咆哮", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-            { "name": "Sweep the Leg (EX)", "type": "other", "description": "強化擊飛機制。", "tips": ["跳躍"] },
-            { "name": "White Tiger Stride (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "白虎",
+            "nameEn": "Byakko",
+            "phases": [{ "name": "Byakko EX", "mechanics": [
+                { "name": "Storm Pulse 強化", "type": "raidwide", "description": "全屏 + 連發。", "tips": [{ "text": "全員強減傷", "role": "healer" }] },
+                { "name": "Sweep 連段", "type": "tankbuster", "description": "MT cone 連 buster + Vuln。", "tips": [{ "text": "MT 換手", "role": "tank" }] },
+                { "name": "Distant Clap 連", "type": "aoe", "description": "場上連 line AoE + 多虎影。", "tips": ["走縫避連線"] },
+                { "name": "Heavenly Strike + Havoc", "type": "aoe", "description": "中央 PBAoE + Hundredfold Havoc 多 AoE 連發。", "tips": ["跑外 + 走縫"] },
+                { "name": "Fire and Lightning 連凝視", "type": "other", "description": "Boss 連凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Imperial Aether 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "jade_stoa",
-    "name": "翡翠迴廊",
+    "name": "翡翠之亭",
     "nameEn": "The Jade Stoa",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -8,14 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Byakko 白虎：雷 + 場上多重 AoE。", "2）Roar of Thunder 雷霆咆哮：全屏。", "3）Sweep the Leg 掃腿：擊飛機制。"],
-    "notes": "SB 4.2 trial (Lv 70)。Byakko (白虎) Normal。",
+    "quality": "good",
+    "mnemonic": [
+        "1）Byakko = Storm Pulse 全屏 + Sweep cone。",
+        "2）Distant Clap 場上 line + 召虎影。",
+        "3）Heavenly Strike 圈 AoE 跑外 + Hundredfold Havoc 多 AoE。",
+        "4）Fire and Lightning 凝視 + 大全屏。"
+    ],
+    "notes": "SB 4.2 trial (Lv 70)。Byakko 白虎。",
     "bosses": [
-        { "name": "Byakko", "nameEn": "Byakko", "mnemonic": ["雷 + AoE"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Lightning AoE", "type": "aoe", "description": "多重雷 AoE。", "tips": ["閃預警"] },
-            { "name": "Roar of Thunder 雷霆咆哮", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
-            { "name": "Sweep the Leg 掃腿", "type": "other", "description": "擊飛機制。", "tips": ["跳躍避免"] }
-        ]}]}
+        {
+            "name": "白虎",
+            "nameEn": "Byakko",
+            "phases": [{ "name": "Byakko", "mechanics": [
+                { "name": "Storm Pulse", "type": "raidwide", "description": "全屏 + 風傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Sweep", "type": "tankbuster", "description": "MT cone buster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Distant Clap + 虎影", "type": "aoe", "description": "場上 line AoE + 召虎影分身。", "tips": ["走縫避線"] },
+                { "name": "Heavenly Strike 圈", "type": "aoe", "description": "中央 PBAoE → 跑外。", "tips": ["跑場邊"] },
+                { "name": "Fire and Lightning 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] }
+            ]}]
+        }
     ]
 }

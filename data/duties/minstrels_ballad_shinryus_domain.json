@@ -1,6 +1,6 @@
 {
     "id": "minstrels_ballad_shinryus_domain",
-    "name": "神龍領域絕嘆殲殛戰",
+    "name": "神龍領域絕境戰",
     "nameEn": "The Minstrel's Ballad: Shinryu's Domain",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -9,14 +9,25 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）Shinryu EX：強化多元素 + 龍機制。", "2）Akh Morn (EX) 強化阿克莫恩。", "3）Tail Slash 尾擊：擊退 + AoE。", "4）狂暴：Tidal Wave 終末巨浪。"],
-    "notes": "SB 4.0 Shinryu EX (Lv 70)。神龍 EX。",
+    "mnemonic": [
+        "1）Shinryu EX = Tail Smash 強化 + Sliver of Aether 大量分身。",
+        "2）Tidal Wave 連擊退 + Diamond Dust 連冰 AoE。",
+        "3）Akh Morn 強化多 hit + Wings of Salvation 連凝視。",
+        "4）末段 Levinbolt + Megaflare 強壓。"
+    ],
+    "notes": "SB 4.05 Shinryu EX (Lv 70)。Shinryu 強化版絕境戰。",
     "bosses": [
-        { "name": "Shinryu", "nameEn": "Shinryu", "mnemonic": ["EX 強化多元素 + 龍"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Element AoE (EX)", "type": "aoe", "description": "強化多元素 AoE。", "tips": ["跟預兆"] },
-            { "name": "Akh Morn (EX)", "type": "tankbuster", "description": "強化 Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Tail Slash 尾擊", "type": "knockback", "description": "擊退 + AoE。", "tips": ["預判方向"] },
-            { "name": "Tidal Wave (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "神龍",
+            "nameEn": "Shinryu",
+            "phases": [{ "name": "Shinryu EX", "mechanics": [
+                { "name": "Tail Smash 強化", "type": "tankbuster", "description": "MT line 連 buster。", "tips": [{ "text": "MT 換手", "role": "tank" }] },
+                { "name": "Sliver of Aether 強化", "type": "other", "description": "召大量分身 + 同步。", "tips": ["看本體 + 避分身"] },
+                { "name": "Tidal Wave 連", "type": "other", "description": "連擊退 + 場上多水灘。", "tips": ["抗擊退 + 避灘"] },
+                { "name": "Diamond Dust 連", "type": "spread", "description": "場上連冰 AoE 圈。", "tips": ["散避連圈"] },
+                { "name": "Akh Morn 強化", "type": "stack", "description": "前 2 名連多 hit 分擔。", "tips": [{ "text": "雙坦 stack", "role": "tank" }] },
+                { "name": "末段 Levinbolt + Megaflare", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "emanation_extreme",
-    "name": "流明殲殛戰",
+    "name": "輝光放射 (極)",
     "nameEn": "Emanation (Extreme)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -9,14 +9,25 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）Lakshmi EX：強化分區 + 愛機制。", "2）Pall of Light (EX) 強化分區。", "3）Divine Denial (EX) 強化 tankbuster。", "4）狂暴：Path of Light 光之路。"],
-    "notes": "SB 4.1 Lakshmi EX (Lv 70)。",
+    "mnemonic": [
+        "1）Lakshmi EX = Pall of Light 強化 + 大量分身。",
+        "2）Path of Light 連 line + Hand of Grace 連 buster。",
+        "3）Hands of Hope/Despair 連場邊光暗。",
+        "4）Pure Heart 強化標 + Divine Denial 連凝視。"
+    ],
+    "notes": "SB 4.2 Lakshmi EX (Lv 70)。Lakshmi 強化版。",
     "bosses": [
-        { "name": "Lakshmi", "nameEn": "Lakshmi", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Pall of Light (EX)", "type": "other", "description": "強化分區判定。", "tips": ["跟分區"] },
-            { "name": "AoE 連發 (EX)", "type": "aoe", "description": "強化多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Divine Denial (EX)", "type": "tankbuster", "description": "強化 Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Path of Light (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "拉克什米",
+            "nameEn": "Lakshmi",
+            "phases": [{ "name": "Lakshmi EX", "mechanics": [
+                { "name": "Pall of Light 強化", "type": "raidwide", "description": "全屏 + 大量分身。", "tips": [{ "text": "全員強減傷", "role": "healer" }] },
+                { "name": "Path of Light 連 line", "type": "aoe", "description": "連 line AoE 多方向。", "tips": ["走縫避連線"] },
+                { "name": "Hand of Grace 連", "type": "tankbuster", "description": "雙坦 cone 連 buster。", "tips": [{ "text": "雙坦換手", "role": "tank" }] },
+                { "name": "Hands 光暗連", "type": "other", "description": "場邊光暗區連發 + 對色站位。", "tips": ["看區色 → 站對位"] },
+                { "name": "Pure Heart 強化", "type": "other", "description": "強化玩家標 → 引到指定區。", "tips": ["看 marker → 拉特定位"] },
+                { "name": "末段強壓", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

@@ -6,46 +6,42 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 68,
+    "jobLevelSync": 69,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）B1 Genbu 玄武：靈龜召喚 + 半屏 AoE，注意走位閃 boss 預兆。",
-        "2）B2 Magatsu Tako 邪章魚：召喚墨之觸手 + Ink Cloud 黑墨擴散；分擔機制。",
-        "3）B3 Hakutaku 白澤：依 buff 圖標決定背對方向 (Forward/Backward/Left/Right Gaze)；Phantom Rush 衝鋒。"
+        "1）B1 Genbu 玄武 = 龜形 + 殼防禦 + Stone Spit line + 雙頭 cone。",
+        "2）B2 Magatsu Tako = 章魚 + 多 tentacle line + Ink 黑霧 + 召小章魚。",
+        "3）B3 Hakutaku 白澤 = 神獸 cleave + 凝視 + 召分身 + 全屏。"
     ],
-    "notes": "SB 4.2 dungeon Lv 68 ilvl 325。Yanxia 地獄之蓋。資料來源：huiji + 玩家手記。",
+    "notes": "SB 4.3 dungeon (Lv 69)。Yanxia 地獄之蓋 + 四神獸之一 (Genbu)。",
     "bosses": [
         {
-            "name": "Genbu 玄武",
+            "name": "玄武",
             "nameEn": "Genbu",
-            "mnemonic": ["靈龜召喚 + 半屏 AoE"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Earthen AoE", "type": "aoe", "description": "場上多重圓/扇 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Stone Spit", "type": "aoe", "description": "Boss 朝玩家 line 石 AoE。", "tips": ["側步閃"] },
+                { "name": "Shell Defense", "type": "other", "description": "Boss 縮殼 → 反射攻擊。", "tips": [{ "text": "DPS 停手避反", "role": "dps" }] },
+                { "name": "Dual Head Cone", "type": "aoe", "description": "雙頭 cone AoE 兩方向。", "tips": ["看朝向 → 站側"] }
             ]}]
         },
         {
-            "name": "Magatsu Tako 邪章魚",
+            "name": "邪章魚",
             "nameEn": "Magatsu Tako",
-            "mnemonic": ["觸手 + 黑墨擴散", "分擔機制"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Tentacle 觸手召喚", "type": "other", "description": "場上召觸手 adds。", "tips": [{ "text": "DPS 速殺觸手", "role": "dps" }] },
-                { "name": "Ink Cloud 黑墨", "type": "aoe", "description": "場上多重黑墨 AoE 區。", "tips": ["閃預警"] },
-                { "name": "Stack 分擔", "type": "stack", "description": "玩家標記 → 全員疊接。", "tips": ["疊接"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Tentacle Line", "type": "aoe", "description": "場上多觸手 line AoE。", "tips": ["走縫避線"] },
+                { "name": "Ink Spray", "type": "other", "description": "黑霧噴 + 場視野受限 + 持續傷。", "tips": ["走出 ink 區"] },
+                { "name": "Summon Octopus add", "type": "other", "description": "召小章魚 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
-            "name": "Hakutaku 白澤",
+            "name": "白澤",
             "nameEn": "Hakutaku",
-            "mnemonic": ["看 buff 圖標決定背對 (Forward/Backward/Left/Right Gaze)", "Phantom Rush 衝鋒"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Multi-Direction Gaze 多向視線", "type": "other", "description": "玩家獲得 Forward/Backward/Left/Right Gaze buff → 依 buff 圖標決定背對方向，否則石化。", "tips": ["仔細看 buff 圖標 → 對應方向背對"] },
-                { "name": "Phantom Rush 幻影衝鋒", "type": "aoe", "description": "場上 boss 衝鋒 AoE。", "tips": ["閃預兆"] },
-                { "name": "Roar 咆嘯", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Divine Cleave", "type": "aoe", "description": "Boss cleave AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Death Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Shadow Clones", "type": "other", "description": "召分身 + 同步 cleave。", "tips": ["看本體 + 避分身"] },
+                { "name": "Aether Burst 全屏", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         }
     ]

@@ -1,6 +1,6 @@
 {
     "id": "doma_castle",
-    "name": "多瑪城堡",
+    "name": "多瑪城",
     "nameEn": "Doma Castle",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
@@ -8,22 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 67,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）B1 Magitek Rearguard：場上多重砲擊。", "2）B2 Magitek Predator：直線 AoE 機制。", "3）B3 Hypertuned Grynewaht：機械 + 多重 AoE。"],
-    "notes": "SB 4.0 多瑪城堡 (Lv 67)。",
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Magitek Rearguard = Magitek Ray + Flame Thrower cone + 召小機甲。",
+        "2）B2 Magitek Predator = 衝鋒 line + Cannon + 機甲 add。",
+        "3）B3 Hypertuned Grynewaht = 強化機甲 + 雙坦 line + 大全屏。"
+    ],
+    "notes": "SB 4.0 MSQ dungeon (Lv 67)。Doma 城收復戰。",
     "bosses": [
-        { "name": "Magitek Rearguard", "nameEn": "Magitek Rearguard", "mnemonic": ["砲擊 + 直線"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "砲擊", "type": "aoe", "description": "場上多重直線砲擊。", "tips": ["閃直線"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Magitek Predator", "nameEn": "Magitek Predator", "mnemonic": ["直線 AoE"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Magitek Ray 雷射", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Hypertuned Grynewaht", "nameEn": "Hypertuned Grynewaht", "mnemonic": ["機械 + 多重"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Magitek 砲擊", "type": "aoe", "description": "多重直線砲擊。", "tips": ["閃直線"] },
-            { "name": "Spread", "type": "spread", "description": "散開 AoE。", "tips": ["散開"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "Magitek Rearguard",
+            "nameEn": "Magitek Rearguard",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Magitek Ray", "type": "aoe", "description": "Boss line 雷射。", "tips": ["側步閃"] },
+                { "name": "Flame Thrower", "type": "aoe", "description": "Boss cone 火 AoE。", "tips": ["看朝向 → 側面"] },
+                { "name": "Summon Mecha", "type": "other", "description": "召小機甲 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Magitek Predator",
+            "nameEn": "Magitek Predator",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Charge", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側步"] },
+                { "name": "Cannon line", "type": "aoe", "description": "場上大砲 line AoE。", "tips": ["走縫"] },
+                { "name": "Summon Mecha Add", "type": "other", "description": "召小機甲 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Hypertuned Grynewaht",
+            "nameEn": "Hypertuned Grynewaht",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Magitek Slash", "type": "tankbuster", "description": "MT 強 buster + Vuln。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Aetheric Boom", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Double Line", "type": "aoe", "description": "場上多 line AoE 連發。", "tips": ["走縫避線"] },
+                { "name": "Magitek Burst 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

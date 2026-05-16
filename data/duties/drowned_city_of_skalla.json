@@ -1,29 +1,48 @@
 {
     "id": "drowned_city_of_skalla",
-    "name": "斯卡拉沉沒之都",
+    "name": "斯卡拉沉沒之城",
     "nameEn": "The Drowned City of Skalla",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 70,
+    "jobLevelSync": 69,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）B1 Hrodvitnir：場上 AoE。", "2）B2 Glaring Eye：石化 + 看視線。", "3）B3 Goddess Skalla：場上多重 AoE + 召喚。"],
-    "notes": "SB 4.1 dungeon (Lv 70)。",
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Hrodvitnir = 狼形 + 衝鋒 line + 召小狼 add。",
+        "2）B2 Glaring Eye = 凝視 + 多 AoE 圈 + 召小眼。",
+        "3）B3 Goddess Skalla = 多階段 + 大 cone + 全屏 + 召分身。"
+    ],
+    "notes": "SB 4.1 dungeon (Lv 69)。Skalla 沉沒之城 + 古文明遺跡。",
     "bosses": [
-        { "name": "Hrodvitnir", "nameEn": "Hrodvitnir", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "場上 AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]},
-        { "name": "Glaring Eye", "nameEn": "Glaring Eye", "mnemonic": ["石化 + 視線"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Stone Gaze 石化視線", "type": "other", "description": "看視線機制。", "tips": ["背對 boss"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]},
-        { "name": "Goddess Skalla", "nameEn": "Goddess Skalla", "mnemonic": ["AoE + 召喚"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Adds", "type": "other", "description": "場上召喚體。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "Hrodvitnir",
+            "nameEn": "Hrodvitnir",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側步閃"] },
+                { "name": "Pounce", "type": "aoe", "description": "Boss 跳擊 PBAoE。", "tips": ["跑遠落點"] },
+                { "name": "Summon Wolf add", "type": "other", "description": "召小狼 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Glaring Eye",
+            "nameEn": "Glaring Eye",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Death Gaze", "type": "other", "description": "Boss 凝視 → 看 = 死。", "tips": ["背對 boss"] },
+                { "name": "Aether Spray", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] },
+                { "name": "Summon Eye add", "type": "other", "description": "召小眼 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Goddess Skalla",
+            "nameEn": "Goddess Skalla",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Divine Cleave", "type": "aoe", "description": "Boss 大 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Aether Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Shadow Clones", "type": "other", "description": "召分身 + 同步攻擊。", "tips": ["看本體 + 避分身"] },
+                { "name": "Divine Burst", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "hells_kier_extreme",
-    "name": "地獄之器殲殛戰",
+    "name": "地獄魔境 (極)",
     "nameEn": "Hells' Kier (Extreme)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -9,14 +9,26 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）Suzaku EX：強化火 + 多重鳳凰。", "2）Phantom Phoenix 幻象鳳凰：場上多重 AoE。", "3）狂暴：Scarlet Fever (EX) 緋紅熱秒殺。"],
-    "notes": "SB 4.3 Suzaku EX (Lv 70)。",
+    "mnemonic": [
+        "1）Suzaku EX = Phoenix Burst 強化 + Wing Cleave 連段。",
+        "2）Mark of the Phoenix 多標散連發。",
+        "3）Vermilion Refrain 大量小鳳凰。",
+        "4）Garden of Fire 強化 + 連凝視。",
+        "5）Phoenix Effect 末段強壓。"
+    ],
+    "notes": "SB 4.4 Suzaku EX (Lv 70)。Suzaku 強化版。",
     "bosses": [
-        { "name": "Suzaku", "nameEn": "Suzaku", "mnemonic": ["EX 強化火"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Fire (EX)", "type": "aoe", "description": "強化火 AoE。", "tips": ["閃預警"] },
-            { "name": "Phantom Phoenix 幻象鳳凰", "type": "other", "description": "場上多重召喚 + AoE。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
-            { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Scarlet Fever (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "朱雀",
+            "nameEn": "Suzaku",
+            "phases": [{ "name": "Suzaku EX", "mechanics": [
+                { "name": "Phoenix Burst 強化", "type": "raidwide", "description": "全屏 + 連發 + 強火傷。", "tips": [{ "text": "全員強減傷", "role": "healer" }] },
+                { "name": "Wing Cleave 連段", "type": "tankbuster", "description": "雙坦 cone 連 buster + Vuln。", "tips": [{ "text": "雙坦換手", "role": "tank" }] },
+                { "name": "Mark of the Phoenix 連", "type": "spread", "description": "多標散連發。", "tips": ["散避連標"] },
+                { "name": "Vermilion Refrain 多波", "type": "other", "description": "大量小鳳凰 → DPS 全力殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Garden of Fire 強化", "type": "other", "description": "場上連圈 + 連凝視。", "tips": ["散圈 + 背對"] },
+                { "name": "Phoenix Effect 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

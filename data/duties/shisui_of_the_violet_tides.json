@@ -8,21 +8,40 @@
     "iLvlSync": null,
     "jobLevelSync": 63,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）B1 Sahuagin Guard：水下 + AoE。", "2）B2 Kelpie：氣泡機制 + 水下移動。", "3）B3 Roshfu the Faithful：場上多重水 AoE。"],
-    "notes": "SB 4.0 海底宮殿 (Lv 63)。",
+    "quality": "good",
+    "mnemonic": [
+        "1）B1 Sahuagin Guard = Trident line + Tail Sweep cone + 召小怪。",
+        "2）B2 Kelpie = Bubble 場上水球 → 玩家踩破解 debuff；Tidal Wave line。",
+        "3）B3 Roshfu the Faithful = 多 line water AoE + 雙坦 cone + 全屏。"
+    ],
+    "notes": "SB 4.0 海底宮殿 (Lv 63)。Ruby Sea 水底宮 + 海妖 boss。",
     "bosses": [
-        { "name": "Sahuagin Guard", "nameEn": "Sahuagin Guard", "mnemonic": ["水下 AoE"], "phases": [{ "name": "B1", "mechanics": [
-            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] }
-        ]}]},
-        { "name": "Kelpie", "nameEn": "Kelpie", "mnemonic": ["氣泡 + 移動"], "phases": [{ "name": "B2", "mechanics": [
-            { "name": "Bubble 氣泡", "type": "other", "description": "場上氣泡 + 玩家踩破。", "tips": ["踩破氣泡"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] }
-        ]}]},
-        { "name": "Roshfu the Faithful", "nameEn": "Roshfu the Faithful", "mnemonic": ["水 AoE 連發"], "phases": [{ "name": "B3", "mechanics": [
-            { "name": "Water AoE", "type": "aoe", "description": "場上多重水 AoE。", "tips": ["跟預兆"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "鮫人衛兵",
+            "nameEn": "Sahuagin Guard",
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Trident line", "type": "aoe", "description": "Boss 三叉戟 line AoE。", "tips": ["側步閃"] },
+                { "name": "Tail Sweep", "type": "aoe", "description": "Boss 後 cone 尾擺。", "tips": ["站 boss 前"] },
+                { "name": "Summon Add", "type": "other", "description": "召小怪 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Kelpie 水鬼",
+            "nameEn": "Kelpie",
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Bubble 水球", "type": "other", "description": "場上召水球 → 玩家踩破解 debuff，不踩會累積。", "tips": ["全員主動踩水球破"] },
+                { "name": "Tidal Wave line", "type": "aoe", "description": "Boss 水波 line AoE。", "tips": ["側步閃"] },
+                { "name": "Drowning Mist", "type": "raidwide", "description": "全屏 + 水傷 debuff。", "tips": [{ "text": "全員減傷 + 補解 debuff", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "羅修法",
+            "nameEn": "Roshfu the Faithful",
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Water AoE 多 line", "type": "aoe", "description": "場上多 line water AoE 穿場。", "tips": ["走縫避線"] },
+                { "name": "Faithful Cleave", "type": "tankbuster", "description": "MT cone buster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Faithful Burst", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

@@ -8,14 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Rathalos 火龍：FFXIV x Monster Hunter 聯動。", "2）Fire Breath 火焰呼吸：直線。", "3）狀態 debuff：玩家被毒 / 燒傷等。"],
-    "notes": "SB 4.2 trial - FFXIV x Monster Hunter 聯動 (Lv 70)。",
+    "quality": "good",
+    "mnemonic": [
+        "1）Rathalos = Fireball 場上多 AoE 圈 + 衝鋒 line。",
+        "2）Charge 衝鋒線 + Aerial Stomp PBAoE。",
+        "3）Smoldering Fire 散標 + Inferno 全屏。",
+        "4）Tail Sweep 後 cone。"
+    ],
+    "notes": "SB 4.36 trial (Lv 70)。Rathalos (Monster Hunter crossover)。",
     "bosses": [
-        { "name": "Rathalos", "nameEn": "Rathalos", "mnemonic": ["火龍 + MH 聯動"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Fire Breath 火焰呼吸", "type": "aoe", "description": "直線火 AoE。", "tips": ["閃直線"] },
-            { "name": "Poison/Status 狀態異常", "type": "other", "description": "場上玩家中毒 / 燒傷。", "tips": [{ "text": "補解 debuff", "role": "healer" }] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "雄火龍",
+            "nameEn": "Rathalos",
+            "phases": [{ "name": "Rathalos", "mechanics": [
+                { "name": "Fireball 圈", "type": "spread", "description": "場上多 AoE 圈散落。", "tips": ["散避圈"] },
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line AoE。", "tips": ["側步閃"] },
+                { "name": "Aerial Stomp", "type": "aoe", "description": "Boss 飛起 + 落地 PBAoE。", "tips": ["跑遠落點"] },
+                { "name": "Smoldering Fire 散", "type": "spread", "description": "全員下 AoE 圈散。", "tips": ["散到場周"] },
+                { "name": "Tail Sweep", "type": "aoe", "description": "Boss 後 cone 尾擺。", "tips": ["站 boss 前或側"] }
+            ]}]
+        }
     ]
 }

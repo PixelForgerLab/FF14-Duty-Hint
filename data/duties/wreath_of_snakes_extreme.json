@@ -1,6 +1,6 @@
 {
     "id": "wreath_of_snakes_extreme",
-    "name": "蛇環殲殛戰",
+    "name": "群蛇環繞 (極)",
     "nameEn": "The Wreath of Snakes (Extreme)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
@@ -9,14 +9,25 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）Seiryu EX：強化水 + 多重河流。", "2）Coursing River (EX)：強化河流分區。", "3）狂暴：Mountain Buster (EX) 山崩擊秒殺。"],
-    "notes": "SB 4.4 Seiryu EX (Lv 70)。",
+    "mnemonic": [
+        "1）Tsukuyomi EX = Moonset 連發 + Dark Crescent 連段。",
+        "2）Moonlight 連凝視 + Veil of the Moon 連分身。",
+        "3）Lunar Dynamo 連 PBAoE + Pure Light 場邊光區。",
+        "4）末段 Eclipse 大全屏 + 強壓。"
+    ],
+    "notes": "SB 4.3 Tsukuyomi EX (Lv 70)。Tsukuyomi 強化版。",
     "bosses": [
-        { "name": "Seiryu", "nameEn": "Seiryu", "mnemonic": ["EX 強化水"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Water (EX)", "type": "aoe", "description": "強化水 AoE。", "tips": ["閃預警"] },
-            { "name": "Coursing River (EX)", "type": "other", "description": "強化河流分區。", "tips": ["跟水流"] },
-            { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Mountain Buster (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "月夜見",
+            "nameEn": "Tsukuyomi",
+            "phases": [{ "name": "Tsukuyomi EX", "mechanics": [
+                { "name": "Moonset 連發", "type": "raidwide", "description": "全屏 + 連發。", "tips": [{ "text": "全員強減傷", "role": "healer" }] },
+                { "name": "Dark Crescent 連段", "type": "tankbuster", "description": "雙坦 cone 連 buster。", "tips": [{ "text": "雙坦換手", "role": "tank" }] },
+                { "name": "Moonlight 連凝視", "type": "other", "description": "Boss 連凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Veil of the Moon 連", "type": "other", "description": "場上連分身 + line。", "tips": ["看本體 + 走縫"] },
+                { "name": "Lunar Dynamo 連", "type": "aoe", "description": "中央 PBAoE 連發。", "tips": ["跑場邊"] },
+                { "name": "Eclipse 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
     ]
 }

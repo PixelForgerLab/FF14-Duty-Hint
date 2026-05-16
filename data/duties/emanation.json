@@ -1,21 +1,32 @@
 {
     "id": "emanation",
-    "name": "流明殲滅戰",
+    "name": "輝光放射",
     "nameEn": "Emanation",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
-    "jobLevelSync": 66,
+    "jobLevelSync": 64,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Lakshmi 拉克什米：愛 + 多重 AoE。", "2）Pall of Light 光之斗篷：場上分區。", "3）Divine Denial 神聖拒絕：tankbuster。"],
-    "notes": "SB 4.1 MSQ trial (Lv 66)。Lakshmi (拉克什米) Normal。",
+    "quality": "good",
+    "mnemonic": [
+        "1）Lakshmi = Pall of Light 全屏 + 召分身。",
+        "2）Path of Light line + Hand of Grace 雙坦 cone。",
+        "3）Divine Denial 凝視 + Hands of Hope/Despair 場邊光暗區。",
+        "4）Pure Heart = 玩家標 → 引到指定區。"
+    ],
+    "notes": "SB 4.2 MSQ trial (Lv 64)。Lakshmi 拉克什米。",
     "bosses": [
-        { "name": "Lakshmi", "nameEn": "Lakshmi", "mnemonic": ["愛 + 分區"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Pall of Light 光之斗篷", "type": "other", "description": "場地分區判定。", "tips": ["跟分區站位"] },
-            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Divine Denial 神聖拒絕", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "拉克什米",
+            "nameEn": "Lakshmi",
+            "phases": [{ "name": "Lakshmi", "mechanics": [
+                { "name": "Pall of Light", "type": "raidwide", "description": "全屏 + 召分身。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Path of Light", "type": "aoe", "description": "Boss line AoE。", "tips": ["側面"] },
+                { "name": "Hand of Grace", "type": "tankbuster", "description": "雙坦 cone buster。", "tips": [{ "text": "雙坦分坦", "role": "tank" }] },
+                { "name": "Divine Denial 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Hands of Hope/Despair", "type": "other", "description": "場邊光暗區 → 站對色。", "tips": ["看區色 → 站對位"] }
+            ]}]
+        }
     ]
 }

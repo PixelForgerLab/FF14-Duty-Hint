@@ -1,50 +1,46 @@
 {
     "id": "temple_of_the_fist",
-    "name": "拳鬥場",
+    "name": "拳鬥神殿",
     "nameEn": "The Temple of the Fist",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 65,
+    "jobLevelSync": 67,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）B1 Ivon Coeurlfist：Coeurl Snarl 圓 + Crackle 雷。",
-        "2）B2 Banh Thi the Wallowing Wreck：Magnitude 5.0 全屏地震 + Earth Shaker 落地。",
-        "3）B3 Grand Master Globo：Ultimate Wahdo 連續拳擊 + 力量條疊滿放大招。"
+        "1）B1 Ivon Coeurlfist = 拳鬥 cone + 衝鋒 + 召小武者。",
+        "2）B2 Banh Thi = 巨型武者 + 多 cleave + Aether Spray 散標。",
+        "3）B3 Grand Master Globo = 大師拳 + 連 cone + 召分身 + 全屏。"
     ],
-    "notes": "SB 4.1 dungeon (Lv 65)。Yanxia 拳鬥場。",
+    "notes": "SB 4.1 dungeon (Lv 67)。Fist of Rhalgr 武者神殿。",
     "bosses": [
         {
             "name": "Ivon Coeurlfist",
             "nameEn": "Ivon Coeurlfist",
-            "mnemonic": ["豹拳 + 雷"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Coeurl Snarl 豹咆嘯", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
-                { "name": "Crackle 雷擊", "type": "aoe", "description": "場上雷 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Fist Cone", "type": "aoe", "description": "Boss 拳 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Charge", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側步"] },
+                { "name": "Summon Add", "type": "other", "description": "召小武者 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
-            "name": "Banh Thi the Wallowing Wreck",
+            "name": "Banh Thi",
             "nameEn": "Banh Thi",
-            "mnemonic": ["地震 + 落地"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Magnitude 5.0 五級地震", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Earth Shaker 大地震動", "type": "aoe", "description": "對玩家落下圓 AoE。", "tips": ["被點名跑開"] },
-                { "name": "Boulder Toss 投石", "type": "aoe", "description": "場上多重落石。", "tips": ["閃預警"] }
+                { "name": "Multi Cleave", "type": "aoe", "description": "Boss 多 cleave AoE 連發。", "tips": ["看朝向 → 移位"] },
+                { "name": "Aether Spray", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] },
+                { "name": "Aether Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Grand Master Globo 大師",
+            "name": "Grand Master Globo",
             "nameEn": "Grand Master Globo",
-            "mnemonic": ["拳擊連發 + 力量條"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Ultimate Wahdo 終極連擊", "type": "aoe", "description": "boss 連續拳擊場上多區。", "tips": ["跟預兆"] },
-                { "name": "Power Meter 力量條", "type": "other", "description": "Boss 力量條疊滿放大招。", "tips": ["注意條進度"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Master Fist Cone", "type": "aoe", "description": "Boss 大師拳 cone 連發。", "tips": ["看朝向 → 連續移位"] },
+                { "name": "Shadow Clones", "type": "other", "description": "召分身 + 同步攻擊。", "tips": ["看本體 + 避分身"] },
+                { "name": "Final Burst", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
             ]}]
         }
     ]
