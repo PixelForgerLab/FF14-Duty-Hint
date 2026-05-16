@@ -1,79 +1,34 @@
 {
-    "id":  "alexander_-_the_arm_of_the_father",
-    "name":  "亞歷山大 起源之章3",
-    "nameEn":  "Alexander - The Arm of the Father",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Living Liquid (boss)：Protean Wave",
-                     "2）Splash / Sluice",
-                     "3）Cascade"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) aoe (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "- Conal AoE in several directions that deals damage and knocks back. Sidestep the telegraph to avoid.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Protean Wave 波",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "- Light raid-wide AoE, cast 3 times in succession.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "name":  "Splash 濺水",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "- 4 players get markers above their head. These players should spread out from the rest of the raid, as they will deal AoE damage around themselves. S；隨機點名玩家圓形 AoE，被點立即拉開分散站位 5m+。",
-                                                                "name":  "Sluice 冰",
-                                                                "tips":  [
-                                                                             "全員散開"
-                                                                         ],
-                                                                "type":  "spread"
-                                                            },
-                                                            {
-                                                                "description":  "- Raidwide that knocks each player in a random direction. The knockback distance is slightly less than the radius of the platform. To avoid being knoc；擊退 AoE，提前 Arm\u0027s Length / Surecast 抗擊退或預判落點。",
-                                                                "name":  "Wash Away",
-                                                                "tips":  [
-                                                                             "預判擊退方向或開 Arm\u0027s Length"
-                                                                         ],
-                                                                "type":  "knockback"
-                                                            },
-                                                            {
-                                                                "description":  "- Deals AoE damage and spawns 3 large static AoE pools around the room. Players should avoid standing in or being knocked back into these pools.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Cascade 瀑布",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "活水",
-                       "nameEn":  "Living Liquid (boss)",
-                       "mnemonic":  [
-                                        "Protean Wave",
-                                        "Splash",
-                                        "Sluice"
-                                    ]
-                   }
-               ]
+  "id": "alexander_-_the_arm_of_the_father",
+  "name": "亞歷山大機神城 啟動之章3",
+  "nameEn": "Alexander - The Arm of the Father",
+  "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 195,
+  "jobLevelSync": 60,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）場地外圍電網 → 踩入被眩暈/麻痺/感電",
+    "2）人形態：流體噴擊（前扇）、衝洗（4 人點名圓）、萬流水波（4 方向扇形擊退）",
+    "3）切換手形態：流體噴擊變 120° 扇，衝擊（場中央擊退）",
+    "4）召喚『活水之手』分身 → 雙 boss 戰，血量平分，任一不可降至 1",
+    "5）水合核心 add → 速秒"
+  ],
+  "notes": "HW 3.0 機神城 啟動之章3（A3 普通）。Boss 有生命活水（Living Liquid）人形態↔手形態切換。資料來源：灰機 亚历山大机神城 启动之章3/B + CGW Living Liquid walkthrough。",
+  "bosses": [{
+    "name": "有生命活水",
+    "nameEn": "Living Liquid",
+    "phases": [{"name": "主戰", "mechanics": [
+      {"name": "電網場邊", "type": "mechanic", "description": "場地周邊電網 → 踩入 4 秒眩暈 + 15 秒麻痺 + 感電 DoT。保持場內。", "tips": [{"text": "全員避場邊", "role": "tank"}]},
+      {"name": "流體噴擊 Hydraulic Spurt", "type": "cone", "description": "boss 前方 90° 扇形（人形態）/120° 扇形（手形態）。MT 朝外接，DPS 站側後。", "tips": [{"text": "MT 朝外", "role": "tank"}]},
+      {"name": "萬流水波 Splash", "type": "knockback", "description": "boss 隨機 4 名玩家方向生 22.5° 扇形攻擊預兆，吟唱完成後擊退距離 + 水屬性魔法傷害。可抗擊退。", "tips": [{"text": "Surecast 抗擊退", "role": "tank"}]},
+      {"name": "衝洗 Drainage", "type": "spread", "description": "隨機 4 人點名圓形 AoE 預兆，3 秒後再次釋放 AoE。被點移動。", "tips": [{"text": "被點移", "role": "dps"}]},
+      {"name": "水合核心 Hydra Core add", "type": "add", "description": "boss 不可選中時水合核心出現，需快速擊殺；之後 boss 切換為手形態。", "tips": [{"text": "速秒 add", "role": "dps"}]},
+      {"name": "手形態 + 分身 Hand Form / Doppelganger", "type": "mechanic", "description": "手形態下 boss 生成『活水之手』分身，血量平分。兩者血量均不能低於 1。需平衡輸出。", "tips": [{"text": "雙 T 分接 + DPS 均輸", "role": "tank"}]},
+      {"name": "衝擊 Pressure (手形態)", "type": "knockback", "description": "場中央擊退攻擊，需 Surecast 抗或站場邊。", "tips": [{"text": "抗擊退或場邊", "role": "tank"}]}
+    ]}],
+    "mnemonic": ["電網 → 避場邊", "流體噴擊 → 站側後", "萬流水波 → 抗擊退", "手形態 → 分身平輸", "衝擊 → 抗擊退"]
+  }]
 }

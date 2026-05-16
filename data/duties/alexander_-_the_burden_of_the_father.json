@@ -1,77 +1,34 @@
 {
-    "id":  "alexander_-_the_burden_of_the_father",
-    "name":  "亞歷山大 起源之章4",
-    "nameEn":  "Alexander - The Burden of the Father",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）A4 = The Manipulator 操控者 + Faust 法烏斯特 add。",
-                     "2）Faust adds：場上 Faust 機甲 add → 集中殲滅。",
-                     "3）Cannon 加農炮：場邊雷射 AoE → 側閃。",
-                     "4）Possession 占據：玩家被控制 → 隊友打回解除。",
-                     "5）Final: Final Cannon enrage 全屏。"
-                 ],
-    "notes":  "HW 3.05 Alex Normal A4 - 起源之章 4 (Lv 60, ilvl 195)。The Manipulator 操控者 + Faust 群。",
-    "bosses":  [
-                   {
-                       "name":  "操控者",
-                       "nameEn":  "The Manipulator",
-                       "phases":  [
-                                      {
-                                          "name":  "A4 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Faust Adds 法烏斯特群",
-                                                                "type":  "add",
-                                                                "description":  "場上 Faust 機甲 add → 集中殲滅；DPS全力切目標殲滅add避免疊壓主戰。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS AoE 殲滅",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Cannon 加農炮",
-                                                                "type":  "aoe",
-                                                                "description":  "場邊雷射 AoE → 側閃；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "側閃"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Possession 占據",
-                                                                "type":  "mechanic",
-                                                                "description":  "玩家被控制攻擊隊友 → 隊友打回解除；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "打回去解控"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Faust Adds 法烏斯特群 → 速殺 add",
-                                        "Cannon 加農炮 → 走縫",
-                                        "Possession 占據 → 看預兆",
-                                        "Tankbuster 死刑 → MT 開減傷"
-                                    ]
-                   }
-               ]
+  "id": "alexander_-_the_burden_of_the_father",
+  "name": "亞歷山大機神城 啟動之章4",
+  "nameEn": "Alexander - The Burden of the Father",
+  "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 195,
+  "jobLevelSync": 60,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）集火攻擊左/右腿 → 一條消失後另一條恢復血",
+    "2）球形被點名者 → T/H 吃黑球避免加速",
+    "3）永恆射線 → 隨機目標激光",
+    "4）緊急隔離 → 被隔離者由 T 和 DPS 速殺小怪救出",
+    "5）致命強化 → 一條腿擊敗後 boss 目標化 10 秒，威力依擊敗腿量增加",
+    "6）零式判決：判決 α / β → 不同 Debuff 相撞會即死"
+  ],
+  "notes": "HW 3.0 機神城 啟動之章4（A4 普通）。Boss 操縱者（Manipulator）多腿機制 + 球形/激光/隔離。資料來源：灰機 亚历山大机神城 启动之章4/B + CGW Manipulator walkthrough。",
+  "bosses": [{
+    "name": "操縱者",
+    "nameEn": "Manipulator",
+    "phases": [{"name": "主戰", "mechanics": [
+      {"name": "腿部攻擊 Leg Strike", "type": "mechanic", "description": "集火攻擊左/右腿，一條消失後另一條恢復血。需分配 DPS 集火。", "tips": [{"text": "DPS 集火一腿", "role": "dps"}]},
+      {"name": "球形 + 黑球 Sphere", "type": "mechanic", "description": "場上球形被點名者，會被一個黑球跟隨。T 或治療去吃黑球擋傷害。沒擋會加速衝向目標。", "tips": [{"text": "T/H 吃黑球", "role": "tank"}]},
+      {"name": "永恆射線 Eternal Ray", "type": "aoe", "description": "boss 向隨機目標發射激光直線 AoE。", "tips": [{"text": "被點往場邊", "role": "dps"}]},
+      {"name": "緊急隔離 Emergency Isolation", "type": "add", "description": "玩家被隔離後 T + DPS 速殺小怪救出。", "tips": [{"text": "DPS 切目標救援", "role": "dps"}]},
+      {"name": "致命強化 + 標記 Mark", "type": "spread", "description": "一條腿擊敗後 boss 目標化 10 秒。被點玩家應拉到場邊或 T 後，等標記消失再移動。", "tips": [{"text": "被點不動等消", "role": "tank"}]},
+      {"name": "零式判決 α/β（普通版簡化）", "type": "mechanic", "description": "場上 Debuff α 和 β，不同 Debuff 玩家相撞會被判決『死刑』。需依 Debuff 分組站位。", "tips": [{"text": "α/β 同色相聚", "role": "tank"}]}
+    ]}],
+    "mnemonic": ["集火一條腿", "黑球 → T/H 擋", "永恆射線 → 跑邊", "判決 α/β → 同色聚"]
+  }]
 }
