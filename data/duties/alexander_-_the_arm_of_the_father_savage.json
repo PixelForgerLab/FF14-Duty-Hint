@@ -1,51 +1,34 @@
 {
-    "id":  "alexander_-_the_arm_of_the_father_savage",
-    "name":  "亞歷山大零式 起源之章 3 (零式)",
-    "nameEn":  "Alexander - The Arm of the Father (Savage)",
-    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Living Liquid：Physical Vulnerability Up",
-                     "2）Damage Down / ",
-                     "3）Damage Down"
-                 ],
-    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) other (Lv 60)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "increases physical damage taken by 50%.",
-                                                                "name":  "Physical Vulnerability Up 物理易傷上升",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "decreases damage dealt by 30%.",
-                                                                "name":  "Damage Down 傷害",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "活水",
-                       "nameEn":  "Living Liquid",
-                       "mnemonic":  [
-                                        "Physical Vulnerability Up",
-                                        "Damage Down"
-                                    ]
-                   }
-               ]
+    "id": "alexander_-_the_arm_of_the_father_savage",
+    "name": "亞歷山大零式 起源之章 3 (零式)",
+    "nameEn": "Alexander - The Arm of the Father (Savage)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）A1S = 活水 Living Liquid 零式。",
+        "2）Embolus 結晶：場上液態結晶 → 站特定位置吸收。",
+        "3）Hand of Pain 痛苦之手：場上分裂 → 雙 T 各拉一隻。",
+        "4）Hand of Prayer 祈禱之手：場上分裂 → 雙 T 各拉一隻。",
+        "5）Splash 飛濺：MT 直線 buster。",
+        "6）Tankbuster + Cleave 連環：T swap 必要。",
+        "7）Enrage：Drainage 全屏團滅。"
+    ],
+    "notes": "HW 3.05 Alex Savage A1S - 活水零式 (Lv 60, ilvl 200)。Living Liquid 零式版。",
+    "bosses": [
+        {
+            "name": "活水", "nameEn": "Living Liquid",
+            "phases": [{ "name": "A1S 主戰", "mechanics": [
+                { "name": "Embolus 結晶", "type": "mechanic", "description": "場上液態結晶 → 站特定位置吸收。", "tips": ["看位置吸結晶"] },
+                { "name": "Hand of Pain 痛苦之手", "type": "add", "description": "場上分裂痛苦之手 → MT 拉。", "tips": [{ "text": "MT 拉痛苦", "role": "tank" }] },
+                { "name": "Hand of Prayer 祈禱之手", "type": "add", "description": "場上分裂祈禱之手 → ST 拉。", "tips": [{ "text": "ST 拉祈禱", "role": "tank" }] },
+                { "name": "Splash 飛濺", "type": "tankbuster", "description": "MT 直線 buster。", "tips": [{ "text": "MT 大減傷 + ST swap", "role": "tank" }] },
+                { "name": "Drainage Enrage 排乾枯竭", "type": "raidwide", "description": "末段全屏 enrage。", "tips": [{ "text": "全員極限減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }

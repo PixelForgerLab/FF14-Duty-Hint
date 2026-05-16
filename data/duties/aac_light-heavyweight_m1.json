@@ -1,98 +1,36 @@
 {
-    "id":  "aac_light-heavyweight_m1",
-    "name":  "AAC 中量級 M1",
-    "nameEn":  "AAC Light-heavyweight M1",
-    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  100,
-    "highEnd":  false,
-    "quality":  "good",
-    "mnemonic":  [
-                     "1）Black Cat 黑貓 = 衝鋒 line + Cat Cleave 後 cone + 召小貓 add。",
-                     "2）Soul Vacuum 中央 PBAoE 跑外。",
-                     "3）Aether Spray 場上多 AoE 圈散。",
-                     "4）Mighty Roar 全屏。",
-                     "5）末段 Final Pounce 跳擊。"
-                 ],
-    "notes":  "DT 7.0 AAC Cruiserweight Normal 1 (Lv 100)。Black Cat 黑貓 boss。",
-    "bosses":  [
-                   {
-                       "name":  "黑貓",
-                       "nameEn":  "Black Cat",
-                       "phases":  [
-                                      {
-                                          "name":  "Black Cat",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Charge 衝鋒",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 衝鋒 line AoE。",
-                                                                "tips":  [
-                                                                             "側步閃"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Cat Cleave (後 cone)",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 後 cone AoE 尾擺。",
-                                                                "tips":  [
-                                                                             "站 boss 前或側"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Soul Vacuum 魂真空",
-                                                                "type":  "aoe",
-                                                                "description":  "中央 PBAoE → 跑外圈。",
-                                                                "tips":  [
-                                                                             "跑場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aether Spray 散",
-                                                                "type":  "spread",
-                                                                "description":  "場上多 AoE 圈散。",
-                                                                "tips":  [
-                                                                             "散避圈"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mighty Roar 全屏",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Summon Kitten add 援軍",
-                                                                "type":  "other",
-                                                                "description":  "召小貓 → DPS 殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 殺 add",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Final Pounce 末段",
-                                                                "type":  "aoe",
-                                                                "description":  "末段跳擊 PBAoE + 全屏。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "跑遠落點 + 全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "aac_light-heavyweight_m1",
+    "name": "AAC 中量級 M1 - 黑貓",
+    "nameEn": "AAC Light-heavyweight M1 - Black Cat",
+    "expansion": "7.x 黃金的遺產 (Dawntrail)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 100,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）AAC = 阿卡狄亞登天鬥技場 (Arcadion)；DT 7.0 raid 系列 1。",
+        "2）M1 = 黑貓 Black Cat (Wicked Thunder 0)。",
+        "3）One-Two Paw 一二爪：MT 雙重 buster。",
+        "4）Predaceous Pounce 捕食撲擊：點名玩家直線 → 場邊。",
+        "5）Mouser 老鼠戲弄：場上多老鼠 add → 速殺。",
+        "6）Catscratch 貓抓：場上多 AoE 圓 → 走縫。",
+        "7）Thunder Mechanic 雷霆機制：雷球 + 連線分散。",
+        "8）Final: Final Pounce 最終撲擊 enrage。"
+    ],
+    "notes": "DT 7.0 Normal raid - 阿卡狄亞登天鬥技場 中量級 1 (Lv 100, ilvl 720)。AAC 系列首戰，貓型 boss。",
+    "bosses": [
+        {
+            "name": "黑貓", "nameEn": "Black Cat",
+            "phases": [{ "name": "M1 主戰", "mechanics": [
+                { "name": "One-Two Paw 一二爪", "type": "tankbuster", "description": "MT 雙重 buster。", "tips": [{ "text": "MT 大減傷 + ST swap", "role": "tank" }] },
+                { "name": "Predaceous Pounce 捕食撲擊", "type": "aoe", "description": "點名玩家直線撲擊 → 場邊。", "tips": ["被點往場邊"] },
+                { "name": "Mouser 老鼠戲弄", "type": "add", "description": "場上多老鼠 add → 速殺。", "tips": [{ "text": "DPS AoE 殲滅", "role": "dps" }] },
+                { "name": "Catscratch 貓抓", "type": "aoe", "description": "場上多 AoE 圓 → 走縫。", "tips": ["走縫"] },
+                { "name": "Thunder Mechanic 雷霆機制", "type": "mechanic", "description": "雷球 + 連線分散。", "tips": ["看連線散開"] },
+                { "name": "Final Pounce 最終撲擊 (enrage)", "type": "raidwide", "description": "末段全屏 enrage。", "tips": [{ "text": "全員極限減傷", "role": "tank" }] }
+            ]}]
+        }
+    ]
 }
