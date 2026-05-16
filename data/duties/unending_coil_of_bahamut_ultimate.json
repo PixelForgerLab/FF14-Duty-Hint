@@ -2,32 +2,469 @@
     "id": "unending_coil_of_bahamut_ultimate",
     "name": "巴哈姆特絕境戰",
     "nameEn": "The Unending Coil of Bahamut (Ultimate)",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
     "type": "ultimate",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 345,
     "jobLevelSync": 70,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "FFXIV 第 1 個絕境戰 (5.0 開放)",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）P1 雙塔尼亞：Plummet/Twister/Fireball/Hatch；74%、44%、0% 各掉一個 Neurolink。",
+        "2）P2 奈爾·神·達納斯：聽語音判定組合技；五龍 Doom/Thunder/Fire/Ice。",
+        "3）P3 至尊巴哈姆特：六個 Trio（Quickmarch/Blackfire/Fellruin/Heavensfall/Tenstrike/Grand Octet）。",
+        "4）P3.5 雙頭目蓄力 (Adds)：必須 1 分鐘內擊殺雙塔+奈爾，否則 Teraflare 團滅。",
+        "5）P4 黃金巴哈姆特：5 次 Morn Afah 疊機 + 4 次 Akh Morn 遞增 + 4 次 Exaflare。",
+        "6）任何一人失誤 = 整團滅；P4 失誤 = Phoenix Buff 噴掉就團死。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "UCoB（簡稱「絕巴哈」），FFXIV 第一個絕境戰，5.0 開放，難度位於 Ultimate 系列中游。共 5 個階段 + 1 個過場：P1 雙塔尼亞、P2 奈爾·神·達納斯、P2.5 第七靈災過場、P3 至尊巴哈姆特、P3.5 雙頭目蓄力 (Adds)、P4 黃金巴哈姆特。資料來源：灰機 wiki + Console Games Wiki + Mr Happy 攻略。",
     "bosses": [
         {
-            "name": "Bahamut Prime",
-            "nameEn": "巴哈姆特究極形態",
-            "mnemonic": ["看 telegraph 預警"],
+            "name": "雙塔尼亞",
+            "nameEn": "Twintania",
+            "mnemonic": [
+                "74%、44%、0%：boss 位置掉 Neurolink，三人各踩一個拿拘束 buff。",
+                "Twister 綠龍捲：點名 4 人，原地掉龍捲踩到即死。",
+                "Fireball 紅標：DPS 被點，全員疊起來分擔。",
+                "Hatch 紫色三角：被點 DPS 踩 Neurolink 吃魔力壓縮體。"
+            ],
+            "notes": "100%→0% HP，三個血量檢查點 (74%/44%/0%) 各會掉一個 Neurolink。掉滿 3 個後進入 P2。",
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 一階段",
                     "mechanics": [
                         {
-                            "name": "標準機制",
+                            "name": "Plummet 垂直下落",
+                            "type": "tankbuster",
+                            "description": "對當前 1 仇正前方扇形高傷 AOE，斬擊屬性。",
+                            "tips": [
+                                { "text": "主 T 開減傷接，把 boss 面向場外避免掃到隊友", "role": "tank" },
+                                { "text": "Plummet 後預判補血", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Death Sentence 死刑",
+                            "type": "tankbuster",
+                            "description": "對 1 仇大傷單體，附加「斬擊耐性大幅降低」狀態。連續吃會被秒，必須換 T。",
+                            "tips": [
+                                { "text": "副 T provoke 接、主 T 副 T 互換", "role": "tank" },
+                                { "text": "可用無敵 (Living Dead/Hallowed Ground/Holmgang) 接", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Twister 旋風",
+                            "type": "spread",
+                            "description": "讀條結束時於隨機 4 名玩家當前位置生成綠色龍捲，踩到即死並大範圍擊退。",
+                            "tips": [
+                                "讀條時跑到場邊（4 角），讓龍捲掉外側",
+                                "確認自己沒被點再回中央",
+                                "龍捲附近站位要遠，被擊退進龍捲也是即死"
+                            ]
+                        },
+                        {
+                            "name": "Fireball 火球",
+                            "type": "stack",
+                            "description": "點名隨機 1 名 DPS，6 秒後對該玩家造成可分擔大傷。",
+                            "tips": [
+                                "全 8 人在被點玩家身上疊起",
+                                { "text": "Fireball 後立刻 AOE 補血", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Liquid Hell 液體地獄",
+                            "type": "aoe",
+                            "description": "對遠離 boss 的玩家連續噴 5 次火球，原地留下持續火圈，踩到附加火傷即死。",
+                            "tips": [
+                                "指派 1 名遠程 DPS（通常是物理遠程）走場邊誘導火圈",
+                                "其他人聚中央輸出 boss",
+                                "前次火圈位置記住下次別站"
+                            ]
+                        },
+                        {
+                            "name": "Generate / Hatch 魔力煉成 / 魔力壓縮體",
                             "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
+                            "description": "Generate 點名 1 名 DPS 紫色三角，boss 下方生成 1 個 Hatch 魔力壓縮體朝其移動。被點玩家需踩 Neurolink 吃球；無 Neurolink buff 接到 = 全體秒殺。44% 後變成 2 個球。",
+                            "tips": [
+                                { "text": "被點 DPS 立刻進入 Neurolink puddle 等球", "role": "dps" },
+                                "其他人遠離 Neurolink 避免被波及",
+                                { "text": "Neurolink 不夠人 → 補位讓人去吃", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Neurolink 拘束裝置",
+                            "type": "other",
+                            "description": "74%、44%、0% HP 時 boss 當前位置掉落 Neurolink puddle。踩入獲得「拘束裝置」buff，可在 P2 抗 Hatch 爆炸；P3.5 蓄力階段需要 8 人都有 buff。",
+                            "tips": [
+                                { "text": "T 把 boss 拉到預定點再讓掉 Neurolink", "role": "tank" },
+                                "3 個 Neurolink 位置通常設在場地特定點（如 NW/NE/S）",
+                                "全員都要踩過至少一個拿 buff"
+                            ]
+                        },
+                        {
+                            "name": "Aether Ignition 以太失控 (Enrage)",
+                            "type": "raidwide",
+                            "description": "P1 狂暴技，0% 前未進入 P2 則團滅。",
+                            "tips": ["DPS check 約 6 分鐘"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "奈爾·神·達納斯",
+            "nameEn": "Nael deus Darnus",
+            "mnemonic": [
+                "聽奈爾語音判定技能組合（共 8 種，月光 / 鋼鐵 / 凶鳥 / 超新星）。",
+                "Heavensfall：場中柱子 + 16 等分熱離子爆發環形 AOE。",
+                "5 條小龍登場：冰爪/火角/雷翼/光牙/暗尾 各自有點名機制。",
+                "Lunar Dive 低溫俯衝：5 龍依序俯衝，按 boss 出現位置順/逆時針。"
+            ],
+            "notes": "P2 開始於 P1 boss 死亡後。奈爾語音是核心：「月光啊！用你的熾熱燒盡敵人！」= Lunar Dynamo + Thermionic Beam 等。共 8 種組合需熟記。",
+            "phases": [
+                {
+                    "name": "P2 奈爾本體",
+                    "mechanics": [
+                        {
+                            "name": "Heavensfall 天崩地裂",
+                            "type": "raidwide",
+                            "description": "場中央落下 Dalamud 諸神黃昏柱，小範圍擊退所有玩家，柱上踩到即死；同時場地分 16 等分發光熱離子爆發。",
+                            "tips": [
+                                "預判被擊退方向，找安全格落地",
+                                "第一次未發光的格在第二次發光，必須移動"
+                            ]
+                        },
+                        {
+                            "name": "Bahamut's Claw 巴哈姆特之爪",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 5 連擊高傷單體。",
+                            "tips": [
+                                { "text": "主 T 開減傷 + 副 T 準備 cover", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Ravensbeak 凶鳥尖喙",
+                            "type": "tankbuster",
+                            "description": "對 1 仇極高傷單體，附加「突刺耐性大幅降低」狀態。",
+                            "tips": [
+                                { "text": "兩 T 換手吃，避免疊兩層 debuff", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Dragon's Boon 龍神的加護",
+                            "type": "other",
+                            "description": "讀條後奈爾獲得傷害提高 buff，召喚 5 條小龍（冰爪/火角/雷翼/光牙/暗尾）登場。",
+                            "tips": ["此刻準備迎接小龍機制連發"]
+                        },
+                        {
+                            "name": "Quote Combos 語音組合技",
+                            "type": "other",
+                            "description": "奈爾說話判定接下來 2 個技能組合（共 8 種），如「月光啊！用你的熾熱燒盡敵人！」= 月流電圈 (donut) + 熱離子光束 (line)。",
+                            "tips": [
+                                "閉嘴聽 / 看字幕，記下兩個技能順序",
+                                "月流電圈 (Lunar Dynamo)：donut，貼身安全",
+                                "鋼鐵戰車 (Iron Chariot)：proximity，遠離安全",
+                                "凶鳥衝 (Dalamud/Raven's Dive)：跳擊退",
+                                "熱離子光束 (Thermionic Beam)：點名分擔",
+                                "超新星 (Hypernova)：跳俯衝 + 留黑圈"
+                            ]
+                        },
+                        {
+                            "name": "Meteor Stream 隕石流",
+                            "type": "spread",
+                            "description": "點名 4 名玩家小範圍 AoE，隨後再點名剩餘 4 名。",
+                            "tips": ["8 人 clock 位散開"]
+                        },
+                        {
+                            "name": "Megaflare 百萬核爆",
+                            "type": "raidwide",
+                            "description": "P2 末段全體 AOE 收尾。",
+                            "tips": [
+                                { "text": "減傷 + 補滿血", "role": "healer" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 小龍機制",
+                    "mechanics": [
+                        {
+                            "name": "Thunderstruck 雷光鏈（雷翼 Thunderwing）",
+                            "type": "spread",
+                            "description": "點名 2 名玩家，5 秒後以其自身為中心放小範圍 AOE（對自己無效，對他人致命）。",
+                            "tips": ["被點者拉開到場邊", "未被點不要靠近"]
+                        },
+                        {
+                            "name": "Fireball 烈火球（火角 Firehorn）",
+                            "type": "stack",
+                            "description": "連線 1 名玩家，圓形 AOE 附加「火角」debuff，再吃會秒殺。冰爪可解。",
+                            "tips": ["連線者帶到隊伍，4 人分擔", "已有冰爪 buff 者進來吃可同時解掉"]
+                        },
+                        {
+                            "name": "Iceball 寒冰球（冰爪 Iceclaw）",
+                            "type": "spread",
+                            "description": "點名 1 名玩家小傷，附加「冰爪」debuff，再吃會秒殺。火角可解。",
+                            "tips": ["被點者拉開散開", "已有火角者上前吃可解掉"]
+                        },
+                        {
+                            "name": "Death Throes 死亡風暴（暗尾 Tailscream）",
+                            "type": "other",
+                            "description": "點名 3 名玩家附加 6/10/16 秒「死亡宣告」debuff，倒數到 0 死亡。只能用光牙救世之翼解。",
+                            "tips": [
+                                { "text": "Doom 短的先進光圈", "role": "healer" },
+                                "排好進光圈順序"
+                            ]
+                        },
+                        {
+                            "name": "Wings of Salvation 救世之翼（光牙 Fang of Light）",
+                            "type": "other",
+                            "description": "點名 1 名玩家腳下出現光圈，爆炸後留下解 Doom 用的光圈。",
+                            "tips": ["被點者把光圈擺在合適位置", "Doom 玩家進入解除"]
+                        },
+                        {
+                            "name": "Lunar Dive 低溫俯衝（5 龍合作）",
+                            "type": "aoe",
+                            "description": "點名 3 名玩家、5 龍按 boss 位置順/逆時針依序俯衝。boss 在正點 = 逆時針，在斜點 = 順時針。",
+                            "tips": [
+                                "被點者跑場邊定點",
+                                "看 boss 位置確認順 / 逆時針",
+                                "點名消失時的玩家位置會被衝"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "至尊巴哈姆特",
+            "nameEn": "Bahamut Prime",
+            "mnemonic": [
+                "Quickmarch Trio 進軍：百萬核爆衝直線 + 雙塔旋風衝 + 奈爾月流衝。",
+                "Blackfire Trio 黑炎：4 柱必踩否則團滅 + 雙塔 5 連液體地獄。",
+                "Fellruin Trio 災厄：奈爾語音 + 雙塔以太失控 (Neurolink 抗)。",
+                "Heavensfall Trio 天地：8 柱 + Hypernova + 火球 + 十億核爆。",
+                "Tenstrike Trio 連擊：雙塔 6 顆球 + 奈爾 8 連隕石 + 雙大地搖動。",
+                "Grand Octet 群龍八重奏：全 8 人各被點 1 次俯衝，順序固定。"
+            ],
+            "notes": "P3 至尊巴哈姆特的核心是 6 個 Trio。每個 Trio 是雙塔、奈爾、巴哈三隻一起的組合技。Grand Octet 是 P3 的最終考驗：8 人位置與 5 龍 + 3 boss 的俯衝順序需精準對齊。",
+            "phases": [
+                {
+                    "name": "P3 基礎技能",
+                    "mechanics": [
+                        {
+                            "name": "Flare Breath 核爆吐息",
+                            "type": "aoe",
+                            "description": "對 1 仇前方大範圍扇形攻擊。",
+                            "tips": [
+                                { "text": "主 T 把 boss 面向場外", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Flatten 夷為平地",
+                            "type": "tankbuster",
+                            "description": "對 1 仇高額單體傷害。",
+                            "tips": [
+                                { "text": "開減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Gigaflare 十億核爆",
+                            "type": "raidwide",
+                            "description": "全體 AOE 大傷。",
+                            "tips": [
+                                { "text": "全體減傷 + 滿血", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Earth Shaker 大地搖動",
+                            "type": "aoe",
+                            "description": "點名 2 名補職 + 未被點分擔的 DPS，造成土屬性扇形 AOE + 留下污泥圓圈。",
+                            "tips": [
+                                "被點者跑到指定方位散開（北/東/西）",
+                                "扇形不要互相重疊"
+                            ]
+                        },
+                        {
+                            "name": "Tempest Wing 風暴之翼",
+                            "type": "aoe",
+                            "description": "連線 2 名玩家，可截斷，一定時間後圓形 AOE。",
+                            "tips": [
+                                { "text": "T 接連線跑到場邊", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 六大 Trio",
+                    "mechanics": [
+                        {
+                            "name": "Quickmarch Trio 進軍的三重奏",
+                            "type": "aoe",
+                            "description": "至尊巴哈百萬核爆衝直線 + 隨後 4 人腳下圓形 AoE + 4 人小 AoE + 3 人疊機；雙塔旋風衝；奈爾月流衝。",
+                            "tips": ["三條直線等距分散站位", "預判俯衝方向 + 移動到落點外"]
+                        },
+                        {
+                            "name": "Blackfire Trio 黑炎的三重奏",
+                            "type": "other",
+                            "description": "巴哈生成 4 柱（必踩否則團滅）+ 奈爾熱離子 + 雙塔 5 連液體地獄。",
+                            "tips": [
+                                "1T1H2D 各踩一柱",
+                                "未踩柱者準備分擔熱離子",
+                                "雙塔火圈走場邊"
+                            ]
+                        },
+                        {
+                            "name": "Fellruin Trio 災厄的三重奏",
+                            "type": "other",
+                            "description": "三 boss 等邊三角站位；奈爾固定 2 種語音 + 雙塔讀條以太失控（Neurolink buff 可降傷）。",
+                            "tips": [
+                                "全員 Neurolink buff 必須有",
+                                "聽奈爾語音判定接下來技能",
+                                "Tempest Wing 截斷分配給 T"
+                            ]
+                        },
+                        {
+                            "name": "Heavensfall Trio 天地的三重奏",
+                            "type": "other",
+                            "description": "8 柱（場邊）+ Heavensfall（中央柱擊退）+ Hypernova（3 次點名）+ Fireball + Gigaflare 收尾。",
+                            "tips": [
+                                "8 人各踩一柱",
+                                "踩柱前先預判 Heavensfall 擊退方向",
+                                "Hypernova 走場邊誘導",
+                                "Fireball 全員疊"
+                            ]
+                        },
+                        {
+                            "name": "Tenstrike Trio 連擊的三重奏",
+                            "type": "other",
+                            "description": "雙塔點名 3 DPS Generate 共 6 顆球 + 奈爾雙生子 8 人 Meteor Stream + 至尊兩波 Earth Shaker（先 4 後 4）。",
+                            "tips": [
+                                "3 名 DPS 進 3 個 Neurolink 吃球",
+                                "8 人 clock 位散開吃隕石",
+                                "Earth Shaker：先 4 人北/東/西/南扇形，第二波換 4 人"
+                            ]
+                        },
+                        {
+                            "name": "Grand Octet 群龍的八重奏",
+                            "type": "other",
+                            "description": "5 龍 + 3 boss 隨機站場周圍。每個玩家被點 1 次俯衝。順序：奈爾 → 5 龍（按巴哈位置順/逆時針） → 巴哈 → 雙塔。最後 Megaflare + 柱子。",
+                            "tips": [
+                                "標記巴哈位置決定龍俯衝方向",
+                                "看俯衝標記出現/消失瞬間的位置 = 落點",
+                                "未被點玩家最後跑去雙塔旁邊誘導 + Megaflare 疊機"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "雙頭目蓄力 (Adds Phase)",
+            "nameEn": "Adds Phase (Twintania + Nael)",
+            "mnemonic": [
+                "巴哈在北方蓄力 Teraflare，1 分鐘讀條到 100% = 團滅。",
+                "雙塔 (40% HP) + 奈爾 (45% HP) 必須同時擊殺，差太多會啟動狂暴。",
+                "技能順序固定：垂直下落 → 液體地獄 → 旋風 → 奈爾語音 → 死刑 → 凶鳥尖喙。"
+            ],
+            "notes": "巴哈姆特在正北放置 Teraflare 蓄力條。雙 T 各拉一隻 boss 背靠背 tank，DPS 必須同時推血。任一 boss 先死另一個會啟動 Twin Fury / Nael's Fury 補滿血變狂暴。Teraflare 100% 強制團滅；正常擊殺後玩家全倒，巴哈姆特放 Teraflare 但不死，進入 P4 黃金巴哈。",
+            "phases": [
+                {
+                    "name": "P3.5 Adds 蓄力",
+                    "mechanics": [
+                        {
+                            "name": "Teraflare 萬億核爆 (蓄力條)",
+                            "type": "raidwide",
+                            "description": "正北的至尊巴哈姆特持續蓄力，1 分鐘左右滿。100% 強制團滅。",
+                            "tips": [
+                                { "text": "DPS 全力 burst 雙塔 + 奈爾", "role": "dps" },
+                                "兩隻血量差 < 5% 否則先死的會 fury"
+                            ]
+                        },
+                        {
+                            "name": "雙塔技能順序",
+                            "type": "other",
+                            "description": "垂直下落 → 五連液體地獄 + 魔力煉成 (3 球) + 旋風 → 死刑 → 重複。",
+                            "tips": [
+                                { "text": "MT 拉雙塔背向場外", "role": "tank" },
+                                "魔力煉成：3 DPS 各進 Neurolink 吃球",
+                                "旋風時 4 人散外圍"
+                            ]
+                        },
+                        {
+                            "name": "奈爾固定語音",
+                            "type": "other",
+                            "description": "奈爾說兩組固定語音之一（鋼鐵+熱離子+凶鳥衝 或 月流+鋼鐵+凶鳥衝），第二次選另一組。",
+                            "tips": [
+                                "聽完整 3 個技能順序",
+                                "凶鳥尖喙 (Ravensbeak)：兩 T 換手吃"
+                            ]
+                        },
+                        {
+                            "name": "Twin Fury / Nael's Fury 狂暴",
+                            "type": "raidwide",
+                            "description": "若雙塔/奈爾任一先死，另一隻獲得「受傷減輕 + 傷害提高」狂暴。",
+                            "tips": ["兩隻同時推到死，差距越小越好"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "黃金巴哈姆特",
+            "nameEn": "Golden Bahamut",
+            "mnemonic": [
+                "Phoenix 復活全員 + 不死鳥之加護 (死一次就掉 = 失敗)。",
+                "Morn Afah 無盡頓悟：可分擔的高傷，5 次。",
+                "Akh Morn 死亡輪迴：4 次，傷害分別為 3/4/5/6 段疊機（兩人分擔）。",
+                "Exaflare 百京核爆：4 次步進式線 AOE，看落點預判。",
+                "失誤就死，死了沒有 Phoenix 加護就回不來。"
+            ],
+            "notes": "P4 是 UCoB 終局。Phoenix 出現復活全員並給予不死鳥之加護 buff（極限槽充滿），但玩家死亡後 buff 永久失效，無法復活。技能有限但分擔精準度極高。",
+            "phases": [
+                {
+                    "name": "P4 黃金巴哈",
+                    "mechanics": [
+                        {
+                            "name": "Phoenix's Rebirth 轉生之炎",
+                            "type": "raidwide",
+                            "description": "不死鳥出現，復活全員、回滿血、附加「不死鳥之加護」buff，極限槽充滿。",
+                            "tips": [
+                                "立刻檢查 buff 是否在身上",
+                                "進入 P4 後絕對不能死"
+                            ]
+                        },
+                        {
+                            "name": "Morn Afah 無盡頓悟",
+                            "type": "stack",
+                            "description": "可分擔的高傷，第 5 次後變即死技。共 5 次。",
+                            "tips": [
+                                "全員疊起",
+                                { "text": "全體減傷 + 大盾", "role": "healer" },
+                                { "text": "後段疊機開 LB3", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Akh Morn 死亡輪迴",
+                            "type": "stack",
+                            "description": "對 1 仇圓形 AOE，可與另一人分擔。每次發動段數遞增：3/4/5/6 段。共 4 次。",
+                            "tips": [
+                                { "text": "兩 T 站近分擔", "role": "tank" },
+                                "段數越多越要減傷"
+                            ]
+                        },
+                        {
+                            "name": "Exaflare 百京核爆",
+                            "type": "aoe",
+                            "description": "從 8 方位隨機 1 個方位射出，3 輪 × 2 組步進式線 AOE。共 4 次。",
+                            "tips": [
+                                "看箭頭預判前進方向，跑垂直方向",
+                                "別撞牆，下一輪線可能還會掃過"
+                            ]
+                        },
+                        {
+                            "name": "Morn Afah 第 5 次 Enrage",
+                            "type": "raidwide",
+                            "description": "第 5 次 Morn Afah 後讀條更長的 Morn Afah 對 1 仇秒殺，連鎖直到全員陣亡。",
+                            "tips": ["最終 DPS 檢查約 17 分鐘整場"]
                         }
                     ]
                 }

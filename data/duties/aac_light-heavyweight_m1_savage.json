@@ -8,53 +8,238 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）保留 normal 機制（4x4 格、Mouser、Elevate）+ Savage 強化。",
-        "2）Soulshade：分身複製機制；Nine Lives 把機制存起來延後爆。",
-        "3）Quadruple Crossing：4 個錐 AoE 點最近 4 人，需誘導 + 後追擊掩體閃避。",
-        "4）Biscuit Maker 連發要換手或無敵；DPS 與補職輪流誘導 AoE。",
-        "5）詳細路徑請參考 Hector Hectorson 動畫攻略。"
+        "1）開局：Quadruple Crossing 四連尖甲（4 人誘導扇形）。",
+        "2）One-two Paw 二連尖甲：看 boss 哪邊爪發光，先閃發光側、再閃對側。",
+        "3）Nine Lives 貓生九命：boss 把下一招存起來，由 Soulshade 靈魂之影分身代放。",
+        "4）Mouser 捕鼠：4x4 格地板被啃壞；4 連 Elevate 騰身開膛要看分身左/右手。",
+        "5）Raining Cats 傾盆大貓：4 連連線扇形 + 圓形分擔。",
+        "6）詳細路徑強烈建議搭配 Hector Hectorson 動畫攻略。"
     ],
-    "notes": "DT 7.05 AAC 輕量級 1 零式（Lv 100，ilvl 700）。Black Cat Savage。Soulshade 分身 + Nine Lives 存招機制為特色。詳細請參考 Hector Hectorson 攻略。",
+    "notes": "DT 7.05 AAC 輕量級 1 零式 (M1S, Lv 100, ilvl 700, 鎖點 480)。Black Cat (黑貓) Savage。核心特徵：Nine Lives 把機制「儲存」起來、Soulshade 召喚分身代放、One-two Memory + Two-swipe Memory 雙重記憶機制。可規避傷害會疊「傷害降低 -25%」（每層 30 秒，疊 4 層基本就死了）。資料來源：灰機 wiki + ConsoleGamesWiki + Hector Hectorson 攻略。",
     "bosses": [
         {
             "name": "黑貓",
             "nameEn": "Black Cat",
-            "mnemonic": ["Soulshade 分身複製", "Nine Lives 存招", "Quadruple Crossing 4 人誘導"],
+            "mnemonic": [
+                "Nine Lives 猫生九命：存招到 Soulshade 之後爆。",
+                "One-two Paw 二連尖甲：左右爪輪發光，先閃發光側。",
+                "Soulshade 靈魂之影：分身 135° 站位，會放存的招。",
+                "Quadruple Crossing 四連尖甲：4 人誘導 + 補職/DPS 輪流。",
+                "Double Swipe = 雙補疊機；Quadruple Swipe = DPS 或 補職 對對疊。",
+                "Mouser + Elevate：分身左手 = 砸碎當前格；右手 = 擊飛到前一格。"
+            ],
+            "notes": "場地為 4x4 格。被點到 4 連尖甲的玩家會吃斬擊耐性降低 4s debuff（第二發無法再吃同一人）。建議先指派 clock 位（DPS 斜角、補職正點）。Hector Hectorson 動畫攻略：https://youtu.be/9UB5x8JzAiQ",
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "Phase 1 一般機制",
                     "mechanics": [
                         {
-                            "name": "Quadruple Crossing",
-                            "type": "aoe",
-                            "description": "最近 4 人錐 AoE 高物理傷 + 切下 debuff；連續 2 次（DPS 誘導 → 補職誘導），再有 2 組地面預警 AoE。",
-                            "tips": ["DPS 站 intercardinal 內 hitbox 誘導", "補職站 cardinal 外", "再交換"]
-                        },
-                        {
-                            "name": "Biscuit Maker",
+                            "name": "踩奶 / Biscuit Maker",
                             "type": "tankbuster",
-                            "description": "高傷物理 + 切下，連續 2 次需換手或無敵。",
-                            "tips": [{ "text": "換手或無敵", "role": "tank" }]
+                            "description": "對 1 仇單體高傷物理斬擊，附加 4 秒「斬擊耐性降低」。間隔 2 秒連續 2 次，必須換手或無敵。",
+                            "tips": [
+                                { "text": "兩 T 換手吃；或主 T 用無敵 (Living Dead/Hallowed Ground/Holmgang)", "role": "tank" },
+                                { "text": "TBN/Will/Heart 也可，但要記得補回奶量", "role": "tank" },
+                                { "text": "T 受擊瞬間連 GCD 補 + 盾", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Nine Lives + One-two Paw + Soulshade",
-                            "type": "aoe",
-                            "description": "Boss 把 One-two Paw 存起來 + 2 個分身（135 度差）也複製同樣模式。需依序解：分身先放 + Boss 再放。",
-                            "tips": ["先閃分身兩段", "再閃 Boss 存的兩段"]
+                            "name": "血腥抓撓 / Bloody Scratch",
+                            "type": "raidwide",
+                            "description": "全屏物理 AOE。",
+                            "tips": [
+                                { "text": "全體減傷 + 預判補血", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Double / Quadruple Swipe",
-                            "type": "stack",
-                            "description": "Double = 雙補疊機（光小隊分組）；Quadruple = DPS 或補職整組疊（搭配指派 pair）。",
-                            "tips": ["看顏色判斷哪組", "依指派 pair 站位"]
-                        },
-                        {
-                            "name": "Mouser (Savage)",
+                            "name": "貓生九命 / Nine Lives",
                             "type": "other",
-                            "description": "4x4 格部分破壞，需要更精細的觀察 9 段預警。",
-                            "tips": ["跟 normal 同理但反應更快"]
+                            "description": "Boss 自身獲得「貓生九命」buff，將接下來釋放的技能存儲為延後爆發用的記憶。",
+                            "tips": [
+                                "看到 buff 就要記住 boss 接下來做什麼，會在 Soulshade 階段重現"
+                            ]
+                        },
+                        {
+                            "name": "靈魂之影 / Soulshade",
+                            "type": "other",
+                            "description": "召喚 2 個無法選中的分身（彼此夾角 135°，一個正點、一個斜點），分身會把 Nine Lives 存的技能複製出來。分身有橙色環標示朝向。",
+                            "tips": [
+                                "兩個分身各自會放「上次存的」One-two Paw",
+                                "玩家先站在兩分身的左/右側閃第一段",
+                                "再橫穿中央閃第二段"
+                            ]
+                        },
+                        {
+                            "name": "四連尖甲 / Quadruple Crossing",
+                            "type": "aoe",
+                            "description": "對最近 4 名玩家放扇形物理 AOE + 4 秒斬擊耐性降低。連續 2 次（同人吃第二發會疊死）。之後在原地依序放 2 次「後追」扇形 AOE。",
+                            "tips": [
+                                { "text": "T 拉好 boss 位置；DPS 先進 hitbox 內 4 角誘導第一發", "role": "tank" },
+                                { "text": "DPS 4 人各占一個斜角 (intercardinal)，補職遠離", "role": "dps" },
+                                { "text": "支援職第二發換進來誘導", "role": "healer" },
+                                "之後 4 人退到 cardinal 閃後追的兩波"
+                            ]
+                        },
+                        {
+                            "name": "貓跳四連尖甲 / Leaping Quadruple Crossing",
+                            "type": "aoe",
+                            "description": "Boss 連線到東或西側某點，平移過去後再放 Quadruple Crossing。boss 朝向不變。",
+                            "tips": [
+                                "看 boss 連線方向預判新位置",
+                                "第二發誘導時記得處理上次存的 Double/Quadruple Swipe（依 Two-swipe Memory 決定）"
+                            ]
+                        },
+                        {
+                            "name": "二連尖甲 / One-two Paw",
+                            "type": "aoe",
+                            "description": "左右爪按隨機順序發光，按順序放半場物理 AOE，附加 15 秒「持續傷害」。第一次的順序會被 Nine Lives 存到 One-two Memory，Soulshade 階段重現。",
+                            "tips": [
+                                "看哪邊爪先亮 → 先閃哪邊",
+                                "**記住順序**！等等 Soulshade 分身會重放",
+                                "持續傷害 debuff 15 秒，期間別吃任何二次傷害"
+                            ]
+                        },
+                        {
+                            "name": "貓跳二連尖甲 / Leaping One-two Paw",
+                            "type": "aoe",
+                            "description": "Boss 平移到連線地點再放 One-two Paw。",
+                            "tips": ["處理同 One-two Paw，但需考慮新位置"]
+                        },
+                        {
+                            "name": "雙重利爪 / Double Swipe",
+                            "type": "stack",
+                            "description": "對兩名補職放需 4 人分擔的圓形物理 AOE，附加 2s 物理受傷加重。",
+                            "tips": [
+                                { "text": "兩補各帶光小隊（指派 H1 + 2DPS, H2 + 2DPS）", "role": "healer" },
+                                { "text": "T 跟補職同隊一起接", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "四重利爪 / Quadruple Swipe",
+                            "type": "stack",
+                            "description": "對 4 名 DPS 或 4 名支援職放需 2 人分擔的圓形物理 AOE，附加 2s 物理受傷加重。",
+                            "tips": [
+                                { "text": "支援職組成 4 人或 DPS 組成 4 人，依指派 pair 接", "role": "dps" },
+                                "看誰被點 → 對應 pair 一起站"
+                            ]
+                        },
+                        {
+                            "name": "暴風裂 / Hurricane Cut",
+                            "type": "stack",
+                            "description": "對兩名補職放可分擔的直線魔法 AOE，附加 2s 魔法受傷加重。",
+                            "tips": [
+                                { "text": "兩補各帶 1 名 DPS 分擔", "role": "healer" },
+                                "其他人遠離直線"
+                            ]
+                        },
+                        {
+                            "name": "剪指甲 / Trim",
+                            "type": "spread",
+                            "description": "釋放 2 次，每次對 4 名支援職或 4 名 DPS 釋放圓形魔法 AOE，附加 4s 魔法受傷加重。",
+                            "tips": [
+                                "依指派分散到 8 人 clock 位",
+                                "DPS 與支援職輪流接，注意 debuff 重疊"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2 捕鼠 / Mouser",
+                    "mechanics": [
+                        {
+                            "name": "捕鼠 / Mouser",
+                            "type": "other",
+                            "description": "場地出現紅色預警，boss 依序攻擊地板 10 次（5 組 × 2 格），地板被打 2 次就破裂，玩家會跌死。共 2 次 Mouser，第 3 次直接破壞所有地板團滅。",
+                            "tips": [
+                                "場地預設只有 2 種固定 pattern",
+                                "通常起手站西南角，被打 1 次後跳東南",
+                                "兩次 Mouser 之間中央 2 列或 2 行會被梅特莫修復"
+                            ]
+                        },
+                        {
+                            "name": "騰身開膛 / Elevate and Eviscerate",
+                            "type": "other",
+                            "description": "由模仿貓 (Copy Cat) 連續讀條 4 次，點名 4 名角色頭頂貓爪標記。讀條時看分身手部發光：左手 = 砸碎當前格 + 十字衝擊波；右手 = 瞬移背後擊飛玩家一格的距離。",
+                            "tips": [
+                                "**看分身左/右手**！左 = 不動、右 = 被擊飛",
+                                { "text": "被點玩家事先站在安全格邊緣，朝向沒被破壞的格子，這樣不管左/右手都不會掉場外", "role": "dps" },
+                                "落地會把當前格再破壞 1 段，若該格已碎 → 落點消失",
+                                "未被點的 T/H/D 各 1 名會吃 碎裂尖甲 扇形，4 人散開分配"
+                            ]
+                        },
+                        {
+                            "name": "碎裂尖甲 / Shattering Crosscut",
+                            "type": "aoe",
+                            "description": "對未被 Elevate 點名的 T、H、D 各 1 名玩家放扇形物理 AOE，附加 2s 斬擊耐性降低。",
+                            "tips": [
+                                "未被點的支援職 + 未被點的 DPS 拉開散開放扇形"
+                            ]
+                        },
+                        {
+                            "name": "超暗影 / Overshadow",
+                            "type": "stack",
+                            "description": "對 1 名補職放可分擔的直線魔法 AOE。",
+                            "tips": [
+                                { "text": "補職帶 4 人分擔", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "衝擊波 / Shockwave",
+                            "type": "other",
+                            "description": "場中為心的遠距離擊退（防擊退無效），擊退前任意對角的 4 塊地板會先修復，擊退後修復全部地板；同時點名所有玩家圓形魔法 AOE「貓怪突風」。",
+                            "tips": [
+                                "看擊退方向預判落地格",
+                                "落地後立刻散開避免「貓怪突風」重疊",
+                                { "text": "8 人 clock 位散開", "role": "dps" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3 傾盆大貓 / Raining Cats",
+                    "mechanics": [
+                        {
+                            "name": "傾盆大貓 / Raining Cats",
+                            "type": "aoe",
+                            "description": "連續讀條並釋放 4 次。每次生成 2 條可被截走的連線；釋放時對連線玩家放 30° 扇形物理斬擊（+ 20s 斬擊耐性降低），同時對距離最近 + 最遠的玩家放可分擔圓形魔法 AOE。",
+                            "tips": [
+                                "兩 T 各搶 1 條連線（截走避免 DPS 中招）",
+                                { "text": "MT/OT 拉連線到指定點放扇形", "role": "tank" },
+                                "近 + 遠玩家配對接圓形分擔",
+                                "扇形落點 4 次按順序輪轉"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 4 迅貓急襲 / Sneak Stomp 連發",
+                    "mechanics": [
+                        {
+                            "name": "模仿之貓 / Copy Cat",
+                            "type": "other",
+                            "description": "召喚分身模仿貓 (Copy Cat)。",
+                            "tips": ["分身會接著放 迅貓急襲"]
+                        },
+                        {
+                            "name": "迅貓急襲 / Sneak Stomp",
+                            "type": "aoe",
+                            "description": "由 Copy Cat 讀條釋放，讀條期間場地出現多次直線衝鋒路徑 + 圓形攻擊範圍預示，按順序進行多段攻擊。",
+                            "tips": [
+                                "預警顯示時記下「衝鋒線 → 圓形 → 衝鋒線 → 圓形」順序",
+                                "找始終安全的位置走（通常場地對角）",
+                                { "text": "全員減傷準備吃連發", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "最終整合",
+                            "type": "other",
+                            "description": "Soulshade 最終會把前面所有 stored 機制連發出來：One-two Memory + Two-swipe Memory + Quadruple Crossing。讀條結束前必須擊殺否則 Bloody Scratch 強化版團滅。",
+                            "tips": [
+                                "回想前面存了什麼順序",
+                                { "text": "DPS 在最後 30% 全力 burst", "role": "dps" }
+                            ]
                         }
                     ]
                 }
