@@ -1,128 +1,158 @@
 {
-    "id": "anabaseios_the_eleventh_circle_savage",
-    "name": "萬魔殿 天獄之闕零式3",
-    "nameEn": "Anabaseios: The Eleventh Circle (Savage)",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 90,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P11S Themis = Styx 多段集合，每次 +1 段 (5→6→7→8 段)。",
-        "2）Arcane Revelation 光/暗 = 4 球同色 = 同色危險、不同 = 光暗對位。",
-        "3）Shadowed Messengers + Jury Overruling = 看 boss 元素 + 順時或逆時鐘位處理。",
-        "4）Lightstream = 3 個圓筒 120° 持續 AoE。",
-        "5）Dark and Light = 補/DPS tether 對；光黃暗紫；雙 tether 表 = 兩種都對。",
-        "6）Divisive Overruling / Upheld Overruling = 分割或維持判決，配 tether 解。",
-        "7）Dark Current = 3 圓 AoE + 旋轉粉色弧 (順/逆) 預示移動。",
-        "8）Letter of the Law + 最終 Styx 8 段 → 狂暴 Ultimate Verdict。"
-    ],
-    "notes": "EW 6.4 P11 Savage (Lv 90, ilvl 650)。Themis 法官 boss。光暗對位 + tether 分組。",
-    "bosses": [
-        {
-            "name": "忒彌斯",
-            "nameEn": "Themis",
-            "mnemonic": [
-                "Styx 多段集合 (5/6/7/8)。",
-                "Arcane Revelation 光暗 = 對位處理。",
-                "Dark and Light = tether 顏色決定走位。",
-                "Letter of the Law = 末段組合機制鏈。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - Styx / Revelation / Messengers",
-                    "mechanics": [
-                        {
-                            "name": "Styx 冥河",
-                            "type": "stack",
-                            "description": "多段強力 stack 集合分擔 (5/6/7/8 段遞增)，需 light party 集中 + 強補。",
-                            "tips": [
-                                "全員集合分擔",
-                                { "text": "段數越高需越強減傷 + 連補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Arcane Revelation 奧義啟示",
-                            "type": "other",
-                            "description": "Boss 染光或暗 → 召 4 球 (Arcane Spheres) 於相鄰兩 cardinal，依 boss 元素 + 球色決定光暗對位。",
-                            "tips": ["光 boss + 光球 = 危險；暗 boss + 暗球 = 危險"]
-                        },
-                        {
-                            "name": "Shadowed Messengers 影使",
-                            "type": "other",
-                            "description": "兩個 Illusory Themis 在 intercardinal 出現開始機制鏈；玩家依時鐘位處理。",
-                            "tips": ["固定時鐘位 + 看 Themis 對位"]
-                        },
-                        {
-                            "name": "Jury Overruling 陪審否決",
-                            "type": "other",
-                            "description": "Boss 染光/暗：光 = 中標 4 人散場周圍、暗 = 中標 4 人到場中。",
-                            "tips": ["光 = 走遠、暗 = 集中"]
-                        },
-                        {
-                            "name": "Lightstream 光流",
-                            "type": "aoe",
-                            "description": "場上 3 個 Arcane Cylinder 在 120° 配置，持續 AoE 須避開。",
-                            "tips": ["看 3 圓筒位 + 走縫隙"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - Dark and Light / Dike / Letter of the Law",
-                    "mechanics": [
-                        {
-                            "name": "Dark and Light 光與暗",
-                            "type": "other",
-                            "description": "每個 T/H 與 DPS 連 tether (光黃 / 暗紫 / 雙)，需依顏色配 Arcane Revelation 安全位 (光 tether → 站暗安全、暗 tether → 站光安全)。",
-                            "tips": [
-                                "雙 tether = 兩色都對",
-                                { "text": "T/H 與 DPS 一對一站對", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Divisive Overruling 分裂否決",
-                            "type": "other",
-                            "description": "光/暗版本：將場分兩半，光 = 站對側、暗 = 站同側，配 tether 解。",
-                            "tips": ["看光暗 + tether 顏色雙重判斷"]
-                        },
-                        {
-                            "name": "Upheld Overruling 維持否決",
-                            "type": "other",
-                            "description": "Boss 元素 + 中標需在同色或反色位置，配 tether 共解。",
-                            "tips": ["照固定圖站定點"]
-                        },
-                        {
-                            "name": "Dike 正義之審",
-                            "type": "raidwide",
-                            "description": "高傷全屏需減傷。",
-                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Dark Current 暗流",
-                            "type": "aoe",
-                            "description": "場上 3 個圓 AoE (南北或東西) + 兩條旋轉粉弧線示意 AoE 旋向 (順時/逆時)。",
-                            "tips": ["看弧線方向 → 預判閃位"]
-                        },
-                        {
-                            "name": "Eunomia 善法",
-                            "type": "other",
-                            "description": "全員依 debuff 處理多重小機制；通常配合前段機制鏈解。",
-                            "tips": ["看 debuff 圖示 + 計時"]
-                        },
-                        {
-                            "name": "Letter of the Law 法之書 + Ultimate Verdict",
-                            "type": "raidwide",
-                            "description": "末段：Letter of the Law 啟動連鎖 (Lightstream + Divisive + Dike + Jury + Eunomia)；最後 Ultimate Verdict 狂暴必須擊敗。",
-                            "tips": [
-                                "末段機制鏈照固定排序",
-                                { "text": "Ultimate Verdict 前打死 boss", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "anabaseios_the_eleventh_circle_savage",
+    "name":  "萬魔殿 荒天之獄零式3",
+    "nameEn":  "Anabaseios: The Eleventh Circle (Savage)",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  90,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）P11S Themis = Styx 多段集合，每次 +1 段 (5→6→7→8 段)。",
+                     "2）Arcane Revelation 光/暗 = 4 球同色 = 同色危險、不同 = 光暗對位。",
+                     "3）Shadowed Messengers + Jury Overruling = 看 boss 元素 + 順時或逆時鐘位處理。",
+                     "4）Lightstream = 3 個圓筒 120° 持續 AoE。",
+                     "5）Dark and Light = 補/DPS tether 對；光黃暗紫；雙 tether 表 = 兩種都對。",
+                     "6）Divisive Overruling / Upheld Overruling = 分割或維持判決，配 tether 解。",
+                     "7）Dark Current = 3 圓 AoE + 旋轉粉色弧 (順/逆) 預示移動。",
+                     "8）Letter of the Law + 最終 Styx 8 段 → 狂暴 Ultimate Verdict。"
+                 ],
+    "notes":  "EW 6.4 P11 Savage (Lv 90, ilvl 650)。Themis 法官 boss。光暗對位 + tether 分組。",
+    "bosses":  [
+                   {
+                       "name":  "忒彌斯",
+                       "nameEn":  "Themis",
+                       "mnemonic":  [
+                                        "Styx 多段集合 (5/6/7/8)。",
+                                        "Arcane Revelation 光暗 = 對位處理。",
+                                        "Dark and Light = tether 顏色決定走位。",
+                                        "Letter of the Law = 末段組合機制鏈。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - Styx / Revelation / Messengers",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Styx 冥河",
+                                                                "type":  "stack",
+                                                                "description":  "多段強力 stack 集合分擔 (5/6/7/8 段遞增)，需 light party 集中 + 強補。",
+                                                                "tips":  [
+                                                                             "全員集合分擔",
+                                                                             {
+                                                                                 "text":  "段數越高需越強減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Arcane Revelation 奧義啟示",
+                                                                "type":  "other",
+                                                                "description":  "Boss 染光或暗 → 召 4 球 (Arcane Spheres) 於相鄰兩 cardinal，依 boss 元素 + 球色決定光暗對位。",
+                                                                "tips":  [
+                                                                             "光 boss + 光球 = 危險；暗 boss + 暗球 = 危險"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shadowed Messengers 影使",
+                                                                "type":  "other",
+                                                                "description":  "兩個 Illusory Themis 在 intercardinal 出現開始機制鏈；玩家依時鐘位處理。",
+                                                                "tips":  [
+                                                                             "固定時鐘位 + 看 Themis 對位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Jury Overruling 陪審否決",
+                                                                "type":  "other",
+                                                                "description":  "Boss 染光/暗：光 = 中標 4 人散場周圍、暗 = 中標 4 人到場中。",
+                                                                "tips":  [
+                                                                             "光 = 走遠、暗 = 集中"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Lightstream 光流",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 3 個 Arcane Cylinder 在 120° 配置，持續 AoE 須避開。",
+                                                                "tips":  [
+                                                                             "看 3 圓筒位 + 走縫隙"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - Dark and Light / Dike / Letter of the Law",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Dark and Light 光與暗",
+                                                                "type":  "other",
+                                                                "description":  "每個 T/H 與 DPS 連 tether (光黃 / 暗紫 / 雙)，需依顏色配 Arcane Revelation 安全位 (光 tether → 站暗安全、暗 tether → 站光安全)。",
+                                                                "tips":  [
+                                                                             "雙 tether = 兩色都對",
+                                                                             {
+                                                                                 "text":  "T/H 與 DPS 一對一站對",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Divisive Overruling 分裂否決",
+                                                                "type":  "other",
+                                                                "description":  "光/暗版本：將場分兩半，光 = 站對側、暗 = 站同側，配 tether 解。",
+                                                                "tips":  [
+                                                                             "看光暗 + tether 顏色雙重判斷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Upheld Overruling 維持否決",
+                                                                "type":  "other",
+                                                                "description":  "Boss 元素 + 中標需在同色或反色位置，配 tether 共解。",
+                                                                "tips":  [
+                                                                             "照固定圖站定點"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dike 正義之審",
+                                                                "type":  "raidwide",
+                                                                "description":  "高傷全屏需減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dark Current 暗流",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 3 個圓 AoE (南北或東西) + 兩條旋轉粉弧線示意 AoE 旋向 (順時/逆時)。",
+                                                                "tips":  [
+                                                                             "看弧線方向 → 預判閃位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Eunomia 善法",
+                                                                "type":  "other",
+                                                                "description":  "全員依 debuff 處理多重小機制；通常配合前段機制鏈解。",
+                                                                "tips":  [
+                                                                             "看 debuff 圖示 + 計時"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Letter of the Law 法之書 + Ultimate Verdict",
+                                                                "type":  "raidwide",
+                                                                "description":  "末段：Letter of the Law 啟動連鎖 (Lightstream + Divisive + Dike + Jury + Eunomia)；最後 Ultimate Verdict 狂暴必須擊敗。",
+                                                                "tips":  [
+                                                                             "末段機制鏈照固定排序",
+                                                                             {
+                                                                                 "text":  "Ultimate Verdict 前打死 boss",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
