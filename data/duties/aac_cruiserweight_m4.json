@@ -1,106 +1,100 @@
 {
-    "id": "aac_cruiserweight_m4",
-    "name": "阿卡狄亞登天鬥技場 中量級4",
-    "nameEn": "AAC Cruiserweight M4",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）風/土魔技：光牙十字/X 直線 + boss 扇形/圓。",
-        "2）群狼劍 (旋擊/掃擊)：3 殘影 → 跳 → 直線 → 扇形/圓 + 重沖波/群狼斬波。",
-        "3）千年風化：5 風狼首順/逆時針 + 風狼陣塔。",
-        "4）大地的呼喚：場柱 + 斬空劍切柱 + 崩塌直線 + 十字光牙。",
-        "5）P2 浮島：傳送 + 雙牙擊全島 AoE。"
-    ],
-    "notes": "DT 7.2 AAC 中量級 4 Normal (Lv 100)。Retsarra (剣嚎 / Howling Blade) 簡化版。AAC Cruiserweight 終戰，雙形態 P1 嚎狼劍士 + P2 浮島。",
-    "bosses": [
+  "id": "aac_cruiserweight_m4",
+  "name": "阿卡狄亞登天鬥技場 中量級4",
+  "nameEn": "AAC Cruiserweight M4",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 715,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）一刀兩斷 → 雙 T 分攤直線；群狼劍 3 段：圓→直線→扇",
+    "2）幻狼劍 → 看殘影持劍方向，躲反側半場",
+    "3）殘影劍 → 5 個分身朝外直線，跨身躲縫",
+    "4）光狼召喚 → 土狼首/風狼首 add，速殺否則風塵光狼斬即死",
+    "5）大地的呼喚 → 柱子倒下方向是直線 AoE"
+  ],
+  "notes": "DT 7.2 阿卡狄亞登天鬥技場 中量級4 M4（普通），中量級最終戰。Boss 劍嚎（Howling Blade）使用幻影、光牙、土狼/風狼召喚。資料來源：灰機 阿卡狄亚登天斗技场 中量级4/B（命名與技能 S→T）+ CGW Howling Blade walkthrough。",
+  "bosses": [
+    {
+      "name": "劍嚎",
+      "nameEn": "Howling Blade",
+      "phases": [
         {
-            "name": "剣嚎",
-            "nameEn": "Retsarra (Howling Blade)",
-            "mnemonic": [
-                "風魔技 = 光牙直線 + boss 扇形 + 環；土魔技 = 直線 + 全員圓 + 周身圓。",
-                "群狼劍：跟著 3 殘影方向 + 預判最終扇形/圓。",
-                "千年風化 5 風狼首 + 風狼陣塔 (無人 = 大龍卷風)。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 嚎狼劍士",
-                    "mechanics": [
-                        {
-                            "name": "空間斬 / Spatial Tactics",
-                            "type": "raidwide",
-                            "description": "全體斬擊 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "風之魔技 / Wind Sword",
-                            "type": "aoe",
-                            "description": "光牙十字或 X 字直線 + boss 對 3 職分擔扇形 + 環。",
-                            "tips": ["看光牙位置 + 分擔站位"]
-                        },
-                        {
-                            "name": "土之魔技 / Earth Sword",
-                            "type": "aoe",
-                            "description": "光牙十字/X 直線 + boss 全員 30° 扇形 + 周身圓。",
-                            "tips": ["閃光牙 + clock 散開"]
-                        },
-                        {
-                            "name": "群狼劍 (旋擊/掃擊) / Wolf Sword",
-                            "type": "aoe",
-                            "description": "3 殘影 → 跳 → 直線 → 扇形 (掃擊) 或圓 (旋擊) + 重沖波 + 群狼斬波。",
-                            "tips": [
-                                { "text": "兩 T 站近接群狼斬波", "role": "tank" },
-                                "看殘影預判最終位置"
-                            ]
-                        },
-                        {
-                            "name": "千年風化 / Millennial Decay",
-                            "type": "aoe",
-                            "description": "5 風狼首順/逆時針 → 直線 AoE + 風狼陣塔 (無人 = 大龍卷風)。",
-                            "tips": ["4 人各踩 1 塔"]
-                        },
-                        {
-                            "name": "大地的呼喚 / Earthen Call",
-                            "type": "aoe",
-                            "description": "場南北或東西生柱 + 斬空劍切柱 + 崩塌 10m 直線 + 十字光牙。",
-                            "tips": ["預判柱倒方向 + 閃十字"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 靈魂解放浮島",
-                    "mechanics": [
-                        {
-                            "name": "浮島場地 + 傳送",
-                            "type": "other",
-                            "description": "5 浮島 + 傳送裝置 (2s 冷卻)。",
-                            "tips": ["熟悉浮島排列"]
-                        },
-                        {
-                            "name": "爆震 / Concussion",
-                            "type": "stack",
-                            "description": "點 2 補職整個浮島分擔 AoE。",
-                            "tips": [{ "text": "雙補帶 3-4 人分擔", "role": "healer" }]
-                        },
-                        {
-                            "name": "魔光 / Magic Light",
-                            "type": "other",
-                            "description": "點 3 人藍色眼形 + 整個浮島 AoE + 半島閃光炮。",
-                            "tips": ["被點 3 人散到不同浮島"]
-                        },
-                        {
-                            "name": "雙牙擊 / Twin Tusks",
-                            "type": "tankbuster",
-                            "description": "對 1+2 仇整個浮島高傷。",
-                            "tips": [{ "text": "兩 T 各站不同浮島", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：群狼劍 + 召喚",
+          "mechanics": [
+            {
+              "name": "一刀兩斷 Two-Edged Justice",
+              "type": "tankbuster",
+              "description": "對第一仇恨目標寬 6 米分攤直線 AoE；雙 T 重疊站於 boss 正前方分攤，各開減傷。",
+              "tips": [{"text": "雙 T 重疊 + 大減傷", "role": "tank"}]
+            },
+            {
+              "name": "群狼劍 Howling Edge（3 段連發）",
+              "type": "aoe",
+              "description": "boss 回中央，周圍出現 3 個 120° 殘影預兆。3 段依序：(1) 圓形 AoE 4 點同時（boss 與殘影 +跳前落點，找縫站）；(2) 寬 10 米直線 AoE 推進到場邊；(3) 120° 扇形 AoE 附擊退。記順序：圓 → 直 → 扇。",
+              "tips": [{"text": "圓 → 找縫；直 → 走側；扇 → 跑到 boss 背側", "role": "dps"}]
+            },
+            {
+              "name": "大震擊 Earthbreak",
+              "type": "stack",
+              "description": "點名隨機玩家分攤圓形 AoE 預兆（土屬性）；全員集中分攤。",
+              "tips": [{"text": "看到圓圈標記 → 全員集合", "role": "healer"}]
+            },
+            {
+              "name": "幻狼劍 Phantom Edge",
+              "type": "aoe",
+              "description": "boss 順/逆時針生成 4 個劍嚎幻影至場邊，雙手持劍指左或右側。咏唱結束時各幻影對該側發動半場 AoE。看每個幻影的劍方向，按順序躲反側。",
+              "tips": [{"text": "記順序 → 依次跨身躲反側", "role": "dps"}]
+            },
+            {
+              "name": "殘影劍 Lingering Edge",
+              "type": "aoe",
+              "description": "boss 變不可選中，生成 5 個間隔 72° 的分身，各對前方寬 8 米直線 AoE。站在分身之間的縫隙即可。",
+              "tips": [{"text": "找 72° 縫隙站", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：光狼召喚 + 鬥志昂揚",
+          "mechanics": [
+            {
+              "name": "光牙召喚 Light's Fang",
+              "type": "aoe",
+              "description": "兩組各 2 個光牙在場上，各自寬 6 米直線突進 AoE。看光牙朝向找縫站。",
+              "tips": [{"text": "看光牙朝向 → 站垂直方向", "role": "dps"}]
+            },
+            {
+              "name": "光狼召喚 / 風塵光狼斬 DPS 競賽",
+              "type": "mechanic",
+              "description": "boss 變不可選中，召喚『土狼首』+『風狼首』add 並出現劍氣進度條。土狼首 → 大震擊 + 地烈波；風狼首 → 狂風 + 風刃氣。兩 add 擊倒前進度條一直漲，滿 100 後最後一次風塵光狼斬即死。必須在進度滿前秒殺兩個 add。",
+              "tips": [{"text": "DPS 全程爆發秒兩 add", "role": "dps"}, {"text": "T 拉穩兩 add", "role": "tank"}]
+            },
+            {
+              "name": "風塵光狼斬 5 連 Howling Tempest",
+              "type": "raidwide",
+              "description": "場地縮小，連續 5 段全體 AoE。最後一次若劍氣進度條未壓住會變即死。要點：保持團補 + 預備減傷 5 次。",
+              "tips": [{"text": "團補連 5 次 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "大地的呼喚 Earthen Call",
+              "type": "aoe",
+              "description": "場上出現 3 組各 3 個間隔 120° 的柱子；boss『斬空劍』全體 AoE 後柱子倒下方向發動寬 6 米直線 AoE。看柱子倒向預判直線。",
+              "tips": [{"text": "看柱子倒向 → 跨身躲", "role": "dps"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "一刀兩斷 → 雙 T 重疊",
+        "群狼劍 3 段：圓 → 直 → 扇",
+        "幻狼劍 → 依殘影劍向躲反側",
+        "殘影劍 → 72° 縫站",
+        "光狼斬 → 速秒土/風狼首",
+        "大地呼喚 → 看柱倒向跨身"
+      ]
+    }
+  ]
 }

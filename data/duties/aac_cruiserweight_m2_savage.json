@@ -1,171 +1,134 @@
 {
-    "id": "aac_cruiserweight_m2_savage",
-    "name": "阿卡狄亞零式登天鬥技場 中量級2",
-    "nameEn": "AAC Cruiserweight M2 (Savage)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）色彩狂熱：紅/藍雙槍，垂下對最遠 + 高舉對最近，吃顏色 debuff 同色二次傷害爆增。",
-        "2）雙手塗鴉：左手隨機 (塗鴉炸彈/翅膀炸彈/糖糖魔界花/糖糖夢魔)，右手限定花/夢魔。一定有 1 安全角。",
-        "3）沙漠風景：中暑 dot + 熱擴散 43s/74s 配對 + 仙人掌固定 4 種模式。",
-        "4）糖糖之魂：4 輪小怪 (亩鼠+羊靠近互強化 5 倍 / 索取貓清 LB / 羽環鳐連線水毒 / 炸脖龍秒殺 H)。",
-        "5）河流風景：3 草地 + 湍流 → 熔岩；糖糖火炎 2H 分擔 / 糖糖閃雷 全員散。",
-        "6）狂暴：藝術大亂鬥強制秒殺。"
-    ],
-    "notes": "DT 7.2 AAC 中量級 2 零式 (M2S, Lv 100, ilvl 730)。Sugar Riot (狂熱糖潮) Savage。核心：色彩 debuff 同色禁踩 + 糖糖之魂 4 輪小怪管理 (亩鼠+羊 10m 內互強化 5 倍傷需要分開) + 沙漠/雷雲/火山 3 場景變化。",
-    "bosses": [
+  "id": "aac_cruiserweight_m2_savage",
+  "name": "阿卡狄亞零式登天鬥技場 中量級2",
+  "nameEn": "AAC Cruiserweight M2 (Savage)",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 735,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）色彩狂熱（零式）→ 兩把槍一高一低，垂下打最遠、高舉打最近，記紅/藍 debuff 避同色",
+    "2）雙手塗鴉 → 左手 4 種右手 2 種組合，1 個角落必為安全",
+    "3）糖糖之魂小怪階段：羊+畝鼠 10m 內互相 5x → 必須拉開；索取貓 → 不可漏接陨石；炸脖龍 → 眩暈停止",
+    "4）河流→雷雲→火山 三場景轉換",
+    "5）藝術大亂鬥 → 場地塞滿物件即死，必須在 DPS 競賽前擊敗"
+  ],
+  "notes": "DT 7.2 阿卡狄亞零式登天鬥技場 中量級2（M2S / M6S）High-End raid。Boss 狂熱糖潮（Sugar Riot）零式版加入糖糖之魂動物園 + 三場景轉換。資料來源：灰機 阿卡狄亚零式登天斗技场 中量级2/B（命名與技能 S→T）+ CGW Sugar Riot (Savage) walkthrough。",
+  "bosses": [
+    {
+      "name": "狂熱糖潮（零式）",
+      "nameEn": "Sugar Riot (Savage)",
+      "phases": [
         {
-            "name": "狂熱糖潮",
-            "nameEn": "Sugar Riot",
-            "mnemonic": [
-                "色彩狂熱：高舉槍打最近、垂下槍打最遠；吃對應顏色 debuff = 同色二擊爆。",
-                "雙手塗鴉：找 1 安全角 (4 種固定模式)。",
-                "糖糖之魂 4 輪：亩鼠 + 羊 10m 內 = 各 +5 倍傷，分開。索取貓未命中 3 層發隕石。羽環鳐連線水毒。炸脖龍鎖補職定身慢移過去秒殺，眩暈打斷。",
-                "沙漠：中暑 dot；熱擴散倒數爆 (43s 1T+1D / 74s 2H / 重熱擴散 43s 1D)。",
-                "雷雲：百雷 3 點名導電同岛玩家。火山：熔岩即死 + 啪嘰/慕斯慕斯衝。"
-            ],
-            "phases": [
-                {
-                    "name": "一般機制",
-                    "mechanics": [
-                        {
-                            "name": "慕斯怪大雨 / Mousse Rain",
-                            "type": "raidwide",
-                            "description": "全體無屬性魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "色彩狂熱 / Color Riot",
-                            "type": "aoe",
-                            "description": "雙槍紅/藍特效，高舉打最近、垂下打最遠 4m 圓 AoE，吃到附加暖色/冷色 debuff（同色二擊大爆）。",
-                            "tips": [
-                                "看槍顏色 + 高/低位置",
-                                "**禁止吃同色二連**",
-                                "輪流誘導"
-                            ]
-                        },
-                        {
-                            "name": "黏黏慕斯怪 / Sticky Mousse",
-                            "type": "other",
-                            "description": "非 T 隨機 2 人 4m 圓 AoE + 5s 無法移動，倒數爆 4 人分擔。",
-                            "tips": ["被點者拉外圍", "4 人疊接爆"]
-                        }
-                    ]
-                },
-                {
-                    "name": "雙手塗鴉 + 沙漠風景",
-                    "mechanics": [
-                        {
-                            "name": "翅膀標記 / Wings of Paint",
-                            "type": "other",
-                            "description": "全員 21s 翅膀標記 → 3s 眩暈 + 向前移 35m。",
-                            "tips": ["眩暈前對齊面向預定方向"]
-                        },
-                        {
-                            "name": "雙手塗鴉 / Two-handed Painting",
-                            "type": "aoe",
-                            "description": "左手繪 (塗鴉/翅膀/魔界花/夢魔) + 右手繪 (魔界花/夢魔)。左不過東 + 右不過西 + 1 角必安全。",
-                            "tips": [
-                                "塗鴉炸彈 = 原地圓爆；翅膀炸彈 = 向前 15m 移動後爆",
-                                "糖糖魔界花 = 100° 扇形；糖糖夢魔 = 30m 大圓",
-                                "找 1 個安全角站"
-                            ]
-                        },
-                        {
-                            "name": "糖心繪景：沙漠 / Desert Painting",
-                            "type": "other",
-                            "description": "場地變沙漠 + 中暑 dot 每跳 1.5 萬。賦予 43s/74s 熱擴散 debuff (1T+1D = 43s / 2H = 74s / 1D = 43s 重熱擴散)。仙人掌 4 種固定模式爆炸。",
-                            "tips": [
-                                "43s 組先散開到角落放熱擴散 15m 圓 AoE",
-                                "74s 組保留處理仙人掌",
-                                "重熱擴散 5m 分擔圓"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "流沙風景 + 糖糖之魂",
-                    "mechanics": [
-                        {
-                            "name": "流沙風景 / Quicksand",
-                            "type": "aoe",
-                            "description": "大圓流沙區 (下陷 3 秒) + 鋪滿仙人掌 (1 棵必在角)。",
-                            "tips": ["走角落躲流沙 + 仙人掌"]
-                        },
-                        {
-                            "name": "糖糖之魂 (4 輪) / Soul of Soulglaze",
-                            "type": "other",
-                            "description": "4 輪小怪：1=亩鼠+羊+索取貓；2=亩鼠 x2 + 羽環鳐 x2；3=羊+索取貓+炸脖龍；4=全部混戰。boss 普攻 6.5 萬。",
-                            "tips": [
-                                "**亩鼠 + 羊 10m 內互強化 5 倍** → 分開拉",
-                                "**炸脖龍鎖補職定身** → 眩暈打斷或快擊殺",
-                                "**羽環鳐連線水毒** → 接連線者拉外圍",
-                                { "text": "索取貓清 LB → 不要囤 LB", "role": "dps" },
-                                "未及時破壞所有怪 boss 慕斯怪大雨即死"
-                            ]
-                        },
-                        {
-                            "name": "給你原石 / Take Aim",
-                            "type": "raidwide",
-                            "description": "高額全屏 AoE。",
-                            "tips": [
-                                { "text": "全員減傷", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "河流 + 雷雲/火山風景",
-                    "mechanics": [
-                        {
-                            "name": "糖心繪景：河流 / River Painting",
-                            "type": "other",
-                            "description": "場地變 3 草地 + 河流相隔。河流 = 火耐提升 + 雷耐大幅降低。",
-                            "tips": ["不能直接跨河，需走橋"]
-                        },
-                        {
-                            "name": "糖糖火炎/閃雷 / Magicked Flame/Thunder",
-                            "type": "other",
-                            "description": "右手糖糖箭 + 左手火 (2H 分擔 6m 圓) 或雷 (全員散開 6m 圓)。",
-                            "tips": ["看左手判定", "雷時 8 人散開"]
-                        },
-                        {
-                            "name": "雷雲風景 + 百雷 / Stormcloud",
-                            "type": "other",
-                            "description": "河流變湍流 (水毒) + 雷暴雲移動到草地中心 8m 圓爆 + 落雷 6 點圓 AoE。1T+1H+1D 紫色標記百雷 8m 圓導電全島。",
-                            "tips": [
-                                "被點 3 人各站不同草地",
-                                "**禁止 2 個百雷在同島** → 強雷流全島"
-                            ]
-                        },
-                        {
-                            "name": "火山風景 / Lava",
-                            "type": "other",
-                            "description": "湍流變熔岩 (踩入即死) + 場地切 3 塊。啪嘰慕斯怪 (最遠 2 人 4 連分擔 + 出血區) + 慕斯慕斯衝 (最近 4 人 30° 扇形)。8 單人塔 (第一輪南島 4 + NW/NE 2)。",
-                            "tips": [
-                                "8 人各踩 1 塔",
-                                "啪嘰最遠 2 帶到場邊放出血區",
-                                "慕斯慕斯衝最近 4 散開扇形"
-                            ]
-                        },
-                        {
-                            "name": "藝術大亂鬥 (Enrage)",
-                            "type": "raidwide",
-                            "description": "全場塗鴉炸彈 + 翅膀炸彈 + 靶子 + 糖糖箭 + 魔界花 + 夢魔強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：色彩狂熱 + 雙手塗鴉",
+          "mechanics": [
+            {
+              "name": "色彩狂熱 Color Riot（零式）",
+              "type": "tankbuster",
+              "description": "boss 兩把槍紅/藍特效一高一低。垂下的槍 → 最遠玩家 4m 圓 AoE；高舉的槍 → 最近玩家 4m 圓 AoE，附加同色 debuff（提高同色攻擊傷害）。引導到最後一秒都有效；分配遠近後避開下次同色攻擊。",
+              "tips": [{"text": "T 拉穩，按設定最遠/最近", "role": "tank"}, {"text": "記 debuff 顏色避同色", "role": "healer"}]
+            },
+            {
+              "name": "黏黏慕斯怪 Sticky Mousse",
+              "type": "aoe",
+              "description": "對 2 名非坦克玩家 4m 圓形 AoE 附 5 秒無法移動，到期後產生可 4 人分攤的炸彈。需 4 人在每個被點玩家身邊分攤。",
+              "tips": [{"text": "提前站位分組 4 人接", "role": "healer"}]
+            },
+            {
+              "name": "翅膀標記 + 色彩衝擊 Wing + Color Shock",
+              "type": "mechanic",
+              "description": "翅膀標記附 21 秒 debuff，到期被眩 3 秒並向前推 35m。需面向安全方向。色彩衝擊：兩槍 = 雙 H 分攤；四槍 = T/H/D 各組分攤。",
+              "tips": [{"text": "看翅膀方向定面向", "role": "dps"}]
+            },
+            {
+              "name": "雙手塗鴉 Double Style（零式）",
+              "type": "mechanic",
+              "description": "左手畫塗鴉炸彈/翅膀炸彈/糖糖魔界花/糖糖夢魔之一，右手畫魔界花/夢魔之一。位置固定（西北/西/西南三點 + 中央）。最終必有一個角落為安全點，需快速辨識。",
+              "tips": [{"text": "看雙手物件 → 跑安全角", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：沙漠 + 流沙",
+          "mechanics": [
+            {
+              "name": "沙漠場景：熱擴散 / 重熱擴散",
+              "type": "mechanic",
+              "description": "場地變沙漠並中暑 DoT。1 T + 1 D 拿 43s『熱擴散』（15m 圓 AoE + 火屬耐降）；雙 H 74s 同 debuff；1 D 拿 43s『重熱擴散』（5m 可分攤）。爆炸時拉開距離避免互傷；重熱擴散需 4 人分攤。",
+              "tips": [{"text": "熱擴散 → 拉開放外圍", "role": "tank"}, {"text": "重熱擴散 → 4 人分攤", "role": "healer"}]
+            },
+            {
+              "name": "流沙場景：咣當軟糊怪 + 雙手塗鴉",
+              "type": "mechanic",
+              "description": "場北/南出現大圓流沙區。boss 左手畫翅膀炸彈、右手畫塗鴉炸彈，分別與 T/H/D 一組連線。咣當軟糊怪判定後留下對應炸彈。爆彈終點若在流沙上會下沉不爆炸（利用此來消除）。",
+              "tips": [{"text": "依連線分組面向流沙", "role": "tank"}]
+            }
+          ]
+        },
+        {
+          "name": "P3：糖糖之魂動物園（小怪戰）",
+          "mechanics": [
+            {
+              "name": "糖糖之魂 Sugar Soul（動物配對）",
+              "type": "add",
+              "description": "boss 變不可選中，召喚 5 種動物 add：畝鼠（與羊 10m 內互+5x 傷害）、羊（普攻爆殺 T，必須與畝鼠拉開）、索取貓（清空 LB + 跳到玩家放陨石，必須有人擋）、羽環鳐（與第一仇連線 + 留水圈，水圈不消失）、炸脖龍（鎖治療 + 慢走秒殺，可眩暈）。共 4 輪召喚。",
+              "tips": [{"text": "T 拉羊到場邊遠離畝鼠", "role": "tank"}, {"text": "DPS 集火索取貓避免陨石", "role": "dps"}]
+            },
+            {
+              "name": "炸脖龍 Stunlocker",
+              "type": "interrupt",
+              "description": "對治療釋放高傷『定住人的意念』，鎖住該治療並慢走過來。接觸到會即時秒殺『殺掉人的疾風』。必須眩暈打斷它的移動，或快速集火。",
+              "tips": [{"text": "炸脖龍 → 立刻眩暈打斷", "role": "tank"}]
+            },
+            {
+              "name": "羊未殺秒殺 Sheep Wipe",
+              "type": "raidwide",
+              "description": "若羊未在第四輪結束後 ~105s 內擊殺，會進入不可選中並連線 boss，使下次『慕斯怪大雨』變即死。必須優先處理羊。",
+              "tips": [{"text": "DPS 第四輪後立即清羊", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P4：河流 + 雷雲 + 火山 + 藝術大亂鬥",
+          "mechanics": [
+            {
+              "name": "河流場景：雙手塗鴉（火/雷）",
+              "type": "mechanic",
+              "description": "場變草原+河流，水中火耐+雷耐降。右手糖糖箭 + 左手火（雙 H 分攤需站水中）或雷（全員圓需出水）。橋與河流不可直接互通。",
+              "tips": [{"text": "火 → 雙 H 入水分攤；雷 → 全員上岸", "role": "healer"}]
+            },
+            {
+              "name": "雷雲場景：百雷 Hundred Bolts",
+              "type": "spread",
+              "description": "1 T + 1 H + 1 D 紫色點名，向所在草地全島傳導『雷流』；同島玩家受傷害。一島被兩百雷命中 → 強雷流大傷。需 T/H/D 各跨不同島承接。",
+              "tips": [{"text": "T/H/D 三人各跨一島", "role": "tank"}, {"text": "未中標者跨對島", "role": "dps"}]
+            },
+            {
+              "name": "火山場景：啪嘰慕斯怪 + 塔",
+              "type": "mechanic",
+              "description": "湍流變熔岩踩入即死，場地分 3 區。對最遠 2 名玩家 4 連分攤 + 留下出血圈。8 座單人塔需 8 人各踩一個，無人踩 → 大爆炸全員 DoT。第一輪 4 塔南島 + 西北/東北各 2。",
+              "tips": [{"text": "預先指派 8 人塔位", "role": "tank"}]
+            },
+            {
+              "name": "藝術大亂鬥 Final Slam（DPS 終止）",
+              "type": "raidwide",
+              "description": "boss 在場地畫滿塗鴉炸彈/翅膀炸彈/靶子/糖糖箭/魔界花/夢魔，強制秒殺所有玩家。是 DPS 競賽截止技能，必須在此前擊敗 boss。",
+              "tips": [{"text": "全程保持輸出別漏 DPS", "role": "dps"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "色彩狂熱 → 垂下打遠、高舉打近",
+        "雙手塗鴉 → 找安全角",
+        "羊+畝鼠 10m 拉開",
+        "炸脖龍 → 眩暈打斷",
+        "百雷 → T/H/D 三人跨三島",
+        "藝術大亂鬥 → DPS 截止"
+      ]
+    }
+  ]
 }

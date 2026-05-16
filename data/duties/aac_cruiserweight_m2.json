@@ -1,84 +1,93 @@
 {
-    "id": "aac_cruiserweight_m2",
-    "name": "阿卡狄亞登天鬥技場 中量級2",
-    "nameEn": "AAC Cruiserweight M2",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）色彩狂熱：紅/藍雙槍最近/最遠 4m 圓，吃同色 = 二擊大爆。",
-        "2）雙手塗鴉：左手隨機 (炸彈/翅膀/魔界花/夢魔)，右手限定 → 1 角必安全。",
-        "3）沙漠風景：中暑 dot + 仙人掌爆。",
-        "4）糖糖之魂：4 輪小怪 (亩鼠+羊互強化、索取貓清 LB、羽環鳐連線水毒、炸脖龍秒殺 H)。",
-        "5）河流/雷雲/火山風景：糖糖火炎/閃雷 + 場景特性。"
-    ],
-    "notes": "DT 7.2 AAC 中量級 2 Normal (Lv 100)。Sugar Riot (狂熱糖潮) 簡化版。同 Savage 但少組合機制。",
-    "bosses": [
+  "id": "aac_cruiserweight_m2",
+  "name": "阿卡狄亞登天鬥技場 中量級2",
+  "nameEn": "AAC Cruiserweight M2",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 715,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）色彩狂熱 Color Riot → 雙 T 分頭接紅/藍炸彈",
+    "2）糖心繪景 Sugarscape → 看沙漠/河流場景變化決定走位",
+    "3）河流場景中：火炎要站水裡分攤，閃雷要避水裡",
+    "4）單手/雙手塗鴉 → 看畫的物件決定躲法",
+    "5）雷雲場景 → 雷暴雲移動會即死預兆，跨區站對側"
+  ],
+  "notes": "DT 7.2 阿卡狄亞登天鬥技場 中量級2 M2（普通）。Boss 狂熱糖潮（Sugar Riot）使用畫作展開不同地形場景。資料來源：灰機 阿卡狄亚登天斗技场 中量级2/B（命名與技能 S→T）+ CGW Sugar Riot walkthrough。",
+  "bosses": [
+    {
+      "name": "狂熱糖潮",
+      "nameEn": "Sugar Riot",
+      "phases": [
         {
-            "name": "狂熱糖潮",
-            "nameEn": "Sugar Riot",
-            "mnemonic": [
-                "色彩狂熱：高舉打最近、垂下打最遠；同色二擊爆。",
-                "雙手塗鴉 4 種固定模式，找 1 安全角。",
-                "糖糖之魂：亩鼠+羊 10m 內互強化 5 倍，分開。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "慕斯怪大雨 / Mousse Rain",
-                            "type": "raidwide",
-                            "description": "全體魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "色彩狂熱 / Color Riot",
-                            "type": "aoe",
-                            "description": "紅/藍雙槍打最近/最遠 4m 圓 + 同色 debuff 二擊大爆。",
-                            "tips": ["看槍高低 + 顏色，輪流誘導"]
-                        },
-                        {
-                            "name": "雙手塗鴉 / Two-handed Painting",
-                            "type": "aoe",
-                            "description": "左/右手繪不同圖案 (炸彈/翅膀/魔界花/夢魔)，1 安全角。",
-                            "tips": ["找安全角站"]
-                        },
-                        {
-                            "name": "糖心繪景：沙漠 / Desert Painting",
-                            "type": "raidwide",
-                            "description": "場地變沙漠 + 中暑 dot + 仙人掌爆。",
-                            "tips": [{ "text": "持續補血解中暑", "role": "healer" }]
-                        },
-                        {
-                            "name": "糖糖之魂 (小怪戰) / Soul of Soulglaze",
-                            "type": "other",
-                            "description": "4 輪小怪：亩鼠+羊+索取貓+羽環鳐+炸脖龍。亩鼠+羊 10m 內互強化 5 倍。炸脖龍鎖 H 定身。",
-                            "tips": [
-                                "**亩鼠 + 羊分開拉**",
-                                "**炸脖龍打斷 + 快擊殺**",
-                                { "text": "DPS 集火處理", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "糖糖火炎 + 閃雷",
-                            "type": "other",
-                            "description": "火 = 2H 分擔 6m 圓；雷 = 全員散開 6m 圓。",
-                            "tips": ["看左手判定", "雷時 8 人散開"]
-                        },
-                        {
-                            "name": "藝術大亂鬥 (Enrage)",
-                            "type": "raidwide",
-                            "description": "全場塗鴉 + 翅膀 + 靶子 + 魔界花 + 夢魔強制秒殺。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：塗鴉炸彈 + 色彩狂熱",
+          "mechanics": [
+            {
+              "name": "慕斯怪大雨 Mousse Mural",
+              "type": "raidwide",
+              "description": "全體 AoE 大傷害；準備團補與全員小減傷。",
+              "tips": [{"text": "團補 + 減傷", "role": "healer"}]
+            },
+            {
+              "name": "單手塗鴉 Single Style",
+              "type": "mechanic",
+              "description": "boss 繪製單一物件：塗鴉炸彈（原地爆炸大圈）、翅膀炸彈（前跳半場後爆炸→站炸彈附近）、糖糖箭（場外直線→站箭頭間空隙）、靶子（箭朝靶子聚集）。看物件決定走位。",
+              "tips": [{"text": "看 boss 畫什麼 → 對應走位", "role": "dps"}]
+            },
+            {
+              "name": "軟糊怪派對 Pudding Party",
+              "type": "stack",
+              "description": "點名一名治療職能 5 連分攤圓形 AoE；全員集合到該玩家分攤 5 次。",
+              "tips": [{"text": "被點名站定，其他人靠過來", "role": "healer"}]
+            },
+            {
+              "name": "色彩狂熱 Color Riot",
+              "type": "tankbuster",
+              "description": "雙 T 各自接半徑 4 米圓形高傷 AoE，分別為紅色（暖色炸彈）與藍色（冷色炸彈）。雙 T 分開站，各自開大減傷。顏色無實際差異。",
+              "tips": [{"text": "雙 T 拉開站 + 各開大減傷", "role": "tank"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：沙漠/河流/雷雲場景",
+          "mechanics": [
+            {
+              "name": "沙漠場景：糖心繪景 + 仙人掌/流沙",
+              "type": "mechanic",
+              "description": "場地變沙漠，太陽圖層附加『中暑』DoT；仙人掌會在隨機位置出現連續爆炸圓形 AoE，避開預兆；流沙漩渦中心會出現，站太久『下陷』即死，向場角閃避。",
+              "tips": [{"text": "看預兆閃仙人掌；不要久站流沙中", "role": "dps"}]
+            },
+            {
+              "name": "雙手塗鴉 Double Style",
+              "type": "mechanic",
+              "description": "boss 同時繪製兩種物件組合：翅膀+塗鴉、塗鴉+糖箭、翅膀+糖箭、靶子+糖箭。需同時應對兩種走位，依組合判斷安全位（如翅膀+塗鴉 → 站翅膀位置）。",
+              "tips": [{"text": "翅膀+塗鴉 → 站翅膀；糖箭+其他 → 找無箭縱列", "role": "dps"}]
+            },
+            {
+              "name": "河流場景：糖糖火炎 / 糖糖閃雷",
+              "type": "mechanic",
+              "description": "場地變草原+河流，水中『火屬性耐性+ / 雷屬性耐性大降』。糖糖火炎（治療分攤）→ 必須站水中分攤；糖糖閃雷（全員圓形）→ 必須站岸上避水。看技能決定進出水。",
+              "tips": [{"text": "火 → 進水分攤；雷 → 出水", "role": "healer"}]
+            },
+            {
+              "name": "雷雲場景：雷暴雲 / 界雷",
+              "type": "mechanic",
+              "description": "場地變雷雲場景，水變湍流踩入會『水毒』DoT。雷暴雲 add 移動到某草地中心時施放極大 AoE『界雷』，需站對側草地。共 3 次。",
+              "tips": [{"text": "看雷暴雲位置 → 立刻跨橋到對側區", "role": "dps"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "色彩狂熱 → 雙 T 分接",
+        "單手塗鴉 → 看畫的物件躲",
+        "沙漠：閃仙人掌 + 不久站流沙",
+        "河流：火進水、雷出水",
+        "雷雲：雷暴雲 → 跨橋對側"
+      ]
+    }
+  ]
 }

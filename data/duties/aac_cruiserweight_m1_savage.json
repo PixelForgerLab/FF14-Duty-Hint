@@ -1,282 +1,135 @@
 {
-    "id":  "aac_cruiserweight_m1_savage",
-    "name":  "阿卡狄亞零式登天鬥技場 中量級1",
-    "nameEn":  "AAC Cruiserweight M1 (Savage)",
-    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  100,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）一般機制：經典銘心 (1+2 仇 45° 扇形 + 出血) + A/B 面播放儲存技能。",
-                     "2）二/三/四連指向：左右半場 cleave 2-4 次後反向；A 面 = 3 職能各 1 扇形；B 面 = 雙補直線分擔。",
-                     "3）激熱跳舞街：聚光燈 24/32s + 4 安全格 + 4 危險格 (熱舞場地)，獨自 = 高光；多人 = 至暗超高傷。",
-                     "4）登天夜狂熱：8 連圓-環 AoE + 扇形音頻炸彈 α/β，異種 2m 內 = 解爆。",
-                     "5）伴舞團 + 節奏感進度條：每個機制處理正確加分，100 = 額外 LB。",
-                     "6）狂暴：高能夜狂熱 12s 強制秒殺。"
-                 ],
-    "notes":  "DT 7.2 AAC 中量級 1 零式 (M1S, Lv 100, ilvl 730)。Dancing Green (熱舞綠光 / Sugar Riot) Savage。核心：節奏感進度條系統 + 音頻炸彈 α/β 配對 + 聚光燈獨佔 vs 共享機制。",
-    "bosses":  [
-                   {
-                       "name":  "熱舞綠光",
-                       "nameEn":  "Dancing Green",
-                       "mnemonic":  [
-                                        "A 面 = 播放 A 面扇形 3 職各 1；B 面 = 播放 B 面雙補直線分擔。",
-                                        "二/三/四連指向 = 左右半場 2/3/4 次後對側 1 次。",
-                                        "聚光燈：1 人獨佔 = 高光時刻 (傷增)；多人共享 = 至暗時刻秒殺。",
-                                        "音頻炸彈 α/β：異種 2m 內小爆 + 解 debuff；同種 2m 內 = 高音爆炸團滅。",
-                                        "節奏感 100 = 額外 LB 段；失誤扣分。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Phase 1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "經典銘心 / Deep Cut",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1+2 仇 45° 扇形高傷 + 2s 魔法受傷加重 + 15s 出血。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 站對側互背向",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "放入 A 面 / Side A",
-                                                                "type":  "other",
-                                                                "description":  "Boss 頭頂高音譜號標記，儲存對 3 職各 1 名玩家的 45° 扇形 AoE。",
-                                                                "tips":  [
-                                                                             "A 面 = 3 職分別接扇形 (T+H+D)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "放入 B 面 / Side B",
-                                                                "type":  "other",
-                                                                "description":  "Boss 頭頂低音譜號標記，儲存對雙補的直線分擔 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "雙補各帶 4 人分擔",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "二/三/四連指向、定格＆播放",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 左/右側發特效 → 2/3/4 次同側半場 → 1 次反向半場 → 播放儲存的 A/B 面技能。",
-                                                                "tips":  [
-                                                                             "看特效側 + 連發次數",
-                                                                             "最後反向半場注意位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "歡慶時刻 / Celebrate Good Times",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "外翻內轉 / Inside Out",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 先環 AoE → 圓 AoE。",
-                                                                "tips":  [
-                                                                             "先貼 boss → 跑遠"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "內翻外轉 / Out and In",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 先圓 → 環。",
-                                                                "tips":  [
-                                                                             "先跑遠 → 貼 boss"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 2 - 激熱跳舞街",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "激熱跳舞街 / Frenzied Dance",
-                                                                "type":  "other",
-                                                                "description":  "全體 AoE + 3 職與 DPS 分配 24s/32s debuff (其中一組 24s 另一組 32s) + 場上 8 個聚光燈 (4 安全格 + 4 危險格)。聚光燈位置：2 近 boss + 2 遠。",
-                                                                "tips":  [
-                                                                             "找與自己 debuff 時間相同的玩家分組",
-                                                                             "**獨自進入聚光燈** = 高光時刻 (好)",
-                                                                             "**多人同 debuff 時間 + 同聚光燈** = 至暗時刻秒殺 (避免)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "熱舞場地 / Hotsteps",
-                                                                "type":  "aoe",
-                                                                "description":  "不相鄰格子預兆 → AoE，每 4s 切換。",
-                                                                "tips":  [
-                                                                             "跟著切換移動到安全格"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 3 - 登天夜狂熱",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "伴舞團 / Backup Dancers",
-                                                                "type":  "other",
-                                                                "description":  "Boss 免方向 + 場外 8 個青蛙舞者 + 節奏感進度條開始。",
-                                                                "tips":  [
-                                                                             "看青蛙舞者手指方向預判連線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "登天夜狂熱 / Frenzy",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 周身圓 → 環 AoE 交錯 8 輪。同時對 1 名玩家放 45° 扇形 + 音頻炸彈 α (奇數，41/26/26/31s) 或 β (偶數，43/28/18/23s) + 魔法受傷加重。",
-                                                                "tips":  [
-                                                                             "閃圓-環交替",
-                                                                             "被點扇形玩家走外圍",
-                                                                             "記住 α/β 倒數時間"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "音頻炸彈 α/β / Sound Bomb",
-                                                                "type":  "other",
-                                                                "description":  "倒數結束時：異種 (α + β) 2m 內 = 小爆 + 解 debuff；同種 (α+α 或 β+β) 2m 內 = 高音爆炸全體超高傷；獨自 = 單體爆 + 15s 持續傷害。",
-                                                                "tips":  [
-                                                                             "α 找 β 配對，2m 內引爆解",
-                                                                             "**禁止 α+α 或 β+β 互靠**"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "放縱勁舞！/ Outburst",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 連線青蛙舞者，按舞者手指方向連 8 次左/右半場 AoE。",
-                                                                "tips":  [
-                                                                             "看舞者手指方向預判 8 連半場"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "在這停頓！/ Pause",
-                                                                "type":  "other",
-                                                                "description":  "失誤玩家受高傷；通過玩家獲 20s 完美節奏 +3% 傷。節奏感 100 = 額外 LB 段。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 處理機制爭取完美節奏",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 4 - 太空熱步 + 返場",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "舞浪全開 / Cascading Step",
-                                                                "type":  "aoe",
-                                                                "description":  "場北 8 格中 6 格步進式預兆，初始安全 2、5 列或 4、7 列。",
-                                                                "tips":  [
-                                                                             "跟著安全區向南移動"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "8 拍節奏 / 8-bit Beat",
-                                                                "type":  "spread",
-                                                                "description":  "所有玩家 5m 圓 AoE。",
-                                                                "tips":  [
-                                                                             "散開 5m+"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "4 拍節奏 / 4-bit Beat",
-                                                                "type":  "stack",
-                                                                "description":  "對 4 支援或 4 DPS 5m 圓分擔 AoE。",
-                                                                "tips":  [
-                                                                             "4 人分擔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "太空熱步 / Funky Footwork",
-                                                                "type":  "aoe",
-                                                                "description":  "青蛙舞者畫線，劃過區域 AoE。第一輪南北/東西各 4 安全格。",
-                                                                "tips":  [
-                                                                             "看舞者移動方向預判安全格"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "激熱跳舞街 (2nd) / Frenzied Dance 2",
-                                                                "type":  "other",
-                                                                "description":  "4 聚光燈 10s/20s 切換，順/逆時針每 10s 移到下一正/斜點。",
-                                                                "tips":  [
-                                                                             "跟著聚光燈走"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "伴舞波動 / Backup Surge",
-                                                                "type":  "aoe",
-                                                                "description":  "4 青蛙在 4 正點或斜點對最近玩家放 45° 扇形 + 18s 伴舞波動耐降。",
-                                                                "tips":  [
-                                                                             "輪流誘導扇形"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "返場夜狂熱 / Frenzy Reprise",
-                                                                "type":  "aoe",
-                                                                "description":  "8 輪圓-環交替 + 扇形 (無 α/β)。",
-                                                                "tips":  [
-                                                                             "閃圓-環交替"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "彻夜狂歡，放縱勁舞！/ All Night Long",
-                                                                "type":  "aoe",
-                                                                "description":  "8 連前後左右半場 AoE。",
-                                                                "tips":  [
-                                                                             "看舞者手指方向"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 5 - 終戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "搖擺哈娑 / Quaver",
-                                                                "type":  "aoe",
-                                                                "description":  "青蛙舞者或 boss 左/右側發特效，半場 AoE。",
-                                                                "tips":  [
-                                                                             "閃對側"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "舞動波 / Disco Inferno",
-                                                                "type":  "aoe",
-                                                                "description":  "4 斜點青蛙對最近玩家放 + 兩相對正點青蛙太空熱步。重複 2 輪 (安全區一次中央一次場邊)。",
-                                                                "tips":  [
-                                                                             "每輪預判安全區位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "舞團終演 + 高能夜狂熱 (Enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "8 青蛙手指前方 + boss THIS IS IT 姿勢 + 12s 讀條強制秒殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段 DPS check",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "aac_cruiserweight_m1_savage",
+  "name": "阿卡狄亞零式登天鬥技場 中量級1",
+  "nameEn": "AAC Cruiserweight M1 (Savage)",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 735,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）經典銘心 → 一二仇分別接 45° 扇形（出血 + 魔法易傷）",
+    "2）放入 A 面/B 面 → 看高/低音譜記號決定後續對 T/H/D 還是雙 H 直線",
+    "3）激熱跳舞街 → 8 個聚光燈固定 4 模式，T/H/D 配對進燈",
+    "4）外翻內轉/內翻外轉 → 看順序 donut↔circle",
+    "5）登天夜狂熱 → 音頻炸彈 α/β 配對，4 拍/扇形交替",
+    "6）高能夜狂熱 12s 即死，必須節奏感滿才能解"
+  ],
+  "notes": "DT 7.2 阿卡狄亞零式登天鬥技場 中量級1（M1S / M5S）High-End 高難度 raid（Lv 100, iLvl 735）。處理失敗會疊 30s『伤害降低』Debuff。資料來源：灰機 阿卡狄亚零式登天斗技场 中量级1/B（命名與技能 S→T）+ CGW Dancing Green (Savage) walkthrough。",
+  "bosses": [
+    {
+      "name": "熱舞綠光（零式）",
+      "nameEn": "Dancing Green (Savage)",
+      "phases": [
+        {
+          "name": "P1：經典銘心 + 二/三/四連指向播放",
+          "mechanics": [
+            {
+              "name": "經典銘心 Deep Cut（零式強化）",
+              "type": "tankbuster",
+              "description": "對一二仇雙 T 高傷 45° 扇形預兆 AoE，附加 2 秒『魔法受傷加重』+ 15 秒『出血』DoT。雙 T 分開兩側站，各開大減傷。",
+              "tips": [{"text": "雙 T 拉開站 + 大減傷", "role": "tank"}, {"text": "處理出血 DoT 預備補療", "role": "healer"}]
+            },
+            {
+              "name": "放入 A 面 / B 面 Side Recording",
+              "type": "mechanic",
+              "description": "boss 頭頂出現高音譜（A 面）或低音譜（B 面）標誌。釋放二/三/四連指向播放後：A 面 → 對 T/H/D 各 1 名 45° 扇形『播放 A 面』；B 面 → 對雙 H 直線分攤『播放 B 面』。記頭頂譜記預判分組。",
+              "tips": [{"text": "A 面 → T/H/D 三方扇；B 面 → 雙 H 直線分攤", "role": "healer"}]
+            },
+            {
+              "name": "二/三/四連指向、定格＆播放",
+              "type": "aoe",
+              "description": "boss 左/右側發光，2/3/4 連半場斬後反向再一次，最後釋放儲存的 A 面/B 面 AoE。要點：跟著節奏算同/反邊，最後切到對應 A/B 安全位。",
+              "tips": [{"text": "節奏算邊 → 切 A/B 安全位", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：激熱跳舞街 + 8 燈 + 翻轉",
+          "mechanics": [
+            {
+              "name": "激熱跳舞街 + 8 聚光燈 Disco Infernal (8 lights)",
+              "type": "mechanic",
+              "description": "全體 AoE 並對 T/H 與 DPS 兩組各加不同 debuff（24s / 32s）。場上 8 個聚光燈：4 個在安全格、4 個在熱舞場地危險格上。每組 4 人到期前必須『獨自』站進聚光燈否則『至暗時刻』超高傷；多人共燈也算失敗。",
+              "tips": [{"text": "T/H 與 D 各組分配 4 燈位", "role": "tank"}, {"text": "獨佔聚光燈，不可共燈", "role": "dps"}]
+            },
+            {
+              "name": "熱舞場地 Funky Floor（每 4 秒切換）",
+              "type": "aoe",
+              "description": "不相鄰格子地板出現 AoE 預兆，每 4 秒切換一次。配合聚光燈跑位，記跳棋盤對角。",
+              "tips": [{"text": "跳對角安全格", "role": "dps"}]
+            },
+            {
+              "name": "外翻內轉 / 內翻外轉 Eccentric Twist",
+              "type": "aoe",
+              "description": "boss 先後釋放環形（donut）+ 圓形（circle）AoE；外翻內轉 = 先環後圓（先進內 → 後出外）；內翻外轉 = 先圓後環（先出外 → 後進內）。",
+              "tips": [{"text": "外翻 → 先進內後出外；內翻 → 先出外後進內", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P3：登天夜狂熱 + 音頻炸彈",
+          "mechanics": [
+            {
+              "name": "盡情舞蹈！+ 音頻炸彈 α/β Audio Bomb",
+              "type": "mechanic",
+              "description": "boss 周身連續 8 輪交錯 circle ↔ donut AoE（2.5 秒間隔），同時對玩家點名 45° 扇形。奇數次扇形附『音頻炸彈 α』，偶數次附『音頻炸彈 β』。α/β 異種 buff 在 2 米內結束 → 小傷『靜音爆炸』；同種 → 全體即死『高音爆炸』；無對應 → 單體大傷。需依到期時間配對站位。",
+              "tips": [{"text": "α/β 異種配對 → 站 2m 內", "role": "tank"}, {"text": "切勿讓同種 buff 玩家靠近", "role": "healer"}]
+            },
+            {
+              "name": "放縱勁舞！Let's Dance (8 連)",
+              "type": "aoe",
+              "description": "boss 與 8 名青蛙舞者連線，依手指方向發動 8 連左/右半場斬。每次零失誤獲節奏感加分，失誤扣 0.5。",
+              "tips": [{"text": "依手指方向預判 8 連", "role": "dps"}]
+            },
+            {
+              "name": "在這停頓！Let's Pose!（節奏感結算）",
+              "type": "raidwide",
+              "description": "節奏感結算：全程零失誤玩家獲 20 秒『完美節奏』+3% 傷害；失誤玩家受傷。節奏感滿 100 額外送一段極限技條。",
+              "tips": [{"text": "全員零失誤 → 拿 LB", "role": "dps"}]
+            },
+            {
+              "name": "4 拍節奏 + 8 拍節奏",
+              "type": "mechanic",
+              "description": "4 拍 = role 分攤（T/H 一組、D 一組各分攤半徑 5 米圓）；8 拍 = 全員散開圓形 AoE。看標記決定分攤或散開。",
+              "tips": [{"text": "4 拍 → role 集合；8 拍 → 8 方位散", "role": "tank"}]
+            }
+          ]
+        },
+        {
+          "name": "P4：返場夜狂熱 + 高能夜狂熱（DPS 競賽）",
+          "mechanics": [
+            {
+              "name": "伴舞波動 Sparkler Wave + 太空熱步",
+              "type": "aoe",
+              "description": "boss 周身 4 正點/4 斜點出 4 個舞者，對最近玩家扇形 AoE 並附『伴舞波動耐性降低』18 秒（下次伴舞波動大傷）。太空熱步第 1 輪固定東西/南北各 4 安全格。",
+              "tips": [{"text": "舞者拉開距離分散 4 方", "role": "dps"}, {"text": "Debuff 期間遠離舞者", "role": "healer"}]
+            },
+            {
+              "name": "徹夜狂歡，放縱勁舞！Encore Dance",
+              "type": "aoe",
+              "description": "第二輪 8 連半場斬，但前後左右都會用。依舞者手指方向預判 8 段，失誤扣 2.5。",
+              "tips": [{"text": "記前後左右 8 方向序列", "role": "dps"}]
+            },
+            {
+              "name": "高能夜狂熱 Final Beat（即死）",
+              "type": "raidwide",
+              "description": "12 秒長吟唱，所有舞者手指向前。吟唱結束 boss 擺 THIS IS IT 姿勢『強制秒殺所有玩家』。唯一解法：節奏感進度條必須 100 才能存活。整場零失誤是過關條件。",
+              "tips": [{"text": "全員追求零失誤", "role": "tank"}, {"text": "失誤即團滅", "role": "healer"}]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "經典銘心 → 雙 T 拉開接扇 + 出血",
+        "A 面 → T/H/D 扇；B 面 → 雙 H 直線",
+        "8 燈 → 獨佔燈避免共燈",
+        "外翻內轉 → 先進後出；內翻外轉 → 先出後進",
+        "音頻炸彈 → α/β 配對站",
+        "高能夜狂熱 → 節奏感滿 100 才能活"
+      ]
+    }
+  ]
 }

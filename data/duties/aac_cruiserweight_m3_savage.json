@@ -1,210 +1,106 @@
 {
-    "id": "aac_cruiserweight_m3_savage",
-    "name": "阿卡狄亞零式登天鬥技場 中量級3",
-    "nameEn": "AAC Cruiserweight M3 (Savage)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）三場地過場：8-71 號 → 8-72 號 → 8-72 室內。",
-        "2）石製武器：棍棒 = 圓 AoE 跑遠；長刀 = donut 貼近。",
-        "3）近側/遠側揮打：跳最近/最遠，必須 2 人分擔接。",
-        "4）孢囊 + 恨心花芽：4 個荊棘種子生成花芽，未打掉放 Hurricane 全屏。",
-        "5）荊棘生死戰：連線距離越遠 dot 越高（4 段 9k/12k/80k/160k）。",
-        "6）狂暴：究極超豪華野蠻大亂擊跳場中秒殺。"
-    ],
-    "notes": "DT 7.2 AAC 中量級 3 零式 (M3S, Lv 100, ilvl 730)。Brute Abombinator (野蠻恨心 / Brute Bomber 變身體) Savage。核心：3 個場地過場 (8-71 → 8-72 → 8-72 室內) + 武器類型判定 (棍棒/長刀) + 荊棘生死戰連線距離管理。",
-    "bosses": [
+  "id": "aac_cruiserweight_m3_savage",
+  "name": "阿卡狄亞零式登天鬥技場 中量級3",
+  "nameEn": "AAC Cruiserweight M3 (Savage)",
+  "expansion": "7.x 黃金的遺產 (Dawntrail)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 735,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）野蠻橫掃（零式）→ 棍/刀互相強化，必須打斷恨心花芽",
+    "2）8-72 階段：藤蔓攀附 + 雙武器 → 看連線方向 + 武器發光預判",
+    "3）室內：野蠻衝 → 中央踩塔分攤",
+    "4）藤蔓碎頸臂 → 半場直線突進，跨身躲對側",
+    "5）新式超豪華野蠻大亂擊 → 全員開抗擊退"
+  ],
+  "notes": "DT 7.2 阿卡狄亞零式登天鬥技場 中量級3（M3S / M7S）High-End raid。Boss 野蠻恨心（Brute Bomber）零式版有更密的橫掃連發 + 額外塔機制。資料來源：灰機 阿卡狄亚零式登天斗技场 中量级3/B（命名與技能 S→T）+ CGW Brute Bomber (Savage) walkthrough。",
+  "bosses": [
+    {
+      "name": "野蠻恨心（零式）",
+      "nameEn": "Brute Bomber (Savage)",
+      "phases": [
         {
-            "name": "野蠻恨心",
-            "nameEn": "Brute Abombinator",
-            "mnemonic": [
-                "棍棒 = 圓 AoE 跑遠；長刀 = donut 貼近。",
-                "近側揮打 = 最近 2 人分擔；遠側揮打 = 最遠 2 人分擔。",
-                "荊棘生死戰：距離 dot 4 段 (9k/12k/80k/160k)，必須中等距離。",
-                "孢囊：4 個地點放圓 AoE + 種子生長荊棘 + 花粉 + 花芽。",
-                "石化波動：花芽可擋；殺花芽前需有花芽尸體。"
-            ],
-            "phases": [
-                {
-                    "name": "Phase 1 - 8-71 號居住棟",
-                    "mechanics": [
-                        {
-                            "name": "野蠻碎擊 / Brutal Smash",
-                            "type": "raidwide",
-                            "description": "連續 6 次全屏物理 AoE。",
-                            "tips": [
-                                { "text": "全員減傷 + 連補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "石製武器 / Stone Weapon",
-                            "type": "aoe",
-                            "description": "右手棍棒 = 半徑 12m 圓；長刀 = 半徑 9m donut。",
-                            "tips": ["看武器類型決定貼近 vs 跑遠"]
-                        },
-                        {
-                            "name": "近側/遠側揮打 / Inside-Out Strike",
-                            "type": "tankbuster",
-                            "description": "武器發光 → 野蠻橫掃 → 跳最近/最遠玩家放 2 人分擔圓 AoE (3 人以上不再減傷)。",
-                            "tips": [
-                                { "text": "近側 = 兩 T 站近；遠側 = 兩 T 站遠", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "孢囊 + 恨心花芽 / Spore Sac",
-                            "type": "other",
-                            "description": "4 個圓 AoE 預兆 → 圓爆 + 種子生荊棘 + 終點花粉圓 AoE → 中心生成恨心花芽 (可打斷)。",
-                            "tips": [
-                                "立刻打掉恨心花芽避免 Hurricane",
-                                "花芽可擋 boss 石化波動"
-                            ]
-                        },
-                        {
-                            "name": "種彈播撒 + 種彈重擊 / Seed Sowing",
-                            "type": "other",
-                            "description": "最近/最遠 4 人腳下圓 AoE × 4 → 大圓荊棘纏縛。另 4 人圓 AoE → 八向直線荊棘蔓延。",
-                            "tips": [
-                                "被點者按 clock 散開放圓",
-                                "閃八向直線 (記住位置)"
-                            ]
-                        },
-                        {
-                            "name": "石化波動 / Petrifaction",
-                            "type": "other",
-                            "description": "Boss 為心全屏石化 AoE + 20s 石化詛咒。可被花芽 / 花芽尸體阻擋。",
-                            "tips": [
-                                "預留 1 個花芽尸體擋",
-                                "全員躲到花芽後"
-                            ]
-                        },
-                        {
-                            "name": "新式超豪華野蠻大亂擊 → 場地切換",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 擊飛 → 8-71 號擊碎 → 場地切到 8-72 號。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2 - 8-72 號居住棟",
-                    "mechanics": [
-                        {
-                            "name": "藤蔓攀附 / Vine Climbing",
-                            "type": "other",
-                            "description": "Boss 吸附建築物 + 免方向。",
-                            "tips": ["看 boss 朝哪個建築飛"]
-                        },
-                        {
-                            "name": "野蠻怒視 / Brutal Gaze",
-                            "type": "aoe",
-                            "description": "前方直線 AoE + 全員圓 AoE 雷擊 + 魔法受傷加重。",
-                            "tips": ["背對 boss 後散開"]
-                        },
-                        {
-                            "name": "荊棘生死戰 / Thorns Battle",
-                            "type": "other",
-                            "description": "Boss 建築連線 1 仇 + 荊棘 dot，距離越遠 dot 越高 (9k/12k/80k/160k)。",
-                            "tips": [
-                                { "text": "T 保持中等距離維持低 dot", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "野蠻電火花 / Brutal Sparker",
-                            "type": "tankbuster",
-                            "description": "點 1 T 距離衰減全屏 AoE。",
-                            "tips": [
-                                { "text": "被點 T 拉外圍", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "孢子雲 / Spore Sac",
-                            "type": "aoe",
-                            "description": "場上 6 個圓 AoE × 3 共 18 個。",
-                            "tips": ["跟著預兆閃"]
-                        },
-                        {
-                            "name": "荊棘生死戰：樓體 / Thorns: Building",
-                            "type": "other",
-                            "description": "另 2 建築對最近玩家連線，可截。隨後變荊棘 dot。",
-                            "tips": ["指派 2 T 接連線"]
-                        },
-                        {
-                            "name": "種彈炸裂 / Seed Burst",
-                            "type": "spread",
-                            "description": "點 1 T+1 D 圓 AoE → 八向直線荊棘蔓延，共 4 次不重複。",
-                            "tips": ["散開到指定 clock 位"]
-                        },
-                        {
-                            "name": "強震衝 → 場地切換",
-                            "type": "raidwide",
-                            "description": "擊飛 → 8-72 擊碎 → 場地切到室內。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 3 - 8-72 號居住棟室內",
-                    "mechanics": [
-                        {
-                            "name": "野蠻碎擊 (室內) / Brutal Smash Reprise",
-                            "type": "raidwide",
-                            "description": "連續 7 次（後續 8 次）全屏 AoE。",
-                            "tips": [
-                                { "text": "全員減傷 + LB", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "雙持石製武器 / Dual Stone Weapon",
-                            "type": "aoe",
-                            "description": "左右手出現棍棒 + 長刀。隨機 1 個發光對 1 側建築連線飛去，依武器類型放圓或 donut。",
-                            "tips": ["看發光武器類型"]
-                        },
-                        {
-                            "name": "藤蔓碎頸臂 / Vine Bouts",
-                            "type": "aoe",
-                            "description": "Boss 未持武器側手臂發光 → 半場直線 AoE + 衝刺對側。",
-                            "tips": ["看光側預判半場"]
-                        },
-                        {
-                            "name": "野蠻衝 + 塔 / Brutal Surge",
-                            "type": "stack",
-                            "description": "場中央 1 可分擔塔。少人 = 全屏超高傷 + 傷害降低。",
-                            "tips": [
-                                "全員疊塔分擔"
-                            ]
-                        },
-                        {
-                            "name": "荊棘生死戰：牆面 / Thorns: Wall",
-                            "type": "other",
-                            "description": "場地 4 牆對最近玩家連線可截，變荊棘 dot。",
-                            "tips": ["4 人接連線"]
-                        },
-                        {
-                            "name": "種彈重擊 + 荊棘挥打",
-                            "type": "other",
-                            "description": "4 支援或 4 DPS 分擔圓 → 八向直線荊棘蔓延。荊棘挥打 1 補職分擔 + 荊棘翻騰 boss 圓 + 荊棘波扇形。",
-                            "tips": ["指派位置分擔 + 閃直線"]
-                        },
-                        {
-                            "name": "究極超豪華野蠻大亂擊 (Enrage)",
-                            "type": "raidwide",
-                            "description": "飛場北 + 跳場中央強制秒殺 + 擊退場外。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+          "name": "P1：8-71 居住棟",
+          "mechanics": [
+            {
+              "name": "野蠻碎擊 Barbaric Crusher（零式 5 連）",
+              "type": "raidwide",
+              "description": "5 連全體 AoE 大傷害（零式比普通多 2 段）；準備團補連 5 次 + 全員減傷。",
+              "tips": [{"text": "團補連發 + 各自盾", "role": "healer"}]
+            },
+            {
+              "name": "野蠻橫掃 Brutal Impact（棍/刀）",
+              "type": "aoe",
+              "description": "棍狀（直棍）→ 半徑 12 米圓 AoE，跑出外圈；刀狀（彎刀）→ 環形 AoE 安全內圈，跑進內圈。隨後分攤圓 Barbaric Swing 對 ST。雙 T 拉開分接。",
+              "tips": [{"text": "棍 → 跑外；刀 → 跑內", "role": "tank"}]
+            },
+            {
+              "name": "孢囊 + 恨心花芽 Sporechain",
+              "type": "interrupt",
+              "description": "場上 3 個圓形 AoE → 落點再炸 + 生成花芽 add。花芽吟唱『環形突風』（內圈安全）/『交叉突風』（十字）— 必須打斷。",
+              "tips": [{"text": "DPS 切目標打斷花芽", "role": "dps"}]
+            },
+            {
+              "name": "荊棘揮打 Thorn Jab",
+              "type": "stack",
+              "description": "點名治療為中心分攤圓，boss 跳向；隨後 8 個扇形+圓形預兆，分攤後立即閃位。",
+              "tips": [{"text": "先集中 → 閃扇形", "role": "healer"}]
+            },
+            {
+              "name": "石化波動 Stoneskin Pulse",
+              "type": "raidwide",
+              "description": "全體 AoE 附 12 秒『石化詛咒』；站花芽身後可躲。",
+              "tips": [{"text": "提前找花芽躲後面", "role": "dps"}]
+            }
+          ]
+        },
+        {
+          "name": "P2：8-72 + 室內",
+          "mechanics": [
+            {
+              "name": "藤蔓攀附 + 強化橫掃",
+              "type": "aoe",
+              "description": "boss 攀附建築物，橫掃變為 180° 半徑 25 米扇形（棍）或半徑 22 米弧形（刀）。連線方向預判位置。",
+              "tips": [{"text": "看連線 → 預判扇/弧方向", "role": "tank"}]
+            },
+            {
+              "name": "野蠻怒視 Brutal Glare",
+              "type": "aoe",
+              "description": "前方寬 14 米直線（雷屬性）+ 全員雷擊圓形。避直線後散開接圓。",
+              "tips": [{"text": "避直線後散開", "role": "dps"}]
+            },
+            {
+              "name": "野蠻衝 + 大爆炸（室內塔）",
+              "type": "stack",
+              "description": "場中央分攤塔，boss 跳向發動分攤；無人接 → 大爆炸全體大傷。指定團員上塔。",
+              "tips": [{"text": "指定團員踩塔", "role": "tank"}]
+            },
+            {
+              "name": "藤蔓碎頸臂 Vine Bash",
+              "type": "aoe",
+              "description": "boss 抬起無武器一側手臂，衝向對側牆壁釋放大於半場 AoE。看抬哪邊 → 跨身躲對側。",
+              "tips": [{"text": "看抬手方向 → 跨身", "role": "dps"}]
+            },
+            {
+              "name": "新式超豪華野蠻大亂擊 Mega Brutal Pew Pew",
+              "type": "raidwide",
+              "description": "全體 AoE 並擊飛全員；全員開 Surecast / Arm's Length 抗擊退避免推下場。",
+              "tips": [{"text": "全員 Surecast/Arm's Length", "role": "tank"}]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "棍 → 跑外；刀 → 跑內",
+        "孢囊 → 打斷花芽",
+        "藤蔓 → 看連線預判",
+        "野蠻衝 → 中央踩塔",
+        "藤蔓碎頸臂 → 跨身躲對側",
+        "野蠻大亂擊 → 全員抗擊退"
+      ]
+    }
+  ]
 }
