@@ -1,6 +1,6 @@
 {
     "id": "sastasha_hard",
-    "name": "薩斯塔夏（零式）",
+    "name": "薩斯塔夏溶洞（零式）",
     "nameEn": "Sastasha (Hard)",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "dungeon",
@@ -10,40 +10,40 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Madison：Cyclone 旋風 + 召喚海怪。",
-        "2）B2 Karlabos：Aqua Ball 水球分擔 + Paralyze Tail 麻痺。",
-        "3）B3 Kraken 巨魷：場地分區水柱 + 觸手 + Tentacle Spray 噴墨。"
+        "1）B1 Karlabos：Aqua Ball 留 Slime DoT 需 Esuna；Prey 標記後暈 → Tail Screw 把該玩家打到 1HP；可衝撞傳遞 Prey 讓 DPS 接以便暈 Tail Screw。",
+        "2）B2 Captain Madison：擊退後對隨機玩家連續射擊需集火打斷；低血召 adds 跑中央 AoE 收，第 3、4 波可開 caster LB。",
+        "3）B3 Kraken：規則 — 只有 Kraken + Tentacles 打 Kraken / 有 Arms 打 Arms / 6 Arms 全活就求生；Ink Jet 不值得閃，healer 解 Blind 即可。"
     ],
-    "notes": "ARR 2.2 dungeon Hard (Lv 50, ilvl 90)。Sastasha 重製版。",
+    "notes": "ARR 2.2 dungeon Hard Lv 50 ilvl 95。Sastasha 重製版。資料來源：CGW (Sastasha (Hard))。",
     "bosses": [
         {
-            "name": "Captain Madison",
-            "nameEn": "Captain Madison",
-            "mnemonic": ["旋風 + 召海怪"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Cyclone 旋風", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
-                { "name": "Sea Monsters 召海怪", "type": "other", "description": "場上召喚水手小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "Karlabos 巨蝦",
+            "name": "Karlabos 卡拉博斯",
             "nameEn": "Karlabos",
-            "mnemonic": ["水球分擔 + 麻痺尾"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Aqua Ball 水球", "type": "stack", "description": "玩家頭上水球需分擔。", "tips": ["全員疊接"] },
-                { "name": "Paralyze Tail 麻痺尾", "type": "tankbuster", "description": "Tankbuster + 麻痺。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            "mnemonic": ["Aqua Ball 留 Slime DoT", "Prey 暈 + Tail Screw 打到 1HP", "Prey 可傳遞給 DPS 後 stun Tail Screw"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Aqua Ball 水球", "type": "other", "description": "在玩家身上落水球，留下 Slime DoT debuff。圓會重疊，同一人可疊多層 Slime。", "tips": [{ "text": "healer 立刻 Esuna 解 Slime", "role": "healer" }, "玩家彼此拉開避免疊圓"] },
+                { "name": "Prey 獵物", "type": "other", "description": "對主仇恨者上 Prey 標記，幾秒後暈該玩家。可衝撞另一玩家傳遞 Prey (改為他暈)。", "tips": [{ "text": "MT 可考慮在被暈前傳給近戰 DPS 以便接著 stun Tail Screw", "role": "tank" }] },
+                { "name": "Tail Screw 尾擊", "type": "tankbuster", "description": "對非 tank 高傷攻擊把目標打到 1HP，不會直殺。但若該玩家有 Slime debuff = 死。可被 stun。", "tips": [{ "text": "healer 確認被瞄準者已解 Slime", "role": "healer" }, "近戰 DPS 接 Prey 暈後立刻起身 stun Tail Screw"] }
             ]}]
         },
         {
-            "name": "Kraken 巨魷",
-            "nameEn": "Kraken",
-            "mnemonic": ["水柱 + 觸手 + 噴墨"],
+            "name": "Captain Madison 馬迪森船長",
+            "nameEn": "Captain Madison (Hard)",
+            "mnemonic": ["衝擊 + 連續射擊", "Captain's Guard 弱小先殺", "末段 adds 中央 AoE，可用 caster LB"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Charge → 連續射擊", "type": "other", "description": "Boss 衝撞擊退玩家後對隨機玩家連續開槍，無法 stun，必須足夠傷害才停。", "tips": [{ "text": "DPS 全力打 burst 中斷連射", "role": "dps" }] },
+                { "name": "Captain's Guard 召喚衛兵", "type": "other", "description": "場上召喚衛兵 adds (弱)。", "tips": [{ "text": "AoE 速殺", "role": "dps" }] },
+                { "name": "低血召喚多波 adds", "type": "other", "description": "Boss 逃跑前召大量 adds，集中在中央 AoE 收。", "tips": [{ "text": "第 3/4 波可開 caster LB", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Kraken 大魷魚",
+            "nameEn": "Kraken (Sastasha (Hard))",
+            "mnemonic": ["優先順序：只有 Tentacles → 打 Kraken / 有 Arms → 打 Arms / 6 Arms 都活 → 求生", "Ink Jet 不值得閃，解 Blind 即可"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Geyser 水柱", "type": "aoe", "description": "場上多重水柱 AoE 分區。", "tips": ["閃預警"] },
-                { "name": "Tentacles 觸手", "type": "other", "description": "場上召喚觸手 adds。", "tips": [{ "text": "DPS 速殺觸手", "role": "dps" }] },
-                { "name": "Tentacle Spray 噴墨", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Tentacles 觸手", "type": "other", "description": "場上召觸手 adds，可忽略 (除非有 Arms)。", "tips": ["看狀況決定打 Kraken 還是 Arms"] },
+                { "name": "Kraken's Arms 主臂", "type": "other", "description": "六隻可選中的主臂分布場上。優先打 Arms (有 Arms 時)。", "tips": [{ "text": "DPS 集火 Arms", "role": "dps" }] },
+                { "name": "Ink Jet 噴墨", "type": "aoe", "description": "場上 AoE 給 Blind debuff。不值得花心思閃。", "tips": [{ "text": "healer Esuna 解 Blind 後繼續補血", "role": "healer" }] }
             ]}]
         }
     ]

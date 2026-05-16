@@ -10,41 +10,41 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Kottos 巨人：Lumbering Leap 跳擊圓；Catapult 投擲。",
-        "2）B2 Atomos 食肉花：Devour 吞噬玩家 + Tendril 觸鬚抽打。",
-        "3）B3 Gyges the Great：Grand Slam 大擊 + Gigantic Smash + 召石巨人。"
+        "1）B1 Hecatoncheir Mastermind：Darkfire 燒掉一段橋逼前進；同時召喚 Flambeau 炸彈會跑向燒區，**炸到燒區 = 全滅**，全員集火 (可 stun) 殺它。",
+        "2）B2 Gogmagolem 石巨人 + Biggy：一 DPS 操作 Improved Blasting Device 生 Waymaker Bomb 放路徑上炸 boss；其他 DPS 殺 Kindling Sprite。Plaincracker tank 前方錐 AoE。Boss 死後 Biggy spriggan 出來 + 大炸彈廣範圍。",
+        "3）B3 Ouranos：Giga 小怪需主動殺；偶爾 Sand Worm 出 → 找 Crystallized Rock 放沙地引開，否則 Bottomless Desert 拉全隊到中央高傷。"
     ],
-    "notes": "ARR 2.2 dungeon Hard (Lv 50, ilvl 95)。Copperbell 重製版。",
+    "notes": "ARR 2.4 dungeon Hard Lv 50 ilvl 110。Copperbell Mines 重製版。資料來源：CGW (Copperbell Mines (Hard))。",
     "bosses": [
         {
-            "name": "Kottos 巨人",
-            "nameEn": "Kottos",
-            "mnemonic": ["跳擊 + 投擲"],
+            "name": "Hecatoncheir Mastermind 百手巨人主腦",
+            "nameEn": "Hecatoncheir Mastermind",
+            "mnemonic": ["Darkfire 燒橋逼前進", "Flambeau 炸彈到燒區 = 全滅，可 stun"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Lumbering Leap 巨擊跳", "type": "aoe", "description": "Boss 跳到玩家身上落地大圓 AoE。", "tips": ["被點名跑開"] },
-                { "name": "Catapult 投擲", "type": "knockback", "description": "玩家被抓起拋出。", "tips": ["近戰小心被抓"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Darkfire 暗火", "type": "other", "description": "每 45-60 秒燒掉一段橋，玩家被迫往前。", "tips": ["跟著移動"] },
+                { "name": "Flambeau 炸彈怪", "type": "other", "description": "Darkfire 時場底端出現，朝燒區移動。**到燒區 = 全滅**；自爆也會全滅。", "tips": [{ "text": "DPS 全力打掉 Flambeau", "role": "dps" }, "可 stun 延緩"] }
             ]}]
         },
         {
-            "name": "Atomos 食肉花",
-            "nameEn": "Atomos",
-            "mnemonic": ["吞噬 + 觸鬚"],
+            "name": "Gogmagolem + Biggy",
+            "nameEn": "Gogmagolem",
+            "mnemonic": ["Bomb 機制 → 放路徑炸 boss", "Kindling Sprite adds 速殺", "Boss 死後 Biggy 大炸彈廣範圍"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Devour 吞噬", "type": "other", "description": "玩家被吞入需隊友打外圍救出。", "tips": [{ "text": "DPS 救隊友", "role": "dps" }] },
-                { "name": "Tendril 觸鬚抽打", "type": "aoe", "description": "場上多重觸鬚 AoE。", "tips": ["閃預警"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Bomb 機制", "type": "other", "description": "場上 Improved Blasting Device 一 DPS 操作生 Waymaker Bomb，撿起來放 boss 路徑上 5 秒後炸主要傷害。Black Bombs 也會自爆要避。", "tips": [{ "text": "指派 1 DPS 操作 Device", "role": "dps" }] },
+                { "name": "Kindling Sprite adds", "type": "other", "description": "場邊召喚精靈 adds。", "tips": [{ "text": "其他 DPS 殺 adds", "role": "dps" }] },
+                { "name": "Plaincracker 平原破", "type": "tankbuster", "description": "對 tank 前方錐高傷 AoE。", "tips": [{ "text": "MT 開減傷", "role": "tank" }, "非 tank 不要站 boss 前面"] },
+                { "name": "Biggy spriggan", "type": "other", "description": "Gogmagolem 死後 Biggy 出，**召大炸彈 (廣範圍爆炸)**。", "tips": [{ "text": "DPS 殺 Biggy，遠離大炸彈", "role": "dps" }] }
             ]}]
         },
         {
-            "name": "Gyges the Great 偉大尤格斯",
-            "nameEn": "Gyges the Great",
-            "mnemonic": ["大擊 + 召石巨人"],
+            "name": "Ouranos 烏拉諾斯",
+            "nameEn": "Ouranos",
+            "mnemonic": ["Giga adds 隨機追要殺", "Sand Worm Searching for Fodder → 放 Crystallized Rock 沙地", "未放 Rock → Bottomless Desert 拉中央高傷"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Grand Slam 大擊", "type": "aoe", "description": "Boss 周圍大圓 AoE。", "tips": ["遠離 boss"] },
-                { "name": "Gigantic Smash 巨擊", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Lesser Adds 石巨人小怪", "type": "other", "description": "場上召喚石巨人小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Cone AoE 前錐", "type": "aoe", "description": "Boss 前方錐 AoE。", "tips": [{ "text": "非 tank 不站前", "role": "dps" }] },
+                { "name": "Giga adds", "type": "other", "description": "場上召 Giga 隨機追玩家，無法強制接仇。", "tips": [{ "text": "DPS 集火 adds", "role": "dps" }] },
+                { "name": "Sand Worm 沙蟲", "type": "other", "description": "場上提示「The abyss worm is searching for fodder」→ 找場邊 Crystallized Rock 放沙地引開沙蟲。**未放 = Bottomless Desert**。", "tips": ["指派 1 名玩家專門 Rock duty"] },
+                { "name": "Bottomless Desert 無底沙漠", "type": "raidwide", "description": "未放 Rock 時 Sand Worm 拉全隊到中央 + 高傷，可能 wipe。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
             ]}]
         }
     ]

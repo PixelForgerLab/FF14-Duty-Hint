@@ -1,51 +1,52 @@
 {
     "id": "amdapor_keep_hard",
-    "name": "安達普爾要塞（零式）",
+    "name": "邪教駐地無限城古堡（零式）",
     "nameEn": "Amdapor Keep (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 50,
+    "jobLevelSync": 60,
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Anantaboga 蛇神：Sticky Web 黏網 + Heart of Pain。",
-        "2）B2 Forgall：召喚 Voidsent + Dark II 圈。",
-        "3）B3 Diabolos (Hard)：Nightmare 召喚 Diabolic Gate 黑門 + Ruinous Omen 全屏 + Camisado 黑暗區。"
+        "1）B1 Anchag 安卡：紅標記時躲到場上四石像後吸傷害；boss 別拉太近石像避免衝撞時撞壞。",
+        "2）B2 Boogyman 妖夢：boss 隱身 → 殺 Luminescence 球拿 Irradiance buff → 跑到隱身 boss 處引爆現形。低血分裂兩隻同時隱身需分組。",
+        "3）B3 Ferdiad 費迪亞德：類似 Titan 場邊拉；連繩小怪 (Wicked Jester) 拉著 → AoE 圓擴大不殺 = wipe。Suppuration 黏液 add 困住玩家要救。",
+        "4）Ferdiad 後期：兩 Suppuration + 一連繩，看情況決定先救人還是先殺連繩。"
     ],
-    "notes": "ARR 2.4 dungeon Hard (Lv 50, ilvl 110)。Amdapor Keep Hard，Diabolos 重戰。",
+    "notes": "HW 3.0 dungeon Hard Lv 60 ilvl 145。Amdapor Keep 重製，Ferdiad 為終 boss。資料來源：CGW (Amdapor Keep (Hard))。",
     "bosses": [
         {
-            "name": "Anantaboga 蛇神",
-            "nameEn": "Anantaboga",
-            "mnemonic": ["黏網"],
+            "name": "Anchag 安卡",
+            "nameEn": "Anchag",
+            "mnemonic": ["紅標 → 躲石像後", "boss 拉場中央離石像遠"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Sticky Web 黏網", "type": "aoe", "description": "場上多重網狀 AoE 給 Heavy。", "tips": ["閃預警"] },
-                { "name": "Heart of Pain 痛心擊", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Red Marker 紅標記", "type": "other", "description": "玩家頭上紅標 → 必須躲到石像後讓石像吸傷害，否則 tether 高 DoT 多數玩家會死。", "tips": ["看到紅標立刻躲石像後"] },
+                { "name": "場上四石像", "type": "other", "description": "石像吸傷害保護玩家。boss 衝鋒 telegraph 命中會破壞石像。", "tips": [{ "text": "MT 把 boss 拉中央遠離石像", "role": "tank" }, "ranged/healer 站兩石像之間"] },
+                { "name": "Rush Attack 衝鋒", "type": "knockback", "description": "對玩家衝鋒擊退長矩形 AoE，會打壞路徑上的石像。", "tips": ["被瞄者跑到 boss 附近避免擊退距離破壞石像"] }
             ]}]
         },
         {
-            "name": "Forgall",
-            "nameEn": "Forgall",
-            "mnemonic": ["召 Voidsent + Dark II"],
+            "name": "Boogyman 妖夢",
+            "nameEn": "Boogyman",
+            "mnemonic": ["Luminescence 球 → Irradiance buff → 撞隱身 boss 現形", "55% Bloodmoon Sacrifice 殭屍出現", "30% boss 分裂兩隻同時隱身需分組"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Voidsent 召喚", "type": "other", "description": "場上召喚虛靈小怪。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
-                { "name": "Dark II 黑II", "type": "aoe", "description": "場上黑色圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Invisibility 隱身 + Luminescence Orb", "type": "other", "description": "Boss 隱身不可選 → 殺場上 Luminescence 球 → 站區域內拿 Irradiance buff → 跑到隱身 boss 位置放 AoE 現形 + 擊退。", "tips": ["每次隱身重複此循環"] },
+                { "name": "Bloodmoon Sacrifice adds", "type": "other", "description": "55% 第一波殭屍 adds，30% 第二波 + boss 分裂。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] },
+                { "name": "30% 分裂兩 boss", "type": "other", "description": "Boss 分裂兩隻同時隱身，需玩家分組各拿 Irradiance buff 各自現形。", "tips": ["事先指派分組"] }
             ]}]
         },
         {
-            "name": "Diabolos (Hard) 蒂亞波羅斯",
-            "nameEn": "Diabolos (Hard)",
-            "mnemonic": ["Diabolic Gate 黑門", "Ruinous Omen + Camisado"],
+            "name": "Ferdiad 費迪亞德",
+            "nameEn": "Ferdiad",
+            "mnemonic": ["場邊拉像 Titan", "Wicked Jester 連繩 add 不殺 → AoE 圓滿場 wipe", "Suppuration 黏液困住玩家要救", "後期雙黏液 + 連繩，可能要先殺連繩用 LB"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Nightmare 噩夢", "type": "other", "description": "玩家被睡眠 debuff，可被打醒。", "tips": [{ "text": "healer 醒人", "role": "healer" }] },
-                { "name": "Diabolic Gate 黑門", "type": "other", "description": "場上出現黑色傳送門，會把玩家傳送到場外或場另一邊。", "tips": ["移動避開門"] },
-                { "name": "Ruinous Omen 凶兆", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Camisado 黑暗區", "type": "aoe", "description": "場上多重暗色圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Wicked Jester 連繩小丑", "type": "other", "description": "場邊出現連繩 add，Ferdiad 詠唱中央圓 AoE 逐漸擴大，未殺 add = 全屏 wipe。Ferdiad 此時不普攻，全員打 add。", "tips": [{ "text": "全力打 Wicked Jester adds", "role": "dps" }, { "text": "tank/healer 也加入打 adds", "role": "tank" }] },
+                { "name": "Suppuration 黏液困人", "type": "other", "description": "玩家被黏液 add 困住無法移動 + cleave 高傷。需隊友打掉 add 解救。被困玩家也可自打。", "tips": ["立刻打黏液救人"] },
+                { "name": "Blue Scythes 藍鐮刀", "type": "aoe", "description": "後半場上玩家頭頂出現旋轉藍鐮刀，無 telegraph 要躲。", "tips": ["看到立刻離開"] },
+                { "name": "Criss-cross AoE", "type": "aoe", "description": "場上多重交叉直線 AoE (類似 Haukke Manor (Hard) Manor Jester)。", "tips": ["走交叉空隙"] },
+                { "name": "終局組合：雙黏液 + 連繩", "type": "other", "description": "兩玩家被黏液困 (這次不能自救) + 一隻強連繩 add。需快速判斷先救人還是先殺連繩。", "tips": ["大多數情況優先殺連繩 (即使 AoE 滿場)，若 2 名 DPS 都被困則先救", "可開 DPS LB"] }
             ]}]
         }
     ]
