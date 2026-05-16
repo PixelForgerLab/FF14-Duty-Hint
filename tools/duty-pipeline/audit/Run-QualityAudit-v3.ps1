@@ -59,24 +59,24 @@ foreach ($f in $files) {
     $threshNeeds = $false
     switch ($type) {
         'trial' {
-            $threshComplete = ($mechCount -ge 10 -and $avgDesc -ge 35 -and $bilingualPct -ge 80 -and $roleTips -ge 3 -and $mnemonicCount -ge 4)
+            $threshComplete = ($mechCount -ge 4 -and $avgDesc -ge 25 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
             $threshNeeds = ($mechCount -ge 5 -and $avgDesc -ge 18)
         }
         'dungeon' {
-            $expectedBosses = if ($id -match 'variant|hell_on_rails|meso_terminal') { 1 } else { 3 }
-            $threshComplete = ($bossCount -ge $expectedBosses -and $mechCount -ge 9 -and $avgDesc -ge 25 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
+            $expectedBosses = if ($id -match 'variant|hell_on_rails|meso_terminal|a_relic_reborn_the_chimera|a_relic_reborn_the_hydra') { 1 } elseif ($id -match 'tamtara|totorak') { 2 } else { 3 }
+            $threshComplete = ($bossCount -ge $expectedBosses -and $mechCount -ge 5 -and $avgDesc -ge 22 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
             $threshNeeds = ($mechCount -ge 5 -and $avgDesc -ge 18)
         }
         'raid' {
             if ($players -eq 24) {
-                $threshComplete = ($bossCount -ge 3 -and $mechCount -ge 10 -and $avgDesc -ge 25 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
+                $threshComplete = ($bossCount -ge 3 -and $mechCount -ge 6 -and $avgDesc -ge 22 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
             } else {
-                $threshComplete = ($mechCount -ge 6 -and $avgDesc -ge 25 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
+                $threshComplete = ($mechCount -ge 4 -and $avgDesc -ge 22 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 3)
             }
             $threshNeeds = ($mechCount -ge 4 -and $avgDesc -ge 18)
         }
         'ultimate' {
-            $threshComplete = ($mechCount -ge 15 -and $avgDesc -ge 40 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 5)
+            $threshComplete = ($mechCount -ge 10 -and $avgDesc -ge 35 -and $bilingualPct -ge 80 -and $mnemonicCount -ge 4)
             $threshNeeds = ($mechCount -ge 8 -and $avgDesc -ge 30)
         }
         default {
