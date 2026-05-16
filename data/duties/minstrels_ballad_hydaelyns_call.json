@@ -1,75 +1,40 @@
 {
     "id": "minstrels_ballad_hydaelyns_call",
-    "name": "光輝詠歌殲殛戰",
+    "name": "海德林歸來絕境戰",
     "nameEn": "The Minstrel's Ballad: Hydaelyn's Call",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 595,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）Hydaelyn EX：加強 Equinox 黑白半場。",
-        "2）Echoes 回響 + 多重 AoE 預兆。",
-        "3）Crystalline Blessing：場上水晶 buff 機制強化。",
-        "4）狂暴：Magos's Radiance 終局全屏。"
+        "1）Hydaelyn EX = Heros' Glory 全屏 + Sublime Spark 雙坦 cone (強化版)。",
+        "2）Echoes of the Lost = 召多分身 + 同步 cone + 連環。",
+        "3）Anthem of Equality / Inequality = stack / spread 切換。",
+        "4）Magos Beacon 多 line + 凝視。",
+        "5）Pulse of the Realm 強化版 = 多 AoE 圈 + 散標。",
+        "6）Crystallize = 場上水晶 + Crystallized 機制。",
+        "7）Parhelion 中標 + 散圈。",
+        "8）Roar of Light 末段 = 連發全屏。"
     ],
-    "notes": "EW 6.1 Hydaelyn EX (Lv 90, ilvl 595)。海德林 EX。",
+    "notes": "EW 6.1 Hydaelyn EX (Lv 90)。Hydaelyn 強化版。海德林絕境戰。",
     "bosses": [
         {
             "name": "海德林",
             "nameEn": "Hydaelyn",
-            "mnemonic": [
-                "Equinox 黑白半場交替 + 順序判定。",
-                "Echoes 玩家位置記憶 + 回響爆。",
-                "Crystalline Blessing 水晶配對。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Echoes (EX) 回響",
-                            "type": "aoe",
-                            "description": "場上散開 AoE + 倒數爆 + 記憶位置。",
-                            "tips": ["散開 + 移動避免回響"]
-                        },
-                        {
-                            "name": "Equinox (EX) 春分",
-                            "type": "aoe",
-                            "description": "黑/白半場 cleave 連發。",
-                            "tips": ["看顏色順序預判"]
-                        },
-                        {
-                            "name": "Heros' Sundering 英雄分離",
-                            "type": "stack",
-                            "description": "分擔圓 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Crystalline Blessing 結晶祝福",
-                            "type": "other",
-                            "description": "場上水晶 buff + 配對機制。",
-                            "tips": ["依顏色配對站位"]
-                        },
-                        {
-                            "name": "Aetheric Pulse 以太脈衝",
-                            "type": "aoe",
-                            "description": "全體 + 散開組合 AoE。",
-                            "tips": ["散開 + 減傷"]
-                        },
-                        {
-                            "name": "Magos's Radiance (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Hydaelyn EX", "mechanics": [
+                { "name": "Heros' Glory 強化", "type": "raidwide", "description": "高傷全屏，需強減傷 + 連補。", "tips": [{ "text": "全員減傷 + 強補", "role": "healer" }] },
+                { "name": "Sublime Spark", "type": "tankbuster", "description": "雙坦 cone buster + Magic Vuln 連 hit。", "tips": [{ "text": "雙坦分坦 + 換手", "role": "tank" }] },
+                { "name": "Echoes of the Lost", "type": "other", "description": "召多分身 + 同步 cone + 連環機制。", "tips": ["找本體 + 避分身連 cone"] },
+                { "name": "Anthem of Equality / Inequality", "type": "stack", "description": "Equality = 全員 stack；Inequality = 全員 spread。", "tips": ["看 cast 名 → 集合 / 散開"] },
+                { "name": "Magos Beacon", "type": "aoe", "description": "玩家標 line AoE + 凝視配合。", "tips": ["背對 + 線往無人方向"] },
+                { "name": "Pulse of the Realm 強化", "type": "raidwide", "description": "全屏 + 多 AoE 圈 + 散標。", "tips": [{ "text": "全員減傷 + 散開避圈", "role": "healer" }] },
+                { "name": "Crystallize 結晶機制", "type": "other", "description": "場上召水晶 → 玩家被 Crystallized debuff，需特定處理。", "tips": ["照固定圖解 debuff"] },
+                { "name": "Parhelion 散圈", "type": "spread", "description": "中標下 AoE 圈 + 全員散。", "tips": ["散到場周"] },
+                { "name": "Roar of Light (末段)", "type": "raidwide", "description": "末段大全屏連發。", "tips": [{ "text": "末段催爆發 + 強減傷", "role": "dps" }] }
+            ]}]
         }
     ]
 }

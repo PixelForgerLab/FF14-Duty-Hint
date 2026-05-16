@@ -1,6 +1,6 @@
 {
     "id": "dark_inside",
-    "name": "極夜決戰",
+    "name": "黑暗深淵",
     "nameEn": "The Dark Inside",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -8,68 +8,27 @@
     "iLvlSync": null,
     "jobLevelSync": 89,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Algedon：分擔圓 + 邊緣 AoE。",
-        "2）Cold Sentence：對 2 名玩家連線分擔。",
-        "3）Phaseshift：場地分區 + 黑色/紫色配對機制。",
-        "4）Adikia：場上多個 AoE 預兆 + 倒數爆。",
-        "5）狂暴：Astral Eclipse 全屏即死。"
+        "1）Zodiark = Algedon 全屏 + Astral Eclipse 場分光暗。",
+        "2）Adikia 雙坦 line + Phobos 凝視。",
+        "3）Esoteric Sect = 多 AoE 圈散場。",
+        "4）Paradeigma 召分身 + 雙頭蛇 line。",
+        "5）Exoteric Pattern alpha/beta = 場上 4 段機制鏈。"
     ],
-    "notes": "EW 6.0 MSQ trial (Lv 89)。Zodiark (索德雷恩) Normal。EW MSQ 第一個 trial。",
+    "notes": "EW 6.0 MSQ trial (Lv 89)。Zodiark 索德雷恩 (上帝級召喚獸)。",
     "bosses": [
         {
             "name": "索德雷恩",
             "nameEn": "Zodiark",
-            "mnemonic": [
-                "Algedon：分擔圓 + 邊緣 AoE。",
-                "Phaseshift：場地分區 + 配色解。",
-                "Cold Sentence：連線兩玩家分擔。",
-                "Adikia：場上多重 AoE 預兆。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Algedon 痛苦",
-                            "type": "stack",
-                            "description": "場中央分擔圓 + 邊緣 AoE。",
-                            "tips": ["全員疊中央"]
-                        },
-                        {
-                            "name": "Cold Sentence 寒冷判決",
-                            "type": "stack",
-                            "description": "連線 2 名玩家分擔。",
-                            "tips": [{ "text": "兩 T 站近接", "role": "tank" }]
-                        },
-                        {
-                            "name": "Phaseshift 相位變換",
-                            "type": "other",
-                            "description": "場地分區 + 黑/紫配對機制。",
-                            "tips": ["依配色找安全區"]
-                        },
-                        {
-                            "name": "Adikia 不義",
-                            "type": "aoe",
-                            "description": "場上多重 AoE 預兆 + 倒數爆。",
-                            "tips": ["跟預兆移動"]
-                        },
-                        {
-                            "name": "Algedon 大版本",
-                            "type": "stack",
-                            "description": "整場分擔機制 + 邊緣黑霧 AoE。",
-                            "tips": ["全員疊安全區"]
-                        },
-                        {
-                            "name": "Astral Eclipse (Enrage)",
-                            "type": "raidwide",
-                            "description": "全屏即死。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Zodiark", "mechanics": [
+                { "name": "Algedon", "type": "raidwide", "description": "全屏 + 流血。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] },
+                { "name": "Astral Eclipse", "type": "other", "description": "場分光暗，依顏色站對位。", "tips": ["看光暗 → 站對色"] },
+                { "name": "Adikia line", "type": "tankbuster", "description": "雙坦 line buster + Magic Vuln。", "tips": [{ "text": "雙坦分坦或換手", "role": "tank" }] },
+                { "name": "Phobos 凝視", "type": "other", "description": "Boss 凝視 → 看 = 致命。", "tips": ["背對 boss"] },
+                { "name": "Paradeigma", "type": "other", "description": "Boss 召分身 + 雙頭蛇 line AoE。", "tips": ["看分身 + 走縫"] },
+                { "name": "Exoteric Pattern α/β", "type": "other", "description": "場上 4 段機制鏈 (圈 / line / stack / spread) 連發。", "tips": ["照固定順序解"] }
+            ]}]
         }
     ]
 }

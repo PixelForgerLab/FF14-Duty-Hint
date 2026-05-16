@@ -1,69 +1,34 @@
 {
     "id": "voidcast_dais",
-    "name": "黑闇祭殿殲滅戰",
+    "name": "虛空召喚台",
     "nameEn": "The Voidcast Dais",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 615,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Golbez 哥布茲 (Archfiend 黑暗)：Black Star 黑暗龍捲 + Mist Dragon。",
-        "2）Arctic Assault：兩組對角象限 AoE。",
-        "3）Meteor + 連線：補職擊退 + 龍連繩。"
+        "1）Golbez = 暗系魔法 + Black Fang 雙坦 cone buster。",
+        "2）Summon Shadow Dragon = 召暗龍 + line AoE 穿場。",
+        "3）Aetheric Boom 全屏 + 場上散標。",
+        "4）Cosmic Sigil = 場暗陣 → 多 AoE 圈。",
+        "5）Phantom Rush = 衝鋒 line + 連 cleave。"
     ],
-    "notes": "EW 6.4 Archfiend trial (Lv 90, ilvl 615)。Golbez (FFIV 黑暗 Archfiend) Normal。",
+    "notes": "DT 6.4 Archfiend trial (Lv 90)。Golbez 暗黑魔將 (FF4 致敬)。",
     "bosses": [
         {
             "name": "哥布茲",
             "nameEn": "Golbez",
-            "mnemonic": [
-                "Crescent Blade 半月斬 cleave。",
-                "Arctic Assault 兩組對角象限 AoE。",
-                "Mist Dragon 霧龍分身。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Crescent Blade 半月斬",
-                            "type": "aoe",
-                            "description": "180° 前 cleave。",
-                            "tips": ["繞 boss 後"]
-                        },
-                        {
-                            "name": "Arctic Assault 北極攻擊",
-                            "type": "aoe",
-                            "description": "兩組對角象限 AoE。",
-                            "tips": ["看箭頭找安全象限"]
-                        },
-                        {
-                            "name": "Mist Dragon 霧龍",
-                            "type": "aoe",
-                            "description": "Mist Dragon 分身發動扇形 AoE。",
-                            "tips": ["看分身朝向"]
-                        },
-                        {
-                            "name": "Meteor 流星",
-                            "type": "other",
-                            "description": "補職擊退標記 + 場上塔 + 龍連繩。",
-                            "tips": [
-                                { "text": "補職拉開避免擊退到塔", "role": "healer" },
-                                "其他人踩塔 + T 接連繩"
-                            ]
-                        },
-                        {
-                            "name": "Gale Sphere 風球",
-                            "type": "aoe",
-                            "description": "4 分身連續線 AoE。",
-                            "tips": ["找前兩個再對位後兩個的安全"]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "Golbez", "mechanics": [
+                { "name": "Black Fang", "type": "tankbuster", "description": "MT cone buster + 暗 debuff + Vuln。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Summon Shadow Dragon", "type": "aoe", "description": "召暗龍 + line AoE 穿場。", "tips": ["走縫避線"] },
+                { "name": "Aetheric Boom", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
+                { "name": "Cosmic Sigil", "type": "aoe", "description": "場上召暗魔法陣 → 多 AoE 圈。", "tips": ["走縫避陣"] },
+                { "name": "Phantom Rush", "type": "aoe", "description": "Boss 衝鋒 line AoE + 連 cleave。", "tips": ["側步閃 + 看朝向"] },
+                { "name": "Megaflare", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員減傷 + 強補", "role": "healer" }] }
+            ]}]
         }
     ]
 }

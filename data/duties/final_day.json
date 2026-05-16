@@ -1,6 +1,6 @@
 {
     "id": "final_day",
-    "name": "終末決戰",
+    "name": "終末之歌",
     "nameEn": "The Final Day",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
@@ -8,67 +8,27 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Aetherial Gain：玩家被分配以太屬性 buff。",
-        "2）Hubris 傲慢：場地多重 AoE + 玩家位置記憶。",
-        "3）Ultima：場上 Aether 球 + 大爆炸。",
-        "4）Elegeia 哀歌：分擔機制。",
-        "5）狂暴：Hubris Final 全屏。"
+        "1）The Endsinger = Aetheric Boom 全屏 + Aetheric Polyglot 多元素。",
+        "2）Endingsymphony = 雙 boss 模式 + 連 line AoE。",
+        "3）Ultimate Fate = 場分多 segment + tile 機制。",
+        "4）Telos = MT 高傷 cone buster。",
+        "5）Eschaton 末段 = 大全屏連發。"
     ],
-    "notes": "EW 6.0 MSQ 終戰 trial (Lv 90)。The Endsinger (歌頌終末者) Normal。EW MSQ 最終 boss。",
+    "notes": "EW 6.0 MSQ 最終 trial (Lv 90)。Endsinger 終末歌頌者。",
     "bosses": [
         {
             "name": "歌頌終末者",
             "nameEn": "The Endsinger",
-            "mnemonic": [
-                "Hubris：場地多重 AoE。",
-                "Ultima：Aether 球 + 大爆炸。",
-                "Elegeia：分擔機制。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Aetherial Gain 以太獲得",
-                            "type": "other",
-                            "description": "玩家獲得不同以太屬性 buff。",
-                            "tips": ["依 buff 顏色站位"]
-                        },
-                        {
-                            "name": "Hubris 傲慢",
-                            "type": "aoe",
-                            "description": "場地多重 AoE + 玩家位置記憶 + 爆。",
-                            "tips": ["移動避開記憶位置"]
-                        },
-                        {
-                            "name": "Ultima",
-                            "type": "aoe",
-                            "description": "場上 Aether 球 + 大爆炸 AoE。",
-                            "tips": ["離開球範圍"]
-                        },
-                        {
-                            "name": "Elegeia 哀歌",
-                            "type": "stack",
-                            "description": "分擔圓 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "Hubris Final (Enrage)",
-                            "type": "raidwide",
-                            "description": "全屏即死。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
+            "phases": [{ "name": "The Endsinger", "mechanics": [
+                { "name": "Aetheric Boom", "type": "raidwide", "description": "全屏 + 流血。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] },
+                { "name": "Aetheric Polyglot", "type": "other", "description": "場上多元素 AoE 組合 (火/雷/冰)，依屬性站位。", "tips": ["看元素 → 對應位"] },
+                { "name": "Endingsymphony", "type": "aoe", "description": "Boss 連 line AoE 穿場。", "tips": ["走縫避線"] },
+                { "name": "Ultimate Fate", "type": "other", "description": "場分 segment + tile 機制需站對 tile。", "tips": ["看 tile 站對位"] },
+                { "name": "Telos", "type": "tankbuster", "description": "MT cone buster + Magic Vuln。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Eschaton (末段)", "type": "raidwide", "description": "末段大全屏連發。", "tips": [{ "text": "末段催爆發 + 全員強減傷", "role": "dps" }] }
+            ]}]
         }
     ]
 }
