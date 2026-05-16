@@ -1,45 +1,146 @@
 {
-  "id": "abyssos_the_eighth_circle",
-  "name": "萬魔殿 煉淨之獄4",
-  "nameEn": "Abyssos: The Eighth Circle",
-  "expansion": "6.x 曉月之終焉 (Endwalker)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": 635,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）創世真炎 → 全屏 AoE + 場四周生火區域（火傷 DoT）",
-    "2）創獸炎舞 → 龍形（中央矩形）/ 鳳形（兩側矩形）",
-    "3）炎蛇炮 → 一仇高傷直線 + 15 秒出血",
-    "4）變異創身 → 蛇形態（戈爾貢視線石化）/ 獸形態（踏火尋跡 + 踐踏衝擊擊退）",
-    "5）四重火炎風暴 → 場地四角距離衰減 + 火圈",
-    "6）噴炎升蛇 → 連線火圈 + 23m 大圓",
-    "7）灼炎創火 → 藍線 4×1 地板區域 AoE"
-  ],
-  "notes": "EW 6.2 萬魔殿 煉淨之獄4（P8N）。Boss 赫淮斯托斯（Hephaistos）使用『變異創身』在蛇/獸形態間切換 + 多重火屬性機制。資料來源：灰機 万魔殿 炼净之狱4/B（命名與技能 S→T）+ CGW Hephaistos walkthrough。",
-  "bosses": [
-    {
-      "name": "赫淮斯托斯",
-      "nameEn": "Hephaistos",
-      "phases": [
-        {
-          "name": "P1：創獸炎舞 + 變異創身",
-          "mechanics": [
-            {"name": "創世真炎 Creator's Flame", "type": "raidwide", "description": "全屏 AoE，同時場四周生火焰區域，進入會獲 15 秒火傷 DoT。團補 + 全員減傷 + 避場邊。", "tips": [{"text": "團補 + 避場邊", "role": "healer"}]},
-            {"name": "創獸炎舞 Beast Fire Dance", "type": "aoe", "description": "依創造的炎獸形態：龍形（中央矩形 AoE）/ 鳳形（兩側矩形 AoE）。看 boss 創造哪個獸找對應安全區。", "tips": [{"text": "龍 → 跑兩側；鳳 → 跑中央", "role": "dps"}]},
-            {"name": "炎蛇炮 Flame Serpent Cannon", "type": "tankbuster", "description": "點名一仇高傷直線 + 15 秒出血。MT 朝場邊接 + 大減傷。", "tips": [{"text": "MT 朝外接 + 大減傷", "role": "tank"}]},
-            {"name": "變異創身 - 蛇形態", "type": "mechanic", "description": "潛入陰影：boss 將戈爾貢送入地下移動後鑽出 → 視線全屏 AoE（附石化）。需背對 boss 避視線。戈爾貢之飾：兩戈爾貢鑽出讀條全屏即死級傷害，需快速擊殺。戈爾貢噴吐：對隨機玩家直線 AoE。", "tips": [{"text": "鑽出時背對 boss", "role": "tank"}, {"text": "速秒戈爾貢", "role": "dps"}]},
-            {"name": "變異創身 - 獸形態", "type": "mechanic", "description": "熾熱踐踏：boss 跳場邊預示後續踏火尋跡（中央向兩側擊退 10m）+ 踐踏衝擊（落點全屏擊退 22m）。連續發動，無法抗擊退。需依預兆走位避擊飛出場。", "tips": [{"text": "看落點 → 站對側", "role": "tank"}]},
-            {"name": "四重火炎風暴 Four Tempest", "type": "aoe", "description": "場地四角距離衰減 AoE，落點出小範圍火圈。需站場中央。", "tips": [{"text": "站場中央", "role": "dps"}]},
-            {"name": "噴炎升蛇 Flame Serpent Rise", "type": "aoe", "description": "boss 連線兩個火圈，一段時間後以火圈為中心釋放半徑 23m 大圓 AoE。後從火圈中出蛇鑽入隨機火圈，重複 2 次。", "tips": [{"text": "看連線 → 跑反側火圈", "role": "dps"}]},
-            {"name": "灼炎創火 Flame Creator", "type": "aoe", "description": "場地藍線在場上劃出 4×1 地板區域，被框住的地板會釋放灼炎 AoE。需離開藍線區域。", "tips": [{"text": "避藍線地板", "role": "dps"}]},
-            {"name": "半神核爆 Demi-god Nuke", "type": "spread", "description": "點名若干玩家圓 AoE；8 方位散開。", "tips": [{"text": "散開", "role": "dps"}]}
-          ]
-        }
-      ],
-      "mnemonic": ["創獸：龍跑兩側、鳳跑中央", "炎蛇炮 → MT 朝外", "蛇形態 → 背對 boss 避視線", "獸形態 → 看落點站對側", "灼炎 → 避藍線地板", "噴炎升蛇 → 看連線跑反側"]
-    }
-  ]
+    "id":  "abyssos_the_eighth_circle",
+    "name":  "萬魔殿 煉淨之獄4",
+    "nameEn":  "Abyssos: The Eighth Circle",
+    "expansion":  "6.x 曉月之終焉 (Endwalker)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  635,
+    "jobLevelSync":  90,
+    "highEnd":  false,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）創世真炎 → 全屏 AoE + 場四周生火區域（火傷 DoT）",
+                     "2）創獸炎舞 → 龍形（中央矩形）/ 鳳形（兩側矩形）",
+                     "3）炎蛇炮 → 一仇高傷直線 + 15 秒出血",
+                     "4）變異創身 → 蛇形態（戈爾貢視線石化）/ 獸形態（踏火尋跡 + 踐踏衝擊擊退）",
+                     "5）四重火炎風暴 → 場地四角距離衰減 + 火圈",
+                     "6）噴炎升蛇 → 連線火圈 + 23m 大圓",
+                     "7）灼炎創火 → 藍線 4×1 地板區域 AoE"
+                 ],
+    "notes":  "EW 6.2 萬魔殿 煉淨之獄4（P8N）。Boss 赫淮斯托斯（Hephaistos）使用『變異創身』在蛇/獸形態間切換 + 多重火屬性機制。資料來源：灰機 万魔殿 炼净之狱4/B（命名與技能 S→T）+ CGW Hephaistos walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "赫淮斯托斯",
+                       "nameEn":  "Hephaistos",
+                       "phases":  [
+                                      {
+                                          "name":  "P1：創獸炎舞 + 變異創身",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "創世真炎 Creator\u0027s Flame",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE，同時場四周生火焰區域，進入會獲 15 秒火傷 DoT。團補 + 全員減傷 + 避場邊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補 + 避場邊",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "創獸炎舞 Beast Fire Dance",
+                                                                "type":  "aoe",
+                                                                "description":  "依創造的炎獸形態：龍形（中央矩形 AoE）/ 鳳形（兩側矩形 AoE）。看 boss 創造哪個獸找對應安全區。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "龍 → 跑兩側；鳳 → 跑中央",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "炎蛇炮 Flame Serpent Cannon",
+                                                                "type":  "tankbuster",
+                                                                "description":  "點名一仇高傷直線 + 15 秒出血。MT 朝場邊接 + 大減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 朝外接 + 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "變異創身 - 蛇形態",
+                                                                "type":  "mechanic",
+                                                                "description":  "潛入陰影：boss 將戈爾貢送入地下移動後鑽出 → 視線全屏 AoE（附石化）。需背對 boss 避視線。戈爾貢之飾：兩戈爾貢鑽出讀條全屏即死級傷害，需快速擊殺。戈爾貢噴吐：對隨機玩家直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "鑽出時背對 boss",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "速秒戈爾貢",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "變異創身 - 獸形態",
+                                                                "type":  "mechanic",
+                                                                "description":  "熾熱踐踏：boss 跳場邊預示後續踏火尋跡（中央向兩側擊退 10m）+ 踐踏衝擊（落點全屏擊退 22m）。連續發動，無法抗擊退。需依預兆走位避擊飛出場。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看落點 → 站對側",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "四重火炎風暴 Four Tempest",
+                                                                "type":  "aoe",
+                                                                "description":  "場地四角距離衰減 AoE，落點出小範圍火圈。需站場中央。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "站場中央",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "噴炎升蛇 Flame Serpent Rise",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 連線兩個火圈，一段時間後以火圈為中心釋放半徑 23m 大圓 AoE。後從火圈中出蛇鑽入隨機火圈，重複 2 次。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看連線 → 跑反側火圈",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "灼炎創火 Flame Creator",
+                                                                "type":  "aoe",
+                                                                "description":  "場地藍線在場上劃出 4×1 地板區域，被框住的地板會釋放灼炎 AoE。需離開藍線區域。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "避藍線地板",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "半神核爆 Demi-god Nuke",
+                                                                "type":  "spread",
+                                                                "description":  "點名若干玩家圓 AoE；8 方位散開。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "散開",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "創獸：龍跑兩側、鳳跑中央",
+                                        "炎蛇炮 → MT 朝外",
+                                        "蛇形態 → 背對 boss 避視線",
+                                        "獸形態 → 看落點站對側",
+                                        "灼炎 → 避藍線地板",
+                                        "噴炎升蛇 → 看連線跑反側"
+                                    ]
+                   }
+               ]
 }

@@ -1,62 +1,268 @@
 {
-  "id": "aetherochemical_research_facility",
-  "name": "血戰蒼穹魔科學研究所",
-  "nameEn": "The Aetherochemical Research Facility",
-  "expansion": "3.x 蒼穹之禁城 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）B1 蕾納特斯魔靈：點名直線 + 圓形 AoE",
-    "2）B2 古司圖斯魔靈：火/冰/雷三種屬性切換",
-    "3）B3 機神兵魔靈：點名前後扇形",
-    "4）B4 拉哈布雷亞：召喚冰球 + 點名直線 + 場上炸彈塔（必須踩）"
-  ],
-  "notes": "HW 3.3 主線副本（Lv 60），蒼天之龍詩篇終章。資料來源：灰機 血战苍穹魔科学研究所/1 /2 /3 /B（命名與技能 S→T）+ CGW Aetherochemical Research Facility walkthrough。",
-  "bosses": [
-    {
-      "name": "蕾納特斯魔靈", "nameEn": "Lahabrea (1st boss)",
-      "phases": [{"name": "B1 主戰", "mechanics": [
-        {"name": "魔法直線 Magic Line", "type": "aoe", "description": "點名玩家寬直線 AoE 預兆；被點往場邊。", "tips": [{"text": "看預兆移", "role": "dps"}]},
-        {"name": "圓形 AoE", "type": "aoe", "description": "場上多圓 AoE 預兆；找縫站。", "tips": [{"text": "找縫", "role": "dps"}]},
-        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體 buster；開大減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
-        {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]}
-      ]}],
-      "mnemonic": ["直線 → 移", "圓 → 找縫"]
-    },
-    {
-      "name": "古司圖斯魔靈", "nameEn": "Gusztav",
-      "phases": [{"name": "B2 主戰", "mechanics": [
-        {"name": "火屬性圓 AoE", "type": "aoe", "description": "火屬性場上圓 AoE；閃避。", "tips": [{"text": "閃位", "role": "dps"}]},
-        {"name": "冰屬性圓 AoE", "type": "aoe", "description": "冰屬性圓 + 凍傷 Debuff。", "tips": [{"text": "Esuna 清凍傷", "role": "healer"}]},
-        {"name": "雷屬性點名", "type": "spread", "description": "點名玩家圓 AoE；散開。", "tips": [{"text": "散", "role": "dps"}]},
-        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體 buster + 屬性 Debuff。", "tips": [{"text": "MT 大減傷", "role": "tank"}]}
-      ]}],
-      "mnemonic": ["三屬性循環", "看屬性對應對策"]
-    },
-    {
-      "name": "機神兵魔靈", "nameEn": "Magitek Demon",
-      "phases": [{"name": "B3 主戰", "mechanics": [
-        {"name": "前扇 / 後扇", "type": "cone", "description": "點名前方或後方扇形 AoE；T 朝向控制。", "tips": [{"text": "看 boss 朝向", "role": "tank"}]},
-        {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]},
-        {"name": "spread", "type": "spread", "description": "點名玩家圓形；散開。", "tips": [{"text": "散開", "role": "dps"}]},
-        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體 buster；開大減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]}
-      ]}],
-      "mnemonic": ["扇形 → 看朝向", "散 / 集合"]
-    },
-    {
-      "name": "拉哈布雷亞", "nameEn": "Lahabrea",
-      "phases": [{"name": "B4 主戰", "mechanics": [
-        {"name": "冰球召喚 Ice Sphere", "type": "add", "description": "場上召喚冰球 add，需快速擊破。", "tips": [{"text": "DPS 切目標", "role": "dps"}]},
-        {"name": "點名直線", "type": "aoe", "description": "點名玩家直線 AoE。", "tips": [{"text": "被點移", "role": "dps"}]},
-        {"name": "炸彈塔 Bomb Tower", "type": "stack", "description": "場上出現炸彈塔，必須有人踩；無人 → 大爆炸。", "tips": [{"text": "指定踩塔", "role": "tank"}]},
-        {"name": "tankbuster", "type": "tankbuster", "description": "MT 單體 buster；大減傷。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
-        {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE；團補。", "tips": [{"text": "團補", "role": "healer"}]}
-      ]}],
-      "mnemonic": ["冰球 → 速秒", "炸彈塔 → 指定踩"]
-    }
-  ]
+    "id":  "aetherochemical_research_facility",
+    "name":  "血戰蒼穹魔科學研究所",
+    "nameEn":  "The Aetherochemical Research Facility",
+    "expansion":  "3.x 蒼穹之禁城 (Heavensward)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）B1 蕾納特斯魔靈：點名直線 + 圓形 AoE",
+                     "2）B2 古司圖斯魔靈：火/冰/雷三種屬性切換",
+                     "3）B3 機神兵魔靈：點名前後扇形",
+                     "4）B4 拉哈布雷亞：召喚冰球 + 點名直線 + 場上炸彈塔（必須踩）"
+                 ],
+    "notes":  "HW 3.3 主線副本（Lv 60），蒼天之龍詩篇終章。資料來源：灰機 血战苍穹魔科学研究所/1 /2 /3 /B（命名與技能 S→T）+ CGW Aetherochemical Research Facility walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "蕾納特斯魔靈",
+                       "nameEn":  "Lahabrea (1st boss)",
+                       "phases":  [
+                                      {
+                                          "name":  "B1 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "魔法直線 Magic Line",
+                                                                "type":  "aoe",
+                                                                "description":  "點名玩家寬直線 AoE 預兆；被點往場邊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看預兆移",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "圓形 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場上多圓 AoE 預兆；找縫站。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "找縫",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 單體 buster；開大減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "raidwide",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE；團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "直線 → 移",
+                                        "圓 → 找縫"
+                                    ]
+                   },
+                   {
+                       "name":  "古司圖斯魔靈",
+                       "nameEn":  "Gusztav",
+                       "phases":  [
+                                      {
+                                          "name":  "B2 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "火屬性圓 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "火屬性場上圓 AoE；閃避。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "閃位",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "冰屬性圓 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "冰屬性圓 + 凍傷 Debuff。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Esuna 清凍傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雷屬性點名",
+                                                                "type":  "spread",
+                                                                "description":  "點名玩家圓 AoE；散開。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "散",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 單體 buster + 屬性 Debuff。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "三屬性循環",
+                                        "看屬性對應對策"
+                                    ]
+                   },
+                   {
+                       "name":  "機神兵魔靈",
+                       "nameEn":  "Magitek Demon",
+                       "phases":  [
+                                      {
+                                          "name":  "B3 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "前扇 / 後扇",
+                                                                "type":  "cone",
+                                                                "description":  "點名前方或後方扇形 AoE；T 朝向控制。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看 boss 朝向",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "raidwide",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE；團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "spread",
+                                                                "type":  "spread",
+                                                                "description":  "點名玩家圓形；散開。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "散開",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 單體 buster；開大減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "扇形 → 看朝向",
+                                        "散 / 集合"
+                                    ]
+                   },
+                   {
+                       "name":  "拉哈布雷亞",
+                       "nameEn":  "Lahabrea",
+                       "phases":  [
+                                      {
+                                          "name":  "B4 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "冰球召喚 Ice Sphere",
+                                                                "type":  "add",
+                                                                "description":  "場上召喚冰球 add，需快速擊破。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 切目標",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "點名直線",
+                                                                "type":  "aoe",
+                                                                "description":  "點名玩家直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被點移",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "炸彈塔 Bomb Tower",
+                                                                "type":  "stack",
+                                                                "description":  "場上出現炸彈塔，必須有人踩；無人 → 大爆炸。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "指定踩塔",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 單體 buster；大減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "raidwide",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE；團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "冰球 → 速秒",
+                                        "炸彈塔 → 指定踩"
+                                    ]
+                   }
+               ]
 }

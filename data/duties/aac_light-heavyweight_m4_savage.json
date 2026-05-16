@@ -1,47 +1,133 @@
 {
-  "id": "aac_light-heavyweight_m4_savage",
-  "name": "阿卡狄亞零式登天鬥技場 輕量級4",
-  "nameEn": "AAC Light-heavyweight M4 (Savage)",
-  "expansion": "7.x 黃金的遺產 (Dawntrail)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": 725,
-  "jobLevelSync": 100,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）雷雲遊行強化版 → 多段半場連續，必須記順序",
-    "2）感電陷阱 → 加強版，傷害更高",
-    "3）追蹤雷球（零式）→ 多點同時，需協同走位",
-    "4）軌道車機關 / 大舞台 → 場地變化",
-    "5）終局極限技：撒旦之雷 → DPS 競賽截止"
-  ],
-  "notes": "DT 7.0 阿卡狄亞零式登天鬥技場 輕量級4（M4S）High-End raid。Boss 雷霆暴君零式版機制更密集 + 場地變換。資料來源：灰機 阿卡狄亚零式登天斗技场 轻量级4/B（命名與技能 S→T）+ CGW Wicked Thunder (Savage) walkthrough。",
-  "bosses": [
-    {
-      "name": "雷霆暴君（零式）",
-      "nameEn": "Wicked Thunder (Savage)",
-      "phases": [
-        {
-          "name": "P1：基本機制 + 加強",
-          "mechanics": [
-            {"name": "天頂之雷 Wicked Bolt", "type": "raidwide", "description": "全場 AoE 雷屬性大傷害；連續團補 + 各自減傷。", "tips": [{"text": "團補 + 減傷", "role": "healer"}]},
-            {"name": "雷雲遊行 強化版", "type": "aoe", "description": "boss 多段半場 AoE 連續，需記順序依次換邊。", "tips": [{"text": "記順序逐次換邊", "role": "dps"}]},
-            {"name": "追蹤雷球（零式）", "type": "spread", "description": "多名玩家被點生成追蹤雷球，需協同走位避免疊壓。", "tips": [{"text": "預先分配遛球路徑", "role": "tank"}]},
-            {"name": "感電陷阱 Shock Trap 加強", "type": "mechanic", "description": "場外踩入感電 Debuff 傷害更高；避免踩出場。", "tips": [{"text": "全員場內", "role": "dps"}]}
-          ]
-        },
-        {
-          "name": "P2：場地變換 + 終局",
-          "mechanics": [
-            {"name": "軌道車機關 Wicked Train", "type": "mechanic", "description": "場地變化，軌道車穿越場地，避開車道。看軌道位置移動。", "tips": [{"text": "避軌道車", "role": "dps"}]},
-            {"name": "大舞台 Wicked Stage", "type": "mechanic", "description": "場地變大舞台，新的走位空間。", "tips": [{"text": "適應新場地", "role": "tank"}]},
-            {"name": "雷光接連（零式）", "type": "aoe", "description": "玩家連線傳導，保持間距 + 避免共線。", "tips": [{"text": "8 方位散開避傳導", "role": "dps"}]},
-            {"name": "撒旦之雷 Satanic Thunder（DPS 截止）", "type": "raidwide", "description": "終局極限技，DPS 競賽截止前必須擊敗 boss，否則強制秒殺。", "tips": [{"text": "全程保持輸出", "role": "dps"}]}
-          ]
-        }
-      ],
-      "mnemonic": ["雷雲遊行強化 → 記順序", "追蹤雷球 → 協同走位", "感電陷阱 → 避場外", "軌道車 → 避車道", "撒旦之雷 → DPS 截止"]
-    }
-  ]
+    "id":  "aac_light-heavyweight_m4_savage",
+    "name":  "阿卡狄亞零式登天鬥技場 輕量級4",
+    "nameEn":  "AAC Light-heavyweight M4 (Savage)",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  725,
+    "jobLevelSync":  100,
+    "highEnd":  true,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）雷雲遊行強化版 → 多段半場連續，必須記順序",
+                     "2）感電陷阱 → 加強版，傷害更高",
+                     "3）追蹤雷球（零式）→ 多點同時，需協同走位",
+                     "4）軌道車機關 / 大舞台 → 場地變化",
+                     "5）終局極限技：撒旦之雷 → DPS 競賽截止"
+                 ],
+    "notes":  "DT 7.0 阿卡狄亞零式登天鬥技場 輕量級4（M4S）High-End raid。Boss 雷霆暴君零式版機制更密集 + 場地變換。資料來源：灰機 阿卡狄亚零式登天斗技场 轻量级4/B（命名與技能 S→T）+ CGW Wicked Thunder (Savage) walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "雷霆暴君（零式）",
+                       "nameEn":  "Wicked Thunder (Savage)",
+                       "phases":  [
+                                      {
+                                          "name":  "P1：基本機制 + 加強",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "天頂之雷 Wicked Bolt",
+                                                                "type":  "raidwide",
+                                                                "description":  "全場 AoE 雷屬性大傷害；連續團補 + 各自減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補 + 減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雷雲遊行 強化版",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 多段半場 AoE 連續，需記順序依次換邊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "記順序逐次換邊",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "追蹤雷球（零式）",
+                                                                "type":  "spread",
+                                                                "description":  "多名玩家被點生成追蹤雷球，需協同走位避免疊壓。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "預先分配遛球路徑",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "感電陷阱 Shock Trap 加強",
+                                                                "type":  "mechanic",
+                                                                "description":  "場外踩入感電 Debuff 傷害更高；避免踩出場。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員場內",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2：場地變換 + 終局",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "軌道車機關 Wicked Train",
+                                                                "type":  "mechanic",
+                                                                "description":  "場地變化，軌道車穿越場地，避開車道。看軌道位置移動。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "避軌道車",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "大舞台 Wicked Stage",
+                                                                "type":  "mechanic",
+                                                                "description":  "場地變大舞台，新的走位空間。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "適應新場地",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雷光接連（零式）",
+                                                                "type":  "aoe",
+                                                                "description":  "玩家連線傳導，保持間距 + 避免共線。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "8 方位散開避傳導",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "撒旦之雷 Satanic Thunder（DPS 截止）",
+                                                                "type":  "raidwide",
+                                                                "description":  "終局極限技，DPS 競賽截止前必須擊敗 boss，否則強制秒殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全程保持輸出",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "雷雲遊行強化 → 記順序",
+                                        "追蹤雷球 → 協同走位",
+                                        "感電陷阱 → 避場外",
+                                        "軌道車 → 避車道",
+                                        "撒旦之雷 → DPS 截止"
+                                    ]
+                   }
+               ]
 }

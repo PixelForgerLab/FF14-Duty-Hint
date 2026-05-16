@@ -1,66 +1,259 @@
 {
-  "id": "abyssal_fracture_extreme",
-  "name": "深淵裂縫 (殲殛戰) - 澤羅姆斯",
-  "nameEn": "The Abyssal Fracture (Extreme) - Zeromus",
-  "expansion": "6.x 曉月之終焉 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）深淵之夜（殲殛 10 秒）→ 必須立刻補滿，比普通版時間更短",
-    "2）深淵回聲（2 組）→ 固定方位組合：(西南/西北/東北 + 北/東/東南) 或互換",
-    "3）漆黑射線 → 點治療 6-7 連分攤，最近兩人額外傷",
-    "4）暗物質 → 雙 T 各 3 連高傷圓",
-    "5）宇宙大爆炸（核心機制）→ 18 連 + 多種 Debuff（黑暗侵蝕：飛散 / 重擊 / 叉形閃電）",
-    "6）虛空陨石 + 陨石衝擊 → 看連線顏色（粉:近/黃:遠/紅:有彗星/藍:無）",
-    "7）黑暗咒鏈 → T/H 與 D 連鎖，需拉斷",
-    "8）核爆火印（4 人分攤）/ 核爆火花（全員散）",
-    "9）狂暴：10 分 50 秒後強制宇宙大爆炸即死"
-  ],
-  "notes": "EW 6.55 殲殛戰（Extreme），FF4 連動。Boss 澤羅姆斯（Zeromus）殲殛版高難度機制密集；10 分 50 秒狂暴。資料來源：灰機 泽罗姆斯歼殛战/B（命名與技能 S→T）+ CGW Zeromus (Extreme) walkthrough。",
-  "bosses": [
-    {
-      "name": "澤羅姆斯",
-      "nameEn": "Zeromus",
-      "phases": [
-        {
-          "name": "P1：深淵之夜 + 基礎",
-          "mechanics": [
-            {"name": "深淵之夜 Abyssal Echoes（殲殛 10 秒）", "type": "raidwide", "description": "全員血量變 1 + 10 秒『死亡宣告』（普通版 20 秒）。必須立刻大團補滿。", "tips": [{"text": "立即大團補 + 個人補滿", "role": "healer"}]},
-            {"name": "深淵回聲 Visceral Whirlwind", "type": "aoe", "description": "光球擴散後大圓 AoE。殲殛版固定 2 組方位刷新：A 組(正西/正南/西北/東北) + B 組(正北/正東/西南/東南) 或互換。前半部分場中必有 AoE，後半部分無。記固定組找縫。", "tips": [{"text": "記方位組 → 找縫", "role": "dps"}]},
-            {"name": "漆黑射線 Dark Beam", "type": "stack", "description": "點名治療 6 連（後續 7 連）分攤直線 AoE。最近 boss 兩人會受額外高傷。全員集合分攤。", "tips": [{"text": "集合 → 6-7 連分攤", "role": "healer"}]},
-            {"name": "暗物質 Dark Matter", "type": "tankbuster", "description": "點名雙 T 各 3 連高傷圓；雙 T 分開站各開大減傷。", "tips": [{"text": "雙 T 分接 + 大減傷", "role": "tank"}]},
-            {"name": "旋骨利爪 + 瘴氣爆發", "type": "aoe", "description": "兩組垂直直線 AoE（斜半場 + 中到場外），隨後 3 個正/斜/中心位置出現叉字 AoE 預兆。找縫站。", "tips": [{"text": "先躲旋骨 → 再閃叉字", "role": "dps"}]},
-            {"name": "核爆 + 日珥焰棘", "type": "stack", "description": "西北/東南各出 1 火球，下方分攤圓 AoE。落地後 4 火焰預兆其中 2 個必朝正西/東。先集合分攤 → 找縫躲日珥。", "tips": [{"text": "分攤 → 找縫", "role": "tank"}]},
-            {"name": "虛空毒菌 Void Bubbles", "type": "mechanic", "description": "北側 10 個有毒氣泡向南移，接觸 → 爆炸 + 15 秒劇毒高傷 DoT。看軌跡找縫穿過。", "tips": [{"text": "看氣泡軌跡找縫", "role": "dps"}]}
-          ]
-        },
-        {
-          "name": "P2：宇宙大爆炸（核心）",
-          "mechanics": [
-            {"name": "宇宙大爆炸 Big Bang", "type": "mechanic", "description": "點名所有玩家連續圓形 AoE + 18 連場上圓形 AoE → 全屏 AoE。附加多重 Debuff：宇宙大反彈(持續 15s)、最大體力減少 30%(直到宇宙大擠壓)、加速度炸彈(57s 停止行動才炸)、黑暗侵蝕：飛散(69s 圓 AoE)、黑暗侵蝕：重擊(76s 治療分攤)、叉形閃電(76s 兩 DPS 周身傷麻痺)。", "tips": [{"text": "治療大團補 + 個人補", "role": "healer"}, {"text": "DPS 看 debuff 配對", "role": "dps"}]},
-            {"name": "虛空陨石 + 陨石衝擊", "type": "mechanic", "description": "北側召 13 顆彗星 + 正南 1 顆。場南偏西/東 2 標記分別連線 4 名 T/H/D。連線粉=過近(高傷)、黃=遠(可承)、紅=路徑有彗星(炸)、藍=路徑無彗星(安全)。需拉開到黃線 + 確保彗星不在路徑上。", "tips": [{"text": "看顏色拉到藍 + 黃", "role": "tank"}]},
-            {"name": "黑暗咒鏈 Dark Chains", "type": "mechanic", "description": "T/H 與 D 連鎖；一段時間後若沒拉斷會受傷。需立即拉開距離拉斷。", "tips": [{"text": "T/H 與 D 拉開拉斷", "role": "tank"}]},
-            {"name": "黑洞 Black Hole", "type": "mechanic", "description": "點名玩家位置生黑洞，範圍持續擴大；進入即死。被點往場邊角落放置。", "tips": [{"text": "被點往場角放置", "role": "dps"}]},
-            {"name": "黑龍閃 Dark Dragon Flash", "type": "aoe", "description": "boss 面向西南/東南直線 AoE，持續轉動掃描場地。跟著 AoE 旋轉方向移動。", "tips": [{"text": "跟旋轉方向走", "role": "dps"}]},
-            {"name": "宇宙大擠壓 Big Crunch", "type": "mechanic", "description": "類似宇宙大爆炸但附加宇宙大反彈 + 清除最大體力減少。處理同 Big Bang。", "tips": [{"text": "團補 + 個人補", "role": "healer"}]}
-          ]
-        },
-        {
-          "name": "P3：核爆火印 + 夜 + 狂暴",
-          "mechanics": [
-            {"name": "核爆火印 / 核爆火花 + 日珥焰棘", "type": "mechanic", "description": "中央偏西/東各出火球。火印：點名 4 人分攤圓 + 火耐降；火花：全員散 + 火耐降。火球落地 + 日珥 4 方直線。看版本決定分組。", "tips": [{"text": "火印 4 人分；火花全員散", "role": "tank"}]},
-            {"name": "夜 Black Night（5 連）", "type": "spread", "description": "點名 2 名玩家連 5 次超大圓形追蹤型 AoE。被點者持續往場邊移動。", "tips": [{"text": "被點持續往場邊", "role": "dps"}]},
-            {"name": "次元干涉 → P4（< 25%）", "type": "mechanic", "description": "boss 血量 < 25% 進入下一階段。次元涌動 → 多連圓 AoE。望乡 → 4 連塌方 + 2 咆哮 + 1 大咆哮全屏。", "tips": [{"text": "團補連 7 次以上 + 減傷", "role": "healer"}]},
-            {"name": "深淵激流組合", "type": "mechanic", "description": "boss 連線場外裂隙，對北/中/南直線 AoE，配組：暗之波動(治療分攤)/暗之波濤(4 人分攤)/天光輪回(10 連追蹤圓)。看組合應對。", "tips": [{"text": "看組合分組或散開", "role": "tank"}]},
-            {"name": "狂暴 Enrage（10:50）", "type": "raidwide", "description": "戰鬥 10 分 50 秒後 boss 強制使用宇宙大爆炸即死團滅。必須在此前擊敗 boss。", "tips": [{"text": "全程保持輸出", "role": "dps"}]}
-          ]
-        }
-      ],
-      "mnemonic": ["深淵之夜 10s → 立刻補滿", "深淵回聲 → 記固定方位組", "漆黑射線 → 集合 6-7 連分攤", "宇宙大爆炸 → 多 debuff 配對", "陨石衝擊 → 看連線顏色 (粉/黃/紅/藍)", "黑暗咒鏈 → 拉斷", "夜 → 場邊持續移動", "10:50 狂暴 → DPS 截止"]
-    }
-  ]
+    "id":  "abyssal_fracture_extreme",
+    "name":  "深淵裂縫 (殲殛戰) - 澤羅姆斯",
+    "nameEn":  "The Abyssal Fracture (Extreme) - Zeromus",
+    "expansion":  "6.x 曉月之終焉 (Endwalker)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  90,
+    "highEnd":  true,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）深淵之夜（殲殛 10 秒）→ 必須立刻補滿，比普通版時間更短",
+                     "2）深淵回聲（2 組）→ 固定方位組合：(西南/西北/東北 + 北/東/東南) 或互換",
+                     "3）漆黑射線 → 點治療 6-7 連分攤，最近兩人額外傷",
+                     "4）暗物質 → 雙 T 各 3 連高傷圓",
+                     "5）宇宙大爆炸（核心機制）→ 18 連 + 多種 Debuff（黑暗侵蝕：飛散 / 重擊 / 叉形閃電）",
+                     "6）虛空陨石 + 陨石衝擊 → 看連線顏色（粉:近/黃:遠/紅:有彗星/藍:無）",
+                     "7）黑暗咒鏈 → T/H 與 D 連鎖，需拉斷",
+                     "8）核爆火印（4 人分攤）/ 核爆火花（全員散）",
+                     "9）狂暴：10 分 50 秒後強制宇宙大爆炸即死"
+                 ],
+    "notes":  "EW 6.55 殲殛戰（Extreme），FF4 連動。Boss 澤羅姆斯（Zeromus）殲殛版高難度機制密集；10 分 50 秒狂暴。資料來源：灰機 泽罗姆斯歼殛战/B（命名與技能 S→T）+ CGW Zeromus (Extreme) walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "澤羅姆斯",
+                       "nameEn":  "Zeromus",
+                       "phases":  [
+                                      {
+                                          "name":  "P1：深淵之夜 + 基礎",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "深淵之夜 Abyssal Echoes（殲殛 10 秒）",
+                                                                "type":  "raidwide",
+                                                                "description":  "全員血量變 1 + 10 秒『死亡宣告』（普通版 20 秒）。必須立刻大團補滿。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "立即大團補 + 個人補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "深淵回聲 Visceral Whirlwind",
+                                                                "type":  "aoe",
+                                                                "description":  "光球擴散後大圓 AoE。殲殛版固定 2 組方位刷新：A 組(正西/正南/西北/東北) + B 組(正北/正東/西南/東南) 或互換。前半部分場中必有 AoE，後半部分無。記固定組找縫。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "記方位組 → 找縫",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "漆黑射線 Dark Beam",
+                                                                "type":  "stack",
+                                                                "description":  "點名治療 6 連（後續 7 連）分攤直線 AoE。最近 boss 兩人會受額外高傷。全員集合分攤。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "集合 → 6-7 連分攤",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "暗物質 Dark Matter",
+                                                                "type":  "tankbuster",
+                                                                "description":  "點名雙 T 各 3 連高傷圓；雙 T 分開站各開大減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙 T 分接 + 大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "旋骨利爪 + 瘴氣爆發",
+                                                                "type":  "aoe",
+                                                                "description":  "兩組垂直直線 AoE（斜半場 + 中到場外），隨後 3 個正/斜/中心位置出現叉字 AoE 預兆。找縫站。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "先躲旋骨 → 再閃叉字",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "核爆 + 日珥焰棘",
+                                                                "type":  "stack",
+                                                                "description":  "西北/東南各出 1 火球，下方分攤圓 AoE。落地後 4 火焰預兆其中 2 個必朝正西/東。先集合分攤 → 找縫躲日珥。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "分攤 → 找縫",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "虛空毒菌 Void Bubbles",
+                                                                "type":  "mechanic",
+                                                                "description":  "北側 10 個有毒氣泡向南移，接觸 → 爆炸 + 15 秒劇毒高傷 DoT。看軌跡找縫穿過。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看氣泡軌跡找縫",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2：宇宙大爆炸（核心）",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "宇宙大爆炸 Big Bang",
+                                                                "type":  "mechanic",
+                                                                "description":  "點名所有玩家連續圓形 AoE + 18 連場上圓形 AoE → 全屏 AoE。附加多重 Debuff：宇宙大反彈(持續 15s)、最大體力減少 30%(直到宇宙大擠壓)、加速度炸彈(57s 停止行動才炸)、黑暗侵蝕：飛散(69s 圓 AoE)、黑暗侵蝕：重擊(76s 治療分攤)、叉形閃電(76s 兩 DPS 周身傷麻痺)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "治療大團補 + 個人補",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "DPS 看 debuff 配對",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "虛空陨石 + 陨石衝擊",
+                                                                "type":  "mechanic",
+                                                                "description":  "北側召 13 顆彗星 + 正南 1 顆。場南偏西/東 2 標記分別連線 4 名 T/H/D。連線粉=過近(高傷)、黃=遠(可承)、紅=路徑有彗星(炸)、藍=路徑無彗星(安全)。需拉開到黃線 + 確保彗星不在路徑上。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看顏色拉到藍 + 黃",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑暗咒鏈 Dark Chains",
+                                                                "type":  "mechanic",
+                                                                "description":  "T/H 與 D 連鎖；一段時間後若沒拉斷會受傷。需立即拉開距離拉斷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T/H 與 D 拉開拉斷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑洞 Black Hole",
+                                                                "type":  "mechanic",
+                                                                "description":  "點名玩家位置生黑洞，範圍持續擴大；進入即死。被點往場邊角落放置。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被點往場角放置",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑龍閃 Dark Dragon Flash",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 面向西南/東南直線 AoE，持續轉動掃描場地。跟著 AoE 旋轉方向移動。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "跟旋轉方向走",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "宇宙大擠壓 Big Crunch",
+                                                                "type":  "mechanic",
+                                                                "description":  "類似宇宙大爆炸但附加宇宙大反彈 + 清除最大體力減少。處理同 Big Bang。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補 + 個人補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P3：核爆火印 + 夜 + 狂暴",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "核爆火印 / 核爆火花 + 日珥焰棘",
+                                                                "type":  "mechanic",
+                                                                "description":  "中央偏西/東各出火球。火印：點名 4 人分攤圓 + 火耐降；火花：全員散 + 火耐降。火球落地 + 日珥 4 方直線。看版本決定分組。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "火印 4 人分；火花全員散",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "夜 Black Night（5 連）",
+                                                                "type":  "spread",
+                                                                "description":  "點名 2 名玩家連 5 次超大圓形追蹤型 AoE。被點者持續往場邊移動。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被點持續往場邊",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "次元干涉 → P4（\u003c 25%）",
+                                                                "type":  "mechanic",
+                                                                "description":  "boss 血量 \u003c 25% 進入下一階段。次元涌動 → 多連圓 AoE。望乡 → 4 連塌方 + 2 咆哮 + 1 大咆哮全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補連 7 次以上 + 減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "深淵激流組合",
+                                                                "type":  "mechanic",
+                                                                "description":  "boss 連線場外裂隙，對北/中/南直線 AoE，配組：暗之波動(治療分攤)/暗之波濤(4 人分攤)/天光輪回(10 連追蹤圓)。看組合應對。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看組合分組或散開",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狂暴 Enrage（10:50）",
+                                                                "type":  "raidwide",
+                                                                "description":  "戰鬥 10 分 50 秒後 boss 強制使用宇宙大爆炸即死團滅。必須在此前擊敗 boss。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全程保持輸出",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "深淵之夜 10s → 立刻補滿",
+                                        "深淵回聲 → 記固定方位組",
+                                        "漆黑射線 → 集合 6-7 連分攤",
+                                        "宇宙大爆炸 → 多 debuff 配對",
+                                        "陨石衝擊 → 看連線顏色 (粉/黃/紅/藍)",
+                                        "黑暗咒鏈 → 拉斷",
+                                        "夜 → 場邊持續移動",
+                                        "10:50 狂暴 → DPS 截止"
+                                    ]
+                   }
+               ]
 }

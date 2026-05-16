@@ -1,49 +1,135 @@
 {
-  "id": "abyssos_the_seventh_circle_savage",
-  "name": "萬魔殿 煉淨之獄零式3",
-  "nameEn": "Abyssos: The Seventh Circle (Savage)",
-  "expansion": "6.x 曉月之終焉 (Endwalker)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": 645,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）阿提斯巨枝 → 看雙手位置預判圓/直線 + 擊退",
-    "2）不滅者導枝 → 距離衰減 + 三圓場地",
-    "3）半神神聖 → 點名圓散開",
-    "4）半神閃灼 → 環形 AoE 貼身安全",
-    "5）半神烈風 → 雙 T 分接",
-    "6）生命之果 → 怪鳥 + 伊娥 add 處理",
-    "7）零式新增：森林之歌 + 大樹根 + 半神核爆連動"
-  ],
-  "notes": "EW 6.2 萬魔殿 煉淨之獄零式3（P7S）High-End raid。Boss 阿格狄斯提斯（Agdistis）零式版加入森林之歌複雜 add 機制 + 大樹根場地破壞。資料來源：灰機 零式万魔殿 炼净之狱3/B（命名與技能 S→T）+ CGW P7S walkthrough。",
-  "bosses": [
-    {
-      "name": "阿格狄斯提斯（零式）",
-      "nameEn": "Agdistis (Savage)",
-      "phases": [
-        {
-          "name": "P1：基礎強化",
-          "mechanics": [
-            {"name": "阿提斯巨枝 Bough of Attis", "type": "aoe", "description": "雙手舉/合決定走位。零式版預兆更短。", "tips": [{"text": "看雙手快速反應", "role": "dps"}]},
-            {"name": "不滅者的導枝 Stem of the Immortal", "type": "mechanic", "description": "距離衰減 + 場地變三圓形塊。安全區外跌出。", "tips": [{"text": "進高亮安全區", "role": "tank"}]},
-            {"name": "半神神聖 / 閃灼 / 烈風", "type": "mechanic", "description": "神聖（點名圓）→ 8 散；閃灼（環形）→ 貼身；烈風（雙 T 點名）→ 雙 T 分接。", "tips": [{"text": "看技能類型對應走位", "role": "tank"}]}
-          ]
-        },
-        {
-          "name": "P2：生命之果 + 森林機制",
-          "mechanics": [
-            {"name": "生命之果（零式：完整生物）", "type": "add", "description": "零式版召喚成熟的鐵爪怪鳥 + 伊娥（更高 HP，更複雜技能）。需快速擊殺。", "tips": [{"text": "DPS 集火", "role": "dps"}]},
-            {"name": "大樹根 Great Root", "type": "mechanic", "description": "場地中央生大樹根，破壞部分場地形成新走位空間。需適應新地形。", "tips": [{"text": "適應新場地", "role": "tank"}]},
-            {"name": "森林之歌 Song of Forest", "type": "mechanic", "description": "boss 召喚多個森林生物 add 連動釋放機制。需協同處理。", "tips": [{"text": "分配 add 處理", "role": "tank"}]},
-            {"name": "生命的光輝 Life's Radiance（零式）", "type": "raidwide", "description": "全屏 AoE + 出血；連續 + 強化版需多次團補。", "tips": [{"text": "團補連發 + Esuna", "role": "healer"}]},
-            {"name": "DPS Enrage", "type": "raidwide", "description": "狂暴技能截止前必須擊敗。", "tips": [{"text": "全程輸出", "role": "dps"}]}
-          ]
-        }
-      ],
-      "mnemonic": ["巨枝 → 看雙手", "導枝 → 進高亮區", "神聖 → 散；閃灼 → 貼身；烈風 → 雙 T 分", "add → 速秒", "大樹根 → 適應地形"]
-    }
-  ]
+    "id":  "abyssos_the_seventh_circle_savage",
+    "name":  "萬魔殿 煉淨之獄零式3",
+    "nameEn":  "Abyssos: The Seventh Circle (Savage)",
+    "expansion":  "6.x 曉月之終焉 (Endwalker)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  645,
+    "jobLevelSync":  90,
+    "highEnd":  true,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）阿提斯巨枝 → 看雙手位置預判圓/直線 + 擊退",
+                     "2）不滅者導枝 → 距離衰減 + 三圓場地",
+                     "3）半神神聖 → 點名圓散開",
+                     "4）半神閃灼 → 環形 AoE 貼身安全",
+                     "5）半神烈風 → 雙 T 分接",
+                     "6）生命之果 → 怪鳥 + 伊娥 add 處理",
+                     "7）零式新增：森林之歌 + 大樹根 + 半神核爆連動"
+                 ],
+    "notes":  "EW 6.2 萬魔殿 煉淨之獄零式3（P7S）High-End raid。Boss 阿格狄斯提斯（Agdistis）零式版加入森林之歌複雜 add 機制 + 大樹根場地破壞。資料來源：灰機 零式万魔殿 炼净之狱3/B（命名與技能 S→T）+ CGW P7S walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "阿格狄斯提斯（零式）",
+                       "nameEn":  "Agdistis (Savage)",
+                       "phases":  [
+                                      {
+                                          "name":  "P1：基礎強化",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "阿提斯巨枝 Bough of Attis",
+                                                                "type":  "aoe",
+                                                                "description":  "雙手舉/合決定走位。零式版預兆更短。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看雙手快速反應",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "不滅者的導枝 Stem of the Immortal",
+                                                                "type":  "mechanic",
+                                                                "description":  "距離衰減 + 場地變三圓形塊。安全區外跌出。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "進高亮安全區",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "半神神聖 / 閃灼 / 烈風",
+                                                                "type":  "mechanic",
+                                                                "description":  "神聖（點名圓）→ 8 散；閃灼（環形）→ 貼身；烈風（雙 T 點名）→ 雙 T 分接。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看技能類型對應走位",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2：生命之果 + 森林機制",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "生命之果（零式：完整生物）",
+                                                                "type":  "add",
+                                                                "description":  "零式版召喚成熟的鐵爪怪鳥 + 伊娥（更高 HP，更複雜技能）。需快速擊殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 集火",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "大樹根 Great Root",
+                                                                "type":  "mechanic",
+                                                                "description":  "場地中央生大樹根，破壞部分場地形成新走位空間。需適應新地形。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "適應新場地",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "森林之歌 Song of Forest",
+                                                                "type":  "mechanic",
+                                                                "description":  "boss 召喚多個森林生物 add 連動釋放機制。需協同處理。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "分配 add 處理",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "生命的光輝 Life\u0027s Radiance（零式）",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE + 出血；連續 + 強化版需多次團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補連發 + Esuna",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "DPS Enrage",
+                                                                "type":  "raidwide",
+                                                                "description":  "狂暴技能截止前必須擊敗。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全程輸出",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "巨枝 → 看雙手",
+                                        "導枝 → 進高亮區",
+                                        "神聖 → 散；閃灼 → 貼身；烈風 → 雙 T 分",
+                                        "add → 速秒",
+                                        "大樹根 → 適應地形"
+                                    ]
+                   }
+               ]
 }
