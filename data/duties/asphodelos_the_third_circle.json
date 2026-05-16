@@ -1,68 +1,73 @@
 {
     "id": "asphodelos_the_third_circle",
-    "name": "萬魔殿 邊境之獄3",
+    "name": "萬魔殿 邊獄之獄3",
     "nameEn": "Asphodelos: The Third Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 565,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Phoinix 鳳凰：Heat of Condemnation 火炎 + Heart Stake 心臟刺。",
-        "2）Trail of Condemnation：場上火痕 + 持續傷害。",
-        "3）Death's Toll 死之鐘 + 散開機制。"
+        "1）P3N Phoinix = Scorched Exaltation 全屏 + Heat of Condemnation 雙坦 tether。",
+        "2）Experimental Fireplume = Small Orbs / Large Orb 兩變。",
+        "3）Left/Right Cinderwing = 半場 cleave。",
+        "4）Darkened Fire + Brightened Fire = 1-8 號 PB AoE 配站 add。",
+        "5）Devouring Brand = 4 cardinal 線向中央燃進。"
     ],
-    "notes": "EW 6.01 Pandæmonium Asphodelos P3 Normal (Lv 90, ilvl 565)。Phoinix 鳳凰菲尼克斯。",
+    "notes": "EW 6.0 P3 Normal (Lv 90, ilvl 580)。Phoinix 鳳凰 = P3N。",
     "bosses": [
         {
-            "name": "鳳凰菲尼克斯",
+            "name": "鳳凰",
             "nameEn": "Phoinix",
             "mnemonic": [
-                "Heat of Condemnation 火炎 cleave。",
-                "Trail of Condemnation 火痕區避開。",
-                "Heart Stake 心臟刺單體高傷。"
+                "Heat of Condemnation 雙坦 tether。",
+                "Darkened Fire 配 1-8 號 PB AoE。",
+                "Devouring Brand 4 線中央。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Phoinix",
                     "mechanics": [
                         {
-                            "name": "Heat of Condemnation 譴責之熱",
-                            "type": "aoe",
-                            "description": "Boss 前方扇形 AoE。",
-                            "tips": ["繞 boss 後"]
-                        },
-                        {
-                            "name": "Trail of Condemnation 譴責之痕",
-                            "type": "aoe",
-                            "description": "場上火痕區 + 持續傷害。",
-                            "tips": ["避開火痕"]
-                        },
-                        {
-                            "name": "Heart Stake 心臟刺",
-                            "type": "tankbuster",
-                            "description": "對 1 仇高傷單體。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Death's Toll 死之鐘",
+                            "name": "Scorched Exaltation",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "Sun's Pinion 太陽羽",
-                            "type": "spread",
-                            "description": "場上多重圓 AoE。",
-                            "tips": ["散開"]
-                        },
-                        {
-                            "name": "Pyre of Rebirth 重生之火",
-                            "type": "aoe",
-                            "description": "場地全屏 AoE + 鳳凰浴火復活機制。",
+                            "description": "不可閃全屏。",
                             "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Heat of Condemnation",
+                            "type": "tankbuster",
+                            "description": "雙坦 tether → 散開避隊 + Fire Resist Down。",
+                            "tips": [{ "text": "雙坦各接 tether 散", "role": "tank" }]
+                        },
+                        {
+                            "name": "Experimental Fireplume",
+                            "type": "aoe",
+                            "description": "Small Orbs 旋場 + 中央大爆 (第一爆後跑外圈)；Large Orb 中央 bait → 移外。",
+                            "tips": ["看球大小 → 對應位"]
+                        },
+                        {
+                            "name": "Left / Right Cinderwing",
+                            "type": "aoe",
+                            "description": "Boss 半場 cleave，到對側避。",
+                            "tips": ["看朝向 → 跑對側"]
+                        },
+                        {
+                            "name": "Darkened Fire + Brightened Fire",
+                            "type": "other",
+                            "description": "4 點 Darkened Fire add cast Darkened Blaze (滅團)；1-8 號 PBAoE 配站 add 邊削血讓殺。",
+                            "tips": [
+                                "1-8 順序 PBAoE → 殺 4 add",
+                                { "text": "DPS 集中殺 add", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Devouring Brand",
+                            "type": "aoe",
+                            "description": "4 cardinal 線 AoE 向中央燃進，最後合再爆，站外。",
+                            "tips": ["照固定路徑避線"]
                         }
                     ]
                 }

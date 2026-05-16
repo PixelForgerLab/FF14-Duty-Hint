@@ -1,97 +1,71 @@
 {
     "id": "anabaseios_the_twelfth_circle",
-    "name": "萬魔殿 荒天之獄4",
+    "name": "萬魔殿 天獄之闕4",
     "nameEn": "Anabaseios: The Twelfth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 645,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Athena 雅典娜 P1：Glaukopis 凝視 + 矛盾 (Doublethink) 機制。",
-        "2）P2 Pallas Athena 帕拉斯·雅典娜：Pangenesis 萬源 + 球機制。",
-        "3）Apodialogos 對話 + Trinity 三相。",
-        "4）Caloric Theory 卡路里理論 + 火印機制。"
+        "1）P12N Athena = Paradeigma + Anthropos 小怪。",
+        "2）Trinity of Souls 三靈翼亮序 → 半場 cleave。",
+        "3）Engravement of Souls = 染色 + 機制組合。",
+        "4）Glaukopis MT line buster。",
+        "5）Superchain Theory I = 鎖鏈球依長序爆。",
+        "6）Peridialogos/Apodialogos 雙坦集合 + 全員分擔。"
     ],
-    "notes": "EW 6.4 Pandæmonium Anabaseios P12 Normal (Lv 90, ilvl 645)。Athena 雅典娜 → Pallas Athena 帕拉斯·雅典娜。Anabaseios 終戰。雙形態。",
+    "notes": "EW 6.4 P12 Normal (Lv 90, ilvl 640)。Athena = P12N。",
     "bosses": [
         {
             "name": "雅典娜",
             "nameEn": "Athena",
             "mnemonic": [
-                "Glaukopis 凝視 → 背對。",
-                "Doublethink 矛盾 + 配對。",
-                "Apodialogos 對話。"
+                "Paradeigma 召 Anthropos。",
+                "Trinity of Souls 翼亮序。",
+                "Superchain Theory I 鎖鏈球。"
             ],
             "phases": [
                 {
-                    "name": "P1",
+                    "name": "P1 - Athena",
                     "mechanics": [
                         {
-                            "name": "Glaukopis 灰眼凝視",
-                            "type": "other",
-                            "description": "凝視攻擊。",
-                            "tips": ["背對 boss"]
-                        },
-                        {
-                            "name": "Doublethink 矛盾",
-                            "type": "other",
-                            "description": "玩家獲矛盾 debuff → 配對。",
-                            "tips": ["依矛盾類型處理"]
-                        },
-                        {
-                            "name": "Apodialogos 對話",
-                            "type": "aoe",
-                            "description": "場地對話 AoE 機制。",
-                            "tips": ["閃預警"]
-                        },
-                        {
-                            "name": "全體 AoE",
+                            "name": "On the Soul",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "帕拉斯·雅典娜",
-            "nameEn": "Pallas Athena",
-            "mnemonic": [
-                "Pangenesis 萬源 + 球機制。",
-                "Trinity 三相機制。",
-                "Caloric Theory 火印 + 雙形態。"
-            ],
-            "phases": [
-                {
-                    "name": "P2",
-                    "mechanics": [
-                        {
-                            "name": "Pangenesis 萬源",
-                            "type": "other",
-                            "description": "場上球 + 玩家配對機制。",
-                            "tips": ["依球顏色配對"]
+                            "description": "高傷全屏。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Trinity 三相",
+                            "name": "Paradeigma + Anthropos adds",
                             "type": "other",
-                            "description": "3 種屬性同時放招。",
-                            "tips": ["看屬性處理"]
+                            "description": "場上召黃水晶 + Anthropos add 南北或東西配置。",
+                            "tips": ["看水晶位 → 對應方向"]
                         },
                         {
-                            "name": "Caloric Theory 卡路里理論",
+                            "name": "Trinity of Souls",
                             "type": "aoe",
-                            "description": "場上火印 + 多段 AoE。",
-                            "tips": ["閃印位置"]
+                            "description": "三翼依序亮 + 半場 cleave，看翼亮序解。",
+                            "tips": ["看翼亮序 → 對應半場"]
                         },
                         {
-                            "name": "Enrage",
-                            "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
+                            "name": "Engravement of Souls",
+                            "type": "other",
+                            "description": "全員染色 + debuff (stack / spread / tether) 按組合站位。",
+                            "tips": ["照固定圖站"]
+                        },
+                        {
+                            "name": "Glaukopis",
+                            "type": "tankbuster",
+                            "description": "MT line AoE buster 雙段 + Magic Vuln Up。",
+                            "tips": [{ "text": "MT 拉外 + 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Superchain Theory I + Peridialogos",
+                            "type": "other",
+                            "description": "Superchain = 鎖鏈球依長序爆連走；Peridialogos / Apodialogos = 雙坦 + 全員分擔。",
+                            "tips": ["連走多球 + 雙坦集合"]
                         }
                     ]
                 }

@@ -5,58 +5,69 @@
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 615,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Hegemone 赫格蒙：Glaukopis 灰眼 + 變色機制。",
-        "2）Reek Havoc 嚎叫 + 散開。",
-        "3）Polyominoid：方塊機制。"
+        "1）P6N Hegemone = Chelic Synergy 雙坦集合 buster。",
+        "2）Aetheric Polyominoid = 格子線預判 Exocleaver。",
+        "3）Pathogenic Cells 1-8 號依序避槍線。",
+        "4）Exchange of Agonies = stack / donut / spread 不同標。",
+        "5）Choros Ixou = 南北或東西舉手 → 前 90° 後轉。"
     ],
-    "notes": "EW 6.2 Pandæmonium Abyssos P6 Normal (Lv 90, ilvl 615)。Hegemone 赫格蒙妮。",
+    "notes": "EW 6.2 P6 Normal (Lv 90, ilvl 605)。Hegemone 黑暗系 boss。",
     "bosses": [
         {
-            "name": "赫格蒙妮",
+            "name": "黑格摩涅",
             "nameEn": "Hegemone",
             "mnemonic": [
-                "Glaukopis 凝視 → 背對 boss。",
-                "變色 debuff 配對。",
-                "Polyominoid 方塊配色。"
+                "Polyominoid = 格子預判 Exocleaver。",
+                "Pathogenic Cells = 1-8 依序避線。",
+                "Choros Ixou = 雙手南北或東西。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Hegemone",
                     "mechanics": [
                         {
-                            "name": "Glaukopis 灰眼凝視",
-                            "type": "other",
-                            "description": "凝視攻擊。",
-                            "tips": ["背對 boss"]
-                        },
-                        {
-                            "name": "Reek Havoc 大破壞",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "Polyominoid 方塊機制",
-                            "type": "other",
-                            "description": "場上方塊 + 配色機制。",
-                            "tips": ["依配色站位"]
-                        },
-                        {
-                            "name": "Color Change 變色",
-                            "type": "other",
-                            "description": "玩家獲不同顏色 debuff → 配對。",
-                            "tips": ["依顏色配對"]
-                        },
-                        {
-                            "name": "Tankbuster",
+                            "name": "Chelic Synergy",
                             "type": "tankbuster",
-                            "description": "Tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                            "description": "雙坦集合分擔 buster + 扇形 (其他人勿擦邊)。",
+                            "tips": [
+                                { "text": "雙坦集合 + 開減傷", "role": "tank" },
+                                "DPS / 補站 boss 背後"
+                            ]
+                        },
+                        {
+                            "name": "Aetheric Polyominoid + Exocleaver",
+                            "type": "aoe",
+                            "description": "Boss 召格子節點 + 線預示 Exocleaver 兩段；先看哪格亮 → 站非亮 → 反向跳。",
+                            "tips": ["看線方向 → 站非亮格"]
+                        },
+                        {
+                            "name": "Pathogenic Cells",
+                            "type": "other",
+                            "description": "每人 1-8 號 → boss 依序轉向打槍線；中標往身後讓過。",
+                            "tips": ["1→8 依序排位"]
+                        },
+                        {
+                            "name": "Exchange of Agonies",
+                            "type": "other",
+                            "description": "依職能 stack / donut / spread 三種標，各對應點站。",
+                            "tips": ["看 marker → stack/donut/spread"]
+                        },
+                        {
+                            "name": "Choros Ixou",
+                            "type": "aoe",
+                            "description": "Boss 雙手亮南北或東西 → 90° 扇 → 再轉。",
+                            "tips": ["先 90° 外 → 轉身"]
+                        },
+                        {
+                            "name": "Transmission",
+                            "type": "other",
+                            "description": "蛇頭 / 翼 tether → Glossomorph (遠 boss) / Polymorph (近 boss)。",
+                            "tips": ["看 tether 顏色 → 對應距離"]
                         }
                     ]
                 }

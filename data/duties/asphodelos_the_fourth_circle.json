@@ -1,74 +1,72 @@
 {
     "id": "asphodelos_the_fourth_circle",
-    "name": "萬魔殿 邊境之獄4",
+    "name": "萬魔殿 邊獄之獄4",
     "nameEn": "Asphodelos: The Fourth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 565,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Hesperos 赫斯珀羅斯：Decollation 全屏 + Belone Bursts 玩家配對機制。",
-        "2）Levinstrike Pinax：場上 4 個 Pinax 4 屬性 (火/水/雷/土)。",
-        "3）Bloody Cleave 血腥斬 + Devouring Brand 吞噬印。",
-        "4）Pinax 機制：依屬性效果不同 (火 = 直線；水 = 圓擊退；雷 = 連線；土 = 範圍 stack)。"
+        "1）P4N Hesperos = Decollation 全屏 + Bloodrake (DPS 或 T+H) 吸 aether。",
+        "2）Aetheric Chlamys + 第二 Bloodrake = 記哪兩組被吸。",
+        "3）Director's Belone Role Call 傳給對組，被吸組不能拿。",
+        "4）Inversive Chlamys = 對組接 tether + Cursed Casting 大 AoE。",
+        "5）Elegant Evisceration = MT 兩段 buster + Magic Vuln，換手或無敵。",
+        "6）Setting the Scene + Pinax = 4 元素 tile 機制。"
     ],
-    "notes": "EW 6.01 Pandæmonium Asphodelos P4 Normal (Lv 90, ilvl 565)。Hesperos 赫斯珀羅斯 (Asphodelos 終局)。",
+    "notes": "EW 6.0 P4 Normal (Lv 90, ilvl 585)。Hesperos = P4N。Bloodrake + Role Call 著名機制。",
     "bosses": [
         {
-            "name": "赫斯珀羅斯",
+            "name": "赫斯佩洛斯",
             "nameEn": "Hesperos",
             "mnemonic": [
-                "Pinax 4 屬性：火 (直線) / 水 (圓擊退) / 雷 (連線) / 土 (stack)。",
-                "Belone Bursts：玩家配對顏色，異色配對。",
-                "Decollation 全屏高傷。"
+                "Bloodrake / Aetheric Chlamys 選組。",
+                "Role Call 傳給對組。",
+                "Inversive Chlamys 對組接 tether。",
+                "Pinax 4 元素 tile。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Hesperos",
                     "mechanics": [
                         {
-                            "name": "Decollation 斬首",
+                            "name": "Decollation",
                             "type": "raidwide",
-                            "description": "全屏高傷 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                            "description": "不可閃全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         },
                         {
-                            "name": "Levinstrike Pinax",
+                            "name": "Bloodrake + Aetheric Chlamys",
                             "type": "other",
-                            "description": "場上 4 個 Pinax 對應 4 屬性 (火/水/雷/土)。各自不同效果。",
-                            "tips": [
-                                "火 = 直線 (側面安全)",
-                                "水 = 圓擊退 (中央外)",
-                                "雷 = 連線 (拉開)",
-                                "土 = 範圍 stack (疊接)"
-                            ]
+                            "description": "Boss tether 全 DPS 或全 T+H 吸 aether (Aethersucker)；再 Chlamys 儲存 + 第二 Bloodrake 選一組 (可同可反)。",
+                            "tips": ["記兩次吸到哪組"]
                         },
                         {
-                            "name": "Belone Bursts 顏色配對",
+                            "name": "Director's Belone + Role Call",
                             "type": "other",
-                            "description": "玩家獲不同顏色 → 配對處理。",
-                            "tips": ["異色配對站位"]
+                            "description": "4 玩家掛 Role Call (有 = 死)；被吸 aether 組不能拿 → 必須傳給對組 (穿過解標)。",
+                            "tips": ["原組站讓對組穿過拿標"]
                         },
                         {
-                            "name": "Bloody Cleave 血腥斬",
-                            "type": "aoe",
-                            "description": "Boss 前方 cleave。",
-                            "tips": ["繞 boss 後"]
+                            "name": "Inversive Chlamys",
+                            "type": "other",
+                            "description": "另組接 tether (Cursed Casting 大 AoE + Magic Vuln) 散開避撞。",
+                            "tips": ["接 tether 組散開遠"]
                         },
                         {
-                            "name": "Devouring Brand 吞噬印",
-                            "type": "aoe",
-                            "description": "場上多重印 AoE。",
-                            "tips": ["閃印位置"]
-                        },
-                        {
-                            "name": "Tankbuster",
+                            "name": "Elegant Evisceration",
                             "type": "tankbuster",
-                            "description": "Tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                            "description": "MT 兩段 buster + Magic Vuln Up；MT/OT 換手或無敵。",
+                            "tips": [{ "text": "MT 開無敵或換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Setting the Scene + Pinax",
+                            "type": "other",
+                            "description": "場 4 quadrant 下不同元素 tile (火 / 水 / 雷 / 風) 依序解。",
+                            "tips": ["看 tile 元素 → 對應動作"]
                         }
                     ]
                 }

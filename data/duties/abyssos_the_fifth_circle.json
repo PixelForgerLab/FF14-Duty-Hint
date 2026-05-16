@@ -5,58 +5,60 @@
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 615,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Proto-Carbuncle 原型卡邦克：火/冰 stack 配色 + Ruby Glow 紅光寶石。",
-        "2）Topaz Stones 黃色石 + 玩家位置記憶。",
-        "3）Searing Ray 灼熱雷射 + cleave。"
+        "1）P5N Proto-Carbuncle = Ruby Glow 紅光 + 反射牆。",
+        "2）Topaz Stones 黃晶坑 (爆) 或毒晶 (Toxicosis)。",
+        "3）Venomous Mass → Toxic Crunch = 雙 MT buster 連續。",
+        "4）Caustic Pools 4 灘 = 看數字進對應人數。",
+        "5）Double Rush = 對角衝鋒 + cleave + 擊退。"
     ],
-    "notes": "EW 6.2 Pandæmonium Abyssos P5 Normal (Lv 90, ilvl 615)。Proto-Carbuncle 原型卡邦克。",
+    "notes": "EW 6.2 P5 Normal (Lv 90, ilvl 605)。Proto-Carbuncle 雙形。",
     "bosses": [
         {
-            "name": "原型卡邦克",
+            "name": "原型卡邦克魯",
             "nameEn": "Proto-Carbuncle",
             "mnemonic": [
-                "Ruby Glow 紅光：火屬性 stack。",
-                "Topaz Stones 黃色石擊退。",
-                "Searing Ray 灼熱雷射 cleave。"
+                "Topaz Stones 黃 / 毒。",
+                "Caustic Pools 4 灘配數字。",
+                "Double Rush 對角衝鋒。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Proto-Carbuncle",
                     "mechanics": [
                         {
-                            "name": "Ruby Glow 紅寶石光",
-                            "type": "stack",
-                            "description": "場上紅寶石分擔機制。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Topaz Stones 黃寶石",
-                            "type": "other",
-                            "description": "場上黃寶石擊退 + 位置記憶。",
-                            "tips": ["預判擊退方向"]
-                        },
-                        {
-                            "name": "Searing Ray 灼熱雷射",
-                            "type": "aoe",
-                            "description": "Boss 前方 cleave。",
-                            "tips": ["繞 boss 後"]
-                        },
-                        {
-                            "name": "Sonic Howl 音波吼",
+                            "name": "Ruby Glow + Topaz Stones",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                            "description": "Ruby Glow 全屏 + 召反射牆；Topaz Stones 黃晶 (爆 AoE) 或毒晶 (Toxicosis 持續傷)。",
+                            "tips": [{ "text": "全員減傷 + 看牆位調整", "role": "healer" }]
                         },
                         {
-                            "name": "Tankbuster",
+                            "name": "Venomous Mass + Toxic Crunch",
                             "type": "tankbuster",
-                            "description": "Tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                            "description": "MT 雙 buster + Poison + Vuln，MT/OT 換手。",
+                            "tips": [{ "text": "MT/OT 換手吃 buster", "role": "tank" }]
+                        },
+                        {
+                            "name": "Caustic Pools",
+                            "type": "spread",
+                            "description": "4 角各一灘 + 數字 (1/2/3) 決定進幾人；少於 = Venom 噴 + 出 Lively Bait add。",
+                            "tips": ["依數字派人進"]
+                        },
+                        {
+                            "name": "Double Rush",
+                            "type": "aoe",
+                            "description": "Boss 衝一角 + 180° 前 cleave，再衝對角；對角擊退。",
+                            "tips": ["站對角線 + 抗擊退"]
+                        },
+                        {
+                            "name": "Venom Squall / Venom Surge",
+                            "type": "stack",
+                            "description": "Squall = 散 → 誘 → 集；Surge = 反向 (集 → 誘 → 散)。",
+                            "tips": ["看 cast 名 → 對應順序"]
                         }
                     ]
                 }

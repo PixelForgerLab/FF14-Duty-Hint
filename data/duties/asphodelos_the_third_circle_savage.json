@@ -1,6 +1,6 @@
 {
     "id": "asphodelos_the_third_circle_savage",
-    "name": "萬魔殿 邊境之獄零式3",
+    "name": "萬魔殿 邊獄之獄零式3",
     "nameEn": "Asphodelos: The Third Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -10,63 +10,82 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）P3S = P3N + Brightened Fire 紅球 + Darkened Fire 黑球。",
-        "2）Birds 連發：5 鳥圖騰 + 火焰 cleave。",
-        "3）Sparkfledged：場上鳥小怪 + 連線。",
-        "4）Fountain of Fire 噴泉：3 連分擔 + 圓 AoE。"
+        "1）P3S Phoinix = Scorched Exaltation 全屏 + Heat of Condemnation 雙坦 tether buster。",
+        "2）Experimental Fireplume = Small Orbs (旋場移外) / Large Orb (中央 bait → 移外)。",
+        "3）Left/Right Cinderwing = 半場 cleave，站對側。",
+        "4）Darkened Fire + Brightened Fire = 1-8 號 PB AoE 配站 add 邊削血讓可殺；同時殺所有 Darkened Fires。",
+        "5）Devouring Brand = 四 cardinal 線 AoE 向中央燃進，最後爆站外。",
+        "6）Searing Breeze = 全員 PBAoE 中央 bait → 散開。",
+        "7）Trail of Condemnation 兩變 = boss 中央火 / boss 外圍火。",
+        "8）Storms of Asphodelos = 末段大全屏連發。"
     ],
-    "notes": "EW 6.11 P3 Savage (Lv 90, ilvl 605)。Phoinix Savage。",
+    "notes": "EW 6.05 P3 Savage (Lv 90, ilvl 595)。Phoinix 鳳凰 = P3S。Darkened Fire add 機制 + Devouring Brand 收場。",
     "bosses": [
         {
-            "name": "鳳凰菲尼克斯",
+            "name": "鳳凰",
             "nameEn": "Phoinix",
             "mnemonic": [
-                "Brightened Fire 紅球 (爆) vs Darkened Fire 黑球 (吸)。",
-                "Birds 連發：看 5 鳥圖騰預判位置。",
-                "Fountain of Fire 3 連分擔 + 圓。"
+                "Heat of Condemnation 雙坦 tether 分擔。",
+                "Darkened Fire 1-8 配 add 削血。",
+                "Devouring Brand 4 cardinal 線。",
+                "Searing Breeze 中央 bait → 散。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Phoinix",
                     "mechanics": [
                         {
-                            "name": "Heat of Condemnation (Savage)",
-                            "type": "aoe",
-                            "description": "強化扇形 AoE。",
-                            "tips": ["繞後"]
+                            "name": "Scorched Exaltation",
+                            "type": "raidwide",
+                            "description": "不可閃全屏。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Brightened Fire 紅球",
-                            "type": "aoe",
-                            "description": "場上紅球 → 玩家位置圓 AoE。",
-                            "tips": ["散開避免重疊"]
-                        },
-                        {
-                            "name": "Darkened Fire 黑球",
-                            "type": "other",
-                            "description": "場上黑球 → 吸引玩家。",
-                            "tips": ["反方向跑遠"]
-                        },
-                        {
-                            "name": "Sparkfledged 火鳥小怪",
-                            "type": "other",
-                            "description": "場上鳥小怪 + 連線玩家。",
+                            "name": "Heat of Condemnation 譴責之熱",
+                            "type": "tankbuster",
+                            "description": "兩隨機玩家 tether → 雙坦各接一 + 散開避隊，掛 Fire Resist Down。",
                             "tips": [
-                                { "text": "DPS 擊殺", "role": "dps" },
-                                "連線玩家拉開"
+                                { "text": "雙坦各接 tether 散到對側", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Fountain of Fire 火泉",
-                            "type": "stack",
-                            "description": "3 連分擔圓 + 全屏 AoE。",
-                            "tips": ["全員疊接 3 連"]
+                            "name": "Experimental Fireplume 實驗火羽",
+                            "type": "aoe",
+                            "description": "Small Orbs = 旋場爆 + 中央大爆，第一爆後跑外圈；Large Orb = 中央 bait 後移外。",
+                            "tips": ["看球大小 → 對應位"]
                         },
                         {
-                            "name": "Enrage",
+                            "name": "Left / Right Cinderwing",
+                            "type": "aoe",
+                            "description": "Boss 半場 cleave 左或右，需到對側。",
+                            "tips": ["看朝向 → 跑對側"]
+                        },
+                        {
+                            "name": "Darkened Fire + Brightened Fire",
+                            "type": "other",
+                            "description": "Darkened Fire = 4 點 add (DPS 或 T+H) cast Darkened Blaze 滅團；Brightened Fire = 1-8 號玩家 PBAoE，依序到 add 邊削血讓 add 可殺。",
+                            "tips": [
+                                "DPS / T+H 站 add 邊削血",
+                                { "text": "1-8 號依序 PBAoE → 殺 4 add", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Devouring Brand 吞噬烙印",
+                            "type": "aoe",
+                            "description": "4 cardinal 邊下 line AoE 向中央燃進；觸碰掛 Burning DoT；最後合中央後再爆，站外。",
+                            "tips": ["照固定避線路徑"]
+                        },
+                        {
+                            "name": "Searing Breeze + Trail of Condemnation",
+                            "type": "spread",
+                            "description": "Searing Breeze = 全員 PBAoE 中央 bait → 散；Trail of Condemnation = boss 火吐中央 / 外圍兩變。",
+                            "tips": ["bait 中央後散開"]
+                        },
+                        {
+                            "name": "Storms of Asphodelos (Enrage)",
                             "type": "raidwide",
-                            "description": "狂暴強制秒殺。",
-                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
+                            "description": "末段大全屏連發。",
+                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
                         }
                     ]
                 }

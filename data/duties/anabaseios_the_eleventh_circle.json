@@ -1,62 +1,64 @@
 {
     "id": "anabaseios_the_eleventh_circle",
-    "name": "萬魔殿 荒天之獄3",
+    "name": "萬魔殿 天獄之闕3",
     "nameEn": "Anabaseios: The Eleventh Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 645,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Themis 忒彌斯 (判官形態)：Dike 判決 + 卡牌機制。",
-        "2）Trial of the Soul 靈魂審判 + 連線。",
-        "3）Judgment Day 審判日：場地全屏。"
+        "1）P11N Themis = Styx 多段 stack 集合。",
+        "2）Arcane Revelation 光 / 暗 → 配對解。",
+        "3）Shadowed Messengers + 鐘位處理。",
+        "4）Dark and Light tether 對位。",
+        "5）Lightstream 3 圓筒 120° 持續 AoE。"
     ],
-    "notes": "EW 6.4 Pandæmonium Anabaseios P11 Normal (Lv 90, ilvl 645)。Themis 忒彌斯 (判官形態)。",
+    "notes": "EW 6.4 P11 Normal (Lv 90, ilvl 635)。Themis 法官 boss。",
     "bosses": [
         {
             "name": "忒彌斯",
             "nameEn": "Themis",
             "mnemonic": [
-                "Dike 判決 + 卡牌機制。",
-                "Trial of the Soul 連線靈魂。",
-                "Judgment Day 全屏審判。"
+                "Styx 多段 stack。",
+                "Arcane Revelation 光暗對位。",
+                "Dark and Light tether。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Themis",
                     "mechanics": [
                         {
-                            "name": "Dike 判決",
+                            "name": "Styx",
+                            "type": "stack",
+                            "description": "多段 stack 集合分擔 (5/6/7 段遞增)。",
+                            "tips": ["全員集合 + 強補"]
+                        },
+                        {
+                            "name": "Arcane Revelation",
                             "type": "other",
-                            "description": "玩家獲判決 debuff + 卡牌效果。",
-                            "tips": ["依卡牌處理"]
+                            "description": "Boss 染光或暗 + 4 球，依顏色決定光暗對位。",
+                            "tips": ["光 boss + 光球 = 危險"]
                         },
                         {
-                            "name": "Trial of the Soul 靈魂審判",
+                            "name": "Shadowed Messengers + Jury Overruling",
                             "type": "other",
-                            "description": "玩家連線 + 靈魂機制。",
-                            "tips": ["拉開連線"]
+                            "description": "兩 Illusory Themis 出現 + Jury 機制 (光散 / 暗集)。",
+                            "tips": ["看 boss 元素 → 對應位"]
                         },
                         {
-                            "name": "Judgment Day 審判日",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                            "name": "Dark and Light",
+                            "type": "other",
+                            "description": "T/H 與 DPS 連 tether (光 / 暗)，依顏色配安全位。",
+                            "tips": ["看 tether 顏色 → 對應安全"]
                         },
                         {
-                            "name": "Holy Beam 神聖光束",
+                            "name": "Lightstream",
                             "type": "aoe",
-                            "description": "直線光束 AoE。",
-                            "tips": ["閃直線預警"]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "Tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                            "description": "場上 3 Arcane Cylinder 持續 AoE，走縫隙。",
+                            "tips": ["看 3 圓筒位 + 走縫"]
                         }
                     ]
                 }

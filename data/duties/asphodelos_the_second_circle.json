@@ -1,67 +1,70 @@
 {
     "id": "asphodelos_the_second_circle",
-    "name": "萬魔殿 邊境之獄2",
+    "name": "萬魔殿 邊獄之獄2",
     "nameEn": "Asphodelos: The Second Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 565,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Hippokampos 海馬：Murky Depths 全屏 + 場上瘀血浮空。",
-        "2）Sewage Deluge：場地下沉 + 滑行機制。",
-        "3）Doting Roar：噪音吼，DPS check。"
+        "1）P2N Hippokampos = Murky Depths 全屏 + Doubled Impact 雙坦集合 buster。",
+        "2）Sewage Deluge 換場 + 留 platform；中央湧水致死。",
+        "3）Coherence = MT tether 拉對側，其他 line stack。",
+        "4）Predatory Avarice = Depths 分擔 / Tides 擊退避牆。",
+        "5）Channeling Overflow + Kampeos Harma = 方向標 + 紅藍標移位。"
     ],
-    "notes": "EW 6.01 Pandæmonium Asphodelos P2 Normal (Lv 90, ilvl 565)。Hippokampos 希波坎波斯。",
+    "notes": "EW 6.0 P2 Normal (Lv 90, ilvl 580)。Hippokampos = P2N。Sewage Deluge 換場。",
     "bosses": [
         {
             "name": "希波坎波斯",
             "nameEn": "Hippokampos",
             "mnemonic": [
-                "Sewage Deluge：場地下沉 → 滑行至安全格。",
-                "Murky Depths 全屏 + 場上瘀血浮空 → 必須踩浮塊避免下沉。"
+                "Doubled Impact 雙坦集合。",
+                "Coherence tether + line stack。",
+                "Predatory Avarice Depths/Tides。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Hippokampos",
                     "mechanics": [
                         {
-                            "name": "Murky Depths 渾濁深淵",
+                            "name": "Murky Depths",
                             "type": "raidwide",
-                            "description": "全屏 AoE + 場上瘀血浮空。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                            "description": "不可閃全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         },
                         {
-                            "name": "Sewage Deluge 污水洪流",
-                            "type": "other",
-                            "description": "場地下沉 + 玩家滑行 + 場邊安全格。",
-                            "tips": ["跑到場邊抗滑行"]
-                        },
-                        {
-                            "name": "Sludge Slinger 污泥投擲",
-                            "type": "spread",
-                            "description": "玩家圓 AoE 散開標記。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "Coherence 連結",
-                            "type": "aoe",
-                            "description": "場上連線 + 直線 AoE。",
-                            "tips": ["拉開連線"]
-                        },
-                        {
-                            "name": "Doting Roar 噪音吼",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [{ "text": "減傷", "role": "healer" }]
-                        },
-                        {
-                            "name": "Tankbuster",
+                            "name": "Doubled Impact",
                             "type": "tankbuster",
-                            "description": "Tankbuster。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                            "description": "雙坦集合分擔 buster。",
+                            "tips": [{ "text": "雙坦集合 + 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Sewage Deluge",
+                            "type": "other",
+                            "description": "全屏 + 場淹水留 3 platform，中央湧水致死。",
+                            "tips": ["站亮 platform"]
+                        },
+                        {
+                            "name": "Coherence",
+                            "type": "tankbuster",
+                            "description": "MT 接 tether 拉對側 + 其他 line stack 分擔。",
+                            "tips": [{ "text": "MT 接 tether 拉遠", "role": "tank" }]
+                        },
+                        {
+                            "name": "Predatory Avarice",
+                            "type": "other",
+                            "description": "Depths (大水 AoE 分擔) / Tides (PBAoE 擊退避牆)。",
+                            "tips": ["Tides 站邊避牆、Depths 對側"]
+                        },
+                        {
+                            "name": "Channeling Overflow / Kampeos Harma",
+                            "type": "other",
+                            "description": "P2 方向標走出紫圈 + 紅藍標 boss 跳 / 圈擊連續移位。",
+                            "tips": ["看方向標 + 紅藍移位"]
                         }
                     ]
                 }

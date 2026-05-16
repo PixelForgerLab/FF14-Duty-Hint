@@ -5,61 +5,68 @@
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": 615,
+    "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Agdistis 阿格狄斯提斯：Bough 樹枝 + Fruits 果實機制。",
-        "2）Spark of Life 生命之火：場上小怪 + 散開 AoE。",
-        "3）Static Path 靜止路徑：玩家位置記憶。"
+        "1）P7N Agdistis = Spark of Life 全屏 + Dispersed / Condensed Aero 雙 buster 區別。",
+        "2）Forbidden Fruit 蛋 = 不同蛋變不同小怪。",
+        "3）Bough of Attis 拍前 / 後 + 對側擊退。",
+        "4）Inviolate Bonds = 風 debuff stack / spread 順序處理。",
+        "5）Multicast = Aero IV 大擊退 + Holy 地圈散開。"
     ],
-    "notes": "EW 6.2 Pandæmonium Abyssos P7 Normal (Lv 90, ilvl 615)。Agdistis 阿格狄斯提斯。",
+    "notes": "EW 6.2 P7 Normal (Lv 90, ilvl 610)。Agdistis 大地 boss。蛋變身 + 風水系統。",
     "bosses": [
         {
-            "name": "阿格狄斯提斯",
+            "name": "阿格狄斯提絲",
             "nameEn": "Agdistis",
             "mnemonic": [
-                "Bough 樹枝 cleave。",
-                "Fruits 果實爆炸機制。",
-                "Spark of Life 生命之火召喚小怪。"
+                "Dispersed 分坦 / Condensed 集合分擔。",
+                "Forbidden Fruit 蛋變小怪。",
+                "Bough 拍前 / 後 + 對側擊退。"
             ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1 - Agdistis",
                     "mechanics": [
                         {
-                            "name": "Bough 樹枝",
-                            "type": "aoe",
-                            "description": "前方 cleave AoE。",
-                            "tips": ["繞 boss 後"]
+                            "name": "Spark of Life",
+                            "type": "raidwide",
+                            "description": "高傷不可閃全屏 + 流血。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Fruits 果實",
-                            "type": "aoe",
-                            "description": "場上果實生成 + 爆。",
-                            "tips": ["離開果實位置"]
-                        },
-                        {
-                            "name": "Spark of Life 生命之火",
-                            "type": "other",
-                            "description": "場上小怪 + 散開 AoE。",
+                            "name": "Dispersed / Condensed Aero II",
+                            "type": "tankbuster",
+                            "description": "Dispersed = 雙坦分坦 (兩 AoE) / Condensed = 雙坦集合分擔 + Windburn。",
                             "tips": [
-                                { "text": "DPS 擊殺", "role": "dps" },
-                                "其他人散開"
+                                { "text": "看 cast 名分 / 集合", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Static Path 靜止路徑",
+                            "name": "Forbidden Fruit",
                             "type": "other",
-                            "description": "玩家位置記憶 → 後續 AoE。",
-                            "tips": ["移動避開記憶位置"]
+                            "description": "場上掉黃蛋變不同小怪 (Famine/Death/War/Bird) 各機制不同。",
+                            "tips": ["照固定圖分蛋"]
                         },
                         {
-                            "name": "全體 AoE",
+                            "name": "Bough of Attis",
+                            "type": "other",
+                            "description": "Boss 拍場前或後 (致死) + 對側手刀擊退 → 站對側 + 抗擊退。",
+                            "tips": ["看 cast 朝向 → 站對側 + 抗擊退"]
+                        },
+                        {
+                            "name": "Inviolate Bonds",
+                            "type": "stack",
+                            "description": "全員掛風 debuff 依數字順序解 stack/spread。",
+                            "tips": ["1 號先處理 → 2 號"]
+                        },
+                        {
+                            "name": "Multicast",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                            "description": "同時 Aero IV 大擊退 + Holy 地圈散開。",
+                            "tips": ["抗擊退 + 散開避 Holy"]
                         }
                     ]
                 }
