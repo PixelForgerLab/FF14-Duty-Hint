@@ -8,14 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Catastrophe (FF5)：場上重力 + 翻轉機制。", "2）Gravity Flip 重力翻轉：場上方向反轉。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O2 (Lv 70)。FF5 致敬。",
+    "quality": "good",
+    "mnemonic": [
+        "1）O2N Catastrophe = Antilight 藍 (地)/黃 (空) 球，需配對狀態。",
+        "2）Tremblor → Earthquake = 必浮空避地震。",
+        "3）100Gs = 雙坦藍圈強制落地 + 全員集合。",
+        "4）Gravitational Manipulation = 半組浮 / 半組地 + 4 人 stack。",
+        "5）Death's Gaze = 背對 boss 避凝視。"
+    ],
+    "notes": "SB 4.0 Omega 第 2 層 (Lv 70)。Catastrophe = O2N。浮空 vs 落地系統。",
     "bosses": [
-        { "name": "Catastrophe", "nameEn": "Catastrophe", "mnemonic": ["重力 + 翻轉"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Gravity Flip 重力翻轉", "type": "other", "description": "場上方向反轉。", "tips": ["跟翻轉移動"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "凱特斯托普",
+            "nameEn": "Catastrophe",
+            "phases": [{ "name": "Catastrophe", "mechanics": [
+                { "name": "Antilight 球", "type": "other", "description": "藍 = 地、黃 = 空；玩家用 Duty Action 浮空對應狀態。", "tips": ["黃球時別浮、藍黃時中央安"] },
+                { "name": "Tremblor → Earthquake", "type": "raidwide", "description": "Tremblor 全屏 + Earthquake 地面立死，必浮空。", "tips": ["看 Tremblor → 浮空"] },
+                { "name": "100Gs", "type": "other", "description": "MT/OT 雙藍圈落地 + 全員 stack。", "tips": ["全員集合分擔"] },
+                { "name": "Gravitational Manipulation", "type": "stack", "description": "半組浮 / 半組地 + Fourfold Sacrifice 4 stack。", "tips": ["DPS 浮 / T+H 地分組"] },
+                { "name": "Death's Gaze", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] }
+            ]}]
+        }
     ]
 }

@@ -8,14 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Phantom Train (FF6)：場上多重 AoE。", "2）Train Mechanics：軌道 + 衝撞機制。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O5 (Lv 70)。FF6 致敬。",
+    "quality": "good",
+    "mnemonic": [
+        "1）O5N Phantom Train = 車邊無欄掉下。MT 離 boss 太遠掛 Connectivity。",
+        "2）Ghost Block = 中央方格鬼 → 提前離開。",
+        "3）Spotlights = 3 prey 跟追標 → 暫停後爆。",
+        "4）Diabolical Whistle Knockback Ghost 大擊退到對側。",
+        "5）Doom Strike MT + Head-On Collision 前 proximity。"
+    ],
+    "notes": "SB 4.2 Omega 第 5 層 (Lv 70)。Phantom Train = O5N (FF6 致敬)。",
     "bosses": [
-        { "name": "Phantom Train", "nameEn": "Phantom Train", "mnemonic": ["軌道 + AoE"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Train Charge 衝撞", "type": "other", "description": "場上衝撞 + AoE。", "tips": ["跑開軌道"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-        ]}]}
+        {
+            "name": "幽魂列車",
+            "nameEn": "Phantom Train",
+            "phases": [{ "name": "Phantom Train", "mechanics": [
+                { "name": "Connectivity", "type": "tankbuster", "description": "MT 離 boss 太遠疊 debuff 致死。", "tips": [{ "text": "MT 全程黏 boss", "role": "tank" }] },
+                { "name": "Ghost Block", "type": "other", "description": "中央方格鬼，cast 完 = 死。", "tips": ["看 telegraph 提前離開"] },
+                { "name": "Spotlights", "type": "other", "description": "3 prey + 3 圓追標 → 暫停後爆。", "tips": ["3 中標跟移動"] },
+                { "name": "Diabolical Whistle (KB Ghost)", "type": "other", "description": "左或右召大擊退到對側。", "tips": ["用 Block 擋或抗擊退"] },
+                { "name": "Head-On Collision", "type": "other", "description": "前 proximity 標 + 全屏擊退。", "tips": ["站車後 + 抗擊退"] }
+            ]}]
+        }
     ]
 }

@@ -8,14 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Demon Wall (FF6)：場上多重 AoE。", "2）Wall Push 牆壁推進：玩家擊退到牆。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O6 (Lv 70)。FF6 致敬。",
+    "quality": "good",
+    "mnemonic": [
+        "1）O6N Chadarnook + Goddess = 雙 boss (Goddess 在畫外)。",
+        "2）Possession (Demon-Fire) + (Goddess-Wind) = 用 Chocobo Brush 上色取 Resist + stack。",
+        "3）4 元素畫 (地火水風) 配色。",
+        "4）Demonic Howl 全屏 / Demonic Shear MT buster。",
+        "5）Reaper tether 補 (不看 = 接近殺)。"
+    ],
+    "notes": "SB 4.2 Omega 第 6 層 (Lv 70)。Chadarnook + Goddess (FF6 致敬畫廊)。",
     "bosses": [
-        { "name": "Demon Wall", "nameEn": "Demon Wall", "mnemonic": ["牆 + 推進"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Wall Push", "type": "knockback", "description": "牆壁推進擊退。", "tips": ["預判方向"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "查達努克",
+            "nameEn": "Chadarnook",
+            "phases": [{ "name": "Chadarnook", "mechanics": [
+                { "name": "Demonic Howl + Shear", "type": "tankbuster", "description": "Howl 全屏 + Shear MT cone buster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Possession (Demon + Goddess)", "type": "other", "description": "雙 tether 兩元素畫 → Brush 對應 canvas 取 Resist。", "tips": ["看 tether 兩畫 → 上對應色"] },
+                { "name": "Poltergeist + Reaper", "type": "other", "description": "召 Reaper add tether 補；不看 = 接近殺。", "tips": [{ "text": "補保持看 Reaper", "role": "healer" }] },
+                { "name": "Demonic Pain tether", "type": "other", "description": "全員 pair tether → 越遠越傷，貼緊。", "tips": ["事前定 4 對"] },
+                { "name": "Divine Lure", "type": "other", "description": "Goddess 凝視，最後背對。", "tips": ["背對結算前"] }
+            ]}]
+        }
     ]
 }

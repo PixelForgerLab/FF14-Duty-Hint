@@ -3,59 +3,54 @@
     "name": "範式之塔",
     "nameEn": "The Tower at Paradigm's Breach",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "alliance",
+    "type": "raid",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）B1 The Knave of Hearts：撲克牌主題。Cards Will Tell 依出牌花色/數字決定機制 (心/方/梅/黑色決定 AoE 形狀)。",
-        "2）B2 Red Girl 紅女兒：場上 LIE/TRUTH 文字區域要選對；Lone Wolf 召 NieR 雜兵小怪。",
-        "3）B3 The Warrior of Light 第 4：Brionac 標記 → 圓 AoE 拉開；Empty Wave 全屏 + Aether Blast 直線。",
-        "4）B4 Meng Sisters + Her Inflorescence (NieR 風)：花朵 adds + 場地分區 (色) + Sublime Embrace 終局大招。"
+        "1）B1 Knave (撲克牌怪) = Card 機制 + 多 cone + 召小 add。",
+        "2）B2 Red Girl = LIE / TRUTH debuff 配對 + 場上多 AoE 圈。",
+        "3）B3 Warrior of Light (NieR) = Sword cleave + 連 line + 全屏。",
+        "4）B4 Meng Sisters (姊妹) = 三 boss tether + 配對 + 大全屏。"
     ],
-    "notes": "ShB 5.5 NieR Automata 系列 alliance raid 終章 Lv 80 ilvl 510。橫尾太郎合作第 3 部。資料來源：玩家手記 + 灰機 (CGW 此頁未抓到)。",
+    "notes": "ShB 5.55 NieR alliance raid Pt 3 (Lv 80)。NieR Automata 終章 alliance。",
     "bosses": [
         {
-            "name": "The Knave of Hearts 紅心傑克",
-            "nameEn": "The Knave of Hearts",
-            "mnemonic": ["撲克牌主題 + Cards Will Tell"],
+            "name": "Knave",
+            "nameEn": "Knave",
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Cards Will Tell 出牌", "type": "other", "description": "依出的撲克牌 (花色/數字) 決定接下來機制。", "tips": ["看牌判斷"] },
-                { "name": "Cocking Hammer 槍栓", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Card Cone", "type": "aoe", "description": "Boss 撲克牌 cone AoE 多方向。", "tips": ["看朝向 → 站側"] },
+                { "name": "Summon Card add", "type": "other", "description": "召撲克牌 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Card Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Red Girl 紅女兒",
+            "name": "Red Girl",
             "nameEn": "Red Girl",
-            "mnemonic": ["LIE/TRUTH 場上文字區", "Lone Wolf 召小怪"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "True/False 真假", "type": "other", "description": "場地出現 LIE 與 TRUTH 兩塊區域，依當下 buff 決定要站真或假。", "tips": ["看 buff 決定真假區"] },
-                { "name": "Lone Wolf 孤狼", "type": "other", "description": "召喚 NieR 雜兵小怪。", "tips": [{ "text": "DPS 處理 adds", "role": "dps" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "LIE / TRUTH debuff", "type": "other", "description": "全員掛 LIE 或 TRUTH debuff，配對解除。", "tips": ["看 debuff → 配對"] },
+                { "name": "AoE 圈 多", "type": "spread", "description": "場上多 AoE 圈散落。", "tips": ["散避圈"] },
+                { "name": "Aetheric Pulse", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "The Warrior of Light 第 4",
-            "nameEn": "The Warrior of Light",
-            "mnemonic": ["Brionac 標記圓", "Empty Wave 全屏", "Aether Blast 直線"],
+            "name": "Warrior of Light",
+            "nameEn": "Warrior of Light (NieR)",
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Brionac 布列歐納克", "type": "aoe", "description": "玩家標記後地面圓 AoE。", "tips": ["被標跑開"] },
-                { "name": "Empty Wave 空洞波", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Aether Blast 以太爆", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] }
+                { "name": "Sword Cleave", "type": "aoe", "description": "Boss cleave 光劍 AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Limit Break", "type": "raidwide", "description": "大全屏。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] },
+                { "name": "Aether Line", "type": "aoe", "description": "Boss line AoE 連發。", "tips": ["走縫"] }
             ]}]
         },
         {
-            "name": "Meng Sisters + Her Inflorescence",
-            "nameEn": "Meng Sisters / Her Inflorescence",
-            "mnemonic": ["花朵 adds", "場地分區 (色)", "Sublime Embrace 終局"],
+            "name": "Meng Sisters",
+            "nameEn": "Meng Sisters",
             "phases": [{ "name": "B4", "mechanics": [
-                { "name": "Flower Summon 花朵", "type": "other", "description": "場上召喚花朵 adds。", "tips": [{ "text": "DPS 處理", "role": "dps" }] },
-                { "name": "Area Divide 場地分區", "type": "other", "description": "場地分為不同顏色區域，需依顏色站位。", "tips": ["看區域顏色站"] },
-                { "name": "Sublime Embrace 至高擁抱", "type": "raidwide", "description": "終局大招全屏。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Tether 三 boss", "type": "other", "description": "三姐妹 tether 玩家 + 配對。", "tips": ["看 tether 配對"] },
+                { "name": "Triple Cone", "type": "aoe", "description": "三 boss cone AoE 同時發。", "tips": ["看朝向 → 站非 cone"] },
+                { "name": "Sisterly Burst 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
             ]}]
         }
     ]

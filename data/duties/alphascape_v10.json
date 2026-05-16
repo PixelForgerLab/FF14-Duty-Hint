@@ -8,14 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": ["1）Chaos 混沌：場上多重 AoE + 元素機制。", "2）Element Cycle 元素輪轉。", "3）Tankbuster + 全屏。"],
-    "notes": "Omega Normal O9 (Lv 70)。",
+    "quality": "good",
+    "mnemonic": [
+        "1）O9N Chaos = 看開場招判斷元素序。",
+        "2）Damning Edict 開 = Inferno+Cyclone 先；Implosion 開 = Tsunami+Earthquake 先。",
+        "3）Damning Edict 無預警 180° 前 cleave，立刻到 boss 後。",
+        "4）Chaotic Dispersion MT buster。",
+        "5）Fiendish Orbs 球 tether 玩家 → 拉到場邊。"
+    ],
+    "notes": "SB 4.4 Omega 第 9 層 (Lv 70)。Chaos = O9N (FF1 致敬)。",
     "bosses": [
-        { "name": "Chaos", "nameEn": "Chaos", "mnemonic": ["混沌 + 元素"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Element Cycle", "type": "aoe", "description": "場上元素 AoE 輪轉。", "tips": ["跟元素移動"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-        ]}]}
+        {
+            "name": "渾沌",
+            "nameEn": "Chaos",
+            "phases": [{ "name": "Chaos", "mechanics": [
+                { "name": "Implosion 系列", "type": "aoe", "description": "Latitudinal 先側 90° / Longitudinal 先前後 → 後爆對側。", "tips": ["看 cast 名"] },
+                { "name": "Damning Edict", "type": "aoe", "description": "180° 前 cleave 無預警。", "tips": ["跑 boss 後"] },
+                { "name": "Chaotic Dispersion", "type": "tankbuster", "description": "MT 強 buster + Physical Vuln Up。", "tips": [{ "text": "MT/OT 換手", "role": "tank" }] },
+                { "name": "Fiendish Orbs", "type": "other", "description": "2 球 tether 玩家 → 遛到場邊。", "tips": ["兩中標各遛到角"] },
+                { "name": "元素 Phase 機制", "type": "other", "description": "Inferno/Cyclone 或 Tsunami/Earthquake 元素機制。", "tips": ["看 phase → 對應屬性"] }
+            ]}]
+        }
     ]
 }

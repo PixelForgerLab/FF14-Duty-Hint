@@ -1,47 +1,46 @@
 {
     "id": "puppets_bunker",
-    "name": "傀儡的紛爭",
+    "name": "傀儡碉堡",
     "nameEn": "The Puppets' Bunker",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "alliance",
+    "type": "raid",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）B1 Aegis Unit：盾 + 多重 cleave。",
-        "2）B2 Heavy Artillery：場上多重砲擊。",
-        "3）B3 ShM (Shadowmaker)：劍 + NieR 風格機制。"
+        "1）B1 Aegis Unit = Magitek 機甲 + line AoE + 散標。",
+        "2）B2 Heavy Artillery Magitek Unit = 大砲 line + 召小機甲 + 全屏。",
+        "3）B3 Compound Aegis (大型機甲) = 多 cone + 召分身 + 末段大全屏。"
     ],
-    "notes": "ShB 5.3 NieR 系列 alliance raid (Lv 80)。Yoko Taro 合作第 2 部。",
+    "notes": "ShB 5.25 NieR alliance raid Pt 2 (Lv 80)。NieR Automata crossover。",
     "bosses": [
         {
             "name": "Aegis Unit",
             "nameEn": "Aegis Unit",
-            "mnemonic": ["盾 + cleave"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Cleave AoE", "type": "aoe", "description": "多重前方扇形 AoE。", "tips": ["閃面前"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Magitek Ray", "type": "aoe", "description": "Boss line 雷射 AoE。", "tips": ["側步閃"] },
+                { "name": "Burst Cone", "type": "aoe", "description": "Boss cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Magitek Missile 散標", "type": "spread", "description": "全員下 AoE 圈散。", "tips": ["散到場周"] }
             ]}]
         },
         {
-            "name": "Heavy Artillery",
-            "nameEn": "Heavy Artillery",
-            "mnemonic": ["砲擊 + 直線"],
+            "name": "Heavy Artillery Magitek Unit",
+            "nameEn": "Heavy Artillery Magitek Unit",
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Magitek 砲擊", "type": "aoe", "description": "場上多重直線砲擊。", "tips": ["閃直線"] },
-                { "name": "場上散開 AoE", "type": "spread", "description": "散開 AoE。", "tips": ["散開"] }
+                { "name": "Cannon line", "type": "aoe", "description": "Boss 大砲 line AoE 穿場。", "tips": ["走縫避"] },
+                { "name": "Summon Add", "type": "other", "description": "召小機甲 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
+                { "name": "Artillery Burst", "type": "raidwide", "description": "全屏 + 場上散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "Shadowmaker",
-            "nameEn": "Shadowmaker",
-            "mnemonic": ["NieR 風格劍機制"],
+            "name": "Compound Aegis",
+            "nameEn": "Compound Aegis",
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "劍 AoE 連發", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Multi Cone", "type": "aoe", "description": "Boss 多 cone AoE 連發。", "tips": ["看朝向 → 連續移位"] },
+                { "name": "Summon Shadow Bits", "type": "other", "description": "召分身 + 連 line AoE。", "tips": ["看本體 + 避分身"] },
+                { "name": "Imperial Burst", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] }
             ]}]
         }
     ]
