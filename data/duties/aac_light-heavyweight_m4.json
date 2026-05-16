@@ -1,117 +1,142 @@
 {
-    "id": "aac_light-heavyweight_m4",
-    "name": "阿卡狄亞登天鬥技場 輕量級4",
-    "nameEn": "AAC Light-heavyweight M4",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）側方電火花：舉手側半場 cleave。",
-        "2）奔雷炮：場北合成大炮 → 5 連 + 1 次破壞場地。",
-        "3）三/四/五重加農炮：boss 前後炮管順序 + 數次狡詭加農炮。",
-        "4）魔女回翔：5 道翅膀雷射直線 + 雷線爆炸 + 雷炸。",
-        "5）獵殺女巫：螺旋大量 AoE。",
-        "6）最終：狡詭聚能加農炮 10 連分擔。"
-    ],
-    "notes": "DT 7.0 AAC 輕量級 4 Normal (Lv 100)。Wicked Thunder (狡雷) 簡化版機制。AAC LHW 終戰。雙形態：先 boss 機制 + 最終階段聚能加農炮分擔。",
-    "bosses": [
-        {
-            "name": "狡雷",
-            "nameEn": "Wicked Thunder",
-            "mnemonic": [
-                "宙斯之怒 = 全屏；側方電火花 = 舉手側半場。",
-                "奔雷炮：5 連半場 AoE + 場地破壞。",
-                "三/四/五重加農炮：看炮管順序預判前後。",
-                "魔女回翔：5 道翅膀雷射 + 留雷線爆炸。",
-                "boss < 20% HP 直接跳到最終狡詭聚能加農炮階段。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "宙斯之怒 / Wrath of Zeus",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "側方電火花 / Sidewise Spark",
-                            "type": "aoe",
-                            "description": "Boss 舉手 → 該側半場 AoE + 60s 受傷加重。",
-                            "tips": ["看舉手側預判半場"]
-                        },
-                        {
-                            "name": "黑色安息日 / Black Sabbath",
-                            "type": "aoe",
-                            "description": "場中召喚狡雷幻影 → 放 1 次側方電火花。",
-                            "tips": ["看幻影位置預判"]
-                        },
-                        {
-                            "name": "狡詭搖盪 / Sidewise Spark",
-                            "type": "tankbuster",
-                            "description": "對 1 仇高傷直線 AoE。",
-                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "奔雷炮 / Wicked Bolt",
-                            "type": "aoe",
-                            "description": "Boss 場北合成大炮 → 對隨機左/右 3/4 半場 5 連 → 短暫停歇 1 次破壞場地。",
-                            "tips": ["跑對側 1/4 + 破壞區外"]
-                        },
-                        {
-                            "name": "三/四/五重加農炮 / Cannon Combo",
-                            "type": "aoe",
-                            "description": "Boss 移剩餘場地中央，前後炮管按順序顯示 → 對應方向放數次狡詭加農炮 + 15s 持續傷害。四重加：+ 雷炸隨機腳下圓 AoE。五重加：+ 雷暴散開圓 + 雷耐降低。",
-                            "tips": [
-                                "看炮管順序預判前/後",
-                                "雷炸/雷暴散開 clock 位"
-                            ]
-                        },
-                        {
-                            "name": "狡詭落雷 / Sparking Salvo",
-                            "type": "stack",
-                            "description": "點名玩家 5 連分擔 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "魔女回翔 / Witchgleam",
-                            "type": "aoe",
-                            "description": "Boss 場北張翅 → 5 道翅膀雷射直線 → 留下雷線。雷線依序爆炸 + 多輪雷炸隨機玩家圓。第二次有分身一起發動。",
-                            "tips": [
-                                "閃 5 道雷射",
-                                "預判雷線爆炸順序",
-                                "雷炸散開"
-                            ]
-                        },
-                        {
-                            "name": "獵殺女巫 / Witch Hunt",
-                            "type": "aoe",
-                            "description": "螺旋順序大量 AoE 預兆 + 60s 受傷加重。",
-                            "tips": ["跟著螺旋方向移動"]
-                        },
-                        {
-                            "name": "碎魂躍 / Soulshatter",
-                            "type": "stack",
-                            "description": "點名分擔高傷 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "狡詭聚能加農炮 / Wicked Cannon",
-                            "type": "stack",
-                            "description": "Boss <20% HP 進入此階段。對前方場地 10 次分擔直線 AoE，期間穿插 2 次雷炸。重複到 boss 死。",
-                            "tips": [
-                                { "text": "全員前方疊接 + 連補", "role": "healer" },
-                                "閃雷炸圓 AoE"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "aac_light-heavyweight_m4",
+    "name":  "阿卡狄亞登天鬥技場 輕量級4",
+    "nameEn":  "AAC Light-heavyweight M4",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）側方電火花：舉手側半場 cleave。",
+                     "2）奔雷炮：場北合成大炮 → 5 連 + 1 次破壞場地。",
+                     "3）三/四/五重加農炮：boss 前後炮管順序 + 數次狡詭加農炮。",
+                     "4）魔女回翔：5 道翅膀雷射直線 + 雷線爆炸 + 雷炸。",
+                     "5）獵殺女巫：螺旋大量 AoE。",
+                     "6）最終：狡詭聚能加農炮 10 連分擔。"
+                 ],
+    "notes":  "DT 7.0 AAC 輕量級 4 Normal (Lv 100)。Wicked Thunder (狡雷) 簡化版機制。AAC LHW 終戰。雙形態：先 boss 機制 + 最終階段聚能加農炮分擔。",
+    "bosses":  [
+                   {
+                       "name":  "狡雷",
+                       "nameEn":  "Wicked Thunder",
+                       "mnemonic":  [
+                                        "宙斯之怒 = 全屏；側方電火花 = 舉手側半場。",
+                                        "奔雷炮：5 連半場 AoE + 場地破壞。",
+                                        "三/四/五重加農炮：看炮管順序預判前後。",
+                                        "魔女回翔：5 道翅膀雷射 + 留雷線爆炸。",
+                                        "boss \u003c 20% HP 直接跳到最終狡詭聚能加農炮階段。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "宙斯之怒 / Wrath of Zeus",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "側方電火花 / Sidewise Spark",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 舉手 → 該側半場 AoE + 60s 受傷加重。",
+                                                                "tips":  [
+                                                                             "看舉手側預判半場"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑色安息日 / Black Sabbath",
+                                                                "type":  "aoe",
+                                                                "description":  "場中召喚狡雷幻影 → 放 1 次側方電火花。",
+                                                                "tips":  [
+                                                                             "看幻影位置預判"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭搖盪 / Sidewise Spark",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇高傷直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "奔雷炮 / Wicked Bolt",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 場北合成大炮 → 對隨機左/右 3/4 半場 5 連 → 短暫停歇 1 次破壞場地。",
+                                                                "tips":  [
+                                                                             "跑對側 1/4 + 破壞區外"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "三/四/五重加農炮 / Cannon Combo",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 移剩餘場地中央，前後炮管按順序顯示 → 對應方向放數次狡詭加農炮 + 15s 持續傷害。四重加：+ 雷炸隨機腳下圓 AoE。五重加：+ 雷暴散開圓 + 雷耐降低。",
+                                                                "tips":  [
+                                                                             "看炮管順序預判前/後",
+                                                                             "雷炸/雷暴散開 clock 位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭落雷 / Sparking Salvo",
+                                                                "type":  "stack",
+                                                                "description":  "點名玩家 5 連分擔 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "魔女回翔 / Witchgleam",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 場北張翅 → 5 道翅膀雷射直線 → 留下雷線。雷線依序爆炸 + 多輪雷炸隨機玩家圓。第二次有分身一起發動。",
+                                                                "tips":  [
+                                                                             "閃 5 道雷射",
+                                                                             "預判雷線爆炸順序",
+                                                                             "雷炸散開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "獵殺女巫 / Witch Hunt",
+                                                                "type":  "aoe",
+                                                                "description":  "螺旋順序大量 AoE 預兆 + 60s 受傷加重。",
+                                                                "tips":  [
+                                                                             "跟著螺旋方向移動"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "碎魂躍 / Soulshatter",
+                                                                "type":  "stack",
+                                                                "description":  "點名分擔高傷 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭聚能加農炮 / Wicked Cannon",
+                                                                "type":  "stack",
+                                                                "description":  "Boss \u003c20% HP 進入此階段。對前方場地 10 次分擔直線 AoE，期間穿插 2 次雷炸。重複到 boss 死。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員前方疊接 + 連補",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "閃雷炸圓 AoE"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

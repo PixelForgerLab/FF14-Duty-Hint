@@ -1,265 +1,296 @@
 {
-    "id": "aac_light-heavyweight_m4_savage",
-    "name": "阿卡狄亞零式登天鬥技場 輕量級4",
-    "nameEn": "AAC Light-heavyweight M4 (Savage)",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P1 一般：宙斯之怒全屏 + 魔女狩獵 (最近/最遠 4 人圓 AoE)。",
-        "2）電閃環/圓：環 = 貼近、圓 = 拉遠；近遠順序看 boss 頭頂標記。",
-        "3）雷轉質展開 1/2：場地分格 + 蓄雷裝置充電次數 (2 次 II / 3 次 III / 4 次大爆炸)。",
-        "4）奔雷炮 + 離子簇：正/負電子 debuff，吃對應顏色電流調整層數，0 層秒殺。",
-        "5）P2 變身：剣雨 + 黒色安息日 (日落/午夜/日出) + 屬性轉換 (尖尾溅/焰)。",
-        "6）狂暴：狡雷一閃全屏秒殺。"
-    ],
-    "notes": "DT 7.05 AAC 輕量級 4 零式 (M4S, Lv 100, ilvl 700)。Wicked Thunder (狡雷 / Eutrope) Savage，AAC LHW 終戰。雙形態：P1 雷屬性機制 + P2 蛇形變身雷火混合。核心：管理蓄雷裝置充能次數 + 正/負電子層數平衡 + 魔女狩獵近遠判定。",
-    "bosses": [
-        {
-            "name": "狡雷 (尤特蘿普)",
-            "nameEn": "Wicked Thunder (Eutrope)",
-            "mnemonic": [
-                "魔女狩獵：頭頂「近」 = 最近 4 人；「遠」 = 最遠 4 人。",
-                "電閃環/圓：環 = 跑遠安全；圓 = 貼近安全；順序看 4 個標記。",
-                "蓄雷裝置：充電 2 次 = II (3x3 AoE)；3 次 = III (5x5)；4 次 = 大爆炸全屏。",
-                "正/負電子：吃對應顏色電流增 1 層；吃相反顏色減 1 層；0 層 = 秒殺。",
-                "離子簇 debuff：圓雷/環雷/遠雷/近雷/過量蓄雷 5 種，依編號處理。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 雷屬性形態",
-                    "mechanics": [
-                        {
-                            "name": "宙斯之怒 / Wrath of Zeus",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "魔女回翔 + 雷轉質射線",
-                            "type": "aoe",
-                            "description": "Boss 移 12 點，場西召喚 4 蓄電槍直線雷射。Boss 移中央，東 4 + 北 1 蓄電槍。",
-                            "tips": ["閃直線預警線", "蓄電槍位置記住下次別站"]
-                        },
-                        {
-                            "name": "驚電魔女狩獵 / Witchgleam",
-                            "type": "spread",
-                            "description": "對 4 名支援職或 4 DPS 放圓 AoE + 8s 叉形閃電 + 12s 物理受傷加重。倒數結束以該玩家為中心圓 AoE。",
-                            "tips": [
-                                "被點者拉外圍散開",
-                                "等叉形閃電結算後再回中央"
-                            ]
-                        },
-                        {
-                            "name": "環圓 / 圓環式魔女狩獵 / Witch Hunt",
-                            "type": "aoe",
-                            "description": "Boss 連 4 次電閃環/電閃圓 (donut/圓)，頭頂 4 標記近/遠決定哪 2 人吃魔女狩獵圓。順序「近遠近遠」或「遠近遠近」。",
-                            "tips": [
-                                "看頭頂標記順序",
-                                "近 → 最近 2 人；遠 → 最遠 2 人",
-                                "同時注意環/圓貼近 vs 拉遠"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "雷轉質展開 (Conductor Stage 1)",
-                    "mechanics": [
-                        {
-                            "name": "雷轉質展開 / Conductor Setup",
-                            "type": "other",
-                            "description": "場地 4 角召喚 4 個雷轉質礦組。",
-                            "tips": ["記住 4 礦組位置"]
-                        },
-                        {
-                            "name": "輝光電火花 / Conduction Point",
-                            "type": "aoe",
-                            "description": "Boss 對西東各 1 個礦組放直線充能 3 次。",
-                            "tips": ["閃直線同時注意充能次數差異"]
-                        },
-                        {
-                            "name": "幻想交響曲 / Symphony",
-                            "type": "other",
-                            "description": "Boss 放側方電火花 (半場) + 八雷星 (全員圓) 或 四雷星 (4 人分擔圓)，同時礦組依充能次數放電火花 (1 格) 或電火花 II (3x3 格)。",
-                            "tips": [
-                                "看 boss 手臂發光側 → 半場",
-                                "看雷球數量 (8 個 vs 4 個) 散開 vs 分擔"
-                            ]
-                        },
-                        {
-                            "name": "狡詭搖盪 / Sidewise Spark",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 2 次高傷直線 AoE。",
-                            "tips": [
-                                { "text": "兩 T 換手吃 + 開減傷", "role": "tank" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "雷轉質展開 (Conductor Stage 2) + 奔雷炮",
-                    "mechanics": [
-                        {
-                            "name": "雷轉質展開 (2nd) / Conductor Stage 2",
-                            "type": "other",
-                            "description": "場地分 5x5 格。4 人 22s + 4 人 42s 蓄雷裝置 debuff。Boss 對 4 名玩家充電 4 次（按組 22s/42s 不同次數）。後續 電牢籠 + 側方電火花 + 八/四雷星 依序組合。",
-                            "tips": [
-                                "看自身 debuff 時間 (22s 或 42s)",
-                                "計算自己會被充電幾次 (避免到 4 次大爆炸)",
-                                "電牢籠 (格子預警) 必須踩或閃看是否需要充能"
-                            ]
-                        },
-                        {
-                            "name": "電火花 II/III/大爆炸",
-                            "type": "other",
-                            "description": "充能 2 次 = 電火花 II (3x3 格)；3 次 = 電火花 III (5x5)；4 次 = 大爆炸全屏 + 雷耐降低。",
-                            "tips": [
-                                "控制充能次數到 2 或 3",
-                                "結算時走到指定格放 AoE",
-                                "不被誤充到 4 次"
-                            ]
-                        },
-                        {
-                            "name": "狡詭落雷 / Sparking Salvo",
-                            "type": "stack",
-                            "description": "點 1 名補職 5 次可分擔圓 AoE。",
-                            "tips": [
-                                { "text": "補職帶 4 人分擔", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "奔雷炮 / Wicked Bolt",
-                            "type": "aoe",
-                            "description": "Boss 移正北，對隨機左右 3 格寬場地 5 次奔雷炮 + 1 次破壞地面。",
-                            "tips": ["閃 3 格寬直線", "被破壞的地面不能站"]
-                        },
-                        {
-                            "name": "離子簇 + 電子流 / Ion Cluster + Electrope",
-                            "type": "other",
-                            "description": "4 人 (1T+1H+2D) 62s 正電子 3 層 + 4 人 62s 負電子 3 層。Boss 對兩側放黃色 (正) + 藍色 (負) 直線分擔 AoE × 3 次。吃對應顏色 +1 層；吃相反 -1 層；最前位置 = 高傷。0 層秒殺。",
-                            "tips": [
-                                "正電子玩家吃**藍色** (負電子流) 降層；吃黃色升層",
-                                "負電子玩家吃**黃色** (正電子流) 降層；吃藍色升層",
-                                "**絕對不能讓層數歸 0**",
-                                "額外 debuff：圓雷/環雷/遠雷/近雷/過量蓄雷依時間結算"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "雷轉質移植 + 過場",
-                    "mechanics": [
-                        {
-                            "name": "雷轉質移植 / Conductor Final",
-                            "type": "aoe",
-                            "description": "7 連雷電力場 (8 個 30° 扇形旋轉，下次中心覆蓋上次安全區) + 指向雷 (4 人圓 AoE) + 驚電裂隙 (對指向雷者直線)。重複 2 輪。",
-                            "tips": [
-                                "跟著扇形旋轉移動",
-                                "指向雷被點者 → 走外圍誘導後驚電裂隙"
-                            ]
-                        },
-                        {
-                            "name": "聚雷加農炮 / Wicked Cannon",
-                            "type": "other",
-                            "description": "全屏 AoE + 全員擊飛 → Boss 變第二形態，新場地。",
-                            "tips": ["過場演出，轉場到 P2"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 蛇形變身",
-                    "mechanics": [
-                        {
-                            "name": "交叉亂尾擊 / Cross Tail Switch",
-                            "type": "raidwide",
-                            "description": "連 9 次全屏高傷 AoE，最後一次間隔較長。",
-                            "tips": [
-                                { "text": "全員減傷 + LB3", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "狡詭特技 / Wicked Special",
-                            "type": "aoe",
-                            "description": "Boss 動作判定：火焰刀 = 中央 2 格直線；觸手紫電 = 兩側各 1.5 格直線。",
-                            "tips": ["看動作判斷直線位置"]
-                        },
-                        {
-                            "name": "芥末爆彈 / Mustard Bomb",
-                            "type": "other",
-                            "description": "連線 2 人，9s 芥末爆彈 + 11s 火耐降低。倒數結束圓 AoE，可被其他玩家接取轉化為芥末抗性。",
-                            "tips": [
-                                "連線者帶到場邊",
-                                "其他人接取避免疊 debuff"
-                            ]
-                        },
-                        {
-                            "name": "屬性轉換 + 尖尾刺",
-                            "type": "aoe",
-                            "description": "兩條觸手按順序發光附加水/火屬性。水 = 尖尾濺 (擊退) × 2；火 = 尖尾焰 (大圓 AoE) × 2。",
-                            "tips": [
-                                "看觸手發光順序 + 屬性",
-                                "水：預判擊退方向；火：跑遠"
-                            ]
-                        },
-                        {
-                            "name": "黑色安息日的日落 / Sunset",
-                            "type": "aoe",
-                            "description": "青雷全屏 + 場地變圓區 (外圍即死)。4 正點召 4 幻影，相鄰 2 個更快落下放半場 AoE。期間玩家位置生圓 AoE 預兆。",
-                            "tips": [
-                                "預判 2 個快幻影朝向找半場安全",
-                                "全員散開避免圓 AoE 重疊"
-                            ]
-                        },
-                        {
-                            "name": "黑色安息日的午夜 / Midnight",
-                            "type": "aoe",
-                            "description": "8 方位 8 幻影，正點或斜點 4 個更快落。同組 4 幻影隨機放 狡詭加農炮 (直線) 或 電閃環 (donut)。Boss 同時放集散/散集式衝擊炮 (狡詭核爆 4 人分擔 + 狡詭電火花 8 人散開)。",
-                            "tips": [
-                                "看幻影武器/翅膀判定直線 vs donut",
-                                "順序：集散 = 核爆先 → 電火花；散集 = 電火花先 → 核爆"
-                            ]
-                        },
-                        {
-                            "name": "劍雨 / Sword Rain",
-                            "type": "other",
-                            "description": "Boss 火焰刀直線破壞中央 + 場兩側 4 塔 × 2 組。判定後留下 8 把蛇劍。雷光鏈連 3 蛇劍 → 兩側傳 4 次 → 圓 AoE 連發 + 尖尾刺。",
-                            "tips": [
-                                "8 人各踩 1 塔",
-                                "傳鏈時跟著順序移動"
-                            ]
-                        },
-                        {
-                            "name": "黑色安息日的日出 / Sunrise",
-                            "type": "other",
-                            "description": "青雷 + 場地變圓區。4 支援 + 4 DPS 賦予 23s/38s 正/負電子。6 幻影：4 斜點 2 黃 + 2 藍直線；2 東西 跳 2 人塔。重複 2 輪。",
-                            "tips": [
-                                "吃對應顏色電流維持層數",
-                                "2 人塔每塔 2 人踩 (避免缺人疊持續傷害)"
-                            ]
-                        },
-                        {
-                            "name": "劍舞 / Sword Dance",
-                            "type": "aoe",
-                            "description": "連 4 次全屏 + 場地剣気区域 → 擴大為直線爆炸。重複 3 次，每次前 3 斬位置固定，第 4 斬 3 種變體。",
-                            "tips": ["記住直線爆炸方向預判"]
-                        },
-                        {
-                            "name": "狡雷 (Enrage)",
-                            "type": "raidwide",
-                            "description": "狂暴技強制秒殺全員。",
-                            "tips": [
-                                { "text": "末段 DPS check", "role": "dps" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "aac_light-heavyweight_m4_savage",
+    "name":  "阿卡狄亞零式登天鬥技場 輕量級4",
+    "nameEn":  "AAC Light-heavyweight M4 (Savage)",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）P1 一般：宙斯之怒全屏 + 魔女狩獵 (最近/最遠 4 人圓 AoE)。",
+                     "2）電閃環/圓：環 = 貼近、圓 = 拉遠；近遠順序看 boss 頭頂標記。",
+                     "3）雷轉質展開 1/2：場地分格 + 蓄雷裝置充電次數 (2 次 II / 3 次 III / 4 次大爆炸)。",
+                     "4）奔雷炮 + 離子簇：正/負電子 debuff，吃對應顏色電流調整層數，0 層秒殺。",
+                     "5）P2 變身：剣雨 + 黒色安息日 (日落/午夜/日出) + 屬性轉換 (尖尾溅/焰)。",
+                     "6）狂暴：狡雷一閃全屏秒殺。"
+                 ],
+    "notes":  "DT 7.05 AAC 輕量級 4 零式 (M4S, Lv 100, ilvl 700)。Wicked Thunder (狡雷 / Eutrope) Savage，AAC LHW 終戰。雙形態：P1 雷屬性機制 + P2 蛇形變身雷火混合。核心：管理蓄雷裝置充能次數 + 正/負電子層數平衡 + 魔女狩獵近遠判定。",
+    "bosses":  [
+                   {
+                       "name":  "狡雷 (尤特蘿普)",
+                       "nameEn":  "Wicked Thunder (Eutrope)",
+                       "mnemonic":  [
+                                        "魔女狩獵：頭頂「近」 = 最近 4 人；「遠」 = 最遠 4 人。",
+                                        "電閃環/圓：環 = 跑遠安全；圓 = 貼近安全；順序看 4 個標記。",
+                                        "蓄雷裝置：充電 2 次 = II (3x3 AoE)；3 次 = III (5x5)；4 次 = 大爆炸全屏。",
+                                        "正/負電子：吃對應顏色電流增 1 層；吃相反顏色減 1 層；0 層 = 秒殺。",
+                                        "離子簇 debuff：圓雷/環雷/遠雷/近雷/過量蓄雷 5 種，依編號處理。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 雷屬性形態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "宙斯之怒 / Wrath of Zeus",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "魔女回翔 + 雷轉質射線",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 移 12 點，場西召喚 4 蓄電槍直線雷射。Boss 移中央，東 4 + 北 1 蓄電槍。",
+                                                                "tips":  [
+                                                                             "閃直線預警線",
+                                                                             "蓄電槍位置記住下次別站"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "驚電魔女狩獵 / Witchgleam",
+                                                                "type":  "spread",
+                                                                "description":  "對 4 名支援職或 4 DPS 放圓 AoE + 8s 叉形閃電 + 12s 物理受傷加重。倒數結束以該玩家為中心圓 AoE。",
+                                                                "tips":  [
+                                                                             "被點者拉外圍散開",
+                                                                             "等叉形閃電結算後再回中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "環圓 / 圓環式魔女狩獵 / Witch Hunt",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 連 4 次電閃環/電閃圓 (donut/圓)，頭頂 4 標記近/遠決定哪 2 人吃魔女狩獵圓。順序「近遠近遠」或「遠近遠近」。",
+                                                                "tips":  [
+                                                                             "看頭頂標記順序",
+                                                                             "近 → 最近 2 人；遠 → 最遠 2 人",
+                                                                             "同時注意環/圓貼近 vs 拉遠"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "雷轉質展開 (Conductor Stage 1)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "雷轉質展開 / Conductor Setup",
+                                                                "type":  "other",
+                                                                "description":  "場地 4 角召喚 4 個雷轉質礦組。",
+                                                                "tips":  [
+                                                                             "記住 4 礦組位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "輝光電火花 / Conduction Point",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 對西東各 1 個礦組放直線充能 3 次。",
+                                                                "tips":  [
+                                                                             "閃直線同時注意充能次數差異"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "幻想交響曲 / Symphony",
+                                                                "type":  "other",
+                                                                "description":  "Boss 放側方電火花 (半場) + 八雷星 (全員圓) 或 四雷星 (4 人分擔圓)，同時礦組依充能次數放電火花 (1 格) 或電火花 II (3x3 格)。",
+                                                                "tips":  [
+                                                                             "看 boss 手臂發光側 → 半場",
+                                                                             "看雷球數量 (8 個 vs 4 個) 散開 vs 分擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭搖盪 / Sidewise Spark",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇 2 次高傷直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 換手吃 + 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "雷轉質展開 (Conductor Stage 2) + 奔雷炮",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "雷轉質展開 (2nd) / Conductor Stage 2",
+                                                                "type":  "other",
+                                                                "description":  "場地分 5x5 格。4 人 22s + 4 人 42s 蓄雷裝置 debuff。Boss 對 4 名玩家充電 4 次（按組 22s/42s 不同次數）。後續 電牢籠 + 側方電火花 + 八/四雷星 依序組合。",
+                                                                "tips":  [
+                                                                             "看自身 debuff 時間 (22s 或 42s)",
+                                                                             "計算自己會被充電幾次 (避免到 4 次大爆炸)",
+                                                                             "電牢籠 (格子預警) 必須踩或閃看是否需要充能"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "電火花 II/III/大爆炸",
+                                                                "type":  "other",
+                                                                "description":  "充能 2 次 = 電火花 II (3x3 格)；3 次 = 電火花 III (5x5)；4 次 = 大爆炸全屏 + 雷耐降低。",
+                                                                "tips":  [
+                                                                             "控制充能次數到 2 或 3",
+                                                                             "結算時走到指定格放 AoE",
+                                                                             "不被誤充到 4 次"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭落雷 / Sparking Salvo",
+                                                                "type":  "stack",
+                                                                "description":  "點 1 名補職 5 次可分擔圓 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補職帶 4 人分擔",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "奔雷炮 / Wicked Bolt",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 移正北，對隨機左右 3 格寬場地 5 次奔雷炮 + 1 次破壞地面。",
+                                                                "tips":  [
+                                                                             "閃 3 格寬直線",
+                                                                             "被破壞的地面不能站"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "離子簇 + 電子流 / Ion Cluster + Electrope",
+                                                                "type":  "other",
+                                                                "description":  "4 人 (1T+1H+2D) 62s 正電子 3 層 + 4 人 62s 負電子 3 層。Boss 對兩側放黃色 (正) + 藍色 (負) 直線分擔 AoE × 3 次。吃對應顏色 +1 層；吃相反 -1 層；最前位置 = 高傷。0 層秒殺。",
+                                                                "tips":  [
+                                                                             "正電子玩家吃**藍色** (負電子流) 降層；吃黃色升層",
+                                                                             "負電子玩家吃**黃色** (正電子流) 降層；吃藍色升層",
+                                                                             "**絕對不能讓層數歸 0**",
+                                                                             "額外 debuff：圓雷/環雷/遠雷/近雷/過量蓄雷依時間結算"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "雷轉質移植 + 過場",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "雷轉質移植 / Conductor Final",
+                                                                "type":  "aoe",
+                                                                "description":  "7 連雷電力場 (8 個 30° 扇形旋轉，下次中心覆蓋上次安全區) + 指向雷 (4 人圓 AoE) + 驚電裂隙 (對指向雷者直線)。重複 2 輪。",
+                                                                "tips":  [
+                                                                             "跟著扇形旋轉移動",
+                                                                             "指向雷被點者 → 走外圍誘導後驚電裂隙"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "聚雷加農炮 / Wicked Cannon",
+                                                                "type":  "other",
+                                                                "description":  "全屏 AoE + 全員擊飛 → Boss 變第二形態，新場地。",
+                                                                "tips":  [
+                                                                             "過場演出，轉場到 P2"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 蛇形變身",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "交叉亂尾擊 / Cross Tail Switch",
+                                                                "type":  "raidwide",
+                                                                "description":  "連 9 次全屏高傷 AoE，最後一次間隔較長。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷 + LB3",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡詭特技 / Wicked Special",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 動作判定：火焰刀 = 中央 2 格直線；觸手紫電 = 兩側各 1.5 格直線。",
+                                                                "tips":  [
+                                                                             "看動作判斷直線位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "芥末爆彈 / Mustard Bomb",
+                                                                "type":  "other",
+                                                                "description":  "連線 2 人，9s 芥末爆彈 + 11s 火耐降低。倒數結束圓 AoE，可被其他玩家接取轉化為芥末抗性。",
+                                                                "tips":  [
+                                                                             "連線者帶到場邊",
+                                                                             "其他人接取避免疊 debuff"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "屬性轉換 + 尖尾刺",
+                                                                "type":  "aoe",
+                                                                "description":  "兩條觸手按順序發光附加水/火屬性。水 = 尖尾濺 (擊退) × 2；火 = 尖尾焰 (大圓 AoE) × 2。",
+                                                                "tips":  [
+                                                                             "看觸手發光順序 + 屬性",
+                                                                             "水：預判擊退方向；火：跑遠"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑色安息日的日落 / Sunset",
+                                                                "type":  "aoe",
+                                                                "description":  "青雷全屏 + 場地變圓區 (外圍即死)。4 正點召 4 幻影，相鄰 2 個更快落下放半場 AoE。期間玩家位置生圓 AoE 預兆。",
+                                                                "tips":  [
+                                                                             "預判 2 個快幻影朝向找半場安全",
+                                                                             "全員散開避免圓 AoE 重疊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑色安息日的午夜 / Midnight",
+                                                                "type":  "aoe",
+                                                                "description":  "8 方位 8 幻影，正點或斜點 4 個更快落。同組 4 幻影隨機放 狡詭加農炮 (直線) 或 電閃環 (donut)。Boss 同時放集散/散集式衝擊炮 (狡詭核爆 4 人分擔 + 狡詭電火花 8 人散開)。",
+                                                                "tips":  [
+                                                                             "看幻影武器/翅膀判定直線 vs donut",
+                                                                             "順序：集散 = 核爆先 → 電火花；散集 = 電火花先 → 核爆"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "劍雨 / Sword Rain",
+                                                                "type":  "other",
+                                                                "description":  "Boss 火焰刀直線破壞中央 + 場兩側 4 塔 × 2 組。判定後留下 8 把蛇劍。雷光鏈連 3 蛇劍 → 兩側傳 4 次 → 圓 AoE 連發 + 尖尾刺。",
+                                                                "tips":  [
+                                                                             "8 人各踩 1 塔",
+                                                                             "傳鏈時跟著順序移動"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "黑色安息日的日出 / Sunrise",
+                                                                "type":  "other",
+                                                                "description":  "青雷 + 場地變圓區。4 支援 + 4 DPS 賦予 23s/38s 正/負電子。6 幻影：4 斜點 2 黃 + 2 藍直線；2 東西 跳 2 人塔。重複 2 輪。",
+                                                                "tips":  [
+                                                                             "吃對應顏色電流維持層數",
+                                                                             "2 人塔每塔 2 人踩 (避免缺人疊持續傷害)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "劍舞 / Sword Dance",
+                                                                "type":  "aoe",
+                                                                "description":  "連 4 次全屏 + 場地剣気区域 → 擴大為直線爆炸。重複 3 次，每次前 3 斬位置固定，第 4 斬 3 種變體。",
+                                                                "tips":  [
+                                                                             "記住直線爆炸方向預判"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狡雷 (Enrage)",
+                                                                "type":  "raidwide",
+                                                                "description":  "狂暴技強制秒殺全員。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段 DPS check",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

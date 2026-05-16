@@ -1,226 +1,273 @@
 {
-    "id": "alexandria",
-    "name": "亞歷山德里亞",
-    "nameEn": "Alexandria",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 99,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Antivirus X：Immune Response 前/側後切換 + 5 個 plus/circle 節點按順序爆。",
-        "2）Amalgam：Disassembly 三角形 AoE + Centralized/Split Current 直線/雙線。",
-        "3）Eliminator (Sphene 衛兵)：Partition 半場 + 劍方向切換 + Subroutine 多 AoE 組合 + 雷電生成器 DPS 衝。"
-    ],
-    "notes": "DT 7.0 MSQ 終 dungeon (Lv 97-99)。位於亞歷山德里亞。3 boss：Antivirus X (反病毒) → Amalgam (融合體) → Eliminator (淘汰者，Sphene 衛兵)。Eliminator 為 7.0 MSQ 終戰 boss。",
-    "bosses": [
-        {
-            "name": "Antivirus X",
-            "nameEn": "Antivirus X",
-            "mnemonic": [
-                "Immune Response：前方扇形 → 側 / 後扇形切換。",
-                "5 節點 plus (十字) / circle (donut) 按 NW 或 NE 起連線順序爆。",
-                "後段：節點 + 2 次 Immune Response 交叉，預判順序。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Immune Response 免疫反應 (前)",
-                            "type": "aoe",
-                            "description": "前方寬扇形 AoE + 場邊危險區。",
-                            "tips": ["繞 boss 後或側", "遠離場邊"]
-                        },
-                        {
-                            "name": "Immune Response 免疫反應 (側/後)",
-                            "type": "aoe",
-                            "description": "側 + 後扇形 AoE (前方安全)。",
-                            "tips": ["跑到 boss 正前方"]
-                        },
-                        {
-                            "name": "Pathocross/Pathocircuit Purge 節點 AoE",
-                            "type": "aoe",
-                            "description": "5 個紫色節點 (4 cardinal + 4 intercardinal) 從 NW 或 NE 起連線預示順序。每節點 plus = 十字 AoE；circle = donut AoE。",
-                            "tips": [
-                                "看綠色標記判定 plus/circle",
-                                "預判最後一個節點是否與 Immune Response 重疊"
-                            ]
-                        },
-                        {
-                            "name": "Quarantine 隔離",
-                            "type": "stack",
-                            "description": "Disinfection tankbuster + Stack 隨機玩家。",
-                            "tips": [
-                                { "text": "T 拉外圍承接 tankbuster", "role": "tank" },
-                                "其他人疊接 stack"
-                            ]
-                        },
-                        {
-                            "name": "節點 + 雙 Immune Response 組合",
-                            "type": "aoe",
-                            "description": "順序：節點 1 → 節點 2 + Immune Response → 節點 3 → 節點 4 → 節點 5 → Immune Response。建議用 Sprint。",
-                            "tips": ["記住順序", "Sprint 開"]
-                        },
-                        {
-                            "name": "Cytolysis 細胞溶解",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Amalgam (融合體)",
-            "nameEn": "Amalgam",
-            "mnemonic": [
-                "Disassembly：分裂 + 三角形 AoE (預判半場)。",
-                "Centralized Current = 直線 (側面安全)；Split Current = 雙線 (中間安全)。",
-                "後段：三角 + 北方 3 電門線 + 散開標記同時。",
-                "Disassembly 後三組 baited 圓 AoE。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Electrowave 電波",
-                            "type": "raidwide",
-                            "description": "全體魔法 + 場邊危險 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 遠離邊", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Disassembly 分解",
-                            "type": "aoe",
-                            "description": "Boss 分裂為小節點 + 場地一半三角形 AoE 預兆。",
-                            "tips": ["閃三角形預警區"]
-                        },
-                        {
-                            "name": "Centralized Current 中央電流",
-                            "type": "aoe",
-                            "description": "Boss 朝向直線 AoE (側面安全)。",
-                            "tips": ["繞 boss 側面"]
-                        },
-                        {
-                            "name": "Split Current 分裂電流",
-                            "type": "aoe",
-                            "description": "Boss 兩側雙線 AoE (中間 + 後方安全)。",
-                            "tips": ["站 boss 正前 / 正後"]
-                        },
-                        {
-                            "name": "三角 + 北方電門線 + 散開",
-                            "type": "other",
-                            "description": "Disassembly 三角 + 北方 3 電門直線 AoE + 全員 Static Spark 散開標記。",
-                            "tips": [
-                                "預判三角 + 北方直線",
-                                "8 人 clock 散開"
-                            ]
-                        },
-                        {
-                            "name": "Amalgamight 融合體之力",
-                            "type": "tankbuster",
-                            "description": "物理 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Disassembly + Baited 圓 AoE",
-                            "type": "spread",
-                            "description": "Disassembly + 3 組玩家腳下 baited 圓 AoE + 三角線 + 散開。",
-                            "tips": ["散開誘導 baited", "預判三角"]
-                        },
-                        {
-                            "name": "Superbolt 超雷",
-                            "type": "stack",
-                            "description": "Stack 標記魔法 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Ternary Charge 三重充能",
-                            "type": "aoe",
-                            "description": "貼身 AoE + 兩個同心 donut AoE。",
-                            "tips": ["先跑遠 → 站第一 donut 安全圈"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Eliminator (淘汰者)",
-            "nameEn": "Eliminator",
-            "mnemonic": [
-                "Partition：劍發光 → 右半場 cleave；Reconfigured Partition → 左半場 cleave。",
-                "Subroutine：浮動爪 Elimination Claw 直線 + Reconfigured Partition 同時 → 2 角安全。",
-                "Subroutine：Elimbit 節點 donut + Partition → 中央半邊安全 → 散開 Electray (雷耐降低疊死)。",
-                "Subroutine 終局：6 個 Lightning Generator DPS 衝 + 期間躲 donut + 直線 + Light of Salvation 全員直線。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Disruption 擾亂",
-                            "type": "raidwide",
-                            "description": "全體魔法 + 場邊危險 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 遠離邊", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Partition 分割",
-                            "type": "aoe",
-                            "description": "劍發光 → 右半場 cleave。",
-                            "tips": ["跑左半場"]
-                        },
-                        {
-                            "name": "Reconfigured Partition 重配分割",
-                            "type": "aoe",
-                            "description": "劍切換 → 左半場 cleave。",
-                            "tips": ["跑右半場"]
-                        },
-                        {
-                            "name": "Subroutine 子程序 (爪 + 半場)",
-                            "type": "aoe",
-                            "description": "Elimination Claw 移西/東牆 → Terminate 直線 + Reconfigured Partition 同時 → 2 角安全。",
-                            "tips": ["找對角站"]
-                        },
-                        {
-                            "name": "Subroutine (節點 + 半場 + 散開)",
-                            "type": "other",
-                            "description": "Elimbit 北/南牆 → Halo of Destruction donut + Partition → 中央半邊安全 → 散開 Electray (雷耐疊死)。",
-                            "tips": [
-                                "找中央 + 半場安全交點",
-                                "**禁止散開重疊**"
-                            ]
-                        },
-                        {
-                            "name": "Overexposure 過度曝光",
-                            "type": "stack",
-                            "description": "直線 stack 隨機玩家。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Subroutine 終局 (Lightning Generator DPS)",
-                            "type": "other",
-                            "description": "Boss 不可選 + 召喚 6 Lightning Generator + Charge 表充能到 100 即團滅。期間躲 Elimbit donut + Elimination Claw 直線。後段 Light of Salvation 全員直線 → 疊接。",
-                            "tips": [
-                                { "text": "DPS 全力擊殺 Generator", "role": "dps" },
-                                "閃 donut + 直線",
-                                "Light of Salvation 全員疊接"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "alexandria",
+    "name":  "亞歷山德里亞",
+    "nameEn":  "Alexandria",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  99,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Antivirus X：Immune Response 前/側後切換 + 5 個 plus/circle 節點按順序爆。",
+                     "2）Amalgam：Disassembly 三角形 AoE + Centralized/Split Current 直線/雙線。",
+                     "3）Eliminator (Sphene 衛兵)：Partition 半場 + 劍方向切換 + Subroutine 多 AoE 組合 + 雷電生成器 DPS 衝。"
+                 ],
+    "notes":  "DT 7.0 MSQ 終 dungeon (Lv 97-99)。位於亞歷山德里亞。3 boss：Antivirus X (反病毒) → Amalgam (融合體) → Eliminator (淘汰者，Sphene 衛兵)。Eliminator 為 7.0 MSQ 終戰 boss。",
+    "bosses":  [
+                   {
+                       "name":  "Antivirus X",
+                       "nameEn":  "Antivirus X",
+                       "mnemonic":  [
+                                        "Immune Response：前方扇形 → 側 / 後扇形切換。",
+                                        "5 節點 plus (十字) / circle (donut) 按 NW 或 NE 起連線順序爆。",
+                                        "後段：節點 + 2 次 Immune Response 交叉，預判順序。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Immune Response 免疫反應 (前)",
+                                                                "type":  "aoe",
+                                                                "description":  "前方寬扇形 AoE + 場邊危險區。",
+                                                                "tips":  [
+                                                                             "繞 boss 後或側",
+                                                                             "遠離場邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Immune Response 免疫反應 (側/後)",
+                                                                "type":  "aoe",
+                                                                "description":  "側 + 後扇形 AoE (前方安全)。",
+                                                                "tips":  [
+                                                                             "跑到 boss 正前方"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Pathocross/Pathocircuit Purge 節點 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "5 個紫色節點 (4 cardinal + 4 intercardinal) 從 NW 或 NE 起連線預示順序。每節點 plus = 十字 AoE；circle = donut AoE。",
+                                                                "tips":  [
+                                                                             "看綠色標記判定 plus/circle",
+                                                                             "預判最後一個節點是否與 Immune Response 重疊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Quarantine 隔離",
+                                                                "type":  "stack",
+                                                                "description":  "Disinfection tankbuster + Stack 隨機玩家。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 拉外圍承接 tankbuster",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "其他人疊接 stack"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "節點 + 雙 Immune Response 組合",
+                                                                "type":  "aoe",
+                                                                "description":  "順序：節點 1 → 節點 2 + Immune Response → 節點 3 → 節點 4 → 節點 5 → Immune Response。建議用 Sprint。",
+                                                                "tips":  [
+                                                                             "記住順序",
+                                                                             "Sprint 開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cytolysis 細胞溶解",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Amalgam (融合體)",
+                       "nameEn":  "Amalgam",
+                       "mnemonic":  [
+                                        "Disassembly：分裂 + 三角形 AoE (預判半場)。",
+                                        "Centralized Current = 直線 (側面安全)；Split Current = 雙線 (中間安全)。",
+                                        "後段：三角 + 北方 3 電門線 + 散開標記同時。",
+                                        "Disassembly 後三組 baited 圓 AoE。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Electrowave 電波",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法 + 場邊危險 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 遠離邊",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Disassembly 分解",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 分裂為小節點 + 場地一半三角形 AoE 預兆。",
+                                                                "tips":  [
+                                                                             "閃三角形預警區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Centralized Current 中央電流",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 朝向直線 AoE (側面安全)。",
+                                                                "tips":  [
+                                                                             "繞 boss 側面"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Split Current 分裂電流",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 兩側雙線 AoE (中間 + 後方安全)。",
+                                                                "tips":  [
+                                                                             "站 boss 正前 / 正後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "三角 + 北方電門線 + 散開",
+                                                                "type":  "other",
+                                                                "description":  "Disassembly 三角 + 北方 3 電門直線 AoE + 全員 Static Spark 散開標記。",
+                                                                "tips":  [
+                                                                             "預判三角 + 北方直線",
+                                                                             "8 人 clock 散開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Amalgamight 融合體之力",
+                                                                "type":  "tankbuster",
+                                                                "description":  "物理 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Disassembly + Baited 圓 AoE",
+                                                                "type":  "spread",
+                                                                "description":  "Disassembly + 3 組玩家腳下 baited 圓 AoE + 三角線 + 散開。",
+                                                                "tips":  [
+                                                                             "散開誘導 baited",
+                                                                             "預判三角"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Superbolt 超雷",
+                                                                "type":  "stack",
+                                                                "description":  "Stack 標記魔法 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Ternary Charge 三重充能",
+                                                                "type":  "aoe",
+                                                                "description":  "貼身 AoE + 兩個同心 donut AoE。",
+                                                                "tips":  [
+                                                                             "先跑遠 → 站第一 donut 安全圈"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Eliminator (淘汰者)",
+                       "nameEn":  "Eliminator",
+                       "mnemonic":  [
+                                        "Partition：劍發光 → 右半場 cleave；Reconfigured Partition → 左半場 cleave。",
+                                        "Subroutine：浮動爪 Elimination Claw 直線 + Reconfigured Partition 同時 → 2 角安全。",
+                                        "Subroutine：Elimbit 節點 donut + Partition → 中央半邊安全 → 散開 Electray (雷耐降低疊死)。",
+                                        "Subroutine 終局：6 個 Lightning Generator DPS 衝 + 期間躲 donut + 直線 + Light of Salvation 全員直線。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Disruption 擾亂",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法 + 場邊危險 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 遠離邊",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Partition 分割",
+                                                                "type":  "aoe",
+                                                                "description":  "劍發光 → 右半場 cleave。",
+                                                                "tips":  [
+                                                                             "跑左半場"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Reconfigured Partition 重配分割",
+                                                                "type":  "aoe",
+                                                                "description":  "劍切換 → 左半場 cleave。",
+                                                                "tips":  [
+                                                                             "跑右半場"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Subroutine 子程序 (爪 + 半場)",
+                                                                "type":  "aoe",
+                                                                "description":  "Elimination Claw 移西/東牆 → Terminate 直線 + Reconfigured Partition 同時 → 2 角安全。",
+                                                                "tips":  [
+                                                                             "找對角站"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Subroutine (節點 + 半場 + 散開)",
+                                                                "type":  "other",
+                                                                "description":  "Elimbit 北/南牆 → Halo of Destruction donut + Partition → 中央半邊安全 → 散開 Electray (雷耐疊死)。",
+                                                                "tips":  [
+                                                                             "找中央 + 半場安全交點",
+                                                                             "**禁止散開重疊**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Overexposure 過度曝光",
+                                                                "type":  "stack",
+                                                                "description":  "直線 stack 隨機玩家。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Subroutine 終局 (Lightning Generator DPS)",
+                                                                "type":  "other",
+                                                                "description":  "Boss 不可選 + 召喚 6 Lightning Generator + Charge 表充能到 100 即團滅。期間躲 Elimbit donut + Elimination Claw 直線。後段 Light of Salvation 全員直線 → 疊接。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力擊殺 Generator",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "閃 donut + 直線",
+                                                                             "Light of Salvation 全員疊接"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

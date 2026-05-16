@@ -94,6 +94,8 @@ public partial class DutySelectionWindow : Window
             .OrderBy(d => d.Expansion ?? string.Empty, StringComparer.Ordinal)
             .ThenBy(d => GetTypeSortOrder(d.Type))
             .ThenBy(d => d.JobLevelSync ?? 0)
+            .ThenBy(d => GetBaseName(d.NameEn ?? d.Name ?? string.Empty), StringComparer.OrdinalIgnoreCase)
+            .ThenBy(d => GetDifficultyOrder(d.NameEn ?? d.Name ?? string.Empty))
             .ThenBy(d => d.NameEn ?? d.Name ?? string.Empty, StringComparer.OrdinalIgnoreCase)
             .ToList();
         DutyListBox.ItemsSource = filtered;
@@ -114,6 +116,38 @@ public partial class DutySelectionWindow : Window
             "ultimate" => 5,
             _ => 9
         };
+    }
+
+    /// <summary>取得副本基底名稱（移除 (Hard)、(Extreme)、(Savage) 等難度後綴與 ' - 蠻神' 後綴）。</summary>
+    private static string GetBaseName(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return string.Empty;
+        // 移除 " - <primal>" 後綴
+        var dashIdx = name.LastIndexOf(" - ", StringComparison.Ordinal);
+        var s = dashIdx > 0 ? name[..dashIdx] : name;
+        // 移除常見難度括號後綴
+        var suffixes = new[] { " (Hard)", " (Extreme)", " (Savage)", " (Ultimate)", " (殲滅戰)", " (殲殛戰)", " (困難)", " (零式)", " (絕境戰)" };
+        foreach (var suffix in suffixes)
+        {
+            if (s.EndsWith(suffix, StringComparison.OrdinalIgnoreCase))
+            {
+                s = s[..^suffix.Length];
+                break;
+            }
+        }
+        return s.Trim();
+    }
+
+    /// <summary>解析副本名稱的難度順序（normal < hard < extreme < savage < ultimate）。</summary>
+    private static int GetDifficultyOrder(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return 0;
+        var lower = name.ToLowerInvariant();
+        if (lower.Contains("(ultimate)") || lower.Contains("絕境戰") || lower.Contains("ultimate ")) return 5;
+        if (lower.Contains("(savage)") || lower.Contains("零式")) return 4;
+        if (lower.Contains("(extreme)") || lower.Contains("殲殛戰") || lower.Contains("(極)")) return 3;
+        if (lower.Contains("(hard)") || lower.Contains("殲滅戰") || lower.Contains("(困難)")) return 2;
+        return 1;
     }
 
     private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
