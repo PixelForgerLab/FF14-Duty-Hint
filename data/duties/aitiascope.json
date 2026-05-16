@@ -1,130 +1,130 @@
 {
     "id": "aitiascope",
-    "name": "因果之鏡",
+    "name": "艾提艾斯科普",
     "nameEn": "The Aitiascope",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 550,
-    "jobLevelSync": 90,
+    "iLvlSync": null,
+    "jobLevelSync": 89,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）莉薇亞：兩圓 AoE 散開後疊機；Aglaea Climb 看發光手對角站非發光手位置；Aglaea Shot 8 線出後等回收。",
-        "2）瑞塔提：Vexillatio 中間 1/3 安全 + Shield Skewer 看哪柱先碎站該道。",
-        "3）阿蒙：Thundaga 8 格鋸齒進慢爆格；Curtain Call 躲冰晶後即死。"
+        "1）無影羅基 / 無影：multiple unsundered Ascian bosses。",
+        "2）流派模仿戰：boss 模仿前作 Ascian (Igeyorhm、Lahabrea、Elidibus)。",
+        "3）最終 boss：Fandaniel 法達涅爾，多重 Aether 機制。"
     ],
-    "notes": "6.0 第五個 MSQ 副本（Lv 89-90，ilvl sync 550）。Amon 為復活版法師。Curtain Call 即死機制是核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ 最後一個非終戰 dungeon (Lv 89)。位於 Aetherial Sea 以太之海。3 boss 為 Ascian 無影模仿。",
     "bosses": [
         {
-            "name": "莉薇亞",
-            "nameEn": "Livia the Undeterred",
-            "mnemonic": ["看發光手對角站", "8 線出後注意回收"],
+            "name": "Watcher 觀察者 (Igeyorhm 模仿)",
+            "nameEn": "The Watcher",
+            "mnemonic": [
+                "復刻 Igeyorhm 機制：方塊翻轉 + 顏色配對。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Aglaea Bite",
+                            "name": "Tile Flip 方塊翻轉",
+                            "type": "other",
+                            "description": "場地方塊翻轉 + 顏色配對機制。",
+                            "tips": ["看顏色變化預判"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Odi Et Amo + Disparagement",
-                            "type": "stack",
-                            "description": "2 圓 AoE + 疊機，疊機後 cone 朝目標方向。",
-                            "tips": ["閃圓再疊", "疊後馬上離開疊機者前方"]
-                        },
-                        {
-                            "name": "Aglaea Climb",
-                            "type": "aoe",
-                            "description": "Boss 4 手 2 發光 = 該象限 AoE。發光手永遠對角。",
-                            "tips": ["站非發光手的兩個象限之一"]
-                        },
-                        {
-                            "name": "Aglaea Shot",
-                            "type": "aoe",
-                            "description": "8 條線到場邊 + 10 秒後回收。",
-                            "tips": ["先閃外擴，再小心回收"]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "瑞塔提",
-            "nameEn": "Rhitahtyn the Unshakable",
-            "mnemonic": ["Vexillatio 中央 1/3 安全", "Skewer 看哪柱先碎"],
+            "name": "Lahabrea 模仿",
+            "nameEn": "Lahabrea (Replica)",
+            "mnemonic": [
+                "復刻 Lahabrea 火屬性機制。",
+                "Annihilation 連鎖光圈。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Anvil of Tartarus",
+                            "name": "Annihilation 連鎖光圈",
+                            "type": "aoe",
+                            "description": "場上連鎖光圈依序爆。",
+                            "tips": ["跟順序移動"]
+                        },
+                        {
+                            "name": "Fire Flame 火焰",
+                            "type": "aoe",
+                            "description": "火屬性直線 + 圓 AoE。",
+                            "tips": ["閃火位置"]
+                        },
+                        {
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Tartarean Spark",
-                            "type": "aoe",
-                            "description": "對隨機玩家線 AoE。",
-                            "tips": ["看標記閃"]
-                        },
-                        {
-                            "name": "Shrapnel Shell",
-                            "type": "aoe",
-                            "description": "迫擊砲掃 2 個角落。",
-                            "tips": ["跑遠角"]
-                        },
-                        {
-                            "name": "Vexillatio + Shield Skewer",
-                            "type": "other",
-                            "description": "外側 1/3 被牆封 + 中央 1/3 安全。4 柱被吸 Aether，先碎柱對應的道安全。",
-                            "tips": ["站中央 1/3 + 看哪柱先碎跑該道"]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "阿蒙",
-            "nameEn": "Amon the Undying",
-            "mnemonic": ["Thundaga 8 格進慢爆", "Curtain Call 躲冰晶後"],
+            "name": "法達涅爾",
+            "nameEn": "Fandaniel",
+            "mnemonic": [
+                "Fandaniel 主角級 boss。",
+                "Aether 多重屬性 + Phantom Pain 玩家位置記憶。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Eruption Forte",
+                            "name": "Aetherial Beam 以太雷射",
                             "type": "aoe",
-                            "description": "2 玩家圓 AoE 標記。",
-                            "tips": ["拉開"]
+                            "description": "場上多重以太雷射 AoE。",
+                            "tips": ["閃直線預警"]
                         },
                         {
-                            "name": "Thundaga Forte",
-                            "type": "aoe",
-                            "description": "中央漸減 + 8 鋸齒格交替快慢爆。",
-                            "tips": ["跑邊", "進慢爆格 → 再進剛爆完格"]
-                        },
-                        {
-                            "name": "Strophe + Antistrophe",
-                            "type": "aoe",
-                            "description": "板子立起來 = 兩面寬線 AoE。1 板 = 兩邊安全；2 板（平行或匯聚）有特殊安全位。",
-                            "tips": ["看板子位置與朝向", "兩板匯聚 = 反向角落 + 中央三角"]
-                        },
-                        {
-                            "name": "Left/Right Firaga Forte",
-                            "type": "aoe",
-                            "description": "Boss 左/右半場 cleave（Boss 視角，玩家視角相反）。",
-                            "tips": ["看 cast 名稱 = 該側安全（玩家視角）"]
-                        },
-                        {
-                            "name": "Curtain Call",
+                            "name": "Phantom Pain 幻痛",
                             "type": "other",
-                            "description": "2 圓 AoE 後生成大冰晶，沒躲後面即死。",
-                            "tips": ["先閃圓", "躲冰晶後", "不能用坦無敵"]
+                            "description": "記錄玩家位置 → 後續攻擊。",
+                            "tips": ["**不要原地不動**"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }

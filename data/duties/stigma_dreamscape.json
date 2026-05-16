@@ -1,130 +1,134 @@
 {
     "id": "stigma_dreamscape",
-    "name": "司提瑪夢境",
+    "name": "汙名夢境",
     "nameEn": "The Stigma Dreamscape",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 600,
-    "jobLevelSync": 90,
+    "iLvlSync": null,
+    "jobLevelSync": 95,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Proto-Omega：箭頭指向 = 該側 cleave；Electric Slide 站近 Boss 避免被擊飛。",
-        "2）Arch-Lambda：4 次衝鋒 → Wave Cannon；Auto-mobile Sniper 看球數量分散站位。",
-        "3）Stigma-4：螺旋=點、甜甜圈=貼身；Mindhack 方向 debuff 看 Boss 變形預判朝向。"
+        "1）Magitek Maagrann 魔導裝甲：磁性吸引 + 直線砲擊。",
+        "2）Engels (魔導機甲)：搖晃 + 雙手機制。",
+        "3）Lunar Bahamut 月球巴哈姆特：縮小版巴哈 + 流星 + Megaflare。"
     ],
-    "notes": "6.0 EW 第二個 post-MSQ 副本（Lv 90，ilvl 540）。Omicron 機械主題。Mindhack 方向錯亂是核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.2 post-MSQ dungeon (Lv 95)。位於 Garlemald 月之地汙名夢境。FFXIV 致敬 + Engels 機械戰。3 boss。",
     "bosses": [
         {
-            "name": "原型歐米茄",
-            "nameEn": "Proto-Omega",
-            "mnemonic": ["看箭頭 = cleave 方向", "Electric Slide 站近 Boss"],
+            "name": "魔導裝甲 Magrann",
+            "nameEn": "Magitek Magrann",
+            "mnemonic": [
+                "磁性吸引 + 直線砲擊。",
+                "Cannon 多砲位。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Side / Rear / Forward Cannons / Interceptors",
-                            "type": "aoe",
-                            "description": "依箭頭方向 cleave 全場。",
-                            "tips": ["看箭頭繞對側"]
-                        },
-                        {
-                            "name": "Chemical Missile",
-                            "type": "spread",
-                            "description": "非坦點 AoE 留岩漿。",
-                            "tips": ["拉開 + 別站岩漿"]
-                        },
-                        {
-                            "name": "Electric Slide",
+                            "name": "Magnetism 磁性",
                             "type": "other",
-                            "description": "玩家擊退 + Boss 跳。",
-                            "tips": ["站近 Boss 避免擊出牆"]
+                            "description": "玩家被吸引/排斥。",
+                            "tips": ["預判磁性方向"]
                         },
                         {
-                            "name": "Guided Missile",
+                            "name": "Cannon 砲擊",
                             "type": "aoe",
-                            "description": "飛彈追蹤玩家落地留岩漿。",
-                            "tips": ["引到場邊"]
+                            "description": "場上多砲位直線 AoE。",
+                            "tips": ["閃直線"]
                         },
                         {
-                            "name": "Mustard Bomb",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "重坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "阿契蘭姆達",
-            "nameEn": "Arch-Lambda",
-            "mnemonic": ["4 次衝鋒 → Wave Cannon", "Sniper 看球數量"],
+            "name": "Engels (魔導機甲)",
+            "nameEn": "Engels",
+            "mnemonic": [
+                "雙手機械機制。",
+                "搖晃震場。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Wheel",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Auto-mobile Assault Cannon",
+                            "name": "Double-Punch 雙拳",
                             "type": "aoe",
-                            "description": "Boss 4 次衝鋒撞牆轉向。",
-                            "tips": ["跑非衝鋒路線"]
+                            "description": "雙手 AoE 攻擊。",
+                            "tips": ["閃雙手攻擊位置"]
                         },
                         {
-                            "name": "Wave Cannon",
-                            "type": "aoe",
-                            "description": "終點半場前 cleave。",
-                            "tips": ["跑 Boss 後"]
-                        },
-                        {
-                            "name": "Auto-mobile Sniper Cannon",
-                            "type": "spread",
-                            "description": "中央線 AoE + 玩家球數量標記。",
-                            "tips": ["站對應球數位置", "別讓雷射打到隊友"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "司提瑪 4",
-            "nameEn": "Stigma-4",
-            "mnemonic": ["螺旋=點、甜甜圈=貼身", "Mindhack 看 Boss 變形"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "AI Takeover",
-                            "type": "other",
-                            "description": "3 種召喚物：Omega Frame（cleave + Self-Destruct）、Hybrid Dragon（火錐+Self-Destruct）、Proto-Rocket Punch（6 個 Rush 線 AoE）。",
-                            "tips": ["看小怪類型應對"]
-                        },
-                        {
-                            "name": "Boss 變形",
-                            "type": "aoe",
-                            "description": "螺旋=點 AoE 跑遠；甜甜圈=貼身。",
-                            "tips": ["看圖形預判"]
-                        },
-                        {
-                            "name": "Mindhack",
-                            "type": "other",
-                            "description": "方向錯亂 debuff，移動朝指定方向跑。看 Boss 變形預判要面向哪邊。",
-                            "tips": ["先決定面向", "讓自己自動跑安全位"]
-                        },
-                        {
-                            "name": "Atomic Ray",
+                            "name": "Quake 地震",
                             "type": "raidwide",
-                            "description": "全體 AoE + 流血。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }]
+                            "description": "全體 AoE 震場。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "月球巴哈姆特",
+            "nameEn": "Lunar Bahamut",
+            "mnemonic": [
+                "縮小版巴哈姆特機制。",
+                "Megaflare 百萬核爆 + 流星。",
+                "Akh Morn 連續分擔。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Megaflare 百萬核爆",
+                            "type": "aoe",
+                            "description": "玩家位置圓 AoE + 全體 AoE 組合。",
+                            "tips": ["散開避免重疊"]
+                        },
+                        {
+                            "name": "Meteor 流星",
+                            "type": "other",
+                            "description": "場上流星小怪 + 必須擊殺。",
+                            "tips": [
+                                { "text": "DPS 集火擊殺", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Akh Morn 死亡輪迴",
+                            "type": "stack",
+                            "description": "對 1 仇分擔圓 AoE。",
+                            "tips": [
+                                { "text": "兩 T 連 H 分擔", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Flatten 夷為平地",
+                            "type": "tankbuster",
+                            "description": "對 1 仇高傷單體。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }

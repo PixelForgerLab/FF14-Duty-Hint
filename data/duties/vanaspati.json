@@ -1,130 +1,130 @@
 {
     "id": "vanaspati",
-    "name": "梵那斯帕提",
+    "name": "瓦納斯帕提",
     "nameEn": "Vanaspati",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 86,
+    "jobLevelSync": 85,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）終末攫奪者：Mouth Off 5 嘴 2 閉合（安全）；Misdirection 旋轉手指期間移動跟手指方向；左/右看 Boss 抬哪手。",
-        "2）終末破壞者：水球可變蛤蟆免火；Aether Spray 火 = 鑽水球免火、水 = 中央或抗擊退。",
-        "3）斯瓦爾巴努：紅圈/藍三角看自己 debuff，跑對應 AoE 對側；隕石階段 4 列 3 連，先內後內後外。"
+        "1）Terminus Snatcher 終末強掠者：直線突進 + 全屏 AoE。",
+        "2）Vakra Aspakas 瓦克拉鯨：水池 + 跳躍砸擊。",
+        "3）Telos 終末：四角圓 + 多種顏色 debuff 配對機制。"
     ],
-    "notes": "6.0 第三個 MSQ 副本（Lv 85-86）。Svarbhanu 隕石階段是核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ 第三個 dungeon (Lv 85)。位於 Garlemald 終末區。3 boss。",
     "bosses": [
         {
-            "name": "終末攫奪者",
+            "name": "終末強掠者",
             "nameEn": "Terminus Snatcher",
-            "mnemonic": ["5 嘴 2 閉合", "Misdirection 看手指", "看 Boss 抬手"],
+            "mnemonic": [
+                "Bloody Caress：對 1 仇單體高傷。",
+                "Slither：場地直線突進 AoE。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Last Gasp",
+                            "name": "Bloody Caress 血腥愛撫",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
+                            "description": "對 1 仇單體高傷。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         },
                         {
-                            "name": "Mouth Off",
+                            "name": "Slither 蛇行",
                             "type": "aoe",
-                            "description": "場邊 5 嘴，2 閉合 = 安全位。",
-                            "tips": ["站閉合嘴後"]
+                            "description": "場地直線突進 AoE。",
+                            "tips": ["閃直線路徑"]
                         },
                         {
-                            "name": "What Is Left / Right",
-                            "type": "aoe",
-                            "description": "Boss 抬左/右手 = 該側半場 AoE。",
-                            "tips": ["看抬手方向繞對側"]
-                        },
-                        {
-                            "name": "Lost Hope (Misdirection)",
-                            "type": "other",
-                            "description": "方向亂跑 debuff（旋轉手指）。",
-                            "tips": ["看手指方向決定按鍵"]
-                        },
-                        {
-                            "name": "Wallow",
-                            "type": "spread",
-                            "description": "全員散開（與 What Is Left/Right 同時）。",
-                            "tips": ["閃方向同時散開"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "終末破壞者",
-            "nameEn": "Terminus Wrecker",
-            "mnemonic": ["水球變蛤蟆免火", "Spray 火鑽水球、水站中央"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Total Wreck",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Poison Heart",
-                            "type": "stack",
-                            "description": "疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Unholy Water",
-                            "type": "other",
-                            "description": "6 個水球，鑽進去變蛤蟆免火（同時水抗下）。",
-                            "tips": ["看下一個 Aether Siphon 決定是否鑽"]
-                        },
-                        {
-                            "name": "Aether Spray - 火",
+                            "name": "全體 AoE",
                             "type": "raidwide",
-                            "description": "全體火 AoE，水球內免疫。",
-                            "tips": ["先鑽水球"]
-                        },
-                        {
-                            "name": "Aether Spray - 水",
-                            "type": "other",
-                            "description": "場中放射狀擊退。",
-                            "tips": ["站正中央", "或抗擊退"]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "斯瓦爾巴努",
-            "nameEn": "Svarbhanu",
-            "mnemonic": ["紅圈/藍三角看自己 debuff", "隕石 4 列 3 連"],
+            "name": "瓦克拉鯨",
+            "nameEn": "Vakra Aspakas",
+            "mnemonic": [
+                "水池機制：場上多個水池。",
+                "跳躍砸擊圓 AoE。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Aetherial Disruption",
+                            "name": "Mucilaginous Mucus 黏液",
+                            "type": "other",
+                            "description": "場上生水池 + 持續傷害。",
+                            "tips": ["避開水池"]
+                        },
+                        {
+                            "name": "Hop 跳躍",
                             "type": "aoe",
-                            "description": "4 條線把場分四象限，2 紅 2 藍。看自己 debuff（紅圈 or 藍三角）決定跑對應顏色或對側。",
-                            "tips": ["看 debuff 顏色", "跑對側 AoE"]
+                            "description": "跳到玩家位置圓 AoE。",
+                            "tips": ["看標記散開"]
                         },
                         {
-                            "name": "Crumbling Sky",
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "終末",
+            "nameEn": "Terminus",
+            "mnemonic": [
+                "Aetheric Heliodor：四角圓 AoE。",
+                "顏色 debuff 配對：黃/藍/綠/紅，異色配對解除。",
+                "Bouncy Battery：球移動 + 玩家配色站位。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Aetherial Pull 以太牽引",
                             "type": "other",
-                            "description": "擊退 + 圓 AoE 散開（後段同時）。",
-                            "tips": ["抗擊退 + 散開"]
+                            "description": "場上以太球牽引玩家。",
+                            "tips": ["預判牽引方向"]
                         },
                         {
-                            "name": "隕石階段",
+                            "name": "Color Debuff 配色機制",
                             "type": "other",
-                            "description": "Boss 退場放 3 波隕石，4 列只留 1 列安全。模式：2-3-1 或 3-2-4（內 → 對側內 → 外）。",
-                            "tips": ["記模式跟著跑", "先內 1 格，再對側內 2 格，最後外側"]
+                            "description": "玩家獲不同顏色 debuff，需要配對解除 (異色配對)。",
+                            "tips": ["依顏色配對站位"]
+                        },
+                        {
+                            "name": "Aetheric Heliodor 以太閃亮",
+                            "type": "aoe",
+                            "description": "四角圓 AoE。",
+                            "tips": ["跑中央或安全角"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         }
                     ]
                 }

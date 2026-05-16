@@ -1,145 +1,123 @@
 {
     "id": "tower_of_zot",
-    "name": "佐特之塔",
+    "name": "佐特塔",
     "nameEn": "The Tower of Zot",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 82,
+    "jobLevelSync": 81,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）米妮督瓦：12 條窄錐站縫；甜甜圈貼 Boss、Bio III 朝 Boss 對側半場；Transmute 看標記位置預判。",
-        "2）桑督瓦：Berserk 球留缺口 + 站牆邊；Manusya Stop 散開單獨吃 Prapti；Confuse 找真本體。",
-        "3）秦督瓦（合戰）：Delta Attack 看訊息選機制（冰窄錐 / 雷十字+疊機 / 火甜甜圈+散開）；先打 Cinduruva 否則會復活姊妹。"
+        "1）Minduruva 米杜露娃：4 元素 (火/冰/雷/水) 連鎖魔法 + Manusya 元素咒語。",
+        "2）Sanduruva 桑杜露娃：分身連線 + 反射機制 + Sanctified 集合分擔。",
+        "3）Cinduruva 辛杜露娃：終戰 + Cinderspring 圓 + Soulswap 玩家位置交換。"
     ],
-    "notes": "6.0 第一個 MSQ 副本（Lv 81-82）。Magus Sisters（FFIV 致敬 3 女巫）。Delta Attack 看文字訊息判斷元素是這座副本的核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ 第一個 dungeon (Lv 81)。FFIV Magus 姐妹致敬。3 boss 對應 Magus 三姐妹。",
     "bosses": [
         {
-            "name": "米妮督瓦",
+            "name": "米杜露娃",
             "nameEn": "Minduruva",
-            "mnemonic": ["12 窄錐 = 站縫", "甜甜圈 = 貼 Boss", "Transmute 看標記位置"],
+            "mnemonic": [
+                "看 cast 名稱判定元素：Fire = 火直線、Blizzard = 冰圓、Thunder = 雷散開、Water = 水分擔。",
+                "Manusya 連鎖：依序施放 4 元素咒語，記順序預判。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Manusya Bio (TB)",
+                            "name": "Manusya Fire / Blizzard / Thunder / Water",
+                            "type": "aoe",
+                            "description": "4 元素咒語：火 = 直線；冰 = 圓 AoE；雷 = 全員散開；水 = 分擔圓。",
+                            "tips": ["看 cast 名稱對應機制"]
+                        },
+                        {
+                            "name": "Trishula 三叉戟",
                             "type": "tankbuster",
-                            "description": "坦補 + 高傷 DoT 中毒。",
+                            "description": "對 1 仇 tankbuster。",
                             "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "立刻 Esuna", "role": "healer" }
+                                { "text": "MT 開減傷", "role": "tank" }
                             ]
                         },
                         {
-                            "name": "Manusya Blizzard III",
-                            "type": "aoe",
-                            "description": "Boss 中心放 12 條窄錐 AoE。",
-                            "tips": ["站到窄錐之間的縫"]
-                        },
-                        {
-                            "name": "Manusya Fire III",
-                            "type": "aoe",
-                            "description": "大甜甜圈 AoE，只有貼身 Boss 安全。",
-                            "tips": ["貼 Boss"]
-                        },
-                        {
-                            "name": "Manusya Thunder III",
-                            "type": "aoe",
-                            "description": "從 Boss 四方向發射 AoE 朝外。",
-                            "tips": ["遠離 Boss 或站對角線"]
-                        },
-                        {
-                            "name": "Manusya Bio III",
-                            "type": "aoe",
-                            "description": "覆蓋全場除了 Boss 朝近牆的半場。",
-                            "tips": ["跑到 Boss 與近牆之間"]
-                        },
-                        {
-                            "name": "Transmute 系列",
+                            "name": "Dhrupad 連鎖咒語",
                             "type": "other",
-                            "description": "把法術存到標記位置延後爆。",
-                            "tips": ["看標記位置預判 AoE"]
+                            "description": "Boss 連續施放 4 元素咒語 + 對應 AoE。",
+                            "tips": ["記憶順序預判"]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "桑督瓦",
+            "name": "桑杜露娃",
             "nameEn": "Sanduruva",
-            "mnemonic": ["Berserk 球 = 找缺口貼牆", "Stop = 散開單獨吃線", "Confuse 找真本體"],
+            "mnemonic": [
+                "分身連線 + 反射 → 看哪個分身發動。",
+                "Sanctified 集合分擔。",
+                "Trishula 二段坦補。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Isitva Siddhi (TB)",
+                            "name": "Doppelganger 分身",
+                            "type": "other",
+                            "description": "召喚 2 個分身連線 boss → 發動對應 AoE (圓/donut/直線)。",
+                            "tips": ["看分身朝向預判 AoE"]
+                        },
+                        {
+                            "name": "Sanctified Bolt 集合分擔",
+                            "type": "stack",
+                            "description": "點名玩家分擔圓 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "Trishula 三叉戟",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Prapti Siddhi",
-                            "type": "aoe",
-                            "description": "對每個玩家依序大線 AoE。",
-                            "tips": ["看標記閃線"]
-                        },
-                        {
-                            "name": "Manusya Berserk",
-                            "type": "aoe",
-                            "description": "5 個球圍場，留一個缺口；中標 Berserk 失控。",
-                            "tips": ["跑缺口", "貼牆躲爆"]
-                        },
-                        {
-                            "name": "Manusya Stop",
-                            "type": "spread",
-                            "description": "每人被凍住單獨吃 Prapti 線 AoE。",
-                            "tips": ["分散站", "撐血", { "text": "持續補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Manusya Confuse",
-                            "type": "aoe",
-                            "description": "5 個分身偽裝 Boss，只有 1 個真實。",
-                            "tips": ["看誰沒做 emote", "或看 DoT debuff", "再貼牆躲球爆"]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "秦督瓦（合戰）",
-            "nameEn": "Cinduruva / Magus Sisters",
-            "mnemonic": ["Delta Attack 看文字", "先打 Cinduruva"],
+            "name": "辛杜露娃",
+            "nameEn": "Cinduruva",
+            "mnemonic": [
+                "Cinderspring：玩家位置圓 AoE。",
+                "Soulswap：玩家位置交換。",
+                "Manusya Suzhonna 大招。"
+            ],
             "phases": [
                 {
-                    "name": "三姊妹合戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Samsara",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Delta Attack: 冰",
-                            "type": "aoe",
-                            "description": "「冰封大地」= 12 窄錐 + 冰柱掉落。",
-                            "tips": ["站縫 + 閃預警"]
-                        },
-                        {
-                            "name": "Delta Attack: 雷",
-                            "type": "stack",
-                            "description": "「雷霆風暴」= 每 boss 十字錐 + 線 AoE + 全員疊機。",
-                            "tips": ["閃十字", "全員疊"]
-                        },
-                        {
-                            "name": "Delta Attack: 火",
+                            "name": "Cinderspring 灰燼之泉",
                             "type": "spread",
-                            "description": "「無盡烈焰」= 兩個甜甜圈 AoE 中心安全 + 線 AoE + 散開標記。",
-                            "tips": ["先站第一甜甜圈安全位", "閃線", "再散開"]
+                            "description": "玩家位置圓 AoE。",
+                            "tips": ["散開 clock 位"]
+                        },
+                        {
+                            "name": "Soulswap 靈魂交換",
+                            "type": "other",
+                            "description": "玩家位置互相交換。",
+                            "tips": ["預判新位置"]
+                        },
+                        {
+                            "name": "Manusya Susanna 蘇珊娜",
+                            "type": "raidwide",
+                            "description": "全體高傷 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 連補", "role": "healer" }
+                            ]
                         }
                     ]
                 }

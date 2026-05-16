@@ -1,131 +1,70 @@
 {
     "id": "mothercrystal",
-    "name": "母水晶殲滅戰",
+    "name": "光輝決戰",
     "nameEn": "The Mothercrystal",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
-    "iLvlSync": 550,
-    "jobLevelSync": 90,
+    "iLvlSync": null,
+    "jobLevelSync": 89,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Dawn Mantle 看武器顏色：紅(舞)=甜甜圈、綠(白)=點 AoE、藍(騎)=十字。",
-        "2）Add Phase：6 水晶在轉盤上要打掉，否則 Exodus 團滅。",
-        "3）Crystallize 點名與 Dawn Mantle 同時 cast，先閃武器 AoE 再散開/疊機。",
-        "4）Parhelion+Subparhelion：3 條線進剛爆完位置；Lightwave 4 波 + Echoes 疊機。"
+        "1）Echoes 回響：場上散開 AoE + 回響倒數機制。",
+        "2）Equinox 春分：黑/白半場交替。",
+        "3）Heros' Sundering：分擔機制。",
+        "4）Crystalline Blessing：場上水晶 buff。",
+        "5）狂暴：Magos's Radiance 全屏。"
     ],
-    "notes": "6.0 EW 第二個 MSQ trial（Lv 89-90，ilvl 550）。Hydaelyn 神戰。第一個有 Duty Support 的 8 人副本。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ trial (Lv 89)。Hydaelyn (海德林) Normal。EW MSQ 第二個 trial。",
     "bosses": [
         {
             "name": "海德林",
             "nameEn": "Hydaelyn",
-            "mnemonic": ["紅=甜甜圈、綠=點、藍=十字", "Crystallize 同 Dawn Mantle"],
+            "mnemonic": [
+                "Equinox：黑白半場交替。",
+                "Echoes：玩家位置記憶 + 回響爆。",
+                "Heros' Sundering：分擔圓。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Heroes's Radiance",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Dawn Mantle (舞)",
+                            "name": "Echoes 回響",
                             "type": "aoe",
-                            "description": "紅圖示舞者旋鏢 = 甜甜圈，貼 Boss 安全。",
-                            "tips": ["貼 Boss"]
+                            "description": "場上散開 AoE + 倒數爆，記錄玩家位置。",
+                            "tips": ["散開 + 記得移動避免回響"]
                         },
                         {
-                            "name": "Dawn Mantle (白)",
+                            "name": "Equinox 春分",
                             "type": "aoe",
-                            "description": "綠圖示白魔法杖 = 點 AoE，跑遠。",
-                            "tips": ["跑遠"]
+                            "description": "黑/白半場交替 cleave。",
+                            "tips": ["看顏色預判半場"]
                         },
                         {
-                            "name": "Dawn Mantle (騎)",
-                            "type": "aoe",
-                            "description": "藍圖示騎士劍盾 = 十字 AoE（基本方向），對角安全。",
-                            "tips": ["站對角"]
+                            "name": "Heros' Sundering 英雄分離",
+                            "type": "stack",
+                            "description": "分擔圓 AoE。",
+                            "tips": ["全員疊接"]
                         },
                         {
-                            "name": "Mousa's Scorn",
-                            "type": "tankbuster",
-                            "description": "雙 T 分擔坦補。",
-                            "tips": [{ "text": "MT/OT 集中", "role": "tank" }]
+                            "name": "Crystalline Blessing 結晶祝福",
+                            "type": "other",
+                            "description": "場上水晶 buff 機制。",
+                            "tips": ["依 buff 站位"]
                         },
                         {
                             "name": "Magos's Radiance",
                             "type": "raidwide",
                             "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Add Phase",
-                    "mechanics": [
-                        {
-                            "name": "6 水晶",
-                            "type": "other",
-                            "description": "6 個水晶要打掉，Conviction 到 100 = Exodus 團滅。",
-                            "tips": [
-                                { "text": "全力打水晶", "role": "dps" }
-                            ]
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Hydaelyn's Ray",
-                            "type": "aoe",
-                            "description": "中央橘線漸減 AoE。",
-                            "tips": ["跑場邊"]
-                        },
-                        {
-                            "name": "Crystalline Stone III / Blizzard III",
-                            "type": "spread",
-                            "description": "Stone = 疊機，Blizzard = 散開。",
-                            "tips": ["看 cast 名稱"]
-                        },
-                        {
-                            "name": "Exodus",
+                            "name": "全屏即死狂暴",
                             "type": "raidwide",
-                            "description": "Phase 結束時全體大傷。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Crystallize",
-                            "type": "spread",
-                            "description": "Cast 時點名但機制延後到 Dawn Mantle 後解。",
-                            "tips": ["先閃武器 AoE 再分散/疊"]
-                        },
-                        {
-                            "name": "Parhelion + Subparhelion",
-                            "type": "aoe",
-                            "description": "3 條線 AoE 從 Boss 出 → 反方向再回 3 條線。",
-                            "tips": ["站首條外", "依序進剛爆位置"]
-                        },
-                        {
-                            "name": "Parhelic Circle",
-                            "type": "aoe",
-                            "description": "雪花圖案，AoE 從中央延伸出去。",
-                            "tips": ["站雪花線外"]
-                        },
-                        {
-                            "name": "Heroes's Sundering",
-                            "type": "tankbuster",
-                            "description": "T 錐 AoE 坦補。",
-                            "tips": [{ "text": "T 拉遠避免炸隊友", "role": "tank" }]
-                        },
-                        {
-                            "name": "Lightwave + Echoes",
-                            "type": "stack",
-                            "description": "4 波光波 + 疊機 AoE。",
-                            "tips": ["拉 Boss 到光波過後位置", "疊機後再閃光波"]
+                            "description": "Enrage 強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

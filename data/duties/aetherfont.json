@@ -1,160 +1,121 @@
 {
     "id": "aetherfont",
-    "name": "以太泉源",
+    "name": "以太之泉",
     "nameEn": "The Aetherfont",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 90,
+    "jobLevelSync": 93,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Lyngbakr：Body Slam 後生成水晶 → Upsweep 觸發水晶 AoE，看水晶大小判斷。",
-        "2）Arkas：Lightning Leap/Rampage 跳起後留閃電線。Battle Cry 縮場地。",
-        "3）Octomammoth：5 個圓平台 + 多觸手；Octostroke 留一個安全平台；Telekinesis 水晶砸整個平台。"
+        "1）Lyngbakr 林格巴克爾 (大鯨)：水柱 + 漩渦。",
+        "2）Thaliak 塔利亞克：水箭 + 河流機制。",
+        "3）Ambrosa 安布羅薩：水流 + 心愛 buff 機制。"
     ],
-    "notes": "6.4 EW 第四個 post-MSQ 副本（Lv 90，ilvl 605）。Octomammoth 為 FFIV 章魚怪致敬。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.35 post-MSQ dungeon (Lv 93)。位於以太之泉。3 boss 水主題。",
     "bosses": [
         {
-            "name": "海鯨",
+            "name": "林格巴克爾",
             "nameEn": "Lyngbakr",
-            "mnemonic": ["看水晶大小", "Tidal Breath 繞 Boss 後"],
+            "mnemonic": [
+                "巨型水鯨。",
+                "水柱 + 漩渦 AoE。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Sonic Bloop",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Tidal Breath",
+                            "name": "Water Pillar 水柱",
                             "type": "aoe",
-                            "description": "Boss 轉身大範圍 AoE 朝前。",
-                            "tips": ["跑 Boss 後"]
+                            "description": "場上水柱 AoE。",
+                            "tips": ["離開水柱位置"]
                         },
                         {
-                            "name": "Body Slam + 水晶",
+                            "name": "Whirlpool 漩渦",
                             "type": "other",
-                            "description": "貼身 AoE + 場上生成不同大小水晶。",
-                            "tips": ["先閃 AoE", "記水晶位置"]
+                            "description": "場上漩渦吸引玩家。",
+                            "tips": ["預判吸引方向"]
                         },
                         {
-                            "name": "Upsweep",
-                            "type": "aoe",
-                            "description": "全體 AoE + 水晶放對應大小 AoE（看小晶 vs 大晶）。",
-                            "tips": ["遠離大水晶位置"]
-                        },
-                        {
-                            "name": "Floodstide",
-                            "type": "spread",
-                            "description": "全員 AoE 散開。",
-                            "tips": ["分散"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "阿爾卡斯",
-            "nameEn": "Arkas",
-            "mnemonic": ["閃電線", "Battle Cry 縮場地"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Battle Cry",
-                            "type": "raidwide",
-                            "description": "全體 AoE + 縮場地。",
-                            "tips": ["靠近中央"]
-                        },
-                        {
-                            "name": "Lightning Leap",
-                            "type": "aoe",
-                            "description": "跳對側 + 圓 AoE + 留閃電線。",
-                            "tips": ["閃 + 離線"]
-                        },
-                        {
-                            "name": "Spinning Claw",
-                            "type": "aoe",
-                            "description": "圓 AoE + 多條閃電線。",
-                            "tips": ["閃 + 預判線位置"]
-                        },
-                        {
-                            "name": "Lightning Rampage",
-                            "type": "aoe",
-                            "description": "4 次跳 + 圓 AoE + 閃電線。",
-                            "tips": ["持續移動", "最後一段後 AoE 邊界消失"]
-                        },
-                        {
-                            "name": "Lightning Claw",
-                            "type": "stack",
-                            "description": "疊機 + 留電擊區。",
-                            "tips": ["全員疊後快速移開"]
-                        },
-                        {
-                            "name": "Ripper Claw",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "巨型八腕象",
-            "nameEn": "Octomammoth",
-            "mnemonic": ["5 個圓平台", "Octostroke 找安全平台"],
+            "name": "塔利亞克",
+            "nameEn": "Thaliak",
+            "mnemonic": [
+                "水箭散開機制。",
+                "Hydroball 水球連線。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Octostroke",
-                            "type": "aoe",
-                            "description": "4 平台被觸手 Clearout AoE 覆蓋，1 平台安全。",
-                            "tips": ["跑到無觸手的平台"]
-                        },
-                        {
-                            "name": "Vivid Eyes",
-                            "type": "aoe",
-                            "description": "穿越 5 平台 + 連接的中環 AoE。",
-                            "tips": ["貼 Boss 或站平台最外"]
-                        },
-                        {
-                            "name": "Saline Spit",
-                            "type": "aoe",
-                            "description": "5 平台都圓 AoE，連接走道安全。",
-                            "tips": ["站走道"]
-                        },
-                        {
-                            "name": "Tidal Breath",
-                            "type": "aoe",
-                            "description": "Boss 前方寬 AoE。",
-                            "tips": ["跑 Boss 側後"]
-                        },
-                        {
-                            "name": "Telekinesis",
-                            "type": "aoe",
-                            "description": "場外水晶懸浮後砸最近平台整個。",
-                            "tips": ["看連繩平台跑開"]
-                        },
-                        {
-                            "name": "Breathstroke",
-                            "type": "aoe",
-                            "description": "Octostroke + Tidal Breath 組合，安全平台還有一觸手。",
-                            "tips": ["找雙重安全"]
-                        },
-                        {
-                            "name": "Water Drop",
+                            "name": "Water Arrow 水箭",
                             "type": "spread",
-                            "description": "全員圓 AoE。",
-                            "tips": ["分散"]
+                            "description": "玩家圓 AoE 標記。",
+                            "tips": ["散開 clock"]
+                        },
+                        {
+                            "name": "Hydroball 水球",
+                            "type": "stack",
+                            "description": "連線玩家分擔圓 AoE。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "安布羅薩",
+            "nameEn": "Ambrosa",
+            "mnemonic": [
+                "水流場地機制。",
+                "心愛 buff 配對。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Water Flow 水流",
+                            "type": "other",
+                            "description": "場上水流方向影響移動。",
+                            "tips": ["預判水流方向"]
+                        },
+                        {
+                            "name": "Beloved Buff 心愛 buff",
+                            "type": "other",
+                            "description": "玩家獲 buff 配對機制。",
+                            "tips": ["依 buff 配對站位"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }

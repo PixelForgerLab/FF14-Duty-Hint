@@ -1,106 +1,51 @@
 {
     "id": "tower_of_babil",
-    "name": "巴別之塔",
+    "name": "巴別塔",
     "nameEn": "The Tower of Babil",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 84,
+    "jobLevelSync": 83,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）巴爾納巴斯：Dynamic Pound 看極性（同極=站邊推離、反極=站邊拉入）；別被擊飛場邊雷池。",
-        "2）魯加埃：紫盤=變小躲鋼圈、綠盤=變青蛙躲淹水；爆炸找十字縫。",
-        "3）阿尼瑪：Lunar Nail 看連繩象限躲；Mega Graviton 拉到對角後抗擊回；Imperatum DPS check 打下半身。"
+        "1）99th Facet of Strife 第 99 號鬥爭原型機：直線發射 + 場地破壞。",
+        "2）Anima 阿尼瑪：連結機制 + 凝視 + 散開。",
+        "3）Lugae 路加博士 (FFIV) + Barnabas 機器人。"
     ],
-    "notes": "6.0 第二個 MSQ 副本（Lv 83-84）。Anima（FFX 召喚獸致敬）下半身 DPS check 是核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ 第二個 dungeon (Lv 83)。位於月之底部世界。3 boss：99 號原型機 → Anima → Lugae & Barnabas。",
     "bosses": [
         {
-            "name": "巴爾納巴斯",
-            "nameEn": "Barnabas",
-            "mnemonic": ["極性同 = 推、極性反 = 拉", "別被推進雷池"],
+            "name": "99 號鬥爭原型機",
+            "nameEn": "99th Facet of Strife",
+            "mnemonic": [
+                "Magnetism：吸引/排斥場上鋼鐵物件。",
+                "直線砲擊 + 場地破壞。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Ground and Pound",
-                            "type": "aoe",
-                            "description": "對隨機玩家線 AoE。",
-                            "tips": ["看標記閃"]
-                        },
-                        {
-                            "name": "Dynamic Pound",
+                            "name": "Magnetism 磁性",
                             "type": "other",
-                            "description": "Boss 移北邊 + 線 AoE 與玩家極性匹配。同極=推、反極=拉。",
-                            "tips": ["看極性決定站位", "別被推進雷池"]
+                            "description": "場上小物件吸引/排斥玩家。",
+                            "tips": ["利用磁性移動到安全處"]
                         },
                         {
-                            "name": "Shocking Force",
-                            "type": "stack",
-                            "description": "全員疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Dynamic Scrapline",
-                            "type": "other",
-                            "description": "玩家+Boss 都有極性 + 連繩 + 點 AoE。",
-                            "tips": ["同 Dynamic Pound 規則"]
-                        },
-                        {
-                            "name": "Thundercall",
+                            "name": "Cannon 砲擊",
                             "type": "aoe",
-                            "description": "3 雷球 + Boss 貼身 AoE。",
-                            "tips": ["站球間 + 遠離 Boss"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "魯加埃",
-            "nameEn": "Lugae",
-            "mnemonic": ["紫盤變小、綠盤變青蛙", "踩錯可以再踩回去"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Thermal Suppression",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "直線砲擊 + 破壞地板。",
+                            "tips": ["閃直線預警"]
                         },
                         {
-                            "name": "Magitek Missle",
-                            "type": "aoe",
-                            "description": "2 名玩家 AoE 標記。",
-                            "tips": ["拉開"]
-                        },
-                        {
-                            "name": "Magitek Ray",
-                            "type": "aoe",
-                            "description": "朝隨機玩家線 AoE。",
-                            "tips": ["看箭頭閃"]
-                        },
-                        {
-                            "name": "Magitek Chakram",
-                            "type": "other",
-                            "description": "鋼圈在場邊飛行，踩紫盤變小可閃。",
-                            "tips": ["踩紫盤"]
-                        },
-                        {
-                            "name": "Downpour",
-                            "type": "other",
-                            "description": "場內淹水 Heavy + Breathless 疊 8 死。踩綠盤變青蛙免疫。",
-                            "tips": ["踩綠盤變青蛙"]
-                        },
-                        {
-                            "name": "Magitek Explosion",
-                            "type": "aoe",
-                            "description": "3 炸彈十字線爆。",
-                            "tips": ["找十字縫"]
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
                         }
                     ]
                 }
@@ -109,46 +54,71 @@
         {
             "name": "阿尼瑪",
             "nameEn": "Anima",
-            "mnemonic": ["Lunar Nail 看四象限", "Mega Graviton 拉對角", "下半身 DPS check"],
+            "mnemonic": [
+                "凝視 + 連線分身。",
+                "全體 + 散開組合機制。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Lunar Nail",
-                            "type": "aoe",
-                            "description": "場邊釘子 + 中央釘子連繩，被連的象限 AoE。",
-                            "tips": ["看繩位置找安全象限"]
+                            "name": "Anima Bleed 凝血",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Mega Graviton + Aetherial Pull",
+                            "name": "Pain Mire 苦痛泥沼",
                             "type": "other",
-                            "description": "4 角 Graviton 各連 1 玩家，要跑對角拉開繩，否則被拉回。同時 Pater Patriae 中線 AoE。",
-                            "tips": ["跑對角拉繩直", "用抗擊退"]
+                            "description": "場上玩家連線 + 凝視 + 散開圓 AoE。",
+                            "tips": ["背對凝視 + 散開"]
                         },
                         {
-                            "name": "Boundless Pain",
-                            "type": "aoe",
-                            "description": "全員拉到中央 + 擴散 AoE，跑場角。",
-                            "tips": ["跑角落"]
-                        },
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "盧加博士 + 巴爾納巴斯",
+            "nameEn": "Lugae & Barnabas",
+            "mnemonic": [
+                "盧加博士 + 巴爾納巴斯機器人雙頭目。",
+                "巴爾納巴斯火/冰模式切換。",
+                "終戰 Self-Destruct 自爆機制。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
                         {
-                            "name": "Imperatum (DPS check)",
+                            "name": "Fire / Ice 模式切換",
                             "type": "other",
-                            "description": "下半身機制，Chaos 條到 100 = Oblivion 團滅。",
-                            "tips": [{ "text": "全力打下半身", "role": "dps" }]
+                            "description": "巴爾納巴斯依模式發動火/冰屬性 AoE。",
+                            "tips": ["看顏色預判屬性"]
                         },
                         {
-                            "name": "Obliviating Claw",
-                            "type": "aoe",
-                            "description": "東西兩側爪子掃過場，一側先一側後。",
-                            "tips": ["看哪側先 spawn 站縫"]
+                            "name": "Self-Destruct 自爆",
+                            "type": "raidwide",
+                            "description": "全體高傷 + 場地破壞。",
+                            "tips": [
+                                { "text": "全員減傷 + LB", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Erupting Pain",
+                            "name": "Magitek Bit 機械鋒",
                             "type": "aoe",
-                            "description": "2 玩家追蹤 AoE 標記。",
-                            "tips": ["被點往東西邊跑 + 不交叉"]
+                            "description": "場上 bit 線 AoE。",
+                            "tips": ["閃 bit 路徑"]
                         }
                     ]
                 }

@@ -1,124 +1,125 @@
 {
     "id": "ktisis_hyperboreia",
-    "name": "希貝爾波雷亞創造區",
+    "name": "極北之地",
     "nameEn": "Ktisis Hyperboreia",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 88,
+    "jobLevelSync": 87,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）萊薩：Frostbite and Seek 看坑洞無腳印 = Boss 會出現的位置，站 Boss 後。",
-        "2）拉冬王：Inhale 後看哪些頭膨脹 = 該方向錐 AoE；中頭 vs 側頭決定哪邊安全。",
-        "3）赫耳墨斯：Hermetica 板子分多種模式（同列、雙列、Double 視線、Quadruple 順序 90 度）；Double/Quadruple 看 Boss buff。"
+        "1）Lyssa 萊薩 (動物製造者)：召喚動物機制。",
+        "2）Ladon Lord 拉登王 (海德拉) + Hippokampos：水柱 + 龍息扇形。",
+        "3）Hermes (在 Elpis)：飛行版本，與 The Dead Ends 不同流派。"
     ],
-    "notes": "6.0 第四個 MSQ 副本（Lv 87-88）。Hermes 風魔導場長。Hermetica 4 種模式為核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ 第四個 dungeon (Lv 87)。位於 Elpis 古代世界北部極寒之地。3 boss。",
     "bosses": [
         {
             "name": "萊薩",
             "nameEn": "Lyssa",
-            "mnemonic": ["看無腳印的坑站 Boss 後", "冰柱站縫"],
+            "mnemonic": [
+                "召喚動物機制 + 控制流派。",
+                "Frigid Stone：場上散開圓。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Frostbite and Seek",
-                            "type": "aoe",
-                            "description": "Boss 消失後從 6 個坑之一冒出大 AoE，看無腳印坑判斷。",
-                            "tips": ["找無腳印的坑", "站該坑後方"]
+                            "name": "Animal Summon 召喚動物",
+                            "type": "other",
+                            "description": "召喚動物小怪 + 對玩家發動 AoE。",
+                            "tips": [
+                                { "text": "DPS 集火擊殺", "role": "dps" }
+                            ]
                         },
                         {
-                            "name": "Icicall",
-                            "type": "aoe",
-                            "description": "3 冰柱貼身 AoE + 線 AoE（場邊或中央）。",
-                            "tips": ["閃冰柱貼身 + 線"]
+                            "name": "Frigid Stone 寒石",
+                            "type": "spread",
+                            "description": "場上多個圓 AoE。",
+                            "tips": ["散開避免重疊"]
                         },
                         {
-                            "name": "Heavy Smash",
-                            "type": "stack",
-                            "description": "疊機標記。",
-                            "tips": ["全員疊（冰柱清後）"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "拉冬王",
-            "nameEn": "Ladon Lord",
-            "mnemonic": ["看哪些頭膨脹", "中頭膨脹 = 前安全"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Inhale + Pyric Breath",
-                            "type": "aoe",
-                            "description": "1-2 顆頭膨脹 = 該方向 120 度錐 AoE。",
-                            "tips": ["看膨脹頭找未膨脹頭側", "側頭膨脹 = 站 Boss 正前"]
-                        },
-                        {
-                            "name": "Pyric Spheres",
-                            "type": "aoe",
-                            "description": "4 顆球十字線 AoE。",
-                            "tips": ["站球間"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "赫耳墨斯",
-            "nameEn": "Hermes",
-            "mnemonic": ["Hermetica 4 模式", "看 Double/Quadruple buff"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Trismegistos",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "True Tornado (TB)",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補 + Double = 腳下圓 AoE。",
-                            "tips": [{ "text": "Double 時離開", "role": "tank" }]
-                        },
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "拉登王 + 海馬獸",
+            "nameEn": "Ladon Lord + Hippokampos",
+            "mnemonic": [
+                "雙頭目：拉登 (3 頭蛇 / 海德拉)。",
+                "三方向 breath 攻擊。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
                         {
-                            "name": "True Bravery",
-                            "type": "other",
-                            "description": "可中斷 - Boss 加增傷 buff 20 秒。",
-                            "tips": ["DPS interrupt"]
-                        },
-                        {
-                            "name": "True Aero (線 AoE)",
-                            "type": "spread",
-                            "description": "全員線 AoE 散開 + Double 後再加 1 條。",
-                            "tips": ["分散 + 移開"]
-                        },
-                        {
-                            "name": "True Aero II (點 AoE)",
-                            "type": "spread",
-                            "description": "全員點 AoE + Quadruple 後再加 1 個。",
-                            "tips": ["分散 + 移開"]
-                        },
-                        {
-                            "name": "Meteor",
-                            "type": "other",
-                            "description": "4 角預警隕石擋 Hermetica。",
-                            "tips": ["跑中央減傷"]
-                        },
-                        {
-                            "name": "Hermetica（板子）",
+                            "name": "Triple Breath 三重吐息",
                             "type": "aoe",
-                            "description": "板子線 AoE 多種模式：①單邊安全 ②穿中央 ③Double 利用隕石遮蔽 ④Quadruple 4 段 90 度。",
-                            "tips": ["看板子位置與 Buff 判斷模式", "Quadruple = 找前兩段都安全象限，第二段後移對角"]
+                            "description": "3 頭分別發動扇形 AoE。",
+                            "tips": ["閃 3 個扇形位置"]
+                        },
+                        {
+                            "name": "Water Pillar 水柱",
+                            "type": "aoe",
+                            "description": "場上水柱 AoE。",
+                            "tips": ["離開水柱位置"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "赫密斯 (Elpis 版)",
+            "nameEn": "Hermes",
+            "mnemonic": [
+                "Trismegistos 全屏。",
+                "飛行機制 + 隕石。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Trismegistos 三重至聖",
+                            "type": "raidwide",
+                            "description": "全體高傷 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 連補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Flying Meteor 飛行隕石",
+                            "type": "aoe",
+                            "description": "場上隕石小怪 + 圓 AoE。",
+                            "tips": [
+                                { "text": "DPS 擊殺", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "散開機制",
+                            "type": "spread",
+                            "description": "玩家身上圓 AoE 標記。",
+                            "tips": ["散開 clock 位"]
                         }
                     ]
                 }

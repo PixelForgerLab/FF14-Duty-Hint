@@ -1,160 +1,127 @@
 {
     "id": "lunar_subterrane",
-    "name": "月之地下迷宮",
+    "name": "月之底",
     "nameEn": "The Lunar Subterrane",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 90,
+    "jobLevelSync": 99,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Dark Elf：Sorcerous Shroud 杖隱形後記位置；Shadowy Sigil 看 Boss 光環看是藍方還是紫三角。",
-        "2）Damcyan Antlion：Landslip 擊退到柱倒下方向；Earthen Geyser + Pound Sand 流沙時間限制。",
-        "3）Durante：Forsaken Fount + Contrapasso 球分裂預判 AoE 終點；最後 5 球版本看 3x3 格唯一安全。"
+        "1）Durante 杜蘭特：劍 + 鏡子分身機制。",
+        "2）Antifaesia (Antifaesya) 反法艾：場地縮小 + 多重 AoE。",
+        "3）Golbez 哥布茲 (Archfiend) + Lugaes：黑暗龍捲 + Mist Dragon 分身。"
     ],
-    "notes": "6.5 EW 最終 post-MSQ 副本（Lv 90，ilvl 620）。Durante 為新角色。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 post-MSQ dungeon (Lv 99)。位於月之底部，FFIV 致敬。3 boss：Durante → Antifaesia → Golbez (Archfiend 完整版)。",
     "bosses": [
-        {
-            "name": "黑暗精靈",
-            "nameEn": "Dark Elf",
-            "mnemonic": ["記杖位置", "Sigil 藍方/紫三角"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Hexing Staves",
-                            "type": "aoe",
-                            "description": "2 個杖在格上 + 十字 AoE。",
-                            "tips": ["看杖位置躲"]
-                        },
-                        {
-                            "name": "Sorcerous Shroud",
-                            "type": "other",
-                            "description": "杖隱形，玩家必須記住位置。",
-                            "tips": ["記住消失前位置"]
-                        },
-                        {
-                            "name": "Shadowy Sigil",
-                            "type": "aoe",
-                            "description": "每格有藍方或紫三角符號，看 Boss 光環顏色決定哪種不安全。",
-                            "tips": ["看 Boss 光環", "站對應安全格"]
-                        },
-                        {
-                            "name": "Void Dark II",
-                            "type": "spread",
-                            "description": "全員散開。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Ruinous Confluence",
-                            "type": "aoe",
-                            "description": "隱形杖位置再現 + 線 AoE。",
-                            "tips": ["回到記住的位置避開十字 AoE"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "達姆西安蟻獅",
-            "nameEn": "Damcyan Antlion",
-            "mnemonic": ["柱倒下方向", "Sand 時間別站太久"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Sandblast",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Landslip",
-                            "type": "other",
-                            "description": "場邊輸送帶 → 半場擊退。",
-                            "tips": ["位置調好或抗擊退"]
-                        },
-                        {
-                            "name": "Antlion March + Landslip 組合",
-                            "type": "aoe",
-                            "description": "Boss 衝鋒撞柱 + 擊退到柱倒下方向。",
-                            "tips": ["看哪柱被撞傷", "別被推到該柱前"]
-                        },
-                        {
-                            "name": "Earthen Geyser",
-                            "type": "stack",
-                            "description": "補職疊機 + 流沙生成。",
-                            "tips": ["全員疊靠補職", "馬上離開流沙"]
-                        },
-                        {
-                            "name": "Pound Sand",
-                            "type": "aoe",
-                            "description": "大圓 AoE 在補職位置。",
-                            "tips": ["跑遠"]
-                        }
-                    ]
-                }
-            ]
-        },
         {
             "name": "杜蘭特",
             "nameEn": "Durante",
-            "mnemonic": ["球分裂預判", "5 球版本 3x3 找縫"],
+            "mnemonic": [
+                "劍 + 鏡子分身機制。",
+                "雙劍斬 cleave。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Old Magic",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Duplicitous Battery",
+                            "name": "Mirror Image 鏡像",
                             "type": "aoe",
-                            "description": "2 組螺旋圓 AoE。",
-                            "tips": ["第一組爆完進原位"]
+                            "description": "分身鏡像 cleave。",
+                            "tips": ["看分身朝向預判"]
                         },
                         {
-                            "name": "Forsaken Fount + Contrapasso",
+                            "name": "Double Slash 雙劍斬",
                             "type": "aoe",
-                            "description": "4/3/5 個球依箭頭分裂後爆貼身 AoE。",
-                            "tips": ["看箭頭方向預判分裂後位置", "5 球版本 3x3 格找唯一安全"]
+                            "description": "雙段 cleave。",
+                            "tips": ["閃 2 段位置"]
                         },
                         {
-                            "name": "Antipodal Assault",
-                            "type": "stack",
-                            "description": "線疊機 + Boss 衝到牆。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Twilight Phase",
-                            "type": "aoe",
-                            "description": "Boss 周圍獠牙 = 線 AoE 朝獠牙指向。",
-                            "tips": ["看獠牙方向"]
-                        },
-                        {
-                            "name": "Dark Impact",
-                            "type": "aoe",
-                            "description": "連繩位置生成大球爆。",
-                            "tips": ["跑遠"]
-                        },
-                        {
-                            "name": "Death's Journey",
-                            "type": "aoe",
-                            "description": "點 AoE + 8 條紫線錐 AoE 外擴。",
-                            "tips": ["閃點後找紫線縫"]
-                        },
-                        {
-                            "name": "Arcane Edge",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
+                            "description": "對 1 仇 tankbuster。",
+                            "tips": [
+                                { "text": "MT 開減傷", "role": "tank" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "反法艾",
+            "nameEn": "Antifaesia",
+            "mnemonic": [
+                "場地縮小機制。",
+                "多重 AoE 預兆。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Shrink Arena 場地縮小",
+                            "type": "other",
+                            "description": "場地縮小範圍。",
+                            "tips": ["保持中央"]
+                        },
+                        {
+                            "name": "Multi AoE 多重 AoE",
+                            "type": "aoe",
+                            "description": "場上多重 AoE 預兆 + 爆。",
+                            "tips": ["跟著預兆移動"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "哥布茲 (Archfiend 形態)",
+            "nameEn": "Golbez (Archfiend)",
+            "mnemonic": [
+                "完整 Archfiend 形態。",
+                "Black Star 黑暗龍捲。",
+                "Mist Dragon 霧龍分身。",
+                "Genesis Rock 創世岩石。"
+            ],
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Black Star 黑暗龍捲",
+                            "type": "aoe",
+                            "description": "場上黑暗龍捲 + 圓 AoE。",
+                            "tips": ["離開龍捲位置"]
+                        },
+                        {
+                            "name": "Mist Dragon 霧龍",
+                            "type": "other",
+                            "description": "Mist Dragon 分身發動扇形 AoE。",
+                            "tips": ["看分身朝向"]
+                        },
+                        {
+                            "name": "Genesis Rock 創世岩石",
+                            "type": "aoe",
+                            "description": "場上岩石 AoE。",
+                            "tips": ["閃岩石位置"]
+                        },
+                        {
+                            "name": "Cosmic Rays 宇宙射線",
+                            "type": "aoe",
+                            "description": "場上多重直線 AoE。",
+                            "tips": ["閃直線預警"]
                         }
                     ]
                 }

@@ -1,115 +1,71 @@
 {
     "id": "dark_inside",
-    "name": "佐迪亞克殲滅戰",
+    "name": "極夜決戰",
     "nameEn": "The Dark Inside",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
-    "jobLevelSync": 84,
+    "jobLevelSync": 89,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Exoterikos：三角=對角錐 AoE 朝對側、方塊=該半場。",
-        "2）Adikia：兩拳打左右，南北安全。",
-        "3）Astral Eclipse：看 3 顆星模式（3 種圖案）預判隕石落點。",
-        "4）Algedon：Boss 對角衝鋒地圖斜切，會把人擊飛出場外。"
+        "1）Algedon：分擔圓 + 邊緣 AoE。",
+        "2）Cold Sentence：對 2 名玩家連線分擔。",
+        "3）Phaseshift：場地分區 + 黑色/紫色配對機制。",
+        "4）Adikia：場上多個 AoE 預兆 + 倒數爆。",
+        "5）狂暴：Astral Eclipse 全屏即死。"
     ],
-    "notes": "6.0 EW 第一個 MSQ trial（Lv 83-84）。Zodiark 重置 HP 為 1 是開場震撼。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.0 MSQ trial (Lv 89)。Zodiark (索德雷恩) Normal。EW MSQ 第一個 trial。",
     "bosses": [
         {
-            "name": "佐迪亞克",
+            "name": "索德雷恩",
             "nameEn": "Zodiark",
-            "mnemonic": ["三角=對角錐、方塊=半場", "Algedon 別被擊出"],
+            "mnemonic": [
+                "Algedon：分擔圓 + 邊緣 AoE。",
+                "Phaseshift：場地分區 + 配色解。",
+                "Cold Sentence：連線兩玩家分擔。",
+                "Adikia：場上多重 AoE 預兆。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Kokytos",
-                            "type": "raidwide",
-                            "description": "開場 HP 變 1。",
-                            "tips": [{ "text": "立刻補滿", "role": "healer" }]
-                        },
-                        {
-                            "name": "Exoterikos (三角)",
-                            "type": "aoe",
-                            "description": "藍紫色光 → 三角符文 = 對角寬錐 AoE 覆蓋對側兩角。",
-                            "tips": ["跑到三角同側的中央"]
-                        },
-                        {
-                            "name": "Exoterikos (方塊)",
-                            "type": "aoe",
-                            "description": "紅色光 → 方塊符文 = 該半場 AoE。",
-                            "tips": ["跑到對半場"]
-                        },
-                        {
-                            "name": "Ania (TB)",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Styx",
+                            "name": "Algedon 痛苦",
                             "type": "stack",
-                            "description": "多段疊機高傷。",
-                            "tips": [
-                                "全員疊",
-                                { "text": "減傷 + 連補", "role": "healer" }
-                            ]
+                            "description": "場中央分擔圓 + 邊緣 AoE。",
+                            "tips": ["全員疊中央"]
                         },
                         {
-                            "name": "Paradeigma (Behemoth/Snake)",
-                            "type": "aoe",
-                            "description": "Behemoth=兩象限 AoE；Snake=兩條線 AoE 留縫。",
-                            "tips": ["看小怪類型找安全位"]
+                            "name": "Cold Sentence 寒冷判決",
+                            "type": "stack",
+                            "description": "連線 2 名玩家分擔。",
+                            "tips": [{ "text": "兩 T 站近接", "role": "tank" }]
                         },
                         {
-                            "name": "Adikia",
-                            "type": "aoe",
-                            "description": "兩拳打左右，南北安全。",
-                            "tips": ["跑南北"]
-                        },
-                        {
-                            "name": "Phlegeton",
-                            "type": "aoe",
-                            "description": "3 波玩家腳下 AoE。",
-                            "tips": ["持續移動"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Astral Flow",
+                            "name": "Phaseshift 相位變換",
                             "type": "other",
-                            "description": "Paradeigma 期間場地轉 90 度，雷射/蛇位置也轉。",
-                            "tips": ["凍住中時看旋轉終點"]
+                            "description": "場地分區 + 黑/紫配對機制。",
+                            "tips": ["依配色找安全區"]
                         },
                         {
-                            "name": "Triple Esoteric Ray",
+                            "name": "Adikia 不義",
                             "type": "aoe",
-                            "description": "3 條雷射依序，中央/兩側互換安全。",
-                            "tips": ["看順序進剛射過的位置"]
+                            "description": "場上多重 AoE 預兆 + 倒數爆。",
+                            "tips": ["跟預兆移動"]
                         },
                         {
-                            "name": "Algedon",
-                            "type": "other",
-                            "description": "Boss 對角衝鋒斜切全場，命中擊飛場外。",
-                            "tips": ["看 Boss 位置跑對角"]
+                            "name": "Algedon 大版本",
+                            "type": "stack",
+                            "description": "整場分擔機制 + 邊緣黑霧 AoE。",
+                            "tips": ["全員疊安全區"]
                         },
                         {
-                            "name": "Astral Eclipse",
-                            "type": "aoe",
-                            "description": "Boss 繞場逆時針，3 個方向繩標記 3x3 隕石模式。",
-                            "tips": ["3 種模式記住", "預判落點"]
-                        },
-                        {
-                            "name": "Trimorphos Exoterikos",
-                            "type": "aoe",
-                            "description": "連續 3 個 Exoterikos 從 3 個方向放，隨機順序。",
-                            "tips": ["看符號類型依序躲"]
+                            "name": "Astral Eclipse (Enrage)",
+                            "type": "raidwide",
+                            "description": "全屏即死。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }
