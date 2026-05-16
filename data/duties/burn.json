@@ -1,58 +1,221 @@
 {
-    "id": "burn",
-    "name": "焚毀之家",
-    "nameEn": "The Burn",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Hedetet 蠍王：場上四個白晶柱是 Hailfire 攻擊的盾牌 (站柱後擋傷)；Shardfall (場外圈) → 站柱後 / Dissonance (場內圈) → 站 boss hitbox 內。Shardstrike 散開避命中柱。",
-        "2）B2 Defective Drone：場邊永久火痕；Full Throttle 五小無人機衝鋒 → **找沒燈光、冒火花的那台跑進它的車道**避免擊飛入火；Rock Busters 場邊查克拉姆直線。",
-        "3）B3 Mist Dragon：Fog Plume 星形 AoE 中毒 + Mist 凍結 → 被困需隊友打破；Vaporize 化霧無敵 → 殺 Draconic Regard adds 否則 Cold Fog 持續擴大；Deep Fog 場地霧 → 繞外圈閃低空飛龍。"
-    ],
-    "notes": "SB 4.4 dungeon Lv 70 ilvl 350。Yanxia 焚毀之家。資料來源：CGW (The Burn)。",
-    "bosses": [
-        {
-            "name": "Hedetet 蠍王",
-            "nameEn": "Hedetet",
-            "mnemonic": ["四白晶柱 = 盾", "Hailfire 躲柱後", "Shardfall 站柱 / Dissonance 站 hitbox 內", "Shardstrike 散開"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Crystal Needle 水晶針", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Hailfire 雹火", "type": "other", "description": "標記玩家 → boss 跳到場上後對該玩家射沙 → 沙打中首個物件 (柱)。**站柱後擋傷**。", "tips": ["躲柱後"] },
-                { "name": "Shardfall 碎片墜落", "type": "raidwide", "description": "全屏，安全區柱後。", "tips": ["躲柱後"] },
-                { "name": "Dissonance 失調", "type": "raidwide", "description": "全屏，**安全區 boss hitbox 內**。", "tips": ["貼緊 boss"] },
-                { "name": "Shardstrike 碎片擊", "type": "spread", "description": "全員散開 AoE 標記。", "tips": ["散開但避免打到柱"] }
-            ]}]
-        },
-        {
-            "name": "Defective Drone 缺陷無人機",
-            "nameEn": "Defective Drone",
-            "mnemonic": ["場邊永久火痕", "Full Throttle 五小機衝鋒 → 找沒燈光的車道", "Rock Busters 場邊直線"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Aetherochemical Flame 化學焰", "type": "raidwide", "description": "全屏高傷。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Aetherochemical Coil 化學線圈", "type": "tankbuster", "description": "前方錐 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Sludge Glob 污泥球", "type": "other", "description": "對玩家擲污泥球 → Leaden debuff (慢)。", "tips": ["閃球路徑"] },
-                { "name": "Full Throttle 全速 + 5 小無人機衝鋒", "type": "other", "description": "Drone 退場，5 小無人機從一側出現 → **找沒燈光、冒火花的那台**移到它的車道。被衝到 = 擊飛入火。", "tips": ["看哪台冒火花 → 站它車道"] },
-                { "name": "Rock Busters 岩石破壞", "type": "aoe", "description": "場邊召 Rock Biter (查克拉姆) → 跨場直線。", "tips": ["別站直線"] }
-            ]}]
-        },
-        {
-            "name": "Mist Dragon 霧龍",
-            "nameEn": "Mist Dragon",
-            "mnemonic": ["Frost Breath 留冰池 → Frostbite", "Fog Plume 星形 AoE → 被困 → 隊友破", "Vaporize 化霧無敵 → 殺 Draconic Regard adds", "Deep Fog 場地霧 → 繞外圈閃低飛龍"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Rime Wreath 寒冰花環", "type": "raidwide", "description": "全屏高傷。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Frost Breath 寒霜吐息", "type": "aoe", "description": "兩擊：對非 tank 直線 + 對 tank 廣角 → 留冰池 Frostbite。", "tips": ["閃直線，跑出冰池"] },
-                { "name": "Fog Plume 霧羽", "type": "aoe", "description": "南側星形 AoE + 中央圓 + 四直線 → 被打中 Mist 凍 10s + 持續傷。**Mist 可被隊友打破**。後期變兩個星。", "tips": ["閃星形 + 救隊友"] },
-                { "name": "Vaporize 化霧無敵", "type": "other", "description": "boss 化霧不可選 + 召 3 Draconic Regard adds 連繩 boss。**攻擊 boss 反擊凍結**。", "tips": [{ "text": "DPS 全力殺 adds 阻止 Cold Fog 擴大", "role": "dps" }] },
-                { "name": "Cold Fog 冷霧", "type": "aoe", "description": "boss 為中心慢慢擴大 AoE，殺光 adds 後停。", "tips": ["殺 adds 是阻止關鍵"] },
-                { "name": "Deep Fog 深霧", "type": "other", "description": "場地霧 + Dropsy debuff，boss 離場低空衝刺直線。**繞場邊 + 看到 boss 才看到 telegraph**。", "tips": ["沿場邊跑，看到龍跑開"] },
-                { "name": "Touchdown 觸地", "type": "other", "description": "proximity 標記 → boss 砸下。", "tips": ["先救 Mist 中隊友 → 跑對側"] }
-            ]}]
-        }
-    ]
+    "id":  "burn",
+    "name":  "焚毀之家",
+    "nameEn":  "The Burn",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Hedetet 蠍王：場上四個白晶柱是 Hailfire 攻擊的盾牌 (站柱後擋傷)；Shardfall (場外圈) → 站柱後 / Dissonance (場內圈) → 站 boss hitbox 內。Shardstrike 散開避命中柱。",
+                     "2）B2 Defective Drone：場邊永久火痕；Full Throttle 五小無人機衝鋒 → **找沒燈光、冒火花的那台跑進它的車道**避免擊飛入火；Rock Busters 場邊查克拉姆直線。",
+                     "3）B3 Mist Dragon：Fog Plume 星形 AoE 中毒 + Mist 凍結 → 被困需隊友打破；Vaporize 化霧無敵 → 殺 Draconic Regard adds 否則 Cold Fog 持續擴大；Deep Fog 場地霧 → 繞外圈閃低空飛龍。"
+                 ],
+    "notes":  "SB 4.4 dungeon Lv 70 ilvl 350。Yanxia 焚毀之家。資料來源：CGW (The Burn)。",
+    "bosses":  [
+                   {
+                       "name":  "蠍王",
+                       "nameEn":  "Hedetet",
+                       "mnemonic":  [
+                                        "四白晶柱 = 盾",
+                                        "Hailfire 躲柱後",
+                                        "Shardfall 站柱 / Dissonance 站 hitbox 內",
+                                        "Shardstrike 散開"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Crystal Needle 水晶針",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hailfire 雹火",
+                                                                "type":  "other",
+                                                                "description":  "標記玩家 → boss 跳到場上後對該玩家射沙 → 沙打中首個物件 (柱)。**站柱後擋傷**。",
+                                                                "tips":  [
+                                                                             "躲柱後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shardfall 碎片墜落",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏，安全區柱後。",
+                                                                "tips":  [
+                                                                             "躲柱後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dissonance 失調",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏，**安全區 boss hitbox 內**。",
+                                                                "tips":  [
+                                                                             "貼緊 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shardstrike 碎片擊",
+                                                                "type":  "spread",
+                                                                "description":  "全員散開 AoE 標記。",
+                                                                "tips":  [
+                                                                             "散開但避免打到柱"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "缺陷無人機",
+                       "nameEn":  "Defective Drone",
+                       "mnemonic":  [
+                                        "場邊永久火痕",
+                                        "Full Throttle 五小機衝鋒 → 找沒燈光的車道",
+                                        "Rock Busters 場邊直線"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Aetherochemical Flame 化學焰",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏高傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aetherochemical Coil 化學線圈",
+                                                                "type":  "tankbuster",
+                                                                "description":  "前方錐 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Sludge Glob 污泥球",
+                                                                "type":  "other",
+                                                                "description":  "對玩家擲污泥球 → Leaden debuff (慢)。",
+                                                                "tips":  [
+                                                                             "閃球路徑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Full Throttle 全速 + 5 小無人機衝鋒",
+                                                                "type":  "other",
+                                                                "description":  "Drone 退場，5 小無人機從一側出現 → **找沒燈光、冒火花的那台**移到它的車道。被衝到 = 擊飛入火。",
+                                                                "tips":  [
+                                                                             "看哪台冒火花 → 站它車道"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rock Busters 岩石破壞",
+                                                                "type":  "aoe",
+                                                                "description":  "場邊召 Rock Biter (查克拉姆) → 跨場直線。",
+                                                                "tips":  [
+                                                                             "別站直線"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "霧龍",
+                       "nameEn":  "Mist Dragon",
+                       "mnemonic":  [
+                                        "Frost Breath 留冰池 → Frostbite",
+                                        "Fog Plume 星形 AoE → 被困 → 隊友破",
+                                        "Vaporize 化霧無敵 → 殺 Draconic Regard adds",
+                                        "Deep Fog 場地霧 → 繞外圈閃低飛龍"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Rime Wreath 寒冰花環",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏高傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Frost Breath 寒霜吐息",
+                                                                "type":  "aoe",
+                                                                "description":  "兩擊：對非 tank 直線 + 對 tank 廣角 → 留冰池 Frostbite。",
+                                                                "tips":  [
+                                                                             "閃直線，跑出冰池"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Fog Plume 霧羽",
+                                                                "type":  "aoe",
+                                                                "description":  "南側星形 AoE + 中央圓 + 四直線 → 被打中 Mist 凍 10s + 持續傷。**Mist 可被隊友打破**。後期變兩個星。",
+                                                                "tips":  [
+                                                                             "閃星形 + 救隊友"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vaporize 化霧無敵",
+                                                                "type":  "other",
+                                                                "description":  "boss 化霧不可選 + 召 3 Draconic Regard adds 連繩 boss。**攻擊 boss 反擊凍結**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力殺 adds 阻止 Cold Fog 擴大",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cold Fog 冷霧",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 為中心慢慢擴大 AoE，殺光 adds 後停。",
+                                                                "tips":  [
+                                                                             "殺 adds 是阻止關鍵"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Deep Fog 深霧",
+                                                                "type":  "other",
+                                                                "description":  "場地霧 + Dropsy debuff，boss 離場低空衝刺直線。**繞場邊 + 看到 boss 才看到 telegraph**。",
+                                                                "tips":  [
+                                                                             "沿場邊跑，看到龍跑開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Touchdown 觸地",
+                                                                "type":  "other",
+                                                                "description":  "proximity 標記 → boss 砸下。",
+                                                                "tips":  [
+                                                                             "先救 Mist 中隊友 → 跑對側"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

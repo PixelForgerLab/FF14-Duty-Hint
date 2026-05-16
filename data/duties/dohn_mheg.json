@@ -1,214 +1,253 @@
 {
-    "id": "dohn_mheg",
-    "name": "頓魅鎮",
-    "nameEn": "Dohn Mheg",
-    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 74,
-    "highEnd": false,
-    "mnemonic": [
-        "1）Aenc Thon (緩眼君主)：Laughing Leap 中央圓或玩家分擔；Landsblood 持續藍水 AoE 跑外圍。",
-        "2）Griaule (咆哮巨樹)：玩家截斷 Painted Sapling 連繩拿 Growing buff，**5 stacks 上 Boss = 團滅**。",
-        "3）Aenc Thon (湖之主)：Imp Choir 變小妖 (gaze)、Toad Choir 變蛤蟆 (cone)；Funambulist's Fantasia 走獨木橋打 Liar's Lyre 中斷 Finale 即死。"
-    ],
-    "notes": "5.0 ShB 第二個 MSQ 副本 (Lv 73-74, ilvl 375)。位於妖精領 Il Mheg。三隻 boss：Aenc Thon 第一形態 (Lord of the Lingering Gaze)、Griaule (咆哮巨樹)、Aenc Thon 第二形態 Lakelord (Lord of the Lengthsome Gait)。MSQ 必過。最終 Boss 的 Funambulist's Fantasia (走索人狂想曲) 獨木橋 + Finale 即死是核心機制。Duty Support + Trust 均可單人通關。",
-    "quality": "excellent",
-    "bosses": [
-        {
-            "name": "Aenc Thon 緩眼君主",
-            "nameEn": "Aenc Thon, Lord of the Lingering Gaze",
-            "mnemonic": [
-                "Hydrofall 水落：兩個玩家腳下圓 AoE，拉開散開。",
-                "Laughing Leap 笑躍：boss 跳場中央或標記玩家。",
-                "Landsblood 湧水：場上不斷出現藍色水 AoE，越濃越快爆。"
-            ],
-            "notes": "第一隻 boss。位於 Teag Gye。整體機制簡單，主要練習辨識 AoE 預警與持續移動。",
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Candy Cane 糖果手杖",
-                            "type": "tankbuster",
-                            "description": "對主 T 單體高傷。",
-                            "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "T 受擊瞬間補血或盾", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Hydrofall 水落",
-                            "type": "aoe",
-                            "description": "在隨機 2 名玩家腳下放圓形 AoE，被點到玩家高傷。",
-                            "tips": [
-                                "看到 marker 拉開",
-                                "別跟其他人共擔（這是純避免機制，非 stack）"
-                            ]
-                        },
-                        {
-                            "name": "Laughing Leap 笑躍",
-                            "type": "stack",
-                            "description": "Boss 跳到場中央放小範圍 AoE，或跳到指定玩家放 stack 標記。後接 Landsblood。",
-                            "tips": [
-                                "看 marker：場中央 = 跑外側；玩家身上 = 全員疊上去分擔",
-                                { "text": "預判補血", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Landsblood 湧水",
-                            "type": "aoe",
-                            "description": "Laughing Leap 後持續發動：全體穩定小傷 + 場上隨機出現多個藍色水 AoE 標記。標記越濃越接近爆發，會造成中傷 + 暈眩 (Stun)。",
-                            "tips": [
-                                "持續走外圍避免堆藍水",
-                                "踩到會被暈住失去行動",
-                                { "text": "全體持續補血", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Griaule 咆哮巨樹",
-            "nameEn": "Griaule",
-            "mnemonic": [
-                "Fodder 飼料：5 條 Sapling 連繩，玩家擋線截 4 條拿 Growing buff。",
-                "**留 1 條給 Boss**：5 stacks 上 Boss → 下次 Tiiimbeeer 必團滅。",
-                "Coiling Ivy 盤繞藤蔓：4 個藤蔓綁玩家，要打掉解綁。"
-            ],
-            "notes": "中間 boss。位於 The Atelier。核心是 Growing buff 機制：玩家獲得 Growing buff 增傷+減傷+變大，第二層變 Full-Grown 更強；但若 Boss 自己疊到 5 層 → 團滅。所以要主動截繩。",
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Swinge 橫掃",
-                            "type": "aoe",
-                            "description": "60 度正前方扇形 AoE。",
-                            "tips": [
-                                { "text": "T 把 boss 拉好面向遠離隊友", "role": "tank" },
-                                "其他人站側面 / 背面輸出"
-                            ]
-                        },
-                        {
-                            "name": "Fodder 飼料 / Painted Sapling 染色幼木",
-                            "type": "other",
-                            "description": "Boss 移到場中央召喚 5 條無法選中的 Painted Sapling 並連繩到自身。玩家可站在 Sapling 與 Boss 之間「截繩」，截到的玩家獲得「Growing 成長」buff（增傷+減傷+變大），疊第二層變「Full-Grown」效果更強。**Boss 自己若疊到 5 層 Growing → 下次 Tiiimbeeer 直接團滅滿血都死**。",
-                            "tips": [
-                                "**全員主動截繩**：4 人各擋 1 條",
-                                "站位：身體擋住 Sapling 朝 Boss 的射線",
-                                "DPS 與補職都要參與，不要留太多條給 Boss",
-                                { "text": "Growing buff 對 T 來說減傷很好用", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Tiiimbeeer 咆哮",
-                            "type": "raidwide",
-                            "description": "中等全體 AoE。若 Boss 持有 5 stacks Growing → 即死。",
-                            "tips": [
-                                { "text": "預判補血", "role": "healer" },
-                                "若 boss 疊到 5 → 重新打"
-                            ]
-                        },
-                        {
-                            "name": "Coiling Ivy 盤繞藤蔓",
-                            "type": "other",
-                            "description": "4 條 Painted Ivy 出現在每個玩家腳下，附加「Fetter」綁住玩家無法移動。需打掉藤蔓解綁。",
-                            "tips": [
-                                "近戰自己打自己腳邊的",
-                                { "text": "遠程先解自己再幫忙打別人的", "role": "dps" },
-                                "沒解開的人會被 Swinge 等技能掃到"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Aenc Thon 湖之主",
-            "nameEn": "Aenc Thon, Lord of the Lengthsome Gait",
-            "mnemonic": [
-                "Imp Choir 小妖合唱：凝視，變身 6 秒。**背對 Boss**。",
-                "Toad Choir 蛤蟆合唱：寬錐 AoE，被掃到變蛤蟆 6 秒。**繞側避開**。",
-                "Funambulist's Fantasia 走索人狂想曲：場地裂開只剩獨木橋；Finale 即死，必須打 Liar's Lyre 中斷。",
-                "Virtuisic Capriccio 炫技狂想曲：全體小傷 + 出血，後期會連發 3 次。"
-            ],
-            "notes": "最終 Boss。位於 Throne Room。核心是 Funambulist's Fantasia 獨木橋機制：場地大部分塌陷，玩家被擊退到入口，必須走窄路到 Boss 屏障內打掉 Liar's Lyre 中斷 Finale，否則 Finale 結算強制團滅。掉落不會死但會被傳送回起點 + 暈眩。**禁止用瞬移技能跨過**。",
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Crippling Blow 致命一擊",
-                            "type": "tankbuster",
-                            "description": "對主 T 高傷單體。",
-                            "tips": [
-                                { "text": "開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Virtuisic Capriccio 炫技狂想曲",
-                            "type": "raidwide",
-                            "description": "中等全體 AoE + 弱出血 debuff。後期連發 3 次（出血 debuff 不會疊）。",
-                            "tips": [
-                                { "text": "預判補血 + 解出血", "role": "healer" },
-                                { "text": "連發 3 次時開全體減傷", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Imp Choir 小妖合唱",
-                            "type": "other",
-                            "description": "凝視攻擊（gaze）。被凝視的玩家變成 Imp（小妖）6 秒，無法輸出。",
-                            "tips": [
-                                "**背對 Boss** 即可",
-                                "看到讀條轉身"
-                            ]
-                        },
-                        {
-                            "name": "Toad Choir 蛤蟆合唱",
-                            "type": "aoe",
-                            "description": "Boss 朝向隨機玩家放寬錐形 AoE（無顯示範圍）。被掃到的玩家變成 Toad（蛤蟆）6 秒。",
-                            "tips": [
-                                "**繞到 Boss 側面或後方**",
-                                "看 Boss 朝向預判錐形方向",
-                                "與 Imp Choir 對比：Imp = 凝視（背對），Toad = 錐形（繞側）"
-                            ]
-                        },
-                        {
-                            "name": "Funambulist's Fantasia 走索人狂想曲",
-                            "type": "other",
-                            "description": "Boss 移到場後方，把所有玩家擊退到場入口，場中央裂開只剩一條彎曲獨木橋。Boss 被屏障包圍，召喚 Liar's Lyre (騙子的里拉琴) 並開始讀條 Finale (終曲) = 強制團滅。掉橋會被傳送回起點 + 暈 (Fool's Tumble 愚者的跌跤)，但不死。**瞬移類技能無法跨過**。",
-                            "tips": [
-                                "**穩穩走，不要急**：摔下去比慢一點到還慘",
-                                "看到讀條 Finale 倒數開始衝橋",
-                                "通過 Trust 隊伍時 Minfilia 走太慢可能來不及，要主動 carry",
-                                { "text": "Sprint 快步必開", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Liar's Lyre 騙子的里拉琴",
-                            "type": "other",
-                            "description": "只有進入 Boss 屏障內才能攻擊。打破 Lyre → 中斷 Finale + 暈眩 Boss 一段時間。",
-                            "tips": [
-                                "進屏障後全力打 Lyre",
-                                { "text": "近戰直接打、遠程也別站太遠", "role": "dps" },
-                                "中斷後 burst boss 趁暈眩"
-                            ]
-                        },
-                        {
-                            "name": "Finale 終曲",
-                            "type": "raidwide",
-                            "description": "如果 Liar's Lyre 沒打掉、Finale 讀條完成 → 強制全滅。",
-                            "tips": [
-                                "**絕對不能讓它讀完**",
-                                "中斷失敗 = 重來"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "dohn_mheg",
+    "name":  "頓魅鎮",
+    "nameEn":  "Dohn Mheg",
+    "expansion":  "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  74,
+    "highEnd":  false,
+    "mnemonic":  [
+                     "1）Aenc Thon (緩眼君主)：Laughing Leap 中央圓或玩家分擔；Landsblood 持續藍水 AoE 跑外圍。",
+                     "2）Griaule (咆哮巨樹)：玩家截斷 Painted Sapling 連繩拿 Growing buff，**5 stacks 上 Boss = 團滅**。",
+                     "3）Aenc Thon (湖之主)：Imp Choir 變小妖 (gaze)、Toad Choir 變蛤蟆 (cone)；Funambulist\u0027s Fantasia 走獨木橋打 Liar\u0027s Lyre 中斷 Finale 即死。"
+                 ],
+    "notes":  "5.0 ShB 第二個 MSQ 副本 (Lv 73-74, ilvl 375)。位於妖精領 Il Mheg。三隻 boss：Aenc Thon 第一形態 (Lord of the Lingering Gaze)、Griaule (咆哮巨樹)、Aenc Thon 第二形態 Lakelord (Lord of the Lengthsome Gait)。MSQ 必過。最終 Boss 的 Funambulist\u0027s Fantasia (走索人狂想曲) 獨木橋 + Finale 即死是核心機制。Duty Support + Trust 均可單人通關。",
+    "quality":  "excellent",
+    "bosses":  [
+                   {
+                       "name":  "緩眼君主",
+                       "nameEn":  "Aenc Thon",
+                       "mnemonic":  [
+                                        "Hydrofall 水落：兩個玩家腳下圓 AoE，拉開散開。",
+                                        "Laughing Leap 笑躍：boss 跳場中央或標記玩家。",
+                                        "Landsblood 湧水：場上不斷出現藍色水 AoE，越濃越快爆。"
+                                    ],
+                       "notes":  "第一隻 boss。位於 Teag Gye。整體機制簡單，主要練習辨識 AoE 預警與持續移動。",
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Candy Cane 糖果手杖",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對主 T 單體高傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "開減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "T 受擊瞬間補血或盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hydrofall 水落",
+                                                                "type":  "aoe",
+                                                                "description":  "在隨機 2 名玩家腳下放圓形 AoE，被點到玩家高傷。",
+                                                                "tips":  [
+                                                                             "看到 marker 拉開",
+                                                                             "別跟其他人共擔（這是純避免機制，非 stack）"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Laughing Leap 笑躍",
+                                                                "type":  "stack",
+                                                                "description":  "Boss 跳到場中央放小範圍 AoE，或跳到指定玩家放 stack 標記。後接 Landsblood。",
+                                                                "tips":  [
+                                                                             "看 marker：場中央 = 跑外側；玩家身上 = 全員疊上去分擔",
+                                                                             {
+                                                                                 "text":  "預判補血",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Landsblood 湧水",
+                                                                "type":  "aoe",
+                                                                "description":  "Laughing Leap 後持續發動：全體穩定小傷 + 場上隨機出現多個藍色水 AoE 標記。標記越濃越接近爆發，會造成中傷 + 暈眩 (Stun)。",
+                                                                "tips":  [
+                                                                             "持續走外圍避免堆藍水",
+                                                                             "踩到會被暈住失去行動",
+                                                                             {
+                                                                                 "text":  "全體持續補血",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "咆哮巨樹",
+                       "nameEn":  "Griaule",
+                       "mnemonic":  [
+                                        "Fodder 飼料：5 條 Sapling 連繩，玩家擋線截 4 條拿 Growing buff。",
+                                        "**留 1 條給 Boss**：5 stacks 上 Boss → 下次 Tiiimbeeer 必團滅。",
+                                        "Coiling Ivy 盤繞藤蔓：4 個藤蔓綁玩家，要打掉解綁。"
+                                    ],
+                       "notes":  "中間 boss。位於 The Atelier。核心是 Growing buff 機制：玩家獲得 Growing buff 增傷+減傷+變大，第二層變 Full-Grown 更強；但若 Boss 自己疊到 5 層 → 團滅。所以要主動截繩。",
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Swinge 橫掃",
+                                                                "type":  "aoe",
+                                                                "description":  "60 度正前方扇形 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 把 boss 拉好面向遠離隊友",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "其他人站側面 / 背面輸出"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Fodder 飼料 / Painted Sapling 染色幼木",
+                                                                "type":  "other",
+                                                                "description":  "Boss 移到場中央召喚 5 條無法選中的 Painted Sapling 並連繩到自身。玩家可站在 Sapling 與 Boss 之間「截繩」，截到的玩家獲得「Growing 成長」buff（增傷+減傷+變大），疊第二層變「Full-Grown」效果更強。**Boss 自己若疊到 5 層 Growing → 下次 Tiiimbeeer 直接團滅滿血都死**。",
+                                                                "tips":  [
+                                                                             "**全員主動截繩**：4 人各擋 1 條",
+                                                                             "站位：身體擋住 Sapling 朝 Boss 的射線",
+                                                                             "DPS 與補職都要參與，不要留太多條給 Boss",
+                                                                             {
+                                                                                 "text":  "Growing buff 對 T 來說減傷很好用",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tiiimbeeer 咆哮",
+                                                                "type":  "raidwide",
+                                                                "description":  "中等全體 AoE。若 Boss 持有 5 stacks Growing → 即死。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "預判補血",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "若 boss 疊到 5 → 重新打"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Coiling Ivy 盤繞藤蔓",
+                                                                "type":  "other",
+                                                                "description":  "4 條 Painted Ivy 出現在每個玩家腳下，附加「Fetter」綁住玩家無法移動。需打掉藤蔓解綁。",
+                                                                "tips":  [
+                                                                             "近戰自己打自己腳邊的",
+                                                                             {
+                                                                                 "text":  "遠程先解自己再幫忙打別人的",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "沒解開的人會被 Swinge 等技能掃到"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "湖之主",
+                       "nameEn":  "Aenc Thon",
+                       "mnemonic":  [
+                                        "Imp Choir 小妖合唱：凝視，變身 6 秒。**背對 Boss**。",
+                                        "Toad Choir 蛤蟆合唱：寬錐 AoE，被掃到變蛤蟆 6 秒。**繞側避開**。",
+                                        "Funambulist\u0027s Fantasia 走索人狂想曲：場地裂開只剩獨木橋；Finale 即死，必須打 Liar\u0027s Lyre 中斷。",
+                                        "Virtuisic Capriccio 炫技狂想曲：全體小傷 + 出血，後期會連發 3 次。"
+                                    ],
+                       "notes":  "最終 Boss。位於 Throne Room。核心是 Funambulist\u0027s Fantasia 獨木橋機制：場地大部分塌陷，玩家被擊退到入口，必須走窄路到 Boss 屏障內打掉 Liar\u0027s Lyre 中斷 Finale，否則 Finale 結算強制團滅。掉落不會死但會被傳送回起點 + 暈眩。**禁止用瞬移技能跨過**。",
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Crippling Blow 致命一擊",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對主 T 高傷單體。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Virtuisic Capriccio 炫技狂想曲",
+                                                                "type":  "raidwide",
+                                                                "description":  "中等全體 AoE + 弱出血 debuff。後期連發 3 次（出血 debuff 不會疊）。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "預判補血 + 解出血",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "連發 3 次時開全體減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Imp Choir 小妖合唱",
+                                                                "type":  "other",
+                                                                "description":  "凝視攻擊（gaze）。被凝視的玩家變成 Imp（小妖）6 秒，無法輸出。",
+                                                                "tips":  [
+                                                                             "**背對 Boss** 即可",
+                                                                             "看到讀條轉身"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Toad Choir 蛤蟆合唱",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 朝向隨機玩家放寬錐形 AoE（無顯示範圍）。被掃到的玩家變成 Toad（蛤蟆）6 秒。",
+                                                                "tips":  [
+                                                                             "**繞到 Boss 側面或後方**",
+                                                                             "看 Boss 朝向預判錐形方向",
+                                                                             "與 Imp Choir 對比：Imp = 凝視（背對），Toad = 錐形（繞側）"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Funambulist\u0027s Fantasia 走索人狂想曲",
+                                                                "type":  "other",
+                                                                "description":  "Boss 移到場後方，把所有玩家擊退到場入口，場中央裂開只剩一條彎曲獨木橋。Boss 被屏障包圍，召喚 Liar\u0027s Lyre (騙子的里拉琴) 並開始讀條 Finale (終曲) = 強制團滅。掉橋會被傳送回起點 + 暈 (Fool\u0027s Tumble 愚者的跌跤)，但不死。**瞬移類技能無法跨過**。",
+                                                                "tips":  [
+                                                                             "**穩穩走，不要急**：摔下去比慢一點到還慘",
+                                                                             "看到讀條 Finale 倒數開始衝橋",
+                                                                             "通過 Trust 隊伍時 Minfilia 走太慢可能來不及，要主動 carry",
+                                                                             {
+                                                                                 "text":  "Sprint 快步必開",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Liar\u0027s Lyre 騙子的里拉琴",
+                                                                "type":  "other",
+                                                                "description":  "只有進入 Boss 屏障內才能攻擊。打破 Lyre → 中斷 Finale + 暈眩 Boss 一段時間。",
+                                                                "tips":  [
+                                                                             "進屏障後全力打 Lyre",
+                                                                             {
+                                                                                 "text":  "近戰直接打、遠程也別站太遠",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "中斷後 burst boss 趁暈眩"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Finale 終曲",
+                                                                "type":  "raidwide",
+                                                                "description":  "如果 Liar\u0027s Lyre 沒打掉、Finale 讀條完成 → 強制全滅。",
+                                                                "tips":  [
+                                                                             "**絕對不能讓它讀完**",
+                                                                             "中斷失敗 = 重來"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

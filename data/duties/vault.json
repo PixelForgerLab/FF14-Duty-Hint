@@ -1,57 +1,210 @@
 {
-    "id": "vault",
-    "name": "天穹宮",
-    "nameEn": "The Vault",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 57,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Adelphel：先清 3 隻小兵 → 30% 變形 + 擊退；Holy Shield Bash 跳擊昏；Charge 衝鋒留光球。",
-        "2）B2 Grinnaux：Hyperdimensional Slash 紅 AoE 留 Aetherial Tear 在牆，連放兩次 → 把 Tear 引到同一邊牆，Faith Unmoving 擊退時站對側避開。",
-        "3）B3 Charibert：Holy Chain 兩人鎖鏈拉開破；Knights March 騎士列隊衝過閃路徑；半血召 Holy Flame 必殺否則放高傷全屏。"
-    ],
-    "notes": "HW 3.0 MSQ dungeon Lv 57 sync 58。Heavens' Ward 三騎士戰。資料來源：CGW (The Vault)。",
-    "bosses": [
-        {
-            "name": "阿德爾菲爾騎士 Ser Adelphel Brightblade",
-            "nameEn": "Ser Adelphel Brightblade",
-            "mnemonic": ["先殺 3 雜兵", "30% 變形 + 擊退", "Holy Shield Bash 跳擊昏", "Charge 留光球"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "小兵階段", "type": "other", "description": "Adelphel 初期有 3 隻血量極低小兵。", "tips": [{ "text": "DPS 先 AoE 小兵", "role": "dps" }] },
-                { "name": "Form Change (30%)", "type": "knockback", "description": "Adelphel 變形 + 擊退所有玩家進入真正戰鬥。", "tips": ["預判擊退"] },
-                { "name": "Holy Shield Bash 神聖盾擊", "type": "other", "description": "Boss 跳到目標玩家 → 暈 + 連擊。", "tips": ["被瞄準者預判位置"] },
-                { "name": "Holiest of Holy 至聖", "type": "raidwide", "description": "全體中等傷害。", "tips": [{ "text": "補血", "role": "healer" }] },
-                { "name": "Charge 衝鋒 + 光球", "type": "aoe", "description": "場上衝鋒留下會爆炸的光球，最後鎖定一名玩家落下。", "tips": ["閃光球與落地點"] }
-            ]}]
-        },
-        {
-            "name": "格利諾騎士 Ser Grinnaux The Bull",
-            "nameEn": "Ser Grinnaux The Bull",
-            "mnemonic": ["先殺小兵 → 變形", "Hyperdimensional Slash 紅 AoE → 留 Aetherial Tear", "Tear 引同一邊牆，Faith Unmoving 擊退向對側"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Form Change 變形", "type": "knockback", "description": "Grinnaux 在小兵清完後變形 + 擊退進入正戰。", "tips": ["預判方向"] },
-                { "name": "Ground AoE", "type": "aoe", "description": "場地多重 AoE 預警。", "tips": ["閃 telegraph"] },
-                { "name": "Hyperdimensional Slash 超次元斬", "type": "aoe", "description": "對隨機玩家放紅色直線 AoE，每次留下 Aetherial Tear 在牆上。**每次連放兩次**。", "tips": ["把 Tear 引到同一邊牆方便處理"] },
-                { "name": "Faith Unmoving 不動之信", "type": "knockback", "description": "全屏帶詠唱的擊退 → 把玩家從 boss 往後推。", "tips": ["背後不能是 Aetherial Tear；可用 Arm's Length / Surecast"] },
-                { "name": "Dimensional Rift 次元裂隙", "type": "aoe", "description": "場上圓形 AoE。", "tips": ["閃圓"] }
-            ]}]
-        },
-        {
-            "name": "夏立伯特騎士 Ser Charibert",
-            "nameEn": "Ser Charibert",
-            "mnemonic": ["Holy Chain 鏈鎖拉開破", "Heavensflame 火環", "騎士列隊衝過閃路徑", "半血召 Holy Flame 必殺"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Altar Pyre 祭壇焰", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Holy Chain 神聖鎖鏈", "type": "other", "description": "兩名玩家被鏈鎖在一起，拉開斷鏈否則持續扣血。", "tips": ["被鏈玩家彼此跑開"] },
-                { "name": "Heavensflame 蒼穹炽焰", "type": "aoe", "description": "場上火環。", "tips": ["閃火環"] },
-                { "name": "Knights March 騎士列隊", "type": "other", "description": "場邊召喚一排騎士衝過場地，碰到會給 Slow。", "tips": ["閃騎士行進路徑"] },
-                { "name": "Half HP 召喚 Holy Flame", "type": "other", "description": "半血消失 → 出 Dawn/Dusk Knight + 場外 Holy Flame。**不殺光火會放高傷全屏**。Knights 不站他們 AoE 即可忽略。", "tips": [{ "text": "DPS 速殺 Holy Flame", "role": "dps" }] },
-                { "name": "後半段強化", "type": "aoe", "description": "後半段 Knights 變兩排、Heavensflame 變兩組。", "tips": ["雙倍機制小心移動"] }
-            ]}]
-        }
-    ]
+    "id":  "vault",
+    "name":  "天穹宮",
+    "nameEn":  "The Vault",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  57,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Adelphel：先清 3 隻小兵 → 30% 變形 + 擊退；Holy Shield Bash 跳擊昏；Charge 衝鋒留光球。",
+                     "2）B2 Grinnaux：Hyperdimensional Slash 紅 AoE 留 Aetherial Tear 在牆，連放兩次 → 把 Tear 引到同一邊牆，Faith Unmoving 擊退時站對側避開。",
+                     "3）B3 Charibert：Holy Chain 兩人鎖鏈拉開破；Knights March 騎士列隊衝過閃路徑；半血召 Holy Flame 必殺否則放高傷全屏。"
+                 ],
+    "notes":  "HW 3.0 MSQ dungeon Lv 57 sync 58。Heavens\u0027 Ward 三騎士戰。資料來源：CGW (The Vault)。",
+    "bosses":  [
+                   {
+                       "name":  "阿德爾菲爾騎士",
+                       "nameEn":  "Ser Adelphel Brightblade",
+                       "mnemonic":  [
+                                        "先殺 3 雜兵",
+                                        "30% 變形 + 擊退",
+                                        "Holy Shield Bash 跳擊昏",
+                                        "Charge 留光球"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "小兵階段",
+                                                                "type":  "other",
+                                                                "description":  "Adelphel 初期有 3 隻血量極低小兵。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 先 AoE 小兵",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Form Change (30%)",
+                                                                "type":  "knockback",
+                                                                "description":  "Adelphel 變形 + 擊退所有玩家進入真正戰鬥。",
+                                                                "tips":  [
+                                                                             "預判擊退"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Holy Shield Bash 神聖盾擊",
+                                                                "type":  "other",
+                                                                "description":  "Boss 跳到目標玩家 → 暈 + 連擊。",
+                                                                "tips":  [
+                                                                             "被瞄準者預判位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Holiest of Holy 至聖",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體中等傷害。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補血",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Charge 衝鋒 + 光球",
+                                                                "type":  "aoe",
+                                                                "description":  "場上衝鋒留下會爆炸的光球，最後鎖定一名玩家落下。",
+                                                                "tips":  [
+                                                                             "閃光球與落地點"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "格利諾騎士",
+                       "nameEn":  "Ser Grinnaux The Bull",
+                       "mnemonic":  [
+                                        "先殺小兵 → 變形",
+                                        "Hyperdimensional Slash 紅 AoE → 留 Aetherial Tear",
+                                        "Tear 引同一邊牆，Faith Unmoving 擊退向對側"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Form Change 變形",
+                                                                "type":  "knockback",
+                                                                "description":  "Grinnaux 在小兵清完後變形 + 擊退進入正戰。",
+                                                                "tips":  [
+                                                                             "預判方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Ground AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場地多重 AoE 預警。",
+                                                                "tips":  [
+                                                                             "閃 telegraph"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hyperdimensional Slash 超次元斬",
+                                                                "type":  "aoe",
+                                                                "description":  "對隨機玩家放紅色直線 AoE，每次留下 Aetherial Tear 在牆上。**每次連放兩次**。",
+                                                                "tips":  [
+                                                                             "把 Tear 引到同一邊牆方便處理"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Faith Unmoving 不動之信",
+                                                                "type":  "knockback",
+                                                                "description":  "全屏帶詠唱的擊退 → 把玩家從 boss 往後推。",
+                                                                "tips":  [
+                                                                             "背後不能是 Aetherial Tear；可用 Arm\u0027s Length / Surecast"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dimensional Rift 次元裂隙",
+                                                                "type":  "aoe",
+                                                                "description":  "場上圓形 AoE。",
+                                                                "tips":  [
+                                                                             "閃圓"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "夏立伯特騎士",
+                       "nameEn":  "Ser Charibert",
+                       "mnemonic":  [
+                                        "Holy Chain 鏈鎖拉開破",
+                                        "Heavensflame 火環",
+                                        "騎士列隊衝過閃路徑",
+                                        "半血召 Holy Flame 必殺"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Altar Pyre 祭壇焰",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Holy Chain 神聖鎖鏈",
+                                                                "type":  "other",
+                                                                "description":  "兩名玩家被鏈鎖在一起，拉開斷鏈否則持續扣血。",
+                                                                "tips":  [
+                                                                             "被鏈玩家彼此跑開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Heavensflame 蒼穹炽焰",
+                                                                "type":  "aoe",
+                                                                "description":  "場上火環。",
+                                                                "tips":  [
+                                                                             "閃火環"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Knights March 騎士列隊",
+                                                                "type":  "other",
+                                                                "description":  "場邊召喚一排騎士衝過場地，碰到會給 Slow。",
+                                                                "tips":  [
+                                                                             "閃騎士行進路徑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Half HP 召喚 Holy Flame",
+                                                                "type":  "other",
+                                                                "description":  "半血消失 → 出 Dawn/Dusk Knight + 場外 Holy Flame。**不殺光火會放高傷全屏**。Knights 不站他們 AoE 即可忽略。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺 Holy Flame",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "後半段強化",
+                                                                "type":  "aoe",
+                                                                "description":  "後半段 Knights 變兩排、Heavensflame 變兩組。",
+                                                                "tips":  [
+                                                                             "雙倍機制小心移動"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

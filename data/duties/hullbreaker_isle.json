@@ -1,54 +1,187 @@
 {
-    "id": "hullbreaker_isle",
-    "name": "破船島",
-    "nameEn": "Hullbreaker Isle",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "good",
-    "mnemonic": [
-        "1）B1 大腳怪 Sasquatch = Chest Thump 捶胸全屏 (用香蕉打斷) + Smallfoot Sifaka 召小猴。",
-        "2）B2 海蛇 Sjoorm = Burrow 潛地 + Whirlpool 漩渦中央死 → 站 Watery Grave 水泡。",
-        "3）B3 海怪 Kraken = Platforms 4 台 + Waterspouts 跳台 (累 Suppuration debuff) + Scoop 抓起。"
-    ],
-    "notes": "ARR 2.0 dungeon (Lv 50)。海盜島嶼 + 三大海怪。",
-    "bosses": [
-        {
-            "name": "大腳怪",
-            "nameEn": "Sasquatch (Boss)",
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Wild Banana Tree 野生香蕉樹", "type": "other", "description": "場邊 6 棵香蕉樹，互動掉香蕉，可打斷 Chest Thump。", "tips": ["拿香蕉打斷捶胸"] },
-                { "name": "Chest Thump 捶胸", "type": "raidwide", "description": "Boss 捶胸 → 全屏 AoE，用香蕉打斷可眩暈 boss。", "tips": ["丟香蕉打斷"] },
-                { "name": "Smallfoot Sifaka 小腳狐猴", "type": "other", "description": "召小猴 add 會吃香蕉，需 DPS 速殺或坦拉開。", "tips": [{ "text": "DPS 速殺小猴", "role": "dps" }] },
-                { "name": "Stool Pelt 投糞", "type": "spread", "description": "目標單人下大 AoE 圈。", "tips": ["中標走開"] }
-            ]}]
-        },
-        {
-            "name": "海蛇 Sjoorm",
-            "nameEn": "Sjoorm",
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Upwell 噴湧", "type": "aoe", "description": "Boss 前長直線 AoE。", "tips": ["側步閃"] },
-                { "name": "Water Puddle 水灘", "type": "spread", "description": "玩家標 → 留水灘 AoE。", "tips": ["走出灘外"] },
-                { "name": "Watery Grave 水之墓", "type": "other", "description": "場上 3x3 大水泡網格，用於閃 Whirlpool，但內部會中傷 + 凍。", "tips": ["Whirlpool cast 時進水泡"] },
-                { "name": "Burrow 潛地", "type": "other", "description": "Boss 潛地 → 接 Whirlpool 或 Tunnel。", "tips": ["看下招處理"] },
-                { "name": "Whirlpool 漩渦", "type": "aoe", "description": "中央大 PBAoE → 進 Watery Grave 水泡避。", "tips": ["進水泡內"] },
-                { "name": "Tunnel 隧道", "type": "aoe", "description": "Boss 朝玩家穿場 line AoE。", "tips": ["側步"] }
-            ]}]
-        },
-        {
-            "name": "海怪",
-            "nameEn": "Kraken (Hullbreaker Isle)",
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Platforms 跳台 + Waterspouts 噴泉", "type": "other", "description": "場上 4 跳台 + 噴泉移動 (累 Suppuration debuff)，需避觸手 + 控用次數。", "tips": ["不要連續跳避堆 debuff"] },
-                { "name": "Wallop 重擊", "type": "aoe", "description": "Boss 前 cone AoE。", "tips": ["側面"] },
-                { "name": "Inkblot 墨點", "type": "spread", "description": "玩家標大 AoE + Slow + DoT。", "tips": ["走遠免互打"] },
-                { "name": "Clearout 清場", "type": "aoe", "description": "Boss donut AoE + 擊退；貼 hitbox 內避。", "tips": ["貼 boss 內圈"] },
-                { "name": "Tentacle 觸手 add", "type": "other", "description": "場上召觸手 add → DPS 殺保場勢。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Scoop 撈起", "type": "other", "description": "Boss 抓人扔到隨機跳台 + 短暈。", "tips": ["扔後立刻跳回"] }
-            ]}]
-        }
-    ]
+    "id":  "hullbreaker_isle",
+    "name":  "破船島",
+    "nameEn":  "Hullbreaker Isle",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）B1 大腳怪 Sasquatch = Chest Thump 捶胸全屏 (用香蕉打斷) + Smallfoot Sifaka 召小猴。",
+                     "2）B2 海蛇 Sjoorm = Burrow 潛地 + Whirlpool 漩渦中央死 → 站 Watery Grave 水泡。",
+                     "3）B3 海怪 Kraken = Platforms 4 台 + Waterspouts 跳台 (累 Suppuration debuff) + Scoop 抓起。"
+                 ],
+    "notes":  "ARR 2.0 dungeon (Lv 50)。海盜島嶼 + 三大海怪。",
+    "bosses":  [
+                   {
+                       "name":  "大腳怪",
+                       "nameEn":  "Sasquatch (Boss)",
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Wild Banana Tree 野生香蕉樹",
+                                                                "type":  "other",
+                                                                "description":  "場邊 6 棵香蕉樹，互動掉香蕉，可打斷 Chest Thump。",
+                                                                "tips":  [
+                                                                             "拿香蕉打斷捶胸"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Chest Thump 捶胸",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 捶胸 → 全屏 AoE，用香蕉打斷可眩暈 boss。",
+                                                                "tips":  [
+                                                                             "丟香蕉打斷"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Smallfoot Sifaka 小腳狐猴",
+                                                                "type":  "other",
+                                                                "description":  "召小猴 add 會吃香蕉，需 DPS 速殺或坦拉開。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺小猴",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Stool Pelt 投糞",
+                                                                "type":  "spread",
+                                                                "description":  "目標單人下大 AoE 圈。",
+                                                                "tips":  [
+                                                                             "中標走開"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "海蛇",
+                       "nameEn":  "Sjoorm",
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Upwell 噴湧",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 前長直線 AoE。",
+                                                                "tips":  [
+                                                                             "側步閃"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Water Puddle 水灘",
+                                                                "type":  "spread",
+                                                                "description":  "玩家標 → 留水灘 AoE。",
+                                                                "tips":  [
+                                                                             "走出灘外"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Watery Grave 水之墓",
+                                                                "type":  "other",
+                                                                "description":  "場上 3x3 大水泡網格，用於閃 Whirlpool，但內部會中傷 + 凍。",
+                                                                "tips":  [
+                                                                             "Whirlpool cast 時進水泡"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Burrow 潛地",
+                                                                "type":  "other",
+                                                                "description":  "Boss 潛地 → 接 Whirlpool 或 Tunnel。",
+                                                                "tips":  [
+                                                                             "看下招處理"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Whirlpool 漩渦",
+                                                                "type":  "aoe",
+                                                                "description":  "中央大 PBAoE → 進 Watery Grave 水泡避。",
+                                                                "tips":  [
+                                                                             "進水泡內"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tunnel 隧道",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 朝玩家穿場 line AoE。",
+                                                                "tips":  [
+                                                                             "側步"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "海怪",
+                       "nameEn":  "Kraken (Hullbreaker Isle)",
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Platforms 跳台 + Waterspouts 噴泉",
+                                                                "type":  "other",
+                                                                "description":  "場上 4 跳台 + 噴泉移動 (累 Suppuration debuff)，需避觸手 + 控用次數。",
+                                                                "tips":  [
+                                                                             "不要連續跳避堆 debuff"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wallop 重擊",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 前 cone AoE。",
+                                                                "tips":  [
+                                                                             "側面"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Inkblot 墨點",
+                                                                "type":  "spread",
+                                                                "description":  "玩家標大 AoE + Slow + DoT。",
+                                                                "tips":  [
+                                                                             "走遠免互打"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Clearout 清場",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss donut AoE + 擊退；貼 hitbox 內避。",
+                                                                "tips":  [
+                                                                             "貼 boss 內圈"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tentacle 觸手 add",
+                                                                "type":  "other",
+                                                                "description":  "場上召觸手 add → DPS 殺保場勢。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 殺 add",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Scoop 撈起",
+                                                                "type":  "other",
+                                                                "description":  "Boss 抓人扔到隨機跳台 + 短暈。",
+                                                                "tips":  [
+                                                                             "扔後立刻跳回"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

@@ -1,184 +1,216 @@
 {
-    "id": "yuweyawata_field_station",
-    "name": "尤威亞瓦塔野外實驗場",
-    "nameEn": "Yuweyawata Field Station",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Lindblum Zaghnal 林德布隆扎格納：Gore + Caber Toss 水晶投擲 + Raw Electrope 小怪 DPS check。",
-        "2）Overseer Kanilokka 卡尼洛卡監察：Phantom Flood 場地縮 + Lost Hope 暫時方向錯亂 + Necrohazard 必須站牆邊。",
-        "3）Lunipyati 路尼皮亞蒂 (Tural Vidraal)：Raging Claw 多段 cleave + 後續機制。"
-    ],
-    "notes": "DT 7.1 post-MSQ 副本 (Lv 100)。位於 Yuweyawata 野外實驗場。3 boss：林德布隆扎格納 → 卡尼洛卡 → Lunipyati。失誤 = 受傷加重疊層。",
-    "bosses": [
-        {
-            "name": "Lindblum Zaghnal",
-            "nameEn": "Lindblum Zaghnal",
-            "mnemonic": [
-                "Gore + Caber Toss：boss 推水晶 → 3 條直線 AoE + 水晶飛到新位置大圓 AoE。",
-                "Raw Electrope 小怪 DPS check：兩個同時 Electrify = 團滅。",
-                "Lightning Storm：全員散開標記。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Electrical Overload 電過載",
-                            "type": "raidwide",
-                            "description": "全體魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Gore + Caber Toss 水晶投擲",
-                            "type": "aoe",
-                            "description": "Boss 推大水晶 → 3 條直線 AoE 預兆 → 投水晶到新位置 + 大圓 AoE (黃箭頭預示) + 額外小直線 AoE。",
-                            "tips": [
-                                "閃直線 + 跑出大圓"
-                            ]
-                        },
-                        {
-                            "name": "Lightning Storm 雷風暴",
-                            "type": "spread",
-                            "description": "全員散開標記。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "Sparking Fissure 電裂",
-                            "type": "raidwide",
-                            "description": "boss 持續放電多波全體魔法 AoE。",
-                            "tips": [
-                                { "text": "連補 + 減傷", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Raw Electrope 原始電以太",
-                            "type": "other",
-                            "description": "場上多個 Electrope 小怪生成 + 進度條。讀完 Electrify = 全體魔法 + 魔耐降低。**2 個同時讀完 = 團滅**。",
-                            "tips": [
-                                { "text": "DPS 優先擊殺進度高的小怪", "role": "dps" },
-                                "閃同時生成的圓 AoE"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Overseer Kanilokka",
-            "nameEn": "Overseer Kanilokka",
-            "mnemonic": [
-                "Free Spirits：場邊危險 AoE，踩入重型 + 出血 + 傷害降低。",
-                "Phantom Flood：donut 留場中小圓 → 場地縮。",
-                "Dark II：6 扇形 + 交替安全空隙 → 第二組在第一組安全區。",
-                "Lost Hope：方向錯亂 17s + Necrohazard 中央近爆 → 必須走到牆邊。",
-                "Telltale Tears：3 人散開標記在小圓內。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Free Spirits 自由靈魂",
-                            "type": "raidwide",
-                            "description": "全體魔法 + 場邊危險 AoE (重型 + 出血 + 傷害降低)。",
-                            "tips": [
-                                { "text": "減傷 + 遠離場邊", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Phantom Flood + Dark II 暗冥",
-                            "type": "aoe",
-                            "description": "Donut AoE 留下持久 AoE 場地縮小 + 6 扇形交替預兆 → 第二組在第一組安全。",
-                            "tips": [
-                                "看 6 扇形找安全空隙",
-                                "第二組移到第一組原安全區"
-                            ]
-                        },
-                        {
-                            "name": "Telltale Tears 哀涕",
-                            "type": "spread",
-                            "description": "3 人散開標記在小圓內。",
-                            "tips": ["3 人各佔一角"]
-                        },
-                        {
-                            "name": "Lost Hope + Necrohazard 失望 + 死靈危險",
-                            "type": "other",
-                            "description": "17s 暫時方向錯亂 (移動方向被旋轉箭頭控制) + Boss 中央近爆 AoE → 必須走到牆邊。3 條彎曲路徑通過場邊危險 AoE 到牆。",
-                            "tips": [
-                                "依旋轉箭頭調整移動",
-                                "**站到牆邊**避免近爆"
-                            ]
-                        },
-                        {
-                            "name": "Bloodburst 血爆",
-                            "type": "raidwide",
-                            "description": "全體魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Soul Douse + Dark II 雙重",
-                            "type": "stack",
-                            "description": "Dark II 重複 + stack 標記隨機玩家。",
-                            "tips": ["閃扇形 + 全員疊接 stack"]
-                        },
-                        {
-                            "name": "Dark Souls 暗魂",
-                            "type": "tankbuster",
-                            "description": "魔法 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Lunipyati (Tural Vidraal)",
-            "nameEn": "Lunipyati",
-            "mnemonic": [
-                "Raging Claw：朝玩家 180° 多段 cleave。",
-                "後續機制持續發展。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Raging Claw 狂爪",
-                            "type": "aoe",
-                            "description": "朝隨機玩家 180° 多段 cleave。",
-                            "tips": ["繞到 boss 後"]
-                        },
-                        {
-                            "name": "基本 tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇單體高傷。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "yuweyawata_field_station",
+    "name":  "尤威亞瓦塔野外實驗場",
+    "nameEn":  "Yuweyawata Field Station",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Lindblum Zaghnal 林德布隆扎格納：Gore + Caber Toss 水晶投擲 + Raw Electrope 小怪 DPS check。",
+                     "2）Overseer Kanilokka 卡尼洛卡監察：Phantom Flood 場地縮 + Lost Hope 暫時方向錯亂 + Necrohazard 必須站牆邊。",
+                     "3）Lunipyati 路尼皮亞蒂 (Tural Vidraal)：Raging Claw 多段 cleave + 後續機制。"
+                 ],
+    "notes":  "DT 7.1 post-MSQ 副本 (Lv 100)。位於 Yuweyawata 野外實驗場。3 boss：林德布隆扎格納 → 卡尼洛卡 → Lunipyati。失誤 = 受傷加重疊層。",
+    "bosses":  [
+                   {
+                       "name":  "Lindblum Zaghnal",
+                       "nameEn":  "Lindblum Zaghnal",
+                       "mnemonic":  [
+                                        "Gore + Caber Toss：boss 推水晶 → 3 條直線 AoE + 水晶飛到新位置大圓 AoE。",
+                                        "Raw Electrope 小怪 DPS check：兩個同時 Electrify = 團滅。",
+                                        "Lightning Storm：全員散開標記。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Electrical Overload 電過載",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Gore + Caber Toss 水晶投擲",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 推大水晶 → 3 條直線 AoE 預兆 → 投水晶到新位置 + 大圓 AoE (黃箭頭預示) + 額外小直線 AoE。",
+                                                                "tips":  [
+                                                                             "閃直線 + 跑出大圓"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Lightning Storm 雷風暴",
+                                                                "type":  "spread",
+                                                                "description":  "全員散開標記。",
+                                                                "tips":  [
+                                                                             "散開 clock 位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Sparking Fissure 電裂",
+                                                                "type":  "raidwide",
+                                                                "description":  "boss 持續放電多波全體魔法 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "連補 + 減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Raw Electrope 原始電以太",
+                                                                "type":  "other",
+                                                                "description":  "場上多個 Electrope 小怪生成 + 進度條。讀完 Electrify = 全體魔法 + 魔耐降低。**2 個同時讀完 = 團滅**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 優先擊殺進度高的小怪",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "閃同時生成的圓 AoE"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Overseer Kanilokka",
+                       "nameEn":  "Overseer Kanilokka",
+                       "mnemonic":  [
+                                        "Free Spirits：場邊危險 AoE，踩入重型 + 出血 + 傷害降低。",
+                                        "Phantom Flood：donut 留場中小圓 → 場地縮。",
+                                        "Dark II：6 扇形 + 交替安全空隙 → 第二組在第一組安全區。",
+                                        "Lost Hope：方向錯亂 17s + Necrohazard 中央近爆 → 必須走到牆邊。",
+                                        "Telltale Tears：3 人散開標記在小圓內。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Free Spirits 自由靈魂",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法 + 場邊危險 AoE (重型 + 出血 + 傷害降低)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 遠離場邊",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Phantom Flood + Dark II 暗冥",
+                                                                "type":  "aoe",
+                                                                "description":  "Donut AoE 留下持久 AoE 場地縮小 + 6 扇形交替預兆 → 第二組在第一組安全。",
+                                                                "tips":  [
+                                                                             "看 6 扇形找安全空隙",
+                                                                             "第二組移到第一組原安全區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Telltale Tears 哀涕",
+                                                                "type":  "spread",
+                                                                "description":  "3 人散開標記在小圓內。",
+                                                                "tips":  [
+                                                                             "3 人各佔一角"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Lost Hope + Necrohazard 失望 + 死靈危險",
+                                                                "type":  "other",
+                                                                "description":  "17s 暫時方向錯亂 (移動方向被旋轉箭頭控制) + Boss 中央近爆 AoE → 必須走到牆邊。3 條彎曲路徑通過場邊危險 AoE 到牆。",
+                                                                "tips":  [
+                                                                             "依旋轉箭頭調整移動",
+                                                                             "**站到牆邊**避免近爆"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Bloodburst 血爆",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Soul Douse + Dark II 雙重",
+                                                                "type":  "stack",
+                                                                "description":  "Dark II 重複 + stack 標記隨機玩家。",
+                                                                "tips":  [
+                                                                             "閃扇形 + 全員疊接 stack"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dark Souls 暗魂",
+                                                                "type":  "tankbuster",
+                                                                "description":  "魔法 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Lunipyati (Tural Vidraal)",
+                       "nameEn":  "Lunipyati",
+                       "mnemonic":  [
+                                        "Raging Claw：朝玩家 180° 多段 cleave。",
+                                        "後續機制持續發展。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Raging Claw 狂爪",
+                                                                "type":  "aoe",
+                                                                "description":  "朝隨機玩家 180° 多段 cleave。",
+                                                                "tips":  [
+                                                                             "繞到 boss 後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "tankbuster 基本",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇單體高傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "AoE 全體",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏魔法 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

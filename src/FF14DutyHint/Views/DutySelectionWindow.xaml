@@ -17,6 +17,7 @@
         <conv:QualityToVisibilityConverter x:Key="QualityToVis"/>
         <conv:UserSourceToVisibilityConverter x:Key="UserSourceToVis"/>
         <conv:SourceToLabelConverter x:Key="SourceToLabel"/>
+        <conv:StringToVisibilityConverter x:Key="StringToVis"/>
 
         <!-- ComboBox dropdown 配色 (避免白底白字看不到) -->
         <Style TargetType="ComboBoxItem">
@@ -204,9 +205,10 @@
                                            FontSize="10"
                                            FontWeight="SemiBold"/>
                             </Border>
-                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding NameEn}" Foreground="{StaticResource Accent}" FontWeight="SemiBold" VerticalAlignment="Center"
+                                       Visibility="{Binding NameEn, Converter={StaticResource StringToVis}}"/>
                         </StackPanel>
-                        <TextBlock Text="{Binding NameEn}" Foreground="{StaticResource MutedTextBrush}" FontSize="11"/>
+                        <TextBlock Text="{Binding Name}" Foreground="{StaticResource TextBrush}" FontSize="11"/>
                         <TextBlock Text="{Binding Expansion}" Foreground="{StaticResource MutedTextBrush}" FontSize="11"/>
                     </StackPanel>
                 </DataTemplate>

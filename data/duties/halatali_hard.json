@@ -1,57 +1,175 @@
 {
-    "id": "halatali_hard",
-    "name": "哈拉塔利（零式）",
-    "nameEn": "Halatali (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Pyracmon 獨眼巨人：用 mechanical Mammet 拉拉桿觸發 Manawall buff 擋 1000 Tonze Swing 否則致死。雙手詠唱跑開、單手詠唱穿過。",
-        "2）B2 Catoblepas：場邊四個 Shadowy Orb 玩家各踩一個；Demonic Eye 詠唱時全員觸發 Orb 拿 Gloam buff 免傷。眼睛變紅 = DPS check 失敗開始堆 debuff。",
-        "3）B3 Phase 1：四鬥士 (推薦 healer 先死，再 bard、gladiator)；Phase 2：紅惡魔 + Lalafell Mumuepo，先殺 Mumuepo 否則 Thal's Fury 致死，自由玩家用 Thal's Scepter 解鏈。"
-    ],
-    "notes": "ARR 2.1 dungeon Hard Lv 50 ilvl 95。Halatali 競技場重製版。資料來源：CGW (Halatali (Hard))。",
-    "bosses": [
-        {
-            "name": "Pyracmon 獨眼巨人",
-            "nameEn": "Pyracmon",
-            "mnemonic": ["Mammet + 拉桿拿 Manawall buff", "1000 Tonze Swing 全場致死", "雙手詠唱 → 跑開 / 單手 → 穿過 boss"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Mammet + 拉桿機制", "type": "other", "description": "場上機械 Mammet 拖繩 → 拉桿 → Mammet 發藍光 → 站在藍光內獲 Manawall buff (10 秒)，可擋 1000 Tonze Swing 全場致死。", "tips": ["看到 boss 開始讀 1000 Tonze Swing 才拉桿，獲 buff 後跑回擋"] },
-                { "name": "1000 Tonze Swing 千噸重擊", "type": "raidwide", "description": "覆蓋整個競技場致死 AoE，必須有 Manawall buff 擋。", "tips": ["Manawall 是唯一解法"] },
-                { "name": "Eye of the Beholder 注視之眼", "type": "aoe", "description": "場上多重雷射 AoE。", "tips": ["走位閃"] },
-                { "name": "雙手 / 單手詠唱判斷", "type": "other", "description": "Boss 雙手抓棒 = 大圓 AoE 跑開；單手 = 甜甜圈 AoE 穿過 boss 站身上。", "tips": ["看雙/單手判斷站位"] }
-            ]}]
-        },
-        {
-            "name": "Catoblepas 暗影石化龍",
-            "nameEn": "Catoblepas (Mob)",
-            "mnemonic": ["四個 Shadowy Orb 一人一個", "Demonic Eye 詠唱時全員 Orb 拿 Gloam buff", "Eye 變紅 = DPS check 失敗"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Shadowy Orb 暗影球機制", "type": "other", "description": "場邊四個 pedestal，每位玩家分配一個。Boss 詠唱 Demonic Eye 時每人觸發自己的 Orb 拿 Gloam buff 免傷，否則被擊殺。", "tips": ["事先指派 Orb 給每人"] },
-                { "name": "Demonic Eye 邪眼", "type": "raidwide", "description": "長詠唱致死全屏 AoE。必須有 Gloam buff 才擋得住。", "tips": ["全員提前到 Orb"] },
-                { "name": "DPS Eye 眼睛 DPS check", "type": "other", "description": "Boss 眼睛偶爾可選中：藍 → 黃 → 紅。**眼睛變紅後開始堆全隊傷害承受 debuff，極難收**。", "tips": [{ "text": "DPS 看到眼可選中就立刻打掉，不要拖到紅", "role": "dps" }] },
-                { "name": "Cone AoE 大錐", "type": "aoe", "description": "Boss 轉向玩家放 1/3 場大型錐形 AoE。", "tips": ["閃 boss 前方"] }
-            ]}]
-        },
-        {
-            "name": "四鬥士 → Mumuepo + Narasimha",
-            "nameEn": "Four Fighters → Mumuepo + Narasimha",
-            "mnemonic": ["P1 四鬥士順序：healer → bard → gladiator", "P2 Mumuepo 先殺 (Thal's Fury 致死)", "Thal's Scepter 拉桿解鏈"],
-            "phases": [
-                { "name": "P1 四鬥士", "mechanics": [
-                    { "name": "Lancer 槍兵", "type": "other", "description": "無仇恨表隨機追玩家，需 kite。", "tips": ["槍兵跑慢可以躲"] },
-                    { "name": "順序", "type": "other", "description": "Healer 先殺 → Bard → Gladiator。Gladiator 有 Lv 50 技能 (Spirits Within 等) 要小心。", "tips": [{ "text": "DPS 集火順序 healer > bard > gladiator", "role": "dps" }] }
-                ]},
-                { "name": "P2 雙 boss", "mechanics": [
-                    { "name": "Mumuepo 鎖鏈 + Thal's Fury", "type": "other", "description": "Mumuepo 用鎖鏈固定多名玩家後讀 Thal's Fury 大範圍 AoE。需自由玩家找場上 Thal's Scepter 拉桿解鏈，否則致死。", "tips": ["先殺 Mumuepo 是最佳解 (傷害優先)"] },
-                    { "name": "Narasimha 紅惡魔", "type": "other", "description": "後方尾擊 + 對遠程隨機圓 AoE。", "tips": ["近戰別站背後"] }
-                ]}
-            ]
-        }
-    ]
+    "id":  "halatali_hard",
+    "name":  "哈拉塔利（零式）",
+    "nameEn":  "Halatali (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Pyracmon 獨眼巨人：用 mechanical Mammet 拉拉桿觸發 Manawall buff 擋 1000 Tonze Swing 否則致死。雙手詠唱跑開、單手詠唱穿過。",
+                     "2）B2 Catoblepas：場邊四個 Shadowy Orb 玩家各踩一個；Demonic Eye 詠唱時全員觸發 Orb 拿 Gloam buff 免傷。眼睛變紅 = DPS check 失敗開始堆 debuff。",
+                     "3）B3 Phase 1：四鬥士 (推薦 healer 先死，再 bard、gladiator)；Phase 2：紅惡魔 + Lalafell Mumuepo，先殺 Mumuepo 否則 Thal\u0027s Fury 致死，自由玩家用 Thal\u0027s Scepter 解鏈。"
+                 ],
+    "notes":  "ARR 2.1 dungeon Hard Lv 50 ilvl 95。Halatali 競技場重製版。資料來源：CGW (Halatali (Hard))。",
+    "bosses":  [
+                   {
+                       "name":  "獨眼巨人",
+                       "nameEn":  "Pyracmon",
+                       "mnemonic":  [
+                                        "Mammet + 拉桿拿 Manawall buff",
+                                        "1000 Tonze Swing 全場致死",
+                                        "雙手詠唱 → 跑開 / 單手 → 穿過 boss"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Mammet + 拉桿機制",
+                                                                "type":  "other",
+                                                                "description":  "場上機械 Mammet 拖繩 → 拉桿 → Mammet 發藍光 → 站在藍光內獲 Manawall buff (10 秒)，可擋 1000 Tonze Swing 全場致死。",
+                                                                "tips":  [
+                                                                             "看到 boss 開始讀 1000 Tonze Swing 才拉桿，獲 buff 後跑回擋"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "1000 Tonze Swing 千噸重擊",
+                                                                "type":  "raidwide",
+                                                                "description":  "覆蓋整個競技場致死 AoE，必須有 Manawall buff 擋。",
+                                                                "tips":  [
+                                                                             "Manawall 是唯一解法"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Eye of the Beholder 注視之眼",
+                                                                "type":  "aoe",
+                                                                "description":  "場上多重雷射 AoE。",
+                                                                "tips":  [
+                                                                             "走位閃"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雙手 / 單手詠唱判斷",
+                                                                "type":  "other",
+                                                                "description":  "Boss 雙手抓棒 = 大圓 AoE 跑開；單手 = 甜甜圈 AoE 穿過 boss 站身上。",
+                                                                "tips":  [
+                                                                             "看雙/單手判斷站位"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "暗影石化龍",
+                       "nameEn":  "Catoblepas",
+                       "mnemonic":  [
+                                        "四個 Shadowy Orb 一人一個",
+                                        "Demonic Eye 詠唱時全員 Orb 拿 Gloam buff",
+                                        "Eye 變紅 = DPS check 失敗"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Shadowy Orb 暗影球機制",
+                                                                "type":  "other",
+                                                                "description":  "場邊四個 pedestal，每位玩家分配一個。Boss 詠唱 Demonic Eye 時每人觸發自己的 Orb 拿 Gloam buff 免傷，否則被擊殺。",
+                                                                "tips":  [
+                                                                             "事先指派 Orb 給每人"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Demonic Eye 邪眼",
+                                                                "type":  "raidwide",
+                                                                "description":  "長詠唱致死全屏 AoE。必須有 Gloam buff 才擋得住。",
+                                                                "tips":  [
+                                                                             "全員提前到 Orb"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "DPS Eye 眼睛 DPS check",
+                                                                "type":  "other",
+                                                                "description":  "Boss 眼睛偶爾可選中：藍 → 黃 → 紅。**眼睛變紅後開始堆全隊傷害承受 debuff，極難收**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 看到眼可選中就立刻打掉，不要拖到紅",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cone AoE 大錐",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 轉向玩家放 1/3 場大型錐形 AoE。",
+                                                                "tips":  [
+                                                                             "閃 boss 前方"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "四鬥士 → Mumuepo + Narasimha",
+                       "nameEn":  "Four Fighters → Mumuepo + Narasimha",
+                       "mnemonic":  [
+                                        "P1 四鬥士順序：healer → bard → gladiator",
+                                        "P2 Mumuepo 先殺 (Thal\u0027s Fury 致死)",
+                                        "Thal\u0027s Scepter 拉桿解鏈"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 四鬥士",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Lancer 槍兵",
+                                                                "type":  "other",
+                                                                "description":  "無仇恨表隨機追玩家，需 kite。",
+                                                                "tips":  [
+                                                                             "槍兵跑慢可以躲"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "順序",
+                                                                "type":  "other",
+                                                                "description":  "Healer 先殺 → Bard → Gladiator。Gladiator 有 Lv 50 技能 (Spirits Within 等) 要小心。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 集火順序 healer \u003e bard \u003e gladiator",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 雙 boss",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Mumuepo 鎖鏈 + Thal\u0027s Fury",
+                                                                "type":  "other",
+                                                                "description":  "Mumuepo 用鎖鏈固定多名玩家後讀 Thal\u0027s Fury 大範圍 AoE。需自由玩家找場上 Thal\u0027s Scepter 拉桿解鏈，否則致死。",
+                                                                "tips":  [
+                                                                             "先殺 Mumuepo 是最佳解 (傷害優先)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Narasimha 紅惡魔",
+                                                                "type":  "other",
+                                                                "description":  "後方尾擊 + 對遠程隨機圓 AoE。",
+                                                                "tips":  [
+                                                                             "近戰別站背後"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

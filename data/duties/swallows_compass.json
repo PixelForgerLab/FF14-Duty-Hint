@@ -1,56 +1,206 @@
 {
-    "id": "swallows_compass",
-    "name": "燕子方陣",
-    "nameEn": "The Swallow's Compass",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Otengu 大天狗：Wile of the Tengu 視線 (背對) → Hysteria；Tengu Ember 火球移動 + 後爆 → 拉離擴散區。",
-        "2）B2 Daidarabotchi 大太法師：無詠唱條看訊息；Land Take You 追蹤 AoE；Swallow You 中央湖擴大 → 之後消失；Mountain Falls 標記。",
-        "3）B3 Qitian Dasheng 齊天大聖：Both Ends — **平常武器 = 遠離 boss / 加大電武器 = 貼近 boss**；Monkey Magicks adds 限時殺；Splitting Hairs 分身要平均擊殺避免再分裂。"
-    ],
-    "notes": "SB 4.4 dungeon Lv 70 ilvl 350。燕子方陣修練場。資料來源：CGW (The Swallow's Compass)。",
-    "bosses": [
-        {
-            "name": "Otengu 大天狗",
-            "nameEn": "Otengu",
-            "mnemonic": ["Wile of the Tengu 視線背對", "Tengu Ember 火球追蹤後爆"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Clout of the Tengu 天狗之擊", "type": "aoe", "description": "Boss 周圍大 AoE。", "tips": ["遠離 boss"] },
-                { "name": "Yama-kagura 山神樂", "type": "aoe", "description": "對非 tank 玩家中等直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Wile of the Tengu 天狗之謀", "type": "other", "description": "視線攻擊 → 不背對給 Hysteria。", "tips": ["背對 boss"] },
-                { "name": "Tengu Ember 天狗餘燼", "type": "other", "description": "場上火球移動，碰到 Suppuration debuff (HP 上限降 + 增傷)。一段時間後火球爆 AoE。", "tips": ["拉開避火球路徑"] },
-                { "name": "Might of the Tengu", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "Daidarabotchi 大太法師",
-            "nameEn": "Daidarabotchi",
-            "mnemonic": ["無詠唱條看訊息", "舉手砸地 → 站對側", "Swallow You 湖擴大 → 消失", "Mountain Falls 水滴標記"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "舉手砸地", "type": "aoe", "description": "Daidarabotchi 抬一手 → 砸地中傷 + Vulnerability Up。", "tips": ["看哪手抬 → 站對側"] },
-                { "name": "The Land take You, Claim You!", "type": "aoe", "description": "標記玩家後追蹤 AoE。", "tips": ["被標跑開"] },
-                { "name": "Swallow You, Consume You!", "type": "other", "description": "中央起波光湖 → 覆蓋 75% 場地後消失。", "tips": ["躲場邊"] },
-                { "name": "Mountain Falls 山墜", "type": "aoe", "description": "藍色水滴標記 → 延遲後爆。", "tips": ["跑離"] }
-            ]}]
-        },
-        {
-            "name": "Qitian Dasheng 齊天大聖",
-            "nameEn": "Qitian Dasheng",
-            "mnemonic": ["Both Ends 普通武器 → 遠離 / 加大電武器 → 貼近", "Monkey Magicks adds 限時殺", "Splitting Hairs 兩分身平均殺"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "The Short End 短杖", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Both Ends 兩端", "type": "aoe", "description": "兩種：(1) 普通武器舉起 = 中圓 AoE → 擊退到場邊藍環 (Bleeding + vuln)；(2) 加大電武器 = 同樣但中央安全。**普通 = 遠離；加大電 = 貼近**。", "tips": ["看武器類型決定位置"] },
-                { "name": "Mount Huaguo 花果山", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Monkey Magicks 猴妖術 adds", "type": "other", "description": "場上召 Servant of the Sage adds，**Monkey Magicks 條滿前殺光，否則 Second Heaven 致死**。", "tips": [{ "text": "DPS 全力殺 adds", "role": "dps" }] },
-                { "name": "Second Heaven 二天", "type": "raidwide", "description": "Monkey Magicks 條滿或 adds 殺光後放，傷害依條判定。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Splitting Hairs 分身術", "type": "other", "description": "boss 分裂兩 Shadow of the Sage，共享血條。**必須兩個都殺**否則殘存又分裂。", "tips": [{ "text": "DPS 平均打兩分身，幾乎同時殺", "role": "dps" }] }
-            ]}]
-        }
-    ]
+    "id":  "swallows_compass",
+    "name":  "燕子方陣",
+    "nameEn":  "The Swallow\u0027s Compass",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Otengu 大天狗：Wile of the Tengu 視線 (背對) → Hysteria；Tengu Ember 火球移動 + 後爆 → 拉離擴散區。",
+                     "2）B2 Daidarabotchi 大太法師：無詠唱條看訊息；Land Take You 追蹤 AoE；Swallow You 中央湖擴大 → 之後消失；Mountain Falls 標記。",
+                     "3）B3 Qitian Dasheng 齊天大聖：Both Ends — **平常武器 = 遠離 boss / 加大電武器 = 貼近 boss**；Monkey Magicks adds 限時殺；Splitting Hairs 分身要平均擊殺避免再分裂。"
+                 ],
+    "notes":  "SB 4.4 dungeon Lv 70 ilvl 350。燕子方陣修練場。資料來源：CGW (The Swallow\u0027s Compass)。",
+    "bosses":  [
+                   {
+                       "name":  "大天狗",
+                       "nameEn":  "Otengu",
+                       "mnemonic":  [
+                                        "Wile of the Tengu 視線背對",
+                                        "Tengu Ember 火球追蹤後爆"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Clout of the Tengu 天狗之擊",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周圍大 AoE。",
+                                                                "tips":  [
+                                                                             "遠離 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Yama-kagura 山神樂",
+                                                                "type":  "aoe",
+                                                                "description":  "對非 tank 玩家中等直線 AoE。",
+                                                                "tips":  [
+                                                                             "閃直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wile of the Tengu 天狗之謀",
+                                                                "type":  "other",
+                                                                "description":  "視線攻擊 → 不背對給 Hysteria。",
+                                                                "tips":  [
+                                                                             "背對 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tengu Ember 天狗餘燼",
+                                                                "type":  "other",
+                                                                "description":  "場上火球移動，碰到 Suppuration debuff (HP 上限降 + 增傷)。一段時間後火球爆 AoE。",
+                                                                "tips":  [
+                                                                             "拉開避火球路徑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Might of the Tengu",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "大太法師",
+                       "nameEn":  "Daidarabotchi",
+                       "mnemonic":  [
+                                        "無詠唱條看訊息",
+                                        "舉手砸地 → 站對側",
+                                        "Swallow You 湖擴大 → 消失",
+                                        "Mountain Falls 水滴標記"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "舉手砸地",
+                                                                "type":  "aoe",
+                                                                "description":  "Daidarabotchi 抬一手 → 砸地中傷 + Vulnerability Up。",
+                                                                "tips":  [
+                                                                             "看哪手抬 → 站對側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "The Land take You, Claim You!",
+                                                                "type":  "aoe",
+                                                                "description":  "標記玩家後追蹤 AoE。",
+                                                                "tips":  [
+                                                                             "被標跑開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Swallow You, Consume You!",
+                                                                "type":  "other",
+                                                                "description":  "中央起波光湖 → 覆蓋 75% 場地後消失。",
+                                                                "tips":  [
+                                                                             "躲場邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mountain Falls 山墜",
+                                                                "type":  "aoe",
+                                                                "description":  "藍色水滴標記 → 延遲後爆。",
+                                                                "tips":  [
+                                                                             "跑離"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "齊天大聖",
+                       "nameEn":  "Qitian Dasheng",
+                       "mnemonic":  [
+                                        "Both Ends 普通武器 → 遠離 / 加大電武器 → 貼近",
+                                        "Monkey Magicks adds 限時殺",
+                                        "Splitting Hairs 兩分身平均殺"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "The Short End 短杖",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Both Ends 兩端",
+                                                                "type":  "aoe",
+                                                                "description":  "兩種：(1) 普通武器舉起 = 中圓 AoE → 擊退到場邊藍環 (Bleeding + vuln)；(2) 加大電武器 = 同樣但中央安全。**普通 = 遠離；加大電 = 貼近**。",
+                                                                "tips":  [
+                                                                             "看武器類型決定位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mount Huaguo 花果山",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Monkey Magicks 猴妖術 adds",
+                                                                "type":  "other",
+                                                                "description":  "場上召 Servant of the Sage adds，**Monkey Magicks 條滿前殺光，否則 Second Heaven 致死**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力殺 adds",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Second Heaven 二天",
+                                                                "type":  "raidwide",
+                                                                "description":  "Monkey Magicks 條滿或 adds 殺光後放，傷害依條判定。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Splitting Hairs 分身術",
+                                                                "type":  "other",
+                                                                "description":  "boss 分裂兩 Shadow of the Sage，共享血條。**必須兩個都殺**否則殘存又分裂。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 平均打兩分身，幾乎同時殺",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

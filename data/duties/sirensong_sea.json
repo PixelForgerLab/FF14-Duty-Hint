@@ -1,53 +1,172 @@
 {
-    "id": "sirensong_sea",
-    "name": "海妖之歌",
-    "nameEn": "The Sirensong Sea",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 61,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Lugat：貼緊 boss 避半屏 AoE；Hydroball 玩家 stack 分擔；Sea Swallows All → 吸入後跑出找安全區，回中央接 Amorphous Applause；Overflow → 擊退後立刻跑回中央 stack Hydroball。",
-        "2）B2 The Governor：Shadowflow 場上影區別踩 (堆魔法傷害承受)；Enter Night 標記者跑遠拉斷繩；Shadowsplit 召小怪鋪更多影區。",
-        "3）B3 Lorelei：Virgin Tears 留 DoT 區 + 場邊環；Morbid Advance/Retreat 強制向前/向後 (相對自己面向)，調整面向避開 DoT 區。"
-    ],
-    "notes": "SB 4.0 第一個 MSQ dungeon Lv 61 ilvl 265。Sirensong Sea。資料來源：CGW (The Sirensong Sea)。",
-    "bosses": [
-        {
-            "name": "Lugat",
-            "nameEn": "Lugat",
-            "mnemonic": ["貼緊 boss 避半屏 AoE", "Hydroball stack 分擔", "Sea Swallows All / Overflow 走位"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Amorphous Applause 變幻喝采", "type": "aoe", "description": "大型方向性 AoE，緊貼 boss 有空間躲。", "tips": ["貼緊 boss"] },
-                { "name": "Hydroball 水球", "type": "stack", "description": "一玩家被瞄準，stack 分擔。", "tips": ["全員 stack 標記者"] },
-                { "name": "Sea Swallows All → Concussive Oscillation", "type": "other", "description": "Boss 吸入 → 跑出找安全區放 AoE，之後回中央接 Amorphous Applause。", "tips": ["吸入後跑出 → 找安全區 → 回中央"] },
-                { "name": "Overflow → Hydroball", "type": "knockback", "description": "全員被擊退到場邊，立刻跑回中央準備 Hydroball stack。", "tips": ["擊退後馬上回中央"] }
-            ]}]
-        },
-        {
-            "name": "The Governor 總督",
-            "nameEn": "The Governor",
-            "mnemonic": ["Shadowflow 影區別踩", "Enter Night 跑遠斷繩", "Shadowsplit 召分身"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Bloodburst 血爆", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Shadowflow 影流", "type": "other", "description": "場地大片影區，踩到堆 magic vuln。", "tips": ["別踩影區"] },
-                { "name": "Enter Night 進入黑夜", "type": "other", "description": "標記玩家 → 拉入 + 連繩。", "tips": ["被標者跑遠拉斷繩"] },
-                { "name": "Shadowsplit 影分裂", "type": "other", "description": "召喚小型分身鋪更多 Shadowflow 影區。", "tips": [{ "text": "DPS 速殺分身", "role": "dps" }] }
-            ]}]
-        },
-        {
-            "name": "Lorelei 蘿萊萊",
-            "nameEn": "Lorelei",
-            "mnemonic": ["Virgin Tears DoT 區 + 環", "Morbid Advance/Retreat 強制移動 → 調整面向避 DoT"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Somber Melody 陰沉旋律", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補血", "role": "healer" }] },
-                { "name": "Void Water III 虛無水 III", "type": "aoe", "description": "對標記玩家 AoE。", "tips": ["拉開"] },
-                { "name": "Virgin Tears 處女之淚", "type": "other", "description": "場上 DoT 區，最後鋪滿場邊環。", "tips": ["走位避 DoT 區"] },
-                { "name": "Morbid Advance / Retreat 病態前進/後退", "type": "other", "description": "強制角色向前 / 後移動 (相對自己面向，不是相對 boss)。", "tips": ["事先調整面向選擇最安全路徑"] }
-            ]}]
-        }
-    ]
+    "id":  "sirensong_sea",
+    "name":  "海妖之歌",
+    "nameEn":  "The Sirensong Sea",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  61,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Lugat：貼緊 boss 避半屏 AoE；Hydroball 玩家 stack 分擔；Sea Swallows All → 吸入後跑出找安全區，回中央接 Amorphous Applause；Overflow → 擊退後立刻跑回中央 stack Hydroball。",
+                     "2）B2 The Governor：Shadowflow 場上影區別踩 (堆魔法傷害承受)；Enter Night 標記者跑遠拉斷繩；Shadowsplit 召小怪鋪更多影區。",
+                     "3）B3 Lorelei：Virgin Tears 留 DoT 區 + 場邊環；Morbid Advance/Retreat 強制向前/向後 (相對自己面向)，調整面向避開 DoT 區。"
+                 ],
+    "notes":  "SB 4.0 第一個 MSQ dungeon Lv 61 ilvl 265。Sirensong Sea。資料來源：CGW (The Sirensong Sea)。",
+    "bosses":  [
+                   {
+                       "name":  "Lugat",
+                       "nameEn":  "Lugat",
+                       "mnemonic":  [
+                                        "貼緊 boss 避半屏 AoE",
+                                        "Hydroball stack 分擔",
+                                        "Sea Swallows All / Overflow 走位"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Amorphous Applause 變幻喝采",
+                                                                "type":  "aoe",
+                                                                "description":  "大型方向性 AoE，緊貼 boss 有空間躲。",
+                                                                "tips":  [
+                                                                             "貼緊 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hydroball 水球",
+                                                                "type":  "stack",
+                                                                "description":  "一玩家被瞄準，stack 分擔。",
+                                                                "tips":  [
+                                                                             "全員 stack 標記者"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Sea Swallows All → Concussive Oscillation",
+                                                                "type":  "other",
+                                                                "description":  "Boss 吸入 → 跑出找安全區放 AoE，之後回中央接 Amorphous Applause。",
+                                                                "tips":  [
+                                                                             "吸入後跑出 → 找安全區 → 回中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Overflow → Hydroball",
+                                                                "type":  "knockback",
+                                                                "description":  "全員被擊退到場邊，立刻跑回中央準備 Hydroball stack。",
+                                                                "tips":  [
+                                                                             "擊退後馬上回中央"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "總督",
+                       "nameEn":  "The Governor",
+                       "mnemonic":  [
+                                        "Shadowflow 影區別踩",
+                                        "Enter Night 跑遠斷繩",
+                                        "Shadowsplit 召分身"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Bloodburst 血爆",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shadowflow 影流",
+                                                                "type":  "other",
+                                                                "description":  "場地大片影區，踩到堆 magic vuln。",
+                                                                "tips":  [
+                                                                             "別踩影區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Enter Night 進入黑夜",
+                                                                "type":  "other",
+                                                                "description":  "標記玩家 → 拉入 + 連繩。",
+                                                                "tips":  [
+                                                                             "被標者跑遠拉斷繩"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Shadowsplit 影分裂",
+                                                                "type":  "other",
+                                                                "description":  "召喚小型分身鋪更多 Shadowflow 影區。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺分身",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "蘿萊萊",
+                       "nameEn":  "Lorelei",
+                       "mnemonic":  [
+                                        "Virgin Tears DoT 區 + 環",
+                                        "Morbid Advance/Retreat 強制移動 → 調整面向避 DoT"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Somber Melody 陰沉旋律",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補血",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Void Water III 虛無水 III",
+                                                                "type":  "aoe",
+                                                                "description":  "對標記玩家 AoE。",
+                                                                "tips":  [
+                                                                             "拉開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Virgin Tears 處女之淚",
+                                                                "type":  "other",
+                                                                "description":  "場上 DoT 區，最後鋪滿場邊環。",
+                                                                "tips":  [
+                                                                             "走位避 DoT 區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Morbid Advance / Retreat 病態前進/後退",
+                                                                "type":  "other",
+                                                                "description":  "強制角色向前 / 後移動 (相對自己面向，不是相對 boss)。",
+                                                                "tips":  [
+                                                                             "事先調整面向選擇最安全路徑"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

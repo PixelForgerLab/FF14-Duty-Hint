@@ -1,60 +1,237 @@
 {
-    "id": "saint_mociannes_arboretum_hard",
-    "name": "聖莫西安植物園（零式）",
-    "nameEn": "Saint Mocianne's Arboretum (Hard)",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Nullchu 食肉植物：Sludge Bomb 留毒池 (Pollen + Leaden)；Rafflesia 召喚 → boss 跳上吞食 + Odious Atmosphere 中央毒霧 (站 Rafflesia 旁邊閃)；Fault Warren stack。",
-        "2）B2 Lakhamu 石巨人：場邊有荊棘 vuln；Landslip 輸送帶推 + Silt Golem 直線 → 站對應安全位避免接連命中；Earthquake 近圓 → 環圈。Earth Shaker 對 DPS 直線。",
-        "3）B3 Tokkapchi 泥怪：場地是格柵 + 4 個固體平台。**Mud Pie 召 Mud Slime → 不能讓任何 boss AoE 打中 (越大越痛)**；Quagmire 玩家 AoE 也要避開平台 (留 vuln 池)。"
-    ],
-    "notes": "SB 4.2 dungeon Hard Lv 70 ilvl 330。Arboretum 重製版。資料來源：CGW (Saint Mocianne's Arboretum (Hard))。",
-    "bosses": [
-        {
-            "name": "Nullchu 食肉植物",
-            "nameEn": "Nullchu",
-            "mnemonic": ["Sludge Bomb 留毒池", "Rafflesia → 站它旁邊閃 Odious Atmosphere"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Odious Air 惡氣", "type": "aoe", "description": "前方錐 + Poison。", "tips": [{ "text": "MT 朝外", "role": "tank" }] },
-                { "name": "Vine Whip 藤鞭", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Sludge Bomb 污泥彈", "type": "other", "description": "標記玩家 AoE → 留綠毒池 (Pollen + Leaden)。", "tips": ["被標跑場邊放"] },
-                { "name": "Fault Warren 縫隙之巢", "type": "stack", "description": "玩家分擔。", "tips": ["全員疊接"] },
-                { "name": "Rafflesia + Devour + Odious Atmosphere", "type": "other", "description": "場邊 Rafflesia 召 (訊息 hall echoes...) → boss 跳上吞食 → 中央發毒霧 30s。**站 Rafflesia 旁邊**閃中央。", "tips": ["看 boss 朝向 Rafflesia 就跑過去那邊"] },
-                { "name": "Taproot 主根", "type": "spread", "description": "全員 AoE 散開。", "tips": ["散開"] }
-            ]}]
-        },
-        {
-            "name": "Lakhamu 石巨人",
-            "nameEn": "Lakhamu",
-            "mnemonic": ["場邊荊棘 vuln", "Landslip 輸送帶 + Silt Golem 直線", "Earthquake 近圓 → 環圈"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Stone II / Tectonics", "type": "tankbuster", "description": "Stone II = tankbuster / Tectonics = 全屏。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Landslip + Silt Golem", "type": "other", "description": "場上輸送帶推 (推走半場距離) + 場外 Silt Golem 直線 AoE。", "tips": ["預判推力方向選位置避 Silt Golem 直線"] },
-                { "name": "Earthquake 地震", "type": "aoe", "description": "近圓 → 環圈。", "tips": ["近戰 or 遠程位置"] },
-                { "name": "Earth Shaker 大地震動", "type": "aoe", "description": "兩 DPS 直線 AoE。", "tips": [{ "text": "DPS 拉開", "role": "dps" }] },
-                { "name": "Empty Gaze 空虛凝視", "type": "other", "description": "視線給 Hysteria。", "tips": ["背對 boss"] }
-            ]}]
-        },
-        {
-            "name": "Tokkapchi 泥怪",
-            "nameEn": "Tokkapchi",
-            "mnemonic": ["格柵 + 4 平台", "Mud Pie 召 Mud Slime → 不可被 AoE 命中 (越大越痛)", "Quagmire 標記避開平台"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Mudsling 泥擲", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Periodic Mud Eruption 泥噴", "type": "other", "description": "格柵下泥水翻騰 (訊息 puddles begin to froth) → 不在平台上 = 高傷 + 擊飛。", "tips": ["跑到平台上"] },
-                { "name": "Quagmire 沼澤", "type": "spread", "description": "全員 AoE → 中央留 vuln 池。**不能讓圓覆蓋平台**。", "tips": ["散開 + 避開平台中心"] },
-                { "name": "Mud Pie 泥派 + Mud Slime", "type": "other", "description": "boss 中央生 Mud Slime 不可殺 (只能 push)。**不能讓 AoE 包括泥噴打中**否則 Slime 變大 Corrupture 越痛。", "tips": ["所有 AoE 不打 Slime"] },
-                { "name": "Royal Flush 沖洗", "type": "aoe", "description": "近戰 AoE。", "tips": ["跑場外"] },
-                { "name": "Muddy Dorpokkur 第 2 Mud Pie 召分散", "type": "other", "description": "第 2 Mud Pie 兩 Dorpokkur adds (低血)。", "tips": [{ "text": "DPS 速殺 adds 後繼續 push Slime", "role": "dps" }] },
-                { "name": "Feculent Flood 污水洪流", "type": "aoe", "description": "對 Mud Slime 錐長詠唱 → 玩家 push Slime 出錐範圍。", "tips": ["全員打 Slime 推出錐"] },
-                { "name": "Bog Bequest 沼澤遺贈", "type": "aoe", "description": "甜甜圈 AoE，近戰安全；boss 在邊 → 對側也安全。", "tips": ["近戰圈內 / 站對側"] }
-            ]}]
-        }
-    ]
+    "id":  "saint_mociannes_arboretum_hard",
+    "name":  "聖莫西安植物園（零式）",
+    "nameEn":  "Saint Mocianne\u0027s Arboretum (Hard)",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Nullchu 食肉植物：Sludge Bomb 留毒池 (Pollen + Leaden)；Rafflesia 召喚 → boss 跳上吞食 + Odious Atmosphere 中央毒霧 (站 Rafflesia 旁邊閃)；Fault Warren stack。",
+                     "2）B2 Lakhamu 石巨人：場邊有荊棘 vuln；Landslip 輸送帶推 + Silt Golem 直線 → 站對應安全位避免接連命中；Earthquake 近圓 → 環圈。Earth Shaker 對 DPS 直線。",
+                     "3）B3 Tokkapchi 泥怪：場地是格柵 + 4 個固體平台。**Mud Pie 召 Mud Slime → 不能讓任何 boss AoE 打中 (越大越痛)**；Quagmire 玩家 AoE 也要避開平台 (留 vuln 池)。"
+                 ],
+    "notes":  "SB 4.2 dungeon Hard Lv 70 ilvl 330。Arboretum 重製版。資料來源：CGW (Saint Mocianne\u0027s Arboretum (Hard))。",
+    "bosses":  [
+                   {
+                       "name":  "食肉植物",
+                       "nameEn":  "Nullchu",
+                       "mnemonic":  [
+                                        "Sludge Bomb 留毒池",
+                                        "Rafflesia → 站它旁邊閃 Odious Atmosphere"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Odious Air 惡氣",
+                                                                "type":  "aoe",
+                                                                "description":  "前方錐 + Poison。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 朝外",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vine Whip 藤鞭",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Sludge Bomb 污泥彈",
+                                                                "type":  "other",
+                                                                "description":  "標記玩家 AoE → 留綠毒池 (Pollen + Leaden)。",
+                                                                "tips":  [
+                                                                             "被標跑場邊放"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Fault Warren 縫隙之巢",
+                                                                "type":  "stack",
+                                                                "description":  "玩家分擔。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rafflesia + Devour + Odious Atmosphere",
+                                                                "type":  "other",
+                                                                "description":  "場邊 Rafflesia 召 (訊息 hall echoes...) → boss 跳上吞食 → 中央發毒霧 30s。**站 Rafflesia 旁邊**閃中央。",
+                                                                "tips":  [
+                                                                             "看 boss 朝向 Rafflesia 就跑過去那邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Taproot 主根",
+                                                                "type":  "spread",
+                                                                "description":  "全員 AoE 散開。",
+                                                                "tips":  [
+                                                                             "散開"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "石巨人",
+                       "nameEn":  "Lakhamu",
+                       "mnemonic":  [
+                                        "場邊荊棘 vuln",
+                                        "Landslip 輸送帶 + Silt Golem 直線",
+                                        "Earthquake 近圓 → 環圈"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Stone II / Tectonics",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Stone II = tankbuster / Tectonics = 全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Landslip + Silt Golem",
+                                                                "type":  "other",
+                                                                "description":  "場上輸送帶推 (推走半場距離) + 場外 Silt Golem 直線 AoE。",
+                                                                "tips":  [
+                                                                             "預判推力方向選位置避 Silt Golem 直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Earthquake 地震",
+                                                                "type":  "aoe",
+                                                                "description":  "近圓 → 環圈。",
+                                                                "tips":  [
+                                                                             "近戰 or 遠程位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Earth Shaker 大地震動",
+                                                                "type":  "aoe",
+                                                                "description":  "兩 DPS 直線 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 拉開",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Empty Gaze 空虛凝視",
+                                                                "type":  "other",
+                                                                "description":  "視線給 Hysteria。",
+                                                                "tips":  [
+                                                                             "背對 boss"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "泥怪",
+                       "nameEn":  "Tokkapchi",
+                       "mnemonic":  [
+                                        "格柵 + 4 平台",
+                                        "Mud Pie 召 Mud Slime → 不可被 AoE 命中 (越大越痛)",
+                                        "Quagmire 標記避開平台"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Mudsling 泥擲",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Periodic Mud Eruption 泥噴",
+                                                                "type":  "other",
+                                                                "description":  "格柵下泥水翻騰 (訊息 puddles begin to froth) → 不在平台上 = 高傷 + 擊飛。",
+                                                                "tips":  [
+                                                                             "跑到平台上"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Quagmire 沼澤",
+                                                                "type":  "spread",
+                                                                "description":  "全員 AoE → 中央留 vuln 池。**不能讓圓覆蓋平台**。",
+                                                                "tips":  [
+                                                                             "散開 + 避開平台中心"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mud Pie 泥派 + Mud Slime",
+                                                                "type":  "other",
+                                                                "description":  "boss 中央生 Mud Slime 不可殺 (只能 push)。**不能讓 AoE 包括泥噴打中**否則 Slime 變大 Corrupture 越痛。",
+                                                                "tips":  [
+                                                                             "所有 AoE 不打 Slime"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Royal Flush 沖洗",
+                                                                "type":  "aoe",
+                                                                "description":  "近戰 AoE。",
+                                                                "tips":  [
+                                                                             "跑場外"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Muddy Dorpokkur 第 2 Mud Pie 召分散",
+                                                                "type":  "other",
+                                                                "description":  "第 2 Mud Pie 兩 Dorpokkur adds (低血)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺 adds 後繼續 push Slime",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Feculent Flood 污水洪流",
+                                                                "type":  "aoe",
+                                                                "description":  "對 Mud Slime 錐長詠唱 → 玩家 push Slime 出錐範圍。",
+                                                                "tips":  [
+                                                                             "全員打 Slime 推出錐"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Bog Bequest 沼澤遺贈",
+                                                                "type":  "aoe",
+                                                                "description":  "甜甜圈 AoE，近戰安全；boss 在邊 → 對側也安全。",
+                                                                "tips":  [
+                                                                             "近戰圈內 / 站對側"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

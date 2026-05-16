@@ -1,50 +1,152 @@
 {
-    "id": "saint_mociannes_arboretum",
-    "name": "聖莫西安植物園",
-    "nameEn": "Saint Mocianne's Arboretum",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Rose Garden：旋轉吐息 → 跟著 boss 旋轉方向走位；第二次起召 Rose Hips (氣球) → 速殺否則全屏傷。",
-        "2）B2 Queen Hawk：場邊 bees 注意不站前方直線 (Ally 雙列 AoE 無預警，蜂混牆色)；Knight Hawk adds DPS check (越拖全屏越痛)。",
-        "3）B3 Belladonna：大 AoE 唯一 dodge 站 boss 旁；Bulbs 留黃圓 magic vuln + Frond Fatale 魅惑 (背對 boss)；場上召 adds 要殺。"
-    ],
-    "notes": "HW 3.55 dungeon Lv 60 ilvl 230 (Heavensward patch)。聖莫西安植物園。資料來源：CGW (Saint Mocianne's Arboretum)。",
-    "bosses": [
-        {
-            "name": "Rose Garden 玫瑰園",
-            "nameEn": "Rose Garden",
-            "mnemonic": ["旋轉吐息看方向", "Rose Hips 氣球速殺"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Spinning Breath 旋轉吐息", "type": "aoe", "description": "boss 召小 untargetable adds 各自吐息 + boss 隨機順/逆時針旋轉。", "tips": ["看 boss 旋轉方向走位"] },
-                { "name": "Rose Hips 玫瑰花蕾", "type": "other", "description": "第 2 次旋轉吐息起召氣球狀 adds，**不殺爆 = 全屏 raidwide**。", "tips": [{ "text": "DPS 優先殺 Rose Hips", "role": "dps" }] }
-            ]}]
-        },
-        {
-            "name": "Queen Hawk 蜂后",
-            "nameEn": "Queen Hawk",
-            "mnemonic": ["bees 隨機直線 (站前方危險)", "Ally 雙列 AoE 蜂混牆色", "Knight Hawk DPS check"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Bees 蜂 + Column AoE", "type": "aoe", "description": "場邊 bees 對隨機玩家直線。Ally 兩組 bees 排場邊放雙列 AoE 無 telegraph (蜂混牆色)。", "tips": ["不站蜂前", "Ally 時注意牆 → 找空隙"] },
-                { "name": "Knight Hawk adds (DPS check)", "type": "other", "description": "場上召 Knight Hawk 連繩 boss → 拖久 boss 全屏越痛。", "tips": [{ "text": "DPS 全力速殺 Knight Hawk", "role": "dps" }] },
-                { "name": "Avail (BLU spell)", "type": "aoe", "description": "場上 AoE。", "tips": ["閃預警"] }
-            ]}]
-        },
-        {
-            "name": "Belladonna 顛茄",
-            "nameEn": "Belladonna (enemy)",
-            "mnemonic": ["大 AoE 站 boss 旁", "Bulbs 黃圓 magic vuln + Frond Fatale 魅惑 (背對)", "adds 要殺"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Big AoE 大 AoE", "type": "aoe", "description": "場上大 AoE，**站 boss 旁安全**。", "tips": ["跑向 boss"] },
-                { "name": "Bulbs 球根 + Frond Fatale 魅惑", "type": "other", "description": "Bulbs 召 → 場上黃 AoE 區 (magic vuln)。Frond Fatale 短詠唱魅惑玩家跑進黃圓吃 debuff。", "tips": ["看到 Frond Fatale **立刻背對 boss** 避魅惑"] },
-                { "name": "Room-wide AoE 全屏", "type": "raidwide", "description": "全屏 AoE 約 4k。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Adds 召喚", "type": "other", "description": "場上召 targetable adds。", "tips": [{ "text": "DPS 處理", "role": "dps" }] }
-            ]}]
-        }
-    ]
+    "id":  "saint_mociannes_arboretum",
+    "name":  "聖莫西安植物園",
+    "nameEn":  "Saint Mocianne\u0027s Arboretum",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Rose Garden：旋轉吐息 → 跟著 boss 旋轉方向走位；第二次起召 Rose Hips (氣球) → 速殺否則全屏傷。",
+                     "2）B2 Queen Hawk：場邊 bees 注意不站前方直線 (Ally 雙列 AoE 無預警，蜂混牆色)；Knight Hawk adds DPS check (越拖全屏越痛)。",
+                     "3）B3 Belladonna：大 AoE 唯一 dodge 站 boss 旁；Bulbs 留黃圓 magic vuln + Frond Fatale 魅惑 (背對 boss)；場上召 adds 要殺。"
+                 ],
+    "notes":  "HW 3.55 dungeon Lv 60 ilvl 230 (Heavensward patch)。聖莫西安植物園。資料來源：CGW (Saint Mocianne\u0027s Arboretum)。",
+    "bosses":  [
+                   {
+                       "name":  "玫瑰園",
+                       "nameEn":  "Rose Garden",
+                       "mnemonic":  [
+                                        "旋轉吐息看方向",
+                                        "Rose Hips 氣球速殺"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Spinning Breath 旋轉吐息",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 召小 untargetable adds 各自吐息 + boss 隨機順/逆時針旋轉。",
+                                                                "tips":  [
+                                                                             "看 boss 旋轉方向走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rose Hips 玫瑰花蕾",
+                                                                "type":  "other",
+                                                                "description":  "第 2 次旋轉吐息起召氣球狀 adds，**不殺爆 = 全屏 raidwide**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 優先殺 Rose Hips",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "蜂后",
+                       "nameEn":  "Queen Hawk",
+                       "mnemonic":  [
+                                        "bees 隨機直線 (站前方危險)",
+                                        "Ally 雙列 AoE 蜂混牆色",
+                                        "Knight Hawk DPS check"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Bees 蜂 + Column AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場邊 bees 對隨機玩家直線。Ally 兩組 bees 排場邊放雙列 AoE 無 telegraph (蜂混牆色)。",
+                                                                "tips":  [
+                                                                             "不站蜂前",
+                                                                             "Ally 時注意牆 → 找空隙"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Knight Hawk adds (DPS check)",
+                                                                "type":  "other",
+                                                                "description":  "場上召 Knight Hawk 連繩 boss → 拖久 boss 全屏越痛。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力速殺 Knight Hawk",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Avail (BLU spell)",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 AoE。",
+                                                                "tips":  [
+                                                                             "閃預警"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "顛茄",
+                       "nameEn":  "Belladonna",
+                       "mnemonic":  [
+                                        "大 AoE 站 boss 旁",
+                                        "Bulbs 黃圓 magic vuln + Frond Fatale 魅惑 (背對)",
+                                        "adds 要殺"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Big AoE 大 AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場上大 AoE，**站 boss 旁安全**。",
+                                                                "tips":  [
+                                                                             "跑向 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Bulbs 球根 + Frond Fatale 魅惑",
+                                                                "type":  "other",
+                                                                "description":  "Bulbs 召 → 場上黃 AoE 區 (magic vuln)。Frond Fatale 短詠唱魅惑玩家跑進黃圓吃 debuff。",
+                                                                "tips":  [
+                                                                             "看到 Frond Fatale **立刻背對 boss** 避魅惑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Room-wide AoE 全屏",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE 約 4k。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Adds 召喚",
+                                                                "type":  "other",
+                                                                "description":  "場上召 targetable adds。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 處理",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

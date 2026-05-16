@@ -1,147 +1,194 @@
 {
-    "id": "edens_gate_sepulture_savage",
-    "name": "希望樂土的伊甸 共鳴零式4",
-    "nameEn": "Eden's Gate: Sepulture (Savage)",
-    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 80,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）E4S Titan = 三變身：Fists 拳 / Wheels 輪 / Maximum 巨。",
-        "2）Weight of the Land 黃三角 = 站定 → tile 爆；Force of Land 橘方 = 兩人同 tile 分擔；Pulse 黃 = 個人 tile 爆。",
-        "3）Stonecrusher 三連 stack = 雙坦換手；Geocrush 大擊退抗。",
-        "4）Titan Fists: Landslide cardinal / left-right 半場；Bomb Boulders + / x 順爆。",
-        "5）Titan Wheels: Fault Line MT 衝鋒 + Magnitude donut；Crumbling Down 兩人散標。",
-        "6）Titan Maximum: Earthen Fists 連拳 + Weight of World 藍三角 + Tectonic Uplift 兩斜抬高 + Megalith 雙坦 stack。",
-        "7）Rock Throw 補入 gaol → 不被踩；Plate Fracture 四分之一摧毀。",
-        "8）狂暴 Orogenesis = Duo Earthen Fury + Tumult 連發 + 末段秒。"
-    ],
-    "notes": "ShB 5.05 E4 Savage (Lv 80, ilvl 470)。Titan 多型 boss (拳/輪/巨)。多 tile 機制 + tile 抬高。",
-    "bosses": [
-        {
-            "name": "泰坦",
-            "nameEn": "Titan",
-            "mnemonic": [
-                "3 變身：Fists / Wheels / Maximum。",
-                "Weight/Force/Pulse of Land = 三色標站 tile。",
-                "Stonecrusher 三連 = 雙坦換手；Geocrush 抗擊退。",
-                "Maximum 階：Earthen Fists 連拳 + Megalith 雙坦 stack。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - 基本 Titan + Land 標記",
-                    "mechanics": [
-                        {
-                            "name": "Stonecrusher 碎石",
-                            "type": "tankbuster",
-                            "description": "MT 三連單體 buster + 疊層 debuff，需 MT/OT 換手或無敵。",
-                            "tips": [{ "text": "MT 開無敵或雙坦換手", "role": "tank" }]
-                        },
-                        {
-                            "name": "Weight / Pulse / Force / Evil of the Land",
-                            "type": "other",
-                            "description": "Weight = 隨機 tile 爆；Pulse = 個人黃三角 (站定 tile 爆)；Force = 全員橘方 (兩人同 tile 分擔)；Evil = 雙 tile 鏈爆。",
-                            "tips": ["三角散開、方塊兩人同 tile", "Evil 跑離鏈爆方向"]
-                        },
-                        {
-                            "name": "Voice of the Land 大地之聲",
-                            "type": "raidwide",
-                            "description": "不可閃高傷全屏，需減傷 + 連補。",
-                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Geocrush 地殼粉碎",
-                            "type": "other",
-                            "description": "Titan 跳一格大擊退 (比普通強)，需抗擊退或卡好邊。",
-                            "tips": ["看跳位 → 站對側 + 抗擊退"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - Titan Fists / Wheels",
-                    "mechanics": [
-                        {
-                            "name": "Titan Fists 拳形",
-                            "type": "aoe",
-                            "description": "變大拳；Landslide 跳 cardinal + 兩格寬橫向 AoE；Bomb Boulders 場上 +/x 排列依下落順序爆。",
-                            "tips": ["看 Landslide 方向 → 站殘餘 tile", "記 Bomb Boulders 落地序"]
-                        },
-                        {
-                            "name": "Landslide (Left/Right)",
-                            "type": "aoe",
-                            "description": "Titan 朝左或右半場 → 該半爆 AoE，需立刻跑對側。",
-                            "tips": ["看朝向 → 跑對側"]
-                        },
-                        {
-                            "name": "Titan Wheels 輪形 + Fault Line + Magnitude",
-                            "type": "other",
-                            "description": "Wheels: Fault Line MT 衝鋒 + 大圈衝擊 + Magnitude 場周圍 donut；其他人需貼 boss + Crumbling Down 兩人散標。",
-                            "tips": ["全員貼 boss 內圈", "兩散標分到對角"]
-                        },
-                        {
-                            "name": "Crumbling Down 崩落",
-                            "type": "spread",
-                            "description": "1 DPS + 1 T/H 標 proximity，需散到場兩對角。",
-                            "tips": ["兩標到對角，其他人留中央"]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 - Titan Maximum / Orogenesis",
-                    "mechanics": [
-                        {
-                            "name": "Earthen Fury + Earthen Fists",
-                            "type": "raidwide",
-                            "description": "Titan Maximum 開場 Earthen Fury 大全屏；Earthen Fists 連兩次拳 (亮色 = 預警拳方向)，配合 Weight of the Land 並躲拳。",
-                            "tips": [
-                                "看亮拳 → 站對側 tile",
-                                { "text": "全員減傷 + 連補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Weight of the World 藍三角",
-                            "type": "other",
-                            "description": "1 人 (或兩人) 藍三角，爆時殺自己 tile + 上下相鄰 tile；需往邊角 (角格只 4 連) 站。",
-                            "tips": ["藍標走最外角"]
-                        },
-                        {
-                            "name": "Earthen Anguish + Megalith",
-                            "type": "tankbuster",
-                            "description": "Earthen Anguish 雙坦遠離散 buster；Megalith 雙坦 stack (僅坦分擔，DPS/H 不踩)。",
-                            "tips": [
-                                { "text": "雙坦先分散 → 再集合吃 Megalith", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Tectonic Uplift 板塊抬升",
-                            "type": "other",
-                            "description": "兩斜對角 4 tile 各抬升；場上下兩層，需依機制分組站對應層。",
-                            "tips": ["按指定派 4 人上抬、4 人下層"]
-                        },
-                        {
-                            "name": "Rock Throw + Plate Fracture",
-                            "type": "other",
-                            "description": "Rock Throw 雙補進石牢；Plate Fracture 摧毀一個 1/4 場 → 不能站該區。",
-                            "tips": ["雙補不被踩 + 看哪 1/4 區亮 → 避"]
-                        },
-                        {
-                            "name": "Tumult 喧囂",
-                            "type": "raidwide",
-                            "description": "連 5 次大全屏 AoE，需強減傷 + 連補。",
-                            "tips": [{ "text": "5 連減傷不斷 + 連連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Orogenesis 造山 (Enrage)",
-                            "type": "raidwide",
-                            "description": "末段 Duo Earthen Fury + Tumult 連發 + 強壓 DPS check，需 12 秒 DoT 持續。",
-                            "tips": [{ "text": "末段催爆發 + 連減傷", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "edens_gate_sepulture_savage",
+    "name":  "希望樂土的伊甸 共鳴零式4",
+    "nameEn":  "Eden\u0027s Gate: Sepulture (Savage)",
+    "expansion":  "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  80,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）E4S Titan = 三變身：Fists 拳 / Wheels 輪 / Maximum 巨。",
+                     "2）Weight of the Land 黃三角 = 站定 → tile 爆；Force of Land 橘方 = 兩人同 tile 分擔；Pulse 黃 = 個人 tile 爆。",
+                     "3）Stonecrusher 三連 stack = 雙坦換手；Geocrush 大擊退抗。",
+                     "4）Titan Fists: Landslide cardinal / left-right 半場；Bomb Boulders + / x 順爆。",
+                     "5）Titan Wheels: Fault Line MT 衝鋒 + Magnitude donut；Crumbling Down 兩人散標。",
+                     "6）Titan Maximum: Earthen Fists 連拳 + Weight of World 藍三角 + Tectonic Uplift 兩斜抬高 + Megalith 雙坦 stack。",
+                     "7）Rock Throw 補入 gaol → 不被踩；Plate Fracture 四分之一摧毀。",
+                     "8）狂暴 Orogenesis = Duo Earthen Fury + Tumult 連發 + 末段秒。"
+                 ],
+    "notes":  "ShB 5.05 E4 Savage (Lv 80, ilvl 470)。Titan 多型 boss (拳/輪/巨)。多 tile 機制 + tile 抬高。",
+    "bosses":  [
+                   {
+                       "name":  "泰坦",
+                       "nameEn":  "Titan",
+                       "mnemonic":  [
+                                        "3 變身：Fists / Wheels / Maximum。",
+                                        "Weight/Force/Pulse of Land = 三色標站 tile。",
+                                        "Stonecrusher 三連 = 雙坦換手；Geocrush 抗擊退。",
+                                        "Maximum 階：Earthen Fists 連拳 + Megalith 雙坦 stack。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - 基本 Titan + Land 標記",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Stonecrusher 碎石",
+                                                                "type":  "tankbuster",
+                                                                "description":  "MT 三連單體 buster + 疊層 debuff，需 MT/OT 換手或無敵。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開無敵或雙坦換手",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Weight / Pulse / Force / Evil of the Land",
+                                                                "type":  "other",
+                                                                "description":  "Weight = 隨機 tile 爆；Pulse = 個人黃三角 (站定 tile 爆)；Force = 全員橘方 (兩人同 tile 分擔)；Evil = 雙 tile 鏈爆。",
+                                                                "tips":  [
+                                                                             "三角散開、方塊兩人同 tile",
+                                                                             "Evil 跑離鏈爆方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Voice of the Land 大地之聲",
+                                                                "type":  "raidwide",
+                                                                "description":  "不可閃高傷全屏，需減傷 + 連補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Geocrush 地殼粉碎",
+                                                                "type":  "other",
+                                                                "description":  "Titan 跳一格大擊退 (比普通強)，需抗擊退或卡好邊。",
+                                                                "tips":  [
+                                                                             "看跳位 → 站對側 + 抗擊退"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - Titan Fists / Wheels",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Titan Fists 拳形",
+                                                                "type":  "aoe",
+                                                                "description":  "變大拳；Landslide 跳 cardinal + 兩格寬橫向 AoE；Bomb Boulders 場上 +/x 排列依下落順序爆。",
+                                                                "tips":  [
+                                                                             "看 Landslide 方向 → 站殘餘 tile",
+                                                                             "記 Bomb Boulders 落地序"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Landslide (Left/Right) 山崩",
+                                                                "type":  "aoe",
+                                                                "description":  "Titan 朝左或右半場 → 該半爆 AoE，需立刻跑對側。",
+                                                                "tips":  [
+                                                                             "看朝向 → 跑對側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Titan Wheels 輪形 + Fault Line + Magnitude",
+                                                                "type":  "other",
+                                                                "description":  "Wheels: Fault Line MT 衝鋒 + 大圈衝擊 + Magnitude 場周圍 donut；其他人需貼 boss + Crumbling Down 兩人散標。",
+                                                                "tips":  [
+                                                                             "全員貼 boss 內圈",
+                                                                             "兩散標分到對角"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Crumbling Down 崩落",
+                                                                "type":  "spread",
+                                                                "description":  "1 DPS + 1 T/H 標 proximity，需散到場兩對角。",
+                                                                "tips":  [
+                                                                             "兩標到對角，其他人留中央"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P3 - Titan Maximum / Orogenesis",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Earthen Fury + Earthen Fists 大地之拳",
+                                                                "type":  "raidwide",
+                                                                "description":  "Titan Maximum 開場 Earthen Fury 大全屏；Earthen Fists 連兩次拳 (亮色 = 預警拳方向)，配合 Weight of the Land 並躲拳。",
+                                                                "tips":  [
+                                                                             "看亮拳 → 站對側 tile",
+                                                                             {
+                                                                                 "text":  "全員減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Weight of the World 藍三角",
+                                                                "type":  "other",
+                                                                "description":  "1 人 (或兩人) 藍三角，爆時殺自己 tile + 上下相鄰 tile；需往邊角 (角格只 4 連) 站。",
+                                                                "tips":  [
+                                                                             "藍標走最外角"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Earthen Anguish + Megalith 巨石",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Earthen Anguish 雙坦遠離散 buster；Megalith 雙坦 stack (僅坦分擔，DPS/H 不踩)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙坦先分散 → 再集合吃 Megalith",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tectonic Uplift 板塊抬升",
+                                                                "type":  "other",
+                                                                "description":  "兩斜對角 4 tile 各抬升；場上下兩層，需依機制分組站對應層。",
+                                                                "tips":  [
+                                                                             "按指定派 4 人上抬、4 人下層"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rock Throw + Plate Fracture 板塊裂",
+                                                                "type":  "other",
+                                                                "description":  "Rock Throw 雙補進石牢；Plate Fracture 摧毀一個 1/4 場 → 不能站該區。",
+                                                                "tips":  [
+                                                                             "雙補不被踩 + 看哪 1/4 區亮 → 避"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tumult 喧囂",
+                                                                "type":  "raidwide",
+                                                                "description":  "連 5 次大全屏 AoE，需強減傷 + 連補。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "5 連減傷不斷 + 連連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Orogenesis 造山 (Enrage)",
+                                                                "type":  "raidwide",
+                                                                "description":  "末段 Duo Earthen Fury + Tumult 連發 + 強壓 DPS check，需 12 秒 DoT 持續。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段催爆發 + 連減傷",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

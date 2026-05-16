@@ -1,51 +1,163 @@
 {
-    "id": "tamtara_deepcroft_hard",
-    "name": "坦塔拉墓地（零式）",
-    "nameEn": "The Tam-Tara Deepcroft (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Liavinne 莉雅維妮：殭屍跟著某玩家追，**絕對不能打殭屍**！被紅箭頭標記的玩家衝進殭屍堆 → boss AoE 殺光；自己殺殭屍會堆全隊傷害承受 debuff。",
-        "2）B2 Spare Body 替身：場中 NPC 不能受傷，否則 boss 變強；攔截場邊紫色魂球 (Nameless Spirit) 別讓飛到中央。",
-        "3）B3 Edda 鬼新娘：場中 Edda 站血圈無敵，召爬行殭屍從場邊 → 不能讓任何一個到中央 (會點亮 rune，越多 = Red Wedding 越強)。",
-        "**整副本核心：不要攻擊婚禮夥伴 / 殭屍**，會堆積極高 debuff。"
-    ],
-    "notes": "ARR 2.2 dungeon Hard Lv 50 ilvl 90。Edda 鬼新娘 quest 終戰，FF14 經典恐怖副本。資料來源：CGW (The Tam-Tara Deepcroft (Hard))。",
-    "bosses": [
-        {
-            "name": "Liavinne 莉雅維妮",
-            "nameEn": "Liavinne (Boss)",
-            "mnemonic": ["殭屍**不要打**", "紅箭頭玩家衝進殭屍堆讓 boss AoE 殺", "全員聚中央方便"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Zombie Horde 殭屍群", "type": "other", "description": "場上召大群殭屍追隨機玩家 (非 tank)。**自己打殭屍 = 全隊堆 damage taken debuff 1 分鐘 (可疊 8 層)**。", "tips": [{ "text": "DPS/healer 絕對不要 AoE 殺殭屍", "role": "dps" }, "kite 殭屍等紅箭頭"] },
-                { "name": "Red Arrow 紅箭頭標記", "type": "other", "description": "Boss 對某玩家上紅箭頭，該玩家衝進殭屍堆 → boss AoE 把殭屍殺光。", "tips": ["全員聚中央，紅箭頭玩家貼到被追玩家身上方便 boss AoE 殺光殭屍"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "Spare Body 替身",
-            "nameEn": "Spare Body",
-            "mnemonic": ["NPC 中央不能受傷 → boss 變強", "場邊紫魂球 (Nameless Spirit) 攔截", "Bleeding 場地 AoE 拉 boss 遠離 NPC"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Protect NPC Paiyo Reiyo", "type": "other", "description": "場中 NPC 受傷 = boss 變大變強；NPC 死 = 全屏 wipe。", "tips": [{ "text": "MT 把 boss 拉到場邊遠離 NPC", "role": "tank" }] },
-                { "name": "Nameless Spirit 紫魂球", "type": "other", "description": "Portal 噴紫色魂球往 NPC 移動，玩家穿過去引爆。後期變更大的 Nameless Soul 兩顆要打。", "tips": [{ "text": "全員場邊穿過小魂球", "role": "dps" }] },
-                { "name": "Bleeding AoE", "type": "aoe", "description": "場上留下出血 DoT 區域。", "tips": ["跑出血圈"] }
-            ]}]
-        },
-        {
-            "name": "Avere Bravearm + Edda 鬼新娘",
-            "nameEn": "Avere Bravearm + Edda",
-            "mnemonic": ["Edda 中央血圈無敵", "場邊召喚惡魔放直線 AoE 都對 tank", "爬行殭屍從場邊不能讓任何一個到中央 → Red Wedding 越強"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Edda Bleeding Circle", "type": "other", "description": "Edda 中央血圈不可選中，定期場邊召惡魔放直線 AoE 都集中 tank。", "tips": [{ "text": "MT 保持移動避開直線", "role": "tank" }] },
-                { "name": "Crawling Zombie Wave 爬行殭屍", "type": "other", "description": "場邊出現爬行殭屍朝中央，**任何一個到中央 = 點亮 rune**。Rune 越多 → Red Wedding 終局傷害越高。", "tips": [{ "text": "DPS 在場邊截擊殭屍別讓接近中央", "role": "dps" }] },
-                { "name": "Red Wedding 紅色婚禮 (終局)", "type": "raidwide", "description": "依點亮 rune 數判定傷害的全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
-            ]}]
-        }
-    ]
+    "id":  "tamtara_deepcroft_hard",
+    "name":  "坦塔拉墓地（零式）",
+    "nameEn":  "The Tam-Tara Deepcroft (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Liavinne 莉雅維妮：殭屍跟著某玩家追，**絕對不能打殭屍**！被紅箭頭標記的玩家衝進殭屍堆 → boss AoE 殺光；自己殺殭屍會堆全隊傷害承受 debuff。",
+                     "2）B2 Spare Body 替身：場中 NPC 不能受傷，否則 boss 變強；攔截場邊紫色魂球 (Nameless Spirit) 別讓飛到中央。",
+                     "3）B3 Edda 鬼新娘：場中 Edda 站血圈無敵，召爬行殭屍從場邊 → 不能讓任何一個到中央 (會點亮 rune，越多 = Red Wedding 越強)。",
+                     "**整副本核心：不要攻擊婚禮夥伴 / 殭屍**，會堆積極高 debuff。"
+                 ],
+    "notes":  "ARR 2.2 dungeon Hard Lv 50 ilvl 90。Edda 鬼新娘 quest 終戰，FF14 經典恐怖副本。資料來源：CGW (The Tam-Tara Deepcroft (Hard))。",
+    "bosses":  [
+                   {
+                       "name":  "莉雅維妮",
+                       "nameEn":  "Liavinne",
+                       "mnemonic":  [
+                                        "殭屍**不要打**",
+                                        "紅箭頭玩家衝進殭屍堆讓 boss AoE 殺",
+                                        "全員聚中央方便"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Zombie Horde 殭屍群",
+                                                                "type":  "other",
+                                                                "description":  "場上召大群殭屍追隨機玩家 (非 tank)。**自己打殭屍 = 全隊堆 damage taken debuff 1 分鐘 (可疊 8 層)**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS/healer 絕對不要 AoE 殺殭屍",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "kite 殭屍等紅箭頭"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Red Arrow 紅箭頭標記",
+                                                                "type":  "other",
+                                                                "description":  "Boss 對某玩家上紅箭頭，該玩家衝進殭屍堆 → boss AoE 把殭屍殺光。",
+                                                                "tips":  [
+                                                                             "全員聚中央，紅箭頭玩家貼到被追玩家身上方便 boss AoE 殺光殭屍"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "替身",
+                       "nameEn":  "Spare Body",
+                       "mnemonic":  [
+                                        "NPC 中央不能受傷 → boss 變強",
+                                        "場邊紫魂球 (Nameless Spirit) 攔截",
+                                        "Bleeding 場地 AoE 拉 boss 遠離 NPC"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Protect NPC Paiyo Reiyo",
+                                                                "type":  "other",
+                                                                "description":  "場中 NPC 受傷 = boss 變大變強；NPC 死 = 全屏 wipe。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 把 boss 拉到場邊遠離 NPC",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Nameless Spirit 紫魂球",
+                                                                "type":  "other",
+                                                                "description":  "Portal 噴紫色魂球往 NPC 移動，玩家穿過去引爆。後期變更大的 Nameless Soul 兩顆要打。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員場邊穿過小魂球",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Bleeding AoE",
+                                                                "type":  "aoe",
+                                                                "description":  "場上留下出血 DoT 區域。",
+                                                                "tips":  [
+                                                                             "跑出血圈"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Avere Bravearm + Edda 鬼新娘",
+                       "nameEn":  "Avere Bravearm + Edda",
+                       "mnemonic":  [
+                                        "Edda 中央血圈無敵",
+                                        "場邊召喚惡魔放直線 AoE 都對 tank",
+                                        "爬行殭屍從場邊不能讓任何一個到中央 → Red Wedding 越強"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Edda Bleeding Circle",
+                                                                "type":  "other",
+                                                                "description":  "Edda 中央血圈不可選中，定期場邊召惡魔放直線 AoE 都集中 tank。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 保持移動避開直線",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Crawling Zombie Wave 爬行殭屍",
+                                                                "type":  "other",
+                                                                "description":  "場邊出現爬行殭屍朝中央，**任何一個到中央 = 點亮 rune**。Rune 越多 → Red Wedding 終局傷害越高。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 在場邊截擊殭屍別讓接近中央",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Red Wedding 紅色婚禮 (終局)",
+                                                                "type":  "raidwide",
+                                                                "description":  "依點亮 rune 數判定傷害的全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

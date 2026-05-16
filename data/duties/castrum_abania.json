@@ -1,55 +1,199 @@
 {
-    "id": "castrum_abania",
-    "name": "阿巴尼亞要塞",
-    "nameEn": "Castrum Abania",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 69,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Magna Roader 機械野獸：Wild Speed 場上衝鋒 → 殺 12th Legion Optio adds 接管砲 → 對 Roader 開火打斷否則無限衝。",
-        "2）B2 Subject XXIV 24 號實驗體：Elemental Overload 全屏定屬性 (火/冰/雷) → 各屬性 Discrete + Serial Magicks 不同機制 (雷有 tower 要踩否則電擊全屏)。",
-        "3）B3 Inferno 火元素：Roids 強化雙臂 (Ketu 給 Bleeding / Rahu 多直線 + proximity)；12th Legion Death Claws 連繩玩家 + Packer 充能機 → 殺光否則 Inferno 強化。"
-    ],
-    "notes": "SB 4.0 dungeon Lv 69 ilvl 280。Castrum Abania 帝國要塞。資料來源：CGW (Castrum Abania)。",
-    "bosses": [
-        {
-            "name": "Magna Roader 大野獸",
-            "nameEn": "Magna Roader",
-            "mnemonic": ["Wild Speed 衝鋒 → 殺 Optio → 接砲打 boss", "Magitek Fire III 全屏"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Wheel 滾輪", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Magitek Fire II / III", "type": "aoe", "description": "Fire II 對玩家圓 AoE / Fire III 全屏。", "tips": ["閃預警"] },
-                { "name": "Wild Speed 狂速 + Optio", "type": "other", "description": "場上衝鋒 (碰會被撞)，同時召 12th Legion Optio adds 啟側面砲。**殺 Optio 後玩家可用砲對 boss 開火** (boss 暫停時才打中) 才能中斷 Wild Speed。", "tips": [{ "text": "DPS 殺 Optio → 玩家接砲對 boss", "role": "dps" }] }
-            ]}]
-        },
-        {
-            "name": "Subject XXIV 24 號實驗體",
-            "nameEn": "Subject Number XXIV",
-            "mnemonic": ["Elemental Overload 全屏定屬性 (火/冰/雷)", "雷 = tower 要踩", "後 boss 暈 (vuln up)"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Elemental Overload 元素過載", "type": "raidwide", "description": "全屏 + 定屬性 (火/冰/雷) → 後續招式。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Fire 系列", "type": "aoe", "description": "Discrete: 3 個 120° 錐 → Fire II stack。Serial: 2 組 + stack。", "tips": ["閃錐 + stack 標記疊接"] },
-                { "name": "Ice 系列", "type": "aoe", "description": "Discrete: 交叉直線 → 全員圓 AoE (Blizzard II)。Serial: 兩組 + 全員圓。", "tips": ["閃十字直線 → 散開避圓"] },
-                { "name": "Thunder 系列", "type": "other", "description": "Discrete: **兩對 tower 各 1 人踩**，否則 Electrify 全屏致死。Serial: 兩組 tower + 全員直線。", "tips": ["全員預先分組踩 tower"] },
-                { "name": "Vulnerability Up 後 boss 暈", "type": "other", "description": "每組元素後 boss 暈 + 易傷 buff。", "tips": [{ "text": "DPS 全力 burst", "role": "dps" }] }
-            ]}]
-        },
-        {
-            "name": "Inferno 火元素",
-            "nameEn": "Inferno",
-            "mnemonic": ["Ketu Bleeding / Rahu 多直線", "Death Claws 連繩拖走 + Packer 充能機 → 殺光否則強化"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Ketu Slash 凱圖斬", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Rahu Blaster 拉胡爆破", "type": "aoe", "description": "對玩家直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Ketu & Rahu 組合", "type": "aoe", "description": "場上地面 AoE + 玩家追蹤 AoE。", "tips": ["走位"] },
-                { "name": "Roids 強化機 (Ketu)", "type": "other", "description": "boss 走場後接受 Roids 強化左臂 → 給 tank Bleeding；第 2 次強化加 vuln。", "tips": [{ "text": "MT 注意 Bleeding 累積", "role": "healer" }] },
-                { "name": "Roids 強化機 (Rahu)", "type": "aoe", "description": "右臂強化 → 多重直線全屏 + proximity；第 2 次加玩家 AoE。", "tips": ["閃多重直線"] },
-                { "name": "Legion adds (Death Claws + Packer)", "type": "other", "description": "Death Claws 連繩玩家 → 到達會 incapacitate；Packer 走向 boss 後充能 → boss 進一步強化。", "tips": [{ "text": "DPS 速殺 Death Claws + 阻止 Packer", "role": "dps" }] }
-            ]}]
-        }
-    ]
+    "id":  "castrum_abania",
+    "name":  "阿巴尼亞要塞",
+    "nameEn":  "Castrum Abania",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  69,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Magna Roader 機械野獸：Wild Speed 場上衝鋒 → 殺 12th Legion Optio adds 接管砲 → 對 Roader 開火打斷否則無限衝。",
+                     "2）B2 Subject XXIV 24 號實驗體：Elemental Overload 全屏定屬性 (火/冰/雷) → 各屬性 Discrete + Serial Magicks 不同機制 (雷有 tower 要踩否則電擊全屏)。",
+                     "3）B3 Inferno 火元素：Roids 強化雙臂 (Ketu 給 Bleeding / Rahu 多直線 + proximity)；12th Legion Death Claws 連繩玩家 + Packer 充能機 → 殺光否則 Inferno 強化。"
+                 ],
+    "notes":  "SB 4.0 dungeon Lv 69 ilvl 280。Castrum Abania 帝國要塞。資料來源：CGW (Castrum Abania)。",
+    "bosses":  [
+                   {
+                       "name":  "大野獸",
+                       "nameEn":  "Magna Roader",
+                       "mnemonic":  [
+                                        "Wild Speed 衝鋒 → 殺 Optio → 接砲打 boss",
+                                        "Magitek Fire III 全屏"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Wheel 滾輪",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magitek Fire II / III",
+                                                                "type":  "aoe",
+                                                                "description":  "Fire II 對玩家圓 AoE / Fire III 全屏。",
+                                                                "tips":  [
+                                                                             "閃預警"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wild Speed 狂速 + Optio",
+                                                                "type":  "other",
+                                                                "description":  "場上衝鋒 (碰會被撞)，同時召 12th Legion Optio adds 啟側面砲。**殺 Optio 後玩家可用砲對 boss 開火** (boss 暫停時才打中) 才能中斷 Wild Speed。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 殺 Optio → 玩家接砲對 boss",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "號實驗體",
+                       "nameEn":  "Subject XXIV 24",
+                       "mnemonic":  [
+                                        "Elemental Overload 全屏定屬性 (火/冰/雷)",
+                                        "雷 = tower 要踩",
+                                        "後 boss 暈 (vuln up)"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Elemental Overload 元素過載",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 + 定屬性 (火/冰/雷) → 後續招式。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Fire 系列",
+                                                                "type":  "aoe",
+                                                                "description":  "Discrete: 3 個 120° 錐 → Fire II stack。Serial: 2 組 + stack。",
+                                                                "tips":  [
+                                                                             "閃錐 + stack 標記疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Ice 系列",
+                                                                "type":  "aoe",
+                                                                "description":  "Discrete: 交叉直線 → 全員圓 AoE (Blizzard II)。Serial: 兩組 + 全員圓。",
+                                                                "tips":  [
+                                                                             "閃十字直線 → 散開避圓"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Thunder 系列",
+                                                                "type":  "other",
+                                                                "description":  "Discrete: **兩對 tower 各 1 人踩**，否則 Electrify 全屏致死。Serial: 兩組 tower + 全員直線。",
+                                                                "tips":  [
+                                                                             "全員預先分組踩 tower"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vulnerability Up 後 boss 暈",
+                                                                "type":  "other",
+                                                                "description":  "每組元素後 boss 暈 + 易傷 buff。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力 burst",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "火元素",
+                       "nameEn":  "Inferno",
+                       "mnemonic":  [
+                                        "Ketu Bleeding / Rahu 多直線",
+                                        "Death Claws 連繩拖走 + Packer 充能機 → 殺光否則強化"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Ketu Slash 凱圖斬",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rahu Blaster 拉胡爆破",
+                                                                "type":  "aoe",
+                                                                "description":  "對玩家直線 AoE。",
+                                                                "tips":  [
+                                                                             "閃直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Ketu \u0026 Rahu 組合",
+                                                                "type":  "aoe",
+                                                                "description":  "場上地面 AoE + 玩家追蹤 AoE。",
+                                                                "tips":  [
+                                                                             "走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Roids 強化機 (Ketu)",
+                                                                "type":  "other",
+                                                                "description":  "boss 走場後接受 Roids 強化左臂 → 給 tank Bleeding；第 2 次強化加 vuln。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 注意 Bleeding 累積",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Roids 強化機 (Rahu)",
+                                                                "type":  "aoe",
+                                                                "description":  "右臂強化 → 多重直線全屏 + proximity；第 2 次加玩家 AoE。",
+                                                                "tips":  [
+                                                                             "閃多重直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Legion adds (Death Claws + Packer)",
+                                                                "type":  "other",
+                                                                "description":  "Death Claws 連繩玩家 → 到達會 incapacitate；Packer 走向 boss 後充能 → boss 進一步強化。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺 Death Claws + 阻止 Packer",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

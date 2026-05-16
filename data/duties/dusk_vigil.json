@@ -1,56 +1,218 @@
 {
-    "id": "dusk_vigil",
-    "name": "黎明哨塔",
-    "nameEn": "The Dusk Vigil",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 51,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Towering Oliphant 高聳象鼻獸：Trunk Tawse tankbuster；Rear 環狀 AoE 拉外；**Rock of Ages → Wooly Inspiration → Rout 直線疊接** (被標者被拉到 boss + 暈 + 線 AoE)。",
-        "2）B2 Ser Yuhelmeric：Brain Drain 召紅 Frozen Knight (boss 接觸獲 damage up) / 藍 Chirurgeon (haste) → **boss 拉離 adds**，DPS 速殺。Death Spiral 甜甜圈 + Hell Slash 擊退。",
-        "3）B3 Opinicus 奧庇尼科斯：場上瓦礫堆是核心。Whirling Gaol/Winds of Winter 必須躲在瓦礫後避免被推到中央束縛。"
-    ],
-    "notes": "HW 3.0 MSQ 第一座副本 Lv 51 sync 52。位於庫爾札斯西部高地。資料來源：CGW (The Dusk Vigil)。",
-    "bosses": [
-        {
-            "name": "高聳象鼻獸 Towering Oliphant",
-            "nameEn": "Towering Oliphant",
-            "mnemonic": ["Trunk Tawse tankbuster", "Rear 環 AoE 拉外", "Rock of Ages → Wooly Inspiration → Rout 疊接"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Trunk Tawse 鼻擊", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Rear 後踢", "type": "aoe", "description": "Boss 周圍環狀 AoE。", "tips": [{ "text": "拉到場邊讓近戰能打", "role": "tank" }] },
-                { "name": "Prehistoric Trumpet 史前號角", "type": "raidwide", "description": "全體魔法傷害。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Rock of Ages 上古之岩", "type": "other", "description": "標記隨機玩家並施加 Down for the Count → Wooly Inspiration。", "tips": ["被標記者站位置記好"] },
-                { "name": "Wooly Inspiration + Rout 連發", "type": "stack", "description": "被 Rock of Ages 標記者被拉向 boss + 暈，再放 Rout 直線分擔。", "tips": ["全員到被標記者與 boss 中間分擔 Rout"] }
-            ]}]
-        },
-        {
-            "name": "尤海爾梅利克騎士 Ser Yuhelmeric",
-            "nameEn": "Ser Yuhelmeric",
-            "mnemonic": ["Skullsplinter tankbuster", "Brain Drain 召紅藍 adds → boss 拉離", "Death Spiral 甜甜圈", "Hell Slash 擊退"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Skullsplinter 碎顱", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Tumulus 古墳", "type": "aoe", "description": "Boss 周圍環狀 AoE。", "tips": ["拉場邊"] },
-                { "name": "Brain Drain + 召喚 adds", "type": "other", "description": "全屏 + 召紅 Frozen Knight (近戰，boss 接觸獲 damage up) / 藍 Frozen Chirurgeon (法系，給 boss haste) adds。", "tips": [{ "text": "tank 把 boss 拉離 adds", "role": "tank" }, { "text": "DPS 優先擊殺 adds", "role": "dps" }] },
-                { "name": "Death Spiral 死亡之渦", "type": "aoe", "description": "大型甜甜圈 AoE，通常接 adds 後。", "tips": ["貼緊 boss 腳邊"] },
-                { "name": "Hell Slash 地獄斬", "type": "knockback", "description": "強力擊退，常接 Death Spiral。", "tips": ["背對場邊 / Arm's Length"] }
-            ]}]
-        },
-        {
-            "name": "奧庇尼科斯 Opinicus",
-            "nameEn": "Opinicus",
-            "mnemonic": ["瓦礫堆是核心", "Whirling Gaol/Winds of Winter 躲瓦礫後", "Freefall 跳擊"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Golden Talons 黃金爪", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Alpine Draft 高山疾風", "type": "aoe", "description": "對隨機玩家的直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Freefall 自由墜落", "type": "aoe", "description": "Boss 跳到一名玩家，大圓 AoE。", "tips": ["被瞄者跑開讓 boss 落空"] },
-                { "name": "Whirling Gaol 旋風監牢", "type": "other", "description": "場地外圍把玩家往中央推 → 被推到中央會被束縛 + 堆 Wind Resistance Down + 傷害。", "tips": ["躲到瓦礫後避免被推到中央"] },
-                { "name": "Winds of Winter 冬之風", "type": "raidwide", "description": "全屏 AoE 堆疊 Wind Resistance Down。瓦礫堆遮擋可免命中。", "tips": [{ "text": "全員躲瓦礫後", "role": "tank" }, { "text": "若全員都中，下次更痛", "role": "healer" }] }
-            ]}]
-        }
-    ]
+    "id":  "dusk_vigil",
+    "name":  "黎明哨塔",
+    "nameEn":  "The Dusk Vigil",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  51,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Towering Oliphant 高聳象鼻獸：Trunk Tawse tankbuster；Rear 環狀 AoE 拉外；**Rock of Ages → Wooly Inspiration → Rout 直線疊接** (被標者被拉到 boss + 暈 + 線 AoE)。",
+                     "2）B2 Ser Yuhelmeric：Brain Drain 召紅 Frozen Knight (boss 接觸獲 damage up) / 藍 Chirurgeon (haste) → **boss 拉離 adds**，DPS 速殺。Death Spiral 甜甜圈 + Hell Slash 擊退。",
+                     "3）B3 Opinicus 奧庇尼科斯：場上瓦礫堆是核心。Whirling Gaol/Winds of Winter 必須躲在瓦礫後避免被推到中央束縛。"
+                 ],
+    "notes":  "HW 3.0 MSQ 第一座副本 Lv 51 sync 52。位於庫爾札斯西部高地。資料來源：CGW (The Dusk Vigil)。",
+    "bosses":  [
+                   {
+                       "name":  "高聳象鼻獸",
+                       "nameEn":  "Towering Oliphant",
+                       "mnemonic":  [
+                                        "Trunk Tawse tankbuster",
+                                        "Rear 環 AoE 拉外",
+                                        "Rock of Ages → Wooly Inspiration → Rout 疊接"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Trunk Tawse 鼻擊",
+                                                                "type":  "tankbuster",
+                                                                "description":  "物理 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rear 後踢",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周圍環狀 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "拉到場邊讓近戰能打",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Prehistoric Trumpet 史前號角",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體魔法傷害。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rock of Ages 上古之岩",
+                                                                "type":  "other",
+                                                                "description":  "標記隨機玩家並施加 Down for the Count → Wooly Inspiration。",
+                                                                "tips":  [
+                                                                             "被標記者站位置記好"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wooly Inspiration + Rout 連發",
+                                                                "type":  "stack",
+                                                                "description":  "被 Rock of Ages 標記者被拉向 boss + 暈，再放 Rout 直線分擔。",
+                                                                "tips":  [
+                                                                             "全員到被標記者與 boss 中間分擔 Rout"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "尤海爾梅利克騎士",
+                       "nameEn":  "Ser Yuhelmeric",
+                       "mnemonic":  [
+                                        "Skullsplinter tankbuster",
+                                        "Brain Drain 召紅藍 adds → boss 拉離",
+                                        "Death Spiral 甜甜圈",
+                                        "Hell Slash 擊退"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Skullsplinter 碎顱",
+                                                                "type":  "tankbuster",
+                                                                "description":  "物理 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tumulus 古墳",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周圍環狀 AoE。",
+                                                                "tips":  [
+                                                                             "拉場邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Brain Drain + 召喚 adds",
+                                                                "type":  "other",
+                                                                "description":  "全屏 + 召紅 Frozen Knight (近戰，boss 接觸獲 damage up) / 藍 Frozen Chirurgeon (法系，給 boss haste) adds。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "tank 把 boss 拉離 adds",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "DPS 優先擊殺 adds",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Death Spiral 死亡之渦",
+                                                                "type":  "aoe",
+                                                                "description":  "大型甜甜圈 AoE，通常接 adds 後。",
+                                                                "tips":  [
+                                                                             "貼緊 boss 腳邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Hell Slash 地獄斬",
+                                                                "type":  "knockback",
+                                                                "description":  "強力擊退，常接 Death Spiral。",
+                                                                "tips":  [
+                                                                             "背對場邊 / Arm\u0027s Length"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "奧庇尼科斯",
+                       "nameEn":  "Opinicus",
+                       "mnemonic":  [
+                                        "瓦礫堆是核心",
+                                        "Whirling Gaol/Winds of Winter 躲瓦礫後",
+                                        "Freefall 跳擊"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Golden Talons 黃金爪",
+                                                                "type":  "tankbuster",
+                                                                "description":  "物理 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Alpine Draft 高山疾風",
+                                                                "type":  "aoe",
+                                                                "description":  "對隨機玩家的直線 AoE。",
+                                                                "tips":  [
+                                                                             "閃直線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Freefall 自由墜落",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 跳到一名玩家，大圓 AoE。",
+                                                                "tips":  [
+                                                                             "被瞄者跑開讓 boss 落空"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Whirling Gaol 旋風監牢",
+                                                                "type":  "other",
+                                                                "description":  "場地外圍把玩家往中央推 → 被推到中央會被束縛 + 堆 Wind Resistance Down + 傷害。",
+                                                                "tips":  [
+                                                                             "躲到瓦礫後避免被推到中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Winds of Winter 冬之風",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE 堆疊 Wind Resistance Down。瓦礫堆遮擋可免命中。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員躲瓦礫後",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "若全員都中，下次更痛",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

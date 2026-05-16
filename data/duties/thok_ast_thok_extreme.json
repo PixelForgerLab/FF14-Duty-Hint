@@ -1,41 +1,121 @@
 {
-    "id": "thok_ast_thok_extreme",
-    "name": "托克托克殲殛戰",
-    "nameEn": "Thok ast Thok (Extreme)",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Ravana EX：三 stance — Dragonfly (Seeing X 屏障)、Scorpion (Liberation AoE 系列)、Beetle。",
-        "2）開場 waymark A/B/C/D (N/E/S/W) — 後續 Swift Liberation 用。",
-        "3）Seeing Right = 站左、Seeing Left = 站右、Seeing Wings = 站前。",
-        "4）Liberation：jump up → boss + 3 clones 落場邊 → 衝刺路徑反向繞 (站第 1 clone 對側)。Swift Liberation：4 玩家分 1-4 sword icon 跑 A-D waymark。",
-        "5）Warlord Shell 必破否則 wipe。"
-    ],
-    "notes": "HW 3.0 trial EX Lv 60 ilvl 170。Ravana EX，極具挑戰。資料來源：CGW (Thok ast Thok (Extreme))。",
-    "bosses": [
-        {
-            "name": "Ravana 拉瓦納",
-            "nameEn": "Ravana",
-            "mnemonic": ["三 stance：Dragonfly/Scorpion/Beetle", "Seeing X：右=左站/左=右站/翼=前站", "Liberation 跑 1 clone 對側", "Swift Liberation 1-4 sword → A-D waymark", "Warlord Shell 必破"],
-            "phases": [
-                { "name": "Dragonfly 蜻蜓姿態", "mechanics": [
-                    { "name": "Blinding Blade 致盲之刃", "type": "tankbuster", "description": "前方錐高傷分擔。", "tips": [{ "text": "雙 T 共擔；若 1 T 把 boss 轉向隊伍", "role": "tank" }] },
-                    { "name": "The Seeing X 視界 X", "type": "other", "description": "Boss 三面屏障 (Right/Left/Wings) → 撞會傷 + 擊退 + Slow。**Right = 從左攻擊 / Left = 從右 / Wings = 從前**。", "tips": ["看屏障位置移到安全側"] },
-                    { "name": "Atma-Linga", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                    { "name": "Tapasya 苦行", "type": "aoe", "description": "前方錐 3 連擊。", "tips": [{ "text": "MT 第一擊後跑側面", "role": "tank" }] },
-                    { "name": "Warlord Shell 戰王之殼", "type": "other", "description": "boss 上盾，**必須打破否則 wipe**。", "tips": [{ "text": "DPS 全力破盾", "role": "dps" }] }
-                ]},
-                { "name": "Scorpion 蠍子姿態", "mechanics": [
-                    { "name": "Prelude to Liberation 解放序曲", "type": "aoe", "description": "AoE 序列：#1 大近圓 → #2 直線 → #3 隨機圓 (Burns) → #4 5 玩家紫圈 (對側散開)。", "tips": ["按順序走位"] },
-                    { "name": "Liberation 解放", "type": "aoe", "description": "#1 boss 全屏 AoE 唯一安全在背後 → #2 boss 跳到場邊 → #3 兩側 3 個 clones 各 PBAoE → #4 從原點依序衝刺。**站第 1 clone 落點對側**繞外圈躲衝刺。", "tips": ["跳起立刻擠中央 → 看第 1 clone 落點 → 跑對側 → 繞外圈避衝刺"] },
-                    { "name": "Swift Liberation 迅速解放", "type": "other", "description": "4 玩家被劍 icon 標記 1-4 → **跑 A/B/C/D 對應 waymark**；其他玩家擠 D 或 C。Ravana 從落點依劍順序衝刺。", "tips": ["A=N B=E C=S D=W；劍 1 跑 A、劍 2 跑 B 等"] }
-                ]}
-            ]
-        }
-    ]
+    "id":  "thok_ast_thok_extreme",
+    "name":  "托克托克殲殛戰",
+    "nameEn":  "Thok ast Thok (Extreme)",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Ravana EX：三 stance — Dragonfly (Seeing X 屏障)、Scorpion (Liberation AoE 系列)、Beetle。",
+                     "2）開場 waymark A/B/C/D (N/E/S/W) — 後續 Swift Liberation 用。",
+                     "3）Seeing Right = 站左、Seeing Left = 站右、Seeing Wings = 站前。",
+                     "4）Liberation：jump up → boss + 3 clones 落場邊 → 衝刺路徑反向繞 (站第 1 clone 對側)。Swift Liberation：4 玩家分 1-4 sword icon 跑 A-D waymark。",
+                     "5）Warlord Shell 必破否則 wipe。"
+                 ],
+    "notes":  "HW 3.0 trial EX Lv 60 ilvl 170。Ravana EX，極具挑戰。資料來源：CGW (Thok ast Thok (Extreme))。",
+    "bosses":  [
+                   {
+                       "name":  "拉瓦納",
+                       "nameEn":  "Ravana",
+                       "mnemonic":  [
+                                        "三 stance：Dragonfly/Scorpion/Beetle",
+                                        "Seeing X：右=左站/左=右站/翼=前站",
+                                        "Liberation 跑 1 clone 對側",
+                                        "Swift Liberation 1-4 sword → A-D waymark",
+                                        "Warlord Shell 必破"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "Dragonfly 蜻蜓姿態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Blinding Blade 致盲之刃",
+                                                                "type":  "tankbuster",
+                                                                "description":  "前方錐高傷分擔。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙 T 共擔；若 1 T 把 boss 轉向隊伍",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "The Seeing X 視界 X",
+                                                                "type":  "other",
+                                                                "description":  "Boss 三面屏障 (Right/Left/Wings) → 撞會傷 + 擊退 + Slow。**Right = 從左攻擊 / Left = 從右 / Wings = 從前**。",
+                                                                "tips":  [
+                                                                             "看屏障位置移到安全側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Atma-Linga",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tapasya 苦行",
+                                                                "type":  "aoe",
+                                                                "description":  "前方錐 3 連擊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 第一擊後跑側面",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Warlord Shell 戰王之殼",
+                                                                "type":  "other",
+                                                                "description":  "boss 上盾，**必須打破否則 wipe**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全力破盾",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "Scorpion 蠍子姿態",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Prelude to Liberation 解放序曲",
+                                                                "type":  "aoe",
+                                                                "description":  "AoE 序列：#1 大近圓 → #2 直線 → #3 隨機圓 (Burns) → #4 5 玩家紫圈 (對側散開)。",
+                                                                "tips":  [
+                                                                             "按順序走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Liberation 解放",
+                                                                "type":  "aoe",
+                                                                "description":  "#1 boss 全屏 AoE 唯一安全在背後 → #2 boss 跳到場邊 → #3 兩側 3 個 clones 各 PBAoE → #4 從原點依序衝刺。**站第 1 clone 落點對側**繞外圈躲衝刺。",
+                                                                "tips":  [
+                                                                             "跳起立刻擠中央 → 看第 1 clone 落點 → 跑對側 → 繞外圈避衝刺"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Swift Liberation 迅速解放",
+                                                                "type":  "other",
+                                                                "description":  "4 玩家被劍 icon 標記 1-4 → **跑 A/B/C/D 對應 waymark**；其他玩家擠 D 或 C。Ravana 從落點依劍順序衝刺。",
+                                                                "tips":  [
+                                                                             "A=N B=E C=S D=W；劍 1 跑 A、劍 2 跑 B 等"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

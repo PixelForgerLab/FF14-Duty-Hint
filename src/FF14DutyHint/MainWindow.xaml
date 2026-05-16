@@ -181,14 +181,14 @@
                                         <!-- Boss header -->
                                         <Border Background="#22FFFFFF" CornerRadius="6,6,0,0" Padding="10,6">
                                             <StackPanel>
-                                                <TextBlock Text="{Binding Name}"
+                                                <TextBlock Text="{Binding NameEn}"
                                                            Foreground="{StaticResource Accent}"
                                                            FontWeight="Bold"
-                                                           FontSize="{Binding BossFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
-                                                <TextBlock Text="{Binding NameEn}"
-                                                           Foreground="{StaticResource MutedTextBrush}"
-                                                           FontSize="11"
+                                                           FontSize="{Binding BossFontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                                            Visibility="{Binding NameEn, Converter={StaticResource StringToVis}}"/>
+                                                <TextBlock Text="{Binding Name}"
+                                                           Foreground="{StaticResource TextBrush}"
+                                                           FontSize="{Binding BossFontSize, RelativeSource={RelativeSource AncestorType=Window}}"/>
                                                 <!-- Boss 簡易 -->
                                                 <Border Background="#33FFB347"
                                                         BorderBrush="#FFB347"

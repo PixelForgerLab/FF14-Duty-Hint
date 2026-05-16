@@ -1,72 +1,262 @@
 {
-    "id": "royal_city_of_rabanastre",
-    "name": "拉巴納斯塔王都",
-    "nameEn": "The Royal City of Rabanastre",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "alliance",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Mateus 馬提烏斯：開場殺 Ice Azers；Unbind→White Whisper 撿藍球 + 站冰柱外避免冰人；Rebind→Blizzard III+IV 找安全區；Suffocation 撿 Flume Toad 死後空氣袋清 Breathless (10 stacks 死)；Ultimate Phase 冰球連繩拉開 + Azure Guards 分坦阻止連繩。",
-        "2）B2 Hashmal：Extreme Edge 火臂跨場 → 看哪臂亮閃對側；Quake IV 全屏 + Jagged Edge 紅圓追蹤。",
-        "3）B3 Rofocale：戰車衝撞 + 招喚機制。",
-        "4）B4 Argath：DPS check + 多重 AoE 終局。"
-    ],
-    "notes": "SB 4.1 FFXII Ivalice raid 第 1 部 alliance Lv 70 ilvl 305。資料來源：CGW (The Royal City of Rabanastre)。",
-    "bosses": [
-        {
-            "name": "Mateus, the Corrupt 腐敗者馬提烏斯",
-            "nameEn": "Mateus, the Corrupt",
-            "mnemonic": ["開場殺 Ice Azers", "Unbind/Rebind 階段", "Suffocation Flume Toad 空氣袋", "Ultimate 冰球 + Azure Guards"],
-            "phases": [
-                { "name": "P1 Unbind → White Whisper", "mechanics": [
-                    { "name": "Unbind → White Whisper", "type": "other", "description": "各 alliance 集合自己標記；優先打掉 Aqua Sphere；每人撿 2 顆藍球；站冰道外避免冰人。3 人站可消水柱。", "tips": ["分配 alliance 標記點 (N/SW/SE)"] },
-                    { "name": "Rebind → Dualcast → Blizzard III + IV", "type": "raidwide", "description": "Dualcast 後 Blizzard III/IV 落點 → 站交集安全區。", "tips": [{ "text": "Healer 大範圍補", "role": "healer" }] }
-                ]},
-                { "name": "P2 Suffocation 窒息", "mechanics": [
-                    { "name": "Flume Toad + Breathless", "type": "other", "description": "Flume Toad 必殺；死後留空氣袋；全員堆 Breathless (10 stacks = 死)；穿過空氣袋清 stack。直線 AoE 不要穿破空氣袋。", "tips": [{ "text": "DPS 速殺 Toad", "role": "dps" }, "穿氣袋清 stack"] }
-                ]},
-                { "name": "P3 Ultimate Phase 終極", "mechanics": [
-                    { "name": "冰球連繩 + Azure Guards", "type": "other", "description": "冰球連繩飄向玩家 (碰 = 死)、繩朝外避免錐 AoE 命中隊伍；Ice Azers 殺；3 個 Azure Guards 分坦避免靠近 (互連會強)；Aether 條滿 = wipe，必殺 Azure Guards。", "tips": [{ "text": "MT/OT 分坦 Azure Guards", "role": "tank" }, "Aether 條前殺 Guards"] }
-                ]}
-            ]
-        },
-        {
-            "name": "Hashmal, Bringer of Order 秩序使者哈修瑪爾",
-            "nameEn": "Hashmal",
-            "mnemonic": ["分 alliance (S/NW/NE)", "Extreme Edge 看亮臂閃對側", "Quake IV 全屏 + Jagged Edge 紅圓"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Quake IV 強震 4", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Jagged Edge 鋸齒邊", "type": "aoe", "description": "紅圓跟著隨機玩家。", "tips": ["走位避免"] },
-                { "name": "Falling Rocks 落石", "type": "aoe", "description": "場上圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Rock Cutter 岩切", "type": "tankbuster", "description": "重 tankbuster。", "tips": [{ "text": "MT 開大減傷", "role": "tank" }] },
-                { "name": "Extreme Edge 極端邊緣", "type": "aoe", "description": "Boss 出現場東/西邊 + 單臂著火飛過 → 看哪臂亮閃對側。", "tips": ["看臂亮側站對側"] }
-            ]}]
-        },
-        {
-            "name": "Rofocale 羅夫卡萊",
-            "nameEn": "Rofocale",
-            "mnemonic": ["戰車衝撞", "召喚機制"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Bull Charge 公牛衝撞", "type": "aoe", "description": "場上衝撞 AoE。", "tips": ["閃路徑"] },
-                { "name": "Trample 踩踏", "type": "aoe", "description": "圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
-        },
-        {
-            "name": "Argath 阿爾加斯",
-            "nameEn": "Argath",
-            "mnemonic": ["DPS check", "多重 AoE 終局"],
-            "phases": [{ "name": "B4", "mechanics": [
-                { "name": "Time Bomb 計時炸彈", "type": "other", "description": "玩家被炸彈標記，倒數爆炸。", "tips": ["被標跑開"] },
-                { "name": "Inspiriting Embrace 鼓舞擁抱", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Pulsar Burst 脈衝爆發", "type": "raidwide", "description": "終局大招。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        }
-    ]
+    "id":  "royal_city_of_rabanastre",
+    "name":  "拉巴納斯塔王都",
+    "nameEn":  "The Royal City of Rabanastre",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "alliance",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Mateus 馬提烏斯：開場殺 Ice Azers；Unbind→White Whisper 撿藍球 + 站冰柱外避免冰人；Rebind→Blizzard III+IV 找安全區；Suffocation 撿 Flume Toad 死後空氣袋清 Breathless (10 stacks 死)；Ultimate Phase 冰球連繩拉開 + Azure Guards 分坦阻止連繩。",
+                     "2）B2 Hashmal：Extreme Edge 火臂跨場 → 看哪臂亮閃對側；Quake IV 全屏 + Jagged Edge 紅圓追蹤。",
+                     "3）B3 Rofocale：戰車衝撞 + 招喚機制。",
+                     "4）B4 Argath：DPS check + 多重 AoE 終局。"
+                 ],
+    "notes":  "SB 4.1 FFXII Ivalice raid 第 1 部 alliance Lv 70 ilvl 305。資料來源：CGW (The Royal City of Rabanastre)。",
+    "bosses":  [
+                   {
+                       "name":  "腐敗者馬提烏斯",
+                       "nameEn":  "Mateus, the Corrupt",
+                       "mnemonic":  [
+                                        "開場殺 Ice Azers",
+                                        "Unbind/Rebind 階段",
+                                        "Suffocation Flume Toad 空氣袋",
+                                        "Ultimate 冰球 + Azure Guards"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 Unbind → White Whisper",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Unbind → White Whisper",
+                                                                "type":  "other",
+                                                                "description":  "各 alliance 集合自己標記；優先打掉 Aqua Sphere；每人撿 2 顆藍球；站冰道外避免冰人。3 人站可消水柱。",
+                                                                "tips":  [
+                                                                             "分配 alliance 標記點 (N/SW/SE)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rebind → Dualcast → Blizzard III + IV",
+                                                                "type":  "raidwide",
+                                                                "description":  "Dualcast 後 Blizzard III/IV 落點 → 站交集安全區。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Healer 大範圍補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 Suffocation 窒息",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Flume Toad + Breathless",
+                                                                "type":  "other",
+                                                                "description":  "Flume Toad 必殺；死後留空氣袋；全員堆 Breathless (10 stacks = 死)；穿過空氣袋清 stack。直線 AoE 不要穿破空氣袋。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺 Toad",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "穿氣袋清 stack"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P3 Ultimate Phase 終極",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "冰球連繩 + Azure Guards",
+                                                                "type":  "other",
+                                                                "description":  "冰球連繩飄向玩家 (碰 = 死)、繩朝外避免錐 AoE 命中隊伍；Ice Azers 殺；3 個 Azure Guards 分坦避免靠近 (互連會強)；Aether 條滿 = wipe，必殺 Azure Guards。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT/OT 分坦 Azure Guards",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "Aether 條前殺 Guards"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "秩序使者哈修瑪爾",
+                       "nameEn":  "Hashmal, Bringer of Order",
+                       "mnemonic":  [
+                                        "分 alliance (S/NW/NE)",
+                                        "Extreme Edge 看亮臂閃對側",
+                                        "Quake IV 全屏 + Jagged Edge 紅圓"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Quake IV 強震 4",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Jagged Edge 鋸齒邊",
+                                                                "type":  "aoe",
+                                                                "description":  "紅圓跟著隨機玩家。",
+                                                                "tips":  [
+                                                                             "走位避免"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Falling Rocks 落石",
+                                                                "type":  "aoe",
+                                                                "description":  "場上圓 AoE。",
+                                                                "tips":  [
+                                                                             "閃預警"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Rock Cutter 岩切",
+                                                                "type":  "tankbuster",
+                                                                "description":  "重 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開大減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Extreme Edge 極端邊緣",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 出現場東/西邊 + 單臂著火飛過 → 看哪臂亮閃對側。",
+                                                                "tips":  [
+                                                                             "看臂亮側站對側"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "羅夫卡萊",
+                       "nameEn":  "Rofocale",
+                       "mnemonic":  [
+                                        "戰車衝撞",
+                                        "召喚機制"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Bull Charge 公牛衝撞",
+                                                                "type":  "aoe",
+                                                                "description":  "場上衝撞 AoE。",
+                                                                "tips":  [
+                                                                             "閃路徑"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Trample 踩踏",
+                                                                "type":  "aoe",
+                                                                "description":  "圓 AoE。",
+                                                                "tips":  [
+                                                                             "閃預警"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "AoE 全體",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "阿爾加斯",
+                       "nameEn":  "Argath",
+                       "mnemonic":  [
+                                        "DPS check",
+                                        "多重 AoE 終局"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "B4",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Time Bomb 計時炸彈",
+                                                                "type":  "other",
+                                                                "description":  "玩家被炸彈標記，倒數爆炸。",
+                                                                "tips":  [
+                                                                             "被標跑開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Inspiriting Embrace 鼓舞擁抱",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Pulsar Burst 脈衝爆發",
+                                                                "type":  "raidwide",
+                                                                "description":  "終局大招。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tankbuster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

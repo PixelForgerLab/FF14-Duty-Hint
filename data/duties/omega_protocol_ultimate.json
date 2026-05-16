@@ -1,295 +1,344 @@
 {
-    "id": "omega_protocol_ultimate",
-    "name": "歐米茄絕境驗證戰",
-    "nameEn": "The Omega Protocol (Ultimate)",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "ultimate",
-    "playerCount": 8,
-    "iLvlSync": 645,
-    "jobLevelSync": 90,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P1 歐米茄：Loop 第 1/2/3/4 目標踩塔順序 + Pantokrator 全能之主 8 種組合。",
-        "2）P2 歐米茄 M&F：協作程序 PT (Mid/Far 連線) + LB (近身/遠程 burst)。",
-        "3）P3 Hello, World：Code Smell 多種 debuff (近線/遠線/上溢/同步/下溢)。",
-        "4）P4 Run: ████████：Dynamis 塔 + 三角形 + 連線 + Akh Morn。",
-        "5）P5 阿爾法 Omega：Cosmo Memory + 整合所有 P1-4 機制。",
-        "6）TOP 是 EW 6.31 開放的絕境戰，難度公認 FFXIV 史上最高。"
-    ],
-    "notes": "TOP（簡稱「絕歐米茄」），FFXIV 第五個絕境戰，6.31 開放。難度公認最高（被稱為 FFXIV 史上最難絕境戰）。共 5-6 個階段：P1 歐米茄、P2 歐米茄 M&F、P3 歐米茄 Hello World 機制、P4 Run: ████████ Dynamis 機制、P5 阿爾法 Omega。錯誤觸發 180s/50% 傷害降低巨額懲罰。",
-    "bosses": [
-        {
-            "name": "歐米茄 P1",
-            "nameEn": "Omega (Phase 1)",
-            "mnemonic": [
-                "Loop 循環程序：第 1/2/3/4 目標 16/25/34/43s 倒數，按時間踩塔。",
-                "塔判定時內無玩家 = 全屏巨傷 (引爆記憶污染)。",
-                "Pantokrator 全能之主：8 種組合（火炎放射 + 多彈頭導彈 + 跟蹤導彈 + 大功率波動炮）。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 歐米茄",
-                    "mechanics": [
-                        {
-                            "name": "循環程序 / Program Loop",
-                            "type": "other",
-                            "description": "賦予 8 玩家分組 debuff（2 人第 1 目標 16s、2 人第 2 目標 25s、2 人第 3 目標 34s、2 人第 4 目標 43s），同時連續 4 輪每輪召喚 2 個塔。倒數時需依時間順序踩塔解 debuff。塔無人 = 引爆全屏巨傷。",
-                            "tips": [
-                                "依編號順序踩塔（1→2→3→4 配對）",
-                                "塔判定時內務必有人，避免全屏團滅"
-                            ]
-                        },
-                        {
-                            "name": "衝擊波 / Beyond Strength",
-                            "type": "aoe",
-                            "description": "歐米茄釋放 4 輪可截斷連線，對接線者圓 AoE + 11s 破滅之印 + 99% 體力衰減。",
-                            "tips": [
-                                { "text": "T 接連線吃", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "全能之主 / Pantokrator",
-                            "type": "other",
-                            "description": "8 人各被點不同編號 + 跟蹤導彈 / 大功率波動炮倒數，同時歐米茄按順時針或逆時針放 10 輪火炎放射扇形 + 10 輪多彈頭導彈圓 AoE。",
-                            "tips": [
-                                "依編號倒數計時 + 順/逆時針判定走位",
-                                "波動炮：直線可分擔；導彈：圓 + 擊退"
-                            ]
-                        },
-                        {
-                            "name": "波動炮 / Wave Cannon",
-                            "type": "aoe",
-                            "description": "對 3 名非 T 玩家直線 AoE + 魔法受傷加重。",
-                            "tips": ["被點者拉開避免重疊"]
-                        },
-                        {
-                            "name": "擴散波動炮 / Diffuse Wave Cannon",
-                            "type": "aoe",
-                            "description": "對最遠 2 名玩家大範圍扇形 + 魔法受傷加重，連發 5 次。",
-                            "tips": ["指派 2 名遠程玩家輪流走最遠"]
-                        },
-                        {
-                            "name": "原子射線 / Atomic Ray",
-                            "type": "raidwide",
-                            "description": "P1 enrage 強制團滅。",
-                            "tips": ["DPS check"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "歐米茄 M&F",
-            "nameEn": "Omega-M + Omega-F",
-            "mnemonic": [
-                "M 在前防護劍/盾；F 在後魔法 + 武器變形。",
-                "防禦程序：M 近 4 人 = 防護程序 F；F 近 4 人 = 防護程序 M。",
-                "協作程序 PT：Mid/Far 連線 + 視覺組 Optical Laser。",
-                "協作程序 LB：M 武裝戎衛保護 F，必須先擊殺 M。",
-                "M 持盾 = donut；不持盾 = 貼身圓。F 雙腿無掛載 = 十字；變刀 = 兩側矩形。"
-            ],
-            "phases": [
-                {
-                    "name": "P2 歐米茄 M&F",
-                    "mechanics": [
-                        {
-                            "name": "防禦程序 / Diffraction",
-                            "type": "other",
-                            "description": "距離 M 最近 4 人獲得 Defender F；距離 F 最近 4 人獲得 Defender M。",
-                            "tips": ["指派 4 人站 M 側、4 人站 F 側"]
-                        },
-                        {
-                            "name": "變形 M / Mid-Form Shift",
-                            "type": "aoe",
-                            "description": "M 變形改變性別 + 召喚分身。持盾 = donut (盾連擊 G)；不持盾 = 貼身圓 (劍擊)。",
-                            "tips": ["看 M 持盾 → 跑遠；不持盾 → 貼近"]
-                        },
-                        {
-                            "name": "變形 F / Far-Form Shift",
-                            "type": "aoe",
-                            "description": "F 變形 + 召喚分身。雙腿無掛載 = 十字 (Omega 冰封)；變刀 = 兩側矩形 (劍連擊 B)。",
-                            "tips": ["看 F 雙腿 → 找對應安全區"]
-                        },
-                        {
-                            "name": "協作程序 PT / Cooperative Program PT",
-                            "type": "other",
-                            "description": "M&F 不可選中，視覺組分身 + 玩家 1/4/2/3 編號連線，全員獲得「故障：中」或「故障：遠」debuff（同種）。中 = 距離過近/過遠 = 受傷加重；遠 = 距離不夠遠 = 受傷加重。",
-                            "tips": [
-                                "看故障類型決定中距離 / 拉遠",
-                                "依編號連線配對走位"
-                            ]
-                        },
-                        {
-                            "name": "協作程序 LB / Cooperative Program LB",
-                            "type": "other",
-                            "description": "M&F 清除防護程序 + 召喚分身 + 武裝戎衛（M 在前擋 F）。必須先打 M，再打 F。激光骤雨 = enrage 強制團滅。",
-                            "tips": [
-                                { "text": "DPS 集火 M → F", "role": "dps" },
-                                "處理射手天箭 + 刀光劍舞 + 隕石流星"
-                            ]
-                        },
-                        {
-                            "name": "太陽射線 / Solar Ray",
-                            "type": "tankbuster",
-                            "description": "M&F 各對 1 仇圓 AoE + 魔法受傷加重。",
-                            "tips": [
-                                { "text": "兩 T 各接", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "聚光燈 / Spotlight",
-                            "type": "stack",
-                            "description": "點名 2 名玩家放可分擔圓 AoE + 魔法受傷加重。<4 人會極大傷。",
-                            "tips": ["4 人疊接，禁止只 1-2 人"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "歐米茄 P3 - Hello World",
-            "nameEn": "Omega (Hello, World)",
-            "mnemonic": [
-                "Code Smell 5 種：遠線 (淺藍)、近線 (淺綠)、上溢 (紅 D)、同步 (綠 D)、下溢 (紅毒) + 性能。",
-                "Critical Error 嚴重錯誤：上溢 = 圓 AoE；同步 = 可分擔圓；下溢 = 秒殺小圓接觸傳染。",
-                "Potential Error 潛在錯誤：時間結束全屏 AoE，靠別人的 Critical 解除。",
-                "Critical Synchronization Bug 速射式波動炮：射線後場中區域 + 環形擴散。"
-            ],
-            "phases": [
-                {
-                    "name": "P3 Hello, World",
-                    "mechanics": [
-                        {
-                            "name": "你好，世界 / Hello, World",
-                            "type": "other",
-                            "description": "全屏 AoE 賦予玩家多種 debuff：Code Smell (遠線/近線/上溢/同步/下溢/性能)。",
-                            "tips": [
-                                "看 debuff 顏色判斷類型",
-                                "藍線 = 遠；綠線 = 近"
-                            ]
-                        },
-                        {
-                            "name": "嚴重錯誤：上溢 / Critical Overflow Bug",
-                            "type": "aoe",
-                            "description": "持有玩家身上大範圍圓 AoE (自身免疫) + 21s 嚴重錯誤 debuff。再次受傷立刻釋放秒殺級圓 AoE。",
-                            "tips": ["跑外圍隔離"]
-                        },
-                        {
-                            "name": "嚴重錯誤：同步 / Critical Synchronization Bug",
-                            "type": "stack",
-                            "description": "持有玩家身上小範圍可分擔圓 AoE。",
-                            "tips": ["指派 4 人分擔"]
-                        },
-                        {
-                            "name": "嚴重錯誤：下溢 / Critical Underflow Bug",
-                            "type": "other",
-                            "description": "持有玩家身上秒殺級小範圍 AoE（自身免疫），接觸他人傳染。",
-                            "tips": [
-                                "**禁止接觸他人**",
-                                "去場邊獨自處理"
-                            ]
-                        },
-                        {
-                            "name": "潛在錯誤 / Latent Defect",
-                            "type": "raidwide",
-                            "description": "全屏高傷 AoE，靠受到 Critical Bug 傷害解除。",
-                            "tips": ["藍 D 靠紅 D 解 / 綠 D 同步解"]
-                        },
-                        {
-                            "name": "速射式波動炮 / Wave Repeater",
-                            "type": "aoe",
-                            "description": "射線後場中區域 + 環形擴散，踩入留高傷出血。",
-                            "tips": ["閃環形擴散波"]
-                        },
-                        {
-                            "name": "狙擊式大功率波動炮 / Sniper Cannon",
-                            "type": "stack",
-                            "description": "倒數結束時自身為中心可分擔圓 AoE + 魔法受傷加重。",
-                            "tips": ["指派 4 人分擔（依時間錯開）"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Run: ████████ (Dynamis)",
-            "nameEn": "Run: ████████ (Dynamis)",
-            "mnemonic": [
-                "Dynamis 動態力 機制：玩家被點 5 種顏色 (Sigma/Omega/Delta...)。",
-                "Akh Morn 死亡輪迴：T 連續分擔。",
-                "三角形 + 連線 + 塔位置決定走位。"
-            ],
-            "phases": [
-                {
-                    "name": "P4 Run: ████████",
-                    "mechanics": [
-                        {
-                            "name": "Dynamis 動態力",
-                            "type": "other",
-                            "description": "玩家被點不同 Dynamis 顏色，依顏色配對走位。",
-                            "tips": ["依指派顏色走位"]
-                        },
-                        {
-                            "name": "Akh Morn 死亡輪迴",
-                            "type": "stack",
-                            "description": "對 1 仇連續可分擔圓 AoE。",
-                            "tips": [
-                                { "text": "兩 T 連 H 分擔", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "塔位置 + 連線",
-                            "type": "other",
-                            "description": "場上 8 個塔 + 連線需精準走位。",
-                            "tips": ["分配 4-4 各踩塔 + 截連線"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "阿爾法 Omega",
-            "nameEn": "Alpha Omega",
-            "mnemonic": [
-                "Cosmo Memory：整合 P1-4 所有機制。",
-                "Limitless Synthesis：分擔 + 散開 + 連線多重組合。",
-                "Magic Number：玩家被點數字依序爆。",
-                "末段 DPS check + 機制總結算。"
-            ],
-            "phases": [
-                {
-                    "name": "P5 阿爾法 Omega",
-                    "mechanics": [
-                        {
-                            "name": "Cosmo Memory 宇宙記憶",
-                            "type": "raidwide",
-                            "description": "全屏 AoE，整合前面 P1-4 機制。",
-                            "tips": [
-                                { "text": "全體大減傷 + LB", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Limitless Synthesis",
-                            "type": "other",
-                            "description": "分擔 + 散開 + 連線多重組合。",
-                            "tips": ["嚴格走位，依指派分組"]
-                        },
-                        {
-                            "name": "Magic Number 魔法編號",
-                            "type": "other",
-                            "description": "玩家被點數字依序爆。",
-                            "tips": ["依編號順序走指定位置"]
-                        },
-                        {
-                            "name": "Blue Screen of Death (Enrage)",
-                            "type": "raidwide",
-                            "description": "Enrage 強制團滅。",
-                            "tips": ["最終 DPS check"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "omega_protocol_ultimate",
+    "name":  "歐米茄絕境驗證戰",
+    "nameEn":  "The Omega Protocol (Ultimate)",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "ultimate",
+    "playerCount":  8,
+    "iLvlSync":  645,
+    "jobLevelSync":  90,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）P1 歐米茄：Loop 第 1/2/3/4 目標踩塔順序 + Pantokrator 全能之主 8 種組合。",
+                     "2）P2 歐米茄 M\u0026F：協作程序 PT (Mid/Far 連線) + LB (近身/遠程 burst)。",
+                     "3）P3 Hello, World：Code Smell 多種 debuff (近線/遠線/上溢/同步/下溢)。",
+                     "4）P4 Run: ████████：Dynamis 塔 + 三角形 + 連線 + Akh Morn。",
+                     "5）P5 阿爾法 Omega：Cosmo Memory + 整合所有 P1-4 機制。",
+                     "6）TOP 是 EW 6.31 開放的絕境戰，難度公認 FFXIV 史上最高。"
+                 ],
+    "notes":  "TOP（簡稱「絕歐米茄」），FFXIV 第五個絕境戰，6.31 開放。難度公認最高（被稱為 FFXIV 史上最難絕境戰）。共 5-6 個階段：P1 歐米茄、P2 歐米茄 M\u0026F、P3 歐米茄 Hello World 機制、P4 Run: ████████ Dynamis 機制、P5 阿爾法 Omega。錯誤觸發 180s/50% 傷害降低巨額懲罰。",
+    "bosses":  [
+                   {
+                       "name":  "歐米茄",
+                       "nameEn":  "P1",
+                       "mnemonic":  [
+                                        "Loop 循環程序：第 1/2/3/4 目標 16/25/34/43s 倒數，按時間踩塔。",
+                                        "塔判定時內無玩家 = 全屏巨傷 (引爆記憶污染)。",
+                                        "Pantokrator 全能之主：8 種組合（火炎放射 + 多彈頭導彈 + 跟蹤導彈 + 大功率波動炮）。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 歐米茄",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "循環程序 / Program Loop",
+                                                                "type":  "other",
+                                                                "description":  "賦予 8 玩家分組 debuff（2 人第 1 目標 16s、2 人第 2 目標 25s、2 人第 3 目標 34s、2 人第 4 目標 43s），同時連續 4 輪每輪召喚 2 個塔。倒數時需依時間順序踩塔解 debuff。塔無人 = 引爆全屏巨傷。",
+                                                                "tips":  [
+                                                                             "依編號順序踩塔（1→2→3→4 配對）",
+                                                                             "塔判定時內務必有人，避免全屏團滅"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "衝擊波 / Beyond Strength",
+                                                                "type":  "aoe",
+                                                                "description":  "歐米茄釋放 4 輪可截斷連線，對接線者圓 AoE + 11s 破滅之印 + 99% 體力衰減。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 接連線吃",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "全能之主 / Pantokrator",
+                                                                "type":  "other",
+                                                                "description":  "8 人各被點不同編號 + 跟蹤導彈 / 大功率波動炮倒數，同時歐米茄按順時針或逆時針放 10 輪火炎放射扇形 + 10 輪多彈頭導彈圓 AoE。",
+                                                                "tips":  [
+                                                                             "依編號倒數計時 + 順/逆時針判定走位",
+                                                                             "波動炮：直線可分擔；導彈：圓 + 擊退"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "波動炮 / Wave Cannon",
+                                                                "type":  "aoe",
+                                                                "description":  "對 3 名非 T 玩家直線 AoE + 魔法受傷加重。",
+                                                                "tips":  [
+                                                                             "被點者拉開避免重疊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "擴散波動炮 / Diffuse Wave Cannon",
+                                                                "type":  "aoe",
+                                                                "description":  "對最遠 2 名玩家大範圍扇形 + 魔法受傷加重，連發 5 次。",
+                                                                "tips":  [
+                                                                             "指派 2 名遠程玩家輪流走最遠"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "原子射線 / Atomic Ray",
+                                                                "type":  "raidwide",
+                                                                "description":  "P1 enrage 強制團滅。",
+                                                                "tips":  [
+                                                                             "DPS check"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "歐米茄",
+                       "nameEn":  "M\u0026F",
+                       "mnemonic":  [
+                                        "M 在前防護劍/盾；F 在後魔法 + 武器變形。",
+                                        "防禦程序：M 近 4 人 = 防護程序 F；F 近 4 人 = 防護程序 M。",
+                                        "協作程序 PT：Mid/Far 連線 + 視覺組 Optical Laser。",
+                                        "協作程序 LB：M 武裝戎衛保護 F，必須先擊殺 M。",
+                                        "M 持盾 = donut；不持盾 = 貼身圓。F 雙腿無掛載 = 十字；變刀 = 兩側矩形。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P2 歐米茄 M\u0026F",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "防禦程序 / Diffraction",
+                                                                "type":  "other",
+                                                                "description":  "距離 M 最近 4 人獲得 Defender F；距離 F 最近 4 人獲得 Defender M。",
+                                                                "tips":  [
+                                                                             "指派 4 人站 M 側、4 人站 F 側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "M / Mid-Form Shift 變形",
+                                                                "type":  "aoe",
+                                                                "description":  "M 變形改變性別 + 召喚分身。持盾 = donut (盾連擊 G)；不持盾 = 貼身圓 (劍擊)。",
+                                                                "tips":  [
+                                                                             "看 M 持盾 → 跑遠；不持盾 → 貼近"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "F / Far-Form Shift 變形",
+                                                                "type":  "aoe",
+                                                                "description":  "F 變形 + 召喚分身。雙腿無掛載 = 十字 (Omega 冰封)；變刀 = 兩側矩形 (劍連擊 B)。",
+                                                                "tips":  [
+                                                                             "看 F 雙腿 → 找對應安全區"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "PT / Cooperative Program PT 協作程序",
+                                                                "type":  "other",
+                                                                "description":  "M\u0026F 不可選中，視覺組分身 + 玩家 1/4/2/3 編號連線，全員獲得「故障：中」或「故障：遠」debuff（同種）。中 = 距離過近/過遠 = 受傷加重；遠 = 距離不夠遠 = 受傷加重。",
+                                                                "tips":  [
+                                                                             "看故障類型決定中距離 / 拉遠",
+                                                                             "依編號連線配對走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "LB / Cooperative Program LB 協作程序",
+                                                                "type":  "other",
+                                                                "description":  "M\u0026F 清除防護程序 + 召喚分身 + 武裝戎衛（M 在前擋 F）。必須先打 M，再打 F。激光骤雨 = enrage 強制團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 集火 M → F",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "處理射手天箭 + 刀光劍舞 + 隕石流星"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "太陽射線 / Solar Ray",
+                                                                "type":  "tankbuster",
+                                                                "description":  "M\u0026F 各對 1 仇圓 AoE + 魔法受傷加重。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 各接",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "聚光燈 / Spotlight",
+                                                                "type":  "stack",
+                                                                "description":  "點名 2 名玩家放可分擔圓 AoE + 魔法受傷加重。\u003c4 人會極大傷。",
+                                                                "tips":  [
+                                                                             "4 人疊接，禁止只 1-2 人"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "歐米茄",
+                       "nameEn":  "P3 - Hello World",
+                       "mnemonic":  [
+                                        "Code Smell 5 種：遠線 (淺藍)、近線 (淺綠)、上溢 (紅 D)、同步 (綠 D)、下溢 (紅毒) + 性能。",
+                                        "Critical Error 嚴重錯誤：上溢 = 圓 AoE；同步 = 可分擔圓；下溢 = 秒殺小圓接觸傳染。",
+                                        "Potential Error 潛在錯誤：時間結束全屏 AoE，靠別人的 Critical 解除。",
+                                        "Critical Synchronization Bug 速射式波動炮：射線後場中區域 + 環形擴散。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P3 Hello, World",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "你好，世界 / Hello, World",
+                                                                "type":  "other",
+                                                                "description":  "全屏 AoE 賦予玩家多種 debuff：Code Smell (遠線/近線/上溢/同步/下溢/性能)。",
+                                                                "tips":  [
+                                                                             "看 debuff 顏色判斷類型",
+                                                                             "藍線 = 遠；綠線 = 近"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "嚴重錯誤：上溢 / Critical Overflow Bug",
+                                                                "type":  "aoe",
+                                                                "description":  "持有玩家身上大範圍圓 AoE (自身免疫) + 21s 嚴重錯誤 debuff。再次受傷立刻釋放秒殺級圓 AoE。",
+                                                                "tips":  [
+                                                                             "跑外圍隔離"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "嚴重錯誤：同步 / Critical Synchronization Bug",
+                                                                "type":  "stack",
+                                                                "description":  "持有玩家身上小範圍可分擔圓 AoE。",
+                                                                "tips":  [
+                                                                             "指派 4 人分擔"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "嚴重錯誤：下溢 / Critical Underflow Bug",
+                                                                "type":  "other",
+                                                                "description":  "持有玩家身上秒殺級小範圍 AoE（自身免疫），接觸他人傳染。",
+                                                                "tips":  [
+                                                                             "**禁止接觸他人**",
+                                                                             "去場邊獨自處理"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "潛在錯誤 / Latent Defect",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏高傷 AoE，靠受到 Critical Bug 傷害解除。",
+                                                                "tips":  [
+                                                                             "藍 D 靠紅 D 解 / 綠 D 同步解"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "速射式波動炮 / Wave Repeater",
+                                                                "type":  "aoe",
+                                                                "description":  "射線後場中區域 + 環形擴散，踩入留高傷出血。",
+                                                                "tips":  [
+                                                                             "閃環形擴散波"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "狙擊式大功率波動炮 / Sniper Cannon",
+                                                                "type":  "stack",
+                                                                "description":  "倒數結束時自身為中心可分擔圓 AoE + 魔法受傷加重。",
+                                                                "tips":  [
+                                                                             "指派 4 人分擔（依時間錯開）"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "Run: ████████ (Dynamis)",
+                       "nameEn":  "Run: ████████ (Dynamis)",
+                       "mnemonic":  [
+                                        "Dynamis 動態力 機制：玩家被點 5 種顏色 (Sigma/Omega/Delta...)。",
+                                        "Akh Morn 死亡輪迴：T 連續分擔。",
+                                        "三角形 + 連線 + 塔位置決定走位。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P4 Run: ████████",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Dynamis 動態力",
+                                                                "type":  "other",
+                                                                "description":  "玩家被點不同 Dynamis 顏色，依顏色配對走位。",
+                                                                "tips":  [
+                                                                             "依指派顏色走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Akh Morn 死亡輪迴",
+                                                                "type":  "stack",
+                                                                "description":  "對 1 仇連續可分擔圓 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩 T 連 H 分擔",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "塔位置 + 連線",
+                                                                "type":  "other",
+                                                                "description":  "場上 8 個塔 + 連線需精準走位。",
+                                                                "tips":  [
+                                                                             "分配 4-4 各踩塔 + 截連線"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "阿爾法",
+                       "nameEn":  "Omega",
+                       "mnemonic":  [
+                                        "Cosmo Memory：整合 P1-4 所有機制。",
+                                        "Limitless Synthesis：分擔 + 散開 + 連線多重組合。",
+                                        "Magic Number：玩家被點數字依序爆。",
+                                        "末段 DPS check + 機制總結算。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P5 阿爾法 Omega",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Cosmo Memory 宇宙記憶",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏 AoE，整合前面 P1-4 機制。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全體大減傷 + LB",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Limitless Synthesis",
+                                                                "type":  "other",
+                                                                "description":  "分擔 + 散開 + 連線多重組合。",
+                                                                "tips":  [
+                                                                             "嚴格走位，依指派分組"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Magic Number 魔法編號",
+                                                                "type":  "other",
+                                                                "description":  "玩家被點數字依序爆。",
+                                                                "tips":  [
+                                                                             "依編號順序走指定位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Blue Screen of Death (Enrage)",
+                                                                "type":  "raidwide",
+                                                                "description":  "Enrage 強制團滅。",
+                                                                "tips":  [
+                                                                             "最終 DPS check"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
