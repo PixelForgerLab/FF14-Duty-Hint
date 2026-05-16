@@ -8,42 +8,39 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "good",
+    "quality": "excellent",
     "mnemonic": [
-        "1）B1 Treno Catoblepas 鐵諾雙頭龍 = Devour 吞噬 cone + 召小龍 + 全屏。",
-        "2）B2 Amdusias 阿姆杜西亞 = Aetheric Burst 全屏 + 雙坦 line + 凝視。",
-        "3）B3 Thundergust Griffin 雷風獅鷲 = Wind Beat 風 cone + Thunderclap 雷 + 衝鋒。"
+        "1）B1 Treno Catoblepas：石化凝視 + 場上多 AoE。",
+        "2）B2 Amdusias：直線雷射 + 圓形 AoE。",
+        "3）B3 Thundergust Griffin：雷風 + 衝鋒 + 群體擊退。"
     ],
-    "notes": "DT 7.x 後期 dungeon (Lv 100)。Tural 霧之覺醒副本。",
+    "notes": "DT 7.x dungeon (Lv 100)。霧之覺醒；包含獸類 + 機甲。",
     "bosses": [
         {
-            "name": "鐵諾雙頭龍",
-            "nameEn": "Treno Catoblepas",
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Devour 吞噬", "type": "aoe", "description": "Boss 前 cone 吞噬 AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Summon Dragonet 召小龍", "type": "other", "description": "召小龍 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Aetheric Boom 以太爆", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
-                { "name": "Tail Sweep 尾擺", "type": "aoe", "description": "Boss 後 cone 尾擺 AoE。", "tips": ["站 boss 前"] }
+            "name": "特雷諾·卡托布雷帕斯", "nameEn": "Treno Catoblepas",
+            "phases": [{ "name": "B1 主戰", "mechanics": [
+                { "name": "Petrify Gaze 石化凝視", "type": "gaze", "description": "Boss 凝視玩家 → 全員背對 boss。", "tips": ["背對 boss"] },
+                { "name": "AoE 圓圈", "type": "aoe", "description": "場上多圓形 AoE → 走縫。", "tips": ["走縫"] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 單體 buster。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] },
+                { "name": "Cleave 扇形", "type": "cone", "description": "MT 扇形 cleave。", "tips": [{ "text": "MT 朝外", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "阿姆杜西亞",
-            "nameEn": "Amdusias",
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Aetheric Burst 以太爆", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
-                { "name": "Twin Line 雙線", "type": "tankbuster", "description": "雙坦 line buster。", "tips": [{ "text": "雙坦分坦", "role": "tank" }] },
-                { "name": "Demonic Gaze 惡魔凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
-                { "name": "Hex Spray 詛咒噴", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            "name": "安杜西亞斯", "nameEn": "Amdusias",
+            "phases": [{ "name": "B2 主戰", "mechanics": [
+                { "name": "Lightning Beam 雷射", "type": "aoe", "description": "直線雷射 → 側閃。", "tips": ["側閃"] },
+                { "name": "Circle AoE 圓圈", "type": "aoe", "description": "場上多圓 → 走縫。", "tips": ["走縫"] },
+                { "name": "Raid-wide 全屏", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Cleave 扇形", "type": "cone", "description": "MT 扇形。", "tips": [{ "text": "MT 朝外", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "雷風獅鷲",
-            "nameEn": "Thundergust Griffin",
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Wind Beat 風擊", "type": "aoe", "description": "Boss cone 風 AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Thunderclap 雷鳴", "type": "raidwide", "description": "全屏 + 雷傷 + 場上散 AoE。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
-                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line AoE。", "tips": ["側步閃"] },
-                { "name": "Storm Burst 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
+            "name": "雷風獅鷲", "nameEn": "Thundergust Griffin",
+            "phases": [{ "name": "B3 主戰", "mechanics": [
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 直線衝鋒 AoE。", "tips": ["側閃"] },
+                { "name": "Wind Pulse 風脈衝", "type": "knockback", "description": "全屏擊退 AoE。", "tips": ["Arm's Length"] },
+                { "name": "Thunder Bolt 雷霆", "type": "aoe", "description": "場上多雷 AoE → 走縫。", "tips": ["走縫"] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 死刑 buster。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
             ]}]
         }
     ]

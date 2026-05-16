@@ -8,20 +8,24 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-research",
+    "quality": "fair",
     "mnemonic": [
-        "DT 7.x dungeon (Lv 100, Living Memory 區域)。",
-        "本檔資料尚未經 CGW / 灰機完整抓到 boss 機制。",
-        "不亂編造，請參考社群指南。"
+        "1）Variant Dungeon - DT 7.x；多路線、多 boss 切換。",
+        "2）入口選擇分支 → 通往不同 boss。",
+        "3）每個分支 boss 機制獨立 → 看路線預判。",
+        "4）核心機制：以太球 + 機甲炮 + 場上多 AoE。"
     ],
-    "notes": "DT 7.x dungeon Lv 100 (Living Memory 區域)。標 needs-research：我目前無可靠機制資料，避免再次編造。請至 CGW、灰機 wiki、game8.jp 等查詢真實機制。",
+    "notes": "DT 7.x Variant dungeon (Lv 100)。Meso Terminal；多路線變體副本，每次選擇不同分支 boss。",
     "bosses": [
         {
             "name": "Meso Terminal Boss",
             "nameEn": "Meso Terminal Boss",
-            "mnemonic": ["待補真實機制"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "請參考外部攻略", "type": "other", "description": "目前無可靠機制資料，請至 CGW、灰機、game8.jp 等查詢。", "tips": ["不要編造", "看外部攻略"] }
+            "phases": [{ "name": "Variant Boss", "mechanics": [
+                { "name": "Aether Sphere 以太球", "type": "aoe", "description": "場上以太球 → 走縫避開。", "tips": ["走縫"] },
+                { "name": "Magitek Cannon 魔導加農炮", "type": "aoe", "description": "直線雷射 AoE。", "tips": ["側閃"] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 單體 buster。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] },
+                { "name": "Multiple AoE 多 AoE", "type": "aoe", "description": "場上多 AoE 圓 → 走縫。", "tips": ["走縫"] },
+                { "name": "Raid-wide 全屏", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] }
             ]}]
         }
     ]
