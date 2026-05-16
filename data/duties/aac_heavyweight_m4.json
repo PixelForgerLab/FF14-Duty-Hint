@@ -8,106 +8,129 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Bloodshed：一隻手變龍頭，看手位置=cleave 邊。",
-        "2）Cruel Coil：被拉到中央被綁，看 Boss 旋轉缺口逆時針旋 90 度逃脫。",
-        "3）Bring Down the House：場地被切成 4 條交錯長條；中間修復後可跨。",
-        "4）Grotesquerie：Flesh Forward/Back 擊退方向；Directed 錐 AoE 朝四方向；Shared 1 人疊機。",
-        "5）Phase 2：5 條線 AoE + 散開 + 一手綠毒寬線 AoE（對側安全）。"
+        "1）流血：boss 一側手臂化為血肉之蛇 (左手先)，發動半場災變吐息。",
+        "2）極饿伸展：蛇延展放前方 120° 扇形。",
+        "3）細胞落地：3 肉塊膨脹 → 圓 AoE 大爆炸。",
+        "4）殘暴拘束：3 圈大蛇環繞中場 → 蛻鳞環形 → 巨蟒絞纏秒殺仍在內者。",
+        "5）細胞附身 (多種)：引爆細胞、爆風細胞 (前/後)、大爆炸 分擔圓、指向性衝擊波。",
+        "6）野性分裂：4 組 4 方圓 AoE → 大蛇穿出地板 → 震場破壞地板 + 大蛇束縛。"
     ],
-    "notes": "DT 7.4 AAC 重量級 4（Lv 100，ilvl 745）。The Lindwurm（總裁變身）。AAC 終戰。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.4 AAC 重量級 4 (M4, Lv 100)。Lindwurm (林德布魯姆) Normal。AAC Heavyweight 終戰。阿卡狄亞的老板，注入大蛇靈魂變身。自愈因子 = 第一次被擊倒會復活但血量鎖 1。",
     "bosses": [
         {
-            "name": "巨蛇龍總裁",
-            "nameEn": "The Lindwurm",
-            "mnemonic": ["手變龍頭=該側 cleave", "Cruel Coil 找旋轉缺口", "Bring Down 場切 4 條"],
+            "name": "林德布魯姆",
+            "nameEn": "Lindwurm",
+            "mnemonic": [
+                "蛇手臂半場：第一次必定左手；流血 → 災變吐息 → 極饿伸展。",
+                "細胞附身多種：引爆 (圓 AoE)、爆風前/後 (擊退)、大爆炸 (分擔圓)、指向性衝擊波 (面向窄扇)。",
+                "殘暴拘束：大蛇環繞 3 圈 + 收緊絞纏，必須在外側。",
+                "野性分裂：4 方圓 AoE → 蛇穿地板 → 震場破壞 + 大蛇束縛禁跳。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "The Fixer",
+                            "name": "補天之手 / Hand of Reclamation",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Bloodshed + Serpentine Scourge",
+                            "name": "流血 + 災變吐息 / Bleeding + Cataclysm Breath",
                             "type": "aoe",
-                            "description": "一隻手變龍頭 = 該側半場 cleave（快 cast）。",
-                            "tips": ["看手位置繞對側"]
+                            "description": "Boss 一側手臂化為血肉之蛇 (第一次必定左手) → 蛇手臂半場 AoE。",
+                            "tips": [
+                                "看哪側手臂化蛇",
+                                "閃對側半場"
+                            ]
                         },
                         {
-                            "name": "Ravenous Reach",
+                            "name": "極饿伸展 / Hungering Stretch",
                             "type": "aoe",
-                            "description": "手伸長到左/右側放寬錐 AoE。",
-                            "tips": ["跑到手後方"]
+                            "description": "蛇延展頭放東/西側 → 前方大範圍 120° 扇形 AoE。",
+                            "tips": ["閃前方扇形，繞側"]
                         },
                         {
-                            "name": "Burst 肉池",
+                            "name": "細胞落地 / Cell Drop",
                             "type": "aoe",
-                            "description": "手放完 AoE 後留肉池會擴張後爆。",
-                            "tips": ["遠離肉池"]
+                            "description": "無讀條場中 3 個肉塊落下 → 膨脹 → 圓 AoE 大爆炸。",
+                            "tips": ["看肉塊位置散開"]
                         },
                         {
-                            "name": "Cruel Coil + Constrictor",
+                            "name": "殘暴拘束 / Brutal Bind",
                             "type": "other",
-                            "description": "把全員拉到中央 + bind 5 秒。Boss 蛇繞中央留缺口，每秒旋轉 90 度逆時針，3 秒後 Constrictor 即死。",
-                            "tips": ["bind 結束後快跑", "從缺口出去（逆時針）"]
+                            "description": "全員吸至場中 + 5s 止步。大蛇環繞中場 3 圈放蛻鳞環形 AoE → 第 3 圈後收緊纏繞放巨蟒絞纏秒殺仍在內者。",
+                            "tips": [
+                                "止步結束立刻往外側跑",
+                                "**禁止留在大蛇環繞範圍內**"
+                            ]
                         },
                         {
-                            "name": "Visceral Burst",
+                            "name": "臟腑爆裂 / Bowel Burst",
                             "type": "tankbuster",
-                            "description": "雙坦 AoE 坦補。",
-                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                            "description": "對 2 T 高傷圓 AoE。",
+                            "tips": [
+                                { "text": "兩 T 拉開避免互相波及", "role": "tank" }
+                            ]
                         },
                         {
-                            "name": "Grotesquerie (Phase 1)",
+                            "name": "細胞附身 (引爆) / Cell Infection",
                             "type": "spread",
-                            "description": "全員 Bursting Grotesqurie debuff 28 秒結束時散開 AoE。",
-                            "tips": ["拉開 + debuff 結束前散開"]
+                            "description": "全員 28s 引爆細胞 (6s 可見) → 各自圓 AoE。",
+                            "tips": ["散開 clock 位"]
                         },
                         {
-                            "name": "Splattershed + Feral Fission + Bring Down the House",
+                            "name": "濺血 / Spray of Gore",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 兩條手臂都化作血蛇。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "野性分裂 / Feral Division",
                             "type": "other",
-                            "description": "兩手都變龍頭 + 蛇地圖預警 + 場地切成 4 條交錯。Fate of the Wurm = 不能跳。",
-                            "tips": ["看蛇路徑跑安全長條", "別跳過缺口"]
+                            "description": "場中 4 組對角 4 方排列圓 AoE → 大蛇穿出 + 地板 AoE 預兆 → 震場破壞 4 塊地板 + 全員大蛇束縛 (禁跳)。",
+                            "tips": [
+                                "看 4 方位置散開避大蛇穿越",
+                                "震場時離開預兆地板"
+                            ]
                         },
                         {
-                            "name": "Venomous Scourge",
+                            "name": "分裂災變 / Divided Cataclysm",
+                            "type": "aoe",
+                            "description": "每列場地中有 2 列生成巨蛇 → 覆蓋該列的直線 AoE。",
+                            "tips": ["看哪 2 列生成 → 走無蛇列"]
+                        },
+                        {
+                            "name": "滴液災變 / Drop Cataclysm",
                             "type": "spread",
-                            "description": "全員散開標記。",
+                            "description": "點所有玩家圓 AoE。",
                             "tips": ["散開"]
                         },
                         {
-                            "name": "Grotesquerie (組合)",
+                            "name": "細胞附身 (組合) / Cell Combo",
                             "type": "other",
-                            "description": "Flesh Forward/Back（擊退）+ Directed（錐 AoE）+ Shared（1 人疊機）+ Boss Ravenous Reach 組合。",
-                            "tips": ["先看 Forward/Back 預判擊退方向", "再看 Directed 錐 AoE 方向", "Shared 的人引疊機"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Mindless Flesh",
-                            "type": "spread",
-                            "description": "5 條線 AoE 覆蓋全部列 + 散開標記。",
-                            "tips": ["找縫散開"]
+                            "description": "32s 引爆細胞·指向 (面向窄扇) + 7s 爆風細胞前/後 (擊退) + 16s 引爆細胞·大爆炸 (分擔圓)。",
+                            "tips": [
+                                "指向：面向預定方向放扇",
+                                "爆風前/後：站位讓擊退到安全格",
+                                { "text": "大爆炸：4 人分擔", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "綠毒寬線",
-                            "type": "aoe",
-                            "description": "Boss 一隻手綠毒 = 該側寬線 AoE，對側安全。",
-                            "tips": ["跑到對側"]
-                        },
-                        {
-                            "name": "Splattershed",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "name": "細胞失控 (物理/魔法) / Cell Mutation",
+                            "type": "other",
+                            "description": "物理：5 次場地每列直線 AoE + 點所有玩家圓 AoE。魔法：無讀條，手臂蛇蓄力大半場 (4 列) 直線 AoE。",
+                            "tips": [
+                                "看 boss 哪手蓄力預判方向",
+                                "閃直線同時散開"
+                            ]
                         }
                     ]
                 }

@@ -8,41 +8,186 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）保留 normal 機制（Lariat、Mist、Fuses、Infernal Spin）+ Savage 強化。",
-        "2）Doping Draught 後機制節奏更快；Lariat × 3 連續。",
-        "3）Fuses 多輪炸彈組合 + 散開/疊機。",
-        "4）Knuckle Sandwich 改為單 T 重擊需 invuln。",
-        "5）詳細請參考 Hector Hectorson 動畫攻略。"
+        "1）一般機制：八/四分雙重碎頸臂 (圓/環) + 火焰 → 怒焰碎頸臂扇形 AoE。",
+        "2）打藥三次：每次 +1 層強效打藥（10%/20%/30%）+ 第二/三次過量打藥強化。",
+        "3）野蠻爆炸：場邊 4 人塔 + 角落 2 人塔 + 中央 8 人塔（順序判定）。",
+        "4）導火線爆彈：短/長導火線玩家 + 場上爆彈怪同步爆。",
+        "5）組隊戰：分身連線「鎖鏈生死戰」+ 必須吃連線者攻擊解除秒殺 debuff。",
+        "6）狂暴：究極超豪華野蠻大亂擊 → 跳場中強制秒殺。"
     ],
-    "notes": "DT 7.05 AAC 輕量級 3 零式（Lv 100，ilvl 700）。Brute Bomber Savage。詳細請參考 Hector Hectorson 攻略。",
+    "notes": "DT 7.05 AAC 輕量級 3 零式 (M3S, Lv 100, ilvl 700)。Brute Bomber (野蠻爆彈) Savage。核心：打藥 (Steroids) 系統 + 導火線 + 組隊戰鎖鏈。各 phase 後 boss 打藥強化機制 (八分 vs 四分變體判別貼身/donut + 全員/分擔)。",
     "bosses": [
         {
-            "name": "暴力炸彈魔",
+            "name": "野蠻爆彈",
             "nameEn": "Brute Bomber",
-            "mnemonic": ["Lariat × 3 連續", "炸彈組合更密"],
+            "mnemonic": [
+                "八分 = 全員圓/扇形；四分 = 4 支援職或 4 DPS 分擔。",
+                "無火焰 = 貼身圓 (跑遠)；有火焰 = donut 環形 (貼近)。",
+                "塔機制：4 人塔 + 2 人塔 + 8 人塔，缺人 = 全員疊持續傷害。",
+                "鎖鏈生死戰：必須吃連線者攻擊解除秒殺 debuff。",
+                "魔炎接觸：有「爆彈領域」吃 = 全屏 AoE 解；無 = 秒殺。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "一般機制",
                     "mechanics": [
                         {
-                            "name": "Lariat 多連",
-                            "type": "aoe",
-                            "description": "Doping 後 Lariat 連 3 次，每次方向獨立。",
-                            "tips": ["每次都看手光繞"]
+                            "name": "野蠻碎擊 / Brutal Smash",
+                            "type": "raidwide",
+                            "description": "連續 4 次全屏物理 AoE。",
+                            "tips": [
+                                { "text": "全員減傷 + 連補", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Fuses 組合",
-                            "type": "aoe",
-                            "description": "短/長引信 + 散開或疊機組合。",
-                            "tips": ["依預警順序解"]
+                            "name": "拳面猛擊 / Knuckle Sandwich",
+                            "type": "stack",
+                            "description": "點 1 仇連續 4 次需 2 人分擔圓 AoE。",
+                            "tips": [
+                                { "text": "兩 T 一起接", "role": "tank" }
+                            ]
                         },
                         {
-                            "name": "Knuckle Sandwich (Savage)",
-                            "type": "tankbuster",
-                            "description": "重擊單 T 坦補需無敵。",
-                            "tips": [{ "text": "用無敵", "role": "tank" }]
+                            "name": "雙重碎頸臂 / Double Bouts (八分/四分)",
+                            "type": "aoe",
+                            "description": "Boss 身上有/無火焰：無火 = 貼身圓；有火 = donut 環形。八分 = 全員 30° 扇形；四分 = 4 人 15° 分擔扇形。",
+                            "tips": [
+                                "看火焰判定貼身/拉遠",
+                                "看八/四分判定全員/分擔散開"
+                            ]
+                        },
+                        {
+                            "name": "強震衝 / Earthshatter (八分/四分)",
+                            "type": "aoe",
+                            "description": "Boss 跳場邊：無火 = 距離衰減；有火 = 擊退。再放圓 AoE（八分全員 / 四分 4 人分擔）。",
+                            "tips": [
+                                "預判擊退方向",
+                                "八/四分判定散開或分擔"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "第一次野蠻爆炸 + 第一次組隊戰",
+                    "mechanics": [
+                        {
+                            "name": "野蠻爆炸 / Brutal Blowout",
+                            "type": "other",
+                            "description": "南北或東西邊緣 2×4 人塔 + 四角 4×2 人塔 (4 人塔先判定)，後場中央 1×8 人塔。少人 = 大爆炸全員 +1 持續傷害。",
+                            "tips": [
+                                "依分配位置踩塔",
+                                "4 人塔先處理、再 2 人塔、最後 8 人疊中央"
+                            ]
+                        },
+                        {
+                            "name": "致命毒霧 / Lethal Mist",
+                            "type": "aoe",
+                            "description": "Boss 移角放 270° 扇形 + 中毒 15s。",
+                            "tips": ["跑到對角逃離扇形"]
+                        },
+                        {
+                            "name": "打藥 (1st) / Steroids",
+                            "type": "other",
+                            "description": "Boss 中央打藥 → 1 層強效打藥 (+10% 傷)。出現裁判員短暫轉仇恨。",
+                            "tips": [
+                                { "text": "DPS 善用 burst 視窗", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "鎖鏈生死戰 / Sledgehammer Battle",
+                            "type": "other",
+                            "description": "2 個分身在場邊 90° 出現，各連 4 名玩家，11s 鎖鏈生死戰 debuff (秒殺)。必須**吃連線者攻擊**解除。",
+                            "tips": [
+                                "去找自己的連線者吃他的攻擊",
+                                "第一次吃傷害大幅降低"
+                            ]
+                        },
+                        {
+                            "name": "碎頸臂連擊 / Bouts of Brutality",
+                            "type": "aoe",
+                            "description": "分身手臂火焰 → 前方半場大直線 AoE + 衝刺到對側 → 再放另一側。",
+                            "tips": ["看火焰側預判半場安全"]
+                        }
+                    ]
+                },
+                {
+                    "name": "零式導火線爆彈",
+                    "mechanics": [
+                        {
+                            "name": "零式導火線爆彈 / Fuse Field",
+                            "type": "other",
+                            "description": "場上 4 短 + 4 長導火線爆彈怪。同時 4 支援 + 4 DPS 頭頂出現短/長導火線。短先爆、長後爆，每爆彈怪 + 玩家位置各自圓 AoE。",
+                            "tips": [
+                                "短導火線先散開遠離隊友",
+                                "長導火線等短爆完再散開",
+                                "閃爆彈怪位置同時"
+                            ]
+                        },
+                        {
+                            "name": "導火線區域 / Lit Fuse",
+                            "type": "other",
+                            "description": "場中央導火線領域 (踩入火傷)。4 人 26s + 4 人 44s 爆彈領域 (倒數陣亡)。場邊 8 根導火線末端生成 8 個魔炎，向場中央移動。爆彈領域玩家接觸魔炎 = 全屏 AoE 解 debuff；無 debuff 接觸 = 秒殺。",
+                            "tips": [
+                                "26s 組先衝魔炎",
+                                "44s 組後衝",
+                                "**無爆彈領域的人禁止碰魔炎**"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "第二次打藥 + 第二次組隊戰",
+                    "mechanics": [
+                        {
+                            "name": "打藥 (2nd)",
+                            "type": "other",
+                            "description": "2 層強效打藥 (+20%) + 過量打藥 34s 強化機制。Boss 體型變大。",
+                            "tips": ["強化版機制接踵而來"]
+                        },
+                        {
+                            "name": "超豪華野蠻大亂擊",
+                            "type": "raidwide",
+                            "description": "連 5 次全屏 + 圓 AoE + 環 AoE + 1 全屏 + 中央藍圈擊退 + 圓 (八分) 或 分擔圓 (四分) AoE。",
+                            "tips": [
+                                { "text": "全員大減傷 + LB3", "role": "healer" },
+                                "預判藍圈擊退方向"
+                            ]
+                        },
+                        {
+                            "name": "鎖鏈生死戰 (二次) + 導火線爆彈",
+                            "type": "other",
+                            "description": "Boss + 1 分身同時連線玩家 16s 鎖鏈生死戰。同時場上導火線爆彈怪 + 分身碎頸臂連擊 + 致命毒霧。",
+                            "tips": [
+                                "找自己的連線者吃攻擊",
+                                "同時處理導火線爆彈散開"
+                            ]
+                        },
+                        {
+                            "name": "超華麗野蠻旋火 / Brutal Smash",
+                            "type": "aoe",
+                            "description": "面南或北放 8 次旋轉 45° 扇形 AoE + 爆彈雨 (對角斜角 2 環形擴散 × 3 次)。同時導火線玩家爆。",
+                            "tips": ["跟著旋轉方向移動避開"]
+                        }
+                    ]
+                },
+                {
+                    "name": "狂暴",
+                    "mechanics": [
+                        {
+                            "name": "打藥 (3rd)",
+                            "type": "other",
+                            "description": "3 層強效打藥 (+30%) + 過量打藥。",
+                            "tips": ["最終 DPS 視窗"]
+                        },
+                        {
+                            "name": "究極超豪華野蠻大亂擊 (Enrage)",
+                            "type": "raidwide",
+                            "description": "連 5 次全屏 + 圓 + 環 + 全屏 → 跳場中央強制秒殺全員 + 場外擊退。",
+                            "tips": [
+                                { "text": "末段 DPS check", "role": "dps" }
+                            ]
                         }
                     ]
                 }

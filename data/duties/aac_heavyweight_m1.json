@@ -10,120 +10,55 @@
     "highEnd": false,
     "quality": "needs-update",
     "mnemonic": [
-        "1）Half Moon：先一側半場 cleave 接對側，看球指向。",
-        "2）Vamp Stomp：中央圓 AoE + 蝙蝠分批爆（先中 2 → 3 → 5）。",
-        "3）Coffinmaker 階段：場地逐排消失，必須在它吞完前打掉。",
-        "4）Sadistic Screech：場地剩 2x4；後續鋸刃 + Fatal Flail 塔機制。",
-        "5）兩次 Crowd Kill 累積 Satisfied 強化。"
+        "1）魅亡之音：全屏 AoE。",
+        "2）月之半相：讀條結束對指定半場 AoE 傷害。",
+        "3）血魅的靴踏音：跳場中央 + 擴散環形 + 致命蝙蝠生成。",
+        "4）內含 Savage 強化前的基礎機制，主要練習 Black Cat 套路前哨。"
     ],
-    "notes": "DT 7.4 AAC 重量級 1（Lv 100，ilvl 745）。Vamp Fatale 致命吸血女郎。4x4 場地。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.4 AAC 重量級 1 (M1, Lv 100, ilvl ~)。Vamp Fatale (致命美人) Normal。AAC Heavyweight 第一個 Boss（7.4 raid tier）。基礎機制：魅亡之音全屏 + 月之半相半場 + 血魅的靴踏音中央跳+蝙蝠。Normal 版主要為熟悉場地與 boss 套路用。",
     "bosses": [
         {
-            "name": "致命吸血鬼",
+            "name": "致命美人",
             "nameEn": "Vamp Fatale",
-            "mnemonic": ["看球指向預判半場", "蝙蝠分 3 批爆", "場地會分階段縮小"],
+            "mnemonic": [
+                "魅亡之音：全屏 AoE。",
+                "月之半相：讀條結束對指定半場 AoE。",
+                "血魅的靴踏音：跳中央 + 擴散環形 + 致命蝙蝠。"
+            ],
             "phases": [
                 {
-                    "name": "Phase 1",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Killer Voice",
+                            "name": "魅亡之音 / Death's Toll",
                             "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [
+                                { "text": "減傷 + 補滿", "role": "healer" }
+                            ]
                         },
                         {
-                            "name": "Half Moon",
+                            "name": "月之半相 / Lunar Phase",
                             "type": "aoe",
-                            "description": "球指向 = 該側半場 cleave，緊接對側。",
-                            "tips": ["看球方向繞兩次"]
+                            "description": "讀條結束時對指定半場放 AoE 傷害。",
+                            "tips": ["看 boss 朝向預判半場，跑反側"]
                         },
                         {
-                            "name": "Vamp Stomp",
+                            "name": "血魅的靴踏音 / Bloodspike Tap",
                             "type": "aoe",
-                            "description": "中央大圓 AoE + 蝙蝠分 3 批爆（先中 2 → 3 → 外 5）。",
-                            "tips": ["跑外圈再進中央", "看擴張環順序"]
+                            "description": "Boss 跳場中央放圓 AoE 後場上出現擴散圓環邊界 + 10 隻致命蝙蝠 (內環 2、中環 3、外環 5)。觸碰圓環 → 圓 AoE 共振波 + 魔法受傷加重。",
+                            "tips": [
+                                "閃中央 + 預判圓環移動",
+                                "避免被掃到蝙蝠"
+                            ]
                         },
                         {
-                            "name": "Hardcore",
+                            "name": "基本攻擊 / Basic Attacks",
                             "type": "tankbuster",
-                            "description": "雙坦 AoE 坦補。",
-                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
-                        },
-                        {
-                            "name": "Sadistic Screech",
-                            "type": "raidwide",
-                            "description": "全體傷 + 摧毀左右列剩 2x4。",
-                            "tips": ["記場地形狀"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Coffinmaker Add",
-                    "mechanics": [
-                        {
-                            "name": "Coffinmaker 吞噬",
-                            "type": "other",
-                            "description": "場地北邊出現棺材小怪逐排前進，碰到=死。必須在它吞完前打掉。",
-                            "tips": ["全力打 Coffinmaker", "別碰它佔的格"]
-                        },
-                        {
-                            "name": "Coffinfiller",
-                            "type": "aoe",
-                            "description": "線 AoE 各覆蓋 1/4 場地。",
-                            "tips": ["找縫"]
-                        },
-                        {
-                            "name": "Flaying Fry + Dead Wake",
-                            "type": "spread",
-                            "description": "全員散開標記 + Coffinmaker 前進。",
-                            "tips": ["散開不重疊"]
-                        },
-                        {
-                            "name": "Penetrating Pitch + Dead Wake",
-                            "type": "stack",
-                            "description": "雙補疊機（魔抗下重疊致命）+ Coffinmaker 再前進。",
-                            "tips": ["全員疊靠補職分擔"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Crowd Kill",
-                    "mechanics": [
-                        {
-                            "name": "Crowd Kill",
-                            "type": "raidwide",
-                            "description": "全體傷 + 疊一層 Satisfied buff。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Finale Fatale + Aetherletting",
-                            "type": "spread",
-                            "description": "場邊 AoE 縮場 + 4 個圓 AoE + 4 人散開（殘留 + / X 十字 AoE）。",
-                            "tips": ["散開 + 預判十字方向", "閃圓 AoE"]
-                        },
-                        {
-                            "name": "Brutal Rain",
-                            "type": "stack",
-                            "description": "4 段疊機（後變 5 段）。",
-                            "tips": ["全員疊"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Sadistic Screech 2 + Crowd Kill 2",
-                    "mechanics": [
-                        {
-                            "name": "Sawblades + Fatal Flail",
-                            "type": "stack",
-                            "description": "場地剩 2x4 + 鋸刃移動 + 雙人塔 + Fatal Flail 必須打掉。",
-                            "tips": ["閃鋸刃", "踩塔", "全力打 Flail"]
-                        },
-                        {
-                            "name": "Crowd Kill 2 強化",
-                            "type": "other",
-                            "description": "第二層 Satisfied，Half Moon 加 hitbox 線、Hardcore AoE 更大、Finale + Vamp Stomp 組合。",
-                            "tips": ["反應更快", "看球 + hitbox 線繞"]
+                            "description": "Boss 普攻對 1 仇單體物理。",
+                            "tips": [
+                                { "text": "MT 開減傷接", "role": "tank" }
+                            ]
                         }
                     ]
                 }
