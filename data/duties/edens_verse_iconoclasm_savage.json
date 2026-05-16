@@ -1,6 +1,6 @@
 {
     "id": "edens_verse_iconoclasm_savage",
-    "name": "伊甸的共鳴 神祕之章 (零式)",
+    "name": "希望樂土的伊甸 變律零式3",
     "nameEn": "Eden's Verse: Iconoclasm (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,24 +10,142 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E7S Idol of Darkness 強化版：多元素 + 召喚體。",
-        "2）Element Beacons (S)：強化分區 + 組合元素。",
-        "3）Adds 召喚體：場上多個小怪。",
-        "4）狂暴：Eclipsed Light 蝕之光終局。"
+        "1）E7S Idol of Darkness 暗偶像 = Unshadowed Stake 雙光線 MT tether。",
+        "2）Words of Motion = 紅藍傳送門 → 召鳥 twister。",
+        "3）Betwixt Worlds = 場切三段，只留 2 格安全。",
+        "4）Words of Spite = 北 4 twister tether 隨機玩家。",
+        "5）Away With Thee = 紫圈傳送 + 配對解。",
+        "6）Silver Sledge 雙補 stack；Empty Wave 全屏。",
+        "7）Idolatry 2 add = Advent of Light 必須打斷。",
+        "8）Unjoined Aspect 光暗 = 配對機制；Threefold Grace + 末段 Empty Wave x2。"
     ],
-    "notes": "Eden Savage E7S (Lv 80, ilvl 485)。",
+    "notes": "ShB 5.25 E7 Savage (Lv 80, ilvl 495)。Idol of Darkness 暗偶像。場切割 + 傳送門 + 光暗配對。",
     "bosses": [
         {
-            "name": "Idol of Darkness",
+            "name": "暗之偶像",
             "nameEn": "Idol of Darkness",
-            "mnemonic": ["多元素 + 召喚體"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Element Beacons (S)", "type": "other", "description": "強化元素分區 + 組合。", "tips": ["跟元素移動"] },
-                { "name": "Adds 召喚體", "type": "other", "description": "場上多個小怪 + AoE。", "tips": [{ "text": "DPS 分擔擊殺", "role": "dps" }] },
-                { "name": "Holy Light (S)", "type": "raidwide", "description": "強化全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Eclipsed Light (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Unshadowed Stake = 雙光線 MT tether。",
+                "Words of Motion / Spite = 紅藍門 + 北 twister。",
+                "Away With Thee = 紫圈傳送配對。",
+                "Unjoined Aspect = 光暗配對解。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Stake / Motion / Words",
+                    "mechanics": [
+                        {
+                            "name": "Empty Wave 虛空波",
+                            "type": "raidwide",
+                            "description": "不可閃全屏；P4 會雙發 x2。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Unshadowed Stake 雙光線 buster",
+                            "type": "tankbuster",
+                            "description": "MT tether → 第一道光線 (亮) + 第二道暗線 (dark buster)，第二道需 MT 拉到對側避隊。",
+                            "tips": [{ "text": "MT 接第一光 → 移位接第二", "role": "tank" }]
+                        },
+                        {
+                            "name": "Words of Motion + 紅藍傳送門",
+                            "type": "other",
+                            "description": "場南召 Red/Blue portal → 召 bird twister；藍 = 反射攻擊、紅 = 反向傳送，看顏色配對。",
+                            "tips": ["看門色 → 進對應門位"]
+                        },
+                        {
+                            "name": "Betwixt Worlds 維度切割",
+                            "type": "other",
+                            "description": "Idol 把場切成 3 段直 line，每段只留 2 格安全；玩家需站安全格。",
+                            "tips": ["看線位 → 站僅 2 格亮的格"]
+                        },
+                        {
+                            "name": "Words of Spite 怨咒之言",
+                            "type": "other",
+                            "description": "北 4 twister tether 隨機玩家 → 跑線 AoE；中標 4 人拉到南讓 twister 跟過來爆。",
+                            "tips": ["4 中標跑南，其他人靠北"]
+                        },
+                        {
+                            "name": "Away With Thee 紫圈傳送",
+                            "type": "other",
+                            "description": "全員紫圈 + 連到第二圈傳送位置；需站定位讓傳送解。",
+                            "tips": ["照固定圖站 8 位"]
+                        },
+                        {
+                            "name": "Silver Sledge 銀錘",
+                            "type": "stack",
+                            "description": "雙補 stack 標 + 高傷分擔，需配 1+ 玩家分擔。",
+                            "tips": [{ "text": "雙補各拉一人分擔", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Idolatry adds / Empty Flood",
+                    "mechanics": [
+                        {
+                            "name": "Idolatry adds + Advent of Light",
+                            "type": "other",
+                            "description": "場上兩 Idolatry add 同時 cast Advent of Light，雙坦各打一個 + 必須兩個都打斷。",
+                            "tips": [
+                                { "text": "雙坦各拉一隻 + 打斷 cast", "role": "tank" },
+                                { "text": "DPS 全力打 + 打斷", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Strength in Numbers 數量之力",
+                            "type": "other",
+                            "description": "Add 動作判斷機制：垂直旋轉 = line AoE / 水平旋轉 = donut；依動畫站位避。",
+                            "tips": ["看 add 動畫 → 對應位置"]
+                        },
+                        {
+                            "name": "Empty Flood 虛空洪流",
+                            "type": "raidwide",
+                            "description": "Add 都殺後 Idol 大全屏轉場進 P3。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3-P4 - Unjoined Aspect / Threefold Grace / Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Unjoined Aspect 未連屬性",
+                            "type": "other",
+                            "description": "全員光 / 暗 debuff (白煙 / 紫煙)；之後 Words of Unity 召 twister，依屬性避對應顏色 twister。",
+                            "tips": ["白煙 = 避白 twister、紫煙 = 避紫"]
+                        },
+                        {
+                            "name": "Boundless Light / Dark",
+                            "type": "aoe",
+                            "description": "兩 twister (光暗各一) 從北吹下打整條 lane；依 Unjoined Aspect 對應屬性站對 lane。",
+                            "tips": ["光屬站光 lane、暗屬站暗 lane"]
+                        },
+                        {
+                            "name": "Words of Entrapment 4 twister",
+                            "type": "other",
+                            "description": "場 4 方各 1 twister (光東南、暗西北 等)，依組合解。",
+                            "tips": ["看 twister 位 + 對應屬性"]
+                        },
+                        {
+                            "name": "Words of Night + False Dawn",
+                            "type": "other",
+                            "description": "Red/Blue portal + 全員下 AoE 圈 → 走縫隙避。",
+                            "tips": ["看門 + 走圈外"]
+                        },
+                        {
+                            "name": "Threefold Grace 三重恩典",
+                            "type": "other",
+                            "description": "Idol 用 AoE blade 旋場 → 結束後全員 multiple debuff 處理；末段 Empty Wave x2 收尾。",
+                            "tips": ["照固定組合解 debuff"]
+                        },
+                        {
+                            "name": "Empty Wave x2 (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Empty Wave 雙發強壓 DPS check。",
+                            "tips": [{ "text": "末段催爆發 + 全減傷", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

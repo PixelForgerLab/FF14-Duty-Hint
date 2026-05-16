@@ -1,6 +1,6 @@
 {
     "id": "edens_verse_fulmination_savage",
-    "name": "伊甸的共鳴 雷霆之章 (零式)",
+    "name": "希望樂土的伊甸 變律零式1",
     "nameEn": "Eden's Verse: Fulmination (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,24 +10,105 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E5S Ramuh 強化版：雷 + 多重球 + 引線。",
-        "2）Stratospear (S)：強化直線。",
-        "3）Wide Angle 廣角：場上多重雷球。",
-        "4）狂暴：Judgment Bolt 雷霆審判。"
+        "1）E5S Ramuh = Judgement Volts + Surge Protection Orbs 必須吃球免疫。",
+        "2）Stratospear Summons = 四角避雷針 → 站雷針後吸雷。",
+        "3）Executor Summons = 招喚 add tether 最多 Surge stack 玩家 → OT 接 buster。",
+        "4）Stormcloud Summons = 4 遠 (紫雲) + 4 近 (爆) 分組。",
+        "5）Tribunal Summons + Will of Ixion = 場中央 Will of Ramuh + 4 Ixion add。",
+        "6）Stepped Leader = 預警 dark 圈 → 移位避；(Furious) 版需吃 Surge Protection。",
+        "7）Chain Lightning 雙補 8 stack = 傳到近人 (每跳 -1)。",
+        "8）狂暴 Furious Judgement Volts = 沒 Surge Protection = 死。"
     ],
-    "notes": "Eden Savage E5S (Lv 80, ilvl 485)。",
+    "notes": "ShB 5.15 E5 Savage (Lv 80, ilvl 485)。Ramuh 雷神。Surge Protection 系統 + Furious 強化招式。",
     "bosses": [
         {
-            "name": "Ramuh",
+            "name": "拉姆",
             "nameEn": "Ramuh",
-            "mnemonic": ["雷球 + 引線 + Judgment Bolt"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Stratospear (S)", "type": "aoe", "description": "強化多重直線。", "tips": ["閃直線"] },
-                { "name": "Lightning Ball (S)", "type": "other", "description": "強化雷球 + 引線。", "tips": ["引線拉開"] },
-                { "name": "Wide Angle 廣角", "type": "aoe", "description": "場上多重雷球 AoE。", "tips": ["跟預兆"] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Judgment Bolt (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Surge Protection = 吃球避 Furious 致死。",
+                "Stratospear = 4 角避雷針吸雷。",
+                "Stormcloud = 4 遠紫雲 + 4 近爆。",
+                "Chain Lightning = 雙補 → 傳到近人。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Volts / Spears / Executor",
+                    "mechanics": [
+                        {
+                            "name": "Judgement Volts 審判閃電",
+                            "type": "raidwide",
+                            "description": "不可閃全屏 + 場上召 Surge Protection Orbs 必須吃球累積免疫層；Furious 版需至少 1 stack 才不死。",
+                            "tips": [
+                                "順路吃 Orbs 累積 stack",
+                                { "text": "全員減傷 + 連補", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Stratospear Summons 雷針召喚",
+                            "type": "other",
+                            "description": "場四角下 AoE 圈 → 召避雷針，玩家需站雷針後讓雷被吸收，否則中雷死。",
+                            "tips": ["4 人 + 雷針後排隊", "看雷針位調整朝向"]
+                        },
+                        {
+                            "name": "Executor Summons 行刑者召喚",
+                            "type": "other",
+                            "description": "Boss 召 add tether 最多 Surge Protection stack 的玩家 + 高傷 buster，需 OT 接 tether 用 stack 吃。",
+                            "tips": [{ "text": "OT 吃 stack 多 → 接 tether", "role": "tank" }]
+                        },
+                        {
+                            "name": "Crippling Blow 致殘擊",
+                            "type": "tankbuster",
+                            "description": "MT 單體 buster + Vuln Up，需 MT 開減傷或換手。",
+                            "tips": [{ "text": "MT 開減傷 + 補強補", "role": "tank" }]
+                        },
+                        {
+                            "name": "Stormcloud Summons 雲召",
+                            "type": "spread",
+                            "description": "4 遠玩家紫雲標 (留 add) + 4 近玩家爆地圈；遠近分組各處理。",
+                            "tips": ["4 人散到四角擺 add，4 人留中央誘爆"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Tribunal / Stepped Leader / Chain Lightning",
+                    "mechanics": [
+                        {
+                            "name": "Tribunal Summons 法庭召喚",
+                            "type": "other",
+                            "description": "場中央召 Will of Ramuh + 場 4 隻 Will of Ixion add；adds 需 OT 控 + DPS 殺。",
+                            "tips": [
+                                { "text": "OT 拉 4 add，DPS AoE 集中", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Thunderstorm 雷暴",
+                            "type": "aoe",
+                            "description": "場上散布小 AoE 圓圈，需走 縫隙連續避。",
+                            "tips": ["走縫隙保持移動"]
+                        },
+                        {
+                            "name": "Stepped Leader 階梯領導",
+                            "type": "other",
+                            "description": "Unbuffed 版 = 全員下黑圈 (移位避)；Furious 版 = 圈中需吃 Surge Protection 否則死。",
+                            "tips": ["不亮 = 移位、Furious = 吃 stack"]
+                        },
+                        {
+                            "name": "Chain Lightning 雷鏈",
+                            "type": "other",
+                            "description": "雙補掛 8 stack debuff，傳給近人 (每跳 -1)，需依固定順序傳。",
+                            "tips": [
+                                { "text": "雙補各起傳鏈 → 4 跳到 0", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "(Furious) Judgement Volts (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Furious 強化版全屏，無 Surge Protection stack 直接死。",
+                            "tips": [{ "text": "至少有 1 stack + 末段催 DPS", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

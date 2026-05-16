@@ -1,6 +1,6 @@
 {
     "id": "edens_verse_furor_savage",
-    "name": "伊甸的共鳴 烈焰之章 (零式)",
+    "name": "希望樂土的伊甸 變律零式2",
     "nameEn": "Eden's Verse: Furor (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,24 +10,148 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E6S 強化雙 boss：火風機制疊加。",
-        "2）Hands of Hell/Heaven (S)：強化分區。",
-        "3）Tornado/Conflagration：場上多重元素 AoE。",
-        "4）狂暴：Ferostorm + Crimson Storm 雙終局。"
+        "1）E6S = Garuda → Ifrit → 雙伊夫利 → Raktapaksa 四階段。",
+        "2）Garuda: Occluded Front 風球 + Storm of Fury PBAoE + Aerial Stack DPS 浮空。",
+        "3）Ferostorm 兩刀風 cone 散；Central Knockback + Aerial Stack 組合。",
+        "4）Vacuum Slice 場切半 death wall。",
+        "5）Ifrit: Hands of Flame tether 雙拳 + Eruption AoE 圈；Instant Incineration + Meteor Strike 雙 buster。",
+        "6）Hands of Hell 4 tether → 4 人分擔 (按 H / DPS 順序)。",
+        "7）Raktapaksa: Conflag Strike 留東西兩安全點 + Blaze Tornadoes 南北旋轉。",
+        "8）狂暴 = Hands of Hell x2 + Ferostorm + Central Knockback 連發。"
     ],
-    "notes": "Eden Savage E6S (Lv 80, ilvl 485)。",
+    "notes": "ShB 5.15 E6 Savage (Lv 80, ilvl 485)。雙神 Garuda/Ifrit + 融合 Raktapaksa。Hands of Hell tether 系統。",
     "bosses": [
         {
-            "name": "Ifrit & Garuda",
-            "nameEn": "Ifrit & Garuda",
-            "mnemonic": ["雙 boss + 元素疊加"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Hands of Hell/Heaven (S)", "type": "other", "description": "強化分區判定。", "tips": ["跟分區站位"] },
-                { "name": "Tornado/Conflagration", "type": "aoe", "description": "場上多重元素 AoE。", "tips": ["閃預警"] },
-                { "name": "Conflag Strike (S)", "type": "aoe", "description": "強化直線。", "tips": ["閃直線"] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Ferostorm (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "name": "嘉魯達",
+            "nameEn": "Garuda",
+            "mnemonic": [
+                "Superstorm + Occluded Front + Storm of Fury。",
+                "Aerial Stack = DPS 浮空 + 不被無標者擋。",
+                "Vacuum Slice = 切半 + death wall。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Garuda 風",
+                    "mechanics": [
+                        {
+                            "name": "Superstorm 超級風暴",
+                            "type": "raidwide",
+                            "description": "不可閃全屏，需減傷 + 連補。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Occluded Front + Storm of Fury",
+                            "type": "aoe",
+                            "description": "邊緣召風球後吐線 AoE + Boss 下 PBAoE；玩家需站非線位 + 遠離 boss。",
+                            "tips": ["看球位置走線縫 + 遠 boss"]
+                        },
+                        {
+                            "name": "Aerial Stack 空中分擔",
+                            "type": "stack",
+                            "description": "DPS 中標需被無標者擋 (T/H)，否則被浮空致死。",
+                            "tips": ["DPS 站定 T/H 過來擋"]
+                        },
+                        {
+                            "name": "Ferostorm 凶猛風暴",
+                            "type": "spread",
+                            "description": "場上召兩道風刃 → 大 cone AoE，需散開避刃方向。",
+                            "tips": ["看刃位 → 站垂直 cone 外"]
+                        },
+                        {
+                            "name": "Vacuum Slice 切割真空",
+                            "type": "aoe",
+                            "description": "Garuda 到場中央 → 直線斬切半場 + 留 death wall (碰即死)。",
+                            "tips": ["看朝向 → 站半場避 wall"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "伊夫利特",
+            "nameEn": "Ifrit",
+            "mnemonic": [
+                "Hands of Flame tether 雙拳。",
+                "Instant Incineration + Meteor Strike 雙 buster。",
+                "Hands of Hell 4 tether = 4 人分擔。"
+            ],
+            "phases": [
+                {
+                    "name": "P2 - Ifrit 火",
+                    "mechanics": [
+                        {
+                            "name": "Hands of Flame + Eruption",
+                            "type": "tankbuster",
+                            "description": "MT tether + 雙拳擊 (light-headed)，地上留 Eruption AoE 圈須避；MT 開減傷。",
+                            "tips": [{ "text": "MT 拉到場邊 + 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Instant Incineration + Meteor Strike",
+                            "type": "tankbuster",
+                            "description": "MT 紅標 buster + 地圈 AoE，連續高傷，需 MT 開強減傷 + 拉出隊。",
+                            "tips": [{ "text": "MT 拉遠 + 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Hands of Hell 地獄之手 (4 tether)",
+                            "type": "other",
+                            "description": "隨機補或 DPS 掛 4 tether bundle，需 4 人接 (T+H+2DPS 或全 DPS) 分擔，落單 = 死。",
+                            "tips": ["照固定圖 4 人連接 tether"]
+                        },
+                        {
+                            "name": "Strike Spark 火花連擊",
+                            "type": "aoe",
+                            "description": "場上多顆火球 → AoE 爆 + Inferno Howl 全屏；走縫隙避。",
+                            "tips": ["走球縫"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "拉克塔帕克沙",
+            "nameEn": "Raktapaksa",
+            "mnemonic": [
+                "Garuda + Ifrit 混合機制。",
+                "Conflag Strike 留東西兩安全點。",
+                "Blaze Tornadoes 南北旋轉 cone。"
+            ],
+            "phases": [
+                {
+                    "name": "P3 - 雙神融合 Raktapaksa",
+                    "mechanics": [
+                        {
+                            "name": "Hands of Hell (進階) + Aerial Stack",
+                            "type": "other",
+                            "description": "Hands of Hell 4 tether + 同時 Aerial Stack 浮空，需多重分擔。",
+                            "tips": ["照預設分配 4 人 + T/H 擋"]
+                        },
+                        {
+                            "name": "Conflag Strike 大火灼",
+                            "type": "aoe",
+                            "description": "全場除東西兩點外都是火灘 + Boss 朝向無預警 cone；需站東或西安全點 + 不在 boss 前。",
+                            "tips": ["東西兩點 + 看 boss 朝向"]
+                        },
+                        {
+                            "name": "Blaze Tornadoes 烈焰龍捲",
+                            "type": "aoe",
+                            "description": "南北兩龍捲旋轉 cone AoE，需依旋向走位避。",
+                            "tips": ["看旋向 + 跟著移動"]
+                        },
+                        {
+                            "name": "Central Knockback + Occluded Front",
+                            "type": "other",
+                            "description": "中央大圈擊退 + 邊風球線 AoE 組合；需抗擊退或卡牆 + 避線。",
+                            "tips": ["抗擊退站定 + 避風球線"]
+                        },
+                        {
+                            "name": "Ferostorm 連發 + Hands of Hell (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Hands of Hell x2 + Ferostorm + Central Knockback 強壓 DPS check。",
+                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

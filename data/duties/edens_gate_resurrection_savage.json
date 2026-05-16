@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_resurrection_savage",
-    "name": "伊甸的覺醒 復生之章 (零式)",
+    "name": "希望樂土的伊甸 共鳴零式1",
     "nameEn": "Eden's Gate: Resurrection (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,23 +10,129 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E1S Eden Prime 強化版：分區 + 善惡 + Vice of Apathy。",
-        "2）Paradise Regained 重歸樂園：場上多重 AoE。",
-        "3）狂暴：Morn Afah 永恆的悲哀。"
+        "1）E1S Eden Prime = Vice and Virtue 三變 (Puddle/Tankbuster/Prey) 全程循環。",
+        "2）Spear of Paradise 兩段 MT buster + Vuln Up 換手。",
+        "3）Pure Light = boss 衝角 → 站正後背對。",
+        "4）Delta Attack = Pure Light 後場中央四方 line AoE，站對角分擔。",
+        "5）Dimensional Shift = 換場 (紅) + 8 白球。",
+        "6）Paradise Lost = 4 遠人吃 5 連圈。",
+        "7）Pure Beam = 球各打最近 line，需 assign 8 方位散開。",
+        "8）P2 Altered 版機制反向 (集合 vs 散) + Paradise Regained。",
+        "9）狂暴 Eden's Gravity + Eden's Flare 大全屏。"
     ],
-    "notes": "Eden Savage E1S (Lv 80, ilvl 470)。",
+    "notes": "ShB 5.05 E1 Savage (Lv 80, ilvl 470)。Eden Prime 場機制 + Vice and Virtue 循環。",
     "bosses": [
         {
-            "name": "Eden Prime",
+            "name": "始源伊甸",
             "nameEn": "Eden Prime",
-            "mnemonic": ["善惡 + 永恆悲哀"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Vice and Virtue (S)", "type": "other", "description": "強化分區善惡判定。", "tips": ["看光暗判斷"] },
-                { "name": "Vice of Apathy 冷漠之惡", "type": "other", "description": "場地分區擴大 + 補負 debuff。", "tips": ["注意 debuff 配對"] },
-                { "name": "Paradise Regained 重歸樂園", "type": "aoe", "description": "多重 AoE 連發。", "tips": ["跟預兆"] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Morn Afah (Enrage)", "type": "raidwide", "description": "狂暴永恆悲哀秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Vice and Virtue 3 變：Puddle (4 DPS) / Tankbuster (T) / Prey (H)。",
+                "Pure Light + Delta Attack 連發。",
+                "Dimensional Shift = 紅場 + 8 球。",
+                "Altered 版 = 機制反向 (集合 vs 散)。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Vice and Virtue / Pure Light / Dimensional Shift",
+                    "mechanics": [
+                        {
+                            "name": "Vice and Virtue (Puddles) 4 DPS",
+                            "type": "spread",
+                            "description": "4 DPS 中標 + 留持續地圈，需散開到場邊角落擺地圈。",
+                            "tips": [{ "text": "4 DPS 各往一角擺地圈", "role": "dps" }]
+                        },
+                        {
+                            "name": "Vice and Virtue (Tankbusters)",
+                            "type": "tankbuster",
+                            "description": "雙坦標 + 直線 AoE buster；雙坦分開站避免互打 + 開減傷。",
+                            "tips": [{ "text": "雙坦 90 度分坦", "role": "tank" }]
+                        },
+                        {
+                            "name": "Spear of Paradise 樂園之槍",
+                            "type": "tankbuster",
+                            "description": "MT 兩段單體 buster + Vuln Up 疊層，需 MT/OT 換手或無敵。",
+                            "tips": [{ "text": "MT 吃第一段 → OT 換手吃第二段", "role": "tank" }]
+                        },
+                        {
+                            "name": "Vice and Virtue (Prey) 雙補",
+                            "type": "other",
+                            "description": "雙補中標 + 高傷 AoE + 後續地圈，需把標傳給坦 (補解標 → 坦接) 或散到對側。",
+                            "tips": [{ "text": "補的標傳給坦", "role": "healer" }]
+                        },
+                        {
+                            "name": "Pure Light 純光",
+                            "type": "aoe",
+                            "description": "Boss 衝到一角 + 朝場 long-cast 致死扇形 AoE，需站正後背對。",
+                            "tips": ["全員到 boss 正背後"]
+                        },
+                        {
+                            "name": "Delta Attack 三角攻擊",
+                            "type": "aoe",
+                            "description": "Boss 到場中央 + 北南東西四方向 line AoE 同時發；玩家分對角站 + 兩兩配對分擔。",
+                            "tips": ["分 4 對角 → 配對分擔"]
+                        },
+                        {
+                            "name": "Dimensional Shift 次元轉換",
+                            "type": "raidwide",
+                            "description": "全屏 + 換成紅場，召 8 白球變圓形圖案；之後 Paradise Lost + Pure Beam。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Paradise Lost + Pure Beam",
+                            "type": "other",
+                            "description": "Paradise Lost = 4 最遠玩家吃 5 連圈；Pure Beam = 8 球各打最近 line AoE，需指派 8 個固定位置散開。",
+                            "tips": ["4 遠角 → 連閃 5 連 → 8 方位 line"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Altered Phase (反向版) + Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Fragor Maximus + Paradise Regained",
+                            "type": "raidwide",
+                            "description": "高傷全屏轉場 + 強化 buff，後續機制改為 Altered (反向) 版。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Altered: Vice and Virtue (Tankbuster)",
+                            "type": "stack",
+                            "description": "反向變共享：所有人需集合吃 buster (而非分開)。",
+                            "tips": ["全員集中疊著吃"]
+                        },
+                        {
+                            "name": "Altered: Vice and Virtue (Puddles)",
+                            "type": "other",
+                            "description": "4 DPS 中標 + 不再留地圈，需到中央吃 (而非散邊)。",
+                            "tips": [{ "text": "4 DPS 集中場中央", "role": "dps" }]
+                        },
+                        {
+                            "name": "Altered: Delta Attack",
+                            "type": "stack",
+                            "description": "反向版：4 line AoE 在斜方向；玩家需集中場中央分擔 (而非散邊)。",
+                            "tips": ["集合在場中央"]
+                        },
+                        {
+                            "name": "Altered: Vice and Virtue (Prey)",
+                            "type": "other",
+                            "description": "雙補中標 + 中標者後續被 Poison debuff，需特定處理。",
+                            "tips": [{ "text": "補集中或拉特定位 + 解毒", "role": "healer" }]
+                        },
+                        {
+                            "name": "White Orbs + Tri-pronged Beam",
+                            "type": "other",
+                            "description": "Dimensional Shift 後 4 白球各打最近玩家 tri-pronged 旋轉 line AoE，需動向旋轉避開。",
+                            "tips": ["4 人吃 line + 順 / 逆時針移動"]
+                        },
+                        {
+                            "name": "Eden's Gravity + Eden's Flare (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段：Eden's Gravity 全屏 + Eden's Flare 中型 AoE，後續強壓 DPS check。",
+                            "tips": [{ "text": "末段催爆發 + 全員減傷", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

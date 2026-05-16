@@ -1,6 +1,6 @@
 {
     "id": "edens_verse_refulgence_savage",
-    "name": "伊甸的共鳴 凍結之章 (零式)",
+    "name": "希望樂土的伊甸 變律零式4",
     "nameEn": "Eden's Verse: Refulgence (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,24 +10,139 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E8S Shiva 強化版：雙形態 + 鏡像機制。",
-        "2）Hallowed Wings 神聖之翼：左右方位判定。",
-        "3）Light Rampant 光肆虐：場上多重 tether + 散開。",
-        "4）狂暴：Akh Morn 阿克莫恩終局。"
+        "1）E8S Shiva = Absolute Zero + Mirror, Mirror 鏡子 (藍 = 即發、綠 = 短延、紅 = 中延)。",
+        "2）Driving Frost (後扇) / Biting Frost (前 270° 扇) 看朝向。",
+        "3）Diamond Frost = Double Slap MT + Redress (Holy 凝視) + Axe Kick PBAoE + Scythe Kick donut。",
+        "4）Light Rampant = Green Mirror 全召 + 配位機制。",
+        "5）Shattered World = 4 element adds (Earthen / Lightning / Aqueous / Crystalline) 各招對策。",
+        "6）Akh Morn / Morn Afah = MT 連 hit / 全員分擔。",
+        "7）Hallowed Wing = 翼亮 → 對側避；Redress 換形 (Hraesvelgr 龍 + Akh Rhai)。",
+        "8）Twin Stillness/Silence = Biting → Driving 或反向；Embittered/Spiteful Dance = Scythe → Axe 或反向。",
+        "9）Icelit Dragonsong = Freezing debuff + Refulgent Chains tether + Redress Ice (凝視) + Diamond Dust 滅。"
     ],
-    "notes": "Eden Savage E8S (Lv 80, ilvl 485)。Eden's Verse 終戰，相當有挑戰性。",
+    "notes": "ShB 5.25 E8 Savage (Lv 80, ilvl 495)。Shiva 多形態 boss (Ice/Holy/Hraesvelgr)。Mirror, Mirror 鏡子反射系統 + Akh Morn/Rhai。",
     "bosses": [
         {
-            "name": "Shiva",
+            "name": "希瓦",
             "nameEn": "Shiva",
-            "mnemonic": ["雙形態 + 鏡像 + 翼方位"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Hallowed Wings 神聖之翼", "type": "aoe", "description": "左右方位判定。", "tips": ["看翼選邊"] },
-                { "name": "Light Rampant 光肆虐", "type": "spread", "description": "場上多 tether + 散開 AoE。", "tips": ["散開拉線"] },
-                { "name": "Mirror Mirror 鏡像", "type": "other", "description": "鏡像機制 + 玩家映射。", "tips": ["跟鏡像移動"] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Akh Morn (Enrage)", "type": "raidwide", "description": "狂暴阿克莫恩秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Mirror 顏色 = 藍即/綠短/紅中延。",
+                "Driving Frost 後扇 / Biting Frost 前 270° 扇。",
+                "Diamond Frost + Light Rampant + Shattered World 三 mini phase。",
+                "末段 Icelit Dragonsong = Freezing + Chains + Diamond Dust。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Mirror / Frost / Diamond Frost",
+                    "mechanics": [
+                        {
+                            "name": "Absolute Zero + Mirror, Mirror",
+                            "type": "raidwide",
+                            "description": "高傷全屏 + 召 Mirror (藍 = 同時反射、綠 = 短延、紅 = 中延)，依顏色預判反射招。",
+                            "tips": [
+                                { "text": "全員減傷 + 連補", "role": "healer" },
+                                "看鏡色預判反射時機"
+                            ]
+                        },
+                        {
+                            "name": "Driving Frost / Biting Frost",
+                            "type": "aoe",
+                            "description": "Driving = boss 正後 cone (致死)、Biting = boss 正前 270° cone (致死)；看招式名 + 朝向站對位。",
+                            "tips": ["Driving 站前、Biting 站後"]
+                        },
+                        {
+                            "name": "Diamond Frost mini-phase",
+                            "type": "other",
+                            "description": "Shiva 跳場中央 + 全屏；之後 Double Slap MT buster + Redress (Holy 凝視) + Axe Kick PBAoE + Scythe Kick donut。",
+                            "tips": [
+                                { "text": "Double Slap MT/OT 換手", "role": "tank" },
+                                "Redress 背對避凝視",
+                                "Axe Kick 跑外、Scythe Kick 貼 boss"
+                            ]
+                        },
+                        {
+                            "name": "Light Rampant mini-phase",
+                            "type": "other",
+                            "description": "Shiva 中央 + 全屏 + 四 Green Mirror 召 → 多重位機制 (光配對 + 散)。",
+                            "tips": ["照固定圖站 4 對"]
+                        },
+                        {
+                            "name": "Shattered World adds",
+                            "type": "other",
+                            "description": "4 element adds：Earthen Aether (Stoneskin 必打斷)、Lightning Aether (反傷需穩傷)、Aqueous Aether (可 stun，血厚)、Crystalline Snowflake (tether 中央晶體必殺)。",
+                            "tips": [
+                                "Earthen 打斷 Stoneskin",
+                                { "text": "Lightning 反傷小心 AoE", "role": "dps" },
+                                "Snowflake 必殺中央晶體"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Akh Morn / Hallowed Wing / Dance",
+                    "mechanics": [
+                        {
+                            "name": "Akh Morn / Morn Afah",
+                            "type": "other",
+                            "description": "Akh Morn = 前 2 名連 hit 分擔；Morn Afah = 全員 stack 分擔；雙坦或全員集中分擔。",
+                            "tips": [
+                                { "text": "Akh Morn 雙坦分擔", "role": "tank" },
+                                "Morn Afah 全員集中"
+                            ]
+                        },
+                        {
+                            "name": "Hallowed Wing 神聖翼",
+                            "type": "aoe",
+                            "description": "Shiva 中央展翼，亮的一翼方向 = 半場 AoE，需到對側避。",
+                            "tips": ["看亮翼 → 站對側"]
+                        },
+                        {
+                            "name": "Redress (Ice / Hraesvelgr)",
+                            "type": "other",
+                            "description": "Ice = 場結薄冰 (凝視 → 移動會滑)；Hraesvelgr 龍形 + 每人 Akh Rhai AoE 圈。",
+                            "tips": ["Ice 背對 + 不移動", "Hraesvelgr 站 boss 正後分擔"]
+                        },
+                        {
+                            "name": "Twin Stillness / Twin Silence",
+                            "type": "aoe",
+                            "description": "Twin Stillness = Biting → Driving (前 → 後)；Twin Silence = 反向 (後 → 前)。",
+                            "tips": ["看 cast 名 → 先前後再切位"]
+                        },
+                        {
+                            "name": "Embittered / Spiteful Dance",
+                            "type": "aoe",
+                            "description": "Embittered = Scythe (貼) → Axe (跑外)；Spiteful = Axe → Scythe；依序兩段位。",
+                            "tips": ["Embittered 先貼後跑、Spiteful 先跑後貼"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 - Icelit Dragonsong / Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Freezing 凍結 + Refulgent Chains",
+                            "type": "other",
+                            "description": "雙坦 + 雙 DPS 掛 Freezing；同時 T/H 各掛 Refulgent Chains tether 需保持距離避爆。",
+                            "tips": [
+                                { "text": "Freezing 留雙坦 + 補解雙 DPS", "role": "healer" },
+                                "T/H tether 保持距離"
+                            ]
+                        },
+                        {
+                            "name": "Mirror, Mirror (Single Red)",
+                            "type": "other",
+                            "description": "場北單 Red Mirror + Redress (Ice) → 凝視 + 後續機制由鏡反射。",
+                            "tips": ["背對 boss 同時注意鏡反射方向"]
+                        },
+                        {
+                            "name": "Diamond Dust + Enrage",
+                            "type": "raidwide",
+                            "description": "末段 Diamond Dust 大全屏 + Enrage 滅團。",
+                            "tips": [{ "text": "末段催 DPS check + 全減傷", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
