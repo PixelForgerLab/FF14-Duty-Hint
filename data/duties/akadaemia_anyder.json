@@ -8,39 +8,39 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Ashelia 阿賽利亞 (大魚)：水柱 + 觸手機制。",
-        "2）Frigid Stars 寒星：場上冰 AoE + 散開。",
-        "3）Ipheion 伊斐翁 (大章魚)：觸手揮舞 + 沉水機制。"
+        "1）B1 Ashelia = Beak 線 + 場上多 AoE puddle + 凝視。",
+        "2）B2 Frigid Stars = 召冰星散落 + 場地結冰滑 + 全屏。",
+        "3）B3 Ipheion = 花瓣 cone + 噴霧 puddle + 全屏。"
     ],
-    "notes": "ShB 5.1 MSQ 副本 (Lv 80)。位於 The Tempest 暴風海深處古代學院。3 boss。",
+    "notes": "ShB 5.2 dungeon (Lv 80)。Norvrandt 水底古學院。",
     "bosses": [
         {
             "name": "Ashelia",
             "nameEn": "Ashelia",
-            "mnemonic": ["水柱 + 觸手"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Water Pillar 水柱", "type": "aoe", "description": "場上水柱 AoE。", "tips": ["離開水柱"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Beak line", "type": "aoe", "description": "Boss 朝玩家 line AoE。", "tips": ["側步閃"] },
+                { "name": "Stinging Mist", "type": "spread", "description": "場上多 puddle AoE 散開。", "tips": ["散避 puddle"] },
+                { "name": "Look 凝視", "type": "other", "description": "Boss 凝視 → 看 = 致命。", "tips": ["背對 boss"] }
             ]}]
         },
         {
             "name": "Frigid Stars",
             "nameEn": "Frigid Stars",
-            "mnemonic": ["寒星 AoE + 散開"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Ice AoE 冰", "type": "spread", "description": "散開圓 AoE。", "tips": ["clock 散開"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Ice Stars 召冰星", "type": "other", "description": "場上召冰星 add 散落。", "tips": ["走縫避星"] },
+                { "name": "Frozen Floor 滑冰", "type": "other", "description": "場結冰 + 推進方向。", "tips": ["滑往安全方向後鬆手"] },
+                { "name": "Ice Burst 全屏", "type": "raidwide", "description": "全屏 + 冰傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
             "name": "Ipheion",
             "nameEn": "Ipheion",
-            "mnemonic": ["大章魚 + 觸手 + 沉水"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Tentacle Sweep 觸手揮", "type": "aoe", "description": "場上觸手 AoE。", "tips": ["閃預警"] },
-                { "name": "Sink 沉水", "type": "raidwide", "description": "場地沉水 + 全體 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Petal Cone", "type": "aoe", "description": "花瓣 cone AoE 多方向。", "tips": ["看朝向 → 非 cone"] },
+                { "name": "Mist Puddle", "type": "spread", "description": "場上多 puddle AoE 散。", "tips": ["散避 puddle"] },
+                { "name": "Bloom 全屏", "type": "raidwide", "description": "全屏 + 流血。", "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }] }
             ]}]
         }
     ]

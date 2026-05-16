@@ -8,39 +8,39 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Lord Master Pendragon 龍王爵士：劍 + 直線。",
-        "2）Porxie 小豬：水滴 + 散開。",
-        "3）Mother Porxie 母豬：圓 AoE + 突進。"
+        "1）B1 Lord Master Pendragon = 龍卷 line + 衝鋒 + 召小龍。",
+        "2）B2 Porxie = 豬王 cone + Bait Puddle + 召小豬。",
+        "3）B3 Mother Porxie = Mama Porxie 多 cone + 全屏 + 召小豬 add 流。"
     ],
-    "notes": "ShB 5.2 post-MSQ 副本 (Lv 80)。位於 Matoya 老婆婆遺跡。3 boss 童話主題。",
+    "notes": "ShB 5.2 dungeon (Lv 80)。Matoya 廢墟 + 豬王王國。",
     "bosses": [
         {
             "name": "Lord Master Pendragon",
             "nameEn": "Lord Master Pendragon",
-            "mnemonic": ["龍王劍 + 直線"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Sword Strike 劍擊", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Wind line", "type": "aoe", "description": "Boss 線風 AoE。", "tips": ["側步閃"] },
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側面"] },
+                { "name": "Summon Dragonet", "type": "other", "description": "召小龍 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
             "name": "Porxie",
             "nameEn": "Porxie",
-            "mnemonic": ["小豬 + 水滴散開"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Water Drop 水滴", "type": "spread", "description": "散開圓 AoE。", "tips": ["散開"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Pig Cone", "type": "aoe", "description": "Boss cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Bait Puddle", "type": "spread", "description": "場上多 puddle AoE 散。", "tips": ["散避"] },
+                { "name": "Summon Piglet", "type": "other", "description": "召小豬 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
             "name": "Mother Porxie",
             "nameEn": "Mother Porxie",
-            "mnemonic": ["母豬 + 圓 + 突進"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Charge 突進", "type": "aoe", "description": "直線突進。", "tips": ["閃路徑"] },
-                { "name": "Big Circle 大圓", "type": "aoe", "description": "場上大圓 AoE。", "tips": ["閃中央"] }
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Mama Cone (多)", "type": "aoe", "description": "Boss 多方向 cone AoE。", "tips": ["看 cast → 站非 cone"] },
+                { "name": "Inferno 全屏", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
+                { "name": "Piglet Stream", "type": "other", "description": "召大量小豬 add 流。", "tips": [{ "text": "DPS AoE 殺 add", "role": "dps" }] }
             ]}]
         }
     ]

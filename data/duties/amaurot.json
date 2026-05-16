@@ -6,42 +6,41 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 80,
+    "jobLevelSync": 79,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Therion 提利昂 (大蛇)：吐息 + 場地破壞。",
-        "2）The Construct 建構物 + 召喚機制。",
-        "3）Hythlodaeus 西斯洛達歐斯 (Ascian 形態)：以太機制 + Meteor。"
+        "1）B1 Therion = Dark Star 火球 + line + 召小怪。",
+        "2）B2 The Construct = 機甲幻象 + 雷射 + 凝視。",
+        "3）B3 Hythlodaeus = Aethersuck 吸 + 多 AoE 圈 + Stone Pillar 召柱。"
     ],
-    "notes": "ShB 5.0 MSQ 終 dungeon (Lv 80)。位於 The Tempest 暴風海。3 boss。",
+    "notes": "ShB 5.0 MSQ 最終 dungeon (Lv 79)。Amaurot 古文明遺跡。",
     "bosses": [
         {
             "name": "Therion",
             "nameEn": "Therion",
-            "mnemonic": ["大蛇 + 吐息 + 場地破壞"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Breath 吐息", "type": "aoe", "description": "前方扇形 AoE。", "tips": ["繞 boss 後"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Dark Star 火球", "type": "aoe", "description": "場上多 AoE 圈散落。", "tips": ["走縫"] },
+                { "name": "Pyre line", "type": "aoe", "description": "Boss line AoE 穿場。", "tips": ["側面"] },
+                { "name": "Summon Add", "type": "other", "description": "召小怪 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
             "name": "The Construct",
             "nameEn": "The Construct",
-            "mnemonic": ["建構物 + 召喚機制"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Summon 召喚", "type": "other", "description": "場上召喚小怪。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Aetheric Ray", "type": "aoe", "description": "Boss line 雷射 AoE。", "tips": ["側面"] },
+                { "name": "Aetheric Mine", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避"] },
+                { "name": "Death Gaze", "type": "other", "description": "凝視 → 看 = 死。", "tips": ["背對"] }
             ]}]
         },
         {
             "name": "Hythlodaeus",
             "nameEn": "Hythlodaeus",
-            "mnemonic": ["Ascian 形態 + 以太機制 + Meteor"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Aetherial Burst 以太爆發", "type": "aoe", "description": "場上以太 AoE。", "tips": ["閃預警"] },
-                { "name": "Meteor 流星", "type": "aoe", "description": "場上流星 AoE。", "tips": ["閃流星位置"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Aethersuck 吸", "type": "tankbuster", "description": "MT cone 吸 buster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Stone Pillar", "type": "other", "description": "場上召柱 → AoE + 擊退。", "tips": ["卡柱後避擊退"] },
+                { "name": "Aether Burst", "type": "raidwide", "description": "全屏 + 多 AoE 散。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] }
             ]}]
         }
     ]

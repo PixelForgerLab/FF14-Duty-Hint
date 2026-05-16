@@ -1,46 +1,46 @@
 {
     "id": "twinning",
-    "name": "雙生天網",
+    "name": "雙頭",
     "nameEn": "The Twinning",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 79,
+    "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Magitek Predator 魔導獸：突進 + 弓彈。",
-        "2）The Mythril Mountain 銀山：召喚 + 連線。",
-        "3）Magus Sisters 魔法姊妹 (3 姊妹) FFIV 致敬。"
+        "1）B1 Magitek Predator = Magitek Ray + 召飛機 + 衝鋒。",
+        "2）B2 Mythril Mountain = 雙形機甲 + line AoE + 召小機甲。",
+        "3）B3 Magus Sisters = 三姐妹 (Magic / Sword / Ranger) tether + 各 boss cone + Delta Attack。"
     ],
-    "notes": "ShB 5.0 MSQ 副本 (Lv 79)。位於 Empty 空無大地。3 boss (FFIV 魔法姊妹)。",
+    "notes": "ShB 5.0 dungeon (Lv 80)。Twinning 機甲雙頭設施。",
     "bosses": [
         {
             "name": "Magitek Predator",
             "nameEn": "Magitek Predator",
-            "mnemonic": ["魔導獸突進 + 弓彈"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Charge 突進", "type": "aoe", "description": "直線突進 AoE。", "tips": ["閃突進路徑"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Magitek Ray", "type": "aoe", "description": "Boss line AoE 雷射。", "tips": ["側步閃"] },
+                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側面"] },
+                { "name": "Magitek Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
             ]}]
         },
         {
             "name": "Mythril Mountain",
             "nameEn": "Mythril Mountain",
-            "mnemonic": ["銀山 + 召喚 + 連線"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Tether 連線", "type": "stack", "description": "連線分擔。", "tips": ["疊接"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Dual Form Cleave", "type": "aoe", "description": "雙形機甲 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Aetheric Line", "type": "aoe", "description": "line AoE 穿場。", "tips": ["走縫"] },
+                { "name": "Summon Mecha", "type": "other", "description": "召小機甲 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] }
             ]}]
         },
         {
             "name": "Magus Sisters",
             "nameEn": "Magus Sisters",
-            "mnemonic": ["3 姊妹同時對戰"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Combined Attack 組合攻擊", "type": "other", "description": "3 姊妹同時放招。", "tips": ["關注 3 個方向"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 連補", "role": "healer" }] }
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Sister Tether 3 boss", "type": "other", "description": "三 boss (Magic/Sword/Ranger) 各 tether 玩家 + 攻擊。", "tips": ["看 tether → 對應位"] },
+                { "name": "Cone 各 boss", "type": "aoe", "description": "各 boss 不同 cone AoE。", "tips": ["看朝向 → 站非 cone"] },
+                { "name": "Delta Attack", "type": "other", "description": "三 boss 同時連發 → 場角安全。", "tips": ["散到場角避"] }
             ]}]
         }
     ]
