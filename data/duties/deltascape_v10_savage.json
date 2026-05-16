@@ -1,93 +1,116 @@
 {
-    "id": "deltascape_v10_savage",
-    "name": "歐米茄秘境 三角區零式1",
-    "nameEn": "Deltascape V1.0 (Savage)",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）O1S Alte Roite = Classical Elements 4 階段，每段不同站位 (外/外缺/內+/內+Blaze)。",
-        "2）Downburst 中圈 → 立即進中閃 Flame orbs。",
-        "3）Twin Bolt = MT line magical buster，OT 疊 MT 分擔。",
-        "4）Flame Inside / Outside = 看順序 (Inside 先 → 站外、Outside 先 → 站內)。",
-        "5）Clamp = boss 前 line AoE 擊出場，需避前。",
-        "6）Levinbolt = 全員下 AoE 圈，散開避互打。",
-        "7）Blaze = 補 stack；Charybdis = 全員血降致命。",
-        "8）狂暴 9:45 = 強壓 DPS check (~19500 DPS)。"
-    ],
-    "notes": "SB 4.05 Deltascape V1.0 Savage (Lv 70, ilvl 310)。Alte Roite 雙頭龍 = O1S。Classical Elements 為核心。",
-    "bosses": [
-        {
-            "name": "阿爾蒂洛特",
-            "nameEn": "Alte Roite",
-            "mnemonic": [
-                "Classical Elements 1-4 階段。",
-                "Downburst 站外圈邊，後立刻進。",
-                "Twin Bolt 雙坦 stack 分擔。",
-                "Flame Inside/Outside 看順序。"
-            ],
-            "phases": [
-                {
-                    "name": "P1-P4 - Classical Elements 循環",
-                    "mechanics": [
-                        {
-                            "name": "The Classical Elements (4 階)",
-                            "type": "other",
-                            "description": "Phase 1 = 站中外 → Downburst → 進中閃 Flame；Phase 2 = 外圈缺一 cardinal → 站缺處外；Phase 3 = 內圈 → 兩 Flame orb 中間；Phase 4 = 同 P1 但用 Blaze。",
-                            "tips": ["看 phase → 對應安全位 + 連續調整 Levinbolt"]
-                        },
-                        {
-                            "name": "Wyrm Tail / Twin Bolt",
-                            "type": "tankbuster",
-                            "description": "Wyrm Tail = 中型物理 tank crunch；Twin Bolt = MT 魔法 buster 需 OT 站 MT 分擔。",
-                            "tips": [{ "text": "OT 疊 MT 分擔 Twin Bolt + 兩坦減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Flame Inside / Outside",
-                            "type": "aoe",
-                            "description": "全員 AoE + 召 Flame orbs 內或外標記；Inside Flame = 站外避，Outside = 站內，常配 Levinbolt 組合。",
-                            "tips": ["看 cast 名 → 站對位"]
-                        },
-                        {
-                            "name": "Downburst 下擊",
-                            "type": "other",
-                            "description": "中央擊退；站中央會被 DoT + vuln，cast 結束時站中央立死；站太外掉台；要剛好站外圈邊。",
-                            "tips": ["站中央邊緣外側"]
-                        },
-                        {
-                            "name": "Levinbolt 雷擊",
-                            "type": "spread",
-                            "description": "全員下大 AoE 圈，需散開避互打。",
-                            "tips": ["8 方位均散開"]
-                        },
-                        {
-                            "name": "Clamp / Roar / Blaze / Charybdis",
-                            "type": "raidwide",
-                            "description": "Clamp = boss 前 line (擊出場)；Roar = 全屏；Blaze = 補 stack；Charybdis = 全員血降到危險。",
-                            "tips": [
-                                { "text": "Charybdis 後 boss 全員強補", "role": "healer" },
-                                "Clamp 站側面"
-                            ]
-                        },
-                        {
-                            "name": "Breath Wing 翼吹",
-                            "type": "other",
-                            "description": "Boss 跳邊角後擊退；玩家需先靠近 boss → 擊退結束再回。",
-                            "tips": ["先靠近 → 後回 boss"]
-                        },
-                        {
-                            "name": "Enrage 9:45",
-                            "type": "raidwide",
-                            "description": "9:45 強壓 DPS check (~19500 DPS 需求)，未過 = 滅。",
-                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "deltascape_v10_savage",
+    "name":  "歐米茄秘境 三角區零式1",
+    "nameEn":  "Deltascape V1.0 (Savage)",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）O1S Alte Roite = Classical Elements 4 階段，每段不同站位 (外/外缺/內+/內+Blaze)。",
+                     "2）Downburst 中圈 → 立即進中閃 Flame orbs。",
+                     "3）Twin Bolt = MT line magical buster，OT 疊 MT 分擔。",
+                     "4）Flame Inside / Outside = 看順序 (Inside 先 → 站外、Outside 先 → 站內)。",
+                     "5）Clamp = boss 前 line AoE 擊出場，需避前。",
+                     "6）Levinbolt = 全員下 AoE 圈，散開避互打。",
+                     "7）Blaze = 補 stack；Charybdis = 全員血降致命。",
+                     "8）狂暴 9:45 = 強壓 DPS check (~19500 DPS)。"
+                 ],
+    "notes":  "SB 4.05 Deltascape V1.0 Savage (Lv 70, ilvl 310)。Alte Roite 雙頭龍 = O1S。Classical Elements 為核心。",
+    "bosses":  [
+                   {
+                       "name":  "阿爾蒂洛特",
+                       "nameEn":  "Alte Roite",
+                       "mnemonic":  [
+                                        "Classical Elements 1-4 階段。",
+                                        "Downburst 站外圈邊，後立刻進。",
+                                        "Twin Bolt 雙坦 stack 分擔。",
+                                        "Flame Inside/Outside 看順序。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1-P4 - Classical Elements 循環",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "The Classical Elements (4 階)",
+                                                                "type":  "other",
+                                                                "description":  "Phase 1 = 站中外 → Downburst → 進中閃 Flame；Phase 2 = 外圈缺一 cardinal → 站缺處外；Phase 3 = 內圈 → 兩 Flame orb 中間；Phase 4 = 同 P1 但用 Blaze。",
+                                                                "tips":  [
+                                                                             "看 phase → 對應安全位 + 連續調整 Levinbolt"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wyrm Tail / Twin Bolt",
+                                                                "type":  "tankbuster",
+                                                                "description":  "Wyrm Tail = 中型物理 tank crunch；Twin Bolt = MT 魔法 buster 需 OT 站 MT 分擔。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "OT 疊 MT 分擔 Twin Bolt + 兩坦減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Flame Inside / Outside",
+                                                                "type":  "aoe",
+                                                                "description":  "全員 AoE + 召 Flame orbs 內或外標記；Inside Flame = 站外避，Outside = 站內，常配 Levinbolt 組合。",
+                                                                "tips":  [
+                                                                             "看 cast 名 → 站對位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Downburst 下擊",
+                                                                "type":  "other",
+                                                                "description":  "中央擊退；站中央會被 DoT + vuln，cast 結束時站中央立死；站太外掉台；要剛好站外圈邊。",
+                                                                "tips":  [
+                                                                             "站中央邊緣外側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Levinbolt 雷擊",
+                                                                "type":  "spread",
+                                                                "description":  "全員下大 AoE 圈，需散開避互打。",
+                                                                "tips":  [
+                                                                             "8 方位均散開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Clamp / Roar / Blaze / Charybdis",
+                                                                "type":  "raidwide",
+                                                                "description":  "Clamp = boss 前 line (擊出場)；Roar = 全屏；Blaze = 補 stack；Charybdis = 全員血降到危險。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Charybdis 後 boss 全員強補",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "Clamp 站側面"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Breath Wing 翼吹",
+                                                                "type":  "other",
+                                                                "description":  "Boss 跳邊角後擊退；玩家需先靠近 boss → 擊退結束再回。",
+                                                                "tips":  [
+                                                                             "先靠近 → 後回 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Enrage 9:45 狂暴",
+                                                                "type":  "raidwide",
+                                                                "description":  "9:45 強壓 DPS check (~19500 DPS 需求)，未過 = 滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段催爆發",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
