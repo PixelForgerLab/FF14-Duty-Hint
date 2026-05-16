@@ -1,37 +1,31 @@
 {
     "id": "ridorana_lighthouse",
-    "name": "里多拉納燈塔",
+    "name": "里多拉那燈塔",
     "nameEn": "The Ridorana Lighthouse",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "raid",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
+    "type": "alliance",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.3 Return to Ivalice 第 2 部",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Famfrit：場上水 AoE。", "2）B2 Belias：場上多重 AoE。", "3）B3 Construct 7：機械 + 多重 AoE。", "4）B4 Yiazmat：龍 + 多重元素機制。"],
+    "notes": "SB 4.3 FFXII Ivalice raid 第二部 alliance (Lv 70)。",
     "bosses": [
-        {
-            "name": "Famfrit",
-            "nameEn": "法夫尼爾",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Famfrit", "nameEn": "Famfrit", "mnemonic": ["水 AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "Water AoE", "type": "aoe", "description": "多重水 AoE。", "tips": ["閃預警"] }
+        ]}]},
+        { "name": "Belias", "nameEn": "Belias", "mnemonic": ["AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] }
+        ]}]},
+        { "name": "Construct 7", "nameEn": "Construct 7", "mnemonic": ["機械 + AoE"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Magitek AoE", "type": "aoe", "description": "場上 AoE。", "tips": ["閃直線"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Yiazmat", "nameEn": "Yiazmat", "mnemonic": ["龍 + 多元素"], "phases": [{ "name": "B4", "mechanics": [
+            { "name": "Element AoE", "type": "aoe", "description": "多元素 AoE。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

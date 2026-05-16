@@ -1,37 +1,22 @@
 {
     "id": "great_hunt_extreme",
-    "name": "大狩獵極戰",
+    "name": "大狩獵殲殛戰",
     "nameEn": "The Great Hunt (Extreme)",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": true,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.2 SB Rathalos EX",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）Rathalos EX：強化火龍機制。", "2）Fire Breath (EX) 強化呼吸。", "3）Status 強化狀態異常。", "4）狂暴：Diving Strike 飛撲打擊。"],
+    "notes": "SB 4.2 Rathalos EX (Lv 70)。FFXIV x MH 聯動。",
     "bosses": [
-        {
-            "name": "Rathalos",
-            "nameEn": "雄火龍",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Rathalos", "nameEn": "Rathalos", "mnemonic": ["EX 強化火龍"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "Fire Breath (EX)", "type": "aoe", "description": "強化直線火 AoE。", "tips": ["閃直線"] },
+            { "name": "Poison/Status (EX)", "type": "other", "description": "強化狀態異常。", "tips": [{ "text": "補解 debuff", "role": "healer" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
+            { "name": "Diving Strike (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+        ]}]}
     ]
 }

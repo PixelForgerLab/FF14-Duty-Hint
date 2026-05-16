@@ -1,37 +1,29 @@
 {
     "id": "temple_of_the_fist",
-    "name": "鬥拳之神殿",
+    "name": "拳鬥場",
     "nameEn": "The Temple of the Fist",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.0 SB Lv 70 副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Iron Wolves：多重 AoE。", "2）B2 Riggs：場上拳 AoE。", "3）B3 The Bull-headed：場上多重拳 + AoE。"],
+    "notes": "SB 4.1 dungeon (Lv 70)。",
     "bosses": [
-        {
-            "name": "Genbu",
-            "nameEn": "玄武",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Iron Wolves", "nameEn": "Iron Wolves", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+        ]}]},
+        { "name": "Riggs", "nameEn": "Riggs", "mnemonic": ["拳 AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "Fist AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "The Bull-headed", "nameEn": "The Bull-headed", "mnemonic": ["拳 + AoE"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "拳 AoE", "type": "aoe", "description": "多重拳 AoE。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

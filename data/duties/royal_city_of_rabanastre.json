@@ -1,37 +1,33 @@
 {
     "id": "royal_city_of_rabanastre",
-    "name": "拉巴納斯特皇都",
+    "name": "拉巴納斯塔王都",
     "nameEn": "The Royal City of Rabanastre",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "raid",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
+    "type": "alliance",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.1 Return to Ivalice 第 1 部 (FFXII)",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Mateus the Corrupt：場上多重 AoE。", "2）B2 Hashmal：石巨人 + 重力機制。", "3）B3 Rofocale：場上多重 AoE + 召喚。", "4）B4 Argath：終局 + 多重 AoE。"],
+    "notes": "SB 4.1 FFXII Ivalice raid 第一部 alliance (Lv 70)。",
     "bosses": [
-        {
-            "name": "Argath",
-            "nameEn": "亞卡特",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Mateus the Corrupt", "nameEn": "Mateus the Corrupt", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+        ]}]},
+        { "name": "Hashmal", "nameEn": "Hashmal", "mnemonic": ["石巨人 + 重力"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "Gravity 重力", "type": "other", "description": "場上重力機制。", "tips": ["跟預兆移動"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Rofocale", "nameEn": "Rofocale", "mnemonic": ["AoE + 召喚"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Adds", "type": "other", "description": "場上召喚體。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] }
+        ]}]},
+        { "name": "Argath", "nameEn": "Argath", "mnemonic": ["終局 + AoE"], "phases": [{ "name": "B4", "mechanics": [
+            { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

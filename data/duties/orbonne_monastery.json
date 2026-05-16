@@ -1,37 +1,31 @@
 {
     "id": "orbonne_monastery",
-    "name": "歐邦修道院",
+    "name": "歐爾博納修道院",
     "nameEn": "The Orbonne Monastery",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "raid",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
+    "type": "alliance",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.5 Return to Ivalice 第 3 部，T 戰術致敬",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Mustadio：場上多重 AoE。", "2）B2 Agrias：劍 + 多重 AoE。", "3）B3 Cidolfus：機械 + AoE。", "4）B4 Ultima 終極：場上多重 AoE 連發 + Tactics 終局。"],
+    "notes": "SB 4.5 FFXII Ivalice raid 第三部 alliance (Lv 70)。Final Fantasy Tactics 致敬。",
     "bosses": [
-        {
-            "name": "Ultima",
-            "nameEn": "終極幻獸",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Mustadio", "nameEn": "Mustadio", "mnemonic": ["AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] }
+        ]}]},
+        { "name": "Agrias", "nameEn": "Agrias", "mnemonic": ["劍 + AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "Sword AoE", "type": "aoe", "description": "多重劍 AoE。", "tips": ["跟預兆"] }
+        ]}]},
+        { "name": "Cidolfus", "nameEn": "Cidolfus", "mnemonic": ["機械 + AoE"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Magitek AoE", "type": "aoe", "description": "場上 AoE。", "tips": ["閃直線"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Ultima", "nameEn": "Ultima", "mnemonic": ["終局 + 多重 AoE"], "phases": [{ "name": "B4", "mechanics": [
+            { "name": "Ultima AoE", "type": "aoe", "description": "多重 AoE 連發。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏 (Tactics 終局)。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

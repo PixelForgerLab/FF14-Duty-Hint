@@ -1,37 +1,28 @@
 {
     "id": "shisui_of_the_violet_tides",
-    "name": "玄櫻碧波蝕水宮",
+    "name": "紫水宮",
     "nameEn": "Shisui of the Violet Tides",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 70,
+    "jobLevelSync": 63,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.0 SB MSQ 副本 (Lv 63)，海底主題",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Sahuagin Guard：水下 + AoE。", "2）B2 Kelpie：氣泡機制 + 水下移動。", "3）B3 Roshfu the Faithful：場上多重水 AoE。"],
+    "notes": "SB 4.0 海底宮殿 (Lv 63)。",
     "bosses": [
-        {
-            "name": "Roonhi Tuli",
-            "nameEn": "蘭塔魚精",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Sahuagin Guard", "nameEn": "Sahuagin Guard", "mnemonic": ["水下 AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] }
+        ]}]},
+        { "name": "Kelpie", "nameEn": "Kelpie", "mnemonic": ["氣泡 + 移動"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "Bubble 氣泡", "type": "other", "description": "場上氣泡 + 玩家踩破。", "tips": ["踩破氣泡"] },
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] }
+        ]}]},
+        { "name": "Roshfu the Faithful", "nameEn": "Roshfu the Faithful", "mnemonic": ["水 AoE 連發"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Water AoE", "type": "aoe", "description": "場上多重水 AoE。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

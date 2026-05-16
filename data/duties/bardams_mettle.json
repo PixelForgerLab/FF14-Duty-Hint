@@ -1,37 +1,29 @@
 {
     "id": "bardams_mettle",
-    "name": "巴德姆考驗場",
+    "name": "巴爾達姆試煉場",
     "nameEn": "Bardam's Mettle",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 70,
+    "jobLevelSync": 65,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.0 SB MSQ 副本 (Lv 65)，多神試煉",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Yol：場上 AoE + 飛行機制。", "2）B2 Marauder：場上多重 AoE。", "3）B3 Bardam：場上箭矢 + 多重 AoE。"],
+    "notes": "SB 4.0 Azim Steppe 試煉場 (Lv 65)。",
     "bosses": [
-        {
-            "name": "Bardam the Brave",
-            "nameEn": "巴德姆",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Yol", "nameEn": "Yol", "mnemonic": ["飛行 + AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "Wing Cutter 翼割", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+        ]}]},
+        { "name": "Marauder", "nameEn": "Marauder", "mnemonic": ["多重 AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Bardam", "nameEn": "Bardam", "mnemonic": ["箭矢 + AoE"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Arrows 箭矢", "type": "aoe", "description": "場上多重箭矢 AoE。", "tips": ["閃預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

@@ -1,37 +1,29 @@
 {
     "id": "kugane_castle",
-    "name": "九神城",
+    "name": "黃金港城堡",
     "nameEn": "Kugane Castle",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.1 SB Lv 70 副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Genbu：場上水 AoE。", "2）B2 Yamabuki：忍者 + 多重 AoE。", "3）B3 Gyodo：場上多重武士 AoE。"],
+    "notes": "SB 4.1 dungeon (Lv 70)。",
     "bosses": [
-        {
-            "name": "Yojimbo",
-            "nameEn": "用心棒",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Genbu", "nameEn": "Genbu", "mnemonic": ["水 AoE"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+        ]}]},
+        { "name": "Yamabuki", "nameEn": "Yamabuki", "mnemonic": ["忍者 + AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "Ninja AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Gyodo", "nameEn": "Gyodo", "mnemonic": ["武士 + AoE"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Samurai Slash", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

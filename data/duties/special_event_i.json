@@ -1,37 +1,21 @@
 {
     "id": "special_event_i",
-    "name": "特別事件 I",
+    "name": "特別活動 I",
     "nameEn": "Special Event I",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "聯動事件副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）特別活動 trial。", "2）通常為節日活動 / 聯動。", "3）依活動類型不同：通常含基本 AoE + tankbuster。"],
+    "notes": "SB 特別活動 trial (Lv 70)。具體內容依活動。",
     "bosses": [
-        {
-            "name": "事件 Boss",
-            "nameEn": "Event Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Special Event Boss", "nameEn": "Special Event Boss", "mnemonic": ["依活動類型"], "phases": [{ "name": "主戰", "mechanics": [
+            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }

@@ -2,36 +2,28 @@
     "id": "ala_mhigo",
     "name": "阿拉米格",
     "nameEn": "Ala Mhigo",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
+    "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 70,
     "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "4.0 SB MSQ 終戰副本 (Lv 70)，傑諾斯戰前",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "4.x SB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "quality": "excellent",
+    "mnemonic": ["1）B1 Magitek Predator：直線砲擊。", "2）B2 Aulus mal Asina：科學家機制 + AoE。", "3）B3 Zenos yae Galvus：劍術 + 直線 + Aetheric Slash。"],
+    "notes": "SB 4.0 MSQ 終戰 dungeon (Lv 70)。Zenos 首戰。",
     "bosses": [
-        {
-            "name": "Zenos yae Galvus",
-            "nameEn": "傑諾斯",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
+        { "name": "Magitek Predator", "nameEn": "Magitek Predator", "mnemonic": ["直線砲擊"], "phases": [{ "name": "B1", "mechanics": [
+            { "name": "Magitek Ray", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+            { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+        ]}]},
+        { "name": "Aulus mal Asina", "nameEn": "Aulus mal Asina", "mnemonic": ["科學家 + AoE"], "phases": [{ "name": "B2", "mechanics": [
+            { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]},
+        { "name": "Zenos yae Galvus", "nameEn": "Zenos yae Galvus", "mnemonic": ["劍術 + Aetheric Slash"], "phases": [{ "name": "B3", "mechanics": [
+            { "name": "Aetheric Slash 以太斬", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
+            { "name": "Vein Splitter 脈裂", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+            { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+        ]}]}
     ]
 }
