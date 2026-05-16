@@ -1,6 +1,6 @@
 {
     "id": "dzemael_darkhold",
-    "name": "德澤梅亞迷洞",
+    "name": "蛇女郊野澤梅爾要塞",
     "nameEn": "Dzemael Darkhold",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "dungeon",
@@ -8,42 +8,37 @@
     "iLvlSync": null,
     "jobLevelSync": 44,
     "highEnd": false,
-    "quality": "good",
+    "quality": "excellent",
     "mnemonic": [
-        "1）B1 All-seeing Eye 全視之眼 = 多 AoE 圈 + 凝視 + 召小眼。",
-        "2）B2 Taulurd 陶魯德 = 大型怪物 + 衝鋒 + cone + 召小怪。",
-        "3）B3 Batraal 巴特拉爾 = 惡魔 boss + 多 cleave + 召分身 + 大全屏。"
+        "1）B1 All-seeing Eye：眼睛 boss + 凝視 + 場上多 AoE。",
+        "2）B2 Taulurd：石巨人 + 砸地震波。",
+        "3）B3 Batraal：虛空王 + 召喚虛空獸 + 黑暗系。"
     ],
-    "notes": "ARR 2.0 dungeon (Lv 44)。Coerthas Darkhold 黑魔法洞穴。",
+    "notes": "ARR 2.0 sidequest dungeon (Lv 44)。Coerthas 蛇女虛空要塞。",
     "bosses": [
         {
-            "name": "全視之眼",
-            "nameEn": "All-seeing Eye",
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Eye Beam 眼線", "type": "aoe", "description": "Boss line AoE 眼線。", "tips": ["側步閃"] },
-                { "name": "Death Gaze 死亡凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
-                { "name": "Summon Eye 召小眼", "type": "other", "description": "召小眼 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Spread AoE 散標", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            "name": "全視之眼", "nameEn": "All-seeing Eye",
+            "phases": [{ "name": "B1 主戰", "mechanics": [
+                { "name": "Gaze 凝視", "type": "gaze", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Circle AoE 圓圈", "type": "aoe", "description": "場上多圓 → 走縫。", "tips": ["走縫"] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 單體。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "陶魯德",
-            "nameEn": "Taulurd",
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line AoE。", "tips": ["側步"] },
-                { "name": "Sweep 橫掃", "type": "aoe", "description": "Boss cone 橫掃 AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Summon Add 召小怪", "type": "other", "description": "召小怪 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Boom 全屏", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            "name": "陶魯德", "nameEn": "Taulurd",
+            "phases": [{ "name": "B2 主戰", "mechanics": [
+                { "name": "Earth Slam 砸地", "type": "raidwide", "description": "全屏震波。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Cleave 扇形", "type": "cone", "description": "MT 扇形。", "tips": [{ "text": "MT 朝外", "role": "tank" }] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 單體。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "巴特拉爾",
-            "nameEn": "Batraal",
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Demonic Cleave 惡魔斬", "type": "aoe", "description": "Boss 多 cleave AoE 連發。", "tips": ["看朝向 → 移位"] },
-                { "name": "Shadow Clones 暗影分身", "type": "other", "description": "召分身 + 同步攻擊。", "tips": ["看本體 + 避分身"] },
-                { "name": "Inferno Burst 地獄火爆", "type": "raidwide", "description": "全屏 + 火傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
-                { "name": "Final Burst 末段", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
+            "name": "巴特拉爾", "nameEn": "Batraal",
+            "phases": [{ "name": "B3 主戰", "mechanics": [
+                { "name": "Void Spawn 召喚虛空獸", "type": "add", "description": "召喚虛空獸 add → 速殺。", "tips": [{ "text": "DPS AoE", "role": "dps" }] },
+                { "name": "Dark Cloud 黑暗雲", "type": "raidwide", "description": "全屏黑霧。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Void Slash 虛空斬", "type": "tankbuster", "description": "MT 死刑。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] },
+                { "name": "Circle AoE 圓圈", "type": "aoe", "description": "場上多 AoE → 走縫。", "tips": ["走縫"] }
             ]}]
         }
     ]

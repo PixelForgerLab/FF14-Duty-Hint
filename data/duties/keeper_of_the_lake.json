@@ -1,6 +1,6 @@
 {
     "id": "keeper_of_the_lake",
-    "name": "湖之守護者",
+    "name": "湖底洞穴庫珥座之底",
     "nameEn": "The Keeper of the Lake",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "dungeon",
@@ -8,43 +8,38 @@
     "iLvlSync": null,
     "jobLevelSync": 50,
     "highEnd": false,
-    "quality": "good",
+    "quality": "excellent",
     "mnemonic": [
-        "1）B1 Einhander 單翼機 = Magitek Ray 雷射 + Heat Cannon MT 火炮 + 召小機甲。",
-        "2）B2 Magitek Gunship 魔導機甲艦 = 大砲 line + Diffractive Plasma 全屏 + 召分機甲。",
-        "3）B3 Midgardsormr 米德加爾德索姆 (敵) = Ice 冰系 + Cauterize 衝鋒 + 大龍息全屏。"
+        "1）B1 Einhander：單翼飛機 + 機甲雷射 + 砲擊。",
+        "2）B2 Magitek Gunship：魔導機甲艦 + 強力雷射。",
+        "3）B3 Midgardsormr：白龍 + 雷霆 + 龍息。"
     ],
-    "notes": "ARR 2.4 MSQ dungeon (Lv 50)。Silvertear Lake 龍王 Midgardsormr。",
+    "notes": "ARR 2.55 MSQ dungeon (Lv 50)。Mor Dhona 湖底；接續 ARR 結尾劇情。",
     "bosses": [
         {
-            "name": "單翼機",
-            "nameEn": "Einhander",
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Magitek Ray 魔導光線", "type": "aoe", "description": "Boss line 雷射 AoE。", "tips": ["側步閃"] },
-                { "name": "Heat Cannon 熱炮", "type": "tankbuster", "description": "MT 大火炮 cone buster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Summon Mecha 召機甲", "type": "other", "description": "召小機甲 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Diffractive Plasma 散射等離子", "type": "raidwide", "description": "全屏 + 雷傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
+            "name": "單翼機", "nameEn": "Einhander",
+            "phases": [{ "name": "B1 主戰", "mechanics": [
+                { "name": "Magitek Laser 魔導雷射", "type": "aoe", "description": "直線雷射。", "tips": ["側閃"] },
+                { "name": "Bombs 炸彈", "type": "aoe", "description": "場上炸彈 AoE → 走縫。", "tips": ["走縫"] },
+                { "name": "Cleave 扇形", "type": "cone", "description": "MT 扇形。", "tips": [{ "text": "MT 朝外", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "魔導機甲艦",
-            "nameEn": "Magitek Gunship (boss)",
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Magitek Cannon 魔導大炮", "type": "aoe", "description": "Boss 大砲 line AoE 穿場。", "tips": ["走縫"] },
-                { "name": "Summon Predator 召預警機甲", "type": "other", "description": "召小機甲 add → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Diffractive Plasma 散射全屏", "type": "raidwide", "description": "全屏 + 強雷傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
-                { "name": "Aetheric Boom 以太爆", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            "name": "魔導機甲艦", "nameEn": "Magitek Gunship",
+            "phases": [{ "name": "B2 主戰", "mechanics": [
+                { "name": "Heavy Laser 強力雷射", "type": "aoe", "description": "場邊強力直線雷射。", "tips": ["側閃"] },
+                { "name": "Add Summon 召喚 add", "type": "add", "description": "場邊召喚機甲 add → 速殺。", "tips": [{ "text": "DPS 殲滅", "role": "dps" }] },
+                { "name": "Raid AoE 全屏", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 死刑。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "米德加爾德索姆 (敵)",
-            "nameEn": "Midgardsormr (Enemy)",
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Ice Breath 冰息", "type": "aoe", "description": "Boss 前 cone 冰 AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Cauterize 燒灼衝鋒", "type": "aoe", "description": "Boss 飛起 line AoE 衝鋒。", "tips": ["看朝向 → 跑對側"] },
-                { "name": "Hiemal Storm 凜冬風暴", "type": "raidwide", "description": "全屏 + 冰傷。", "tips": [{ "text": "全員減傷", "role": "healer" }] },
-                { "name": "Frost Breath 霜息", "type": "aoe", "description": "Boss 大龍息 cone + 凍。", "tips": ["跑側 + 注意凍"] },
-                { "name": "Aetheric Boom 以太爆", "type": "spread", "description": "場上多 AoE 圈散。", "tips": ["散避圈"] }
+            "name": "米德加爾德索姆 (敵)", "nameEn": "Midgardsormr (Enemy)",
+            "phases": [{ "name": "B3 主戰", "mechanics": [
+                { "name": "Dragon Breath 龍息", "type": "cone", "description": "MT 扇形龍息。", "tips": [{ "text": "MT 朝外", "role": "tank" }] },
+                { "name": "Thunderbolt 雷霆", "type": "aoe", "description": "場上多雷 AoE → 走縫。", "tips": ["走縫"] },
+                { "name": "Tail Slam 尾擊", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補大團補", "role": "healer" }] },
+                { "name": "Tankbuster 死刑", "type": "tankbuster", "description": "MT 死刑。", "tips": [{ "text": "MT 大減傷", "role": "tank" }] }
             ]}]
         }
     ]
