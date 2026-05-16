@@ -1,6 +1,6 @@
 {
     "id": "bardams_mettle",
-    "name": "巴爾達姆的試煉",
+    "name": "巴爾達姆試煉場",
     "nameEn": "Bardam's Mettle",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "dungeon",
@@ -10,42 +10,63 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Yol：High Wind 大風擊退；Wing Cutter 翼割。",
-        "2）B2 Sa Va：Mythril Pierce 直線；Iron Tempest 圓 AoE。",
-        "3）B3 Bardam：Comet 隕石依星座圖案落，記順序躲。"
+        "1）B1 Garula：Rush 拉繩衝鋒 → 標記者跑遠減傷；War Cry 後動物號角 (Ram 直線/Coeurl 大錐/Kukurul 小圓)。",
+        "2）B2 Bardam (非戰)：P1 Hunter 拉中央 + Travail 內/外圈先後爆 → 站內外圈邊緣後退；P2 三 tower 站滿 + 火環散開；P3 Looming Shadow 隕石 → 躲最後一塊 Star Shard 後。",
+        "3）B3 Yol：P1 Wind Unbound 召邊緣球放直線；Eye of the Fierce 視線 (背對)；P2 雙翼必殺 + Wingbeat 擊退要跑回中央。**LB Phase 2 可跳過**。"
     ],
-    "notes": "SB 4.0 dungeon (Lv 65)。位於 Azim Steppe，巴爾達姆試煉之地。",
+    "notes": "SB 4.0 dungeon Lv 65 ilvl 290。資料來源：CGW (Bardam's Mettle)。",
     "bosses": [
         {
-            "name": "Yol 大鵰",
-            "nameEn": "Yol",
-            "mnemonic": ["High Wind 擊退"],
+            "name": "Garula 加魯拉",
+            "nameEn": "Garula",
+            "mnemonic": ["Rush 拉繩衝鋒 → 標記者跑遠", "War Cry → 動物號角 (Ram/Coeurl/Kukurul)"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "High Wind 大風", "type": "knockback", "description": "從 boss 中心擊退。", "tips": ["靠中央站或開 Arm's Length"] },
-                { "name": "Wing Cutter 翼割", "type": "aoe", "description": "場上多重直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        },
-        {
-            "name": "Sa Va 武士",
-            "nameEn": "Sa Va",
-            "mnemonic": ["雙武器形態"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Mythril Pierce 秘銀刺", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
-                { "name": "Iron Tempest 鐵風暴", "type": "aoe", "description": "Boss 周圍圓 AoE。", "tips": ["遠離 boss"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Heave 推擠", "type": "aoe", "description": "前方錐 AoE。", "tips": [{ "text": "MT 朝外", "role": "tank" }] },
+                { "name": "Crumbling Crust 崩裂", "type": "aoe", "description": "boss 周圍 4 個快速 AoE，可重疊。", "tips": ["近戰閃外"] },
+                { "name": "Rush 衝鋒", "type": "knockback", "description": "拉繩 (粉紅 → 紫色) 非主仇恨者衝鋒。標記者拉遠減傷。", "tips": ["被標者拉遠到場邊"] },
+                { "name": "War Cry → Earthquake + 動物號角", "type": "other", "description": "Rush 後 War Cry 全屏 + Earthquake 暈全隊 + 場上動物號角預告下次 AoE：Ram (直線, 3 階段) / Coeurl (大錐, Rush ×2 後) / Kukurul (小圓, Rush ×3 後)。", "tips": ["看動物 ! 預警走位"] }
             ]}]
         },
         {
             "name": "Bardam 巴爾達姆",
             "nameEn": "Bardam",
-            "mnemonic": ["Comet 星座圖案"],
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Comet 隕石", "type": "aoe", "description": "場上依星座圖案落下隕石，需按順序閃。", "tips": ["記星座順序"] },
-                { "name": "Bardam's Ring 環", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "mnemonic": ["非戰鬥，依機制躲", "P1 Magnetism + Travail 內外圈邊緣後退", "P2 三 tower + 火環 + Heavy Strike 270°", "P3 隕石躲 Star Shard 後"],
+            "phases": [
+                { "name": "P1 Hunter of Bardam", "mechanics": [
+                    { "name": "Magnetism + Travail (shockwave)", "type": "other", "description": "Hunter 拉所有人到中央 → 內圈 AoE → 外圈 AoE。**站內外圈邊緣，等內圈爆完後退**。", "tips": ["站邊緣後退 (使用 ASD 或 ←→↓ 同時)"] },
+                    { "name": "Charge 投擲", "type": "aoe", "description": "場邊 spear 放交叉直線 AoE。", "tips": ["閃交叉"] },
+                    { "name": "Empty Gaze 空虛凝視", "type": "other", "description": "Travail 期間視線攻擊。", "tips": ["背對 Hunter"] }
+                ]},
+                { "name": "P2 Golem", "mechanics": [
+                    { "name": "Travail (lightning) 雷塔", "type": "other", "description": "三 tower 120° 各一個必須站。", "tips": ["全員分配 tower"] },
+                    { "name": "Travail (firestorm) 火環", "type": "aoe", "description": "全員火環標記。", "tips": ["順時針散開"] },
+                    { "name": "Heavy Strike 重擊", "type": "aoe", "description": "270° 前錐，**安全區 golem 後**。", "tips": ["站背後"] },
+                    { "name": "Starfall 星墜", "type": "aoe", "description": "4 大圓 AoE 落地，留 Star Shard 給 P3。安全區中央或外邊緣。", "tips": ["閃 AoE"] }
+                ]},
+                { "name": "P3 Looming Shadow", "mechanics": [
+                    { "name": "Looming Shadow 隕石", "type": "other", "description": "Looming Circle 隕石長時間後落下。", "tips": ["躲在最後一塊 Star Shard 後"] },
+                    { "name": "Magnetism + Tremblor + Heavy Strike + Shockwave 組合", "type": "aoe", "description": "AoE 組合 → 站兩紅 telegraph 交集三角區 → 解後跳進甜甜圈內。會破壞一塊 Star Shard。", "tips": ["看 telegraph 交集走位"] }
+                ]}
+            ]
+        },
+        {
+            "name": "Yol",
+            "nameEn": "Yol",
+            "mnemonic": ["Wind Unbound 召邊緣球", "Eye of the Fierce 視線", "P2 雙翼必殺 + Wingbeat 擊退跑回中央", "LB 可跳 P2"],
+            "phases": [
+                { "name": "P1", "mechanics": [
+                    { "name": "Feathercut 羽切", "type": "tankbuster", "description": "前方錐 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                    { "name": "Wind Unbound 風縛解放", "type": "other", "description": "全屏 + 場邊召球，定時放直線 AoE。", "tips": ["閃直線"] },
+                    { "name": "Flutterfall 羽落", "type": "spread", "description": "全員橙色標記 → 散開避重疊。", "tips": ["全員散開"] },
+                    { "name": "Eye of the Fierce 凶眼", "type": "other", "description": "視線攻擊給 Confusion。", "tips": ["背對 Yol"] },
+                    { "name": "Corpsecleaner Eagle add 階段", "type": "other", "description": "boss 飛走召 Eagle add，殺後再召 1 隻，期間 boss 從邊緣放無 telegraph 直線。", "tips": [{ "text": "DPS 速殺 eagle", "role": "dps" }, "離 boss 出現方向"] }
+                ]},
+                { "name": "P2 雙翼", "mechanics": [
+                    { "name": "Wings 雙翼可選", "type": "other", "description": "雙翼出，boss 無敵，必殺翼才能繼續。三個圓 AoE 順時針繞外邊。", "tips": [{ "text": "DPS 集中打翼", "role": "dps" }, "靠近中央"] },
+                    { "name": "Wingbeat 翼擊", "type": "knockback", "description": "綠色標記玩家被擊退到場邊。", "tips": ["跑回中央避外圈 AoE"] },
+                    { "name": "LB 可跳 P2", "type": "other", "description": "P2 進入前一個 Wind Unbound 之前用 Limit Break 可直接過。", "tips": ["看時機開 LB"] }
+                ]}
+            ]
         }
     ]
 }

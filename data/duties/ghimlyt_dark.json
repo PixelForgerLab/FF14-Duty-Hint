@@ -10,41 +10,52 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Magitek Death Claw 巨爪：Vengeful Will 拉人 + Death Claw 抓取。",
-        "2）B2 Magitek Predator + Reaper：兩坦各拉，Magitek Ray 直線雷射。",
-        "3）B3 Julia + Annia 雙女武神：劍 + 槍配合，Empty Wave 全屏。"
+        "1）B1 Magitek Colossus：Magitek Slash 旋斬 → 火痕留場地 (第一片消失才放最後一擊)，注意 boss 旋轉方向走位。",
+        "2）B2 Prometheus：先 Nitrospin 周圍火環 → Needle Gun 90° 前 / Oil Shower 270° 後；潛地後場壁紅光 → 對側噴火直線 (滯留)。第二次潛地多 Freezing Missile (四方位)。",
+        "3）B3 Annia + Julia：交替戰，**Crosshatch 換手機制**！P1 殺先攻擊那位，P2 接打另一位。最後 Imperial Authority 詠唱 = wipe，需在 20% 內擊殺。"
     ],
-    "notes": "SB 4.5 MSQ 終戰 dungeon (Lv 70)。Ghimlyt 戰役的入口。",
+    "notes": "SB 4.5 MSQ 終戰 dungeon Lv 70 ilvl 380。Ghimlyt 戰役。資料來源：CGW (The Ghimlyt Dark)。",
     "bosses": [
         {
-            "name": "Magitek Death Claw 死亡之爪",
-            "nameEn": "Magitek Death Claw",
-            "mnemonic": ["Death Claw 抓取"],
+            "name": "Mark III-B Magitek Colossus 機甲巨像",
+            "nameEn": "Mark III-B Magitek Colossus",
+            "mnemonic": ["Jarring Blow 前方廣 tankbuster", "Magitek Slash 旋斬 + 火痕", "Wild Fire Beam 散開"],
             "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Death Claw 死亡之爪", "type": "other", "description": "場上爪抓取玩家拖到中央。", "tips": ["被抓的玩家準備中央 AoE"] },
-                { "name": "Vengeful Will 報復意志", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Drill Cannons 鑽機砲", "type": "aoe", "description": "場上直線砲擊。", "tips": ["閃直線"] }
+                { "name": "Jarring Blow 震顫一擊", "type": "tankbuster", "description": "前方廣角 tankbuster。", "tips": [{ "text": "MT 朝外", "role": "tank" }] },
+                { "name": "Ceruleum Vent 蒼氣排氣", "type": "raidwide", "description": "全屏中等傷。", "tips": [{ "text": "補血", "role": "healer" }] },
+                { "name": "Magitek Ray 雷射 stack", "type": "stack", "description": "玩家 stack 標記。", "tips": ["全員疊接"] },
+                { "name": "Exhaust 廢氣", "type": "aoe", "description": "對隨機玩家直線。", "tips": ["閃直線"] },
+                { "name": "Wild Fire Beam 野火光束", "type": "spread", "description": "對每人 AoE 散開避免重疊。", "tips": ["散開"] },
+                { "name": "Magitek Slash 機甲斬 + 火痕", "type": "aoe", "description": "錐 AoE 留 Burns 火痕。Boss 旋轉再砍直到覆蓋整場；**第一片火痕在最後一擊前會消**。", "tips": ["跟著 boss 旋轉方向走位"] }
             ]}]
         },
         {
-            "name": "Magitek Predator + Magitek Reaper",
-            "nameEn": "Magitek Predator + Magitek Reaper",
-            "mnemonic": ["雙機甲分坦"],
+            "name": "Prometheus 普羅米修斯",
+            "nameEn": "Prometheus",
+            "mnemonic": ["Nitrospin 周圍火環 (第一招)", "Needle Gun 90° 前 / Oil Shower 270° 後", "潛地 → 對側噴火直線 (滯留)", "第 2 次 Freezing Missile 四方位"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Magitek Ray 雷射", "type": "aoe", "description": "場上直線雷射。", "tips": ["閃直線"] },
-                { "name": "Magitek Missiles 飛彈", "type": "spread", "description": "場上多重圓 AoE 散開。", "tips": ["全員散開"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "對主仇恨 tankbuster。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] }
+                { "name": "Nitrospin 硝化旋轉", "type": "raidwide", "description": "Prometheus 第一招，全屏 + 周圍火環。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Unbreakable Cermet Drill 鑽頭", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Needle Gun 90° / Oil Shower 270°", "type": "aoe", "description": "Needle Gun 前 90° 錐 / Oil Shower 後 270° (Needle 不覆蓋處)。**僅 boss 兩側安全**。", "tips": ["站 boss 正側面"] },
+                { "name": "潛地 → 對側噴火直線", "type": "aoe", "description": "潛地後場壁亮紅 → 對側發跨場直線火 + 滯留傷害。", "tips": ["閃直線 + 別停"] },
+                { "name": "Freezing Missile 凍結飛彈 (第 2 次潛地)", "type": "aoe", "description": "四方位四個 proximity AoE。", "tips": ["站對角空隙"] }
             ]}]
         },
         {
-            "name": "Julia + Annia 雙女武神",
-            "nameEn": "Julia + Annia",
-            "mnemonic": ["雙女武神 劍 + 槍"],
+            "name": "Annia + Julia quo Soranus 索拉努斯姊妹",
+            "nameEn": "Annia + Julia quo Soranus",
+            "mnemonic": ["先攻擊者留場、另一者場外支援", "Air Strike 8 Ceruleum tank → Heirsbane 引爆連鎖", "Order to Bombard 場上 3 大 AoE 留邊", "Crosshatch 換手 + 殺後 Imperial Authority 致死"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Empty Wave 空洞波", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Empty Refrain 空洞副歌", "type": "stack", "description": "玩家分擔疊接。", "tips": ["全員疊接"] },
-                { "name": "Empty Dimension 空洞次元", "type": "aoe", "description": "場上甜甜圈 AoE，貼近 boss 安全。", "tips": ["貼緊 boss"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "對 MT。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+                { "name": "Delta Trance / Innocence", "type": "tankbuster", "description": "Annia 的 tankbuster / Julia 的 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Artificial Plasma 人造能漿", "type": "raidwide", "description": "全屏 (兩姐妹都用)。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Commence Air Strike 空襲", "type": "other", "description": "Julia 召 8 Ceruleum tank (4 外圈 + 4 內)，可能用 Roundhouse 撞擊；之後 Heirsbane 引爆連鎖。", "tips": ["離 tank 群"] },
+                { "name": "Order to Bombard 轟炸命令", "type": "aoe", "description": "Annia 召 3 大圓 AoE 蓋場，邊緣留小安全區。", "tips": ["跑場邊角落"] },
+                { "name": "Crossbones X 字飛", "type": "aoe", "description": "Julia 召 4 個 X 飛行 AoE，配合 Order to Bombard 時對玩家擊退。", "tips": ["閃 X 飛行軌跡"] },
+                { "name": "Heirsbane / Angry Salamander / Stunning Sweep", "type": "aoe", "description": "Julia 標記延遲 / Annia 直線 / Annia 跳近戰 AoE。", "tips": ["看招式類型"] },
+                { "name": "The Order 號令", "type": "aoe", "description": "Julia 中央 + 四 Crossbones 十字飛 + 玩家腳下 AoE。", "tips": ["散開避腳下圓 + 閃十字"] },
+                { "name": "**Crosshatch 換手**", "type": "other", "description": "P1 殺光一姊妹後雙人飛 Crossbones 來回，**之後換另一姊妹下場**繼續打。", "tips": ["閃飛線然後接打新姊妹"] },
+                { "name": "Covering Fire 火力支援 + 第 2 Crosshatch", "type": "aoe", "description": "第二位被殺後 Crosshatch 同時 Covering Fire 對每人 AoE。", "tips": ["全員散開避免重疊"] },
+                { "name": "Imperial Authority 帝國權威 (Wipe 機制)", "type": "raidwide", "description": "兩姐妹 20% 後跑中央 + 回 20% HP 詠唱 Imperial Authority = wipe，**必須限時擊殺**。", "tips": [{ "text": "全力 burst 兩姊妹", "role": "dps" }] }
             ]}]
         }
     ]

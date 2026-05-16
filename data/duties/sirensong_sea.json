@@ -10,40 +10,43 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Captain Madison + Sea Devil：船長 + 鬼魂雙形態。",
-        "2）B2 Lugat 海中怪：Hydroball 水球分擔機制。",
-        "3）B3 Lorelei 海妖：Diabolic Gate 黑色傳送圈會把人吸去；Boundless Sea 全屏。"
+        "1）B1 Lugat：貼緊 boss 避半屏 AoE；Hydroball 玩家 stack 分擔；Sea Swallows All → 吸入後跑出找安全區，回中央接 Amorphous Applause；Overflow → 擊退後立刻跑回中央 stack Hydroball。",
+        "2）B2 The Governor：Shadowflow 場上影區別踩 (堆魔法傷害承受)；Enter Night 標記者跑遠拉斷繩；Shadowsplit 召小怪鋪更多影區。",
+        "3）B3 Lorelei：Virgin Tears 留 DoT 區 + 場邊環；Morbid Advance/Retreat 強制向前/向後 (相對自己面向)，調整面向避開 DoT 區。"
     ],
-    "notes": "SB 4.0 第一個 MSQ 迷宮 (Lv 61)。",
+    "notes": "SB 4.0 第一個 MSQ dungeon Lv 61 ilvl 265。Sirensong Sea。資料來源：CGW (The Sirensong Sea)。",
     "bosses": [
         {
-            "name": "Captain Madison + Sea Devil",
-            "nameEn": "Captain Madison",
-            "mnemonic": ["船長 + 鬼魂雙形態", "Cannon Fire 砲擊"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Cannon Fire 砲擊", "type": "aoe", "description": "場上多重砲擊圓 AoE。", "tips": ["閃預警"] },
-                { "name": "Storm 風暴", "type": "other", "description": "場上召喚風暴龍捲，碰到會被擊飛。", "tips": ["閃龍捲"] },
-                { "name": "Black Ice 黑冰", "type": "aoe", "description": "腳下凍結，被命中 Slow。", "tips": ["移動避開"] }
-            ]}]
-        },
-        {
-            "name": "Lugat 海中怪",
+            "name": "Lugat",
             "nameEn": "Lugat",
-            "mnemonic": ["Hydroball 水球分擔"],
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Hydroball 水球", "type": "stack", "description": "被點名玩家頭頂有水球，全員疊接分擔。", "tips": ["全員疊在水球者身上"] },
-                { "name": "Water III 水III", "type": "aoe", "description": "場上水 AoE 圓。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            "mnemonic": ["貼緊 boss 避半屏 AoE", "Hydroball stack 分擔", "Sea Swallows All / Overflow 走位"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Amorphous Applause 變幻喝采", "type": "aoe", "description": "大型方向性 AoE，緊貼 boss 有空間躲。", "tips": ["貼緊 boss"] },
+                { "name": "Hydroball 水球", "type": "stack", "description": "一玩家被瞄準，stack 分擔。", "tips": ["全員 stack 標記者"] },
+                { "name": "Sea Swallows All → Concussive Oscillation", "type": "other", "description": "Boss 吸入 → 跑出找安全區放 AoE，之後回中央接 Amorphous Applause。", "tips": ["吸入後跑出 → 找安全區 → 回中央"] },
+                { "name": "Overflow → Hydroball", "type": "knockback", "description": "全員被擊退到場邊，立刻跑回中央準備 Hydroball stack。", "tips": ["擊退後馬上回中央"] }
             ]}]
         },
         {
-            "name": "Lorelei 海妖",
+            "name": "The Governor 總督",
+            "nameEn": "The Governor",
+            "mnemonic": ["Shadowflow 影區別踩", "Enter Night 跑遠斷繩", "Shadowsplit 召分身"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Bloodburst 血爆", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Shadowflow 影流", "type": "other", "description": "場地大片影區，踩到堆 magic vuln。", "tips": ["別踩影區"] },
+                { "name": "Enter Night 進入黑夜", "type": "other", "description": "標記玩家 → 拉入 + 連繩。", "tips": ["被標者跑遠拉斷繩"] },
+                { "name": "Shadowsplit 影分裂", "type": "other", "description": "召喚小型分身鋪更多 Shadowflow 影區。", "tips": [{ "text": "DPS 速殺分身", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "Lorelei 蘿萊萊",
             "nameEn": "Lorelei",
-            "mnemonic": ["Diabolic Gate 傳送圈", "Siren's Song 歌聲"],
+            "mnemonic": ["Virgin Tears DoT 區 + 環", "Morbid Advance/Retreat 強制移動 → 調整面向避 DoT"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Diabolic Gate 黑色傳送圈", "type": "other", "description": "場上出現黑色傳送圈，會把玩家吸入並 traffic 到場外。", "tips": ["移動避開傳送圈"] },
-                { "name": "Siren's Song 海妖歌聲", "type": "other", "description": "詠唱期間玩家不能看 boss，否則被魅惑攻擊隊友。", "tips": ["背對 boss"] },
-                { "name": "Boundless Sea 無垠之海", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+                { "name": "Somber Melody 陰沉旋律", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "補血", "role": "healer" }] },
+                { "name": "Void Water III 虛無水 III", "type": "aoe", "description": "對標記玩家 AoE。", "tips": ["拉開"] },
+                { "name": "Virgin Tears 處女之淚", "type": "other", "description": "場上 DoT 區，最後鋪滿場邊環。", "tips": ["走位避 DoT 區"] },
+                { "name": "Morbid Advance / Retreat 病態前進/後退", "type": "other", "description": "強制角色向前 / 後移動 (相對自己面向，不是相對 boss)。", "tips": ["事先調整面向選擇最安全路徑"] }
             ]}]
         }
     ]

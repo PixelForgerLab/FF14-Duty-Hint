@@ -10,38 +10,40 @@
     "highEnd": false,
     "quality": "excellent",
     "mnemonic": [
-        "1）B1 Magatsu Tako 八岐章魚：Tentacle 觸手要打，Ink Cloud 黑墨擴散。",
-        "2）B2 Genbu 玄武：召喚四神靈獸，Stoneskin 護盾要破。",
-        "3）B3 Hakutaku 白澤：Gaze 視線會看到所有方向，要看 buff 圖標決定背對方向。"
+        "1）B1 Genbu 玄武：靈龜召喚 + 半屏 AoE，注意走位閃 boss 預兆。",
+        "2）B2 Magatsu Tako 邪章魚：召喚墨之觸手 + Ink Cloud 黑墨擴散；分擔機制。",
+        "3）B3 Hakutaku 白澤：依 buff 圖標決定背對方向 (Forward/Backward/Left/Right Gaze)；Phantom Rush 衝鋒。"
     ],
-    "notes": "SB 4.2 dungeon (Lv 68)。Yanxia 地獄之蓋。",
+    "notes": "SB 4.2 dungeon Lv 68 ilvl 325。Yanxia 地獄之蓋。資料來源：huiji + 玩家手記。",
     "bosses": [
-        {
-            "name": "Magatsu Tako 八岐章魚",
-            "nameEn": "Magatsu Tako",
-            "mnemonic": ["觸手 + 黑墨"],
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Tentacle 觸手", "type": "other", "description": "場上召喚多隻觸手 adds。", "tips": [{ "text": "DPS 速殺觸手", "role": "dps" }] },
-                { "name": "Ink Cloud 黑墨", "type": "aoe", "description": "場上多重黑墨 AoE 區。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
-        },
         {
             "name": "Genbu 玄武",
             "nameEn": "Genbu",
-            "mnemonic": ["四神獸召喚 + 護盾"],
+            "mnemonic": ["靈龜召喚 + 半屏 AoE"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Earthen AoE", "type": "aoe", "description": "場上多重圓/扇 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Magatsu Tako 邪章魚",
+            "nameEn": "Magatsu Tako",
+            "mnemonic": ["觸手 + 黑墨擴散", "分擔機制"],
             "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Stoneskin 石膚", "type": "other", "description": "boss 上盾必須打破。", "tips": [{ "text": "DPS 全力破盾", "role": "dps" }] },
-                { "name": "靈獸召喚", "type": "other", "description": "場上召喚四方神獸，需逐一處理。", "tips": ["注意方位"] },
-                { "name": "Stomp 踩擊", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["閃預警"] }
+                { "name": "Tentacle 觸手召喚", "type": "other", "description": "場上召觸手 adds。", "tips": [{ "text": "DPS 速殺觸手", "role": "dps" }] },
+                { "name": "Ink Cloud 黑墨", "type": "aoe", "description": "場上多重黑墨 AoE 區。", "tips": ["閃預警"] },
+                { "name": "Stack 分擔", "type": "stack", "description": "玩家標記 → 全員疊接。", "tips": ["疊接"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         },
         {
             "name": "Hakutaku 白澤",
             "nameEn": "Hakutaku",
-            "mnemonic": ["多向 Gaze 視線"],
+            "mnemonic": ["看 buff 圖標決定背對 (Forward/Backward/Left/Right Gaze)", "Phantom Rush 衝鋒"],
             "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Multi-Direction Gaze 多向視線", "type": "other", "description": "場上獲得 Forward/Backward/Left/Right Gaze buff，依 buff 圖標決定背對方向。", "tips": ["看 buff 圖標決定方向"] },
+                { "name": "Multi-Direction Gaze 多向視線", "type": "other", "description": "玩家獲得 Forward/Backward/Left/Right Gaze buff → 依 buff 圖標決定背對方向，否則石化。", "tips": ["仔細看 buff 圖標 → 對應方向背對"] },
+                { "name": "Phantom Rush 幻影衝鋒", "type": "aoe", "description": "場上 boss 衝鋒 AoE。", "tips": ["閃預兆"] },
                 { "name": "Roar 咆嘯", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
                 { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
