@@ -1,48 +1,148 @@
 {
-    "id": "aery",
-    "name": "尼德霍格之巢",
-    "nameEn": "The Aery",
-    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "good",
-    "mnemonic": [
-        "1）B1 Rangda = 龍形 + 衝鋒 + 召小龍 add。",
-        "2）B2 Gyascutus = 巨型龍 + 多 cleave + 凝視。",
-        "3）B3 Nidhogg 尼德霍格 = Akh Morn 多 hit + 大 cone + 全屏 + Cauterize 衝鋒。"
-    ],
-    "notes": "HW 3.0 MSQ dungeon (Lv 60)。Nidhogg 龍神之巢 (MSQ 後半重要劇情)。",
-    "bosses": [
-        {
-            "name": "蘭達",
-            "nameEn": "Rangda",
-            "phases": [{ "name": "B1", "mechanics": [
-                { "name": "Charge 衝鋒", "type": "aoe", "description": "Boss 衝鋒 line。", "tips": ["側步"] },
-                { "name": "Summon Dragonet", "type": "other", "description": "召小龍 → DPS 殺。", "tips": [{ "text": "DPS 殺 add", "role": "dps" }] },
-                { "name": "Aether Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
-            ]}]
-        },
-        {
-            "name": "蓋亞斯庫圖斯",
-            "nameEn": "Gyascutus",
-            "phases": [{ "name": "B2", "mechanics": [
-                { "name": "Multi Cleave", "type": "aoe", "description": "Boss 多 cleave AoE 連發。", "tips": ["看朝向 → 移位"] },
-                { "name": "Death Gaze", "type": "other", "description": "凝視 → 背對。", "tips": ["背對 boss"] },
-                { "name": "Dragon Burst", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "全員減傷", "role": "healer" }] }
-            ]}]
-        },
-        {
-            "name": "尼德霍格",
-            "nameEn": "Nidhogg",
-            "phases": [{ "name": "B3", "mechanics": [
-                { "name": "Akh Morn 多 hit", "type": "stack", "description": "前 2 名連 hit 分擔。", "tips": [{ "text": "雙坦 stack", "role": "tank" }] },
-                { "name": "Dragon Cone", "type": "aoe", "description": "Boss 大 cone AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Cauterize 衝鋒", "type": "aoe", "description": "Boss 飛起 line AoE 衝鋒。", "tips": ["看朝向 → 跑對側"] },
-                { "name": "Dragon Roar", "type": "raidwide", "description": "末段大全屏。", "tips": [{ "text": "全員強減傷", "role": "healer" }] }
-            ]}]
-        }
-    ]
+    "id":  "aery",
+    "name":  "尼德霍格之巢",
+    "nameEn":  "The Aery",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "good",
+    "mnemonic":  [
+                     "1）B1 Rangda = 龍形 + 衝鋒 + 召小龍 add。",
+                     "2）B2 Gyascutus = 巨型龍 + 多 cleave + 凝視。",
+                     "3）B3 Nidhogg 尼德霍格 = Akh Morn 多 hit + 大 cone + 全屏 + Cauterize 衝鋒。"
+                 ],
+    "notes":  "HW 3.0 MSQ dungeon (Lv 60)。Nidhogg 龍神之巢 (MSQ 後半重要劇情)。",
+    "bosses":  [
+                   {
+                       "name":  "蘭達",
+                       "nameEn":  "Rangda",
+                       "phases":  [
+                                      {
+                                          "name":  "B1",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Charge 衝鋒",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 衝鋒 line。",
+                                                                "tips":  [
+                                                                             "側步"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Summon Dragonet",
+                                                                "type":  "other",
+                                                                "description":  "召小龍 → DPS 殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 殺 add",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "以太爆 Aether Burst",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "蓋亞斯庫圖斯",
+                       "nameEn":  "Gyascutus",
+                       "phases":  [
+                                      {
+                                          "name":  "B2",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "多重斬 Multi Cleave",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 多 cleave AoE 連發。",
+                                                                "tips":  [
+                                                                             "看朝向 → 移位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "死亡凝視 Death Gaze",
+                                                                "type":  "other",
+                                                                "description":  "凝視 → 背對。",
+                                                                "tips":  [
+                                                                             "背對 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Burst",
+                                                                "type":  "raidwide",
+                                                                "description":  "全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "尼德霍格",
+                       "nameEn":  "Nidhogg",
+                       "phases":  [
+                                      {
+                                          "name":  "B3",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Akh Morn 多 hit",
+                                                                "type":  "stack",
+                                                                "description":  "前 2 名連 hit 分擔。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙坦 stack",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Cone",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 大 cone AoE。",
+                                                                "tips":  [
+                                                                             "看朝向 → 站側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cauterize 衝鋒",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 飛起 line AoE 衝鋒。",
+                                                                "tips":  [
+                                                                             "看朝向 → 跑對側"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dragon Roar",
+                                                                "type":  "raidwide",
+                                                                "description":  "末段大全屏。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "全員強減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

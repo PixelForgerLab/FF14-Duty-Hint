@@ -1,42 +1,139 @@
 {
-    "id": "howling_eye",
-    "name": "咆嘯之眼 (Garuda 討伐)",
-    "nameEn": "The Howling Eye",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 46,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Garuda 迦樓羅：場上石柱 (Stone Pillar) 是核心！要保護不被打壞 (Friction/Wicked Wheel 會打到)。Aerial Blast 終局傷害取決於柱子剩多少。",
-        "2）Mistral Song 詠唱時 → 全員躲石柱後破視線。",
-        "3）Razor Plume adds 出現要全隊集火 (它會打石柱)。",
-        "4）P2 (50%) Eye of the Storm：場邊大龍捲 → 全員擠中央。"
-    ],
-    "notes": "ARR 2.0 MSQ trial Lv 46。Garuda (迦樓羅) Normal。資料來源：CGW (The Howling Eye)。",
-    "bosses": [
-        {
-            "name": "Garuda 迦樓羅",
-            "nameEn": "Garuda",
-            "mnemonic": ["保護石柱", "Mistral Song 躲石柱後", "Razor Plume adds 速殺", "P2 中央站防 Eye of the Storm"],
-            "phases": [
-                { "name": "P1 100%-50%", "mechanics": [
-                    { "name": "Downburst 下擊風", "type": "aoe", "description": "Boss 前方錐 AoE。", "tips": [{ "text": "非 tank 不站前", "role": "dps" }] },
-                    { "name": "Friction 摩擦 / Wicked Wheel 邪輪", "type": "aoe", "description": "Friction 對隨機玩家 + 周圍中等 AoE，Wicked Wheel Boss 周圍 AoE。**兩者都會打壞石柱**。", "tips": [{ "text": "MT 把 boss 拉到遠離石柱的邊緣", "role": "tank" }, "全員散開避免 Friction 範圍包含柱"] },
-                    { "name": "Slipstream 順風", "type": "aoe", "description": "前方錐形大傷 + 暈。無 telegraph 但可閃。", "tips": ["看 boss 朝向走位"] },
-                    { "name": "Mistral Song 西北風之歌", "type": "raidwide", "description": "Boss 消失 → 場一側出現 → 視線範圍內高傷。", "tips": ["全員躲石柱後破視線"] },
-                    { "name": "Razor Plume adds", "type": "other", "description": "Mistral Song 後召喚，會打石柱。", "tips": [{ "text": "DPS 立刻全力 AoE adds", "role": "dps" }] },
-                    { "name": "Aerial Blast 終末嵐", "type": "raidwide", "description": "50% 詠唱必中全屏，**石柱越多受傷越少**。可用 tank LB 減傷。", "tips": [{ "text": "石柱保護到此刻是關鍵", "role": "tank" }] }
-                ]},
-                { "name": "P2 50%-0%", "mechanics": [
-                    { "name": "Eye of the Storm 風暴之眼", "type": "other", "description": "場邊環形龍捲縮小有效場地到中央。被外圍掃到極高傷。", "tips": ["全員擠中央"] },
-                    { "name": "Mistral Shriek 西北風尖嘯", "type": "aoe", "description": "Boss 傳送到一側 → 全屏 AoE。**這次跑到她身後**安全。", "tips": ["看 boss 傳送方向跑反方向"] },
-                    { "name": "Mistral Song (P2)", "type": "raidwide", "description": "Boss 傳送中央 → 視線傷害。", "tips": ["跑到她身後"] },
-                    { "name": "Razor Plumes (P2)", "type": "other", "description": "25% 召 Razor Plumes 對隨機玩家。", "tips": [{ "text": "DPS 速殺", "role": "dps" }] }
-                ]}
-            ]
-        }
-    ]
+    "id":  "howling_eye",
+    "name":  "咆嘯之眼 (Garuda 討伐)",
+    "nameEn":  "The Howling Eye",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  46,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Garuda 迦樓羅：場上石柱 (Stone Pillar) 是核心！要保護不被打壞 (Friction/Wicked Wheel 會打到)。Aerial Blast 終局傷害取決於柱子剩多少。",
+                     "2）Mistral Song 詠唱時 → 全員躲石柱後破視線。",
+                     "3）Razor Plume adds 出現要全隊集火 (它會打石柱)。",
+                     "4）P2 (50%) Eye of the Storm：場邊大龍捲 → 全員擠中央。"
+                 ],
+    "notes":  "ARR 2.0 MSQ trial Lv 46。Garuda (迦樓羅) Normal。資料來源：CGW (The Howling Eye)。",
+    "bosses":  [
+                   {
+                       "name":  "Garuda 迦樓羅",
+                       "nameEn":  "Garuda",
+                       "mnemonic":  [
+                                        "保護石柱",
+                                        "Mistral Song 躲石柱後",
+                                        "Razor Plume adds 速殺",
+                                        "P2 中央站防 Eye of the Storm"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 100%-50%",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Downburst 下擊風",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 前方錐 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "非 tank 不站前",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Friction 摩擦 / Wicked Wheel 邪輪",
+                                                                "type":  "aoe",
+                                                                "description":  "Friction 對隨機玩家 + 周圍中等 AoE，Wicked Wheel Boss 周圍 AoE。**兩者都會打壞石柱**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 把 boss 拉到遠離石柱的邊緣",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "全員散開避免 Friction 範圍包含柱"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Slipstream 順風",
+                                                                "type":  "aoe",
+                                                                "description":  "前方錐形大傷 + 暈。無 telegraph 但可閃。",
+                                                                "tips":  [
+                                                                             "看 boss 朝向走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mistral Song 西北風之歌",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 消失 → 場一側出現 → 視線範圍內高傷。",
+                                                                "tips":  [
+                                                                             "全員躲石柱後破視線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Razor Plume adds",
+                                                                "type":  "other",
+                                                                "description":  "Mistral Song 後召喚，會打石柱。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 立刻全力 AoE adds",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aerial Blast 終末嵐",
+                                                                "type":  "raidwide",
+                                                                "description":  "50% 詠唱必中全屏，**石柱越多受傷越少**。可用 tank LB 減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "石柱保護到此刻是關鍵",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 50%-0%",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Eye of the Storm 風暴之眼",
+                                                                "type":  "other",
+                                                                "description":  "場邊環形龍捲縮小有效場地到中央。被外圍掃到極高傷。",
+                                                                "tips":  [
+                                                                             "全員擠中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mistral Shriek 西北風尖嘯",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 傳送到一側 → 全屏 AoE。**這次跑到她身後**安全。",
+                                                                "tips":  [
+                                                                             "看 boss 傳送方向跑反方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mistral Song (P2)",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 傳送中央 → 視線傷害。",
+                                                                "tips":  [
+                                                                             "跑到她身後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "火羽 Razor Plumes (P2)",
+                                                                "type":  "other",
+                                                                "description":  "25% 召 Razor Plumes 對隨機玩家。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 速殺",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
