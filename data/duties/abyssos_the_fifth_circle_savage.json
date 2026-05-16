@@ -1,163 +1,43 @@
 {
-    "id":  "abyssos_the_fifth_circle_savage",
-    "name":  "萬魔殿 煉淨之獄零式1",
-    "nameEn":  "Abyssos: The Fifth Circle (Savage)",
-    "expansion":  "6.x 曉月之終途 (Endwalker)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  90,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）P5S Proto-Carbuncle = Ruby Glow 紅光召牆 + Topaz Stones 黃晶坑。",
-                     "2）Venomous Mass → Toxic Crunch = 雙 MT 連續 buster (Vuln Up 換手)。",
-                     "3）Caustic Pools 4 灘 = 看數字進對應人數踩，否則 Venom 噴 + 出 Lively Bait。",
-                     "4）Topaz Clusters = 記四角晶體下落順序，照順序往安全角閃。",
-                     "5）Venom Squall = 散開 → 誘地圈 → 集合；Venom Surge = 反順序。",
-                     "6）Claw to Tail / Tail to Claw = 看招式順序前後切位 (Raging Claw 7 連前 cleave / Tail 後 cleave)。",
-                     "7）Starving Stampede 八標 = 紅爪標移到的點才會爆，記順序躲；未產 Lively Bait = Acidic Slaver 滅團。",
-                     "8）狂暴 Sonic Shatter = 連續大全屏。"
-                 ],
-    "notes":  "EW 6.2 P5 Savage (Lv 90, ilvl 610)。Proto-Carbuncle 雙形 (毒+晶)。場邊火牆觸殺。要事前定散開點 / partner / light party 方位。",
-    "bosses":  [
-                   {
-                       "name":  "原型卡邦克魯",
-                       "nameEn":  "Proto-Carbuncle",
-                       "mnemonic":  [
-                                        "Topaz Stones / Topaz Clusters = 黃晶順序記憶。",
-                                        "Venom Squall / Surge = 散誘集 三段；Surge 是反序。",
-                                        "Caustic Pools = 1/2/3 數字決定進幾人。",
-                                        "Starving Stampede = 看紅爪標路線，未產 Bait = 滅團。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 - Topaz / Caustic / Venom (前半)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Ruby Glow 紅光",
-                                                                "type":  "raidwide",
-                                                                "description":  "高傷全屏 + 場上四面召出反射牆，後續 Topaz Stones / Searing Ray 會打到牆反彈，需注意安全區。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + 連補",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "看牆位置調整站位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Topaz Stones 黃晶石",
-                                                                "type":  "other",
-                                                                "description":  "場上掉一批黃晶 (爆 AoE) 或毒晶 (毒攤上 Toxicosis 持續傷)，配合 Ruby Glow 後填滿大面積。",
-                                                                "tips":  [
-                                                                             "黃晶站外側、毒晶絕對不踩"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Venomous Mass → Toxic Crunch 毒體",
-                                                                "type":  "tankbuster",
-                                                                "description":  "AoE buster 對 MT 開始，掛 Poison + Physical Vuln Up，之後 Toxic Crunch 高傷 follow up，需 MT/OT 換手。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 吃第一發後丟 OT，OT 接 Toxic Crunch",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "雙 buster 都要單體減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Caustic Pools 毒灘",
-                                                                "type":  "spread",
-                                                                "description":  "四角各一灘，灘上顯示數字代表需踩進的人數 (1/2/3)；少於要求 = Venom 大爆 + 召出 Lively Bait 小怪，多於則無事。",
-                                                                "tips":  [
-                                                                             "依數字派對應人數進灘",
-                                                                             {
-                                                                                 "text":  "需產 Lively Bait 否則狂暴 Acidic Slaver 滅團",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Double Rush 雙衝鋒",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 衝到一角 + 180 度前 cleave，再衝對角；對角方向擊退 + 高傷全屏，無敵擊退無法擋。",
-                                                                "tips":  [
-                                                                             "站對角線避前 cleave + 開擊退抗性"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 - Topaz Clusters / Stampede / Enrage",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Topaz Clusters 黃晶簇",
-                                                                "type":  "other",
-                                                                "description":  "四個區域各掉一組黃晶，按掉落順序依序爆，玩家需記順序往對應安全角閃。",
-                                                                "tips":  [
-                                                                             "先記第一爆位 → 依序逆向移動",
-                                                                             "標記人喊順序"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Venom Squall / Venom Surge 毒颮 / 毒湧",
-                                                                "type":  "stack",
-                                                                "description":  "Squall = Venom Rain 散開 → Venom Drops 誘地圈 → Venom Pool 集合；Surge = 反向 (集合 → 誘 → 散)，後段可把 Pool 倒在黃晶上轉成毒晶。",
-                                                                "tips":  [
-                                                                             "Squall 順序：散誘集；Surge：集誘散",
-                                                                             {
-                                                                                 "text":  "Pool 是雙補目標需吃減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Claw to Tail / Tail to Claw 爪",
-                                                                "type":  "other",
-                                                                "description":  "前後 cleave 組合：Raging Claw = 連 7 次前 180° cleave、Raging Tail = 後 180°；依招式順序決定先閃前或先閃後。",
-                                                                "tips":  [
-                                                                             "Claw to Tail 先躲後再到前；Tail to Claw 反之"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Starving Stampede 飢餓踐踏",
-                                                                "type":  "other",
-                                                                "description":  "場上八藍標 + 一紅爪標依序移動，紅爪到的點即下次爆位；被擊中會留 stun 等死，最後 Devour 強制收掉。",
-                                                                "tips":  [
-                                                                             "看紅爪路線提前 1-2 點移動",
-                                                                             "中標 = 直接死，補不回"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Searing Ray 灼光線 + Acidic Slaver",
-                                                                "type":  "raidwide",
-                                                                "description":  "Searing Ray 朝前打整面，反射牆會反彈；未產 Lively Bait 時 Acidic Slaver 直接滅團。",
-                                                                "tips":  [
-                                                                             "躲到反射不到的角落",
-                                                                             {
-                                                                                 "text":  "Caustic Pools 段未產 Bait = 滅",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Sonic Shatter 音爆 (Enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "軟狂暴，連續高傷全屏 AoE 把場滅掉。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段 DPS check，bait 後催狂暴",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "abyssos_the_fifth_circle_savage",
+  "name": "萬魔殿 煉淨之獄零式1",
+  "nameEn": "Abyssos: The Fifth Circle (Savage)",
+  "expansion": "6.x 曉月之終焉 (Endwalker)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": 645,
+  "jobLevelSync": 90,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）灼熱射線 → 4 角跳躍，預先記順序",
+    "2）紅寶石/黃寶石光波 → 障壁外 + 黃寶石結晶連動",
+    "3）酸性唾液 → 全屏淘汰過場",
+    "4）窮兇極饿（零式版）→ 5 藍箭 + 1 紅尖牙 + 路徑記憶",
+    "5）毒液風暴 + 毒液飛濺 → 連續分攤",
+    "6）終局 enrage 強制秒殺"
+  ],
+  "notes": "EW 6.2 萬魔殿 煉淨之獄零式1（P5S）High-End raid。Boss 原型寶石獸（Proto Carbuncle）零式版加強。資料來源：灰機 零式万魔殿 炼净之狱1/B（命名與技能 S→T）+ CGW P5S walkthrough。",
+  "bosses": [
+    {
+      "name": "原型寶石獸（零式）",
+      "nameEn": "Proto Carbuncle (Savage)",
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {"name": "灼熱射線 Searing Ray", "type": "cone", "description": "boss 跳場地 4 角，前方大範圍 AoE。記跳躍順序預判。", "tips": [{"text": "記跳順序", "role": "tank"}]},
+            {"name": "紅寶石之光 + 反射", "type": "mechanic", "description": "光之障壁形成，反射 AoE 範圍內全屏。需站障壁外。", "tips": [{"text": "站障壁外", "role": "dps"}]},
+            {"name": "黃寶石結晶 連動", "type": "aoe", "description": "場內生黃寶石結晶圓 AoE，與紅寶石連動。", "tips": [{"text": "看預兆閃", "role": "dps"}]},
+            {"name": "酸性唾液 → 過場", "type": "raidwide", "description": "全屏 AoE 擊倒所有玩家進入過場。", "tips": [{"text": "團補", "role": "healer"}]},
+            {"name": "毒液風暴 + 毒液飛濺", "type": "mechanic", "description": "3 圈 + 毒液雨 + 毒液飛濺連續 → 閃圈 → 散 → 集合分攤。", "tips": [{"text": "閃 → 散 → 集合", "role": "tank"}]},
+            {"name": "窮兇極饿（零式）", "type": "mechanic", "description": "5 藍箭頭 + 1 紅尖牙路線。boss 變不可選中按尖牙路徑跳大圓 AoE + 擊倒。5 跳後吞被擊倒玩家。零式版路徑更難記。", "tips": [{"text": "看尖牙路徑提前移動", "role": "dps"}]},
+            {"name": "重咬 + 毒液重咬", "type": "tankbuster", "description": "MT 單體高傷 buster + 中毒。雙 T swap + 大減傷 + Esuna。", "tips": [{"text": "雙 T swap + 大減傷", "role": "tank"}]},
+            {"name": "DPS Enrage", "type": "raidwide", "description": "終局狂暴技能，必須在此前擊敗 boss。", "tips": [{"text": "全程輸出", "role": "dps"}]}
+          ]
+        }
+      ],
+      "mnemonic": ["灼熱射線 → 記跳序", "紅寶石 → 障壁外", "毒液風暴 → 閃 → 散 → 分", "窮兇極饿 → 看尖牙路徑", "重咬 → 雙 T swap"]
+    }
+  ]
 }
