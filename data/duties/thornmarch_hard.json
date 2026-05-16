@@ -1,60 +1,158 @@
 {
-    "id":  "thornmarch_hard",
-    "name":  "荊棘進軍 (殲滅戰)",
-    "nameEn":  "Thornmarch (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Good King Moggle Mog XII：First Decree",
-                     "2）Second Decree / Third Decree",
-                     "3）Third Decree"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "The King first summons Pukna Pako and Kupqu Kogi, and the former casts Pom Bog, creating a poison AoE in the middle of the arena. Meanwhile, the King ...",
-                                                                "name":  "First Decree",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "The King next summons Kupdi Koop, Puksi Piko, and Kupta Kapa. Aside from Puksi Piko, the King and the other two Mooglesguard begin casting massive AoE...",
-                                                                "name":  "Second Decree 第二判決",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Lastly, the King summons Kupli Kipp and Pukla Puki. After Pukla Puki casts Pom Meteor again, the King casts Mog Comet, summoning circle AoEs that bein...",
-                                                                "name":  "Third Decree 第三判決",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "莫古力賢王",
-                       "nameEn":  "Good King Moggle Mog XII",
-                       "mnemonic":  [
-                                        "First Decree",
-                                        "Second Decree",
-                                        "Third Decree"
-                                    ]
-                   }
-               ]
+    "id": "thornmarch_hard",
+    "name": "荊棘進軍 (殲滅戰) - 莫古力賢王",
+    "nameEn": "Thornmarch (Hard) - Good King Moggle Mog XII",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）P1：賢王與 7 家臣分別行動；優先擊殺愈（絨絨治療回血最高）。",
+        "2）綿綿之音 莫古狂夜曲：120° 大扇形 → 中招變狂歡 (12 秒無法動，掉體力)，必躲。",
+        "3）柔柔之力 絨絨隕石：4 座塔同時踩，漏踩 1 個 = 全屏 AoE。",
+        "4）P2：賢王號令 3 連：弓+障 / 壁+斧+音 / 力+愈，每組固定機制。",
+        "5）莫古崩石（集合）優先於莫古死亡雨（分散）→ 先集合後分散。",
+        "6）莫古彗星（黃圈三連）優先於絨絨隕石（踩塔）→ 先躲黃圈再踩塔。",
+        "7）莫古飛天亂三段重合：到後讀條沒空地就等先讀條判定後三穿。",
+        "8）千庫啵衝鋒 = T 死刑必開減傷；補注意叠堆受傷加重不要爆血。"
+    ],
+    "notes": "ARR 2.x MSQ Hard trial - 莫古力賢王殲滅戰 (Lv 50)。Good King Moggle Mog XII 殲滅戰：7 莫古家臣輪換機制 + 三輪賢王號令。",
+    "bosses": [
+        {
+            "name": "莫古力賢王",
+            "nameEn": "Good King Moggle Mog XII",
+            "mnemonic": [
+                "7 家臣輪替：壁 / 斧 / 弓 / 愈 / 音 / 力 / 障",
+                "愈優先 = 醫療補血威脅",
+                "三輪賢王號令 = 機制疊加",
+                "崩石 (集合) > 死亡雨 (分散)",
+                "彗星 > 隕石塔"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - 七家臣機制介紹",
+                    "mechanics": [
+                        {
+                            "name": "Mogshield 迴轉莫古盾 (壁)",
+                            "type": "aoe",
+                            "description": "絨絨之壁 庫普迪·庫普 自身為圓心小範圍 AoE，命中疊一層受傷加重 (Vuln Up)。",
+                            "tips": [
+                                "離壁約 5m 外站位",
+                                { "text": "受傷加重要堆 T 不要踩", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Kupo Slash 百庫啵橫掃 (斧)",
+                            "type": "cone",
+                            "description": "毛毛之斧 庫普塔·咔帕 面前小範圍扇形 AoE，命中疊受傷加重。",
+                            "tips": [
+                                "近戰打側後不要站正面",
+                                { "text": "T 抓住朝場邊", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Mog Death Rain 莫古死亡雨 (弓)",
+                            "type": "spread",
+                            "description": "軟軟之弓 庫普括·叩吉 全體點名 AoE → 全員分散。",
+                            "tips": [
+                                "全員分散 5m 以上",
+                                { "text": "補散開後立刻補回", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Mog Heal 絨絨治療 (愈) ★優先擊殺",
+                            "type": "add",
+                            "description": "茸茸之愈 庫普洛·奇普 為受傷家臣回血 + 釋放絨絨神聖全屏 AoE。是 7 家臣裡最優先擊殺目標。",
+                            "tips": [
+                                { "text": "DPS 集中切愈優先秒殺", "role": "dps" },
+                                "讀條時 Interject / Silence 打斷"
+                            ]
+                        },
+                        {
+                            "name": "Mog Madness 莫古狂夜曲 (音)",
+                            "type": "cone",
+                            "description": "綿綿之音 普庫嘻·皮叩 面前 120° 大範圍扇形 AoE，命中附加 12 秒「狂歡」狀態：原地跳莫古舞，無法移動與技能，體力逐漸減少。",
+                            "tips": [
+                                "看到讀條立即跑出 120° 範圍",
+                                { "text": "中招者依靠補保命，補療最高", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Mog Meteor 絨絨隕石 (力)",
+                            "type": "mechanic",
+                            "description": "柔柔之力 普庫啦·普奇 召喚 4 座需要踩的塔；漏踩 1 個 = 1 次全屏 AoE 並疊受傷加重。",
+                            "tips": [
+                                "4 人分 4 塔 = T+T+補+補 各踩一塔",
+                                { "text": "DPS 繼續輸出本體", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Moggle Spike 莫古刺 (障 = T 死刑)",
+                            "type": "tankbuster",
+                            "description": "蓬蓬之障 普庫吶·帕叩 對 T 釋放死刑級單體 buster。",
+                            "tips": [
+                                { "text": "MT 必開大減傷", "role": "tank" },
+                                { "text": "ST swap 提備", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - 賢王號令循環",
+                    "mechanics": [
+                        {
+                            "name": "Death by Moogle 死亡莫古警告",
+                            "type": "raidwide",
+                            "description": "賢王出場讀條全屏 AoE，標誌 P2 開始。",
+                            "tips": [
+                                { "text": "全員集合補大團補 + 全減傷", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "賢王號令 #1 (弓+障)",
+                            "type": "mechanic",
+                            "description": "召喚弓 + 障：弓放分散莫古死亡雨；障放絨絨沼澤毒圈（踩進獲得「猛毒」debuff，離開後 15 秒持續）；接著放莫古崩石 (集合分攤) + 絨絨神聖 (全屏)。",
+                            "tips": [
+                                "崩石 (集合) 優先於死亡雨 (分散) → 先集合後分散",
+                                { "text": "T 拉障到角落避免毒圈擴散", "role": "tank" },
+                                { "text": "補補沼澤中毒者", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "賢王號令 #2 (壁+斧+音)",
+                            "type": "mechanic",
+                            "description": "召喚壁 + 斧 + 音：三家臣依次讀條「莫古飛天亂」大範圍 AoE，命中疊受傷加重。音放莫古狂夜曲 (120° 扇形)。隨後賢王放絨絨雙重隕石 (雙 T 分攤) + 絨絨神聖。",
+                            "tips": [
+                                "到後讀條沒重合 → 等先讀條判定後三穿走",
+                                { "text": "雙 T 出人群開減傷分攤", "role": "tank" },
+                                { "text": "避開狂夜曲扇形", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "賢王號令 #3 (力+愈)",
+                            "type": "mechanic",
+                            "description": "召喚力 + 愈：力放絨絨隕石 (踩塔)；愈放絨絨壘石 (環形 + 圓形 AoE 隨機順序)。賢王放莫古彗星 (三連黃圈) + 莫古崩石 (集合) + 森羅賢王 (前方矩形 AoE) + 絨絨神聖 + 千庫啵衝鋒 (T 死刑)。",
+                            "tips": [
+                                "彗星 (黃圈) 優先於隕石塔 → 先躲黃圈再踩塔",
+                                "崩石 (集合) 優先於壘石 → 先集合後躲壘石",
+                                { "text": "MT 開大減傷 + 補大盾接千庫啵", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Repeat 號令循環",
+                            "type": "other",
+                            "description": "三輪號令後 boss 從第一輪復讀；持續到擊殺。",
+                            "tips": [
+                                "全員記住 3 套機制順序",
+                                "DPS 推輸出讓循環次數縮短"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

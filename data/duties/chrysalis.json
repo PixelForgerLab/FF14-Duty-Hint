@@ -1,34 +1,105 @@
 {
     "id": "chrysalis",
-    "name": "蛹",
-    "nameEn": "The Chrysalis",
+    "name": "蛹 - 那布里亞勒斯",
+    "nameEn": "The Chrysalis - Nabriales",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 50,
     "highEnd": false,
-    "quality": "good",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Nabriales 那布里亞勒斯 = 阿斯托遜 (Ascian) boss。",
-        "2）Heavenly Wings 翅膀 cone + Holy 全屏。",
-        "3）Forbidden Magic 召分身 + line AoE 多方向。",
-        "4）Dark Sphere 多 AoE 圈散 + 凝視。",
-        "5）末段 Ultima Magic 強壓 + DPS check。"
+        "1）Nabriales 那布里亞勒斯 (Ascian 阿斯特蘇) MSQ 2.55 終戰 → 救 Minfilia 蜜涅菲莉雅。",
+        "2）Heavenly Strike 神聖打擊：MT 直線冰柱 buster → 朝場邊。",
+        "3）Holy 神聖：全屏 + 點名分散 AoE → 各自離隊 5m。",
+        "4）Forbidden Magic 禁忌魔法：召喚分身 + 三方向直線 AoE → 看本體位置走縫。",
+        "5）Dark Spheres 黑暗球：場上多個圓 AoE 散落 → 走縫。",
+        "6）Death Beckons 凝視：boss 凝視點名玩家 → 立即背對 boss。",
+        "7）Spheroid 球 adds：場上會生成黑暗球體會放凝視 + AoE → 速殺。",
+        "8）Aetheric Boom 末段以太爆：DPS check + 大全屏 → 推輸出。"
     ],
-    "notes": "ARR 2.55 MSQ trial (Lv 50)。Nabriales 那布里亞勒斯 (Ascian) 殲滅戰。",
+    "notes": "ARR 2.55 MSQ trial - 蛹 (Lv 50)。Nabriales 那布里亞勒斯 (Ascian 阿斯特蘇族) 殲滅戰；引導進入 3.0 蒼穹的禁城。",
     "bosses": [
         {
             "name": "那布里亞勒斯",
             "nameEn": "Nabriales",
-            "phases": [{ "name": "Nabriales", "mechanics": [
-                { "name": "Heavenly Wings 翅膀", "type": "aoe", "description": "Boss 翅膀 cone AoE。", "tips": ["看朝向 → 站側"] },
-                { "name": "Holy 全屏", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
-                { "name": "Forbidden Magic 禁忌魔法", "type": "other", "description": "召分身 + line AoE 多方向。", "tips": ["看本體 + 走縫"] },
-                { "name": "Dark Sphere 暗球", "type": "spread", "description": "場上多 AoE 圈散落。", "tips": ["散避圈"] },
-                { "name": "Demonic Gaze 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
-                { "name": "Ultima Magic 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
-            ]}]
+            "mnemonic": [
+                "Heavenly Strike → MT 朝場邊",
+                "Holy → 散標 5m",
+                "Forbidden Magic → 看分身走縫",
+                "Death Beckons → 立刻背對 boss",
+                "球 adds → 速殺打斷凝視"
+            ],
+            "phases": [
+                {
+                    "name": "Nabriales 主戰",
+                    "mechanics": [
+                        {
+                            "name": "Heavenly Strike 神聖打擊",
+                            "type": "tankbuster",
+                            "description": "對 MT 釋放直線冰柱 buster；命中後可能凍結短時間。",
+                            "tips": [
+                                { "text": "MT 朝場邊面對 boss 開減傷", "role": "tank" },
+                                { "text": "ST 在 MT 被凍結時 provoke 接替", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Holy 神聖",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 對全員附加點名小範圍分散 AoE，需各自離隊散開。",
+                            "tips": [
+                                "全員分散 5m 以上",
+                                { "text": "補大團補 + 補散開後補療", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Forbidden Magic 禁忌魔法",
+                            "type": "aoe",
+                            "description": "Boss 召喚分身 + 多方向直線 AoE；本體與分身同時施放，需看清位置避免被多重直線命中。",
+                            "tips": [
+                                "看本體與分身的朝向找縫站",
+                                { "text": "T 把本體拉到場邊讓分身排列", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Dark Sphere 黑暗球",
+                            "type": "aoe",
+                            "description": "場上多個圓形 AoE 散落，走縫避開。",
+                            "tips": [
+                                "看圈分布找空隙"
+                            ]
+                        },
+                        {
+                            "name": "Death Beckons 凝視",
+                            "type": "gaze",
+                            "description": "Boss 凝視點名玩家，若面對 boss → 受傷 + 石化 debuff。",
+                            "tips": [
+                                "看到讀條立即按相機背對 boss",
+                                "石化期間無法行動 → 補 Esuna 解"
+                            ]
+                        },
+                        {
+                            "name": "Spheroid 球 adds",
+                            "type": "add",
+                            "description": "場上會生成黑暗球體 adds，會放凝視 + AoE，必須速殺。",
+                            "tips": [
+                                { "text": "DPS 切目標秒殺球", "role": "dps" },
+                                { "text": "T 拉球到 MT 附近", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Aetheric Boom 末段以太爆 / Ultima Magic",
+                            "type": "raidwide",
+                            "description": "末段 boss HP 進入低血時釋放高傷害全屏，可能多次釋放 = 變相 DPS check。",
+                            "tips": [
+                                { "text": "DPS 推輸出快速擊殺", "role": "dps" },
+                                { "text": "全員減傷 + 補極限治療", "role": "healer" }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

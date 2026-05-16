@@ -1,60 +1,163 @@
 {
-    "id":  "bowl_of_embers_extreme",
-    "name":  "火光之碗 (殲殛戰)",
-    "nameEn":  "The Bowl of Embers (Extreme)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Ifrit：Incinerate",
-                     "2）Hellfire / Infernal Nails",
-                     "3）Infernal Nails"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  ", for example, will apply a stackable debuff named File:Suppuration icon2.png Suppuration to those it hits, reducing maximum HP of the target for its ...",
-                                                                "name":  "Incinerate 焚燒",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "is used at three points during the battle, excluding the fourth and final Hellfire which is used to wipe the raid. With each one, a Radiant Plume will...",
-                                                                "name":  "Hellfire 地獄火",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "will need to be dealt with after Hellfire and are far more difficult to destroy. Unlike previous difficulties, destroying a nail will cause an Inferna...",
-                                                                "name":  "Infernal Nails 地獄釘",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "伊弗利特",
-                       "nameEn":  "Ifrit",
-                       "mnemonic":  [
-                                        "Incinerate",
-                                        "Hellfire",
-                                        "Infernal Nails"
-                                    ]
-                   }
-               ]
+    "id": "bowl_of_embers_extreme",
+    "name": "火光之碗 (殲殛戰) - 伊弗利特",
+    "nameEn": "The Bowl of Embers (Extreme) - Ifrit",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）每輪固定：Eruption 點名 + Incinerate 扇形 + Vulcan Burst 圓 + Crimson Cyclone 線。",
+        "2）Searing Wind 補本人不會吹走、其他人離 15m 外站。",
+        "3）3 輪 Nail：4 → 8 → 13（中間 1 根血厚）；殘留越多 Hellfire 越大。",
+        "4）Infernal Chain 連線 2T 與 DPS：保持極近距離降層數。",
+        "5）3 次 Hellfire 全清 nail 為基本標準，否則 enrage 強制團滅。"
+    ],
+    "notes": "ARR 2.0 蠻神 Extreme - 伊弗利特殲殛戰 (Lv 50, ilvl 90)。Ifrit Extreme 為早期 ARR EX 標竿；引入 Searing Wind 灼熱補 + Infernal Chain 連線 + 13 根 nail。",
+    "bosses": [
+        {
+            "name": "伊弗利特",
+            "nameEn": "Ifrit",
+            "mnemonic": [
+                "灼熱補 → 補本人原地不動其他人遠離",
+                "Chain 連線 → 兩人黏死",
+                "3 輪 nail (4/8/13) 必清",
+                "中央大 nail 血厚 → 集火"
+            ],
+            "phases": [
+                {
+                    "name": "Phase 1 (100–66%)",
+                    "mechanics": [
+                        {
+                            "name": "Vulcan Burst 火神爆裂",
+                            "type": "knockback",
+                            "description": "Boss 周身不可見範圍圓形 AoE，命中後擊退；常與其他技能銜接。",
+                            "tips": [
+                                "貼 boss 中心吃擊退最短",
+                                { "text": "Arm's Length / Surecast 可免位移", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Searing Wind 灼熱咆哮",
+                            "type": "spread",
+                            "description": "隨機 1 名治療附 20 秒灼熱 debuff，每 ~3 秒判定半徑 15m AoE（Hot Foot 熱風）；命中非灼熱者會被大範圍擊退。",
+                            "tips": [
+                                { "text": "中灼熱者站場邊原地不動", "role": "healer" },
+                                "其他人離灼熱補 15m 以上",
+                                { "text": "另一補要負責補灼熱本人", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Incinerate 烈焰焚燒",
+                            "type": "cone",
+                            "description": "對 1 仇方向扇形 AoE，疊一層灼傷 debuff；第 1/3/5 次召喚分別釋放 1/2/3 段。",
+                            "tips": [
+                                { "text": "MT 朝場邊面對 boss", "role": "tank" },
+                                { "text": "灼傷可疊層，超過 3 層 T 需開大減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Eruption 地火噴發",
+                            "type": "aoe",
+                            "description": "點名除 1 仇以外的隨機玩家，腳下圓形 AoE 預兆後爆炸。",
+                            "tips": [
+                                "被點立刻往場邊跑",
+                                "Searing Wind 補不要被點 → 機制衝突難避"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2 - 第 1 次 Nail (4 根)",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nails 火獄之楔 (4)",
+                            "type": "add",
+                            "description": "Boss 召喚 4 根 nail；必須在 Hellfire 之前全部打掉，殘留越多後續 Hellfire 越大。",
+                            "tips": [
+                                { "text": "AoE 全分掉 4 根，補強化", "role": "dps" },
+                                { "text": "Vuln Up 後 nail 血量隨著被打變高，速度要快", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Hellfire Nail 火獄之炎",
+                            "type": "raidwide",
+                            "description": "每根 nail 被擊破後釋放全屏 AoE，並給全員 1 層 3 秒受傷加重 buff；連續擊破時間要錯開。",
+                            "tips": [
+                                { "text": "打掉一根 → 等受傷 buff 結束再打下一根", "role": "dps" },
+                                { "text": "補大盾 + 補連線", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎",
+                            "type": "raidwide",
+                            "description": "Boss 上天後落下釋放全屏 AoE；場上剩 nail 越多傷害越高。每輪 nail 後固定使用。",
+                            "tips": [
+                                { "text": "全員集合 + 補大團補 + 全員減傷", "role": "healer" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3 - 第 2 次 Nail (8 根)",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nails 火獄之楔 (8)",
+                            "type": "add",
+                            "description": "第 2 次召喚 8 根 nail，分散於場上 8 個方位；繼續 AoE 殲滅模式。",
+                            "tips": [
+                                { "text": "AoE 站位優化，FF + 連環刃同時掃 4 根", "role": "dps" },
+                                { "text": "T 拉中央集中 nail", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Infernal Chain 火獄之鎖",
+                            "type": "mechanic",
+                            "description": "連線當前 2 仇與隨機進攻職玩家，附「火獄之鎖」debuff；距離越遠減傷越多、持續傷害越高；若一方倒下會重連並重新計時。",
+                            "tips": [
+                                { "text": "兩人黏在一起把層數降到 1", "role": "dps" },
+                                { "text": "ST 跟 DPS 同步移動", "role": "tank" },
+                                "Eruption 時也要保持 0 距"
+                            ]
+                        },
+                        {
+                            "name": "Radiant Plume 光輝炎柱",
+                            "type": "aoe",
+                            "description": "全場多個圓形 AoE 預警後爆發；本階段與 Chain / Searing Wind 同時生效，走位需注意三向。",
+                            "tips": [
+                                "提前看好安全縫不要黏住 nail",
+                                "Chain 兩人選同個縫"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 4 - 第 3 次 Nail (13 根)",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nails 火獄之楔 (13)",
+                            "type": "add",
+                            "description": "第 3 次召喚 13 根 nail，其中正中央 1 根血量遠高於其他 12 根；若 3 次後仍未擊破會強制團滅。",
+                            "tips": [
+                                { "text": "DPS 全力打中央大 nail", "role": "dps" },
+                                { "text": "T 拉外圍 12 根 AoE 同步殲滅", "role": "tank" },
+                                { "text": "補神祕陣 / 圓盾 / Embrace 全推 DPS", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎 (enrage)",
+                            "type": "raidwide",
+                            "description": "若中央大 nail 未在限時內擊破，boss 連續釋放機制後使用 Hellfire 強制團滅。",
+                            "tips": [
+                                "中央 nail = DPS check，輸出不夠就重新組隊"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

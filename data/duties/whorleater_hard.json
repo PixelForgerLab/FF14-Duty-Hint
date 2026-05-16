@@ -1,74 +1,146 @@
 {
-    "id":  "whorleater_hard",
-    "name":  "海濤戰艦 (殲滅戰)",
-    "nameEn":  "The Whorleater (Hard)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Leviathan：Dread Tide",
-                     "2）Aqua Breath / Water Spout",
-                     "3）Tidal Roar"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) raidwide (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "A Water elemental tankbuster fired at the main enmity target.",
-                                                                "name":  "Dread Tide 恐潮",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "A point-blank AoE attack that deals medium damage. This is cast periodically.",
-                                                                "name":  "Aqua Breath 水之氣息",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Cast on random players, deals medium damage.",
-                                                                "name":  "Water Spout 水柱",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Unavoidable party-wide damage.",
-                                                                "name":  "Tidal Roar 浪嘯",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "利維坦",
-                       "nameEn":  "Leviathan",
-                       "mnemonic":  [
-                                        "Dread Tide",
-                                        "Aqua Breath",
-                                        "Water Spout"
-                                    ]
-                   }
-               ]
+    "id": "whorleater_hard",
+    "name": "海濤戰艦 (殲滅戰) - 利維亞桑",
+    "nameEn": "The Whorleater (Hard) - Leviathan",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）戰場是船：南北兩端有元素轉換裝置 + 中間平台；boss 從水下出沒。",
+        "2）P1 短暫：只露上半身，普攻不躲都行；10% 後下水進 P2。",
+        "3）P2 雙端攻擊：頭部反射遠程物理 / 尾巴反射魔法；輸出職要記得切目標。",
+        "4）猛撞：boss 撞船南/北端，全員朝撞擊方向滑行；提前抓站位避免下海。",
+        "5）旋轉下潛：纵向直線衝刺 + 擊退；通常接著猛撞。",
+        "6）50%：4 角生成游渦泡沫吸能 → 必須打掉，否則全屏。",
+        "7）40%：大海嘯 = 全屏極高傷害 → 跑到南端點開關升起防護網。",
+        "8）P3：增加波齒魚人 add，會放快讀條恐懼 → DPS 速殺。"
+    ],
+    "notes": "ARR 2.0 MSQ Hard trial - 利維亞桑殲滅戰 (Lv 50, ilvl 60)。Leviathan Hard 為戰艦地圖 (Whorleater)，特殊機制：船兩端不同部位 + 開關 + 擊退入海死。",
+    "bosses": [
+        {
+            "name": "利維亞桑",
+            "nameEn": "Leviathan",
+            "mnemonic": [
+                "頭反遠物 / 尾反魔法 → 切目標",
+                "猛撞滑向被撞端 → 站對端",
+                "50% 泡沫 4 角速殺",
+                "40% 大海嘯 → 跑南端按開關",
+                "P3 鯊魚 add 快讀條恐懼必殺"
+            ],
+            "phases": [
+                {
+                    "name": "P1 (100–90%)",
+                    "mechanics": [
+                        {
+                            "name": "Auto-attack 普攻",
+                            "type": "other",
+                            "description": "P1 boss 只露上半身於北端，僅釋放普通攻擊；輸出短暫 phase 約 10% HP。",
+                            "tips": [
+                                "全員速打入 P2",
+                                { "text": "T 維持仇恨即可", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 (90–50%)",
+                    "mechanics": [
+                        {
+                            "name": "Body Slam 猛撞",
+                            "type": "knockback",
+                            "description": "Boss 用上半身撞擊平台一端（南或北）；全員會朝被撞擊端滑行約船長 1/2 距離。判斷位置不對可能下海。",
+                            "tips": [
+                                "看 boss 上岸位置 → 站對端",
+                                { "text": "MT 同步移動維持仇恨", "role": "tank" },
+                                "Arm's Length 可免擊退"
+                            ]
+                        },
+                        {
+                            "name": "Spinning Dive 旋轉下潛",
+                            "type": "aoe",
+                            "description": "Boss 從船一端出現縱向掠過平台，直線範圍 AoE 並擊退；通常後接猛撞。",
+                            "tips": [
+                                "走平台側邊避線",
+                                "下潛後馬上預判猛撞方向"
+                            ]
+                        },
+                        {
+                            "name": "Veil of the Sea 水神的面紗",
+                            "type": "mechanic",
+                            "description": "Boss 頭部附加水神的面紗：反射遠程物理攻擊造成的傷害；近戰直接打頭，遠物 / 物理範圍切尾。",
+                            "tips": [
+                                { "text": "弓手 / 機工切目標到尾巴", "role": "dps" },
+                                "近戰 / 法系打頭 OK"
+                            ]
+                        },
+                        {
+                            "name": "Mantle of the Sea 水神的披風",
+                            "type": "mechanic",
+                            "description": "Boss 尾巴附加水神的披風：反射魔法傷害（含暗黑騎士的暗黑鋒）；法系與暗黑切目標到頭。",
+                            "tips": [
+                                { "text": "BLM / SMN / RDM / SCH / WHM / SGE / DRK 暗黑鋒 → 切頭", "role": "dps" },
+                                { "text": "DRK 暫停暗黑鋒避免反傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Spume 游渦泡沫 (50%)",
+                            "type": "add",
+                            "description": "50% 觸發；場上 4 角生成 4 個游渦泡沫，會吸收元素轉換裝置能量。打破時造成全場傷害；不打 → 持續削弱裝置。",
+                            "tips": [
+                                { "text": "4 名 DPS 各打一個泡沫", "role": "dps" },
+                                "同時打破造成全場傷害 → 補大團補"
+                            ]
+                        },
+                        {
+                            "name": "Tidal Wave 大海嘯 (40%)",
+                            "type": "raidwide",
+                            "description": "40% 觸發；boss 下水施放全屏極高傷害；需先到平台南端點開關升起防護網才能擋下。",
+                            "tips": [
+                                { "text": "多人去點開關避免手滑", "role": "dps" },
+                                { "text": "補先補大盾 + 大團補預備", "role": "healer" },
+                                "之後接猛撞 / 旋轉下潛"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 (50–0%)",
+                    "mechanics": [
+                        {
+                            "name": "Wavetooth Sahagin 波齒魚人 (add)",
+                            "type": "add",
+                            "description": "P3 刷出單獨的法系 add，會快讀條釋放恐懼圈 + 全屏恐懼，必須立即打斷或秒殺。",
+                            "tips": [
+                                { "text": "DPS 立即切目標打 add", "role": "dps" },
+                                { "text": "T 拉 add 集中", "role": "tank" },
+                                "Interject / Stun 打斷恐懼讀條"
+                            ]
+                        },
+                        {
+                            "name": "Body Slam / Spinning Dive (循環)",
+                            "type": "raidwide",
+                            "description": "P3 boss 形態與技能同 P2；猛撞、旋轉下潛、面紗/披風繼續輪替。",
+                            "tips": [
+                                "邊處理 add 邊保持輸出",
+                                { "text": "面紗 / 披風切目標習慣保持", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Tidal Wave (循環)",
+                            "type": "raidwide",
+                            "description": "P3 可能再次釋放大海嘯；點開關流程不變。",
+                            "tips": [
+                                "預備人員快速南端點開關",
+                                "全員集合補大團補"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

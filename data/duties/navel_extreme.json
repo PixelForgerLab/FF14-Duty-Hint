@@ -1,108 +1,194 @@
 {
-    "id":  "navel_extreme",
-    "name":  "大地之臍 (極)",
-    "nameEn":  "The Navel (Extreme)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Titan EX = Earthen Fury 全屏 + Landslide line 強化。",
-                     "2）Geocrush 大擊退 + Bomb Boulders +/x 排列爆。",
-                     "3）Tumult 連 5 段 + Mountain Buster MT line。",
-                     "4）Weight of Land + Granite Gaol 監牢 + 末段 Earthen Heart 強壓。"
-                 ],
-    "notes":  "ARR 2.1 Titan EX (Lv 50)。Titan 強化版絕境戰。",
-    "bosses":  [
-                   {
-                       "name":  "泰坦",
-                       "nameEn":  "Titan",
-                       "phases":  [
-                                      {
-                                          "name":  "Titan EX",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Earthen Fury 大地之怒",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 + 大地傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員強減傷 + 連補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Landslide 山崩 line",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss line AoE + 強化擊退。",
-                                                                "tips":  [
-                                                                             "側步 + 抗擊退"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Geocrush 地殼粉碎",
-                                                                "type":  "other",
-                                                                "description":  "中央大擊退 + 邊緣留 puddle。",
-                                                                "tips":  [
-                                                                             "抗擊退 + 避 puddle"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bomb Boulders 炸彈巨石",
-                                                                "type":  "aoe",
-                                                                "description":  "場上 +/x 排列炸彈 → 順序爆。",
-                                                                "tips":  [
-                                                                             "看順序避"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tumult 喧囂 (5 連)",
-                                                                "type":  "raidwide",
-                                                                "description":  "連 5 次 AoE 全屏 → 強補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "5 連連補 + 減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mountain Buster 山崩擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 強 line buster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷或換手",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Weight of Land + Granite Gaol 花崗石牢",
-                                                                "type":  "other",
-                                                                "description":  "Weight 標 tile 爆 + Granite Gaol 把人關入石牢。",
-                                                                "tips":  [
-                                                                             "散 tile + DPS 殺石牢救人"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Earthen Heart 末段",
-                                                                "type":  "raidwide",
-                                                                "description":  "末段大全屏 + DPS check。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段催爆發",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "navel_extreme",
+    "name": "大地之臍 (殲殛戰) - 泰坦",
+    "nameEn": "The Navel (Extreme) - Titan",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）P1：地裂單線擊退 + 大地之重點名圓圈 + 山崩扇形（MT 朝外）。",
+        "2）80%：大地粉碎 = 距離衰減全屏，邊緣站位；場地縮小。",
+        "3）P2：地裂變三向 → 反方向走；花崗石牢點 1 DPS + 1 N → 必須打開避免坟墓秒殺。",
+        "4）55%：再次大地粉碎，場地再縮小。",
+        "5）P3：泰坦的核心 = DPS check；先打核心 → 抵擋大地之怒。",
+        "6）花崗石卫死後留污泥踩到 = 加重；落岩三段（中＋角 / 三列 / 九顆同時）。",
+        "7）地裂升五向，閃位窄；補強治療輸出全衝。",
+        "8）Enrage：大地之怒強制團滅。"
+    ],
+    "notes": "ARR 2.0 蠻神 Extreme - 泰坦殲殛戰 (Lv 50, ilvl 90)。3 階段 + 核心 phase；地裂方向逐階段增加（1→3→5），最考驗站位與閃位。",
+    "bosses": [
+        {
+            "name": "泰坦",
+            "nameEn": "Titan",
+            "mnemonic": [
+                "地裂 1→3→5 向：看燈芯反方向走",
+                "花崗石牢：DPS+N 連線 → 必須兩個一起打開",
+                "核心 phase = DPS check：核心 < 7 秒 = 跳大地之怒",
+                "落岩三段不要踩污泥"
+            ],
+            "phases": [
+                {
+                    "name": "P1 (100–80%)",
+                    "mechanics": [
+                        {
+                            "name": "Landslide 地裂",
+                            "type": "knockback",
+                            "description": "點名 1 名玩家釋放直線 AoE，帶擊退；P1 為單一方向，需看亮燈面快速反方向走。",
+                            "tips": [
+                                "看 boss 雙手亮燈面 → 站對側",
+                                { "text": "MT 站中央等帶其他人後撤", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Weight of the Land 大地之重",
+                            "type": "aoe",
+                            "description": "隨機點名腳下圓形範圍 AoE；中圈會留下污泥效果區。",
+                            "tips": [
+                                "被點往場邊走",
+                                "落點記憶 → 避免下次站到舊污泥"
+                            ]
+                        },
+                        {
+                            "name": "Earthen Fury 大地粉碎",
+                            "type": "raidwide",
+                            "description": "80% 時 boss 上天再落下，距離衰減全屏 AoE；同時場地縮小。",
+                            "tips": [
+                                { "text": "站場邊吃最少傷害", "role": "tank" },
+                                { "text": "補大團補 + 大盾", "role": "healer" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 (80–55%)",
+                    "mechanics": [
+                        {
+                            "name": "Landslide 地裂 (三向)",
+                            "type": "knockback",
+                            "description": "場地縮小後升級為三向地裂，留 1 個安全縫；走錯被擊退即出局。",
+                            "tips": [
+                                "看 boss 站姿 → 站對側留口",
+                                "近戰提前預判位置"
+                            ]
+                        },
+                        {
+                            "name": "Granite Gaol 花崗石牢",
+                            "type": "mechanic",
+                            "description": "點名 1 DPS 與 1 N 黃色連線，兩人身上生成花崗石牢禁錮 (拘束)；兩個牢距離過近會疊受傷減輕，未打掉 → 花崗岩墳墓秒殺。",
+                            "tips": [
+                                { "text": "兩個被禁錮玩家拉到對角分開", "role": "dps" },
+                                { "text": "未禁錮的 DPS 切目標立刻打 gaol", "role": "dps" },
+                                { "text": "補補好被禁錮玩家不要被秒", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Mountain Buster 山崩",
+                            "type": "tankbuster",
+                            "description": "對 1 仇大傷害扇形 AoE，附物理受傷加重 (Vuln Up)。MT 必開減傷與面外。",
+                            "tips": [
+                                { "text": "MT 必開大減傷", "role": "tank" },
+                                { "text": "ST 留意 swap 時機", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Tumult 怒震 / 大怒震",
+                            "type": "raidwide",
+                            "description": "連續發動的全屏 AoE（怒震），偶爾接帶擊退的大怒震；連續傷害壓力大。",
+                            "tips": [
+                                { "text": "補 HoT + 主動補療", "role": "healer" },
+                                "全員儘量保滿血"
+                            ]
+                        },
+                        {
+                            "name": "Earthen Fury 大地粉碎 (P2)",
+                            "type": "raidwide",
+                            "description": "55% 觸發，場地再縮小一次；距離衰減同前。",
+                            "tips": [
+                                { "text": "回場邊吃最少 + 補療", "role": "healer" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 - Titan's Heart (核心 phase)",
+                    "mechanics": [
+                        {
+                            "name": "Titan's Heart 泰坦的核心",
+                            "type": "add",
+                            "description": "泰坦無敵並生成核心；必須在限時內擊破。未破 → 大地之怒強制團滅。",
+                            "tips": [
+                                { "text": "全員爆發切核心", "role": "dps" },
+                                { "text": "補神祕陣 / 圓盾推 DPS", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Earthen Wrath 大地之怒",
+                            "type": "raidwide",
+                            "description": "核心擊破後 boss 釋放高傷害全屏 AoE；未及時擊破則演變為團滅 enrage。",
+                            "tips": [
+                                { "text": "核心倒前補先儲補療", "role": "healer" },
+                                { "text": "全員減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Granite Sentries 花崗石卫",
+                            "type": "add",
+                            "description": "場地左右兩端各生成一隻花崗石卫；死後留污泥區域，踩入獲得加重 (移速減慢) 並受傷。",
+                            "tips": [
+                                { "text": "MT 拉到場邊 + ST 拉另一邊", "role": "tank" },
+                                "看清楚污泥區域避免踩"
+                            ]
+                        },
+                        {
+                            "name": "Bomb Boulders 落岩 (一段)",
+                            "type": "aoe",
+                            "description": "場地中間和 8 角分兩次落下九顆爆破岩石；落地造成塌方傷害並讀條爆炸。",
+                            "tips": [
+                                "站爆破岩石之間的空隙",
+                                "讀條前快速走位避開"
+                            ]
+                        },
+                        {
+                            "name": "Bomb Boulders 落岩 (二段)",
+                            "type": "aoe",
+                            "description": "第二次落岩會沿三列分三次落下九顆；需找到安全的列站位。",
+                            "tips": [
+                                "看清列分布 → 站非爆破列"
+                            ]
+                        },
+                        {
+                            "name": "Bomb Boulders 落岩 (三段)",
+                            "type": "aoe",
+                            "description": "第三次落岩同時落下九顆，空間僅留特定縫；最後一段壓力最大。",
+                            "tips": [
+                                "提前走位，落地前定位",
+                                { "text": "T 帶領大家走縫", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Landslide 地裂 (五向)",
+                            "type": "knockback",
+                            "description": "P3 升級為五向，留出更窄安全縫；常與大地之重 / 山崩 / 落岩同時發動。",
+                            "tips": [
+                                "提前找縫；只看燈面記方向",
+                                "若被擊退到場外可能直接死"
+                            ]
+                        },
+                        {
+                            "name": "Earthen Fury enrage 大地之怒",
+                            "type": "raidwide",
+                            "description": "若超時，boss 釋放強制團滅 AoE；P3 內必須擊殺。",
+                            "tips": [
+                                "P3 全員爆發、補爆推 DPS"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
