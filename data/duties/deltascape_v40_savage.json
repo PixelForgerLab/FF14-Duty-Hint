@@ -1,139 +1,169 @@
 {
-    "id": "deltascape_v40_savage",
-    "name": "歐米茄秘境 三角區零式4",
-    "nameEn": "Deltascape V4.0 (Savage)",
-    "expansion": "4.x 紅蓮之狂潮 (Stormblood)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 70,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）O4S = Exdeath P1-P2 + Neo Exdeath P3-P8 多階段戰。",
-        "2）Dualcast = 下招打兩次；Fire 3 散、Blizzard 3 stack→ 散、Thunder 3 雙坦換手。",
-        "3）White Hole = 滿血才不石化 (50% 以下立死)。",
-        "4）The Decisive Battle = 觸手 + Pillar 後 boss 噴氣，站最後觸手後跟跑。",
-        "5）Holy 補 stack / Flare 三方散；Vacuum Wave 大擊退 (Arm's Length / Surecast / 衝)。",
-        "6）Black Hole = 4 tether T/H，遛到 Holy/Flare 時消。",
-        "7）Spellblade Fire 3 (Pyretic 3 秒不行動) / Blizzard 3 (不動則凍) / Thunder 3 (boss 周 AoE + paralyze)。",
-        "8）Neo Exdeath: Flood of Naught = Terminal Antilight (前最近吃) / White-Black Antilight 同色站 / Inner-Outer Antilight 內外避。",
-        "9）狂暴 ~12:45 Neo Exdeath。"
-    ],
-    "notes": "SB 4.21 Deltascape V4.0 Savage (Lv 70, ilvl 350)。Exdeath + Neo Exdeath 雙 boss = O4S。長戰 + 多階段。",
-    "bosses": [
-        {
-            "name": "艾克斯迪司",
-            "nameEn": "Exdeath",
-            "mnemonic": [
-                "Dualcast 連 2 + Spellblade Fire/Blizzard/Thunder 變身。",
-                "White Hole = 滿血避石化。",
-                "Vacuum Wave 大擊退 (Surecast / Arm's Length)。",
-                "Black Hole T/H tether 遛。"
-            ],
-            "phases": [
-                {
-                    "name": "P1-P2 - Exdeath",
-                    "mechanics": [
-                        {
-                            "name": "Dualcast Fire III / Blizzard III / Thunder III",
-                            "type": "other",
-                            "description": "下招連兩次：Fire 3 = 4 DPS / 2 T+2 H 散 AoE；Blizzard 3 = stack → 散；Thunder 3 = MT 雙段 buster + Lightning Vuln Up (OT Provoke 接第二段)。",
-                            "tips": [
-                                { "text": "Thunder 3 OT Provoke 接 2nd", "role": "tank" },
-                                "Fire 散、Blizzard 集合再散"
-                            ]
-                        },
-                        {
-                            "name": "White Hole 白洞",
-                            "type": "raidwide",
-                            "description": "全員 cast 解算時非滿血 = 石化；50% 以下立死。",
-                            "tips": [{ "text": "補先 AoE 補滿所有人", "role": "healer" }]
-                        },
-                        {
-                            "name": "The Decisive Battle 決戰",
-                            "type": "other",
-                            "description": "中央召柱 + 觸手 → boss 氣息攻擊；站最後觸手位後跟著移動 → 躲柱後。",
-                            "tips": ["跟著最後觸手 → 躲柱後"]
-                        },
-                        {
-                            "name": "Holy + Flare 散標",
-                            "type": "stack",
-                            "description": "Holy = 補 stack 集合分擔；Flare = T+H+DPS 各下 proximity 散。",
-                            "tips": [
-                                { "text": "Holy 全員集合", "role": "healer" },
-                                "Flare 3 人散到三角"
-                            ]
-                        },
-                        {
-                            "name": "Vacuum Wave 真空波",
-                            "type": "other",
-                            "description": "全員大擊退；用 Arm's Length / Surecast / gap closer / Cover 等防擊退，再回中央接 White Hole。",
-                            "tips": ["全員備擊退抗 → 不掉台"]
-                        },
-                        {
-                            "name": "Spellblade Fire/Blizzard/Thunder (進階)",
-                            "type": "other",
-                            "description": "Fire 3 = Pyretic 3 秒不能行動 (停手)；Blizzard 3 = 不動就 Deep Freeze (要持續移動)；Thunder 3 = boss 周圍 AoE + paralyze (跑外)。",
-                            "tips": ["Fire 停手、Blizzard 持續走、Thunder 跑外"]
-                        },
-                        {
-                            "name": "Black Hole + Meteor",
-                            "type": "other",
-                            "description": "場上 Black Hole 4 個 tether T/H 需遛 (Holy/Flare 後消)；Meteor 高傷需減傷。",
-                            "tips": [
-                                { "text": "T/H 各遛一個 Black Hole", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "新艾克斯迪司",
-            "nameEn": "Neo Exdeath",
-            "mnemonic": [
-                "Flood of Naught = Antilight 三變 (Terminal/White-Black/Inner-Outer)。",
-                "Allagan Field debuff = 配 antilight 解。",
-                "8 階段強壓 DPS。"
-            ],
-            "phases": [
-                {
-                    "name": "P3-P8 - Neo Exdeath",
-                    "mechanics": [
-                        {
-                            "name": "Flood of Naught 虛無洪",
-                            "type": "other",
-                            "description": "三變 Antilight：Terminal (前 stack 最近吃) / White-Black (依 debuff 站同色) / Inner-Outer (內外其一致死，看 polyhedron 燈)。",
-                            "tips": [
-                                "看 boss 動畫判斷",
-                                "White/Black: 同色 debuff = 站同色 polyhedron 解"
-                            ]
-                        },
-                        {
-                            "name": "Allagan Field debuff",
-                            "type": "other",
-                            "description": "全員多種 debuff (Beyond Death 等) 需配 Antilight 解；解錯 = 死。",
-                            "tips": ["看 debuff 圖示對應 Antilight"]
-                        },
-                        {
-                            "name": "Neo Exdeath 機制鏈",
-                            "type": "other",
-                            "description": "P3-P8 多 phase 連 Flood of Naught + Decisive Battle + Holy/Flare + Vacuum Wave + Spellblade，無 auto-attack 隨機重置 enmity。",
-                            "tips": [
-                                { "text": "MT 拿穩 enmity (常 Provoke)", "role": "tank" },
-                                "依 phase 機制鏈固定 callout"
-                            ]
-                        },
-                        {
-                            "name": "Enrage ~12:45",
-                            "type": "raidwide",
-                            "description": "Neo Exdeath 12:45 狂暴滅團。",
-                            "tips": [{ "text": "末段催爆發 + 全員強減傷", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "deltascape_v40_savage",
+    "name":  "歐米茄秘境 三角區零式4",
+    "nameEn":  "Deltascape V4.0 (Savage)",
+    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  70,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）O4S = Exdeath P1-P2 + Neo Exdeath P3-P8 多階段戰。",
+                     "2）Dualcast = 下招打兩次；Fire 3 散、Blizzard 3 stack→ 散、Thunder 3 雙坦換手。",
+                     "3）White Hole = 滿血才不石化 (50% 以下立死)。",
+                     "4）The Decisive Battle = 觸手 + Pillar 後 boss 噴氣，站最後觸手後跟跑。",
+                     "5）Holy 補 stack / Flare 三方散；Vacuum Wave 大擊退 (Arm\u0027s Length / Surecast / 衝)。",
+                     "6）Black Hole = 4 tether T/H，遛到 Holy/Flare 時消。",
+                     "7）Spellblade Fire 3 (Pyretic 3 秒不行動) / Blizzard 3 (不動則凍) / Thunder 3 (boss 周 AoE + paralyze)。",
+                     "8）Neo Exdeath: Flood of Naught = Terminal Antilight (前最近吃) / White-Black Antilight 同色站 / Inner-Outer Antilight 內外避。",
+                     "9）狂暴 ~12:45 Neo Exdeath。"
+                 ],
+    "notes":  "SB 4.21 Deltascape V4.0 Savage (Lv 70, ilvl 350)。Exdeath + Neo Exdeath 雙 boss = O4S。長戰 + 多階段。",
+    "bosses":  [
+                   {
+                       "name":  "艾克斯迪司",
+                       "nameEn":  "Exdeath",
+                       "mnemonic":  [
+                                        "Dualcast 連 2 + Spellblade Fire/Blizzard/Thunder 變身。",
+                                        "White Hole = 滿血避石化。",
+                                        "Vacuum Wave 大擊退 (Surecast / Arm\u0027s Length)。",
+                                        "Black Hole T/H tether 遛。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1-P2 - Exdeath",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Dualcast Fire III / Blizzard III / Thunder III",
+                                                                "type":  "other",
+                                                                "description":  "下招連兩次：Fire 3 = 4 DPS / 2 T+2 H 散 AoE；Blizzard 3 = stack → 散；Thunder 3 = MT 雙段 buster + Lightning Vuln Up (OT Provoke 接第二段)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Thunder 3 OT Provoke 接 2nd",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "Fire 散、Blizzard 集合再散"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "White Hole 白洞",
+                                                                "type":  "raidwide",
+                                                                "description":  "全員 cast 解算時非滿血 = 石化；50% 以下立死。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "補先 AoE 補滿所有人",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "The Decisive Battle 決戰",
+                                                                "type":  "other",
+                                                                "description":  "中央召柱 + 觸手 → boss 氣息攻擊；站最後觸手位後跟著移動 → 躲柱後。",
+                                                                "tips":  [
+                                                                             "跟著最後觸手 → 躲柱後"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Holy + Flare 散標",
+                                                                "type":  "stack",
+                                                                "description":  "Holy = 補 stack 集合分擔；Flare = T+H+DPS 各下 proximity 散。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Holy 全員集合",
+                                                                                 "role":  "healer"
+                                                                             },
+                                                                             "Flare 3 人散到三角"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Vacuum Wave 真空波",
+                                                                "type":  "other",
+                                                                "description":  "全員大擊退；用 Arm\u0027s Length / Surecast / gap closer / Cover 等防擊退，再回中央接 White Hole。",
+                                                                "tips":  [
+                                                                             "全員備擊退抗 → 不掉台"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Spellblade Fire/Blizzard/Thunder (進階)",
+                                                                "type":  "other",
+                                                                "description":  "Fire 3 = Pyretic 3 秒不能行動 (停手)；Blizzard 3 = 不動就 Deep Freeze (要持續移動)；Thunder 3 = boss 周圍 AoE + paralyze (跑外)。",
+                                                                "tips":  [
+                                                                             "Fire 停手、Blizzard 持續走、Thunder 跑外"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Black Hole + Meteor",
+                                                                "type":  "other",
+                                                                "description":  "場上 Black Hole 4 個 tether T/H 需遛 (Holy/Flare 後消)；Meteor 高傷需減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T/H 各遛一個 Black Hole",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "新艾克斯迪司",
+                       "nameEn":  "Neo Exdeath",
+                       "mnemonic":  [
+                                        "Flood of Naught = Antilight 三變 (Terminal/White-Black/Inner-Outer)。",
+                                        "Allagan Field debuff = 配 antilight 解。",
+                                        "8 階段強壓 DPS。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P3-P8 - Neo Exdeath",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Flood of Naught 虛無洪",
+                                                                "type":  "other",
+                                                                "description":  "三變 Antilight：Terminal (前 stack 最近吃) / White-Black (依 debuff 站同色) / Inner-Outer (內外其一致死，看 polyhedron 燈)。",
+                                                                "tips":  [
+                                                                             "看 boss 動畫判斷",
+                                                                             "White/Black: 同色 debuff = 站同色 polyhedron 解"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "阿拉葛場域 Allagan Field debuff",
+                                                                "type":  "other",
+                                                                "description":  "全員多種 debuff (Beyond Death 等) 需配 Antilight 解；解錯 = 死。",
+                                                                "tips":  [
+                                                                             "看 debuff 圖示對應 Antilight"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Neo Exdeath 機制鏈",
+                                                                "type":  "other",
+                                                                "description":  "P3-P8 多 phase 連 Flood of Naught + Decisive Battle + Holy/Flare + Vacuum Wave + Spellblade，無 auto-attack 隨機重置 enmity。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 拿穩 enmity (常 Provoke)",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "依 phase 機制鏈固定 callout"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Enrage ~12:45",
+                                                                "type":  "raidwide",
+                                                                "description":  "Neo Exdeath 12:45 狂暴滅團。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段催爆發 + 全員強減傷",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

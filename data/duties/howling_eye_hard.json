@@ -1,41 +1,140 @@
 {
-    "id": "howling_eye_hard",
-    "name": "咆嘯之眼 (Garuda 殲滅戰)",
-    "nameEn": "The Howling Eye (Hard)",
-    "expansion": "2.x 重生之境 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P1 Stone Pillar 核心：保護石柱免被 Friction/Wicked Wheel 打壞。Mistral Song/Shriek 全員躲石柱後破視線。",
-        "2）Aerial Blast (50%) 傷害看石柱剩多少；Tank LB 可額外減傷。",
-        "3）P2：3 個大龍捲 (Great Whirlwind) 場上 → tank NW、ranged 全擠西牆閃龍捲。",
-        "4）P2 add 順序：Satin Plume (Sleep) > Razor Plume；綠光 add 治癒 boss 必先殺，紅光 add 後殺由 OT 接。"
-    ],
-    "notes": "ARR 2.0 trial Hard Lv 50 ilvl 60。Garuda Hard。資料來源：CGW (The Howling Eye (Hard))。",
-    "bosses": [
-        {
-            "name": "Garuda 迦樓羅",
-            "nameEn": "Garuda",
-            "mnemonic": ["保護石柱避 Aerial Blast 致死", "Mistral Song/Shriek 躲柱後", "P2 西牆站 + 龍捲走位", "綠光 add 必先殺"],
-            "phases": [
-                { "name": "P1 100%-50%", "mechanics": [
-                    { "name": "Downburst / Friction / Wicked Wheel / Slipstream", "type": "aoe", "description": "前方錐 / 隨機 AoE / 周圍 AoE / 直線。Friction + Wicked Wheel 會打石柱。Slipstream 暈。", "tips": [{ "text": "MT 把 boss 拉北邊遠離石柱", "role": "tank" }, "散開避免 Friction 包柱"] },
-                    { "name": "Mistral Song / Mistral Shriek", "type": "raidwide", "description": "Song 在邊緣、Shriek 在中央，都對視線造成高傷。", "tips": ["每 60 秒一次，躲石柱後破視線"] },
-                    { "name": "Razor Plume adds", "type": "other", "description": "Mistral 後召，會打石柱。", "tips": [{ "text": "DPS 立刻 AoE adds", "role": "dps" }] },
-                    { "name": "Aerial Blast 終末嵐 (50%)", "type": "raidwide", "description": "詠唱必中，傷害看石柱剩多少。", "tips": [{ "text": "Tank 開 LB 額外減傷", "role": "tank" }, { "text": "healer 確認補滿", "role": "healer" }] }
-                ]},
-                { "name": "P2 50%-0%", "mechanics": [
-                    { "name": "Eye of the Storm 風暴之眼", "type": "other", "description": "場邊環形龍捲。", "tips": ["保持中央"] },
-                    { "name": "Great Whirlwind 大龍捲 ×3", "type": "other", "description": "場上三個大龍捲，碰到極高傷。", "tips": ["tank 站 NW，ranged 擠西牆讓龍捲在隊伍周圍空隙"] },
-                    { "name": "Suparna + Chirada adds 連光 boss", "type": "other", "description": "南邊召兩 adds 連光 Garuda：**綠光 = 治癒 boss 必先殺**、紅光 = 增傷 boss 第二殺。Suparna/Chirada 也會 Mistral Shriek 若放任太久。", "tips": [{ "text": "DPS 先綠光 → 紅光", "role": "dps" }, { "text": "OT 拉紅光 add 朝外避免 Slipstream", "role": "tank" }] },
-                    { "name": "Satin Plume + Razor Plume 第二波", "type": "other", "description": "龍捲消退後 boss 召 Razor Plume + 1 Satin Plume。**Satin Plume 給全隊 Sleep**。", "tips": [{ "text": "DPS 先 Satin Plume", "role": "dps" }, "Razor Plume 可忽略快攻 boss"] },
-                    { "name": "P2 後段重複機制", "type": "other", "description": "東/西兩側出 adds、boss 在南，反覆三次。", "tips": ["維持位置"] }
-                ]}
-            ]
-        }
-    ]
+    "id":  "howling_eye_hard",
+    "name":  "咆嘯之眼 (Garuda 殲滅戰)",
+    "nameEn":  "The Howling Eye (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）P1 Stone Pillar 核心：保護石柱免被 Friction/Wicked Wheel 打壞。Mistral Song/Shriek 全員躲石柱後破視線。",
+                     "2）Aerial Blast (50%) 傷害看石柱剩多少；Tank LB 可額外減傷。",
+                     "3）P2：3 個大龍捲 (Great Whirlwind) 場上 → tank NW、ranged 全擠西牆閃龍捲。",
+                     "4）P2 add 順序：Satin Plume (Sleep) \u003e Razor Plume；綠光 add 治癒 boss 必先殺，紅光 add 後殺由 OT 接。"
+                 ],
+    "notes":  "ARR 2.0 trial Hard Lv 50 ilvl 60。Garuda Hard。資料來源：CGW (The Howling Eye (Hard))。",
+    "bosses":  [
+                   {
+                       "name":  "Garuda 迦樓羅",
+                       "nameEn":  "Garuda",
+                       "mnemonic":  [
+                                        "保護石柱避 Aerial Blast 致死",
+                                        "Mistral Song/Shriek 躲柱後",
+                                        "P2 西牆站 + 龍捲走位",
+                                        "綠光 add 必先殺"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 100%-50%",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "下擊 Downburst / Friction / Wicked Wheel / Slipstream",
+                                                                "type":  "aoe",
+                                                                "description":  "前方錐 / 隨機 AoE / 周圍 AoE / 直線。Friction + Wicked Wheel 會打石柱。Slipstream 暈。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 把 boss 拉北邊遠離石柱",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "散開避免 Friction 包柱"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Mistral Song / Mistral Shriek",
+                                                                "type":  "raidwide",
+                                                                "description":  "Song 在邊緣、Shriek 在中央，都對視線造成高傷。",
+                                                                "tips":  [
+                                                                             "每 60 秒一次，躲石柱後破視線"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Razor Plume adds",
+                                                                "type":  "other",
+                                                                "description":  "Mistral 後召，會打石柱。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 立刻 AoE adds",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aerial Blast 終末嵐 (50%)",
+                                                                "type":  "raidwide",
+                                                                "description":  "詠唱必中，傷害看石柱剩多少。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Tank 開 LB 額外減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "healer 確認補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 50%-0%",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Eye of the Storm 風暴之眼",
+                                                                "type":  "other",
+                                                                "description":  "場邊環形龍捲。",
+                                                                "tips":  [
+                                                                             "保持中央"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Great Whirlwind 大龍捲 ×3",
+                                                                "type":  "other",
+                                                                "description":  "場上三個大龍捲，碰到極高傷。",
+                                                                "tips":  [
+                                                                             "tank 站 NW，ranged 擠西牆讓龍捲在隊伍周圍空隙"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Suparna + Chirada adds 連光 boss",
+                                                                "type":  "other",
+                                                                "description":  "南邊召兩 adds 連光 Garuda：**綠光 = 治癒 boss 必先殺**、紅光 = 增傷 boss 第二殺。Suparna/Chirada 也會 Mistral Shriek 若放任太久。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 先綠光 → 紅光",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "OT 拉紅光 add 朝外避免 Slipstream",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Satin Plume + Razor Plume 第二波",
+                                                                "type":  "other",
+                                                                "description":  "龍捲消退後 boss 召 Razor Plume + 1 Satin Plume。**Satin Plume 給全隊 Sleep**。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 先 Satin Plume",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "Razor Plume 可忽略快攻 boss"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "P2 後段重複機制",
+                                                                "type":  "other",
+                                                                "description":  "東/西兩側出 adds、boss 在南，反覆三次。",
+                                                                "tips":  [
+                                                                             "維持位置"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
