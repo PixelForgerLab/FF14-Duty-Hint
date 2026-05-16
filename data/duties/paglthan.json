@@ -1,6 +1,6 @@
 {
     "id": "paglthan",
-    "name": "派格爾坦",
+    "name": "帕格盧坍",
     "nameEn": "Paglth'an",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -8,30 +8,40 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.3 ShB 後 MSQ 副本，2 個 boss + 終戰",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Atrociraptor 雙頭鸚鵡：突進 + 圓 AoE。",
+        "2）Magitek Predator 魔導獸：類似 Twinning 機制。",
+        "3）Magitaur 魔導戰術 (centaur)：弓彈 + 衝擊波。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.5 post-MSQ 副本 (Lv 80)。Amh Araeng 沙漠戰爭主題。3 boss。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Atrociraptor",
+            "nameEn": "Atrociraptor",
+            "mnemonic": ["雙頭鸚鵡 + 突進"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Charge 突進", "type": "aoe", "description": "直線突進。", "tips": ["閃路徑"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Magitek Predator",
+            "nameEn": "Magitek Predator",
+            "mnemonic": ["魔導獸機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Cannon 砲擊", "type": "aoe", "description": "直線砲擊。", "tips": ["閃直線"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Magitaur",
+            "nameEn": "Magitaur",
+            "mnemonic": ["弓彈 + 衝擊波"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Arrow Volley 箭雨", "type": "spread", "description": "散開圓 AoE。", "tips": ["散開"] },
+                { "name": "Shockwave 衝擊波", "type": "raidwide", "description": "全屏擊退。", "tips": ["預判擊退"] }
+            ]}]
         }
     ]
 }

@@ -1,33 +1,47 @@
 {
     "id": "malikahs_well",
-    "name": "瑪莉卡之井",
+    "name": "瑪麗卡之井",
     "nameEn": "Malikah's Well",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 78,
+    "jobLevelSync": 77,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）大犰狳：Flail Smash 中央漸減後場邊環 AoE，跑近中央；Pack Armadillo 補職可解 Rehydration。",
-        "2）水陸塔羅斯：Wellbore 中央大圓 + 4 小圓變間歇泉；High Pressure 強擊退。",
-        "3）光之贖罪者斯托吉：Crystal Nail 4 個 Nail，Censure 釘子順時針複製 Boss 上一招。"
+        "1）Hanbi 韓比：水柱 + 圓 AoE。",
+        "2）Anzu 安祖 (大鳥)：扇形 + 風機制。",
+        "3）Lugus 路加斯 (機械)：火 + 雷組合。"
     ],
-    "notes": "5.0 ShB 第四個 MSQ 副本（Lv 77-78）。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.0 MSQ 第三個副本 (Lv 77)。位於 Amh Araeng 阿姆阿蘭。3 boss。",
     "bosses": [
-        { "name": "大犰狳", "nameEn": "Greater Armadillo", "mnemonic": ["Flail Smash 跑近中央"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Flail Smash", "type": "aoe", "description": "中央漸減 + 場邊環 AoE。", "tips": ["跑近中央"] },
-            { "name": "Falling Rocks", "type": "aoe", "description": "兩組圓 AoE 隨機位置。", "tips": ["持續移動避"] }
-        ]}]},
-        { "name": "水陸塔羅斯", "nameEn": "Amphibious Talos", "mnemonic": ["High Pressure 強擊退"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Wellbore", "type": "aoe", "description": "中央大圓 + 4 小圓間歇泉。", "tips": ["跑遠"] },
-            { "name": "Swift Spill", "type": "aoe", "description": "中央旋轉錐 AoE。", "tips": ["跟著旋轉方向"] }
-        ]}]},
-        { "name": "斯托吉", "nameEn": "Storge", "mnemonic": ["Censure 順時針"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Heretics Fork", "type": "aoe", "description": "4 基本方向線 AoE。", "tips": ["站對角"] },
-            { "name": "Breaking Wheel", "type": "raidwide", "description": "全場 AoE，只有 Boss hitbox 內安全。", "tips": ["貼 Boss"] },
-            { "name": "Crystal Nail + Censure", "type": "aoe", "description": "4 釘子 + 順時針複製 Boss 上一招。", "tips": ["記 Boss 上一招", "預判 Nail 動作"] }
-        ]}]}
+        {
+            "name": "Hanbi",
+            "nameEn": "Hanbi",
+            "mnemonic": ["水柱機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Water Pillar 水柱", "type": "aoe", "description": "場上水柱 AoE。", "tips": ["離開水柱"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Anzu",
+            "nameEn": "Anzu",
+            "mnemonic": ["大鳥 + 扇形機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Wing AoE 翼擊", "type": "aoe", "description": "翼前方扇形 AoE。", "tips": ["繞 boss 後"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Lugus",
+            "nameEn": "Lugus",
+            "mnemonic": ["火 + 雷組合"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Fire AoE 火焰", "type": "aoe", "description": "火屬性 AoE。", "tips": ["閃火位置"] },
+                { "name": "Thunder AoE 雷擊", "type": "spread", "description": "雷散開 AoE。", "tips": ["散開"] }
+            ]}]
+        }
     ]
 }

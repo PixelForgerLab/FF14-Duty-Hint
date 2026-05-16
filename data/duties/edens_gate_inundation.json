@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_inundation",
-    "name": "伊甸希望樂土 沉沒之章",
+    "name": "伊甸的覺醒 飛濺之章",
     "nameEn": "Eden's Gate: Inundation",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸希望樂土 沉沒之章",
-        "Boss: 利維坦 (Leviathan)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Leviathan 利維亞桑：水 + 浪潮機制。",
+        "2）Tsunami 海嘯：左右舷判定。",
+        "3）Wave Cannon 浪潮砲：直線 AoE。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 利維坦（Leviathan）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E3 (Lv 80)。Eden's Gate 第三場 - Leviathan 重製。",
     "bosses": [
         {
-            "name": "利維坦",
+            "name": "Leviathan",
             "nameEn": "Leviathan",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["水 + 浪潮 + 舷"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Tsunami 海嘯", "type": "other", "description": "左右舷判定，站對側避免擊飛。", "tips": ["看 boss 位置選邊"] },
+                { "name": "Wave Cannon 浪潮砲", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -1,34 +1,47 @@
 {
     "id": "akadaemia_anyder",
-    "name": "亞馬羅特學院",
+    "name": "終古學院",
     "nameEn": "Akadaemia Anyder",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 470,
+    "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）雙鯊：兩 boss 輪流，看誰場上 - 切換時看「is gathering its strength」訊息預判。",
-        "2）侯爵魔花：Extensible Tendrils 旋轉線 AoE + 後續 Bile Vomit 錐；Blossom 兩花池切換站。",
-        "3）羽蛇神：Thunderstorm 球觸到加增傷 buff，別讓球連 Boss；Winding Current 擊退後 4 圓 + 環，貼 Boss 安全。"
+        "1）Ashelia 阿賽利亞 (大魚)：水柱 + 觸手機制。",
+        "2）Frigid Stars 寒星：場上冰 AoE + 散開。",
+        "3）Ipheion 伊斐翁 (大章魚)：觸手揮舞 + 沉水機制。"
     ],
-    "notes": "5.0 ShB 第二個 post-MSQ 副本（Lv 80，ilvl 470）。Amaurot 古代學院。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.1 MSQ 副本 (Lv 80)。位於 The Tempest 暴風海深處古代學院。3 boss。",
     "bosses": [
-        { "name": "雙鯊", "nameEn": "Cladoselache + Doliodus", "mnemonic": ["看誰場上", "預判切換"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Tidal Guillotine", "type": "aoe", "description": "Cladoselache 中心 AoE。", "tips": ["跑遠"] },
-            { "name": "Pelagic Cleaver", "type": "aoe", "description": "Doliodus 前方錐 AoE 擊退。", "tips": ["繞側"] },
-            { "name": "Aquatic Lance", "type": "aoe", "description": "玩家圓 AoE 留池。", "tips": ["拉開"] }
-        ]}]},
-        { "name": "侯爵魔花", "nameEn": "Marquis Morbol", "mnemonic": ["旋轉線", "兩花池切換"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Extensible Tendrils + Bile Vomit", "type": "aoe", "description": "4 觸手線 AoE 旋轉 + 前方錐毒。", "tips": ["看觸手位置", "繞 Boss 後"] },
-            { "name": "Blossom", "type": "other", "description": "兩花池循環，新池蓋舊池。", "tips": ["跑到剛清的花上"] }
-        ]}]},
-        { "name": "羽蛇神", "nameEn": "Quetzalcoatl", "mnemonic": ["球別讓 Boss 拿", "貼 Boss 躲環"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Thunderstorm", "type": "spread", "description": "玩家圓 + 多 AoE，留電球可踩拿 buff。", "tips": ["全員踩球", "別讓球連 Boss"] },
-            { "name": "Shocking Plumage", "type": "aoe", "description": "4 錐 AoE 朝外。", "tips": ["站基本方向"] },
-            { "name": "Winding Current", "type": "other", "description": "擊退 + 4 圓擴張 + 環（Boss hitbox 內安全）。", "tips": ["擊退後貼 Boss"] }
-        ]}]}
+        {
+            "name": "Ashelia",
+            "nameEn": "Ashelia",
+            "mnemonic": ["水柱 + 觸手"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Water Pillar 水柱", "type": "aoe", "description": "場上水柱 AoE。", "tips": ["離開水柱"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Frigid Stars",
+            "nameEn": "Frigid Stars",
+            "mnemonic": ["寒星 AoE + 散開"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Ice AoE 冰", "type": "spread", "description": "散開圓 AoE。", "tips": ["clock 散開"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Ipheion",
+            "nameEn": "Ipheion",
+            "mnemonic": ["大章魚 + 觸手 + 沉水"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Tentacle Sweep 觸手揮", "type": "aoe", "description": "場上觸手 AoE。", "tips": ["閃預警"] },
+                { "name": "Sink 沉水", "type": "raidwide", "description": "場地沉水 + 全體 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

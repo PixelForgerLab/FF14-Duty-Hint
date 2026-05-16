@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_descent_savage",
-    "name": "伊甸希望樂土 隕落之章（零式）",
+    "name": "伊甸的覺醒 共鳴之章 (零式)",
     "nameEn": "Eden's Gate: Descent (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Savage 版本 伊甸希望樂土 隕落之章",
-        "Boss: 墮入虛無者 (Voidwalker)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）E2S Voidwalker 強化版：暗 + 多重召喚。",
+        "2）Soul Vacuum 靈魂真空：場地分區。",
+        "3）Wail of the Lost 失落之嘆：玩家配對。",
+        "4）狂暴：Throes of Creation 創造之痛。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 墮入虛無者（Voidwalker）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Savage E2S (Lv 80, ilvl 470)。",
     "bosses": [
         {
-            "name": "墮入虛無者",
+            "name": "Voidwalker",
             "nameEn": "Voidwalker",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["暗 + 召喚 + 配對"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Soul Vacuum 靈魂真空", "type": "other", "description": "場地分區判定。", "tips": ["跟分區移動"] },
+                { "name": "Wail of the Lost 失落之嘆", "type": "other", "description": "玩家配對 debuff + 機制。", "tips": ["注意配對"] },
+                { "name": "Black Fire (S)", "type": "spread", "description": "強化散開 AoE。", "tips": ["散開"] },
+                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Throes of Creation (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

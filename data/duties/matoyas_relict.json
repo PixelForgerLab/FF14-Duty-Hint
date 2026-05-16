@@ -8,30 +8,40 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.4 ShB 後 MSQ 副本",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Lord Master Pendragon 龍王爵士：劍 + 直線。",
+        "2）Porxie 小豬：水滴 + 散開。",
+        "3）Mother Porxie 母豬：圓 AoE + 突進。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.2 post-MSQ 副本 (Lv 80)。位於 Matoya 老婆婆遺跡。3 boss 童話主題。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Lord Master Pendragon",
+            "nameEn": "Lord Master Pendragon",
+            "mnemonic": ["龍王劍 + 直線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Sword Strike 劍擊", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Porxie",
+            "nameEn": "Porxie",
+            "mnemonic": ["小豬 + 水滴散開"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Water Drop 水滴", "type": "spread", "description": "散開圓 AoE。", "tips": ["散開"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Mother Porxie",
+            "nameEn": "Mother Porxie",
+            "mnemonic": ["母豬 + 圓 + 突進"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Charge 突進", "type": "aoe", "description": "直線突進。", "tips": ["閃路徑"] },
+                { "name": "Big Circle 大圓", "type": "aoe", "description": "場上大圓 AoE。", "tips": ["閃中央"] }
+            ]}]
         }
     ]
 }

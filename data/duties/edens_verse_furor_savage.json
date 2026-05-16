@@ -1,6 +1,6 @@
 {
     "id": "edens_verse_furor_savage",
-    "name": "伊甸再生樂土 狂風之章（零式）",
+    "name": "伊甸的共鳴 烈焰之章 (零式)",
     "nameEn": "Eden's Verse: Furor (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Savage 版本 伊甸再生樂土 狂風之章",
-        "Boss: 伊弗利特 + 卡耳娜 (Ifrit + Garuda)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）E6S 強化雙 boss：火風機制疊加。",
+        "2）Hands of Hell/Heaven (S)：強化分區。",
+        "3）Tornado/Conflagration：場上多重元素 AoE。",
+        "4）狂暴：Ferostorm + Crimson Storm 雙終局。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 伊弗利特 + 卡耳娜（Ifrit + Garuda）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Savage E6S (Lv 80, ilvl 485)。",
     "bosses": [
         {
-            "name": "伊弗利特 + 卡耳娜",
-            "nameEn": "Ifrit + Garuda",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Ifrit & Garuda",
+            "nameEn": "Ifrit & Garuda",
+            "mnemonic": ["雙 boss + 元素疊加"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Hands of Hell/Heaven (S)", "type": "other", "description": "強化分區判定。", "tips": ["跟分區站位"] },
+                { "name": "Tornado/Conflagration", "type": "aoe", "description": "場上多重元素 AoE。", "tips": ["閃預警"] },
+                { "name": "Conflag Strike (S)", "type": "aoe", "description": "強化直線。", "tips": ["閃直線"] },
+                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Ferostorm (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

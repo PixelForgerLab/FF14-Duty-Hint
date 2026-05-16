@@ -1,6 +1,6 @@
 {
     "id": "cloud_deck_extreme",
-    "name": "天雲樓（極）",
+    "name": "雲端飛行甲板殲殛戰",
     "nameEn": "The Cloud Deck (Extreme)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,30 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Diamond Weapon EX 5.5",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Diamond Weapon EX：強化散開 + 多重 wave。",
+        "2）Photon Burst 光子爆發：散開機制。",
+        "3）狂暴：Final Diamond 終局秒殺。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.5 Diamond Weapon EX (Lv 80, ilvl 495)。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Diamond Weapon",
+            "nameEn": "Diamond Weapon",
+            "mnemonic": ["EX 強化版"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Magitek Wave (EX)", "type": "spread", "description": "強化散開 AoE。", "tips": ["散開"] },
+                { "name": "Photon Burst 光子爆發", "type": "aoe", "description": "場上光子 AoE。", "tips": ["閃預警"] },
+                { "name": "Adamant Purge (EX)", "type": "raidwide", "description": "全體 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Final Diamond (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

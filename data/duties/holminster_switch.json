@@ -1,48 +1,47 @@
 {
     "id": "holminster_switch",
-    "name": "霍敏斯特轉軌站",
+    "name": "霍爾敏斯特轉乘站",
     "nameEn": "Holminster Switch",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 72,
+    "jobLevelSync": 71,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）寬恕者迪松南斯：Brazen Bull 4 個球十字 AoE + Thumbscrew 線、Wooden Horse 大錐。",
-        "2）泰絲琳：Fevered Flagellation 數字 1-4 順序撞玩家，菱形站位；Exorcise 疊機留地面 AoE。",
-        "3）光之贖罪者菲莉雅：Chain Down 一玩家被鎖，其他人打鏈解救；Fierce Beating 旋轉場中央。"
+        "1）Forgiven Dissonance 不諧之罪：場上連線 + 三角機制。",
+        "2）Tesleen the Forgiven 忒斯林：散開 + cleave。",
+        "3）Philia 菲利亞 (蘿莉巨人)：圓塔 + 連發 AoE。"
     ],
-    "notes": "5.0 ShB 第一個 MSQ 副本（Lv 71-72）。光之戰士vs光之贖罪者。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.0 MSQ 第一個副本 (Lv 71)。位於 Lakeland 拉凱蘭。3 boss。",
     "bosses": [
         {
-            "name": "寬恕者迪松南斯",
+            "name": "不諧之罪",
             "nameEn": "Forgiven Dissonance",
-            "mnemonic": ["球十字找縫", "Thumbscrew 線後跑"],
+            "mnemonic": ["連線 + 三角機制", "Twisting Scythe 旋鎌"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Brazen Bull + Thumbscrew + Wooden Horse", "type": "aoe", "description": "4 球十字 AoE + 線 + 中央錐。", "tips": ["先找十字縫", "再閃線", "再繞 Boss 後"] },
-                { "name": "Pillory", "type": "tankbuster", "description": "坦補。", "tips": [{ "text": "減傷", "role": "tank" }] }
+                { "name": "Twisting Scythe 旋鎌", "type": "aoe", "description": "場上旋轉鎌 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "泰絲琳",
-            "nameEn": "Tesleen",
-            "mnemonic": ["看數字 1-4 順序", "菱形站位"],
+            "name": "忒斯林",
+            "nameEn": "Tesleen the Forgiven",
+            "mnemonic": ["散開 + cleave 機制"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Fevered Flagellation", "type": "aoe", "description": "玩家頭上數字 1-4，依序被衝撞。", "tips": ["菱形站位讓只有自己被打"] },
-                { "name": "Exorcise", "type": "stack", "description": "疊機 + 4 個圓 AoE 留流血池。", "tips": ["全員疊", "閃池"] }
+                { "name": "Befoulment 污染", "type": "spread", "description": "玩家圓 AoE。", "tips": ["散開"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
             ]}]
         },
         {
-            "name": "菲莉雅",
+            "name": "菲利亞",
             "nameEn": "Philia",
-            "mnemonic": ["Chain Down 打鏈救人", "Fierce Beating 旋轉跑外"],
+            "mnemonic": ["圓塔機制", "連發 AoE"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Pendulum", "type": "aoe", "description": "T 標記 + 中央漸減 AoE。", "tips": [{ "text": "T 拉遠", "role": "tank" }, "其他人到中央"] },
-                { "name": "Chain Down + Aethersup", "type": "other", "description": "玩家被鎖 → 大 cone AoE 致命，需打掉鎖鏈救援。", "tips": [{ "text": "全力打鎖鏈", "role": "dps" }] },
-                { "name": "Left/Right Knout", "type": "aoe", "description": "Boss 抬手 = 該側 >180 度 AoE。", "tips": ["看手繞對側"] },
-                { "name": "Fierce Beating", "type": "aoe", "description": "Boss 旋轉放兩條移動圓 AoE + 後方錐 360 度。", "tips": ["跟著旋轉方向跑"] }
+                { "name": "Pendulum 鐘擺", "type": "aoe", "description": "場上多重圓塔 AoE。", "tips": ["閃塔位置"] },
+                { "name": "Right/Left Slice 左右斬", "type": "aoe", "description": "半場 cleave。", "tips": ["閃對側"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         }
     ]

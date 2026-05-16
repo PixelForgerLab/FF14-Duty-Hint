@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_descent",
-    "name": "伊甸希望樂土 隕落之章",
+    "name": "伊甸的覺醒 共鳴之章",
     "nameEn": "Eden's Gate: Descent",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸希望樂土 隕落之章",
-        "Boss: 墮入虛無者 (Voidwalker)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Voidwalker 虛無行者：暗 + 召喚機制。",
+        "2）Empty Hate 空虛憎恨：多重 AoE。",
+        "3）Black Fire 黑火：散開 + 圓 AoE。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 墮入虛無者（Voidwalker）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E2 (Lv 80)。Eden's Gate 第二場。",
     "bosses": [
         {
-            "name": "墮入虛無者",
+            "name": "Voidwalker",
             "nameEn": "Voidwalker",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["暗 + 召喚"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Empty Hate 空虛憎恨", "type": "aoe", "description": "場上多重暗 AoE。", "tips": ["閃預警"] },
+                { "name": "Black Fire 黑火", "type": "spread", "description": "散開 + 圓 AoE。", "tips": ["散開"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_anamorphosis_savage",
-    "name": "伊甸誓約樂土 變身之章（零式）",
+    "name": "伊甸的約束 變形之章 (零式)",
     "nameEn": "Eden's Promise: Anamorphosis (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Savage 版本 伊甸誓約樂土 變身之章",
-        "Boss: 伊甸的應許 (Eden's Promise)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）E11S Oracle of Darkness 強化版：擊退 + 變形機制。",
+        "2）Darkest Dance (S)：強化擊退。",
+        "3）Spirit Taker (S)：場上多重 AoE 連發。",
+        "4）狂暴：Black Halo 黑光環秒殺。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 伊甸的應許（Eden's Promise）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Savage E11S (Lv 80, ilvl 500)。",
     "bosses": [
         {
-            "name": "伊甸的應許",
-            "nameEn": "Eden's Promise",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Oracle of Darkness",
+            "nameEn": "Oracle of Darkness",
+            "mnemonic": ["擊退 + 變形 + 黑光環"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Darkest Dance (S)", "type": "knockback", "description": "強化擊退機制。", "tips": ["預判方向"] },
+                { "name": "Spirit Taker (S)", "type": "aoe", "description": "多重 AoE 連發。", "tips": ["閃預警"] },
+                { "name": "Shadoweye 暗眼", "type": "other", "description": "玩家配對 + 看視線。", "tips": ["背對暗眼"] },
+                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Black Halo (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

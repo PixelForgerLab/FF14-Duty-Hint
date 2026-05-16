@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_resurrection",
-    "name": "伊甸希望樂土 復生之章",
+    "name": "伊甸的覺醒 復生之章",
     "nameEn": "Eden's Gate: Resurrection",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸希望樂土 復生之章",
-        "Boss: 伊甸的禁忌之地 (Eden Prime)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Eden Prime 伊甸·至尊：場地分區 + 多重 AoE。",
+        "2）Vice and Virtue 善惡：場上分區決定生死。",
+        "3）Eternal Stillness 永久止息：全屏 AoE。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 伊甸的禁忌之地（Eden Prime）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E1 (Lv 80)。Eden's Gate 第一場。",
     "bosses": [
         {
-            "name": "伊甸的禁忌之地",
+            "name": "Eden Prime",
             "nameEn": "Eden Prime",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["分區 + 善惡 + AoE"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Vice and Virtue 善惡", "type": "other", "description": "場地分區決定安全區。", "tips": ["看光暗判斷站位"] },
+                { "name": "Eternal Stillness 永久止息", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
         }
     ]
 }

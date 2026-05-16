@@ -1,6 +1,6 @@
 {
     "id": "memoria_misera_extreme",
-    "name": "悲傷之眼（極）",
+    "name": "悲慘記憶殲殛戰",
     "nameEn": "Memoria Misera (Extreme)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,30 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Varis EX，5.2",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Varis 瓦里斯 (Garlean 皇帝)：劍 + 多種武器切換。",
+        "2）Loaded Weapon 武器切換 (劍/槍/弓)。",
+        "3）Imperial Tactical Strike 帝國戰術打擊：散開 + 直線。",
+        "4）狂暴：Imperial Wrath 帝皇之怒。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.3 Memoria Misera EX (Lv 80, ilvl 490)。Varis (Garlean 皇帝) EX。獨特設計的單人 trial。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Varis",
+            "nameEn": "Varis",
+            "mnemonic": ["皇帝多武器切換", "Imperial Wrath enrage"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Loaded Weapon 武器切換", "type": "other", "description": "Boss 切換劍/槍/弓武器 → 不同 AoE。", "tips": ["看武器類型預判"] },
+                { "name": "Imperial Tactical Strike 帝國戰術", "type": "aoe", "description": "場上多重直線 + 散開。", "tips": ["散開避免重疊"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Imperial Wrath (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

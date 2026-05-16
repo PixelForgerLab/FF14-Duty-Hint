@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_eternity",
-    "name": "伊甸誓約樂土 永恆之章",
+    "name": "伊甸的約束 永遠之章",
     "nameEn": "Eden's Promise: Eternity",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸誓約樂土 永恆之章",
-        "Boss: 暗之預言者 (Oracle of Darkness)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Eden's Promise 伊甸的約束 (最終形態)：吸取前 11 場機制。",
+        "2）多重元素混合 AoE。",
+        "3）Maleficium 邪惡咒語：全屏終局。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 暗之預言者（Oracle of Darkness）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E12 (Lv 80)。Eden 系列終戰。",
     "bosses": [
         {
-            "name": "暗之預言者",
-            "nameEn": "Oracle of Darkness",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Eden's Promise",
+            "nameEn": "Eden's Promise",
+            "mnemonic": ["吸取前 11 場機制", "多重元素混合"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Element Mix 多重元素", "type": "aoe", "description": "場上多種元素 AoE 混合。", "tips": ["看預兆移動"] },
+                { "name": "全體 AoE 連發", "type": "raidwide", "description": "多重全屏。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Maleficium 邪惡咒語", "type": "raidwide", "description": "終局全屏 AoE。", "tips": [{ "text": "全減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -1,34 +1,47 @@
 {
     "id": "twinning",
-    "name": "孿生水晶塔",
+    "name": "雙生天網",
     "nameEn": "The Twinning",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 470,
-    "jobLevelSync": 80,
+    "iLvlSync": null,
+    "jobLevelSync": 79,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）阿爾法札格諾爾：Forlorn Impact 1-4 號順序，站對角；Pounce Errant 散開避免炸到容器（會放出 Beta）。",
-        "2）米特里達梯：Laserblade 多線安全格 + Allagan Thunder 散開組合。",
-        "3）大亨：Magitek Crossray 看十字 AoE 從 hitbox 外朝外（Boss 站位安全）；Defensive Array 從外朝中央。"
+        "1）Magitek Predator 魔導獸：突進 + 弓彈。",
+        "2）The Mythril Mountain 銀山：召喚 + 連線。",
+        "3）Magus Sisters 魔法姊妹 (3 姊妹) FFIV 致敬。"
     ],
-    "notes": "5.0 ShB 第一個 post-MSQ 副本（Lv 80，ilvl 470）。Crystal Tower 內部。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.0 MSQ 副本 (Lv 79)。位於 Empty 空無大地。3 boss (FFIV 魔法姊妹)。",
     "bosses": [
-        { "name": "阿爾法札格諾爾", "nameEn": "Alpha Zaghnal", "mnemonic": ["1-4 號順序", "別讓 Beta 出來"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Forlorn Impact", "type": "aoe", "description": "玩家 1-4 號標記依序衝擊。", "tips": ["看號碼順序分散"] },
-            { "name": "Pounce Errant", "type": "aoe", "description": "玩家圓 AoE，Boss 跳，會解開東西容器放 Beta。", "tips": ["拉開避免炸容器"] },
-            { "name": "Charge Eradicated", "type": "stack", "description": "疊機 + 留火池。", "tips": ["全員疊 + 拉開火池"] }
-        ]}]},
-        { "name": "米特里達梯", "nameEn": "Mithridates", "mnemonic": ["多線找縫"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Laserblade", "type": "aoe", "description": "交叉線 AoE，找間隔。", "tips": ["站線縫"] },
-            { "name": "Allagan Thunder", "type": "spread", "description": "玩家圓 AoE。", "tips": ["分散"] }
-        ]}]},
-        { "name": "大亨", "nameEn": "The Tycoon", "mnemonic": ["Crossray hitbox 外朝外", "Defensive 從外朝中"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Magitek Crossray", "type": "aoe", "description": "4 個雷射從 Boss hitbox 外朝外，Boss 站位安全。", "tips": ["站 Boss 位置"] },
-            { "name": "Defensive Array", "type": "aoe", "description": "從場外朝中央，碰到時停滯雷射 = 散傷給全員。", "tips": ["別碰停滯雷射"] },
-            { "name": "Artificial Gravity", "type": "aoe", "description": "黑紅圓 AoE 慢慢擴大。", "tips": ["快點跑遠"] }
-        ]}]}
+        {
+            "name": "Magitek Predator",
+            "nameEn": "Magitek Predator",
+            "mnemonic": ["魔導獸突進 + 弓彈"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Charge 突進", "type": "aoe", "description": "直線突進 AoE。", "tips": ["閃突進路徑"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Mythril Mountain",
+            "nameEn": "Mythril Mountain",
+            "mnemonic": ["銀山 + 召喚 + 連線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Tether 連線", "type": "stack", "description": "連線分擔。", "tips": ["疊接"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Magus Sisters",
+            "nameEn": "Magus Sisters",
+            "mnemonic": ["3 姊妹同時對戰"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Combined Attack 組合攻擊", "type": "other", "description": "3 姊妹同時放招。", "tips": ["關注 3 個方向"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 連補", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

@@ -8,30 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.3 ShB 後 MSQ 副本，多種 boss",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Spectral Berserker 幻影狂戰士：斧頭旋轉 + 直線。",
+        "2）Spectral Thief 幻影盜賊：閃現 + 連擊。",
+        "3）Black Star 黑星 (FFVIII 隱者)：召喚 + 黑暗 AoE。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.3 post-MSQ 副本 (Lv 80)。位於 Tempest 暴風海。3 boss FFVIII Squall 致敬。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Spectral Berserker",
+            "nameEn": "Spectral Berserker",
+            "mnemonic": ["斧頭旋轉 + 直線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Axe Spin 斧頭旋轉", "type": "aoe", "description": "旋轉 AoE。", "tips": ["拉開"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Spectral Thief",
+            "nameEn": "Spectral Thief",
+            "mnemonic": ["閃現 + 連擊"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Teleport Strike 閃現連擊", "type": "aoe", "description": "閃現到玩家 + 連擊。", "tips": ["避開閃現位置"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Black Star",
+            "nameEn": "Black Star",
+            "mnemonic": ["黑暗 AoE + 召喚"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Dark AoE 黑暗", "type": "aoe", "description": "場上黑暗 AoE。", "tips": ["閃預警"] },
+                { "name": "Summon 召喚", "type": "other", "description": "場上召喚小怪。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
+                { "name": "Meteor 流星", "type": "aoe", "description": "場上流星 AoE。", "tips": ["閃流星"] }
+            ]}]
         }
     ]
 }

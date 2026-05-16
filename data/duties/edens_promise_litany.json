@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_litany",
-    "name": "伊甸誓約樂土 連禱之章",
+    "name": "伊甸的約束 連禱之章",
     "nameEn": "Eden's Promise: Litany",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸誓約樂土 連禱之章",
-        "Boss: 命運破壞者 (Fatebreaker)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Fatebreaker 命運破壞者：火冰雙屬性切換。",
+        "2）Burning Chains 燃燒鎖鏈：場上 tether。",
+        "3）Powder Mark 火藥印記：tankbuster。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 命運破壞者（Fatebreaker）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E10 (Lv 80)。Eden's Promise 第二場 - Fatebreaker。",
     "bosses": [
         {
-            "name": "命運破壞者",
+            "name": "Fatebreaker",
             "nameEn": "Fatebreaker",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["火冰切換 + 鎖鏈 + 火藥印記"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Burning Chains 燃燒鎖鏈", "type": "other", "description": "場上玩家 tether 機制。", "tips": ["拉開破鎖"] },
+                { "name": "Fire/Ice AoE", "type": "aoe", "description": "火冰雙屬性 AoE。", "tips": ["看屬性閃預警"] },
+                { "name": "Powder Mark 火藥印記", "type": "tankbuster", "description": "Tankbuster + debuff。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
         }
     ]
 }

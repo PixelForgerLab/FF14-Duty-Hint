@@ -1,37 +1,48 @@
 {
     "id": "puppets_bunker",
-    "name": "傀儡之掩體",
+    "name": "傀儡的紛爭",
     "nameEn": "The Puppets' Bunker",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "raid",
+    "type": "alliance",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.3 NieR 第 2 部 alliance raid（24 人）",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）B1 Aegis Unit：盾 + 多重 cleave。",
+        "2）B2 Heavy Artillery：場上多重砲擊。",
+        "3）B3 ShM (Shadowmaker)：劍 + NieR 風格機制。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.3 NieR 系列 alliance raid (Lv 80)。Yoko Taro 合作第 2 部。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Aegis Unit",
+            "nameEn": "Aegis Unit",
+            "mnemonic": ["盾 + cleave"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Cleave AoE", "type": "aoe", "description": "多重前方扇形 AoE。", "tips": ["閃面前"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Heavy Artillery",
+            "nameEn": "Heavy Artillery",
+            "mnemonic": ["砲擊 + 直線"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Magitek 砲擊", "type": "aoe", "description": "場上多重直線砲擊。", "tips": ["閃直線"] },
+                { "name": "場上散開 AoE", "type": "spread", "description": "散開 AoE。", "tips": ["散開"] }
+            ]}]
+        },
+        {
+            "name": "Shadowmaker",
+            "nameEn": "Shadowmaker",
+            "mnemonic": ["NieR 風格劍機制"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "劍 AoE 連發", "type": "aoe", "description": "場上多重劍 AoE。", "tips": ["跟預兆"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

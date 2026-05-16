@@ -8,30 +8,40 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.2 ShB 後 MSQ 副本",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Servomechanical Chevalier 機械騎士：劍 + 直線。",
+        "2）Master Mathias 馬蒂亞斯大師：書本召喚 + 範圍。",
+        "3）Lugus 路加斯 (火 + 雷)：與 Malikah's Well 類似但加強。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.2 post-MSQ 副本 (Lv 80)。位於 NeoExdeath 童話宇宙宅邸。3 boss。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Servomechanical Chevalier",
+            "nameEn": "Servomechanical Chevalier",
+            "mnemonic": ["機械騎士劍 + 直線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Sword Strike 劍擊", "type": "aoe", "description": "直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Master Mathias",
+            "nameEn": "Master Mathias",
+            "mnemonic": ["書本召喚 + 範圍機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Book Summon 書本召喚", "type": "other", "description": "場上書本 + 範圍 AoE。", "tips": ["閃書本位置"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Lugus",
+            "nameEn": "Lugus",
+            "mnemonic": ["火 + 雷組合 (強化版)"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Fire/Thunder 火雷", "type": "aoe", "description": "火 + 雷組合 AoE。", "tips": ["閃預警"] },
+                { "name": "Meteor 流星", "type": "aoe", "description": "場上流星。", "tips": ["閃流星"] }
+            ]}]
         }
     ]
 }

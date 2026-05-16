@@ -1,34 +1,48 @@
 {
     "id": "mt_gulg",
-    "name": "古勒格火山",
+    "name": "格爾古山",
     "nameEn": "Mt. Gulg",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 80,
+    "jobLevelSync": 79,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）寬恕者殘暴：Typhoon Wing 別站綠球前面三角 AoE；Lumen Infinitum 別站 Boss 正前方。",
-        "2）寬恕者奇思：Exegesis 看 3x3 臉圖案，站無臉格；Judgement Day 雙隕石各 1 人踩。",
-        "3）寬恕者下流：發光環變形機制（Diminuendo 圓+環、Marcato 線+X）；Solitaire Ring 6 柱依序，站最後爆的柱再跑。"
+        "1）Forgiven Cruelty 殘酷之罪：火 + 直線。",
+        "2）Forgiven Whimsy 反復之罪：分身 + 圓擊退。",
+        "3）Forgiven Obscenity 醜惡之罪 (大 boss)：陽光機制 + 大圓 AoE。"
     ],
-    "notes": "5.0 ShB 第五個 MSQ 副本（Lv 79-80）。最終 Lightwarden Vauthry 戰前。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.0 MSQ 第四個副本 (Lv 79)。位於 Mt. Gulg 格爾古山。3 boss (Forgiven 系列)。",
     "bosses": [
-        { "name": "寬恕者殘暴", "nameEn": "Forgiven Cruelty", "mnemonic": ["別站綠球前", "Lumen 別站 Boss 前"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Lumen Infinitum", "type": "aoe", "description": "Boss 前方線 AoE 無預警。", "tips": ["別站 Boss 前"] },
-            { "name": "Typhoon Wing", "type": "aoe", "description": "綠球前方三角 AoE。", "tips": ["遠離綠球前方"] }
-        ]}]},
-        { "name": "寬恕者奇思", "nameEn": "Forgiven Whimsy", "mnemonic": ["3x3 臉圖案", "踩隕石"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Exegesis", "type": "aoe", "description": "Boss 上 3x3 臉發光 = 場上對應格 AoE。", "tips": ["站無臉格", "通常上角安全"] },
-            { "name": "Judgement Day", "type": "stack", "description": "2 隕石各 1 人踩。", "tips": ["2 人分開踩"] }
-        ]}]},
-        { "name": "寬恕者下流", "nameEn": "Forgiven Obscenity", "mnemonic": ["發光環 = 變形", "Solitaire 6 柱"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Divine Diminuendo (有發光環)", "type": "aoe", "description": "中央圓 AoE + 兩個環 AoE，站初始圓邊緣。", "tips": ["靠近圓邊緣"] },
-            { "name": "Conviction Marcato (有發光環)", "type": "aoe", "description": "Boss 前線 + 圓盤 X 形線。", "tips": ["站基本方向非前", "Boss hitbox 外"] },
-            { "name": "Feather Marionette", "type": "aoe", "description": "4 分身 + 發光那個位置決定安全。", "tips": ["跟著發光分身"] },
-            { "name": "Solitaire Ring", "type": "aoe", "description": "6 柱依序爆，站最後的柱再跑。", "tips": ["看順序", "進最後爆的柱"] }
-        ]}]}
+        {
+            "name": "殘酷之罪",
+            "nameEn": "Forgiven Cruelty",
+            "mnemonic": ["火屬性 + 直線 AoE"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Fire AoE 火焰", "type": "aoe", "description": "火屬性 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "反復之罪",
+            "nameEn": "Forgiven Whimsy",
+            "mnemonic": ["分身 + 圓擊退"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Doppelganger 分身", "type": "other", "description": "場上分身機制。", "tips": ["看分身朝向"] },
+                { "name": "Knockback 擊退", "type": "other", "description": "圓擊退 AoE。", "tips": ["預判落點"] }
+            ]}]
+        },
+        {
+            "name": "醜惡之罪",
+            "nameEn": "Forgiven Obscenity",
+            "mnemonic": ["陽光機制", "大圓 AoE"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Sunshine 陽光", "type": "aoe", "description": "場地陽光區 + 持續傷害。", "tips": ["避開陽光區"] },
+                { "name": "Big Circle 大圓 AoE", "type": "aoe", "description": "場上大圓 AoE。", "tips": ["閃中央"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
     ]
 }

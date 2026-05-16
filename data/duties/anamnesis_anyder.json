@@ -1,6 +1,6 @@
 {
     "id": "anamnesis_anyder",
-    "name": "回憶亞諾德",
+    "name": "緬懷亞尼德",
     "nameEn": "Anamnesis Anyder",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -8,30 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.1 ShB 後 MSQ 副本",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Forgiven Trespass 越界之罪：召喚 + 突進。",
+        "2）Phoebe 菲比 (古代人)：水柱 + 連線。",
+        "3）Ondreya/Forgiven Lacrymose 落淚之罪 (虛無形態)：流淚 + 黑暗。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.3 post-MSQ 副本 (Lv 80)。位於 Tempest 暴風海。3 boss 古代人主題。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Forgiven Trespass",
+            "nameEn": "Forgiven Trespass",
+            "mnemonic": ["越界之罪 + 召喚 + 突進"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Charge 突進", "type": "aoe", "description": "直線突進。", "tips": ["閃路徑"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Phoebe",
+            "nameEn": "Phoebe",
+            "mnemonic": ["水柱 + 連線"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Water Pillar 水柱", "type": "aoe", "description": "場上水柱 AoE。", "tips": ["離開水柱"] },
+                { "name": "Tether 連線", "type": "stack", "description": "連線分擔。", "tips": ["疊接"] }
+            ]}]
+        },
+        {
+            "name": "Forgiven Lacrymose",
+            "nameEn": "Forgiven Lacrymose",
+            "mnemonic": ["落淚之罪 + 黑暗 AoE"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Dark AoE 黑暗", "type": "aoe", "description": "場上黑暗 AoE。", "tips": ["閃預警"] },
+                { "name": "Tears 流淚", "type": "aoe", "description": "場上多重淚滴 AoE。", "tips": ["散開避免重疊"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "amaurot",
-    "name": "亞馬羅特（變體）",
+    "name": "亞馬羅特",
     "nameEn": "Amaurot",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -8,30 +8,41 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.0 ShB MSQ 變體副本（特殊環境）",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Therion 提利昂 (大蛇)：吐息 + 場地破壞。",
+        "2）The Construct 建構物 + 召喚機制。",
+        "3）Hythlodaeus 西斯洛達歐斯 (Ascian 形態)：以太機制 + Meteor。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.0 MSQ 終 dungeon (Lv 80)。位於 The Tempest 暴風海。3 boss。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Therion",
+            "nameEn": "Therion",
+            "mnemonic": ["大蛇 + 吐息 + 場地破壞"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Breath 吐息", "type": "aoe", "description": "前方扇形 AoE。", "tips": ["繞 boss 後"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "The Construct",
+            "nameEn": "The Construct",
+            "mnemonic": ["建構物 + 召喚機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Summon 召喚", "type": "other", "description": "場上召喚小怪。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Hythlodaeus",
+            "nameEn": "Hythlodaeus",
+            "mnemonic": ["Ascian 形態 + 以太機制 + Meteor"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Aetherial Burst 以太爆發", "type": "aoe", "description": "場上以太 AoE。", "tips": ["閃預警"] },
+                { "name": "Meteor 流星", "type": "aoe", "description": "場上流星 AoE。", "tips": ["閃流星位置"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
         }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_umbra",
-    "name": "伊甸誓約樂土 闇影之章",
+    "name": "伊甸的約束 暗影之章",
     "nameEn": "Eden's Promise: Umbra",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸誓約樂土 闇影之章",
-        "Boss: 影守護者 (Shadowkeeper)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Cloud of Darkness 暗之雲 (Shadowkeeper)：暗 + 影子機制。",
+        "2）Particle Beam 粒子光束：多重直線。",
+        "3）Anti-Air Particle Beam 反空粒子光束：全屏。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 影守護者（Shadowkeeper）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E9 (Lv 80)。Eden's Promise 第一場 - Shadowkeeper (Cloud of Darkness 形態)。",
     "bosses": [
         {
-            "name": "影守護者",
+            "name": "Shadowkeeper",
             "nameEn": "Shadowkeeper",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["暗 + 影子 + 粒子光束"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Particle Beam 粒子光束", "type": "aoe", "description": "多重直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Shadow 影子機制", "type": "other", "description": "場上玩家影子 + 機制。", "tips": ["跟影子避開"] },
+                { "name": "Anti-Air Particle Beam", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

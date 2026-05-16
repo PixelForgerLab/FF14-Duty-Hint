@@ -1,6 +1,6 @@
 {
     "id": "minstrels_ballad_necrons_embrace",
-    "name": "永遠之暗悲惶殲滅戰",
+    "name": "永遠之暗悲惶殲殛戰",
     "nameEn": "The Minstrel's Ballad: Necron's Embrace",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "trial",
@@ -8,95 +8,28 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）EX 機制保留 normal 版基礎：Soul Reaping 戒指、Crop Rotation、Memento Mori。",
-        "2）新增 Twofold/Fourfold Blight、The End's Embrace、Circle of Lives、The Second/Fourth Season。",
-        "3）Darkness of Eternity enrage 需要在 cast 完前打完。",
-        "4）⚠️ wiki 機制表 Section-stub，詳細請參考 Hector Hectorson 動畫攻略。"
+        "1）Necron EX：保留 normal 機制 + Soul Reaping 戒指。",
+        "2）Crop Rotation 輪作：場地分區 + 季節變化。",
+        "3）Twofold/Fourfold Blight 雙/四重枯萎。",
+        "4）The End's Embrace 終末擁抱：分擔 + Circle of Lives。",
+        "5）狂暴：Darkness of Eternity 永恆黑暗。"
     ],
-    "notes": "DT 7.3 EX trial（Lv 100，ilvl 740）。Necron EX。⚠️ 詳細機制 wiki 待社群補充。資料整理自 Console Games Wiki + dialogue 推測。",
+    "notes": "DT 7.3 Necron EX (Lv 100, ilvl 740)。Necron (永恆黑暗) EX。包含 Soul Reaping + Crop Rotation 強化版機制。",
     "bosses": [
         {
-            "name": "永遠之暗",
+            "name": "Necron",
             "nameEn": "Necron",
-            "mnemonic": ["保留 normal 機制 + 新加機制", "戒指看順序", "Darkness of Eternity 是 enrage"],
-            "phases": [
-                {
-                    "name": "EX 主戰",
-                    "mechanics": [
-                        {
-                            "name": "Fear of Death",
-                            "type": "raidwide",
-                            "description": "全體傷 + 召喚 Icy Hands。",
-                            "tips": ["別站紫圓"]
-                        },
-                        {
-                            "name": "Cold Grip + Memento Mori",
-                            "type": "aoe",
-                            "description": "外側線 AoE + 中央線 AoE。",
-                            "tips": ["先閃中央", "再看 Boss 方向"]
-                        },
-                        {
-                            "name": "Blue Shockwave",
-                            "type": "tankbuster",
-                            "description": "中心 90 度錐魔法坦補。",
-                            "tips": [{ "text": "拉錐遠離隊友", "role": "tank" }]
-                        },
-                        {
-                            "name": "Soul Reaping + Aetherblight",
-                            "type": "aoe",
-                            "description": "戒指存圓/甜甜圈後釋放。",
-                            "tips": ["記戒指圖案"]
-                        },
-                        {
-                            "name": "Twofold / Fourfold Blight",
-                            "type": "aoe",
-                            "description": "EX 新增機制（詳情待補）。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        },
-                        {
-                            "name": "The End's Embrace",
-                            "type": "other",
-                            "description": "EX 新增機制（詳情待補）。",
-                            "tips": ["參考外部攻略"]
-                        },
-                        {
-                            "name": "Grand Cross + Neutron Ring",
-                            "type": "other",
-                            "description": "場地縮小 + 軌道球 AoE 與漸減 AoE 組合。",
-                            "tips": ["跑到對角象限減傷"]
-                        },
-                        {
-                            "name": "Adds Phase + Darkness of Eternity",
-                            "type": "other",
-                            "description": "Icy Hands 召喚 + 單人深淵 adds，最後 Darkness of Eternity 是 enrage。",
-                            "tips": [
-                                "全力集火",
-                                { "text": "前置 DPS check 必達", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Specter of Death + Relentless Reaping + Crop Rotation",
-                            "type": "aoe",
-                            "description": "Phase 2 戒指 4 段順序機制。",
-                            "tips": ["看戒指圖案順序", "第一個奇偶決定方向"]
-                        },
-                        {
-                            "name": "Circle of Lives 1st / 2nd",
-                            "type": "other",
-                            "description": "EX 新增機制（詳情待補）。",
-                            "tips": ["參考 Hector 攻略"]
-                        },
-                        {
-                            "name": "Mass Macabre",
-                            "type": "stack",
-                            "description": "4 個塔每塔 4 人。",
-                            "tips": ["分組踩塔"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["Soul Reaping 戒指", "Crop Rotation 季節變化", "Twofold/Fourfold Blight"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Soul Reaping 靈魂收割", "type": "other", "description": "場上戒指機制 + 玩家 buff。", "tips": ["依戒指類型站位"] },
+                { "name": "Crop Rotation 輪作", "type": "other", "description": "場地分區季節變化。", "tips": ["跟季節移動"] },
+                { "name": "Twofold/Fourfold Blight 枯萎", "type": "aoe", "description": "雙重/四重枯萎 AoE。", "tips": ["閃預警"] },
+                { "name": "The End's Embrace 終末擁抱", "type": "stack", "description": "分擔機制 + Circle of Lives。", "tips": ["全員疊接"] },
+                { "name": "Memento Mori 死亡警告", "type": "other", "description": "玩家位置記憶機制。", "tips": ["**移動避開記憶位置**"] },
+                { "name": "Darkness of Eternity (Enrage)", "type": "raidwide", "description": "狂暴強制秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

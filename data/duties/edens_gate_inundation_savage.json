@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_inundation_savage",
-    "name": "伊甸希望樂土 沉沒之章（零式）",
+    "name": "伊甸的覺醒 飛濺之章 (零式)",
     "nameEn": "Eden's Gate: Inundation (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Savage 版本 伊甸希望樂土 沉沒之章",
-        "Boss: 利維坦 (Leviathan)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）E3S Leviathan 強化版：水 + 浪潮 + 龍捲風。",
+        "2）Tsunami (S)：強化舷判定。",
+        "3）Spirit of the Deep 深海之靈：場地分區。",
+        "4）狂暴：Tidal Wave 終末巨浪。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 利維坦（Leviathan）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Savage E3S (Lv 80, ilvl 470)。",
     "bosses": [
         {
-            "name": "利維坦",
+            "name": "Leviathan",
             "nameEn": "Leviathan",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["浪潮 + 龍捲風 + 分區"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Tsunami (S)", "type": "other", "description": "強化左右舷判定。", "tips": ["選對側"] },
+                { "name": "Spirit of the Deep 深海之靈", "type": "other", "description": "場地分區 + AoE。", "tips": ["跟分區移動"] },
+                { "name": "Wave Cannon (S)", "type": "aoe", "description": "多重直線 AoE。", "tips": ["閃直線"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Tidal Wave (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

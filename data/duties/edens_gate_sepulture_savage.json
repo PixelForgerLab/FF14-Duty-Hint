@@ -1,6 +1,6 @@
 {
     "id": "edens_gate_sepulture_savage",
-    "name": "伊甸希望樂土 鎮魂之章（零式）",
+    "name": "伊甸的覺醒 寂靜之章 (零式)",
     "nameEn": "Eden's Gate: Sepulture (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,26 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Savage 版本 伊甸希望樂土 鎮魂之章",
-        "Boss: 泰坦 (Titan)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）E4S Titan 強化版：土 + 地震 + 心臟挑戰。",
+        "2）Earthen Fist 大地之拳：場上多重 AoE。",
+        "3）Geo Bomb 地震炸彈：場上炸彈陣。",
+        "4）狂暴：Plate Fracture 板塊崩裂秒殺。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 泰坦（Titan）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Savage E4S (Lv 80, ilvl 470)。",
     "bosses": [
         {
-            "name": "泰坦",
+            "name": "Titan",
             "nameEn": "Titan",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "mnemonic": ["地震 + 心臟 + 炸彈陣"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Earthen Fist 大地之拳", "type": "aoe", "description": "場上多重拳 AoE。", "tips": ["閃預警"] },
+                { "name": "Geo Bomb 地震炸彈", "type": "other", "description": "場上炸彈陣 + 順序爆炸。", "tips": ["記順序逃離"] },
+                { "name": "Heart (S)", "type": "other", "description": "強化心臟召喚 + AoE。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
+                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Plate Fracture (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

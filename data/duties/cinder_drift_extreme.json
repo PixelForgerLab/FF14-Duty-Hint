@@ -1,6 +1,6 @@
 {
     "id": "cinder_drift_extreme",
-    "name": "餘燼漂流（極）",
+    "name": "餘燼漂流殲殛戰",
     "nameEn": "Cinder Drift (Extreme)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,30 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Ruby Weapon EX 5.2",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Ruby Weapon EX：強化 Magitek + Burst Strike。",
+        "2）Outburst 爆發：場上多重 AoE。",
+        "3）狂暴：Ultima 全屏即死。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.2 Ruby Weapon EX (Lv 80, ilvl 485)。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Ruby Weapon",
+            "nameEn": "Ruby Weapon",
+            "mnemonic": ["EX 強化版機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Magitek Ray (EX)", "type": "aoe", "description": "強化雷射 AoE。", "tips": ["閃直線"] },
+                { "name": "Outburst 爆發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["跟預兆"] },
+                { "name": "Magitek Bit (EX)", "type": "spread", "description": "強化 bit 散開 AoE。", "tips": ["散開"] },
+                { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Ultima (Enrage)", "type": "raidwide", "description": "狂暴強制秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

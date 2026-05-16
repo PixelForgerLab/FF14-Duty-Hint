@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_anamorphosis",
-    "name": "伊甸誓約樂土 變身之章",
+    "name": "伊甸的約束 變形之章",
     "nameEn": "Eden's Promise: Anamorphosis",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -8,31 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "伊甸樂土 伊甸誓約樂土 變身之章",
-        "Boss: 伊甸的應許 (Eden's Promise)",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Oracle of Darkness 暗之預言者：暗 + 玩家變形機制。",
+        "2）Darkest Dance 暗影之舞：擊退機制。",
+        "3）Spirit Taker 靈魂掠奪者：場上多重 AoE。"
     ],
-    "notes": "5.x ShB Eden raid。Boss 為 伊甸的應許（Eden's Promise）。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "Eden Normal E11 (Lv 80)。Eden's Promise 第三場。",
     "bosses": [
         {
-            "name": "伊甸的應許",
-            "nameEn": "Eden's Promise",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準 raid 機制",
-                            "type": "other",
-                            "description": "Eden raid 標準機制：raid-wide AoE、tankbuster、stack、spread。",
-                            "tips": ["參考 Hector Hectorson 攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Oracle of Darkness",
+            "nameEn": "Oracle of Darkness",
+            "mnemonic": ["暗 + 變形 + 擊退"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Darkest Dance 暗影之舞", "type": "knockback", "description": "擊退機制。", "tips": ["預判擊退方向"] },
+                { "name": "Spirit Taker 靈魂掠奪者", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

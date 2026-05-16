@@ -1,6 +1,6 @@
 {
     "id": "seat_of_sacrifice",
-    "name": "祭典之座 光之戰士殲滅戰",
+    "name": "犧牲之座殲滅戰",
     "nameEn": "The Seat of Sacrifice",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,36 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Terror Unleashed：HP 變 1 + True Walking Dead 必須補滿。",
-        "2）Coruscant Saber 看劍周圍環：有環 = 環 AoE 站 Boss hitbox 中、無環 = 點 AoE 跑遠。",
-        "3）Absolute Fire III 停動避 Pyretic；Absolute Blizzard III 持續移動避凍。",
-        "4）Phase 2 召喚 Spectral 系列（黑白法、龍騎、占星等）多種致敬機制。",
-        "5）Ultimate Crossover 用坦 LB3 擋。"
+        "1）Warrior of Light 光之戰士：6 種職業切換 (戰/騎/弓/黑/白/赤)。",
+        "2）每職業對應不同 AoE 機制。",
+        "3）Ultimate Wrath 終極之怒：全屏。"
     ],
-    "notes": "5.3 ShB 後 MSQ trial（Lv 80，ilvl 465）。Elidibus 光之戰士擬態。各 job 致敬戰。資料整理自 Console Games Wiki。",
-    "bosses": [{
-        "name": "光之戰士艾利迪布斯",
-        "nameEn": "Warrior of Light (Elidibus)",
-        "mnemonic": ["有環/無環判斷", "停動/持續動", "Ultimate 用坦 LB3"],
-        "phases": [
-            { "name": "Phase 1", "mechanics": [
-                { "name": "Terror Unleashed", "type": "raidwide", "description": "HP 變 1 + True Walking Dead debuff 補滿才能解。", "tips": [{ "text": "立刻補滿", "role": "healer" }] },
-                { "name": "Coruscant Saber", "type": "aoe", "description": "劍周圍有環 = 環 AoE（中央安全）；無環 = 點 AoE。", "tips": ["看劍周圍"] },
-                { "name": "Absolute Fire III", "type": "other", "description": "暫停符號 = 3 秒不能動。", "tips": ["看暫停符號停手停動"] },
-                { "name": "Absolute Blizzard III", "type": "other", "description": "播放符號 = 必須移動避凍。", "tips": ["看播放符號持續走動"] },
-                { "name": "Sword of Light", "type": "aoe", "description": "黑暗中三角形即死區。", "tips": ["別站三角內"] }
-            ]},
-            { "name": "Intermission", "mechanics": [
-                { "name": "Active Time Maneuver + Ultimate Crossover", "type": "other", "description": "需狂點按鍵解綁；Crossover 是 LB4，需坦 LB3 擋。", "tips": [
-                    "全員狂按",
-                    { "text": "用坦 LB3", "role": "tank" }
-                ]}
-            ]},
-            { "name": "Phase 2", "mechanics": [
-                { "name": "Specter of Light",  "type": "other", "description": "黑白法雙咒 + 隕石、龍騎跳、占星牌等致敬機制。", "tips": ["看召喚的職業預判機制"] }
-            ]}
-        ]
-    }]
+    "notes": "ShB 5.3 MSQ trial (Lv 80)。Warrior of Light (光之戰士) Normal。Dissidia FF 致敬。",
+    "bosses": [
+        {
+            "name": "Warrior of Light",
+            "nameEn": "Warrior of Light",
+            "mnemonic": ["6 職業切換", "每職業不同機制"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Job Shift 職業切換", "type": "other", "description": "Boss 切換 6 種職業 (戰/騎/弓/黑/白/赤)。", "tips": ["看職業預判機制"] },
+                { "name": "Class AoE 職業 AoE", "type": "aoe", "description": "依職業放對應 AoE。", "tips": ["閃預警"] },
+                { "name": "Ultimate Wrath 終極之怒", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

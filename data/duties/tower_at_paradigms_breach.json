@@ -1,37 +1,58 @@
 {
     "id": "tower_at_paradigms_breach",
-    "name": "新世範式之塔",
+    "name": "範式之塔",
     "nameEn": "The Tower at Paradigm's Breach",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
-    "type": "raid",
+    "type": "alliance",
     "playerCount": 24,
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "5.5 NieR 第 3 部 alliance raid（24 人，終戰）",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）B1 Meng-Chiang 孟江：場上多重 AoE。",
+        "2）B2 Knave of Hearts：撲克牌機制。",
+        "3）B3 Red Girl：NieR 終局機制。",
+        "4）B4 Her Inflorescence：花機制 + 多重 AoE。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.5 NieR 系列 alliance raid 終章 (Lv 80)。包含 4 個 boss。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Meng-Chiang",
+            "nameEn": "Meng-Chiang",
+            "mnemonic": ["多重 AoE"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "場上多重 AoE", "type": "aoe", "description": "閃預警。", "tips": ["跟預兆"] }
+            ]}]
+        },
+        {
+            "name": "Knave of Hearts",
+            "nameEn": "Knave of Hearts",
+            "mnemonic": ["撲克牌機制"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "撲克牌 AoE", "type": "aoe", "description": "場上撲克牌 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Red Girl",
+            "nameEn": "Red Girl",
+            "mnemonic": ["NieR 終局機制"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "NieR 風格 AoE", "type": "aoe", "description": "場上多重 AoE。", "tips": ["跟預兆移動"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Her Inflorescence",
+            "nameEn": "Her Inflorescence",
+            "mnemonic": ["花機制 + AoE"],
+            "phases": [{ "name": "B4", "mechanics": [
+                { "name": "Flower AoE", "type": "aoe", "description": "場上花 AoE 連發。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -6,44 +6,42 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 76,
+    "jobLevelSync": 75,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）洛紮特：看雕像哪邊發光 + Boss 哪側發紅，組合避半場。",
-        "2）巴托夸奇：Subsonics 多石頭 + 大柱倒下方向避；柱倒會即死。",
-        "3）光之贖罪者埃羅斯：左/右頭電球 = 兩側錐 + 中央疊機；中頭火球 = 玩家圓 + 中央錐，站側。"
+        "1）Lozatl 蝙蝠：吼叫機制 + 圓 AoE。",
+        "2）Batraal 卡卡魯 (Custos 守護者)：機械手臂 + 直線。",
+        "3）Eros 神官：召喚 + 連線分擔。"
     ],
-    "notes": "5.0 ShB 第三個 MSQ 副本（Lv 75-76）。Ronka 古文明遺跡。資料整理自 Console Games Wiki。",
+    "notes": "ShB 5.0 MSQ 第二個副本 (Lv 75)。位於 Rak'tika Greatwood 拉克泰卡。3 boss。",
     "bosses": [
         {
-            "name": "洛紮特",
+            "name": "Lozatl",
             "nameEn": "Lozatl",
-            "mnemonic": ["看雕像光 + Boss 發紅組合"],
+            "mnemonic": ["蝙蝠 + 吼叫機制"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Lozatl's Scorn", "type": "aoe", "description": "雕像紫光 = 該半場 AoE。", "tips": ["看雕像繞對側"] },
-                { "name": "Heat Up + Lozatl's Fury", "type": "aoe", "description": "Boss 一側發紅 = 該半場 cleave。", "tips": ["看 Boss 紅側繞對側"] },
-                { "name": "組合", "type": "aoe", "description": "Scorn + Fury 組合留小安全位。", "tips": ["雙重判斷"] }
+                { "name": "Sonic Howl 音波吼", "type": "raidwide", "description": "全體 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
             ]}]
         },
         {
-            "name": "巴托夸奇",
-            "nameEn": "Batsquatch",
-            "mnemonic": ["柱倒方向", "Soundwave 前打掉柱"],
+            "name": "Batraal",
+            "nameEn": "Batraal",
+            "mnemonic": ["機械手臂機制 + 直線 AoE"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Subsonics", "type": "aoe", "description": "石頭掉落多圓 AoE，最大的留石柱。", "tips": ["閃 AoE", "記柱位置"] },
-                { "name": "Pillars + Soundwave", "type": "aoe", "description": "柱在 Soundwave 時倒下成寬 cone 致命 + 易傷。", "tips": ["遠離柱倒方向", "或先打掉柱"] }
+                { "name": "Mechanical Arm 機械手臂", "type": "aoe", "description": "場上手臂 AoE。", "tips": ["閃預警"] },
+                { "name": "Line AoE 直線", "type": "aoe", "description": "前方直線 AoE。", "tips": ["閃直線"] }
             ]}]
         },
         {
-            "name": "埃羅斯",
+            "name": "Eros",
             "nameEn": "Eros",
-            "mnemonic": ["左/右頭電 = 兩側錐", "中頭火 = 玩家圓"],
+            "mnemonic": ["召喚小怪 + 連線分擔"],
             "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Hound out of Heaven", "type": "aoe", "description": "Proximity 連繩玩家，拉繩變紫色才安全。", "tips": ["拉繩到極限"] },
-                { "name": "Viper Poison + Inhale + Heaving Breath", "type": "other", "description": "毒池 + 拉入 + 擊退。", "tips": ["記住毒池位置", "預判擊退落點"] },
-                { "name": "Confession of Faith (雷)", "type": "stack", "description": "兩側頭電球 = 兩側錐 + 中央疊機。", "tips": ["疊在 Boss 正前"] },
-                { "name": "Confession of Faith (火)", "type": "aoe", "description": "中頭火球 = 玩家圓 + 中央錐。", "tips": ["站 Boss 兩側"] }
+                { "name": "Tether 連線", "type": "stack", "description": "連線玩家分擔。", "tips": ["全員疊接"] },
+                { "name": "Summon 召喚", "type": "other", "description": "場上召喚小怪。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
             ]}]
         }
     ]

@@ -1,6 +1,6 @@
 {
     "id": "crown_of_the_immaculate_extreme",
-    "name": "純白之冠殲殛戰",
+    "name": "純潔之冠殲殛戰",
     "nameEn": "The Crown of the Immaculate (Extreme)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,30 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "Innocence EX，normal 強化版",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）Innocence EX：強化劍機制 + 多重 cleave。",
+        "2）Cleansing Slash 淨化斬：擊退 + 直線。",
+        "3）狂暴：Pure of Heart 終局秒殺。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.0 Innocence EX (Lv 80, ilvl 475)。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Innocence",
+            "nameEn": "Innocence",
+            "mnemonic": ["EX 強化版"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Sword Strike (EX)", "type": "aoe", "description": "多重劍 AoE。", "tips": ["閃預警"] },
+                { "name": "Cleansing Slash 淨化斬", "type": "aoe", "description": "直線 + 擊退。", "tips": ["預判擊退方向"] },
+                { "name": "Heavensflame (EX)", "type": "stack", "description": "可分擔圓 + 強化。", "tips": ["疊接"] },
+                { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Pure of Heart (Enrage)", "type": "raidwide", "description": "狂暴強制秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }
