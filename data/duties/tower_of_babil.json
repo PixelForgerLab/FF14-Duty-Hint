@@ -8,44 +8,38 @@
     "iLvlSync": null,
     "jobLevelSync": 83,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）99th Facet of Strife 第 99 號鬥爭原型機：直線發射 + 場地破壞。",
-        "2）Anima 阿尼瑪：連結機制 + 凝視 + 散開。",
-        "3）Lugae 路加博士 (FFIV) + Barnabas 機器人。"
+        "1）B1 99 號鬥爭 = Magitek Missile 散標 + 4 cone AoE。",
+        "2）B2 Anima = Pain Mire 場地 + Mucus 球 + 全屏。",
+        "3）B3 Lugae + Barnabas = 雙 boss 切換戰，Lugae 用 Barnabas 機甲 + 火/雷射機制。"
     ],
-    "notes": "EW 6.0 MSQ 第二個 dungeon (Lv 83)。位於月之底部世界。3 boss：99 號原型機 → Anima → Lugae & Barnabas。",
+    "notes": "EW 6.0 MSQ dungeon (Lv 83)。Mythril Eye 巴別塔。Lugae + 機甲 Barnabas 致敬 FF4。",
     "bosses": [
         {
             "name": "99 號鬥爭原型機",
             "nameEn": "99th Facet of Strife",
-            "mnemonic": [
-                "Magnetism：吸引/排斥場上鋼鐵物件。",
-                "直線砲擊 + 場地破壞。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Magnetism 磁性",
-                            "type": "other",
-                            "description": "場上小物件吸引/排斥玩家。",
-                            "tips": ["利用磁性移動到安全處"]
+                            "name": "Magitek Missile",
+                            "type": "spread",
+                            "description": "全員下 AoE 圈散開避互打。",
+                            "tips": ["散到場周"]
                         },
                         {
-                            "name": "Cannon 砲擊",
-                            "type": "aoe",
-                            "description": "直線砲擊 + 破壞地板。",
-                            "tips": ["閃直線預警"]
-                        },
-                        {
-                            "name": "Tankbuster",
+                            "name": "Heat Cannon",
                             "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "description": "MT cone buster + Magic Vuln Up。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Magitek Burst 全屏",
+                            "type": "raidwide",
+                            "description": "全屏 + 場上 4 cone AoE 預警。",
+                            "tips": [{ "text": "全員減傷 + 避 cone", "role": "healer" }]
                         }
                     ]
                 }
@@ -54,35 +48,27 @@
         {
             "name": "阿尼瑪",
             "nameEn": "Anima",
-            "mnemonic": [
-                "凝視 + 連線分身。",
-                "全體 + 散開組合機制。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Anima Bleed 凝血",
-                            "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Pain Mire 苦痛泥沼",
+                            "name": "Pain Mire 痛苦泥沼",
                             "type": "other",
-                            "description": "場上玩家連線 + 凝視 + 散開圓 AoE。",
-                            "tips": ["背對凝視 + 散開"]
+                            "description": "場上多處下 AoE 圈 → 留持續傷害灘。",
+                            "tips": ["走縫隙避灘"]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Mucus 球",
+                            "type": "aoe",
+                            "description": "場上召黏液球 + 跟玩家移動 → 爆 AoE。",
+                            "tips": ["引球到場邊"]
+                        },
+                        {
+                            "name": "Soul Drain 凝視",
+                            "type": "other",
+                            "description": "Boss 凝視 → 背對避。",
+                            "tips": ["背對 boss"]
                         }
                     ]
                 }
@@ -91,34 +77,27 @@
         {
             "name": "盧加博士 + 巴爾納巴斯",
             "nameEn": "Lugae & Barnabas",
-            "mnemonic": [
-                "盧加博士 + 巴爾納巴斯機器人雙頭目。",
-                "巴爾納巴斯火/冰模式切換。",
-                "終戰 Self-Destruct 自爆機制。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Fire / Ice 模式切換",
-                            "type": "other",
-                            "description": "巴爾納巴斯依模式發動火/冰屬性 AoE。",
-                            "tips": ["看顏色預判屬性"]
-                        },
-                        {
-                            "name": "Self-Destruct 自爆",
-                            "type": "raidwide",
-                            "description": "全體高傷 + 場地破壞。",
-                            "tips": [
-                                { "text": "全員減傷 + LB", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Magitek Bit 機械鋒",
+                            "name": "Magitek Ray 雷射",
                             "type": "aoe",
-                            "description": "場上 bit 線 AoE。",
-                            "tips": ["閃 bit 路徑"]
+                            "description": "Barnabas 機甲朝玩家 line AoE。",
+                            "tips": ["側步閃線"]
+                        },
+                        {
+                            "name": "Flamethrower 火焰",
+                            "type": "aoe",
+                            "description": "機甲 cone 火 AoE。",
+                            "tips": ["看朝向 → 站側面"]
+                        },
+                        {
+                            "name": "Magitek Burst 雙 boss",
+                            "type": "raidwide",
+                            "description": "Lugae + Barnabas 雙重全屏。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         }
                     ]
                 }

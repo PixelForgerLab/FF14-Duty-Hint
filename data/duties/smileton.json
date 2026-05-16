@@ -1,51 +1,45 @@
 {
     "id": "smileton",
-    "name": "微笑鎮",
+    "name": "微笑小鎮",
     "nameEn": "Smileton",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 93,
+    "jobLevelSync": 87,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Tortured Tortoise 苦痛烏龜：縮殼 + 旋轉攻擊。",
-        "2）Face 微笑臉：散開 + 鎚擊機制。",
-        "3）Big Cheese 大芝士機械人 (Mister Cheesington)：齒輪 + 蒸氣 AoE。"
+        "1）B1 Tortured Tortoise = Spin 旋轉 cone + 殼防禦 + 殻反射。",
+        "2）B2 The Face = 變色 + Mismatch debuff (反向控制) + 全屏。",
+        "3）B3 Mister Cheesington = 大芝士 cone + Stinky AoE + 召小芝士 add。"
     ],
-    "notes": "EW 6.1 MSQ post-MSQ dungeon (Lv 93)。位於 Garlemald 微笑鎮，Loporrit 主題。3 boss。",
+    "notes": "EW 6.05 後期 dungeon (Lv 87)。Garlemald 自殺機器人小鎮。",
     "bosses": [
         {
             "name": "苦痛烏龜",
             "nameEn": "Tortured Tortoise",
-            "mnemonic": [
-                "縮殼旋轉攻擊。",
-                "場上 AoE 圓圈。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Shell Spin 縮殼旋轉",
+                            "name": "Spin Cycle",
                             "type": "aoe",
-                            "description": "Boss 旋轉攻擊。",
-                            "tips": ["拉開距離"]
+                            "description": "Boss 自旋 cone AoE 順 / 逆時針。",
+                            "tips": ["跟旋向移動"]
                         },
                         {
-                            "name": "Round AoE 圓 AoE",
-                            "type": "spread",
-                            "description": "場上玩家圓 AoE。",
-                            "tips": ["散開 clock"]
+                            "name": "Shell Defense",
+                            "type": "other",
+                            "description": "Boss 縮殼 → 反射攻擊，停手等。",
+                            "tips": [{ "text": "DPS 停手避反傷", "role": "dps" }]
                         },
                         {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "name": "Shockwave",
+                            "type": "raidwide",
+                            "description": "全屏 PBAoE。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -54,31 +48,27 @@
         {
             "name": "微笑臉",
             "nameEn": "The Face",
-            "mnemonic": [
-                "鎚擊機制 + 半場 cleave。",
-                "Squashroom 蘑菇召喚。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Hammer Strike 鎚擊",
-                            "type": "aoe",
-                            "description": "場上鎚擊 AoE。",
-                            "tips": ["閃鎚位置"]
-                        },
-                        {
-                            "name": "Half-room Cleave 半場 cleave",
-                            "type": "aoe",
-                            "description": "半場 AoE。",
-                            "tips": ["閃對側"]
-                        },
-                        {
-                            "name": "Squashroom 蘑菇",
+                            "name": "Color Change",
                             "type": "other",
-                            "description": "場上蘑菇生成 + 圓 AoE。",
-                            "tips": ["閃蘑菇位置"]
+                            "description": "Boss 換顏色 → 後續招式對應色差異。",
+                            "tips": ["看色 → 對應位"]
+                        },
+                        {
+                            "name": "Mismatch 反向 debuff",
+                            "type": "other",
+                            "description": "全員掛反向控制 debuff (前後左右顛倒)。",
+                            "tips": ["想左 → 按右"]
+                        },
+                        {
+                            "name": "Burst 全屏",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -86,35 +76,34 @@
         },
         {
             "name": "大芝士先生",
-            "nameEn": "Mister Cheesington / Big Cheese",
-            "mnemonic": [
-                "齒輪轉動 AoE。",
-                "Steam 蒸氣噴發。",
-                "Engine 引擎機制。"
-            ],
+            "nameEn": "Mister Cheesington",
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Gear Turn 齒輪轉動",
+                            "name": "Cheese Wedge",
                             "type": "aoe",
-                            "description": "場上齒輪旋轉 AoE。",
-                            "tips": ["跟齒輪旋轉移動"]
+                            "description": "Boss cone AoE 大芝士切片。",
+                            "tips": ["看朝向 → 站側面"]
                         },
                         {
-                            "name": "Steam Vent 蒸氣噴發",
-                            "type": "aoe",
-                            "description": "場上蒸氣 AoE。",
-                            "tips": ["離開蒸氣"]
+                            "name": "Stink Bomb",
+                            "type": "spread",
+                            "description": "場上多 puddle AoE。",
+                            "tips": ["走縫避 puddle"]
                         },
                         {
-                            "name": "全體 AoE",
+                            "name": "Sticky Globule 召小芝士",
+                            "type": "other",
+                            "description": "召小芝士 add 圍攻。",
+                            "tips": [{ "text": "DPS 殺 add", "role": "dps" }]
+                        },
+                        {
+                            "name": "Final Stinker",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "末段大全屏。",
+                            "tips": [{ "text": "全員減傷 + 強補", "role": "healer" }]
                         }
                     ]
                 }

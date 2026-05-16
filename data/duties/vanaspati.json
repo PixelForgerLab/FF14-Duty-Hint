@@ -1,6 +1,6 @@
 {
     "id": "vanaspati",
-    "name": "瓦納斯帕提",
+    "name": "瓦那斯帕底",
     "nameEn": "Vanaspati",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "dungeon",
@@ -8,46 +8,38 @@
     "iLvlSync": null,
     "jobLevelSync": 85,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Terminus Snatcher 終末強掠者：直線突進 + 全屏 AoE。",
-        "2）Vakra Aspakas 瓦克拉鯨：水池 + 跳躍砸擊。",
-        "3）Telos 終末：四角圓 + 多種顏色 debuff 配對機制。"
+        "1）B1 Terminus Snatcher = Eerie Echo 場地 + Tendrils 多線 AoE。",
+        "2）B2 Vakra Aspakas = 鯨吸 + 大 cone + 多 puddle。",
+        "3）B3 Terminus = Memory of the Echo 多階段 + 全屏 + 凝視。"
     ],
-    "notes": "EW 6.0 MSQ 第三個 dungeon (Lv 85)。位於 Garlemald 終末區。3 boss。",
+    "notes": "EW 6.0 MSQ dungeon (Lv 85)。Garlemald 入 Final Days 終末區。",
     "bosses": [
         {
             "name": "終末強掠者",
             "nameEn": "Terminus Snatcher",
-            "mnemonic": [
-                "Bloody Caress：對 1 仇單體高傷。",
-                "Slither：場地直線突進 AoE。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B1",
                     "mechanics": [
                         {
-                            "name": "Bloody Caress 血腥愛撫",
-                            "type": "tankbuster",
-                            "description": "對 1 仇單體高傷。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Slither 蛇行",
+                            "name": "Eerie Echo 怪聲",
                             "type": "aoe",
-                            "description": "場地直線突進 AoE。",
-                            "tips": ["閃直線路徑"]
+                            "description": "場上多 AoE 圈散落。",
+                            "tips": ["走縫避圈"]
                         },
                         {
-                            "name": "全體 AoE",
+                            "name": "Tendrils 觸手",
+                            "type": "aoe",
+                            "description": "Boss 召觸手 → 多 line AoE 穿場。",
+                            "tips": ["走縫隙避線"]
+                        },
+                        {
+                            "name": "Eerie Soundwave",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "全屏 + 流血。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -56,33 +48,27 @@
         {
             "name": "瓦克拉鯨",
             "nameEn": "Vakra Aspakas",
-            "mnemonic": [
-                "水池機制：場上多個水池。",
-                "跳躍砸擊圓 AoE。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B2",
                     "mechanics": [
                         {
-                            "name": "Mucilaginous Mucus 黏液",
-                            "type": "other",
-                            "description": "場上生水池 + 持續傷害。",
-                            "tips": ["避開水池"]
-                        },
-                        {
-                            "name": "Hop 跳躍",
-                            "type": "aoe",
-                            "description": "跳到玩家位置圓 AoE。",
-                            "tips": ["看標記散開"]
-                        },
-                        {
-                            "name": "Tankbuster",
+                            "name": "Aetherchew 吸",
                             "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
+                            "description": "MT cone 吸 + 大傷 buster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Pestilence Puddle",
+                            "type": "spread",
+                            "description": "場上多 puddle AoE。",
+                            "tips": ["散避 puddle"]
+                        },
+                        {
+                            "name": "Roar of Anguish",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
                         }
                     ]
                 }
@@ -91,40 +77,27 @@
         {
             "name": "終末",
             "nameEn": "Terminus",
-            "mnemonic": [
-                "Aetheric Heliodor：四角圓 AoE。",
-                "顏色 debuff 配對：黃/藍/綠/紅，異色配對解除。",
-                "Bouncy Battery：球移動 + 玩家配色站位。"
-            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "B3",
                     "mechanics": [
                         {
-                            "name": "Aetherial Pull 以太牽引",
+                            "name": "Memory of the Echo",
                             "type": "other",
-                            "description": "場上以太球牽引玩家。",
-                            "tips": ["預判牽引方向"]
+                            "description": "場上召多 add + 各自機制 (玩家動畫看 add 攻擊類)。",
+                            "tips": ["看 add 動畫 → 對應位"]
                         },
                         {
-                            "name": "Color Debuff 配色機制",
+                            "name": "Despair 凝視",
                             "type": "other",
-                            "description": "玩家獲不同顏色 debuff，需要配對解除 (異色配對)。",
-                            "tips": ["依顏色配對站位"]
+                            "description": "Boss 凝視 → 背對。",
+                            "tips": ["背對 boss"]
                         },
                         {
-                            "name": "Aetheric Heliodor 以太閃亮",
-                            "type": "aoe",
-                            "description": "四角圓 AoE。",
-                            "tips": ["跑中央或安全角"]
-                        },
-                        {
-                            "name": "全體 AoE",
+                            "name": "Death's Embrace",
                             "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
+                            "description": "全屏 + 強流血。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         }
                     ]
                 }
