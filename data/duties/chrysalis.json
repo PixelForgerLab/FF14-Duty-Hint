@@ -1,103 +1,34 @@
 {
-    "id":  "chrysalis",
-    "name":  "蛹",
-    "nameEn":  "The Steps of Faith",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Vishap：Fireball",
-                     "2）Seismic Shriek / Body Slam",
-                     "3）Scorching Breath"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "A purple marker will appear on every single NPC to indicate Vishap launching fireballs on everyone. Make sure you do not overlap with anyone to minimi...",
-                                                                "name":  "Fireball",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Moderate unavoidable damage attack.",
-                                                                "name":  "Seismic Shriek",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "A knockback AoE that is at the same time being cast with Fireball, now a bunch of AoE circles on the ground. Make sure you are not standing in front o...",
-                                                                "name":  "Body Slam",
-                                                                "tips":  [
-                                                                             "預判擊退方向或開 Arm\u0027s Length"
-                                                                         ],
-                                                                "type":  "knockback"
-                                                            },
-                                                            {
-                                                                "description":  "Vishap will rear his head forward and slice it around the arena. Get underneath Vishap or huddle against the Ward to get out of range of Vishap\u0027s bash...",
-                                                                "name":  "Sidewise Slice",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "A frontal cone AoE. Move to the left or right walls to avoid being hit.",
-                                                                "name":  "Earth Shaker",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "This will be the first time players will ever encounter this kind of mechanic, consisting of two Exaflares. Exaflares are red circles with yellow arro...",
-                                                                "name":  "Earthrising",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Just like in the first phase, Vishap uses this to destroy the first ward, forcing Lucia to order a retreat to the next and final Ward.",
-                                                                "name":  "Flame Breath",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Vishap prepares a final attack to destroy the last barrier; however, Lucia and her knights form a shield and take the brunt of Vishap\u0027s relentless fla...",
-                                                                "name":  "Scorching Breath",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Vishap",
-                       "nameEn":  "Vishap",
-                       "mnemonic":  [
-                                        "Fireball",
-                                        "Seismic Shriek",
-                                        "Body Slam"
-                                    ]
-                   }
-               ]
+    "id": "chrysalis",
+    "name": "蛹",
+    "nameEn": "The Chrysalis",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "good",
+    "mnemonic": [
+        "1）Nabriales 那布里亞勒斯 = 阿斯托遜 (Ascian) boss。",
+        "2）Heavenly Wings 翅膀 cone + Holy 全屏。",
+        "3）Forbidden Magic 召分身 + line AoE 多方向。",
+        "4）Dark Sphere 多 AoE 圈散 + 凝視。",
+        "5）末段 Ultima Magic 強壓 + DPS check。"
+    ],
+    "notes": "ARR 2.55 MSQ trial (Lv 50)。Nabriales 那布里亞勒斯 (Ascian) 殲滅戰。",
+    "bosses": [
+        {
+            "name": "那布里亞勒斯",
+            "nameEn": "Nabriales",
+            "phases": [{ "name": "Nabriales", "mechanics": [
+                { "name": "Heavenly Wings 翅膀", "type": "aoe", "description": "Boss 翅膀 cone AoE。", "tips": ["看朝向 → 站側"] },
+                { "name": "Holy 全屏", "type": "raidwide", "description": "全屏 + 散標。", "tips": [{ "text": "全員減傷 + 散", "role": "healer" }] },
+                { "name": "Forbidden Magic 禁忌魔法", "type": "other", "description": "召分身 + line AoE 多方向。", "tips": ["看本體 + 走縫"] },
+                { "name": "Dark Sphere 暗球", "type": "spread", "description": "場上多 AoE 圈散落。", "tips": ["散避圈"] },
+                { "name": "Demonic Gaze 凝視", "type": "other", "description": "Boss 凝視 → 背對。", "tips": ["背對 boss"] },
+                { "name": "Ultima Magic 末段", "type": "raidwide", "description": "末段大全屏 + DPS check。", "tips": [{ "text": "末段催爆發", "role": "dps" }] }
+            ]}]
+        }
+    ]
 }
