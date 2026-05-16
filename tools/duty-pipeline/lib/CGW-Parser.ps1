@@ -54,31 +54,44 @@ function Extract-CGWBosses {
         if ($seenNames.Contains($bossName)) { continue }
         [void]$seenNames.Add($bossName)
         # Extract bullet abilities: '''Name''': desc OR {{action icon|Name}}: desc
-        $abilityPattern = "(?m)^\*+\s*(?:'''([^']+?)'''|\{\{action icon\|([^\}]+?)\}\})\s*:?\s*(.{0,300})"
+        $abilityPattern = "(?im)^\*+\s*(?:'''([^']+?)'''|\{\{action icon\|([^\}]+?)\}\})\s*:?\s*(.{0,300})"
         $abilities = New-Object System.Collections.ArrayList
         $seenAbilities = New-Object 'System.Collections.Generic.HashSet[string]'
         foreach ($am in [regex]::Matches($section, $abilityPattern)) {
             $abName = $am.Groups[1].Value.Trim()
             if (-not $abName) { $abName = $am.Groups[2].Value.Trim() }
+            # Clean ability name: remove markup leftovers, trailing colons, etc.
+            $abName = $abName -replace '\{\{[Aa]ction icon\|([^\}]+?)\}\}', '$1' -replace '\{\{[^\}]+\}\}', '' -replace "'{2,3}", ''
+            # Handle [[Link|Display]] wiki links inside captured names
+            $abName = $abName -replace '\[\[([^\|\]]+)\|([^\]]+)\]\]', '$2' -replace '\[\[([^\]]+)\]\]', '$1'
+            $abName = $abName.Trim().TrimEnd(':').TrimEnd().Trim()
+            # Reject if contains pipe (wiki link artifact)
+            if ($abName -match '\|') { continue }
+            if (-not $abName -or $abName -match '^\s*$' -or $abName.Length -gt 60) { continue }
             $abDesc = $am.Groups[3].Value -replace '\s+', ' ' -replace '\[\[([^\|\]]+)(\|[^\]]+)?\]\]', '$1' -replace "'{2,3}", '' -replace '\{\{[^\}]+\|([^\}]+)\}\}', '$1' -replace '\{\{[^\}]+\}\}', ''
             $abDesc = $abDesc.Trim().TrimStart(':').Trim()
             if ($abDesc.Length -gt 150) { $abDesc = $abDesc.Substring(0, 150) + '...' }
-            if ($abName -and $abName -notmatch '^\s*$' -and -not $seenAbilities.Contains($abName)) {
+            if (-not $seenAbilities.Contains($abName)) {
                 [void]$seenAbilities.Add($abName)
                 [void]$abilities.Add(@{ Name = $abName; Desc = $abDesc })
             }
         }
         # If no bullet abilities, fallback: scan for '''Name''' or {{action icon|Name}} in prose
         if ($abilities.Count -eq 0) {
-            $prosePattern = "(?:'''([A-Z][A-Za-z' \-]{3,40})'''|\{\{action icon\|([^\}]+?)\}\})([^.!\n]{0,250}[.!])"
-            $skipNames = @('Heavy','Slow','Bind','Silence','Stun','Pacification','Electrocution','Mini','Patch','Vulnerability','Damage Up','Haste','Esuna','Curse','Pulled In','Bleeding','Blind','Burns','Down for the Count','Down','Fetters','Frozen','Marked','Pull','Aetheric','Boss','Tank','Tanks','MT','OT','DPS','Healers','Healer','Players','Player','Party','Adds','Add','Phase','Phase 1','Phase 2','Strategy','Encounter','Note','Notes','Loot','New','Damage','Wide','Magic','Tankbuster','Important')
+            $prosePattern = "(?:'''([A-Z][A-Za-z' \-]{3,40})'''|\{\{[Aa]ction icon\|([^\}]+?)\}\})([^.!\n]{0,250}[.!])"
+            $skipNames = @('Heavy','Slow','Bind','Silence','Stun','Pacification','Electrocution','Mini','Patch','Vulnerability','Damage Up','Haste','Esuna','Curse','Pulled In','Bleeding','Blind','Burns','Down for the Count','Down','Fetters','Frozen','Marked','Pull','Aetheric','Boss','Tank','Tanks','MT','OT','DPS','Healers','Healer','Players','Player','Party','Adds','Add','Phase','Phase 1','Phase 2','Phase 3','Strategy','Encounter','Note','Notes','Loot','New','Damage','Wide','Magic','Tankbuster','Important','Staff form','Sword form','Unarmed form','Touchdown','Provoke','Center','Edge','First Phase','Second Phase','Third Phase','Final Phase','Rotation','Mechanic','Mechanics','Avoid','Run','Stand','Move','Stack','Spread','Note that','Important','Phys','Mage','Bavarois')
             $skipSet = New-Object 'System.Collections.Generic.HashSet[string]'
             foreach ($s in $skipNames) { [void]$skipSet.Add($s) }
             foreach ($am in [regex]::Matches($section, $prosePattern)) {
                 $abName = $am.Groups[1].Value.Trim()
                 if (-not $abName) { $abName = $am.Groups[2].Value.Trim() }
+                $abName = $abName -replace '\{\{[Aa]ction icon\|([^\}]+?)\}\}', '$1' -replace "'{2,3}", ''
+                $abName = $abName -replace '\[\[([^\|\]]+)\|([^\]]+)\]\]', '$2' -replace '\[\[([^\]]+)\]\]', '$1'
+                $abName = $abName.Trim().TrimEnd(':').Trim()
+                if ($abName -match '\|') { continue }
                 if ($skipSet.Contains($abName)) { continue }
-                if ($abName.Length -lt 4) { continue }
+                if ($abName.Length -lt 4 -or $abName.Length -gt 50) { continue }
+                if ($abName -match "'''") { continue }
                 if ($seenAbilities.Contains($abName)) { continue }
                 [void]$seenAbilities.Add($abName)
                 $abDesc = $am.Groups[3].Value -replace '\s+', ' ' -replace '\[\[([^\|\]]+)(\|[^\]]+)?\]\]', '$1' -replace "'{2,3}", '' -replace '\{\{[^\}]+\|([^\}]+)\}\}', '$1' -replace '\{\{[^\}]+\}\}', ''
