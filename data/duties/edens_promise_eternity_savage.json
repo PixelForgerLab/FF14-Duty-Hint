@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_eternity_savage",
-    "name": "伊甸的約束 永遠之章 (零式)",
+    "name": "希望樂土的伊甸 再生零式4",
     "nameEn": "Eden's Promise: Eternity (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,29 +10,218 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E12S Part 1: Eden's Promise 強化版機制。",
-        "2）Part 2: Oracle of Darkness 形態 + 多重元素機制。",
-        "3）Adds + Memory of the Fight 戰鬥記憶。",
-        "4）Refulgent Chain 光輝鎖鏈 + Apocalypse 終末。",
-        "5）狂暴：Crystallize 結晶終局秒殺。"
+        "1）E12S Eden's Promise + Oracle of Darkness 兩階段。",
+        "2）Eden 階段：Maleficium 全屏 + Junction Shiva / Titan (stack / spread)。",
+        "3）4 水晶 Cast / Stock + Release = 記四元素安全位 (Leviathan 中央、Garuda 斜、Ramuh 遠 PBAoE、Ifrit 前後)。",
+        "4）Rapturous Reach = 半場 AoE 看 glowing 側。",
+        "5）Formless Judgment = 雙坦兩段 + Cleave / Stack debuff 處理。",
+        "6）Diamond Dust + Ice Floe (雙補 stack) + Ice Pillar (散) — 滑冰地板。",
+        "7）Earthen Fury + Bomb Boulders (1/2/3) = 圓地板 + 藍橘黃標站位。",
+        "8）Guardian of Eden = 南邊大克隆 + Obliteration laser + Cast/Stock 配對。",
+        "9）Classical Sculpture + Chiseled Sculptures (4 雕像 1-4 號) + Beastly Sculptures 6 獅子 + Palm of Temperance。",
+        "10）Oracle 階：Hell's Judgment 一位數血 → Shockwave Pulsar 強補。",
+        "11）Darkest Dance = 遠人 + 擊退；Black Halo MT cone；Shellcrusher stack；Spirit Taker spread。",
+        "12）Relativity 系列 (Basic/Intermediate/Advanced/Terminal) = Spell-in-Waiting debuff 配 Aero/Blizzard/Holy 解。",
+        "13）Apocalypse (Singular/Dual/Triple) = 光束移動 + 避方向。",
+        "14）狂暴 Terminal Relativity = 大全屏 + Quietus debuff 三段爆。"
     ],
-    "notes": "Eden Savage E12S (Lv 80, ilvl 500)。Eden 系列終戰 Savage，5.x 最具挑戰的 Savage 之一。",
+    "notes": "ShB 5.45 E12 Savage (Lv 80, ilvl 525)。雙 boss：Eden's Promise + Oracle of Darkness。著名複雜內容，含 Relativity 系列 + Apocalypse 光束。",
     "bosses": [
         {
-            "name": "Eden's Promise / Oracle of Darkness",
-            "nameEn": "Eden's Promise / Oracle of Darkness",
-            "mnemonic": ["雙形態", "Memory of the Fight 記憶機制", "Apocalypse 時鐘", "Refulgent Chain"],
+            "name": "希望樂土",
+            "nameEn": "Eden's Promise",
+            "mnemonic": [
+                "Cast/Stock + Release = 4 元素安全位。",
+                "Junction Shiva 散 / Junction Titan stack。",
+                "Diamond Dust + Bomb Boulders = 第二階機制。",
+                "Guardian of Eden + Sculpture 雕像系列。"
+            ],
             "phases": [
-                { "name": "P1 - Eden's Promise", "mechanics": [
-                    { "name": "Diamond Dust 鑽石冰塵", "type": "raidwide", "description": "全屏 + 場地凍結。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                    { "name": "Junction Titan/Shiva 連結", "type": "other", "description": "連結前 boss 機制。", "tips": ["記前 boss 機制"] }
-                ]},
-                { "name": "P2 - Oracle of Darkness", "mechanics": [
-                    { "name": "Memory of the Fight 戰鬥記憶", "type": "other", "description": "場地記憶 + 玩家機制。", "tips": ["記住位置"] },
-                    { "name": "Apocalypse 終末", "type": "other", "description": "場上時鐘式 AoE。", "tips": ["跟時鐘順序"] },
-                    { "name": "Refulgent Chain 光輝鎖鏈", "type": "stack", "description": "玩家配對分擔。", "tips": ["疊接配對"] },
-                    { "name": "Crystallize (Enrage)", "type": "raidwide", "description": "狂暴結晶秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-                ]}
+                {
+                    "name": "P1 - Eden Cast/Stock / Junction",
+                    "mechanics": [
+                        {
+                            "name": "Maleficium 邪術",
+                            "type": "raidwide",
+                            "description": "不可閃全屏，需減傷 + 連補。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "4 水晶 Cast / Stock / Release",
+                            "type": "other",
+                            "description": "Cast = 即發、Stock = 儲存、Release = 釋放儲存攻擊；Leviathan (中央安) / Garuda (斜安) / Ramuh (遠 PBAoE) / Ifrit (前後安)，記 4 元素安全位。",
+                            "tips": ["記四元素安全位 + 看 Cast/Stock 順序"]
+                        },
+                        {
+                            "name": "Junction Shiva / Titan",
+                            "type": "other",
+                            "description": "Junction Shiva = 全員 spread AoE；Junction Titan = 雙補 stack 分擔 (light party)。",
+                            "tips": [
+                                "Shiva 散 / Titan 集合",
+                                { "text": "雙補 stack 各帶 light party", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Rapturous Reach 狂喜之手",
+                            "type": "aoe",
+                            "description": "Boss 半場大 AoE，glowing 側 = 該側爆，需到對側。",
+                            "tips": ["看亮側 → 跑對側"]
+                        },
+                        {
+                            "name": "Formless Judgment 無形審判",
+                            "type": "tankbuster",
+                            "description": "前 2 名 enmity 雙段 buster + cleave / stack debuff，需 MT/OT 分開或集合。",
+                            "tips": [
+                                { "text": "看 debuff → cleave 分坦 / stack 雙坦集合", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Diamond Dust / Bomb Boulders",
+                    "mechanics": [
+                        {
+                            "name": "Diamond Dust 鑽石之塵",
+                            "type": "raidwide",
+                            "description": "高傷全屏 + 場結冰滑；Ice Floe 雙補 stack + Ice Pillar 全員散，需小心滑入安全位。",
+                            "tips": [
+                                "滑冰：拉桿往安全方向 → 鬆手停",
+                                { "text": "雙補 stack 帶 light party 滑入位", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Bomb Boulders (1/2/3)",
+                            "type": "other",
+                            "description": "場地圓 segment + 邊緣炸彈；1 = 普通閃；2 = 2 藍 (東/西) + 6 橘；3 = 2 藍 (西南/東南) + 2 黃 + 4 橘，按色配位。",
+                            "tips": ["照固定圖配色站位"]
+                        },
+                        {
+                            "name": "Earthen Fury 大地之怒",
+                            "type": "raidwide",
+                            "description": "全屏 + 場恢復；需減傷。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 - Guardian of Eden / Sculptures",
+                    "mechanics": [
+                        {
+                            "name": "Guardian of Eden + Obliteration",
+                            "type": "other",
+                            "description": "南邊召大克隆 + Obliteration 跨場 laser，需集中安全位讓 laser 擊穿。",
+                            "tips": ["集中 boss 後安全位"]
+                        },
+                        {
+                            "name": "Classical Sculpture + Chiseled Sculptures",
+                            "type": "other",
+                            "description": "雙補 stack + 4 雕像 tether 4 玩家 (1-4 號)，依序受擊；同時 Boss 用 Rapturous Reach 半場 AoE。",
+                            "tips": [
+                                { "text": "雙補帶 light party 站前", "role": "healer" },
+                                "1-4 號依序受擊 + 散位"
+                            ]
+                        },
+                        {
+                            "name": "Beastly Sculptures + Palm of Temperance",
+                            "type": "other",
+                            "description": "6 lion sculpture (2 大 + 4 小) → cleave AoE；同時 boss 充能後釋放 + Release 兩儲存招。",
+                            "tips": ["避 lion cleave + 看 boss Release"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "暗之神諭",
+            "nameEn": "Oracle of Darkness",
+            "mnemonic": [
+                "Hell's Judgment = 血降到一位數。",
+                "Relativity 系列 = Spell-in-Waiting debuff 解。",
+                "Apocalypse (Single/Dual/Triple) = 光束移動。",
+                "Darkest Dance 遠人擊退 + Black Halo MT cone。"
+            ],
+            "phases": [
+                {
+                    "name": "P4 - Oracle 入場 + Relativity",
+                    "mechanics": [
+                        {
+                            "name": "Hell's Judgment + Shockwave Pulsar",
+                            "type": "raidwide",
+                            "description": "Hell's Judgment 血降到一位數 → Shockwave Pulsar 全屏，需立即強補。",
+                            "tips": [
+                                { "text": "Hell's Judgment 後立即全員補滿", "role": "healer" }
+                            ]
+                        },
+                        {
+                            "name": "Darkest Dance + Black Halo",
+                            "type": "other",
+                            "description": "Darkest Dance = boss 跳遠人 + 全員擊退；Black Halo = MT 大 cone buster。",
+                            "tips": [
+                                { "text": "MT 把 boss 轉外 + 抗擊退", "role": "tank" },
+                                "全員集中抗擊退"
+                            ]
+                        },
+                        {
+                            "name": "Shellcrusher / Spirit Taker",
+                            "type": "other",
+                            "description": "Shellcrusher = 全員集合 stack；Spirit Taker = 中標單獨吃，需散開。",
+                            "tips": ["Shellcrusher 集合 / Spirit Taker 散"]
+                        },
+                        {
+                            "name": "Basic Relativity",
+                            "type": "other",
+                            "description": "全屏 + Spell-in-Waiting debuff (Aero / Blizzard / Holy / Fire) 依時間解。",
+                            "tips": ["看 debuff 圖示 + 計時解"]
+                        },
+                        {
+                            "name": "Singular Apocalypse",
+                            "type": "aoe",
+                            "description": "場上單條光束順時/逆時掃，需順移動避。",
+                            "tips": ["看光束方向 + 跟著移"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P5 - Intermediate / Advanced / Terminal Relativity (Enrage)",
+                    "mechanics": [
+                        {
+                            "name": "Cataclysm 大災變",
+                            "type": "aoe",
+                            "description": "Boss 朝隨機 cardinal 跳 + 落點大 AoE，需到場邊避。",
+                            "tips": ["看朝向 → 跑對側邊"]
+                        },
+                        {
+                            "name": "Intermediate Relativity",
+                            "type": "other",
+                            "description": "進階版 Relativity + Dark Blizzard III (站邊冰) + Dark Aero III (吹擊退)；T/H 或 DPS 分組各掛。",
+                            "tips": ["看 debuff 分組 + 對應位"]
+                        },
+                        {
+                            "name": "Dual Apocalypse",
+                            "type": "aoe",
+                            "description": "兩條光束同時往對向移動，需到無光束的縫隙。",
+                            "tips": ["看雙光束 + 站交叉縫"]
+                        },
+                        {
+                            "name": "Advanced Relativity + Hourglasses",
+                            "type": "other",
+                            "description": "高階 Relativity + 召沙漏；Dark Aero III 玩家到邊充當擊退。",
+                            "tips": ["看 debuff + 沙漏位"]
+                        },
+                        {
+                            "name": "Triple Apocalypse",
+                            "type": "aoe",
+                            "description": "3 條光束 (2 邊 + 1 中央) 移動；需跟光束方向走。",
+                            "tips": ["跟著光束移動"]
+                        },
+                        {
+                            "name": "Terminal Relativity (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段大全屏 + 三段 Quietus debuff 爆，需在此前殺 boss。",
+                            "tips": [{ "text": "末段催爆發 + 全員減傷", "role": "dps" }]
+                        }
+                    ]
+                }
             ]
         }
     ]

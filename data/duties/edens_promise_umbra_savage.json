@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_umbra_savage",
-    "name": "伊甸的約束 暗影之章 (零式)",
+    "name": "希望樂土的伊甸 再生零式1",
     "nameEn": "Eden's Promise: Umbra (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,23 +10,118 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E9S Shadowkeeper 強化版：影子分裂 + 多重粒子光束。",
-        "2）Voidgate 虛無之門：場上多重門 AoE。",
-        "3）狂暴：Particle Concentration 粒子集中。"
+        "1）E9S Eden's Promise = Art of Darkness 雙形 (觸手亮 = 強化版)。",
+        "2）Devouring Dark / Zero-Form Particle Beam = MT 中標 + Magic Vuln，需換手。",
+        "3）Flood of Obscurity = 全屏 + 擊退 + 留毒灘，需擊退抗或卡。",
+        "4）Rejuvenating Balm = 雙根 tether → 場兩側大 AoE。",
+        "5）Anti-air / Wide-angle Phaser Unlimited = PBAoE + 雙坦 buster + 雙補 split AoE 組合 (順序相反)。",
+        "6）Second Art of Darkness = 觸手亮側 → 該側 AoE。",
+        "7）Empty Plane + Flood of Emptiness = 場破 + 中央死區。",
+        "8）Hypercharged Condensation = 4 雲向 boss 移動 → 殺雲免反傷；末段 Deluge of Darkness。"
     ],
-    "notes": "Eden Savage E9S (Lv 80, ilvl 500)。",
+    "notes": "ShB 5.35 E9 Savage (Lv 80, ilvl 510)。Eden's Promise 大蛇形。場破 + 雲消除機制。",
     "bosses": [
         {
-            "name": "Shadowkeeper",
-            "nameEn": "Shadowkeeper",
-            "mnemonic": ["影子分裂 + 多重粒子"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Particle Beam (S)", "type": "aoe", "description": "強化多重直線。", "tips": ["閃直線"] },
-                { "name": "Shadow (S)", "type": "other", "description": "影子分裂 + 玩家映射。", "tips": ["跟影子避開"] },
-                { "name": "Voidgate 虛無之門", "type": "aoe", "description": "場上多重門 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Particle Concentration (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "name": "希望樂土",
+            "nameEn": "Eden's Promise",
+            "mnemonic": [
+                "Art of Darkness 雙形 (觸手亮 = 強化)。",
+                "Phaser Unlimited (Anti-air / Wide-angle) 順序差異。",
+                "Hypercharged Condensation = 4 雲必殺免反傷。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - 基本機制 / Art of Darkness",
+                    "mechanics": [
+                        {
+                            "name": "Ground-Razing Particle Beam",
+                            "type": "raidwide",
+                            "description": "不可閃全屏，需減傷 + 連補。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Art of Darkness 暗之術",
+                            "type": "other",
+                            "description": "兩變：觸手不亮 = 普通版、觸手亮 = 強化版，需看觸手判斷。",
+                            "tips": ["看觸手 → 強化版需閃 + 強減傷"]
+                        },
+                        {
+                            "name": "Devouring Dark / Zero-Form Particle Beam",
+                            "type": "tankbuster",
+                            "description": "MT 單體 buster + Magic Vuln Up 疊層，需 MT/OT 換手。",
+                            "tips": [{ "text": "MT/OT 換手吃 buster", "role": "tank" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Flood / Phaser / Empty Plane",
+                    "mechanics": [
+                        {
+                            "name": "Flood of Obscurity",
+                            "type": "raidwide",
+                            "description": "全屏 + 擊退 + 留 puddle 高傷，需抗擊退或卡邊。",
+                            "tips": ["全員集合場中、抗擊退 + 避 puddle"]
+                        },
+                        {
+                            "name": "Rejuvenating Balm 雙根 tether",
+                            "type": "aoe",
+                            "description": "Boss tether 場兩側根 → 兩側大 AoE，需站中央。",
+                            "tips": ["看 tether 位 → 站非 tether 側"]
+                        },
+                        {
+                            "name": "Anti-air Phaser Unlimited",
+                            "type": "other",
+                            "description": "PBAoE + 雙坦圈 buster + 雙補 split AoE 同時；雙坦遠離 boss + 雙補散開。",
+                            "tips": [
+                                { "text": "雙坦遠 boss + 雙補散", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Wide-angle Phaser Unlimited",
+                            "type": "other",
+                            "description": "同 Anti-air 但順序反向：line tankbuster + split 反順 + 中央 AoE。",
+                            "tips": ["看 cast 名判斷順序"]
+                        },
+                        {
+                            "name": "Second Art of Darkness 二式",
+                            "type": "aoe",
+                            "description": "Boss 觸手亮左或右 → 該側 AoE，需到對側避。",
+                            "tips": ["看亮側 → 跑對側"]
+                        },
+                        {
+                            "name": "Empty Plane + Flood of Emptiness",
+                            "type": "other",
+                            "description": "Empty Plane 全屏 + 場上 panel 標記破壞；Flood of Emptiness 毀 panel + 中央 boss 下方變死區 + 全員 Magic Vuln。",
+                            "tips": ["看亮 panel → 站完整 tile + 不在中央"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 - Hypercharged / Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Hypercharged Condensation 過載凝結",
+                            "type": "other",
+                            "description": "4 cardinal 召 Hypercharged Clouds 緩慢向 boss 移動，必須殺光否則 boss 吃強 buff。",
+                            "tips": [
+                                { "text": "DPS 全力殺 4 雲", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Full Perimeter Particle Beam",
+                            "type": "aoe",
+                            "description": "大 donut AoE，需站 boss hitbox 邊緣 (不進中央死區)。",
+                            "tips": ["貼 boss 邊緣站"]
+                        },
+                        {
+                            "name": "Deluge of Darkness (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段全屏滅團，需在此前殺 boss。",
+                            "tips": [{ "text": "末段催 DPS check", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

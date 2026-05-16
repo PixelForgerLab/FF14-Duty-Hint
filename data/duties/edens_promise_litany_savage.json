@@ -1,6 +1,6 @@
 {
     "id": "edens_promise_litany_savage",
-    "name": "伊甸的約束 連禱之章 (零式)",
+    "name": "希望樂土的伊甸 再生零式2",
     "nameEn": "Eden's Promise: Litany (Savage)",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "raid",
@@ -10,23 +10,133 @@
     "highEnd": true,
     "quality": "excellent",
     "mnemonic": [
-        "1）E10S Fatebreaker 強化版：火冰切換 + Bound of Faith。",
-        "2）Sundered Sky 切碎天空：場上多重 AoE。",
-        "3）Burning Chains (S)：強化 tether。",
-        "4）狂暴：Brand of Purgatory 煉獄之印。"
+        "1）E10S Eden's Promise (4 足形) = Implosion 看影 + Deepshadow Nova 全屏。",
+        "2）Stand-Up = 站起 PBAoE → 站遠 boss。",
+        "3）Giga Slash = 看左/右手劍 → 影位 = 該側 AoE。",
+        "4）Umbra Smash = MT 四段 buster + Slash Resist + Magic Vuln，換手 + 強減傷。",
+        "5）Shadowcleave = 全員 cleave → 鐘位散站邊。",
+        "6）Dual Spell + Shadowkeeper = 集合 stack + 後分身斬。",
+        "7）Shadow Servant = T/H 或 DPS 連 tether boss → 影位避。",
+        "8）P3 Distant Scream + Umbral Orbs + Spawn Shadow 4 分身。",
+        "9）Voidgate 4 meteor + Pitch Bog puddle；Shackled Apart / Together 雙坦 + DPS tether。",
+        "10）狂暴 Giga Slash x4 + Voidgate Amplifier 8 meteor 配雙人。"
     ],
-    "notes": "Eden Savage E10S (Lv 80, ilvl 500)。",
+    "notes": "ShB 5.35 E10 Savage (Lv 80, ilvl 510)。Eden's Promise 四足影獸形。影位 + 鐘位 + Pitch Bog 分身。",
     "bosses": [
         {
-            "name": "Fatebreaker",
-            "nameEn": "Fatebreaker",
-            "mnemonic": ["火冰切換 + 鎖鏈 + 煉獄印"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Bound of Faith 信仰之縛", "type": "other", "description": "場上玩家配對 tether。", "tips": ["拉開破縛"] },
-                { "name": "Sundered Sky 切碎天空", "type": "aoe", "description": "場上多重 AoE。", "tips": ["跟預兆"] },
-                { "name": "Powder Mark (S)", "type": "tankbuster", "description": "強化 Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Brand of Purgatory (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}]
+            "name": "希望樂土",
+            "nameEn": "Eden's Promise",
+            "mnemonic": [
+                "Implosion 看影向。",
+                "Giga Slash 看持劍手 + 影位避。",
+                "Voidgate + Pitch Bog 分身機制。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Implosion / Stand-Up / Giga Slash",
+                    "mechanics": [
+                        {
+                            "name": "Deepshadow Nova",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷 + 連補。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Implosion 內爆",
+                            "type": "aoe",
+                            "description": "Boss 抬頭或尾 + 召影；攻擊朝影方向，需站影對側。",
+                            "tips": ["看影位 → 跑對側"]
+                        },
+                        {
+                            "name": "Stand-Up + PBAoE",
+                            "type": "aoe",
+                            "description": "Boss 站起拿劍 + 同時 PBAoE，需遠離 boss。",
+                            "tips": ["跑遠 boss"]
+                        },
+                        {
+                            "name": "Giga Slash 巨斬",
+                            "type": "aoe",
+                            "description": "Boss 左或右手劍 + 召影；攻擊由影位該側出，需到對側。",
+                            "tips": ["看持劍手 + 影位 → 跑對側"]
+                        },
+                        {
+                            "name": "Umbra Smash 影碎",
+                            "type": "tankbuster",
+                            "description": "MT 四段斬 buster + Slash Resist Down + Magic Vuln，需 MT/OT 換手或無敵。",
+                            "tips": [
+                                { "text": "MT 開無敵或雙坦換手", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Shadowcleave / Dual Spell / Shadow Servant",
+                    "mechanics": [
+                        {
+                            "name": "Shadowcleave 影斬",
+                            "type": "spread",
+                            "description": "全員 cleave AoE，需到指定鐘位散站邊緣。",
+                            "tips": ["鐘位散 (12/1/2/3/4/5/6/7)"]
+                        },
+                        {
+                            "name": "Dual Spell + Shadowkeeper",
+                            "type": "stack",
+                            "description": "玩家 stack 3 連 + 同時分身在後 cleave，需集合 stack 讓分身集中後爆。",
+                            "tips": ["全員集合 → 影集中在後"]
+                        },
+                        {
+                            "name": "Shadow Servant 影僕",
+                            "type": "other",
+                            "description": "T/H 或 DPS 連 tether boss + 影出在底下，需 4 人分散避影。",
+                            "tips": ["看分組 + 避影"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3-P4 - Voidgate / Implosion x4 / Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Distant Scream + Umbral Orbs",
+                            "type": "raidwide",
+                            "description": "全屏 + 擊退 + 場四方 2 紫 + 2 橘球 → 球向中央攻擊。",
+                            "tips": ["抗擊退 + 看球色"]
+                        },
+                        {
+                            "name": "Spawn Shadow + Fade to Shadow",
+                            "type": "other",
+                            "description": "召 4 個分身 + 場 4 角 puddle tether boss (直 tether + 彎 tether)，需依 tether 位避影。",
+                            "tips": ["看 tether → 站非 tether 路徑"]
+                        },
+                        {
+                            "name": "Implosion x4 連續",
+                            "type": "aoe",
+                            "description": "4 個影依序攻擊，需順序避到 4 個對側位。",
+                            "tips": ["依序避 4 影 + 不停移動"]
+                        },
+                        {
+                            "name": "Voidgate + Pitch Bog",
+                            "type": "other",
+                            "description": "Voidgate 4 meteor 標 → 各 2 人踩 (Magic Vuln)；Pitch Bog 全員 puddle (踩 = 分身)，需擺在邊角不被踩。",
+                            "tips": ["4 meteor 配 2 人 + 倒 puddle 在邊"]
+                        },
+                        {
+                            "name": "Shackled Apart / Together",
+                            "type": "other",
+                            "description": "Shackled Apart = DPS tether T/H 需保距離；Together = 配對需貼近。",
+                            "tips": ["Apart 拉遠 / Together 貼緊"]
+                        },
+                        {
+                            "name": "Giga Slash x4 + Voidgate Amplifier (Enrage)",
+                            "type": "other",
+                            "description": "末段 Giga Slash 4 連 + 8 meteor 標 (每 2 人) + Shackled Together 收尾。",
+                            "tips": [
+                                { "text": "末段催爆發", "role": "dps" },
+                                "依序避 4 Slash + 8 meteor 配對"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
