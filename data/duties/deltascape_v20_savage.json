@@ -1,6 +1,6 @@
 {
     "id": "deltascape_v20_savage",
-    "name": "歐米茄秘境 三角區 二層 (零式)",
+    "name": "歐米茄秘境 三角區零式2",
     "nameEn": "Deltascape V2.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,116 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O2S Catastrophe 強化重力機制。", "2）Gravity Flip (S) 強化翻轉。", "3）狂暴：終局秒殺。"],
-    "notes": "Omega Savage O2S (Lv 70, ilvl 345)。",
+    "mnemonic": [
+        "1）O2S Catastrophe = Antilight 藍 (地) / 黃 (浮空) 球必須躲對應狀態。",
+        "2）使用 Duty Action 浮空 (一個 oGCD)。事前分 N/E/S/W cardinal 每人位。",
+        "3）Tremblor (小全屏) 預示 Earthquake (地面立死) → 必須浮空。",
+        "4）100Gs = MT+OT 雙藍圈強制落地 + 全員集合分擔。",
+        "5）Gravitational Manipulation + Fourfold Sacrifice = 一 T/H + 一 DPS 浮 / 地，兩組 4 人 stack + donut 疊放。",
+        "6）Aetherial Rift = 地上 6 Fulms Under 死，必浮空解。",
+        "7）Paranormal Wave 三段 + Gradual Petrification = 三連 cleave 換手 + OT provoke。",
+        "8）Maniacal Probe → Epicenter = 觸手停位 = Earthquake 起源，跑無觸手邊。",
+        "9）-100Gs + Death's Gaze = 三 Antilight 過中央，南北安 + 凝視 boss 避。",
+        "10）狂暴 10:45 (~20500 DPS)。"
+    ],
+    "notes": "SB 4.08 Deltascape V2.0 Savage (Lv 70, ilvl 320)。Catastrophe = O2S。浮空 vs 落地系統 + Antilight 球。",
     "bosses": [
-        { "name": "Catastrophe", "nameEn": "Catastrophe", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Gravity Flip (S)", "type": "other", "description": "強化翻轉。", "tips": ["跟翻轉"] },
-            { "name": "AoE", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "凱特斯托普",
+            "nameEn": "Catastrophe",
+            "mnemonic": [
+                "Antilight 藍 = 地 / 黃 = 空。",
+                "Tremblor → Earthquake = 必浮空。",
+                "Gravitational Manipulation = 兩 stack donut。",
+                "Epicenter = 觸手停位邊 = Earthquake 源。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Antilight / Tremblor / Earthquake",
+                    "mechanics": [
+                        {
+                            "name": "Antilight 反光球",
+                            "type": "other",
+                            "description": "藍球 = 地上、黃球 = 空中；藍黃同時 = 中央安全；玩家依球色配對狀態 (用 Duty Action 浮空)。",
+                            "tips": ["黃球時別浮、藍黃時中央安"]
+                        },
+                        {
+                            "name": "Tremblor → Earthquake",
+                            "type": "raidwide",
+                            "description": "Tremblor 小全屏 (連 2 次) 預示 Earthquake；Earthquake cast 結算時地面立死。",
+                            "tips": ["看 Tremblor → 浮空避 Earthquake"]
+                        },
+                        {
+                            "name": "100Gs",
+                            "type": "other",
+                            "description": "MT+OT 雙藍圈強制落地；其他人 stack 一起被拉地。",
+                            "tips": ["全員集合分擔"]
+                        },
+                        {
+                            "name": "Gravitational Wave + Evilsphere",
+                            "type": "tankbuster",
+                            "description": "Gravitational Wave = 全屏；Evilsphere = MT 高傷魔法 buster。",
+                            "tips": [
+                                { "text": "MT 開減傷 + 補連補", "role": "tank" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Gravitational Manipulation / Paranormal Wave",
+                    "mechanics": [
+                        {
+                            "name": "Gravitational Manipulation + Fourfold Sacrifice",
+                            "type": "stack",
+                            "description": "一 T/H + 一 DPS 強制浮 / 地 + 各下 stack AoE (donut)；4 人需在每 stack 中且 donut 疊放避撞。",
+                            "tips": ["分組 4+4 配中標、DPS 永遠浮空 (建議)", "donut 疊位"]
+                        },
+                        {
+                            "name": "Aetherial Rift 以太裂縫",
+                            "type": "other",
+                            "description": "地上掛 6 Fulms Under (debuff 結算 = 死)，必浮空才解。",
+                            "tips": ["全員浮空清 debuff"]
+                        },
+                        {
+                            "name": "Paranormal Wave 三連 + Gradual Petrification",
+                            "type": "tankbuster",
+                            "description": "MT 三連 cleave + 疊石化層 (3 層 = 死) + 中間 Evilsphere；需 MT/OT 換手 + provoke。",
+                            "tips": [
+                                { "text": "MT 吃 2 → OT provoke 接第 3 + Evilsphere", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Maniacal Probe + Epicenter",
+                            "type": "other",
+                            "description": "T/H 或 DPS 標觸手 → 拖到 cardinal；Epicenter 後第一停 glow 觸手該邊為安全。",
+                            "tips": ["看第一停 → 站該邊"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 - -100Gs / Death's Gaze / Enrage",
+                    "mechanics": [
+                        {
+                            "name": "-100Gs",
+                            "type": "other",
+                            "description": "三 Antilight 過中央 + 部分人 AoE 標；南北安全，注意不互打。",
+                            "tips": ["站南或北外 + 散標位"]
+                        },
+                        {
+                            "name": "Death's Gaze 死亡凝視",
+                            "type": "other",
+                            "description": "標準凝視，cast 結束面向 boss = 死。",
+                            "tips": ["背對 boss"]
+                        },
+                        {
+                            "name": "Enrage 10:45",
+                            "type": "raidwide",
+                            "description": "10:45 狂暴 (~20500 DPS 需求)。",
+                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v20_savage",
-    "name": "歐米茄秘境 阿爾法區 二層 (零式)",
+    "name": "歐米茄秘境 阿爾法區零式2",
     "nameEn": "Alphascape V2.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,78 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O10S Midgardsormr 強化大蛇機制。", "2）強化火 AoE 連發。", "3）狂暴：終局秒殺。"],
-    "notes": "Omega Savage O10S (Lv 70, ilvl 385)。",
+    "mnemonic": [
+        "1）O10S Midgardsormr = Ambient Aether 旋轉組合判 AoE。",
+        "2）H+H = PBAoE 跑遠、H+V = donut 進 boss、V+V = + 形 line 站對角、V+H = x 形 站 cardinal 邊。",
+        "3）Savage 招式無 telegraph + 攻擊掛 Damage Down / Vuln Up。",
+        "4）Tail End = MT 強 buster，需開無敵或換手。",
+        "5）Ice-Storm + Cauterize + Scarlet Thread 等元素 phase 機制。",
+        "6）Akh Morn = 多 hit stack；Earth Shaker = cone 配職能分位。",
+        "7）狂暴前需依旋向預判閃。"
+    ],
+    "notes": "SB 4.36 Alphascape V2.0 Savage (Lv 70, ilvl 365)。Midgardsormr = O10S。Ambient Aether 旋轉系統 (H/V 組合)。",
     "bosses": [
-        { "name": "Midgardsormr", "nameEn": "Midgardsormr", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Cauterize (S)", "type": "aoe", "description": "強化火 AoE。", "tips": ["閃預警"] },
-            { "name": "AoE (S)", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "米德加爾德索姆",
+            "nameEn": "Midgardsormr",
+            "mnemonic": [
+                "H+H = PBAoE 跑遠。",
+                "H+V = donut 進 boss。",
+                "V+V = + 形 站對角。",
+                "V+H = x 形 站 cardinal 邊。"
+            ],
+            "phases": [
+                {
+                    "name": "P1-P3 - Ambient Aether 旋轉組合",
+                    "mechanics": [
+                        {
+                            "name": "Ambient Aether 旋轉",
+                            "type": "other",
+                            "description": "Midgardsormr 旋轉兩次決定 AoE 種類：H+H = PBAoE / H+V = donut / V+V = + 形 line / V+H = x 形 line；Savage 無 telegraph + 中標 Damage Down + Vuln Up。",
+                            "tips": ["看旋轉組合 → 對應安全位"]
+                        },
+                        {
+                            "name": "Tail End 尾擊",
+                            "type": "tankbuster",
+                            "description": "MT 強物理 buster，需開無敵或 MT/OT 換手。",
+                            "tips": [{ "text": "MT 開無敵或換手", "role": "tank" }]
+                        },
+                        {
+                            "name": "Akh Morn 苦痛",
+                            "type": "other",
+                            "description": "前 2 名 enmity 玩家多 hit stack 分擔；雙坦或全員集合。",
+                            "tips": [{ "text": "雙坦 stack 分擔多 hit", "role": "tank" }]
+                        },
+                        {
+                            "name": "Earth Shaker 大地搖晃",
+                            "type": "aoe",
+                            "description": "玩家標 cone AoE，依職能分區站避互打。",
+                            "tips": ["照固定位 4 標散"]
+                        },
+                        {
+                            "name": "Cauterize 燒灼",
+                            "type": "aoe",
+                            "description": "Boss 飛起 + 朝場一側衝鋒 line AoE，需到對側。",
+                            "tips": ["看朝向 → 跑對側"]
+                        },
+                        {
+                            "name": "Ice-Storm 冰暴",
+                            "type": "raidwide",
+                            "description": "高傷全屏 + Ice 圈 AoE 散，需減傷 + 散開避圈。",
+                            "tips": [
+                                { "text": "全員減傷 + 連補", "role": "healer" },
+                                "散開避 Ice 圈"
+                            ]
+                        },
+                        {
+                            "name": "Scarlet Thread 緋線",
+                            "type": "other",
+                            "description": "場上多條 tether/line + AoE 圖案，需依組合解。",
+                            "tips": ["照固定圖站定點"]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

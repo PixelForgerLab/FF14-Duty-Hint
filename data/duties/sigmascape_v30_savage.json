@@ -1,6 +1,6 @@
 {
     "id": "sigmascape_v30_savage",
-    "name": "歐米茄秘境 西格瑪區 三層 (零式)",
+    "name": "歐米茄秘境 西格瑪區零式3",
     "nameEn": "Sigmascape V3.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,90 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O7S Guardian 強化武器切換。", "2）強化機械 + AoE 連發。", "3）狂暴：終局秒殺。"],
-    "notes": "Omega Savage O7S (Lv 70, ilvl 365)。",
+    "mnemonic": [
+        "1）O7S Guardian = 機械三階段 + 4 Program (Dadaluma / Ultros / Air Force / Bibliotaph)。",
+        "2）牆碰 = paralysis (可 Esuna)。",
+        "3）Magitek Ray = boss 朝向側面 line AoE，看朝向移位。",
+        "4）Arm & Hammer = MT 強 buster。",
+        "5）Atomic Ray = DPS 散標 + 留爆球；Prey Missile = 大標 + 流血。",
+        "6）Missile Simulation = 邊緣多飛彈穿場走縫隙。",
+        "7）Load Program = 看螢幕：Dadaluma (jumping man) / Ultros (squid stack) / Air Force (flying ships) / Bibliotaph (book pages)。",
+        "8）狂暴 + Diffractive Plasma 連發。"
+    ],
+    "notes": "SB 4.31 Sigmascape V3.0 Savage (Lv 70, ilvl 355)。Guardian 機械 = O7S。Program 系統 + 外圈牆 paralysis。",
     "bosses": [
-        { "name": "Guardian", "nameEn": "Guardian", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Weapon Switch (S)", "type": "other", "description": "強化武器切換。", "tips": ["看武器預判"] },
-            { "name": "AoE (S)", "type": "aoe", "description": "強化 AoE。", "tips": ["跟預兆"] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "守護者",
+            "nameEn": "Guardian",
+            "mnemonic": [
+                "4 Program (Dadaluma / Ultros / Air Force / Bibliotaph)。",
+                "Magitek Ray = 看朝向側面 line。",
+                "牆碰 paralysis = 不靠邊。",
+                "Atomic Ray + Prey Missile 散標。"
+            ],
+            "phases": [
+                {
+                    "name": "P1-P3 - Program 循環",
+                    "mechanics": [
+                        {
+                            "name": "Magitek Ray 魔導光線",
+                            "type": "aoe",
+                            "description": "Boss 朝隨機玩家 cast + 直線 AoE 穿場；中標 = 高傷 + Vuln Up，需側步。",
+                            "tips": ["看 boss 朝向 → 側步閃"]
+                        },
+                        {
+                            "name": "Arm & Hammer",
+                            "type": "tankbuster",
+                            "description": "MT 強 buster，需開減傷或無敵。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Atomic Ray 原子光",
+                            "type": "spread",
+                            "description": "DPS 中標散 + 留爆球持續爆 AoE；散開後快走離球位。",
+                            "tips": [
+                                { "text": "4 DPS 散到四角 → 球擺邊", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Prey Missile / Missile Simulation",
+                            "type": "other",
+                            "description": "Prey Missile = 大標單體；Missile Simulation = 邊緣飛彈穿場走縫隙。",
+                            "tips": ["大標散開 + 走縫"]
+                        },
+                        {
+                            "name": "Diffractive Plasma",
+                            "type": "raidwide",
+                            "description": "不可閃全屏，需強補 + 減傷。",
+                            "tips": [{ "text": "全員減傷 + 強補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Load Program: Dadaluma",
+                            "type": "other",
+                            "description": "螢幕跳人圖示 → 召 Dadaluma 機制 (跳擊 + 散標 + AoE 圈)。",
+                            "tips": ["看螢幕跳人 → 對應機制"]
+                        },
+                        {
+                            "name": "Load Program: Ultros",
+                            "type": "other",
+                            "description": "螢幕章魚圖示 → 召 Ultros 機制 (stack + tentacle)。",
+                            "tips": ["看螢幕章魚 → 集合 stack + 避觸手"]
+                        },
+                        {
+                            "name": "Load Program: Air Force",
+                            "type": "other",
+                            "description": "螢幕飛機 → 召飛機 add 在邊飛 + 線 AoE。",
+                            "tips": ["看飛機方向走縫"]
+                        },
+                        {
+                            "name": "Load Program: Bibliotaph",
+                            "type": "other",
+                            "description": "螢幕書頁 → 召 Bibliotaph (魔法 vuln + 法書 add)。",
+                            "tips": ["殺書 + 避法陣"]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

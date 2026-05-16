@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v30_savage",
-    "name": "歐米茄秘境 阿爾法區 三層 (零式)",
+    "name": "歐米茄秘境 阿爾法區零式3",
     "nameEn": "Alphascape V3.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,14 +9,92 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O11S Omega-M&F 強化雙形態。", "2）強化多重 FF references 機制。", "3）狂暴：終局秒殺。"],
-    "notes": "Omega Savage O11S (Lv 70, ilvl 385)。",
+    "mnemonic": [
+        "1）O11S Omega = Atomic Ray 全屏 + Mustard Bomb MT (Bleed) + Flame Thrower + Afterburner 雙段 cone。",
+        "2）Wave Cannon Larboard = 左 / Starboard = 右；連兩段反向，記憶 L 左。",
+        "3）Peripheral Synthesis #1 = 6 火箭拳 (3 藍 3 黃) 追玩家，同色撞 = 滅；需配對讓不同色互撞。",
+        "4）Mustard Bomb savage = Bleed 6 秒。",
+        "5）Executable #1 / #2 = Omega 程式機制 (依序解多重指令)。",
+        "6）Force Quit = DPS check 強壓。",
+        "7）Delta Attack = 北南東西 line AoE + Conductive Focus。",
+        "8）狂暴 Atomic Ray 連發。"
+    ],
+    "notes": "SB 4.41 Alphascape V3.0 Savage (Lv 70, ilvl 375)。Omega = O11S。Wave Cannon 反向 + Peripheral Synthesis 火箭拳。",
     "bosses": [
-        { "name": "Omega-M & Omega-F", "nameEn": "Omega-M & Omega-F", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "FF Reference (S)", "type": "other", "description": "強化模擬機制。", "tips": ["跟預兆"] },
-            { "name": "AoE (S)", "type": "aoe", "description": "多重 AoE。", "tips": ["閃預警"] },
-            { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "歐米茄",
+            "nameEn": "Omega",
+            "mnemonic": [
+                "Larboard = 左 / Starboard = 右。",
+                "Peripheral Synthesis = 6 火箭拳異色互撞。",
+                "Flame Thrower + Afterburner = bait 後側步。",
+                "Executable #1 #2 + Force Quit DPS check。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Opening + Wave Cannon + Synthesis",
+                    "mechanics": [
+                        {
+                            "name": "Atomic Ray + Mustard Bomb",
+                            "type": "raidwide",
+                            "description": "Atomic Ray 全屏；Mustard Bomb MT 小圈 buster + Bleed 6 秒。",
+                            "tips": [
+                                { "text": "MT 拉外 + 開減傷 + 補解 Bleed", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Flame Thrower + Afterburner",
+                            "type": "aoe",
+                            "description": "Flame Thrower 全員 cone AoE 從 boss 中心 → 之後 Afterburner 同形藍火 + 擊退。全員圍 boss + 旋轉到安全側。",
+                            "tips": ["圍 boss cardinal/intercardinal → 順 / 逆時針旋"]
+                        },
+                        {
+                            "name": "Wave Cannon (Larboard / Starboard)",
+                            "type": "aoe",
+                            "description": "Larboard = boss 左側 line AoE、Starboard = 右；連續兩段反向解；Savage 無 telegraph。",
+                            "tips": ["L = 左、不是 L 就是右"]
+                        },
+                        {
+                            "name": "Peripheral Synthesis #1",
+                            "type": "other",
+                            "description": "6 火箭拳 (3 藍 3 黃) 追 4 DPS + 2 H；同色拳撞 = 滅；異色撞 = 消；需配對位讓不同色相撞。",
+                            "tips": [
+                                "DPS / 補事前定位 → 讓藍黃交叉",
+                                { "text": "依固定圖站", "role": "dps" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Executable / Force Quit / Delta Attack",
+                    "mechanics": [
+                        {
+                            "name": "Executable #1 / Executable #2",
+                            "type": "other",
+                            "description": "Omega 程式機制：多重指令依序解 (line / spread / stack 等)，需 callout 順序。",
+                            "tips": ["照固定 callout 站定點"]
+                        },
+                        {
+                            "name": "Force Quit 強制退出",
+                            "type": "raidwide",
+                            "description": "DPS check 強壓，未過 = 滅。",
+                            "tips": [{ "text": "中段催爆發", "role": "dps" }]
+                        },
+                        {
+                            "name": "Delta Attack 三角攻擊",
+                            "type": "aoe",
+                            "description": "場 4 方 line AoE + Conductive Focus 配對；類似 Eden 的 Delta Attack 機制。",
+                            "tips": ["對角分擔 + 抗擊退"]
+                        },
+                        {
+                            "name": "Atomic Ray 連發 (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Atomic Ray 連發強壓。",
+                            "tips": [{ "text": "末段催爆發 + 全減傷", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

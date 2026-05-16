@@ -1,6 +1,6 @@
 {
     "id": "sigmascape_v40_savage",
-    "name": "歐米茄秘境 西格瑪區 四層 (零式)",
+    "name": "歐米茄秘境 西格瑪區零式4",
     "nameEn": "Sigmascape V4.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,14 +9,106 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O8S Kefka 強化版：多重元素 + 神化機制。", "2）Doom 厄運：場上玩家死亡 debuff。", "3）狂暴：Heartless Angel 無心天使秒殺。"],
-    "notes": "Omega Savage O8S (Lv 70, ilvl 365)。SB 終戰 Savage。",
+    "mnemonic": [
+        "1）O8S Kefka + God Kefka 雙階段 + Dancing Mad BGM。",
+        "2）問號 (?) = 反向解 (stack ? = 散、line ? = 站線、avoid ? = 進)。",
+        "3）Mana Charge / Mana Release = 記下個招式 → 後 Release 重複，配 Thrumming Thunder。",
+        "4）Flagrant Fire = stack 或 spread (看問號決定)。",
+        "5）Hyper Drive = MT 高傷 + 周圍小 AoE，遠 boss 站。",
+        "6）Thrumming Thunder = 紫線；無問號避、有問號站交叉。",
+        "7）Statue of the Gods + Graven Image = 雕像額外機制 + 與 Kefka 同時觸發。",
+        "8）God Kefka: Heartless Angel = 血降 1；Forsaken = 全屏；Light of Judgment = 多 line。",
+        "9）狂暴 Ultima Upsurge 連發。"
+    ],
+    "notes": "SB 4.31 Sigmascape V4.0 Savage (Lv 70, ilvl 360)。Kefka + God Kefka = O8S。著名 Dancing Mad 戰 + 問號詭計機制。",
     "bosses": [
-        { "name": "Kefka", "nameEn": "Kefka", "mnemonic": ["EX 強化 + 神化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Magic Spell (S)", "type": "aoe", "description": "強化多重咒語 AoE。", "tips": ["跟預兆"] },
-            { "name": "God Form (S)", "type": "raidwide", "description": "強化神化全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
-            { "name": "Doom 厄運", "type": "other", "description": "場上玩家死亡 debuff。", "tips": [{ "text": "補解 debuff", "role": "healer" }] },
-            { "name": "Heartless Angel (Enrage)", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "凱夫卡",
+            "nameEn": "Kefka",
+            "mnemonic": [
+                "? 問號 = 反向解。",
+                "Mana Charge / Release = 記下招重複。",
+                "Statue of the Gods 雕像疊招。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Kefka 基本招 + Statue",
+                    "mechanics": [
+                        {
+                            "name": "Mana Charge / Mana Release",
+                            "type": "other",
+                            "description": "Mana Charge 後記下下個 AoE 招式；後 Mana Release 重複該招 + 同時 Thrumming Thunder。",
+                            "tips": ["記住 Charge 後的招 → Release 同樣處理"]
+                        },
+                        {
+                            "name": "Flagrant Fire 烈焰",
+                            "type": "other",
+                            "description": "Stack (集合) 或 Spread (散) 二變；? 問號出現 = 反向解。",
+                            "tips": ["看 marker + 問號 → 反向"]
+                        },
+                        {
+                            "name": "Hyper Drive 超驅",
+                            "type": "tankbuster",
+                            "description": "MT 強魔法 buster + 周圍小 AoE，需 MT 拉遠 + 隊伍不貼。",
+                            "tips": [
+                                { "text": "MT 拉外 + 開減傷", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Thrumming Thunder 雷柱",
+                            "type": "aoe",
+                            "description": "場上多條紫色 line column；無問號 = 避線；有問號 = 站交叉點。",
+                            "tips": ["看 ? → 反向解"]
+                        },
+                        {
+                            "name": "Ultima Upsurge 究極",
+                            "type": "raidwide",
+                            "description": "不可閃全屏，需減傷 + 連補。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Statue of the Gods + Graven Image",
+                            "type": "other",
+                            "description": "雕像出現 + Kefka 同時 cast 機制；Graven Image = 雕像獨立招 (拳 / 光線)。",
+                            "tips": ["雙重機制 → 看雕像動畫"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "天魔凱夫卡",
+            "nameEn": "God Kefka",
+            "mnemonic": [
+                "Heartless Angel = 血降 1。",
+                "Forsaken = 全屏；Light of Judgment 多 line。",
+                "Ultima Upsurge 連發收尾。"
+            ],
+            "phases": [
+                {
+                    "name": "P2 - God Kefka",
+                    "mechanics": [
+                        {
+                            "name": "Heartless Angel 無心天使",
+                            "type": "raidwide",
+                            "description": "全員血降至 1，需立即強補。",
+                            "tips": [{ "text": "降血後立刻全員補滿", "role": "healer" }]
+                        },
+                        {
+                            "name": "Forsaken / Light of Judgment",
+                            "type": "raidwide",
+                            "description": "Forsaken = 不可閃全屏；Light of Judgment = 場上多 line AoE 穿場。",
+                            "tips": ["全員減傷 + 走 line 縫"]
+                        },
+                        {
+                            "name": "Ultima Upsurge 連發 (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Ultima Upsurge 連發 + 強壓 DPS check。",
+                            "tips": [{ "text": "末段催爆發 + 全員強減傷", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

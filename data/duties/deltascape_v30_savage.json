@@ -1,6 +1,6 @@
 {
     "id": "deltascape_v30_savage",
-    "name": "歐米茄秘境 三角區 三層 (零式)",
+    "name": "歐米茄秘境 三角區零式3",
     "nameEn": "Deltascape V3.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,13 +9,97 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O3S Halicarnassus 強化變形機制。", "2）Form Shift (S) 強化形態切換。", "3）狂暴：終局秒殺。"],
-    "notes": "Omega Savage O3S (Lv 70, ilvl 345)。",
+    "mnemonic": [
+        "1）O3S Halicarnassus = 5 panel 階段 (Standard / Forest / Cave / Library / Mixed)。",
+        "2）Critical Hit = MT 暴擊 buster，提前開減傷。",
+        "3）Spellblade = Holy stack / Fire III boss 內安 / Blizzard III donut / Thunder III line。",
+        "4）Queen's Waltz = 看站 panel 決定機制 (Plain protean、Forest 荊棘、Cave 柱、Library 書)。",
+        "5）Playing Field + The Game = 地板分職位 (DPS/T/H 或 Pig/Frog/Imp 變身) 必對應站。",
+        "6）Oink (紅三角) / Ribbit (前 cone) / Squelch (凝視) 三變身機制。",
+        "7）Place Token = 不同 panel 召不同 add (White Flame / Greater Dragon / Apanda / Iron Giant+Ninjas)。",
+        "8）Mind Jack 強制方向 + Place Dark Token = 四角配站避被拉。",
+        "9）Haste / Haste 3 = 加快下次 cast；末段強壓多重 panel。"
+    ],
+    "notes": "SB 4.15 Deltascape V3.0 Savage (Lv 70, ilvl 335)。Halicarnassus 女王 = O3S。Panel 切換機制 + 變身 + add 召喚。",
     "bosses": [
-        { "name": "Halicarnassus", "nameEn": "Halicarnassus", "mnemonic": ["EX 強化"], "phases": [{ "name": "主戰", "mechanics": [
-            { "name": "Form Shift (S)", "type": "other", "description": "強化形態切換。", "tips": ["看形態預判"] },
-            { "name": "AoE (S)", "type": "aoe", "description": "強化多重 AoE。", "tips": ["跟預兆"] },
-            { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-        ]}]}
+        {
+            "name": "哈利卡那索斯",
+            "nameEn": "Halicarnassus",
+            "mnemonic": [
+                "5 Panel 階：Standard / Forest / Cave / Library / Mixed。",
+                "Spellblade 四種 (Holy / Fire / Blizzard / Thunder)。",
+                "Queen's Waltz = 看 panel 決定機制。",
+                "Place Token = 不同 phase 召不同 add。"
+            ],
+            "phases": [
+                {
+                    "name": "P1-P5 - Panel 階段循環",
+                    "mechanics": [
+                        {
+                            "name": "Critical Hit 暴擊",
+                            "type": "tankbuster",
+                            "description": "MT 高傷必暴擊 buster，需強減傷或無敵。",
+                            "tips": [{ "text": "MT 開無敵", "role": "tank" }]
+                        },
+                        {
+                            "name": "Spellblade 系列",
+                            "type": "other",
+                            "description": "Holy = 3 AoE + stack (含 Pole Shift 換 tether 位)；Fire 3 = boss 周圍 AoE (內安)；Blizzard 3 = boss 周 donut (跑外)；Thunder 3 = line。",
+                            "tips": ["看 spellblade 名 → 對位"]
+                        },
+                        {
+                            "name": "Library Spellblade Holy (進階)",
+                            "type": "stack",
+                            "description": "2 stack + 4 AoE：4 AoE 各進 1 綠書 (Phys Vuln Down)，2 stack + 2 無標進藍書 (Magic Vuln Down)，讓 stack 雙人分擔。",
+                            "tips": ["照固定圖配書"]
+                        },
+                        {
+                            "name": "Panel Swap + Queen's Waltz",
+                            "type": "other",
+                            "description": "改場 panel + Queen's Waltz 機制依目前 panel：Plain = protean cone 散；Forest = T/H ↔ DPS 荊棘 tether 跑對向；Cave = 非藍格柱 + 全屏；Library = 各人非藍 panel 上落書傷 1/2 max HP。",
+                            "tips": ["看 panel 改站位 + 看 tether"]
+                        },
+                        {
+                            "name": "Playing Field + The Game",
+                            "type": "other",
+                            "description": "地板分職位 (DPS/T/H) 或變身 (Pig/Frog/Imp) tile，必須對應職位踩；錯踩 = 死。",
+                            "tips": ["看 tile 顏色 → 對應職位站"]
+                        },
+                        {
+                            "name": "Oink / Ribbit / Squelch (變身)",
+                            "type": "other",
+                            "description": "Oink (紅三角) 集合避變豬；Ribbit (前 cone) 避變蛙；Squelch (凝視) 背對避變 imp。",
+                            "tips": ["紅三角 stack、前 cone 避、凝視背對"]
+                        },
+                        {
+                            "name": "Place Token (add 召喚)",
+                            "type": "other",
+                            "description": "Forest = White Flame (DPS 速殺)；Cave = Greater Dragon (OT 接，藍 panel 內坦)；Library = Apanda (Magic Hammer 圓圈)；Final = Iron Giant + Ninjas (MT/OT 各坦 + LB)。",
+                            "tips": [
+                                { "text": "依 phase add 種類分坦 + 速殺", "role": "tank" }
+                            ]
+                        },
+                        {
+                            "name": "Mind Jack 心靈劫持",
+                            "type": "other",
+                            "description": "強制方向 (前/左/右/退)，配合 Waltz 或 Dark Token；最終配對暗 token 站對角避擊出。",
+                            "tips": ["看 debuff 朝向預判"]
+                        },
+                        {
+                            "name": "Place Dark Token + Cross Reaper",
+                            "type": "other",
+                            "description": "Cave phase 召 4 邊 reaper 線 AoE + 中央 1 reaper；末段配 Mind Jack 站對角。",
+                            "tips": ["站中央 4 格 + 對角 dark token"]
+                        },
+                        {
+                            "name": "Haste 3 + Dimensional Wave (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段 Haste 3 加快 cast + 連 Dimensional Wave + 多重 panel 強壓 DPS。",
+                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

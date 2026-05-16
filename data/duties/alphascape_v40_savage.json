@@ -1,6 +1,6 @@
 {
     "id": "alphascape_v40_savage",
-    "name": "歐米茄秘境 阿爾法區 四層 (零式)",
+    "name": "歐米茄秘境 阿爾法區零式4",
     "nameEn": "Alphascape V4.0 (Savage)",
     "expansion": "4.x 紅蓮的狂潮 (Stormblood)",
     "type": "raid",
@@ -9,20 +9,136 @@
     "jobLevelSync": 70,
     "highEnd": true,
     "quality": "excellent",
-    "mnemonic": ["1）O12S Omega 強化終形態：雙階段 (Omega-M&F + Omega Final)。", "2）Cosmo Memory 宇宙記憶 + Sigma Form。", "3）終局：終末星河 秒殺。"],
-    "notes": "Omega Savage O12S (Lv 70, ilvl 385)。SB 系列終戰 Savage，含 P1 (Omega-M&F) + P2 (Omega Final) 兩階段。",
+    "mnemonic": [
+        "1）O12S = Omega-M + Omega-F 雙形戰 + 末段融合 Omega。",
+        "2）Omega's Eye = 場外大眼 + Suppression (line) / Advanced Suppression (PBAoE)；眼移動到 4 cardinal。",
+        "3）Electric Slide = 雙形變泥 + 雙補 stack；可預定 M/F 重組位 (M 即發 Efficient Bladework、F 即發 Discharger 擊退)。",
+        "4）Omega-M = Synthetic Shield + Pile Pitch + 連 Bladework；Omega-F = Discharger + Beyond Defense。",
+        "5）Synthetic Blades = 雙形混合機制。",
+        "6）Formless = 無形態過渡 + 大全屏。",
+        "7）終局 Passage of Arms = Omega 合體 + 強力 burst (先殺 M 再殺 F)。",
+        "8）狂暴 Hello, World 滅團。"
+    ],
+    "notes": "SB 4.41 Alphascape V4.0 Savage (Lv 70, ilvl 380)。Omega-M + Omega-F 雙形 → 融合 = O12S。Omega's Eye 場外輔助機制。",
     "bosses": [
-        { "name": "Omega", "nameEn": "Omega", "mnemonic": ["EX 強化 + 雙階段"], "phases": [
-            { "name": "P1 - Omega-M&F", "mechanics": [
-                { "name": "Form Cycle (S)", "type": "other", "description": "強化多形態切換。", "tips": ["看形態預判"] },
-                { "name": "AoE 連發", "type": "aoe", "description": "多重 AoE。", "tips": ["跟預兆"] }
-            ]},
-            { "name": "P2 - Omega Final", "mechanics": [
-                { "name": "Cosmo Memory", "type": "other", "description": "場上宇宙記憶機制。", "tips": ["記位置"] },
-                { "name": "Sigma Form", "type": "raidwide", "description": "強化全屏。", "tips": [{ "text": "減傷", "role": "healer" }] },
-                { "name": "Tankbuster (S)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
-                { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
-            ]}
-        ]}
+        {
+            "name": "歐米茄M",
+            "nameEn": "Omega-M",
+            "mnemonic": [
+                "Efficient Bladework = PBAoE 即發。",
+                "Synthetic Shield = 盾擋 + 反射。",
+                "Pile Pitch = 高傷 buster。"
+            ],
+            "phases": [
+                {
+                    "name": "P1 - Omega-M / Omega's Eye",
+                    "mechanics": [
+                        {
+                            "name": "Omega's Eye + Suppression",
+                            "type": "aoe",
+                            "description": "Suppression = 場外眼 line AoE 留兩側安；Advanced Suppression = PBAoE 留新月安；眼移動 cardinal。",
+                            "tips": ["看眼位 → 站對應安全區"]
+                        },
+                        {
+                            "name": "Efficient Bladework 高效刀法",
+                            "type": "aoe",
+                            "description": "Omega-M 重組時即發 PBAoE 無 telegraph，需遠離 M 重組位。",
+                            "tips": ["不站 M 重組位"]
+                        },
+                        {
+                            "name": "Synthetic Shield 合成盾",
+                            "type": "other",
+                            "description": "Omega-M 配盾擋 + 反射攻擊；需從盾外攻擊或破盾。",
+                            "tips": [
+                                { "text": "DPS 從盾外攻擊", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Pile Pitch / Solar Ray",
+                            "type": "tankbuster",
+                            "description": "Pile Pitch = MT 強 buster (Omega-M)；Solar Ray = MT 高傷 + Magic Vuln。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "歐米茄F",
+            "nameEn": "Omega-F",
+            "mnemonic": [
+                "Discharger = 擊退即發。",
+                "Beyond Defense = 雙坦反擊。",
+                "Synthetic Blades = 雙形混合。"
+            ],
+            "phases": [
+                {
+                    "name": "P2 - Omega-F + Synthetic Blades",
+                    "mechanics": [
+                        {
+                            "name": "Discharger 放電",
+                            "type": "other",
+                            "description": "Omega-F 重組時即發大擊退無 telegraph，需抗擊退或卡邊。",
+                            "tips": ["抗擊退或卡牆"]
+                        },
+                        {
+                            "name": "Beyond Defense 超越防禦",
+                            "type": "tankbuster",
+                            "description": "雙坦 buster + 反擊機制；需先吃後接反擊。",
+                            "tips": [{ "text": "雙坦同時開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Electric Slide 電滑",
+                            "type": "stack",
+                            "description": "雙形變泥 + 雙補 stack；先預判讓 M/F 重組到指定位 (M 中央、F 邊)。",
+                            "tips": [
+                                { "text": "雙補各帶 light party stack", "role": "healer" },
+                                "預定 M/F 重組位"
+                            ]
+                        },
+                        {
+                            "name": "Synthetic Blades 合成刀刃",
+                            "type": "other",
+                            "description": "雙形混合機制：M+F 同時招式合成，需依組合解。",
+                            "tips": ["照固定圖預定位"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "歐米茄(融合)",
+            "nameEn": "Omega",
+            "mnemonic": [
+                "Formless 無形 + Passage of Arms 終局。",
+                "先殺 M 再殺 F。",
+                "Hello, World 狂暴滅團。"
+            ],
+            "phases": [
+                {
+                    "name": "P3 - 融合 + Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Formless 無形態",
+                            "type": "raidwide",
+                            "description": "過渡 phase 大全屏 + 機制重置。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Passage of Arms 武器之徑 (終局)",
+                            "type": "other",
+                            "description": "Omega 合體 + 強力 burst；常需先擊倒 M 再擊倒 F。",
+                            "tips": [{ "text": "DPS 集中先殺 M", "role": "dps" }]
+                        },
+                        {
+                            "name": "Hello, World (Enrage)",
+                            "type": "raidwide",
+                            "description": "末段狂暴滅團。",
+                            "tips": [{ "text": "末段催爆發", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
