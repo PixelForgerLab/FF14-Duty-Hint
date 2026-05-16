@@ -1,119 +1,153 @@
 {
-    "id": "abyssos_the_sixth_circle_savage",
-    "name": "萬魔殿 煉淨之獄零式2",
-    "nameEn": "Abyssos: The Sixth Circle (Savage)",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 90,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）P6S Hegemone = Chelic Synergy 雙坦集合 buster + Vuln Up 換手。",
-        "2）Aetheric Polyominoid = 看格子線方向預判 Exocleaver 安全區，要記第一波再判第二波。",
-        "3）Pathogenic Cells 1-8 = 依數字順序往身後閃槍線。",
-        "4）Exchange of Agonies = 看 marker：stack / donut / spread 不同點站。",
-        "5）Choros Ixou = 看 boss 舉手南北或東西，先轉前再轉後。",
-        "6）Transmission = head / wing tether 決定 Glossomorph 或 Polymorph debuff，要往對應位站。",
-        "7）Cachexia = Aetheronecrosis + 抗性 debuff，照組合站位。",
-        "8）狂暴連 Dark Sphere + Unholy Darkness。"
-    ],
-    "notes": "EW 6.2 P6 Savage (Lv 90, ilvl 615)。Hegemone 黑暗系全屏 + tile 板機制。要事前定 partner / light party。",
-    "bosses": [
-        {
-            "name": "黑格摩涅",
-            "nameEn": "Hegemone",
-            "mnemonic": [
-                "Aetheric Polyominoid = 格子預判，避兩段 Exocleaver。",
-                "Pathogenic Cells = 1-8 依序到 boss 身後吃線。",
-                "Choros Ixou = 南北或東西舉手 → 先躲前 90° 再轉後。",
-                "Transmission = head/wing tether → 對應 debuff 點。"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - Polyominoid / Pathogenic / Choros",
-                    "mechanics": [
-                        {
-                            "name": "Chelic Synergy 集合 buster",
-                            "type": "tankbuster",
-                            "description": "雙坦集合分擔的高傷扇形 buster，其他人擦邊就死；雙坦同位置吃 + 掛 Vuln Up。",
-                            "tips": [
-                                { "text": "雙坦疊在同一格分擔 + 開個人減傷", "role": "tank" },
-                                { "text": "DPS / 補站到 boss 背後遠離扇形", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Aetheric Polyominoid 以太七巧板",
-                            "type": "other",
-                            "description": "Boss 召出多個以太節點，每個佔 1 格並從格子角延出兩條線，照線預判 Exocleaver 兩段 AoE 的安全區。",
-                            "tips": ["看線方向先記第一波，再判第二波翻轉"]
-                        },
-                        {
-                            "name": "Exocleaver 出口斬",
-                            "type": "aoe",
-                            "description": "兩段：第一段在預警格爆 AoE，第二段在第一段的安全格爆 (反向)，需先在格 A 後跳到格 B。",
-                            "tips": ["先看哪格亮 → 站亮格外的非亮格 → 換邊"]
-                        },
-                        {
-                            "name": "Unholy Darkness 黑暗共擔",
-                            "type": "stack",
-                            "description": "雙補目標分擔黑暗共擔 (light party 集中)，吃完掛 Dark Resistance Down II 短時間禁疊。",
-                            "tips": [{ "text": "Light party 集合 + 雙補連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Pathogenic Cells 病原細胞 1-8",
-                            "type": "other",
-                            "description": "每人 1-8 號標記，依序 boss 轉向打槍線；中標的人要往身後讓槍線過。",
-                            "tips": ["1→8 依序預先排好位 + 不擋下一個"]
-                        },
-                        {
-                            "name": "Exchange of Agonies 苦痛交換",
-                            "type": "other",
-                            "description": "依職能分發三種標記：stack (Unholy Darkness)、purple donut (Dark Perimeter)、spread；要往對應點站。",
-                            "tips": [
-                                "stack = 集中、donut = 站邊緣讓內部安全、spread = 散開",
-                                { "text": "DPS / 雙補 / 雙坦各認標記", "role": "dps" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - Choros / Transmission / Cachexia / Enrage",
-                    "mechanics": [
-                        {
-                            "name": "Choros Ixou 雙手揚舉",
-                            "type": "aoe",
-                            "description": "Boss 雙手亮起南北或東西兩側，打 90° 扇 → 再轉身打對面，需先躲前 90° 再轉後。",
-                            "tips": ["先看舉手方向 → 站對應 90° 外 → 機制後立刻轉身"]
-                        },
-                        {
-                            "name": "Transmission 傳輸",
-                            "type": "other",
-                            "description": "蛇頭 / 翼 tether 分配兩種 debuff：Glossomorph 變蛇 (近 boss 死)、Polymorph 變 (遠 boss 死)；依 debuff 進對應距離。",
-                            "tips": ["蛇 = 遠離 boss、其他 = 貼 boss", "提前看 tether 顏色"]
-                        },
-                        {
-                            "name": "Dark Dome / Dark Ashes / Dark Sphere",
-                            "type": "spread",
-                            "description": "Dark Dome = 隱形地圈 (移動後爆)、Dark Ashes = 中型 AoE 散 + Dark Resist Down、Dark Sphere = 大圈 spread (疊到 = 死)。",
-                            "tips": ["全程保散開距離 + 看 cast 名稱判斷大小"]
-                        },
-                        {
-                            "name": "Cachexia 惡液質",
-                            "type": "other",
-                            "description": "全員掛 Aetheronecrosis + Chelic 或 Magic 抗性 debuff，需按組合站位 (1/2 半場分組分擔)。",
-                            "tips": ["照固定圖站 (Chelic 左、Magic 右等)"]
-                        },
-                        {
-                            "name": "Aetherial Exchange + 末段循環",
-                            "type": "raidwide",
-                            "description": "Boss 吃 buff 強化下次招式；末段重複 Choros + Cells 強壓 DPS。",
-                            "tips": [{ "text": "末段集中爆發 + 補充減傷", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "abyssos_the_sixth_circle_savage",
+    "name":  "萬魔殿 煉淨之獄零式2",
+    "nameEn":  "Abyssos: The Sixth Circle (Savage)",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  90,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）P6S Hegemone = Chelic Synergy 雙坦集合 buster + Vuln Up 換手。",
+                     "2）Aetheric Polyominoid = 看格子線方向預判 Exocleaver 安全區，要記第一波再判第二波。",
+                     "3）Pathogenic Cells 1-8 = 依數字順序往身後閃槍線。",
+                     "4）Exchange of Agonies = 看 marker：stack / donut / spread 不同點站。",
+                     "5）Choros Ixou = 看 boss 舉手南北或東西，先轉前再轉後。",
+                     "6）Transmission = head / wing tether 決定 Glossomorph 或 Polymorph debuff，要往對應位站。",
+                     "7）Cachexia = Aetheronecrosis + 抗性 debuff，照組合站位。",
+                     "8）狂暴連 Dark Sphere + Unholy Darkness。"
+                 ],
+    "notes":  "EW 6.2 P6 Savage (Lv 90, ilvl 615)。Hegemone 黑暗系全屏 + tile 板機制。要事前定 partner / light party。",
+    "bosses":  [
+                   {
+                       "name":  "黑格摩涅",
+                       "nameEn":  "Hegemone",
+                       "mnemonic":  [
+                                        "Aetheric Polyominoid = 格子預判，避兩段 Exocleaver。",
+                                        "Pathogenic Cells = 1-8 依序到 boss 身後吃線。",
+                                        "Choros Ixou = 南北或東西舉手 → 先躲前 90° 再轉後。",
+                                        "Transmission = head/wing tether → 對應 debuff 點。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - Polyominoid / Pathogenic / Choros",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Chelic Synergy 集合 buster",
+                                                                "type":  "tankbuster",
+                                                                "description":  "雙坦集合分擔的高傷扇形 buster，其他人擦邊就死；雙坦同位置吃 + 掛 Vuln Up。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "雙坦疊在同一格分擔 + 開個人減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "DPS / 補站到 boss 背後遠離扇形",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aetheric Polyominoid 以太七巧板",
+                                                                "type":  "other",
+                                                                "description":  "Boss 召出多個以太節點，每個佔 1 格並從格子角延出兩條線，照線預判 Exocleaver 兩段 AoE 的安全區。",
+                                                                "tips":  [
+                                                                             "看線方向先記第一波，再判第二波翻轉"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Exocleaver 出口斬",
+                                                                "type":  "aoe",
+                                                                "description":  "兩段：第一段在預警格爆 AoE，第二段在第一段的安全格爆 (反向)，需先在格 A 後跳到格 B。",
+                                                                "tips":  [
+                                                                             "先看哪格亮 → 站亮格外的非亮格 → 換邊"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Unholy Darkness 黑暗共擔",
+                                                                "type":  "stack",
+                                                                "description":  "雙補目標分擔黑暗共擔 (light party 集中)，吃完掛 Dark Resistance Down II 短時間禁疊。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Light party 集合 + 雙補連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Pathogenic Cells 病原細胞 1-8",
+                                                                "type":  "other",
+                                                                "description":  "每人 1-8 號標記，依序 boss 轉向打槍線；中標的人要往身後讓槍線過。",
+                                                                "tips":  [
+                                                                             "1→8 依序預先排好位 + 不擋下一個"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Exchange of Agonies 苦痛交換",
+                                                                "type":  "other",
+                                                                "description":  "依職能分發三種標記：stack (Unholy Darkness)、purple donut (Dark Perimeter)、spread；要往對應點站。",
+                                                                "tips":  [
+                                                                             "stack = 集中、donut = 站邊緣讓內部安全、spread = 散開",
+                                                                             {
+                                                                                 "text":  "DPS / 雙補 / 雙坦各認標記",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - Choros / Transmission / Cachexia / Enrage",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Choros Ixou 雙手揚舉",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 雙手亮起南北或東西兩側，打 90° 扇 → 再轉身打對面，需先躲前 90° 再轉後。",
+                                                                "tips":  [
+                                                                             "先看舉手方向 → 站對應 90° 外 → 機制後立刻轉身"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Transmission 傳輸",
+                                                                "type":  "other",
+                                                                "description":  "蛇頭 / 翼 tether 分配兩種 debuff：Glossomorph 變蛇 (近 boss 死)、Polymorph 變 (遠 boss 死)；依 debuff 進對應距離。",
+                                                                "tips":  [
+                                                                             "蛇 = 遠離 boss、其他 = 貼 boss",
+                                                                             "提前看 tether 顏色"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dark Dome / Dark Ashes / Dark Sphere 暗球",
+                                                                "type":  "spread",
+                                                                "description":  "Dark Dome = 隱形地圈 (移動後爆)、Dark Ashes = 中型 AoE 散 + Dark Resist Down、Dark Sphere = 大圈 spread (疊到 = 死)。",
+                                                                "tips":  [
+                                                                             "全程保散開距離 + 看 cast 名稱判斷大小"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cachexia 惡液質",
+                                                                "type":  "other",
+                                                                "description":  "全員掛 Aetheronecrosis + Chelic 或 Magic 抗性 debuff，需按組合站位 (1/2 半場分組分擔)。",
+                                                                "tips":  [
+                                                                             "照固定圖站 (Chelic 左、Magic 右等)"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aetherial Exchange + 末段循環",
+                                                                "type":  "raidwide",
+                                                                "description":  "Boss 吃 buff 強化下次招式；末段重複 Choros + Cells 強壓 DPS。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "末段集中爆發 + 補充減傷",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
