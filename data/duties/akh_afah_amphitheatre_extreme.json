@@ -1,42 +1,51 @@
 {
-    "id":  "akh_afah_amphitheatre_extreme",
-    "name":  "永生圓劇場 (極式)",
-    "nameEn":  "The Akh Afah Amphitheatre (Extreme)",
-    "expansion":  "2.x 重生之境 (A Realm Reborn)",
-    "type":  "other",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Shiva：Tanks",
-                     "2） / ",
-                     "3）Tanks"
-                 ],
-    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "When Shiva equips her sword, she will immediately use Icebrand. Face this attack towards the rest of the party to share/split the damage.",
-                                                                "name":  "Tanks",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "Shiva",
-                       "nameEn":  "Shiva",
-                       "mnemonic":  [
-                                        "Tanks"
-                                    ]
-                   }
-               ]
+    "id": "akh_afah_amphitheatre_extreme",
+    "name": "永生圓劇場 神壇歼殛戰",
+    "nameEn": "The Akh Afah Amphitheatre (Extreme)",
+    "expansion": "2.x 重生之境 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）P1 (100-80%)：Sword/Staff/Unarmed 三 form 隨機。Sword Tank 接 Icebrand 朝隊伍分擔、避開 Glacier Bash 走穿 boss。",
+        "2）Adds Phase：4 Ice Soldier 集中 AoE 殺；60 秒未殺光 → Diamond Dust 改為 wipe。",
+        "3）P2 (70%+)：Bow Form 新增，**碰場邊 = 凍成 boulder 需被打破**；Permafrost 給 Thin Ice 走路會滑入牆凍死。",
+        "4）Bow Glass Dance：270 度錐，全員擠 boss 正後方；Avalanche 線 AoE 擊退，配 boss 北位 / 標記者在後使其向南擊退安全。",
+        "5）11 stacks Damage Up = hard enrage Diamond Dust 全滅 (DPS check)。"
+    ],
+    "notes": "ARR 2.0 trial EX Lv 50 ilvl 75。Shiva EX。三 form 切換 + adds + 場邊凍冰。資料來源：CGW (Akh Afah Amphitheatre Extreme)。",
+    "bosses": [
+        {
+            "name": "Shiva 希瓦",
+            "nameEn": "Shiva",
+            "mnemonic": [
+                "三 form：Sword 錐/Staff 散/Unarmed 圓陣",
+                "P2 場邊 = 凍 + Thin Ice 滑",
+                "Bow Glass Dance 站背後",
+                "11 Damage Up = enrage"
+            ],
+            "phases": [
+                { "name": "Adds 開場", "mechanics": [
+                    { "name": "4 Ice Soldier 冰兵 + Diamond Dust 60s", "type": "other", "description": "開場召 4 隻 Ice Soldier 並進入 Sword Form。60 秒後 Shiva 無敵 → 凍隊 → Diamond Dust 2-4k；**若 adds 未殺光 = 全滅**。", "tips": [{ "text": "Staff Tank 把 adds 拉中央 AoE 殺", "role": "tank" }, { "text": "DPS AoE", "role": "dps" }] }
+                ]},
+                { "name": "P1 100-80%", "mechanics": [
+                    { "name": "Sword Form / Icebrand", "type": "aoe", "description": "錐形 18k 共擔。", "tips": [{ "text": "Sword Tank 接 Icebrand 朝隊伍方向分擔", "role": "tank" }] },
+                    { "name": "Glacier Bash", "type": "aoe", "description": "錐形高傷 + 暈。", "tips": [{ "text": "讀條時跑穿 boss 避開", "role": "tank" }] },
+                    { "name": "Whiteout / Heavenly Strike", "type": "aoe", "description": "Whiteout 無預警甜甜圈，Heavenly Strike 隨機擊退。", "tips": ["貼緊 boss / Arm's Length"] },
+                    { "name": "Staff Form / Hail Storm", "type": "spread", "description": "玩家頭頂冰 AoE。", "tips": ["**立刻散開**到場邊不要等"] },
+                    { "name": "Unarmed Form / Icicle Impact", "type": "aoe", "description": "場上多重圓陣 → 冰柱落下。", "tips": ["閃圓"] }
+                ]},
+                { "name": "P2 70%-0%", "mechanics": [
+                    { "name": "場邊凍結 + Permafrost", "type": "other", "description": "碰場邊 = 凍成 boulder (需被打破)；Permafrost 後給 Thin Ice debuff (移動會滑控不住)。", "tips": ["每招結束站住等 Thin Ice 消失再動"] },
+                    { "name": "Bow Form / Glass Dance", "type": "aoe", "description": "270 度錐，**全隊站 boss 正後方**否則 10k 傷。", "tips": ["全員擠 boss 正後方"] },
+                    { "name": "Avalanche 雪崩", "type": "knockback", "description": "標記玩家 + 直線 AoE 擊退。可開 Arm's Length / Surecast。", "tips": ["boss 拉北邊、標記者站 boss 正後、其餘站前；標記者向南擊退安全"] },
+                    { "name": "新 Icicle Impact 圓陣", "type": "aoe", "description": "新增兩種圓陣模式。", "tips": ["看新模式走位"] },
+                    { "name": "Dreams of Ice (11 Stack Enrage)", "type": "raidwide", "description": "Shiva 永久堆疊 Damage Up，11 stacks → 凍住全隊 → Diamond Dust 致死。", "tips": [{ "text": "硬性 DPS check", "role": "dps" }] }
+                ]}
+            ]
+        }
+    ]
 }
