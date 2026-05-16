@@ -1,74 +1,122 @@
 {
-  "id": "akh_afah_amphitheatre_hard",
-  "name": "希瓦殲滅戰",
-  "nameEn": "The Akh Afah Amphitheatre (Hard)",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "希瓦冰神戰",
-    "Boss 在棍/弓兩種型態間切換",
-    "棍型態：近戰範圍 AoE",
-    "弓型態：遠程點名直線",
-    "Diamond Dust：全體冰凍大傷"
-  ],
-  "notes": "Primal 希瓦的殲滅戰版本。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "希瓦",
-      "nameEn": "Shiva",
-      "mnemonic": [
-        "棍 vs 弓型態切換",
-        "棍：近戰 AoE，跑外圈",
-        "弓：遠程點名，閃直線",
-        "Diamond Dust：全體大冰傷，預備減傷"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "型態切換",
-              "type": "other",
-              "description": "Boss 在棍型態與弓型態間切換，攻擊方式不同。",
-              "tips": [
-                "棍型態：靠近 Boss 但避中心 AoE",
-                "弓型態：遠離 Boss、閃直線"
-              ]
-            },
-            {
-              "name": "Icebrand（棍）",
-              "type": "aoe",
-              "description": "棍型態的近戰 AoE。",
-              "tips": [
-                "看 Boss 動作站位",
-                { "text": "T 拉好不要踩 AoE", "role": "tank" }
-              ]
-            },
-            {
-              "name": "Hailstorm（弓）",
-              "type": "aoe",
-              "description": "弓型態的遠程直線 AoE。",
-              "tips": [
-                "閃到線外"
-              ]
-            },
-            {
-              "name": "Diamond Dust",
-              "type": "raidwide",
-              "description": "全體高傷冰攻擊。",
-              "tips": [
-                { "text": "AoE 滿血滿條治療", "role": "healer" },
-                { "text": "T 開減傷", "role": "tank" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "akh_afah_amphitheatre_hard",
+    "name":  "永生圓劇場 (零式)",
+    "nameEn":  "The Akh Afah Amphitheatre (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Shiva：Dreams of Ice",
+                     "2）Staff form / Hailstorm",
+                     "3）Permafrost"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Shiva occasionally uses this action, gaining a permanent, stackable File:Damage up icon2.png Damage Up buff.",
+                                                                "name":  "Dreams of Ice",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "**Shiva\u0027s File:Frost brand icon1.png Frost Brand buff will slightly increase the damage she deals.",
+                                                                "name":  "Staff form",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed circle AoEs on random players. Spread out to avoid overlap.",
+                                                                "name":  "Hailstorm",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Untelegraphed party-wide damage.",
+                                                                "name":  "Absolute Zero",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Initially spawns five circle AoE telegraphs. Move to one of four safe spots that are 90 degrees from each other. Being hit will inflict...",
+                                                                "name":  "Icicle Impact",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Also note that failing any mechanic will debuff with a stacking vulnerability up Vulnerability Up",
+                                                                "name":  "Sword form",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): An untelegraphed conal tankbuster immediately used after switching to this form. The main tank should use mitigation and ensure to face...",
+                                                                "name":  "Icebrand",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Untelegraphed minor knockback from the boss\u0027s current position. Can be prevented with Surecast or Arm\u0027s Length.",
+                                                                "name":  "Heavenly Strike",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Frontal cone that will inflict heavy damage and stun Stun anyone hit. Move behind.",
+                                                                "name":  "Glacier Bash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Shiva temporarily freezes the floor, giving everyone File:Thin Ice icon1.png Thin Ice, causing to slide a long distance if they move. Players should r...",
+                                                                "name":  "Permafrost",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Shiva",
+                       "nameEn":  "Shiva",
+                       "mnemonic":  [
+                                        "Dreams of Ice",
+                                        "Staff form",
+                                        "Hailstorm"
+                                    ]
+                   }
+               ]
 }

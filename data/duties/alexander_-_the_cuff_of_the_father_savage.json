@@ -1,37 +1,35 @@
 {
     "id": "alexander_-_the_cuff_of_the_father_savage",
-    "name": "亞歷山卓 起源篇 父之臂（零式）",
+    "name": "亞歷山大零式 起源之章 2 (零式)",
     "nameEn": "Alexander - The Cuff of the Father (Savage)",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "raid",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 60,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.x HW Alexander Savage",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）Living Liquid 液態人 + Liquid Hand 雙 boss 同步生命。",
+        "2）Splash 標記 / Hand of Pain (tank shareable) / Hand of Parting (4-man stack)。",
+        "3）Cascade 全屏 + Drainage 強直線 tankbuster；Embolus 召喚水球需誘導融合。",
+        "4）狂暴：水球失控全滅。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.05 Alexander: Gordias Savage A2S (Lv 60, ilvl 210)。雙 boss 同步生命 (Living Liquid + Liquid Hand)，水球管理為核心。",
     "bosses": [
         {
-            "name": "生命液體",
-            "nameEn": "Living Liquid",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Living Liquid + Liquid Hand",
+            "nameEn": "Living Liquid + Liquid Hand",
+            "mnemonic": ["雙 boss 同步生命", "Hand of Pain/Parting 不同分擔", "Embolus 水球誘導融合"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Hand of Pain 痛之手", "type": "tankbuster", "description": "對主仇恨者的物理 tankbuster，可分擔。", "tips": [{ "text": "OT 接 Liquid Hand 一起吃減傷", "role": "tank" }] },
+                { "name": "Hand of Parting 別離之手", "type": "stack", "description": "場上 4 名玩家分擔的疊接機制。", "tips": ["指定 4 人疊接位置"] },
+                { "name": "Cascade 連鎖瀑布", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Drainage 排水", "type": "tankbuster", "description": "直線 tankbuster 對 Living Liquid 主仇恨者。", "tips": [{ "text": "MT 開大減傷", "role": "tank" }] },
+                { "name": "Embolus 栓塞水球", "type": "other", "description": "場上召喚水球，需引誘讓兩顆同色融合或誘到 boss 邊吸收。", "tips": ["分配引線者拉到指定位置"] },
+                { "name": "Splash 飛濺", "type": "spread", "description": "標記玩家放圓 AoE。", "tips": ["散開"] },
+                { "name": "Enrage 失控", "type": "raidwide", "description": "狂暴時水球失控全滅。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

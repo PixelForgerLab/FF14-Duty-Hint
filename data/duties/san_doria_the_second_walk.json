@@ -1,137 +1,520 @@
 {
-    "id": "san_doria_the_second_walk",
-    "name": "桑多利亞：第二巡行",
-    "nameEn": "San d'Oria: The Second Walk",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）麒麟：手臂南北線 AoE 後接更寬線；召喚四聖獸（玄武/白虎/朱雀/青龍）各有不同機制。",
-        "2）Ultima + Omega：Ultima 場外固定，Omega 移動；鏡子反射雷射 + Trajectory Projection 散開。",
-        "3）卡姆拉納特：最後 boss（資料截斷，請參考 Hector 攻略影片）。"
-    ],
-    "notes": "DT 7.3 24 人 alliance raid（Lv 100，ilvl 725）。Echoes of Vana'diel 第 2 部。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "信仰麒麟",
-            "nameEn": "Faithbound Kirin",
-            "mnemonic": ["手臂線 AoE 寬度比預警更廣", "看召喚的四聖獸"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Stonega IV",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Wrought Arms + Synchronized Strike",
-                            "type": "aoe",
-                            "description": "東西兩手 + 線 AoE 後傳遞給手臂放更寬的線 AoE。",
-                            "tips": ["看初始線朝向", "預判更寬版本"]
-                        },
-                        {
-                            "name": "Crimson Riddle",
-                            "type": "aoe",
-                            "description": "尾發光=後 180 度 cleave；嘴發光=前 180 度 cleave。",
-                            "tips": ["看發光位置繞對側"]
-                        },
-                        {
-                            "name": "Summon Genbu（玄武）",
-                            "type": "aoe",
-                            "description": "震地後地裂噴水柱 + 點 AoE + 甜甜圈 AoE。",
-                            "tips": ["先閃水柱位置", "再外/內判斷"]
-                        },
-                        {
-                            "name": "Summon Byakko（白虎）",
-                            "type": "aoe",
-                            "description": "8 板跳邊衝鋒線 AoE + 終點點 AoE。後段配合 Quake 圓 AoE。",
-                            "tips": ["看 Byakko 衝鋒朝向", "閃線 + 圓"]
-                        },
-                        {
-                            "name": "Summon Suzaku（朱雀）",
-                            "type": "aoe",
-                            "description": "場地縮成方形 + 火球線 AoE 衝鋒 + 散開標記。",
-                            "tips": ["看火球位置找縫", "散開"]
-                        },
-                        {
-                            "name": "Summon Seiryu（青龍）",
-                            "type": "aoe",
-                            "description": "角落旋轉線 AoE + Boss 雙釋放（圓 AoE + 散開）。",
-                            "tips": ["看旋轉方向避", "散開"]
-                        },
-                        {
-                            "name": "Wringer + 手臂甜甜圈",
-                            "type": "aoe",
-                            "description": "中央點 AoE + 手臂甜甜圈留中央安全。",
-                            "tips": ["先跑遠避點", "再回中央"]
-                        },
-                        {
-                            "name": "Mighty Grip + Chiseled Arms",
-                            "type": "other",
-                            "description": "場地壓縮 + 2 個可選手臂小怪 + Deadly Hold 4 塔（3 T 各踩 1）+ Kirin Captivator DPS check。",
-                            "tips": [
-                                "全力打 Chiseled Arms",
-                                { "text": "3 T 各踩 1 塔", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "歐美加 + 阿魯提瑪",
-            "nameEn": "Ultima, the Feared + Omega, the One",
-            "mnemonic": ["Ultima 場外固定", "Omega 移動可調", "鏡子反射雷射"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Antimatter (Ultima)",
-                            "type": "tankbuster",
-                            "description": "3 T 都受魔法坦補。",
-                            "tips": [{ "text": "3 T 都開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Energy Orb + Energy Ray",
-                            "type": "aoe",
-                            "description": "Ultima 場邊 3 個 portal 放線 AoE。",
-                            "tips": ["遠離 portal 行"]
-                        },
-                        {
-                            "name": "Aft-to-fore / Fore-to-aft Fire",
-                            "type": "aoe",
-                            "description": "Omega 兩段 180 度 cleave 依名稱方向。",
-                            "tips": ["看名稱方向繞"]
-                        },
-                        {
-                            "name": "Tractor Beam + 散開",
-                            "type": "spread",
-                            "description": "Ultima 拉入 + 飛船半場 cleave + 散開標記。",
-                            "tips": ["跑對側或抗擊退", "閃 cleave 再散開"]
-                        },
-                        {
-                            "name": "Mana Screen",
-                            "type": "aoe",
-                            "description": "鏡子斜放 + Energy Orb 雷射反射 90 度。",
-                            "tips": ["看鏡子角度預判反射方向"]
-                        },
-                        {
-                            "name": "Trajectory Projection",
-                            "type": "spread",
-                            "description": "玩家獲得 Projection Locus 9 秒 debuff，圓 AoE 偏移玩家位置。",
-                            "tips": ["debuff 結束前往安全位調整"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "san_doria_the_second_walk",
+    "name":  "桑多利亞：第二巡行",
+    "nameEn":  "San d\u0027Oria: The Second Walk",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "aoe",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Faithbound Kirin：Stonega IV / Wrought Arms / Synchronized Strike",
+                     "2）B2 Omega, the One：Ion Efflux / Antimatter / Energy Orb",
+                     "3）B3 Kam\u0027lanaut：Enspirited Swordplay / Proving Ground / Elemental Blade",
+                     "4）B4 Eald\u0027narche：Uranos Cascade / Cronos Sling / Empyreal Vortex"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) aoe (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Stonega IV",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The kirin summons two untargetable Sculpted Arm adds, one west and one east.",
+                                                                "name":  "Wrought Arms",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The kirin tethers both arms and spawns two line AoE telegraphs that run north to south. After these initial AoEs resolve, they will be transferred ove...",
+                                                                "name":  "Synchronized Strike",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "**The boss\u0027s tail will begin glowing red, denoting a 180 degree rear cleave with no ground telegraph.",
+                                                                "name":  "Crimson Riddle",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The kirin will tether an arm and spawn a circle AoE telegraph to its left or right, based on the cast. This is followed with a late telegraphed massiv...",
+                                                                "name":  "Striking Left/Right",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "/ Double Wringer / Smiting (Left/Right) Sequence: The boss will display two AoE telegraphs originating from it (lines, centered point-blank, off-cente...",
+                                                                "name":  "Synchronized Sequence",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "***If the AoE sequence is point-blank then lines, players would first move away from the boss, then go east-west in max melee range, and finally the m...",
+                                                                "name":  "Double Wringer",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The AoE sequence is an offset circle AoE followed by a point-blank AoE. Dodge circle, then be away from both the boss and the first tethered, arm, the...",
+                                                                "name":  "Smiting (Left/Right) Sequence",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons a persistent AoE around the arena, transforming it to a much smaller rectangle.",
+                                                                "name":  "Mighty Grip",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Four tankbuster towers will spawn. Alxaal will take one, meaning that the remaining 3 tanks will each need to take one. Each tank will receive the Fil...",
+                                                                "name":  "Deadly Hold",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Both hand adds become targetable, while raid-wide damage (Shockwave) periodically pulses. Both Chiseled Arms must be destroyed before this cast finish...",
+                                                                "name":  "Kirin Captivator",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Faithbound Kirin",
+                       "nameEn":  "Faithbound Kirin",
+                       "mnemonic":  [
+                                        "Stonega IV",
+                                        "Wrought Arms",
+                                        "Synchronized Strike"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Omega uses a magical raid-wide attack.",
+                                                                "name":  "Ion Efflux",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima targets all three tanks with telegraphed magical tankbusters.",
+                                                                "name":  "Antimatter",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima spawns three portals next to each other at the side of the arena. These will do a late telegraphed line AoE (Energy Ray).",
+                                                                "name":  "Energy Orb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Omega will flash two 180 degree cleave telegraphs in the direction of the cast name, then execute those attacks.",
+                                                                "name":  "Aft-to-fore Fire / Fore-to-aft Fire",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima will use a telegraphed draw-in attack. Players should go to the opposite side of the arena to avoid being pushed off or use knockback immune. A...",
+                                                                "name":  "Tractor Beam",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Omega will flash three sets of red rectangular regions on the arena, indicating the location of AoEs, then execute the attacks. Immediately followed u...",
+                                                                "name":  "Surface Missile",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima will spawn a mirror panel on the arena at a 45 degree angle. It will then use an Energy Orb that hits the mirror, resulting in a follow-up line...",
+                                                                "name":  "Mana Screen",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Omega will give random players a 9-second File:Projection locus icon.png Projection Locus debuff. These players will flash a red circle AoE telegraph ...",
+                                                                "name":  "Trajectory Projection",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Jump from the airship before it\u0027s reduced to ash! Ultima will forcibly pull all players towards it, briefly stun then, and both bosses will become unt...",
+                                                                "name":  "Tractor Field",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima will use a heavy-hitting magical raid-wide attack that should be mitigated.",
+                                                                "name":  "Citadel Buster",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Omega will spawn a magical proximity AoE in the middle of the arena, indicating where it will jump to.",
+                                                                "name":  "Hyper Pulse",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Ultima will sequentially spawn four proximity AoE telegraphs, one near each corner of the arena, in a clockwise or counterclockwise fashion. Rotate wi...",
+                                                                "name":  "Chemical Bomb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Omega, the One",
+                       "nameEn":  "Omega, the One",
+                       "mnemonic":  [
+                                        "Ion Efflux",
+                                        "Antimatter",
+                                        "Energy Orb"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Enspirited Swordplay",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Kam\u0027lanaut will spawn a small point-blank AoE under him that will leave behind a persistent puddle, inflicting Bleeding Bleeding to anyone who steps i...",
+                                                                "name":  "Proving Ground",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Kam\u0027lanaut will sequentially imbue himself with two elements (fire, water, earth, air, ice, lightning), which will empower his next attack.",
+                                                                "name":  "Elemental Blade",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns one of two patterns of elemental AoEs. The telegraphs matching the elements from previous Elemental Blade attack will enlarge significantly, so...",
+                                                                "name":  "Sublime Elements",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Line AoE physical tankbusters on all 3 tanks that will also knock them back. The knockback can be prevented with knockback immune.",
+                                                                "name":  "Princely Blow",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed line AoE through Kam\u0027lanaut and spawns numerous Sublime Estoc (sword) adds in it, pointing in one of two directions. Each sword will use a...",
+                                                                "name":  "Light Blade",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed point-blank AoE. Kam\u0027lanaut will rotate to face a new direction and immediately follow with a late telegraphed 180 degree frontal cleave, ...",
+                                                                "name":  "Great Wheel",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Stuns players for several seconds and transitions the arena to a slightly smaller circle with three evenly spaced prongs.",
+                                                                "name":  "Esoteric Scrivening",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a dangerous persistent AoE on the three prongs and summons three crystals (e.g. earth, water, ice).",
+                                                                "name":  "Esoteric Palisade",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Kam\u0027lanaut will spawn three sets of expanding elemental circles originating from him. When the circle touches a crystal matching its element, the crys...",
+                                                                "name":  "Crystalline Resonance",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Kam\u0027lanaut will spawn three untargetable clones of himself, each of which will use a late telegraphed line AoE (Illumed Estoc) roughly through where t...",
+                                                                "name":  "Illumed Facet",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed radial knockback from the center, dealing physical damage. All players should either use knockback immune or position to be knocked back t...",
+                                                                "name":  "Shield Bash",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Stack marker AoE on a random player, dealing magical damage.",
+                                                                "name":  "Empyreal Banish IV",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Similar to before, but Kam\u0027lanaut now imbues three instead of two elements, causing three AoE telegraphs to enlarge. For the cones pattern, only one s...",
+                                                                "name":  "Proving Ground + Elemental Blade",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "*Great Wheel + Empyreal Banish IV",
+                                                                "name":  "Light Blade + Empyreal Banish III",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Now spawns six crystals. Kam\u0027lanaut will also send out two different elemental rings at once, causing two crystals to detonate at a given time.",
+                                                                "name":  "Esoteric Palisade + Crystalline Resonance",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Will spawn only two clones, but their line AoEs will both intersect his hitbox and cover two of the three prongs, so be out of it and position for the...",
+                                                                "name":  "Illumed Facet + Shield Bash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Kam\u0027lanaut",
+                       "nameEn":  "Kam\u0027lanaut",
+                       "mnemonic":  [
+                                        "Enspirited Swordplay",
+                                        "Proving Ground",
+                                        "Elemental Blade"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Telegraphed AoE magical tankbuster on all three tanks.",
+                                                                "name":  "Uranos Cascade",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "One of two attacks based on the positions of the Eald\u0027narche\u0027s card-like implements (exoplates), followed by a half-room cleave.",
+                                                                "name":  "Cronos Sling",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Five hits of magical raid-wide damage, places down red circle AoE telegraphs at various locations, and gives random players spread marker AoE telegrap...",
+                                                                "name":  "Empyreal Vortex",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Two red circles will spawn on the ground, one directly below the boss, and one on a random corner, indicating where Eald\u0027narche will teleport to. Afte...",
+                                                                "name":  "Warp",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns four moving line AoE telegraphs in a \"windmill\" formation. Dodge into the first telegraph when it goes off to be safe from the rest.",
+                                                                "name":  "Gaea Stream",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spread marker AoEs on random players dealing magical damage and leaving behind crystal puddles that will detonate as late-telegraphed follow up AoEs o...",
+                                                                "name":  "Omega Javelin",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a large glowing tile on the arena with diffuse telegraphs at the edges, indicating a plus-shaped AoE.",
+                                                                "name":  "Duplicate",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns an square AoE telegraph at the north of the arena. Stuns the party and changes the arena after a cutscene.",
+                                                                "name":  "Excelsior",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns two plus telegraph tiles. However, one of the tiles will also be linked with the hole in the arena. The plus telegraph and the tile it is on wi...",
+                                                                "name":  "Duplicate + Visions of Paradise",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Eald\u0027narche will forcibly draw one player towards them and imprison them in a crystal, making them the target of a stack marker AoE dealing magical da...",
+                                                                "name":  "Stellar Burst",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns several AoE telegraphs—multiple circle AoEs and a line AoE covering three tiles. In addition, either a proximity AoE in the middle or a draw-in...",
+                                                                "name":  "Ancient Triad",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Eald\u0027narche",
+                       "nameEn":  "Eald\u0027narche",
+                       "mnemonic":  [
+                                        "Uranos Cascade",
+                                        "Cronos Sling",
+                                        "Empyreal Vortex"
+                                    ]
+                   }
+               ]
 }

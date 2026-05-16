@@ -1,73 +1,74 @@
 {
-  "id": "whorleater_hard",
-  "name": "利維亞桑殲滅戰",
-  "nameEn": "The Whorleater (Hard)",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "利維亞桑海神戰",
-    "場地是船甲板，會傾斜",
-    "看 Boss 從船頭/船尾出現，跑對應方向避擊退",
-    "Tidal Wave：跑到船中柱旁邊抗推"
-  ],
-  "notes": "Primal 利維亞桑的殲滅戰版本，著名場地傾斜機制。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "利維亞桑",
-      "nameEn": "Leviathan",
-      "mnemonic": [
-        "Boss 從船頭/船尾出現 → 跑反向避擊退",
-        "Tidal Wave：抓船中柱避免被推下海",
-        "Hydro Shot：閃前方直線",
-        "Tail Whip / Body Slam：注意 Boss 動作預判"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "Tidal Wave（潮汐巨浪）",
-              "type": "raidwide",
-              "description": "Boss 用海浪推全場，跑到船中央柱子旁邊抓住可抗擊退。",
-              "tips": [
-                "全員跑到船中柱旁邊",
-                "抓住柱子免被推下海",
-                "失敗 = 被推下船死亡"
-              ]
-            },
-            {
-              "name": "船頭/船尾出現",
-              "type": "other",
-              "description": "Boss 會從船頭或船尾出現，會把該側的玩家推開。",
-              "tips": [
-                "看 Boss 從哪邊出現，跑到反方向",
-                { "text": "T 跟著移動拉好仇恨", "role": "tank" }
-              ]
-            },
-            {
-              "name": "Hydro Shot",
-              "type": "aoe",
-              "description": "前方直線水攻擊。",
-              "tips": [
-                "閃到線外"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體水傷。",
-              "tips": [
-                { "text": "預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "whorleater_hard",
+    "name":  "海濤戰艦 (零式)",
+    "nameEn":  "The Whorleater (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "raidwide",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Leviathan：Dread Tide",
+                     "2）{{action icon|Aqua Breath}} / Water Spout",
+                     "3）Tidal Roar"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) raidwide (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "A Water elemental tankbuster fired at the main enmity target.",
+                                                                "name":  "Dread Tide",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "A point-blank AoE attack that deals medium damage. This is cast periodically.",
+                                                                "name":  "{{action icon|Aqua Breath}}",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Cast on random players, deals medium damage.",
+                                                                "name":  "Water Spout",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Unavoidable party-wide damage.",
+                                                                "name":  "Tidal Roar",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Leviathan",
+                       "nameEn":  "Leviathan",
+                       "mnemonic":  [
+                                        "Dread Tide",
+                                        "{{action icon|Aqua Breath}}",
+                                        "Water Spout"
+                                    ]
+                   }
+               ]
 }

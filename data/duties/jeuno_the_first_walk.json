@@ -1,179 +1,400 @@
 {
-    "id": "jeuno_the_first_walk",
-    "name": "朱諾：第一巡行",
-    "nameEn": "Jeuno: The First Walk",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）普麗修：「Wait for it...」幾次決定 AoE 大小（1=最大、3=最小）；Auroral Uppercut 同樣規則。",
-        "2）法夫納：尾巴=270 度 AoE、嘴=甜甜圈火、爪=點 AoE；Darters 小怪要快打掉。",
-        "3）大天使五人組（MR/EV/HM/GK/TT）：保持血量接近，超過會強化；持續觀察動作預判。"
-    ],
-    "notes": "DT 7.1 24 人 alliance raid（Lv 100，ilvl 695）。FFXI Echoes of Vana'diel 致敬第 1 部。3 boss 都有 FFXI 致敬。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "桎梏的普麗修",
-            "nameEn": "Prishe of the Distant Chains",
-            "mnemonic": ["Wait for it 次數=AoE 大小", "1 次最大、3 次最小"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Banishga",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Knuckle Sandwich",
-                            "type": "aoe",
-                            "description": "拳套黃/橘/紫 3 色同心圓，「Wait for it」次數決定 AoE 大小（1=最大、2=中、3=最小）。AoE 後接甜甜圈打剛才安全位。",
-                            "tips": ["聽「Wait for it」次數", "選對應大小的圓", "AoE 後馬上移到剛被打到的圈內"]
-                        },
-                        {
-                            "name": "Nullifying Dropkick",
-                            "type": "stack",
-                            "description": "3 坦疊機坦補。",
-                            "tips": [{ "text": "3 坦集中疊", "role": "tank" }]
-                        },
-                        {
-                            "name": "Banish Storm",
-                            "type": "aoe",
-                            "description": "2 根棒子 + 各 3 條黃箭頭外擴圓 AoE。",
-                            "tips": ["看箭頭方向預判 AoE"]
-                        },
-                        {
-                            "name": "Holy",
-                            "type": "spread",
-                            "description": "散開標記 + 光抗下（重疊致命）。",
-                            "tips": ["完全分散"]
-                        },
-                        {
-                            "name": "Crystalline Thorns",
-                            "type": "aoe",
-                            "description": "場上多數區域長刺，L 形對角 + 中央方塊安全。",
-                            "tips": ["跑到 L 角或中央"]
-                        },
-                        {
-                            "name": "Auroral Uppercut",
-                            "type": "other",
-                            "description": "玩家被擊飛擊退，3 條彩色軌跡，「Wait for it」次數選擇正確軌跡（1=最近、2=中、3=最遠）。落到刺上會被暈。",
-                            "tips": ["看「Wait for it」次數選對應軌跡", "角度避免被打到刺", "1 次留中央、2-3 次到 L 角"]
-                        },
-                        {
-                            "name": "Banishga IV",
-                            "type": "raidwide",
-                            "description": "全體魔法傷 + 場上網格球 AoE 外/內擴散。",
-                            "tips": ["看內/外球發光", "跟著順序閃"]
-                        },
-                        {
-                            "name": "Asuran Fists",
-                            "type": "stack",
-                            "description": "8 段疊機塔。",
-                            "tips": ["全員集中疊"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "被遺忘的法夫納",
-            "nameEn": "Fafnir the Forgotten",
-            "mnemonic": ["尾=270 度（前安全）", "嘴=甜甜圈火", "爪=點 AoE"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Dark Matter Blast",
-                            "type": "raidwide",
-                            "description": "全體魔法傷 + 場邊 AoE。",
-                            "tips": ["別站場邊"]
-                        },
-                        {
-                            "name": "Spike Flail（尾巴）",
-                            "type": "aoe",
-                            "description": "Boss 抬尾 = 270 度 AoE 留前方安全。",
-                            "tips": ["跑到 Boss 正前方"]
-                        },
-                        {
-                            "name": "Dragon Breath（嘴）",
-                            "type": "aoe",
-                            "description": "Boss 嘴發光 = 甜甜圈火 AoE 留持續岩漿。",
-                            "tips": ["跑進 Boss 貼身", "記岩漿從起始點開始消失"]
-                        },
-                        {
-                            "name": "Touchdown（爪）",
-                            "type": "aoe",
-                            "description": "Boss 爪發光 = 大點 AoE。",
-                            "tips": ["跑到場邊（爪攻擊不到的地方）"]
-                        },
-                        {
-                            "name": "Baleful Breath",
-                            "type": "stack",
-                            "description": "4 段線疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Sharp Spike",
-                            "type": "tankbuster",
-                            "description": "3 T AoE 坦補。",
-                            "tips": [{ "text": "3 T 都開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Darters",
-                            "type": "other",
-                            "description": "毒蝙蝠小怪會狂怒放正面切（高傷+中毒）。",
-                            "tips": [
-                                { "text": "T 拉住快打掉", "role": "tank" },
-                                "別站正面"
-                            ]
-                        },
-                        {
-                            "name": "Hurricane Wing",
-                            "type": "raidwide",
-                            "description": "9 段魔法全體傷，最後一段更強。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "風暴階段",
-                            "type": "aoe",
-                            "description": "紫圓/甜甜圈漸減 AoE + 旋風小怪 + Horrid Roar 紅圓（恐慌）+ 散開標記。",
-                            "tips": ["看紫圖案找縫", "閃旋風", "閃紅圓避免恐慌"]
-                        },
-                        {
-                            "name": "Absolute / Winged Terror",
-                            "type": "aoe",
-                            "description": "頭發光 = 中央線；翅膀發光 = 兩側線。",
-                            "tips": ["看發光位置繞"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "5 大天使",
-            "nameEn": "The Ark Angels",
-            "mnemonic": ["MR/EV/HM/GK/TT 五人組", "保持血量接近", "看動作預判"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "團體機制",
-                            "type": "other",
-                            "description": "5 boss 不需要拉開，建議集中在場中。血量差距太大會強化。",
-                            "tips": ["平均輸出", "持續觀察 5 boss 動作"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "jeuno_the_first_walk",
+    "name":  "朱諾：第一巡行",
+    "nameEn":  "Jeuno: The First Walk",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raidwide",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Prishe of the Distant Chains：Banishga / Knuckle Sandwich / Nullifying Dropkick",
+                     "2）B2 Fafnir the Forgotten：Dark Matter Blast / Offensive Posture / Baleful Breath",
+                     "3）B3 Shadow Lord：Giga Slash / Umbra Smash / Implosion"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) raidwide (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Magical raidwide damage.",
+                                                                "name":  "Banishga",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Prishe readies to strike... Prishe will tether a point on the ground which will have three different colored concentric circles (yellow, orange, purpl...",
+                                                                "name":  "Knuckle Sandwich",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A shared tankbuster stack on the main tank, dealing physical damage. All 3 tanks should stack.",
+                                                                "name":  "Nullifying Dropkick",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Summons two yellow rods on the arena, each of which will have three yellow arrows extending from it, denoting the locations of circle AoEs that will t...",
+                                                                "name":  "Banish Storm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spread marker AoEs on random players, dealing magical damage and inflicting File:Light resistance down icon2.png Elemental Resistances, making overlap...",
+                                                                "name":  "Holy",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed irregular AoE in which Prishe will spawn spikes covering most of the arena except for L-shaped regions on two opposite corners and an re...",
+                                                                "name":  "Crystalline Thorns",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Prishe readies to strike... Each player will be knocked up and back from Prishe\u0027s location, denoted by the three different colored trajectories. For v...",
+                                                                "name":  "Auroral Uppercut",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raidwide damage and spawns numerous orbs in a grid pattern.",
+                                                                "name":  "Banishga IV",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a multi-hit stack marker tower. All players should stack and heal through the eight hits of physical damage.",
+                                                                "name":  "Asuran Fists",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Prishe of the Distant Chains",
+                       "nameEn":  "Prishe of the Distant Chains",
+                       "mnemonic":  [
+                                        "Banishga",
+                                        "Knuckle Sandwich",
+                                        "Nullifying Dropkick"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Magical raidwide damage. Also spawns a dangerous AoE on the edge of the arena.",
+                                                                "name":  "Dark Matter Blast",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "One of three different attacks based on Fafnir\u0027s animation. The first time each animation occurs, it will be accompanied by a warning message.",
+                                                                "name":  "Offensive Posture",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A four-hit line stack AoE dealing magical damage.",
+                                                                "name":  "Baleful Breath",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed AoE physical tankbusters on all three tanks.",
+                                                                "name":  "Sharp Spike",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Fafnir inflicts nine hits of magical raidwide damage, with the final hit dealing more damage.",
+                                                                "name":  "Hurricane Wing",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Each targetable boss will tether all members of a different alliance and give one of File:Epic hero icon.png Epic Hero, File:Fated hero icon.png Fated...",
+                                                                "name":  "The Decisive Battle",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "MR targets each tank with a telegraphed AoE magical tankbuster.",
+                                                                "name":  "Cloudsplitter",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "GK summons two sets of crisscrossing ice line AoEs (Tachi: Yukikaze), one pink flower AoE (Tachi: Kasha) that will expand, and an orb with a gaze mark...",
+                                                                "name":  "Meikyo Shisui",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Ark Angel TT begins incanting... An attack from TT that should be interrupted to prevent high damage.",
+                                                                "name":  "Meteor",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "MR will spawn three conal AoEs that will rotate in the direction of the arrows. This is followed by Spiral Finish, a radial knockback that can be prev...",
+                                                                "name":  "Havoc Spiral",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "GK will tether a healer from each alliance and give them a stack marker. He will then jump on each for split physical damage. These inflict piercing r...",
+                                                                "name":  "Dragonfall",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "TT will spawn an expanding AoE telegraph, leaving its rear safe. The AoE will persist for four hits.",
+                                                                "name":  "Guillotine",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "EV inflicts magical raidwide damage. This will also summon multiple orbs of light that will sink into the ground, leaving pulsating AoEs. Anyone who t...",
+                                                                "name":  "Dominion Slash",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "HM will summon four clones of himself, each of which will tether a random player and give then a running marker. HM will then cast Mighty Strikes, giv...",
+                                                                "name":  "Utsusemi",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "HM will summon a two narrow perpendicular lines, each of which will explode in a large, late telegraphed line AoE.",
+                                                                "name":  "Cross Reaver",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "EV inflicts magical raidwide damage.",
+                                                                "name":  "Holy",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Fafnir the Forgotten",
+                       "nameEn":  "Fafnir the Forgotten",
+                       "mnemonic":  [
+                                        "Dark Matter Blast",
+                                        "Offensive Posture",
+                                        "Baleful Breath"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "The Shadow Lord readies his blade... Shadow Lord will spawn two sweeping sword markers in sequence, each leaving a empty area. These denote late teleg...",
+                                                                "name":  "Giga Slash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Shadow Lord will summon four line AoE telegraphs in sequence, one per cardinal. These will cascade outwards as late telegraphed line AoEs.",
+                                                                "name":  "Umbra Smash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The Shadow Lord concentrates energy in the palms of his hands... Shadow Lord spawns two semicircular AoE telegraphs, wielding an orb on each hand. One...",
+                                                                "name":  "Implosion",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raidwide damage and transitions the arena into four smaller circular platforms connected by pathways in a square formation. The rest of the ro...",
+                                                                "name":  "Cthonic Fury",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A horizontal or vertical purple line will spawn on one edge of the arena, telegraphing a bi-directional knockback. Position to be knocked back safely ...",
+                                                                "name":  "Dark Nebula",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Multi-hit stack marker AoE on a random player, dealing five hits of magical damage.",
+                                                                "name":  "Echoes of Agony",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Similar to Giga Slash, but will use a third cleave telegraph. The first two cleaves hit east/west, then the third cleave will hit north or south.",
+                                                                "name":  "Giga Slash: Nightfall",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons two untargetable Lordly Shadow clones.",
+                                                                "name":  "Shadow Spawn",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Line AoE physical tankbuster on all 3 tanks. Immediately followed by spread marker AoEs on random players (Nova) that inflict magical damage and magic...",
+                                                                "name":  "Unbridled Rage",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Summons three sets of pink circle AoE telegraphs that appear and disappear, indicating the order in which they resolve. Anyone hit will be inflicted w...",
+                                                                "name":  "Binding Sigil",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons three stack marker AoEs on top of towers. Each alliance should take one. Shadow Lord will trap one player per alliance in a bubble, then knock...",
+                                                                "name":  "Damning Strikes",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "A long cast that will inflict high magical raidwide damage and a 15-second bleeding Bleeding. Will also grant Shadow Lord a damage up 2 Damage Up stac...",
+                                                                "name":  "Doom Arc",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Shadow Lord",
+                       "nameEn":  "Shadow Lord",
+                       "mnemonic":  [
+                                        "Giga Slash",
+                                        "Umbra Smash",
+                                        "Implosion"
+                                    ]
+                   }
+               ]
 }

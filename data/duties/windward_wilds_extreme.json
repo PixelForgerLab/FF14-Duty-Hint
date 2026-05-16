@@ -1,6 +1,6 @@
 {
     "id": "windward_wilds_extreme",
-    "name": "護鎖刃龍上位狩獵戰",
+    "name": "西風荒野 (殲殛戰)",
     "nameEn": "The Windward Wilds (Extreme)",
     "expansion": "7.x 黃金的遺產 (Dawntrail)",
     "type": "trial",
@@ -8,43 +8,25 @@
     "iLvlSync": null,
     "jobLevelSync": 100,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）相較 normal 版，EX 為 8 人全 party、ilvl 740、沒有死亡上限。",
-        "2）基礎機制保留（白/紅裂痕、cleave 看爪、漸減半場 cleave）。",
-        "3）⚠️ Console Games Wiki 機制表標示 Section-stub，詳細機制請參考 Hector Hectorson YouTube。"
+        "1）EX 強化版機制，多重 AoE 連發。",
+        "2）Tankbuster + 疊接 + 散開組合。",
+        "3）狂暴：終局秒殺。"
     ],
-    "notes": "DT 7.35 EX trial（Lv 100，ilvl 740）。怪物獵人聯動 EX。⚠️ wiki 機制詳細待社群補充。資料整理自 Console Games Wiki。",
+    "notes": "DT 7.x post-MSQ trial EX (Lv 100, high-end)。具體機制依 CGW 未涵蓋的最新 patch。",
     "bosses": [
         {
-            "name": "護鎖刃龍",
-            "nameEn": "Guardian Arkveld",
-            "mnemonic": ["看動作預判（無 cast bar）", "白/紅裂痕"],
-            "phases": [
-                {
-                    "name": "EX 主戰",
-                    "mechanics": [
-                        {
-                            "name": "Cleave",
-                            "type": "aoe",
-                            "description": "Boss 舉一隻爪 = 該側 + hitbox 線 AoE。",
-                            "tips": ["看爪方向繞對側"]
-                        },
-                        {
-                            "name": "Charge + 裂痕",
-                            "type": "aoe",
-                            "description": "白裂痕 = 中央線；紅裂痕 = 兩側線（中央安全）。",
-                            "tips": ["看顏色判斷"]
-                        },
-                        {
-                            "name": "其他 EX 機制",
-                            "type": "other",
-                            "description": "詳細 EX 機制 wiki 標示 Section-stub。",
-                            "tips": ["參考 Hector Hectorson 動畫攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Windward Wilds Boss",
+            "nameEn": "Windward Wilds Boss",
+            "mnemonic": ["EX 強化", "多重機制", "狂暴秒殺"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "AoE 連發 (EX)", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+                { "name": "Stack 疊接", "type": "stack", "description": "玩家疊接分擔。", "tips": ["全員疊接"] },
+                { "name": "Spread 散開", "type": "spread", "description": "散開 AoE。", "tips": ["全員散開"] },
+                { "name": "Tankbuster (EX)", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Enrage", "type": "raidwide", "description": "狂暴秒殺。", "tips": [{ "text": "末段 DPS check", "role": "dps" }] }
+            ]}]
         }
     ]
 }

@@ -1,207 +1,249 @@
 {
-    "id": "vanguard",
-    "name": "前哨基地先鋒營",
-    "nameEn": "Vanguard",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 98,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）指揮官R8：Rapid Rotary 看 Boss 旋轉方向（轉內留中央 vs 轉外留角落）；Dispatch 看小怪預警找縫。",
-        "2）保護者：閃電籬笆別碰；Motion Sensor debuff 倒數結束前不能動。",
-        "3）贊德爾：Soulbane Saber 切走半場，安全象限往下走；蛇形態看橘色曲線初始彎曲方向找安全位。"
-    ],
-    "notes": "DT 後期 MSQ 副本（Lv 97-98）。Motion Sensor (Acceleration Bomb) 是讓不熟玩家最常死的機制。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "先鋒指揮官R8",
-            "nameEn": "Vanguard Commander R8",
-            "mnemonic": ["看旋轉方向", "Dispatch 找小怪縫隙"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Electrowave",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害並在場邊生成 AoE。",
-                            "tips": ["別站場邊"]
-                        },
-                        {
-                            "name": "Enhanced Mobility / Rapid Rotary",
-                            "type": "aoe",
-                            "description": "Boss 移到場邊繞圈，揮舞能量刀掃過一個象限後再掃中央或角落。",
-                            "tips": ["看刀朝向 + 旋轉方向", "刀在左轉向內側 = 中央安全（甜甜圈）", "刀在右轉向外側 = 角落安全（圓 AoE）"]
-                        },
-                        {
-                            "name": "Dispatch (1)",
-                            "type": "aoe",
-                            "description": "牆上召喚 4 個哨兵，留縫隙，延遲線 AoE Rush。",
-                            "tips": ["站到沒有哨兵的縫"]
-                        },
-                        {
-                            "name": "Dispatch (2)",
-                            "type": "aoe",
-                            "description": "四面牆各 1 個哨兵，空中放擴張圓 AoE，安全位在東西牆中央。",
-                            "tips": ["站到東西牆的縫"]
-                        },
-                        {
-                            "name": "Dispatch / Electrosurge",
-                            "type": "spread",
-                            "description": "兩組各 4 哨兵在相鄰牆，形成十字線 AoE 圖案；同時全員散開標記。",
-                            "tips": ["找線 AoE 安全格", "散開不重疊"]
-                        },
-                        {
-                            "name": "Dispatch (3)",
-                            "type": "aoe",
-                            "description": "8 個哨兵分兩組依序爆，第一組安全在牆邊，第二組安全在中央。",
-                            "tips": ["第一組站牆邊縫", "馬上跑中央"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "守護者",
-            "nameEn": "Protector",
-            "mnemonic": ["閃電籬笆有麻痺", "Motion Sensor 結束前不能動"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Electrowave",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害，場邊生成 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Search and Destroy",
-                            "type": "aoe",
-                            "description": "Explosive Turret + Laser Turret 召喚物連續放圓 AoE 與線 AoE。",
-                            "tips": ["持續移動避免重疊"]
-                        },
-                        {
-                            "name": "Fulminous Fence",
-                            "type": "other",
-                            "description": "場中央生成 6 道閃電籬笆，碰到會中毒 + 麻痺 10 秒。",
-                            "tips": ["別碰電籬", "中麻痺請補職 Esuna"]
-                        },
-                        {
-                            "name": "Battery Circuit",
-                            "type": "aoe",
-                            "description": "Boss 兩側旋轉錐 AoE + 隨機點 AoE，要邊閃 AoE 邊躲電籬。",
-                            "tips": ["看清楚電籬位置", "找縫隙穿越"]
-                        },
-                        {
-                            "name": "Rapid Thunder",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法坦補。",
-                            "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "預補加 shield", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Motion Sensor",
-                            "type": "other",
-                            "description": "全員獲得 Acceleration Bomb debuff，12 秒結束前不能移動，否則大傷。同時雷射砲塔放橫向線 AoE。",
-                            "tips": ["看 debuff 倒數", "結束前 1 秒站定不動", "別忘了 Laser Turret 的線 AoE"]
-                        },
-                        {
-                            "name": "Tracking Bolt",
-                            "type": "spread",
-                            "description": "大範圍散開標記。",
-                            "tips": ["完全分散"]
-                        },
-                        {
-                            "name": "Heavy Blast Cannon",
-                            "type": "stack",
-                            "description": "線疊機 AoE。",
-                            "tips": ["全員疊靠標記者"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "剝蛇者贊德爾",
-            "nameEn": "Zander the Snakeskinner",
-            "mnemonic": ["半場 cleave 找安全象限", "蛇形態看曲線彎曲方向"],
-            "phases": [
-                {
-                    "name": "Phase 1",
-                    "mechanics": [
-                        {
-                            "name": "Electrothermia",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害並在場邊生成 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Soulbane Saber",
-                            "type": "aoe",
-                            "description": "線 AoE 之後對應半場延遲 AoE。",
-                            "tips": ["先躲線 AoE", "再跑到另一半場"]
-                        },
-                        {
-                            "name": "Saber Rush",
-                            "type": "tankbuster",
-                            "description": "對主 T 物理坦補。",
-                            "tips": [
-                                { "text": "開減傷", "role": "tank" },
-                                { "text": "預補加 shield", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Soulbane Saber × 4 + Soulbane Shock",
-                            "type": "spread",
-                            "description": "連續 4 次 Saber 每次轉 90 度，初始留一個安全象限；同時玩家散開標記。",
-                            "tips": ["先站到唯一安全象限", "Saber 解後再移到下個安全位", "散開不重疊"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2 (蛇形)",
-                    "mechanics": [
-                        {
-                            "name": "Syntheslean",
-                            "type": "aoe",
-                            "description": "前方錐 AoE。",
-                            "tips": ["繞到側後方"]
-                        },
-                        {
-                            "name": "Syntheslither",
-                            "type": "aoe",
-                            "description": "場中出現橘色曲線，Boss 沿曲線移動，遇到劍標記就放左/右錐 AoE，方向由曲線該處的彎曲方向決定。",
-                            "tips": ["看第一個彎曲方向", "站到曲線「對側」靠近 Boss 的小安全區"]
-                        },
-                        {
-                            "name": "Shade Shot",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法坦補。",
-                            "tips": [
-                                { "text": "開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Slitherbane Foreguard / Rearguard",
-                            "type": "aoe",
-                            "description": "類似 Soulbane Saber 但結合 180 度前/後扇形。Foreguard = 前，Rearguard = 後。連用 4 次每次轉 90 度。",
-                            "tips": ["看名稱判斷前/後", "找安全象限"]
-                        },
-                        {
-                            "name": "Screech",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "vanguard",
+    "name":  "先鋒",
+    "nameEn":  "Vanguard",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raidwide",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  98,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Vanguard Commander R8：Electrowave / Enhanced Mobility / Dispatch",
+                     "2）B2 Protector (boss)：Electrowave / Search and Destroy / Fulminous Fence",
+                     "3）B3 Zander the Snakeskinner：Electrothermia / Soulbane Saber / Saber Rush"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) raidwide (Lv 98)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage and spawns a dangerous AoE at the edge of the arena.",
+                                                                "name":  "Electrowave",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Beware the wingblade! The boss will telegraph an AoE (Rapid Rotary) where it will move to the wall and drive in a circle around the arena, while brand...",
+                                                                "name":  "Enhanced Mobility",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons four untargetable Vanguard Sentry R8 adds on one wall, leaving gaps in between them. They will use a late telegraphed line AoE (Rush).",
+                                                                "name":  "Dispatch",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons two sets of four adds on adjacent walls (causing a criss-cross of line AoEs), while each player receives a spread marker.",
+                                                                "name":  "Dispatch / Electrosurge",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Vanguard Commander R8",
+                       "nameEn":  "Vanguard Commander R8",
+                       "mnemonic":  [
+                                        "Electrowave",
+                                        "Enhanced Mobility",
+                                        "Dispatch"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage and spawns a dangerous AoE around the edge of the arena.",
+                                                                "name":  "Electrowave",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns untargetable Explosive Turret and Laser Turret adds, which will use numerous baited circle AoEs (Shock) and line AoEs (Homing Cannon) requiring...",
+                                                                "name":  "Search and Destroy",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns six electric barriers in the middle of the arena that persist for the next mechanic. Any player who contacts these will take damage (Electrosta...",
+                                                                "name":  "Fulminous Fence",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Two rotating persistent conal AoEs, from opposite sides of the boss, and intermittent point-blank and circle AoEs that the party will need to dodge wh...",
+                                                                "name":  "Battery Circuit",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical tankbuster.",
+                                                                "name":  "Rapid Thunder",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "A motion-sensitive bomb has been affixed to you. Gives each player an File:Acceleration bomb icon.png Acceleration Bomb debuff for 12s. Players must n...",
+                                                                "name":  "Motion Sensor",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Large spread marker AoE on each player.",
+                                                                "name":  "Tracking Bolt",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Line stack AoE marker on a random player, dealing magical damage.",
+                                                                "name":  "Heavy Blast Cannon",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Protector (boss)",
+                       "nameEn":  "Protector (boss)",
+                       "mnemonic":  [
+                                        "Electrowave",
+                                        "Search and Destroy",
+                                        "Fulminous Fence"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage and spawns a dangerous AoE at the edge of the arena.",
+                                                                "name":  "Electrothermia",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed line AoE that will cause the half of the room it hits to begin glowing, telegraphing a delayed half-room AoE.",
+                                                                "name":  "Soulbane Saber",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed physical tankbuster.",
+                                                                "name":  "Saber Rush",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed frontal conal AoE.",
+                                                                "name":  "Syntheslean",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss moves to the wall and spawns an orange squiggle through the arena, while four sword markers appear. The boss will travel down the squiggle an...",
+                                                                "name":  "Syntheslither",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical tankbuster.",
+                                                                "name":  "Shade Shot",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Similar to Soulbane Saber from phase 1, but the boss also combos the initial line AoE with either a 180 degree front or rear cleave based on the name ...",
+                                                                "name":  "Slitherbane Foreguard / Slitherbane Rearguard",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Screech",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Zander the Snakeskinner",
+                       "nameEn":  "Zander the Snakeskinner",
+                       "mnemonic":  [
+                                        "Electrothermia",
+                                        "Soulbane Saber",
+                                        "Saber Rush"
+                                    ]
+                   }
+               ]
 }

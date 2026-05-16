@@ -1,106 +1,192 @@
 {
-  "id": "sunken_temple_of_qarn",
-  "name": "古代遺跡喀恩埋沒聖堂",
-  "nameEn": "The Sunken Temple of Qarn",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 38,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "途中有解謎踩地板開門",
-    "Teratotaur：閃地面 AoE",
-    "Adjudicator：3 個雕像審判，看顏色站對位"
-  ],
-  "notes": "等級 35 的 4 人副本（神殿解謎風格）。途中有踩地板謎題，最終 boss Adjudicator 有顏色審判機制。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "聖堂守衛",
-      "nameEn": "Temple Guardian",
-      "mnemonic": [
-        "石像 boss，閃前方扇形"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "前方攻擊",
-              "type": "tankbuster",
-              "description": "前方攻擊。",
-              "tips": [
-                { "text": "T 拉好仇恨", "role": "tank" },
-                "DPS 站背後"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "巨齒牛頭魔",
-      "nameEn": "Teratotaur",
-      "mnemonic": [
-        "牛頭 boss，閃地面 AoE 圓圈"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "地面 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈 AoE。",
-              "tips": [
-                "看到圓圈立刻走出去"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "審判化身",
-      "nameEn": "Adjudicator",
-      "mnemonic": [
-        "場上 3 個雕像會發光",
-        "看雕像顏色站到對應的安全格",
-        "踩錯會受到審判傷害"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "雕像審判",
-              "type": "other",
-              "description": "場上 3 個雕像會輪流發光，需要站到對應顏色的安全位置。",
-              "tips": [
-                "看清楚雕像亮起的顏色再走位",
-                "通常有 3 種顏色對應 3 種站位"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "sunken_temple_of_qarn",
+    "name":  "卡恩沉沒之廟",
+    "nameEn":  "The Sunken Temple of Qarn",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  38,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Teratotaur：Triclip / Frightful Roar / Mow",
+                     "2）B2 Temple Guardian：Rockslide / True Grit / Boulder Clap",
+                     "3）B3 Adjudicator：Looming Judgment / Summon / Creeping Darkness"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 38)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Telegraphed tankbuster.",
+                                                                "name":  "Triclip",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed point-blank AoE. Anyone hit will receive a 15-second physical vulnerability up Physical Vulnerability Up which can be cleansed with Esuna.",
+                                                                "name":  "Frightful Roar",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed frontal conal AoE. Anyone hit will receive a 15-second poison Poison which can be cleansed with Esuna.",
+                                                                "name":  "Mow",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "You have been afflicted with Doom... A room-wide AoE that will inflict everyone with a doom Doom (status effect) debuff on your entire party; the debu...",
+                                                                "name":  "Mortal Ray",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Teratotaur",
+                       "nameEn":  "Teratotaur",
+                       "mnemonic":  [
+                                        "Triclip",
+                                        "Frightful Roar",
+                                        "Mow"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is a frontal column AoE attack.",
+                                                                "name":  "Rockslide",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal cone AoE attack that will inflict a 15-second blind Blind which can be cleansed with Esuna.",
+                                                                "name":  "True Grit",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE attack.",
+                                                                "name":  "Boulder Clap",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant attack that deals magical damage to the entire party.",
+                                                                "name":  "Obliterate",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant attack that damages one player, knocks them back, and stuns them for 3 seconds.",
+                                                                "name":  "Stone Skull",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Temple Guardian",
+                       "nameEn":  "Temple Guardian",
+                       "mnemonic":  [
+                                        "Rockslide",
+                                        "True Grit",
+                                        "Boulder Clap"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Telegraphed tankbuster.",
+                                                                "name":  "Looming Judgment",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The adjudicator summons arcane instruments! Spawns two Mythril Verges. Defeat these adds as soon as possible.",
+                                                                "name":  "Summon",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Creeping Darkness",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A massive telegraphed conal AoE aimed at a random player. To facilitate dodging, do not be too far away from the boss.",
+                                                                "name":  "Dark II",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed circle AoE at one random player\u0027s current location.",
+                                                                "name":  "Dark",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Adjudicator",
+                       "nameEn":  "Adjudicator",
+                       "mnemonic":  [
+                                        "Looming Judgment",
+                                        "Summon",
+                                        "Creeping Darkness"
+                                    ]
+                   }
+               ]
 }

@@ -1,174 +1,570 @@
 {
-    "id": "windurst_the_third_walk",
-    "name": "溫達斯：第三巡行",
-    "nameEn": "Windurst: The Third Walk",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）夏特托：地面南北抬起合擊找縫；Diagrammatic Doorway 3 個 ley line 順序甜甜圈。",
-        "2）阿魯沙比 4 波小怪 + Medusa Swarmsinger（exaflare + 凝視石化 + 半場 cleave）。",
-        "3）亞歷山卓復活：箭頭 + Radiant Sacrament 5x5 格按順序爆 + Perfect Defense 護盾 adds DPS check。",
-        "4）Aw'aern 庭園 boss + 4 個 Aw'zdei adds（5 連扇 + 散開）。"
-    ],
-    "notes": "DT 7.5 24 人 alliance raid（Lv 100，ilvl 755），Mentor roulette。Echoes of Vana'diel 第 3 部 + 終戰。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "魔人夏特托",
-            "nameEn": "Shantotto the Demon",
-            "mnemonic": ["地裂南北合擊找中縫", "ley line 連鎖甜甜圈"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Flare Play",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Vidohunir",
-                            "type": "stack",
-                            "description": "3 坦疊機。",
-                            "tips": [{ "text": "3 T 集中", "role": "tank" }]
-                        },
-                        {
-                            "name": "Superior Stone II + Groundbreaking Quake",
-                            "type": "other",
-                            "description": "場地南北段抬起後合擊。找 4 段中最大縫躲。",
-                            "tips": ["看抬起預警找中縫"]
-                        },
-                        {
-                            "name": "Diagrammatic Doorway + Circumscribed Fire",
-                            "type": "aoe",
-                            "description": "3x4 ley line + 3 段連鎖甜甜圈 AoE。Shantotto 依序移動。",
-                            "tips": ["記 3 個 ley line 順序", "貼她繞甜甜圈"]
-                        },
-                        {
-                            "name": "Localized Blizzard + Thunder and Error",
-                            "type": "spread",
-                            "description": "點 AoE + 散開標記。",
-                            "tips": ["分散避免重疊"]
-                        },
-                        {
-                            "name": "Meteoric Rhyme",
-                            "type": "stack",
-                            "description": "多 AoE + Stardust Specimen 補職疊機。",
-                            "tips": ["閃 AoE + 補職疊"]
-                        },
-                        {
-                            "name": "Aero Dynamics (擊退組合)",
-                            "type": "other",
-                            "description": "Westerly/Easterly Winds debuff 10 秒擊退極遠 + 接 Groundbreaking Quake。",
-                            "tips": ["位置調整到抬起段", "或用抗擊退"]
-                        },
-                        {
-                            "name": "Diagrammatic Doorway (5 ley)",
-                            "type": "aoe",
-                            "description": "5 條 ley line 連鎖。",
-                            "tips": ["記 5 個 ley 位置（繩消失後）"]
-                        },
-                        {
-                            "name": "Final Exam",
-                            "type": "stack",
-                            "description": "3 段補職疊機。",
-                            "tips": [{ "text": "全員疊靠補職", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "亞歷山卓復活",
-            "nameEn": "Alexander Resurrected",
-            "mnemonic": ["箭頭旋轉 cleave", "5x5 格依序爆", "Perfect Defense DPS check"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Banishga IV",
-                            "type": "raidwide",
-                            "description": "全體魔法傷 + 場邊 AoE。",
-                            "tips": ["別站場邊"]
-                        },
-                        {
-                            "name": "Divine Arrow",
-                            "type": "aoe",
-                            "description": "藍標旋轉指示 90 度 cleave + 旋轉方向（順/逆）+ 兩個同心甜甜圈 + 點 AoE 結尾 + 散開 + 圓 AoE。",
-                            "tips": ["看旋轉方向預判 cleave", "閃同心圈 + 散開"]
-                        },
-                        {
-                            "name": "Impartial Ruling",
-                            "type": "aoe",
-                            "description": "兩側量條，先滿的先放半場 cleave。",
-                            "tips": ["看哪邊先滿"]
-                        },
-                        {
-                            "name": "Radiant Sacrament",
-                            "type": "aoe",
-                            "description": "5x5 藍色格 + 橘色準星依序移動指示爆破順序。",
-                            "tips": ["看準星移動順序找安全格"]
-                        },
-                        {
-                            "name": "Divine Spear",
-                            "type": "aoe",
-                            "description": "藍色線描繪三角形，包圍區域爆。",
-                            "tips": ["站三角形外"]
-                        },
-                        {
-                            "name": "Mega Holy",
-                            "type": "stack",
-                            "description": "3 段補職疊機。",
-                            "tips": ["全員疊靠補職"]
-                        },
-                        {
-                            "name": "Sacred Assembly + Perfect Defense (DPS check)",
-                            "type": "other",
-                            "description": "4 個 Gordius System adds，有護盾的攻擊反傷。需先打沒護盾的，在 Aetherial Conduit Reserves 100 前打完。",
-                            "tips": ["優先沒護盾的", "別打有護盾的（反傷）"]
-                        },
-                        {
-                            "name": "Divine Bolt",
-                            "type": "tankbuster",
-                            "description": "散開 + 圓 AoE + 主 T 線 cleave 坦補。",
-                            "tips": [
-                                { "text": "T 開減傷", "role": "tank" },
-                                "其他人散開"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Aw'aern + 4 Aw'zdei",
-            "nameEn": "Aw'aern + 4 Aw'zdei",
-            "mnemonic": ["5 連扇後排", "Static Filament 圓 AoE 散開"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Glacier Splitter",
-                            "type": "aoe",
-                            "description": "5 連扇 AoE 留縫；adds 用 Optic Induration 前方扇 AoE。連 4 輪不同圖樣。",
-                            "tips": ["後方相對安全", "看每輪預警找縫"]
-                        },
-                        {
-                            "name": "Auroral Wind + Static Filament",
-                            "type": "spread",
-                            "description": "Boss 散開標記 + adds 圓 AoE。",
-                            "tips": ["散開遠離圓 AoE"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "windurst_the_third_walk",
+    "name":  "溫達斯：第三巡行",
+    "nameEn":  "Windurst: The Third Walk",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "stack",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Shantotto the Demon：Flare Play / Vidohunir / Empirical Research",
+                     "2）B2 Alexander Resurrected：Banishga IV / Divine Arrow / Impartial Ruling",
+                     "3）B3 Promathia：Empty Salvation / Fleeting Eternity / Wheel of Impregnability",
+                     "4）B4 Hollow King：Cosmic Breath / Cosmic Tail / Cloak of Twilight"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) stack (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Flare Play",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Targets a random tank with a tankbuster stack marker that should be split between all 3 tanks.",
+                                                                "name":  "Vidohunir",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Faces a random players and uses a late-telegraphed frontal line AoE.",
+                                                                "name":  "Empirical Research",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage and spawns two jagged AoE telegraphs at the north and south of the arena, causing those sections to become raised up.",
+                                                                "name":  "Superior Stone II",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The two raised sections will collide with each other. Players should find the largest gap in the four sections and stand near the middle to avoid this...",
+                                                                "name":  "Groundbreaking Quake",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Shantotto spawns a 3x4 grid of ley lines and moves to one, then tethers three ley lines in sequence.",
+                                                                "name":  "Diagrammatic Doorway",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed donut AoE centered on Shantotto. She will then move to each of the ley lines she tethered to, in order, and repeat the attack with a lat...",
+                                                                "name":  "Circumscribed Fire",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns multiple circle AoE telegraphs and proximity AoEs (Large Specimen) at random locations. One healer will also be marked with a stack marker deal...",
+                                                                "name":  "Meteoric Rhyme",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will become briefly untargetable and inflict raid-wide magical damage. After she becomes targetable again, line AoEs and circle AoEs of vario...",
+                                                                "name":  "Shockwave",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A three-hit stack marker AoE on a random healer, dealing magical damage.",
+                                                                "name":  "Final Exam",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "The medusa will spawn four \"exaflare\" telegraphs at the center aimed towards the cardinals, then another set of four exaflares aimed at the intercardi...",
+                                                                "name":  "Dance to Dust",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A late-telegraphed half-room cleave aimed in the direction of the cast.",
+                                                                "name":  "Left / Right Shadow Slash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Bellowing Grunt",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide physical damage.",
+                                                                "name":  "Disregard",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed gaze attack from the boss that will inflict an 8-second cleansable petrification petrification. Combined with two sets of crisscrossing ...",
+                                                                "name":  "Petrifaction",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Shantotto the Demon",
+                       "nameEn":  "Shantotto the Demon",
+                       "mnemonic":  [
+                                        "Flare Play",
+                                        "Vidohunir",
+                                        "Empirical Research"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage and spawns a dangerous AoE at the edge of the arena.",
+                                                                "name":  "Banishga IV",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A blue target will spin around the boss. When the cast bar fills and the target stops, the boss will use a late-telegraphed persistent 90 degree cleav...",
+                                                                "name":  "Divine Arrow",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Two gauges will appear on each side of the boss (left and right) and each begin filling. The side containing the gauge that fills first will be hit wi...",
+                                                                "name":  "Impartial Ruling",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The floor will temporarily transform in to a 5x5 grid of blue tiles. Orange crosshairs will move between all the tiles in a pattern, indicating the or...",
+                                                                "name":  "Radiant Sacrament",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Blue trails of flame will begin drawing shapes (four triangles) on the arena. The regions that are fully enclosed by blue lines will detonate.",
+                                                                "name":  "Divine Spear",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A three-hit stack marker AoE on a random healer, dealing magical damage.",
+                                                                "name":  "Mega Holy",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns four small circle AoEs near each corner, each becoming a Gordius System add.",
+                                                                "name":  "Sacred Assembly",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will become untargetable while the adds become targetable and must be defeated before the Aetherial Conduit Reserves gauge reaches 100, or th...",
+                                                                "name":  "Perfect Defense",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage. This attack will wipe the party if the adds were not killed in time.",
+                                                                "name":  "Divine Judgment",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will tether two adds, then the other two. This indicates the order in which the adds will use a massive late-telegraphed point-blank AoE (Ele...",
+                                                                "name":  "Reinforcements",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A combination of Banishga IV spreads on random players, baited circle AoEs, and a line AoE tankbuster at the main tank.",
+                                                                "name":  "Divine Bolt",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The miniboss will use five telegraphed conal AoEs with gaps in between them and the rear safe, while each add will use Optic Induration, a telegraphed...",
+                                                                "name":  "Glacier Splitter",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The miniboss will mark several players with large spread AoE markers dealing magical damage. The adds will use Static Filament, spawning three circle ...",
+                                                                "name":  "Auroral Wind",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage from the miniboss.",
+                                                                "name":  "Impact Stream",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Alexander Resurrected",
+                       "nameEn":  "Alexander Resurrected",
+                       "mnemonic":  [
+                                        "Banishga IV",
+                                        "Divine Arrow",
+                                        "Impartial Ruling"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage and spawns six green puddles in a hexagon formation. Standing in these will inflict heavy heavy.",
+                                                                "name":  "Empty Salvation",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss connects four puddles (two per side) and will transmit purple orbs starting from the center. When the orbs reach the puddles at the end of th...",
+                                                                "name":  "Fleeting Eternity",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The boss spawns an orange ring with four orange rays pointing to its center. A larger, concentric orange ring will collapse inward. When the rings tou...",
+                                                                "name":  "Wheel of Impregnability",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns another set of rings, except they will be green with rays pointing outward. The boss will move to a new area, then cast Pestilent Penance, a te...",
+                                                                "name":  "Bastion of Twilight",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical AoE tankbusters on all three tanks.",
+                                                                "name":  "Comet",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will become untargetable and spawn an AoE telegraph that leaves three small squares safe. The alliance should split up for an adds phase.",
+                                                                "name":  "False Genesis",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "If the adds were defeated in time, the arena will return to normal and the boss will receive directional disregard Directional Disregard while it prep...",
+                                                                "name":  "Deadly Rebirth",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Purple orbs will originate from one green puddle and travel to the adjacent one, causing it to detonate in a large AoE.",
+                                                                "name":  "Earthbound Heaven",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Evenly spaced conal Aoe telegraphs with gaps in between. One side of the the boss will also glow green, indicating a half-room cleave on that side tha...",
+                                                                "name":  "Malevolent Blessing",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed AoE tankbusters hitting all three tanks, along with spread marker AoEs on random non-tanks.",
+                                                                "name":  "Meteor",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Promathia",
+                       "nameEn":  "Promathia",
+                       "mnemonic":  [
+                                        "Empty Salvation",
+                                        "Fleeting Eternity",
+                                        "Wheel of Impregnability"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "An AoE that will damage everyone on the upper platform, requiring them to be on the lower level.",
+                                                                "name":  "Cosmic Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "An AoE that will damage everyone on the lower platform, requiring them to be on the upper level.",
+                                                                "name":  "Cosmic Tail",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Gives all players a 25-second File:Cloak of Waning Light.png Cloak of Waning Light (Your dark resistance has been reduced...) or File:Cloak of Waxing ...",
+                                                                "name":  "Cloak of Twilight",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Aether running through the floor threatens to explode! One level of the arena will become light-aspected, while the other level will become dark-aspec...",
+                                                                "name":  "Twilight Nebula",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Two sets of crisscrossing line AoE telegraphs, hitting both levels at once.",
+                                                                "name":  "Starflare",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Gives each player an individual mechanic. Failing the mechanic will reduce the player to 1 HP.",
+                                                                "name":  "Cataclysmic Vortex",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical AoE tankbusters on all three tanks.",
+                                                                "name":  "Dark Nova",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Spawns eight towers at the north. Tower will appear red (if empty) or blue (if taken). One random player in each tower will be temporar...",
+                                                                "name":  "Celestial Trail",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Empty Proclamation",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will use two late-telegraphed line AoEs hitting more than two-thirds of the arena, leaving one corner safe, based on the name of the cast. Fo...",
+                                                                "name":  "Left/Right Swordscross",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "One head will display a point-blank AoE while the other displays a donut AoE marker, indicating which side of the room will be hit by the respective q...",
+                                                                "name":  "Twin Blaze",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A combination of the Cataclysmic Vortex personal mechanics from phase 1 and two blue conal AoE telegraphs originating from the north.",
+                                                                "name":  "Cataclysmic Blade",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns two circle AoE telegraphs that will cascade outwards as telegraphed concentric donut AoEs.",
+                                                                "name":  "Burst",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns \"exaflare\" circle AoEs at the left and right sides of the arena in an alternating pattern. For visual clarity, the initial AoE markers are also...",
+                                                                "name":  "Cosmic Flame",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns two moving line AoE telegraphs, one north-south and the other east-west. When the timer on both AoEs expire, it will resolve.",
+                                                                "name":  "Atomic Ray",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A three-hit stack AoE on a random player, dealing magical damage.",
+                                                                "name":  "Super Nova",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Hollow King",
+                       "nameEn":  "Hollow King",
+                       "mnemonic":  [
+                                        "Cosmic Breath",
+                                        "Cosmic Tail",
+                                        "Cloak of Twilight"
+                                    ]
+                   }
+               ]
 }

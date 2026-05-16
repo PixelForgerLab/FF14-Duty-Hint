@@ -1,136 +1,232 @@
 {
-  "id": "praetorium",
-  "name": "最終決戰天幕魔導城",
-  "nameEn": "The Praetorium",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "MSQ 最終副本（蓋烏斯 + 究極神兵）",
-    "尼祿：閃 AoE + 召喚機械兵",
-    "蓋烏斯：經典首領戰，閃 AoE 與直線",
-    "究極神兵：最後 boss，多階段機制"
-  ],
-  "notes": "等級 50 的 8 人 MSQ 終結副本（紅蓮之解放者結局）。多場連續 boss 戰。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "尼祿·託爾·斯卡艾瓦",
-      "nameEn": "Nero tol Scaeva",
-      "mnemonic": [
-        "帝國科學家 boss",
-        "召喚機械兵，DPS 清"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "召喚機械",
-              "type": "other",
-              "description": "召喚機械兵援軍。",
-              "tips": [
-                "DPS 切清援軍"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "蓋烏斯·範·巴埃薩",
-      "nameEn": "Gaius van Baelsar",
-      "mnemonic": [
-        "帝國總督 boss",
-        "閃前方扇形 + 腳下 AoE",
-        "中後期會召喚援軍"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "前方扇形",
-              "type": "tankbuster",
-              "description": "前方扇形攻擊。",
-              "tips": [
-                { "text": "T 拉好面向場邊", "role": "tank" },
-                "DPS 站背後"
-              ]
-            },
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈 AoE。",
-              "tips": [
-                "看到圓圈走出去"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "究極神兵",
-      "nameEn": "Ultima Weapon",
-      "mnemonic": [
-        "MSQ 終極 boss，多階段",
-        "閃各種元素 AoE",
-        "全體 AoE 多次，注意補血"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "元素 AoE",
-              "type": "aoe",
-              "description": "各種元素的地面 AoE。",
-              "tips": [
-                "看落點顏色判斷元素",
-                "及時走位躲開"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體高傷。",
-              "tips": [
-                { "text": "AoE 滿血滿條治療", "role": "healer" },
-                { "text": "T 開減傷協助", "role": "tank" }
-              ]
-            },
-            {
-              "name": "Aetheroplasm 連線",
-              "type": "stack",
-              "description": "場上會出現以太球，需要踩破或被吸收觸發連線傷害。",
-              "tips": [
-                "看清楚以太球位置走位",
-                "依隊伍策略處理"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "praetorium",
+    "name":  "帝國禁區",
+    "nameEn":  "The Praetorium",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Mark II Magitek Colossus：Ceruleum Vent / Prototype Laser Alpha / Prototype Laser Beta",
+                     "2）B2 Nero tol Scaeva (boss)：Spine Shatter / Iron Uprising / Activate",
+                     "3）B3 Gaius van Baelsar (boss)：Innocence / Horrida Bella / Terminus Est"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Unavoidable raidwide damage that must be healed through.",
+                                                                "name":  "Ceruleum Vent",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Four circle AoEs will appear from the center and move toward the outside of the arena.",
+                                                                "name":  "Prototype Laser Alpha",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Circle AoEs will be placed on every player, requiring them to spread out.",
+                                                                "name":  "Prototype Laser Beta",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "A cone AoE targeting a random player.",
+                                                                "name":  "Grand Sword",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Mark II Magitek Colossus",
+                       "nameEn":  "Mark II Magitek Colossus",
+                       "mnemonic":  [
+                                        "Ceruleum Vent",
+                                        "Prototype Laser Alpha",
+                                        "Prototype Laser Beta"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Tankbuster.",
+                                                                "name":  "Spine Shatter",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "A frontal cone AoE that knocks players back.",
+                                                                "name":  "Iron Uprising",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons a Magitek Death Claw that tethers to one player and slowly moves towards them, knocking player back when it gets to them. The players not teth...",
+                                                                "name":  "Activate",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A stack on a random player, followed by Wheel of Suffering centered on the targeted player.",
+                                                                "name":  "Augmented Shatter",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "A circle AoE that deals damage to all players near the boss. Players should stack together then move out of the following AoE.",
+                                                                "name":  "Wheel of Suffering",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Nero will hop to one side of the arena and attack a large portion of the arena with a cone AoE that should be avoided.",
+                                                                "name":  "Augmented Uprising",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Nero will jump to the center and cast a knockback attack. Players should get into the center to avoid being flung into the electrical field.",
+                                                                "name":  "Augmented Suffering",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Nero tol Scaeva (boss)",
+                       "nameEn":  "Nero tol Scaeva (boss)",
+                       "mnemonic":  [
+                                        "Spine Shatter",
+                                        "Iron Uprising",
+                                        "Activate"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Tankbuster.",
+                                                                "name":  "Innocence",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Unavoidable raidwide damage that must be healed through.",
+                                                                "name":  "Horrida Bella",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Gaius will fire several blue, flaming Xs. After a few seconds, a line AoE blast comes from the X dealing heavy damage to any players in its path.",
+                                                                "name":  "Terminus Est",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Copies of Gaius will appear on the long side of the arena and each cast Terminus Est, marked by flaming Xs. Players should move out of the way of thei...",
+                                                                "name":  "Phantasmata",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A stack marker on a random player.",
+                                                                "name":  "Festina Lente",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Three circular AoEs appear on the short side of the arena and move along the length of the platform.",
+                                                                "name":  "Ductus",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Each player will be marked by an unavoidable circle AoE. Players should spread out to avoid excess damage.",
+                                                                "name":  "Hand of the Empire",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Each Phantom Gaius will target a random player, dealing moderate damage to them.",
+                                                                "name":  "Heirsbane",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Gaius van Baelsar (boss)",
+                       "nameEn":  "Gaius van Baelsar (boss)",
+                       "mnemonic":  [
+                                        "Innocence",
+                                        "Horrida Bella",
+                                        "Terminus Est"
+                                    ]
+                   }
+               ]
 }

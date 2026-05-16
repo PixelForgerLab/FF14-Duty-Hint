@@ -1,87 +1,196 @@
 {
-  "id": "amdapor_keep",
-  "name": "邪教駐地無限城古堡",
-  "nameEn": "Amdapor Keep",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "途中有惡魔牆機制：要快速擊殺否則推上死",
-    "最終 boss Anantaboga：閃毒液 AoE 與 debuff",
-    "場上有解謎環節"
-  ],
-  "notes": "等級 50 的 4 人副本（無限城古堡）。惡魔牆是著名 DPS check，要快打。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "惡魔牆",
-      "nameEn": "Demon Wall",
-      "mnemonic": [
-        "DPS check：要在牆推上來前打掉",
-        "Boss 是一面會慢慢推進的牆",
-        "失敗 = 全員被推到底死亡"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "推進",
-              "type": "other",
-              "description": "Boss 是一面緩慢向前推進的牆，碰到牆的玩家會被擊飛或秒殺。",
-              "tips": [
-                "DPS 火力全開",
-                "撿場上掉的水晶有 buff",
-                "若快推到底，撤退到 boss 後方繼續打"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "Boss 的範圍攻擊。",
-              "tips": [
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "阿難塔波嘉",
-      "nameEn": "Anantaboga",
-      "mnemonic": [
-        "蛇型 boss，閃毒液 AoE",
-        "場上有 debuff 機制",
-        "DPS 清小怪"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "毒液 AoE",
-              "type": "aoe",
-              "description": "腳下毒液圓圈，會留下毒區。",
-              "tips": [
-                "看到圓圈走出去",
-                "避開殘留毒區"
-              ]
-            },
-            {
-              "name": "毒 debuff",
-              "type": "raidwide",
-              "description": "全體中毒。",
-              "tips": [
-                { "text": "中毒解毒 + 補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "amdapor_keep",
+    "name":  "安達普爾要塞",
+    "nameEn":  "Amdapor Keep",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Psycheflayer：Void Fire II / Void Fire III / Obliterate",
+                     "2）B2 Demon Wall：Murder Hole / Repel / Bloodlapper",
+                     "3）B3 Anantaboga：Tail Drive / Rotten Breath / Imminent Catastrophe"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "that players should avoid.",
+                                                                "name":  "Void Fire II",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "with stun stuns (or Interject / Head Graze) and avoid Void Fire II by moving out of the ground indicator.",
+                                                                "name":  "Void Fire III",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "spell.",
+                                                                "name":  "Obliterate",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a spell that deals a small amount of damage to a player.",
+                                                                "name":  "Water",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a spell that deals a large amount of damage to a player.",
+                                                                "name":  "Void Thunder III",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a spell that deals the debuff disease Disease on a random player.",
+                                                                "name":  "Canker",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant ability that deals a moderate amount of damage to all players near Psycheflayer.",
+                                                                "name":  "Mind Melt",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is the add that summons Psycheflayer.",
+                                                                "name":  "Lunatic Priest",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Psycheflayer",
+                       "nameEn":  "Psycheflayer",
+                       "mnemonic":  [
+                                        "Void Fire II",
+                                        "Void Fire III",
+                                        "Obliterate"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is an instant ability that deals a small amount of damage to a random player.",
+                                                                "name":  "Murder Hole",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an ability that knocks all players back and deals a moderate amount of damage.",
+                                                                "name":  "Repel",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "has an ability named Thunderstorm.",
+                                                                "name":  "Bloodlapper",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Demon Wall",
+                       "nameEn":  "Demon Wall",
+                       "mnemonic":  [
+                                        "Murder Hole",
+                                        "Repel",
+                                        "Bloodlapper"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is a rear cone AoE attack that deals high amount of damage and inflicts a DoT named Concussion to all players hit.",
+                                                                "name":  "Tail Drive",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE attack which deals heavy damage and inflicts the debuff disease Disease to all players hit.",
+                                                                "name":  "Rotten Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a giant purplish, red orb that appears in the middle of the room.",
+                                                                "name":  "Imminent Catastrophe",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a purple beam that targets a random player.",
+                                                                "name":  "Plague Dance",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "has an ability named Terror Eye that places a circular AoE under a random player.",
+                                                                "name":  "Dark Helot",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Anantaboga",
+                       "nameEn":  "Anantaboga",
+                       "mnemonic":  [
+                                        "Tail Drive",
+                                        "Rotten Breath",
+                                        "Imminent Catastrophe"
+                                    ]
+                   }
+               ]
 }

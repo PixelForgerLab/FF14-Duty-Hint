@@ -1,116 +1,186 @@
 {
-    "id": "alzadaals_legacy",
-    "name": "阿爾扎達爾遺產",
-    "nameEn": "Alzadaal's Legacy",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 600,
-    "jobLevelSync": 90,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）Ambujam：Tentacle Dig 看水波軌跡 → 走外圍 = 對側安全、走內圈 = 同側安全。",
-        "2）Armored Chariot：Articulated Bits 看死爪 1 或 2 點數 = 先後順序，找未發射爪子的縫。",
-        "3）Kapikulu：Spin Out 旋轉手指 + 線 AoE，預判方向。Wild Weave 看連繩顏色決定球爆位置。"
-    ],
-    "notes": "6.1 EW 第一個 post-MSQ 副本（Lv 90，ilvl 560）。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "安布雅姆",
-            "nameEn": "Ambujam",
-            "mnemonic": ["看水波軌跡", "外圍=對側、內圈=同側"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Tentacle Dig",
-                            "type": "aoe",
-                            "description": "觸手沉水中繞 hitbox。看水波路徑：走外圍=對側安全、走內圈=同側安全。",
-                            "tips": ["看波紋從哪邊開始 + 路徑類型"]
-                        },
-                        {
-                            "name": "Toxic Fountain",
-                            "type": "aoe",
-                            "description": "3 組圓 AoE 依序爆 + 擊退。",
-                            "tips": ["閃 + 抗擊退"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "裝甲戰車",
-            "nameEn": "Armored Chariot",
-            "mnemonic": ["看死爪 1/2 點", "找未發射爪子的縫"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Articulated Bits",
-                            "type": "aoe",
-                            "description": "角落死爪 + 1/2 點數標示順序，盾牌反射雷射成 cone AoE。",
-                            "tips": ["看點數順序", "站未發射方向"]
-                        },
-                        {
-                            "name": "Graviton Cannon",
-                            "type": "spread",
-                            "description": "玩家圓 AoE。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Rail Cannon",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "卡皮庫魯",
-            "nameEn": "Kapikulu",
-            "mnemonic": ["Spin Out 旋轉手指", "Wild Weave 看繩色"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Spin Out",
-                            "type": "other",
-                            "description": "拉至北 + 旋轉手指 10 秒 + Dizzy 2 秒。第二次配 Basting Blade 線 AoE。",
-                            "tips": ["看手指方向", "預判線 AoE 落點"]
-                        },
-                        {
-                            "name": "Wild Weave",
-                            "type": "aoe",
-                            "description": "黃綠繩 + Boss 連一根繩，相同顏色球爆。",
-                            "tips": ["看繩色避開該色球"]
-                        },
-                        {
-                            "name": "Magnitude Opus",
-                            "type": "stack",
-                            "description": "疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Rotary Gale",
-                            "type": "spread",
-                            "description": "玩家圓 AoE。",
-                            "tips": ["分散"]
-                        },
-                        {
-                            "name": "Crewel Slice",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "alzadaals_legacy",
+    "name":  "阿爾扎達爾遺產",
+    "nameEn":  "Alzadaal\u0027s Legacy (Duty)",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  90,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Ambujam：Big Wave: / Tentacle Dig: / Toxic Fountain:",
+                     "2）B2 Armored Chariot：Articulated Bits: / Diffusion Ray: / Graviton Cannon:",
+                     "3）B3 Kapikulu：Billowing Bolts: / Spin Out: / Basting Blade:"
+                 ],
+    "notes":  "6.x 曉月之終途 (Endwalker)[0]) aoe (Lv 90)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Moderate damage to the entire party and inflicts a weak bleeding Bleeding damage over time effect.",
+                                                                "name":  "Big Wave:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Ambujam submerges one or both of its larger tentacles and moves them around, denoted by ripples in the water. Eventually the tentacles will stop movin...",
+                                                                "name":  "Tentacle Dig:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Three sets of circle AoEs appear and burst with high damage and knockback in the order they appeared.",
+                                                                "name":  "Toxic Fountain:",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Ambujam",
+                       "nameEn":  "Ambujam",
+                       "mnemonic":  [
+                                        "Big Wave:",
+                                        "Tentacle Dig:",
+                                        "Toxic Fountain:"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "The Armored Chariot moves to the center of the arena and creates an electricity puddle inside its hitbox, which inflicts an electrocution Electrocutio...",
+                                                                "name":  "Articulated Bits:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Moderate damage to the entire party.",
+                                                                "name":  "Diffusion Ray:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Targeted circle AoEs on each player. Used alongside every other Articulated Bits cast from the third onward.",
+                                                                "name":  "Graviton Cannon:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Tankbuster",
+                                                                "name":  "Rail Cannon:",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Armored Chariot",
+                       "nameEn":  "Armored Chariot",
+                       "mnemonic":  [
+                                        "Articulated Bits:",
+                                        "Diffusion Ray:",
+                                        "Graviton Cannon:"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Moderate damage to the entire party.",
+                                                                "name":  "Billowing Bolts:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Kapikulu moves to the northern edge of the arena and pulls all players to him, wrapping everyone in ribbons and inflicting File:Fetters icon2.png Fett...",
+                                                                "name":  "Spin Out:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The second cast of Spin Out will also have the boss use this attack. Kapikulu leaps to the opposite edge of the arena and fires a wide line attack dir...",
+                                                                "name":  "Basting Blade:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Tankbuster.",
+                                                                "name":  "Crewel Slice:",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Several yellow and green ropes will descend from the ceiling. Kapikulu will tether to one of the ropes, causing an orb to fall from all other ropes of...",
+                                                                "name":  "Wild Weave:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Stack marker on a random player.",
+                                                                "name":  "Magnitude Opus:",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Targeted circle AoEs on each player.",
+                                                                "name":  "Rotary Gale:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Kapikulu",
+                       "nameEn":  "Kapikulu",
+                       "mnemonic":  [
+                                        "Billowing Bolts:",
+                                        "Spin Out:",
+                                        "Basting Blade:"
+                                    ]
+                   }
+               ]
 }

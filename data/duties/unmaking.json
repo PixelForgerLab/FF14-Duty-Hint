@@ -1,155 +1,165 @@
 {
-    "id": "unmaking",
-    "name": "恩歐殲滅戰",
-    "nameEn": "The Unmaking",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）Naught Grows 看箭頭方向，AoE 中心會在 portal 或 Boss。",
-        "2）Gaze of the Void：10 個球順時針扇形連發，前兩個會再被打中。",
-        "3）adds phase 沒打完團滅，Beacon 出現後快秒；Lightless World 站 Zero 之後（Passage of Arms）。",
-        "4）Phase 2 雙 portal 機制要算清楚兩個爆點。"
-    ],
-    "notes": "DT 7.5 副線 trial（Lv 100，ilvl 755）。Enuo 為 FFV 致敬，The Thirteenth + Zero 與 Golbez 助戰。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "恩歐",
-            "nameEn": "Enuo",
-            "mnemonic": ["Naught Grows 看箭頭起終點", "Gaze 順時針 + 前兩格重複", "站 Zero 後吃 Lightless"],
-            "phases": [
-                {
-                    "name": "Phase 1",
-                    "mechanics": [
-                        {
-                            "name": "Meteorain",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Naught Grows (單 portal)",
-                            "type": "aoe",
-                            "description": "Boss 面對虛無門連藍箭頭 = portal 中心大圓 AoE。",
-                            "tips": ["遠離 portal"]
-                        },
-                        {
-                            "name": "Gaze of the Void",
-                            "type": "aoe",
-                            "description": "10 個球順時針排列，依序放前方錐 AoE（無預警）。第一個發光，前兩格的最後兩個球疊在下面會二次打到。",
-                            "tips": ["跟著順時針旋轉貼中央", "記第一第二格會被打第二次"]
-                        },
-                        {
-                            "name": "Deep Freeze",
-                            "type": "tankbuster",
-                            "description": "雙 T flare 標記。",
-                            "tips": [{ "text": "MT/OT 分開站", "role": "tank" }]
-                        },
-                        {
-                            "name": "Naught Hunts",
-                            "type": "aoe",
-                            "description": "2 名玩家被 portal 連繩追蹤，留下持續圓 AoE。",
-                            "tips": ["被點的人繞場邊跑", "別擋其他人"]
-                        },
-                        {
-                            "name": "Naught Hunts Another",
-                            "type": "aoe",
-                            "description": "AoE 改追另外 2 個玩家（從前一輪被連繩者標出）。",
-                            "tips": ["看連繩交接"]
-                        },
-                        {
-                            "name": "Shrouded Holy",
-                            "type": "stack",
-                            "description": "補職疊機 AoE。",
-                            "tips": ["全員疊靠補職"]
-                        },
-                        {
-                            "name": "Meltdown",
-                            "type": "spread",
-                            "description": "腳下圓 AoE + 散開標記。",
-                            "tips": ["先誘導圓遠離隊友", "再散開"]
-                        },
-                        {
-                            "name": "Vacuum",
-                            "type": "aoe",
-                            "description": "8 條長短不一的曲線 AoE，末端生成黑球放點 AoE。",
-                            "tips": ["閃線後遠離球"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Adds Phase",
-                    "mechanics": [
-                        {
-                            "name": "All for Naught + adds",
-                            "type": "other",
-                            "description": "Boss 跳北變不可選，全員獲得 Unbecoming DoT。Looming Shadow 連 T，多隻 Uncast Shadow 放線 AoE。需在 Power of the Void 100 前打完。",
-                            "tips": [
-                                "全力集火 adds",
-                                { "text": "Looming Shadow 由主 T 抗拉", "role": "tank" },
-                                "閃線 AoE"
-                            ]
-                        },
-                        {
-                            "name": "Beacon in the Dark",
-                            "type": "other",
-                            "description": "光柱出現，全員衝到 Beacon 打掉，期間還要閃 Nothingless 線 AoE。",
-                            "tips": ["全員轉移", "邊跑邊閃線"]
-                        },
-                        {
-                            "name": "Lightless World",
-                            "type": "raidwide",
-                            "description": "6 段全體 AoE 高傷，需站在 Zero 的 Passage of Arms 後才能生存。",
-                            "tips": ["全員站 Zero 後面"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Naught Grows (Boss 中心)",
-                            "type": "aoe",
-                            "description": "虛無門連 Boss = Boss 中心大圓 AoE。",
-                            "tips": ["遠離 Boss"]
-                        },
-                        {
-                            "name": "Almagest",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Naught Grows (雙 portal)",
-                            "type": "aoe",
-                            "description": "Vacuums 增加為兩個 portal。Boss 連到另一 portal = 兩個圓 AoE（Boss 中心 + 目的 portal）。",
-                            "tips": ["看箭頭起終點", "找雙圓中間安全"]
-                        },
-                        {
-                            "name": "Naught Wakes",
-                            "type": "other",
-                            "description": "重新定位兩個 portal 到場外。",
-                            "tips": ["記新 portal 位置"]
-                        },
-                        {
-                            "name": "Naught Grows (雙箭頭)",
-                            "type": "aoe",
-                            "description": "Boss 同時發兩組箭頭到兩個 portal，兩個 portal 中心各圓 AoE。",
-                            "tips": ["找兩圓之間安全"]
-                        },
-                        {
-                            "name": "Dimension Zero",
-                            "type": "stack",
-                            "description": "三段線疊機 AoE。",
-                            "tips": ["全員疊"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "unmaking",
+    "name":  "解構",
+    "nameEn":  "The Unmaking",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "stack",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Enuo：Meteorain",
+                     "2）Naught Grows / Gaze of the Void",
+                     "3）Dimension Zero"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) stack (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Meteorain",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss faces the voidgate in the background and tethers it with blue arrows, indicating a large late-telegraphed point-blank AoE centered on the por...",
+                                                                "name":  "Naught Grows",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  ", the boss summons ten orbs around it in a clockwise pattern. The first two orbs will have the last two orbs beneath them. The orbs will each use an u...",
+                                                                "name":  "Gaze of the Void",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Flare markers on each tank, dealing magical damage.",
+                                                                "name":  "Deep Freeze",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Tethers two random players to small portals, which will them follow them and leave a trail of untelegraphed circle AoEs (Endless Chase). Being hit by ...",
+                                                                "name":  "Naught Hunts",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The AoEs will begin chasing two other players, indicated by the players tethered to the original targets.",
+                                                                "name":  "Naught Hunts Another",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Targets a healer with a stack marker AoE, dealing magical damage.",
+                                                                "name":  "Shrouded Holy",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a baited circle AoE telegraph at each player\u0027s position, then marks each player with a spread marker AoE dealing magical damage.",
+                                                                "name":  "Meltdown",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns eight curved line AoEs of various lengths. The tip of each AoE will spawn a dark orb that will do a late-telegraphed point-blank AoE.",
+                                                                "name":  "Vacuum",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss jumps to the north of the arena and gains directional disregard Directional Disregard, then becomes untargetable and begins an adds phase.",
+                                                                "name":  "All for Naught",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The Uncast Shadows will use telegraphed line AoEs.",
+                                                                "name":  "Nothingless",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A six-hit raid-wide AoE dealing massive damage. Players must stand behind Zero\u0027s Passage of Arms AoE to survive.",
+                                                                "name":  "Lightless World",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Almagest",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Repositions the portals at the outside of the arena.",
+                                                                "name":  "Naught Wakes",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Three-hit line stack marker.",
+                                                                "name":  "Dimension Zero",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Enuo",
+                       "nameEn":  "Enuo",
+                       "mnemonic":  [
+                                        "Meteorain",
+                                        "Naught Grows",
+                                        "Gaze of the Void"
+                                    ]
+                   }
+               ]
 }

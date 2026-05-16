@@ -1,84 +1,159 @@
 {
-  "id": "stone_vigil",
-  "name": "對龍城塞石衛塔",
-  "nameEn": "The Stone Vigil",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 44,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "途中有龍小怪與爆彈怪",
-    "最終 boss 骸骨龍：閃龍息直線 + AoE",
-    "場上注意空中俯衝攻擊"
-  ],
-  "notes": "等級 41 的 4 人副本（巨龍首戰場）。Boss 主要是龍類，注意龍息直線傷害。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "爆彈怪 mini",
-      "nameEn": "Chudo-Yudo",
-      "mnemonic": [
-        "Mini boss，會自爆"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "自爆",
-              "type": "raidwide",
-              "description": "Boss 蓄力後自爆造成全體傷害。",
-              "tips": [
-                "DPS 提前打掉以減傷",
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "骸骨龍",
-      "nameEn": "Isgebind",
-      "mnemonic": [
-        "閃前方直線龍息",
-        "空中俯衝攻擊看落點走位",
-        "全體 AoE 注意補血"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "龍息",
-              "type": "aoe",
-              "description": "Boss 前方直線龍息攻擊。",
-              "tips": [
-                "閃到線外",
-                { "text": "T 把 Boss 拉好面向場邊", "role": "tank" }
-              ]
-            },
-            {
-              "name": "俯衝",
-              "type": "aoe",
-              "description": "Boss 飛上空中後俯衝攻擊指定區域。",
-              "tips": [
-                "看地面落點圓圈走位"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "stone_vigil",
+    "name":  "石之家",
+    "nameEn":  "The Stone Vigil",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  44,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Chudo-Yudo：Rake / Lion\u0027s Breath / Swinge",
+                     "2）B2 Koshchei：Spiked Tail / Sonic Storm / Typhoon",
+                     "3）B3 Isgebind：Rime Wreath / Frost Breath / Sheet of Ice"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 44)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is an instant melee attack that deals a small amount of damage.",
+                                                                "name":  "Rake",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a casted breath attack that deals a moderate amount of damage and inflicts burns Burns on all targets hit.",
+                                                                "name":  "Lion\u0027s Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE cone attack that deals a moderate amount of damage and inflicts the debuffs silence Silence and pacification Pacification for 5 secon...",
+                                                                "name":  "Swinge",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Chudo-Yudo",
+                       "nameEn":  "Chudo-Yudo",
+                       "mnemonic":  [
+                                        "Rake",
+                                        "Lion\u0027s Breath",
+                                        "Swinge"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is this boss\u0027s tankbuster.",
+                                                                "name":  "Spiked Tail",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "is a circular AoE targeted on a random party member.",
+                                                                "name":  "Sonic Storm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "spawns three whirlwinds at the back of the arena the first time it is cast and four thereafter.",
+                                                                "name":  "Typhoon",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Koshchei",
+                       "nameEn":  "Koshchei",
+                       "mnemonic":  [
+                                        "Spiked Tail",
+                                        "Sonic Storm",
+                                        "Typhoon"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is an ice ability that damages all players for moderate amount of damage.",
+                                                                "name":  "Rime Wreath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal cone AoE attack that deals heavy damage to all targets hit.",
+                                                                "name":  "Frost Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is circular AoE that targets a random player.",
+                                                                "name":  "Sheet of Ice",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is an ability that turns about a third of the room an icy blue color.",
+                                                                "name":  "Cauterize",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is used after Cauterize.",
+                                                                "name":  "Touchdown",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Isgebind",
+                       "nameEn":  "Isgebind",
+                       "mnemonic":  [
+                                        "Rime Wreath",
+                                        "Frost Breath",
+                                        "Sheet of Ice"
+                                    ]
+                   }
+               ]
 }

@@ -1,83 +1,183 @@
 {
-  "id": "dzemael_darkhold",
-  "name": "山中戰線澤梅爾要塞",
-  "nameEn": "Dzemael Darkhold",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 47,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "Lava Scorpion：熔岩蠍 boss，閃熔岩 AoE",
-    "Batraal：邪神 boss，注意 debuff",
-    "場上有冰雪元素需小心"
-  ],
-  "notes": "等級 44 的 4 人副本（澤梅爾要塞）。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "熔巖蠍",
-      "nameEn": "Lava Scorpion",
-      "mnemonic": [
-        "熔岩蠍 boss，閃尾部毒液",
-        "腳下熔岩 AoE 走開"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下熔岩圓圈 AoE。",
-              "tips": [
-                "看到圓圈走出去"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體火傷。",
-              "tips": [
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "巴特拉爾",
-      "nameEn": "Batraal",
-      "mnemonic": [
-        "邪神 boss，注意 debuff",
-        "閃 AoE 圓圈與直線"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "Tankbuster",
-              "type": "tankbuster",
-              "description": "對主 T 的單體大傷。",
-              "tips": [
-                { "text": "T 開減傷", "role": "tank" },
-                { "text": "立刻補血", "role": "healer" }
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "dzemael_darkhold",
+    "name":  "德澤梅亞迷洞",
+    "nameEn":  "Dzemael Darkhold",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  47,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 All-seeing Eye：Blustering Blink / Void Matter / Eyes on Me",
+                     "2）B2 Taulurd：Deepvoid Slave / Firewater / Boulderdash",
+                     "3）B3 Batraal：Hellssend / Grim Fate / Grim Cleaver"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 47)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is a frontal line AoE attack.",
+                                                                "name":  "Blustering Blink",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a sequence of circle AoEs: three on the walls; then three more on the walls, leaving a safe zone in the center; then a final AoE covering the cente...",
+                                                                "name":  "Void Matter",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a room-wide AoE.",
+                                                                "name":  "Eyes on Me",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "All-seeing Eye",
+                       "nameEn":  "All-seeing Eye",
+                       "mnemonic":  [
+                                        "Blustering Blink",
+                                        "Void Matter",
+                                        "Eyes on Me"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "has two types of attacks, Firewater and Boulderdash.",
+                                                                "name":  "Deepvoid Slave",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a set of 4 circular AoEs around the arena.",
+                                                                "name":  "Firewater",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant cast that hits all players.",
+                                                                "name":  "Boulderdash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant melee attack that deals a small amount of damage.",
+                                                                "name":  "Straight Punch",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE cone attack that deals a large amount of damage to targets hit.",
+                                                                "name":  "Double Smash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE cone attack that deals more damage than Double Smash.",
+                                                                "name":  "Elbow Drop",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Taulurd",
+                       "nameEn":  "Taulurd",
+                       "mnemonic":  [
+                                        "Deepvoid Slave",
+                                        "Firewater",
+                                        "Boulderdash"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  ", which grants him a permanent damage up Damage Up buff.",
+                                                                "name":  "Hellssend",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant frontal attack that deals heavy damage to a single player.",
+                                                                "name":  "Grim Fate",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is an instant ranged attack that deals moderate amount of damage to a random player.",
+                                                                "name":  "Grim Cleaver",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a circle AoE that deals moderate damage to all players around him.",
+                                                                "name":  "Grim Halo",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a frontal AoE column that deals very heavy damage to all players caught within.",
+                                                                "name":  "Desolation",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Batraal",
+                       "nameEn":  "Batraal",
+                       "mnemonic":  [
+                                        "Hellssend",
+                                        "Grim Fate",
+                                        "Grim Cleaver"
+                                    ]
+                   }
+               ]
 }

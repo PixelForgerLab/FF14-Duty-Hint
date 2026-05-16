@@ -1,37 +1,210 @@
 {
-    "id": "sohm_al_hard",
-    "name": "索姆阿爾（高難度）",
-    "nameEn": "Sohm Al (Hard)",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "3.x HW Hard 副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
-    "bosses": [
-        {
-            "name": "Aiatar",
-            "nameEn": "亞塔",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "sohm_al_hard",
+    "name":  "蘇姆艾爾大山 (零式)",
+    "nameEn":  "Sohm Al (Hard)",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "other",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 The Leightonward：Wild Horn / Inflamable Fumes / Spore Sac",
+                     "2）B2 Gowrow：Volcanic Howl / Ripper Claw / Tail Smash",
+                     "3）B3 Lava Scorpion：Molten Silk / Deadly Thrust / Hiss"
+                 ],
+    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) other (Lv 60)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Mini TB.",
+                                                                "name":  "Wild Horn",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Raidwide.",
+                                                                "name":  "Inflamable Fumes",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns many untargetable small spore sacs, which each explode in an AoE after a while.",
+                                                                "name":  "Spore Sac",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Damages a target. Inflicts 30s of heavyHeavy.",
+                                                                "name":  "Excretion",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "The Leightonward",
+                       "nameEn":  "The Leightonward",
+                       "mnemonic":  [
+                                        "Wild Horn",
+                                        "Inflamable Fumes",
+                                        "Spore Sac"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raidwide. The boss gains temporary damage upDamage Up, which makes it glow red and enhances its attacks.",
+                                                                "name":  "Volcanic Howl",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Dodgeable cleave. Telegraphed by the boss raising its left arm.",
+                                                                "name":  "Ripper Claw",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Dodgeable backwards cleave with knockback. Telegraphed by the boss twisting to its left and raising its tail.",
+                                                                "name":  "Tail Smash",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Dodgeable melee-range circular cleave with knockback. Used instead of Tail Smash when the boss is buffed, and has the same telegraph.",
+                                                                "name":  "Tail Swing",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Faces a target and remembers their location, then does an AoE there. Telegraphed by the boss standing upright and putting its hands together.",
+                                                                "name":  "Fireball",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Faces a target, then channels a continuous cone AoE. Used instead of Fireball when the boss is buffed, and has the same telegraph.",
+                                                                "name":  "Lava Flow",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Charges up to a target in a line AoE with knockback. Telegraphed by the boss taking a shoulder charge stance.",
+                                                                "name":  "Wild Charge",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Charges in the direction of a target in a line AoE with massive knockback. Used instead of Wild Charge when the boss is buffed, and has the same teleg...",
+                                                                "name":  "Hot Charge",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Gowrow",
+                       "nameEn":  "Gowrow",
+                       "mnemonic":  [
+                                        "Volcanic Howl",
+                                        "Ripper Claw",
+                                        "Tail Smash"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "270° telegraphed close range cleave. Safe zone is directly behind. Often turns around and repeats from the other side.",
+                                                                "name":  "Molten Silk",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Very high damage attack on primary target.",
+                                                                "name":  "Deadly Thrust",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Summons 2-4 Scorpions which should be killed.",
+                                                                "name":  "Hiss",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Short range circular AoE around boss.",
+                                                                "name":  "Realm Shaker",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Randomly marks a party member for a moderate attack with splash damage. Will create lava puddles near point of impact, as well as expanding existing p...",
+                                                                "name":  "Flying Press",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Lava Scorpion",
+                       "nameEn":  "Lava Scorpion",
+                       "mnemonic":  [
+                                        "Molten Silk",
+                                        "Deadly Thrust",
+                                        "Hiss"
+                                    ]
+                   }
+               ]
 }

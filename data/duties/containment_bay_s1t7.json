@@ -1,36 +1,37 @@
 {
     "id": "containment_bay_s1t7",
-    "name": "封鎖區域 S1T7 殲滅戰",
+    "name": "兵器隔離倉 S1T7",
     "nameEn": "Containment Bay S1T7",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 60,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.2 HW Sephirot trial",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）Sephirot 鎖菲洛：無詠唱條 + 無地面預警。",
+        "2）Fiendish Rage 4 箭頭標記 → 疊接分擔；Ratzon 綠標散開。",
+        "3）Ain 手臂推 180 度範圍，要疊在 boss 背後。",
+        "4）P2 (60%)：Pillar of Mercy 藍圈擊退 + Cochma/Binah adds。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.2 trial (Lv 60)。Sephirot (賢者) Normal。整場無詠唱條無預警，依招式名判斷。",
     "bosses": [
         {
             "name": "Sephirot",
-            "nameEn": "薩菲洛斯",
-            "mnemonic": ["看 telegraph 預警"],
+            "nameEn": "Sephirot",
+            "mnemonic": ["無 cast bar / 預警", "Fiendish Rage 疊接", "Ratzon 散開", "Ain 站背後"],
             "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
+                { "name": "P1 主戰", "mechanics": [
+                    { "name": "Fiendish Rage 凶猛狂怒", "type": "stack", "description": "1 名玩家被 4 箭頭標記，其他人疊上去分擔傷害。", "tips": ["全員疊在標記者身上"] },
+                    { "name": "Ratzon 拉沙", "type": "spread", "description": "~6 名玩家被綠色 AoE 標記，需散開避免重疊。", "tips": ["全員散開"] },
+                    { "name": "Ain 阿因", "type": "aoe", "description": "boss 面向隨機玩家舉手 → 180 度推力，無詠唱條。", "tips": ["DPS/Healer 站 boss 背後"] },
+                    { "name": "Cochma + Binah Adds (60%)", "type": "other", "description": "Phase 切換時召喚兩隻 adds，先殺 Binah。", "tips": [{ "text": "DPS 先 Binah 後 Cochma", "role": "dps" }] }
+                ]},
+                { "name": "P2 (60%)", "mechanics": [
+                    { "name": "Pillar of Mercy 慈悲之柱", "type": "knockback", "description": "藍圈出現拳擊 + 擊退，站旁邊（不站裡面）以免被擊飛出場。", "tips": ["站靠中央側"] },
+                    { "name": "場地縮小", "type": "other", "description": "盡量保持中央避免掉落。", "tips": ["注意邊緣"] }
+                ]}
             ]
         }
     ]

@@ -1,124 +1,165 @@
 {
-  "id": "copperbell_mines",
-  "name": "封鎖坑道銅鈴銅山",
-  "nameEn": "Copperbell Mines",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 20,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "Kottos：踩亮地板抗擊退，不要被推下台",
-    "Ichorous Ire：分裂的小水球 DPS 快清",
-    "Gyges：閃 AoE、注意擊退方向"
-  ],
-  "notes": "等級 17 的 4 人副本。整體機制簡單，主要小心擊退類技能避免摔下平台。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "憤怒的科託斯",
-      "nameEn": "Kottos",
-      "mnemonic": [
-        "Boss 會擊退，靠場邊小心摔下去",
-        "踩亮的地板可以抗擊退"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "擊退攻擊",
-              "type": "other",
-              "description": "Boss 會把目標擊退。場上有發光地板可以踩著抗擊退。",
-              "tips": [
-                "站亮地板上戰鬥",
-                { "text": "拉 Boss 時站亮處避免被推下台", "role": "tank" }
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "怒水腐液",
-      "nameEn": "Ichorous Ire",
-      "mnemonic": [
-        "Boss 會分裂成小水球",
-        "DPS 全力打小水球避免合體"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "分裂",
-              "type": "other",
-              "description": "Boss HP 到某階段會分裂成多個小水球，若未及時擊殺會合體回大水球。",
-              "tips": [
-                "DPS 集中火力清小水球",
-                { "text": "T 控制小水球聚集方便 AoE", "role": "tank" }
-              ]
-            },
-            {
-              "name": "腳下圓圈",
-              "type": "aoe",
-              "description": "腳下會出現酸液圓圈，需移開。",
-              "tips": [
-                "看到圓圈立刻走出去"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "強腕的居格斯",
-      "nameEn": "Gyges the Great",
-      "mnemonic": [
-        "大型石頭巨人 boss",
-        "閃 AoE 圓圈、注意擊退別摔下去"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "扇形攻擊",
-              "type": "tankbuster",
-              "description": "前方扇形攻擊。",
-              "tips": [
-                { "text": "T 注意減傷或閃避", "role": "tank" },
-                "DPS 站背後輸出"
-              ]
-            },
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下大圓圈 AoE。",
-              "tips": [
-                "看到圓圈立刻走出去"
-              ]
-            },
-            {
-              "name": "擊退",
-              "type": "other",
-              "description": "對單一目標的擊退攻擊。",
-              "tips": [
-                "注意背後是否為平台邊緣"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "copperbell_mines",
+    "name":  "銅鈴銅山",
+    "nameEn":  "Copperbell Mines",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  20,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Kottos：Grand Slam / Lumbering Leap / Colossal Slam",
+                     "2）B2 Ichorous Ire：Fluid Spread / Syrup / Divide",
+                     "3）B3 Gyges the Great：Grand Slam / Gigantic Swing / Gigantic Smash"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 20)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Tankbuster. Tanks should use mitigation to lower the damage.",
+                                                                "name":  "Grand Slam",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Kottos will jump to 3 areas, causing a massive circle AoE to appear at the location. Players should move to the small safe spot at the edge of the are...",
+                                                                "name":  "Lumbering Leap",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A large cone AoE targeted on a random player.",
+                                                                "name":  "Colossal Slam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Kottos will throw a rock at a random player, dealing moderate damage.",
+                                                                "name":  "Catapult",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Kottos",
+                       "nameEn":  "Kottos",
+                       "mnemonic":  [
+                                        "Grand Slam",
+                                        "Lumbering Leap",
+                                        "Colossal Slam"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Tankbuster.",
+                                                                "name":  "Fluid Spread",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Circle AoEs will appear below all players, requiring them to move out of it.",
+                                                                "name":  "Syrup",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "After 50% HP, Ichorous Ire will split up into many Ichorous Drips, which will each cast Burst, a circle AoE centered on the enemy.",
+                                                                "name":  "Divide",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Ichorous Ire",
+                       "nameEn":  "Ichorous Ire",
+                       "mnemonic":  [
+                                        "Fluid Spread",
+                                        "Syrup",
+                                        "Divide"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Tankbuster.",
+                                                                "name":  "Grand Slam",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "A massive donut AoE centered on the boss. Players must move into the boss\u0027 hitbox to avoid excess damage.",
+                                                                "name":  "Gigantic Swing",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will recenter and cast a circle AoE in the center along with 5 more on the outside of the arena. Players should move into the safe spots in b...",
+                                                                "name":  "Gigantic Smash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A large cone AoE targeted on a random player.",
+                                                                "name":  "Colossal Slam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Gyges the Great",
+                       "nameEn":  "Gyges the Great",
+                       "mnemonic":  [
+                                        "Grand Slam",
+                                        "Gigantic Swing",
+                                        "Gigantic Smash"
+                                    ]
+                   }
+               ]
 }

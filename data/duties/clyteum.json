@@ -1,215 +1,251 @@
 {
-    "id": "clyteum",
-    "name": "軍工要地克呂提俄斯魔導工廠",
-    "nameEn": "The Clyteum",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）蠍眼：石化錐 AoE 朝玩家掃；Motion Tracker 期間別動別攻擊。",
-        "2）裂蹄魔：旋轉滾出場後從中央衝鋒；Bodyweight Exorcism 放射狀擊退要抗。",
-        "3）馬爾法斯：操縱大/小垃圾小怪扇/點 AoE 組合；String Up 期間要持續移動。"
-    ],
-    "notes": "DT 7.5 新副本（Lv 100，ilvl 750），Expert roulette。Garlemald 場景的虛無 (voidsent) 主題副本。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "蠍眼",
-            "nameEn": "Eye of the Scorpion",
-            "mnemonic": ["看石化錐方向繞", "Motion Tracker 站定不動"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Eyes on Me",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。第一次施放會在場邊生成 AoE 縮小場地為方形。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Petrifying Beam",
-                            "type": "aoe",
-                            "description": "Boss 走到北牆，旋轉錐 AoE 掃動，定型時命中會石化。",
-                            "tips": ["看錐 AoE 移動軌跡繞側"]
-                        },
-                        {
-                            "name": "Motion Scanner / Launch",
-                            "type": "other",
-                            "description": "場上掃過去的線 AoE 給 Motion Tracker debuff，移動或攻擊會被擊飛高傷。",
-                            "tips": ["debuff 期間完全停手不動", "等掃過去再行動"]
-                        },
-                        {
-                            "name": "Penetrator Missile",
-                            "type": "stack",
-                            "description": "疊機標記。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Petrifying Beam + Surface Missile",
-                            "type": "aoe",
-                            "description": "Beam 同時加多個圓 AoE。",
-                            "tips": ["先閃圓再閃 Beam"]
-                        },
-                        {
-                            "name": "Motion Scanner + Anti-personnel Missile",
-                            "type": "spread",
-                            "description": "Motion Scanner 同時散開標記。",
-                            "tips": ["debuff 期間別動", "標記提前散開到安全位"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "裂蹄魔",
-            "nameEn": "Chort",
-            "mnemonic": ["旋轉=滾場外", "擊退用 Arm's Length"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Ripples of Gloom",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。第一次會壓縮場地。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Mortifying Flesh",
-                            "type": "aoe",
-                            "description": "Boss 旋轉指示前方線 AoE，之後滾出場外從中心衝鋒線 AoE。",
-                            "tips": ["先閃旋轉時的前方線", "再閃中央衝鋒"]
-                        },
-                        {
-                            "name": "Bodyweight Exorcism",
-                            "type": "other",
-                            "description": "中心放射狀擊退。",
-                            "tips": ["用抗擊退", "或站近 Boss 邊"]
-                        },
-                        {
-                            "name": "Basic Vomit",
-                            "type": "aoe",
-                            "description": "前方錐 AoE。",
-                            "tips": ["繞 Boss 後"]
-                        },
-                        {
-                            "name": "Bodyweight Exorcism (塔)",
-                            "type": "stack",
-                            "description": "連續 4 個疊機塔。",
-                            "tips": ["全員集中踩塔"]
-                        },
-                        {
-                            "name": "Mortifying Flesh (進階)",
-                            "type": "aoe",
-                            "description": "滾兩次穿過中央。",
-                            "tips": ["閃兩次中央線"]
-                        },
-                        {
-                            "name": "Evil Emission",
-                            "type": "spread",
-                            "description": "全員散開標記。",
-                            "tips": ["散開不重疊"]
-                        },
-                        {
-                            "name": "Profane Pressure",
-                            "type": "stack",
-                            "description": "補職疊機標記。",
-                            "tips": ["全員疊靠補職"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "馬爾法斯",
-            "nameEn": "Malphas",
-            "mnemonic": ["大小垃圾分前後", "Puppet Mastery 看最終位置", "String Up 不能停"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Rubbish Disposal",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。第一次會壓縮場地。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Void Dark",
-                            "type": "aoe",
-                            "description": "Boss 對玩家前方 180 度 AoE。",
-                            "tips": ["跑 Boss 後"]
-                        },
-                        {
-                            "name": "Scrap Meddle",
-                            "type": "aoe",
-                            "description": "多條線 AoE 召喚多個小型 + 1 個大型垃圾小怪。",
-                            "tips": ["閃線 AoE", "記住小怪位置"]
-                        },
-                        {
-                            "name": "Puppet Strings (大)",
-                            "type": "aoe",
-                            "description": "Boss 操縱大小怪放錐 AoE。",
-                            "tips": ["看大小怪朝向繞側"]
-                        },
-                        {
-                            "name": "Puppet Strings (小)",
-                            "type": "aoe",
-                            "description": "Boss 操縱所有小小怪放點 AoE。",
-                            "tips": ["遠離小小怪"]
-                        },
-                        {
-                            "name": "Gluttonous Wire",
-                            "type": "stack",
-                            "description": "補職疊機標記。",
-                            "tips": ["全員疊靠補職"]
-                        },
-                        {
-                            "name": "Scrap Meddle (2 大)",
-                            "type": "aoe",
-                            "description": "召喚 2 個大型 + 多個小型小怪。",
-                            "tips": ["閃線 AoE", "找兩大之間安全位"]
-                        },
-                        {
-                            "name": "Puppet Pair",
-                            "type": "aoe",
-                            "description": "Boss 操控全部小怪形成錐 + 點 AoE 組合。",
-                            "tips": ["先看大小怪朝向找錐安全", "再遠離小小怪"]
-                        },
-                        {
-                            "name": "String Up",
-                            "type": "other",
-                            "description": "Cast 結束時不在移動會被定身。",
-                            "tips": ["持續移動到 cast 結束"]
-                        },
-                        {
-                            "name": "Shadow Play",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法 AoE 坦補。",
-                            "tips": [
-                                { "text": "拉遠避免炸到隊友", "role": "tank" },
-                                { "text": "開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Puppet Mastery",
-                            "type": "aoe",
-                            "description": "Boss 把所有小怪舉空旋轉，cast 結束時各自最終位置放對應 AoE。",
-                            "tips": ["盯緊小怪旋轉軌跡", "預判最終位置找安全縫"]
-                        },
-                        {
-                            "name": "Wrathful Wire",
-                            "type": "spread",
-                            "description": "全員散開標記，緊接 Puppet Mastery 之後。",
-                            "tips": ["最終位置散開"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "clyteum",
+    "name":  "克麗提姆",
+    "nameEn":  "The Clyteum",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "spread",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Eye of the Scorpion：Eyes on Me / Petrifying Beam / Motion Scanner",
+                     "2）B2 Chort：Ripples of Gloom / Mortifying Flesh / Basic Vomit",
+                     "3）B3 Malphas：Rubbish Disposal / Void Dark / Scrap Meddle"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) spread (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage. The first usage also spawns a dangerous AoE around the arena, compressing it into a square.",
+                                                                "name":  "Eyes on Me",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will walk to the north wall, receive a temporary directional disregard Directional Disregard, and spawn a moving red conal AoE telegraph. The...",
+                                                                "name":  "Petrifying Beam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Your foe is scanning for moving targets! Spawns an unavoidable line AoE that will sweep across the arena. When within the AoE, players will be inflict...",
+                                                                "name":  "Motion Scanner",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Stack marker on a random player, dealing magical damage.",
+                                                                "name":  "Penetrator Missile",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Spread marker AoE on each player, dealing magical damage. Combined with Motion Scanner.",
+                                                                "name":  "Anti-personnel Missile",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Eye of the Scorpion",
+                       "nameEn":  "Eye of the Scorpion",
+                       "mnemonic":  [
+                                        "Eyes on Me",
+                                        "Petrifying Beam",
+                                        "Motion Scanner"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage. The first usage also spawns a dangerous AoE around the arena, compressing it into a smaller circle.",
+                                                                "name":  "Ripples of Gloom",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will begin spinning, indicating a late-telegraphed line AoE in front of it. It will then become untargetable and roll around the arena outsid...",
+                                                                "name":  "Mortifying Flesh",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Faces one player and does a late-telegraphed frontal conal AoE.",
+                                                                "name":  "Basic Vomit",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Sequentially spawns four stack marker towers, each dealing physical damage.",
+                                                                "name":  "Bodyweight Exorcism",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Spread marker AoE on each player, dealing magical damage.",
+                                                                "name":  "Evil Emission",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Stack marker AoE on the healer, dealing magical damage.",
+                                                                "name":  "Profane Pressure",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Chort",
+                       "nameEn":  "Chort",
+                       "mnemonic":  [
+                                        "Ripples of Gloom",
+                                        "Mortifying Flesh",
+                                        "Basic Vomit"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage. The first usage also spawns a dangerous AoE around the arena, compressing it into a smaller circle.",
+                                                                "name":  "Rubbish Disposal",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Faces one player and does a late-telegraphed frontal 180 degree AoE.",
+                                                                "name":  "Void Dark",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns several line AoE telegraphs that summon multiple small and one large scrap add.",
+                                                                "name":  "Scrap Meddle",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will take control of the large add, causing it to do a late-telegraphed conal AoE in front of where the add is facing.",
+                                                                "name":  "Puppet Strings",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Stack marker AoE on the healer, dealing magical damage.",
+                                                                "name":  "Gluttonous Wire",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "The boss takes control of all adds, forming a pattern of both conal and point-blank AoEs.",
+                                                                "name":  "Puppet Pair",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Players must keep moving when the cast fills or they will be incapacitated temporarily.",
+                                                                "name":  "String Up",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical AoE tankbuster.",
+                                                                "name":  "Shadow Play",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The boss takes control of all adds and lifts them airborne. They will rotate around the arena until the cast bar fills, then use their respective atta...",
+                                                                "name":  "Puppet Mastery",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "(no cast bar): Spread marker AoE on each player, dealing magical damage. Used after Puppet Mastery.",
+                                                                "name":  "Wrathful Wire",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Malphas",
+                       "nameEn":  "Malphas",
+                       "mnemonic":  [
+                                        "Rubbish Disposal",
+                                        "Void Dark",
+                                        "Scrap Meddle"
+                                    ]
+                   }
+               ]
 }

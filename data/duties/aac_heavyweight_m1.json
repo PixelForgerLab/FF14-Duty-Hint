@@ -1,68 +1,139 @@
 {
-    "id": "aac_heavyweight_m1",
-    "name": "阿卡狄亞登天鬥技場 重量級1",
-    "nameEn": "AAC Heavyweight M1",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）魅亡之音：全屏 AoE。",
-        "2）月之半相：讀條結束對指定半場 AoE 傷害。",
-        "3）血魅的靴踏音：跳場中央 + 擴散環形 + 致命蝙蝠生成。",
-        "4）內含 Savage 強化前的基礎機制，主要練習 Black Cat 套路前哨。"
-    ],
-    "notes": "DT 7.4 AAC 重量級 1 (M1, Lv 100, ilvl ~)。Vamp Fatale (致命美人) Normal。AAC Heavyweight 第一個 Boss（7.4 raid tier）。基礎機制：魅亡之音全屏 + 月之半相半場 + 血魅的靴踏音中央跳+蝙蝠。Normal 版主要為熟悉場地與 boss 套路用。",
-    "bosses": [
-        {
-            "name": "致命美人",
-            "nameEn": "Vamp Fatale",
-            "mnemonic": [
-                "魅亡之音：全屏 AoE。",
-                "月之半相：讀條結束對指定半場 AoE。",
-                "血魅的靴踏音：跳中央 + 擴散環形 + 致命蝙蝠。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "魅亡之音 / Death's Toll",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "月之半相 / Lunar Phase",
-                            "type": "aoe",
-                            "description": "讀條結束時對指定半場放 AoE 傷害。",
-                            "tips": ["看 boss 朝向預判半場，跑反側"]
-                        },
-                        {
-                            "name": "血魅的靴踏音 / Bloodspike Tap",
-                            "type": "aoe",
-                            "description": "Boss 跳場中央放圓 AoE 後場上出現擴散圓環邊界 + 10 隻致命蝙蝠 (內環 2、中環 3、外環 5)。觸碰圓環 → 圓 AoE 共振波 + 魔法受傷加重。",
-                            "tips": [
-                                "閃中央 + 預判圓環移動",
-                                "避免被掃到蝙蝠"
-                            ]
-                        },
-                        {
-                            "name": "基本攻擊 / Basic Attacks",
-                            "type": "tankbuster",
-                            "description": "Boss 普攻對 1 仇單體物理。",
-                            "tips": [
-                                { "text": "MT 開減傷接", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "aac_heavyweight_m1",
+    "name":  "AAC 重量級 M1",
+    "nameEn":  "AAC Heavyweight M1",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raidwide",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Vamp Fatale：Killer Voice",
+                     "2）Half Moon / Vamp Stomp",
+                     "3）Insatiable Thirst"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) raidwide (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Magical raid-wide damage.",
+                                                                "name":  "Killer Voice",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will point her orb to one side of the arena, indicating a late-telegraphed half-room cleave to her left or right. This is immediately followe...",
+                                                                "name":  "Half Moon",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed large circle AoE in the middle of the room. The boss will also summon several bats that will begin rotating, but are harmless to touch. ...",
+                                                                "name":  "Vamp Stomp",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed AoE magical tankbusters hitting both tanks.",
+                                                                "name":  "Hardcore",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raid-wide damage and destroys the left and right column of the arena, leaving a 2x4 region safe.",
+                                                                "name":  "Sadistic Screech",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "and Dead Wake: Vamp Fatale will target each party member with a telegraphed spread AoE dealing magical damage. In addition, the Coffinmaker will charg...",
+                                                                "name":  "Flaying Fry",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "and Dead Wake: Vamp Fatale will target each healer with a stack marker dealing magical damage and magic vulnerability up Magic Vulnerability Up, makin...",
+                                                                "name":  "Penetrating Pitch",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raid-wide damage and the boss gains a stack of File:Satisfied icon.png Satisfied, increasing her damage dealt.",
+                                                                "name":  "Crowd Kill",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raid-wide damage and spawns a dangerous AoE at the edge of the arena, compressing it to a circle.",
+                                                                "name":  "Finale Fatale",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Multi-hit stack AoE targeting a random player for four hits of magical damage.",
+                                                                "name":  "Brutal Rain",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Magical raid-wide damage and removes the dangerous AoE at the edge of the arena.",
+                                                                "name":  "Insatiable Thirst",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Vamp Fatale",
+                       "nameEn":  "Vamp Fatale",
+                       "mnemonic":  [
+                                        "Killer Voice",
+                                        "Half Moon",
+                                        "Vamp Stomp"
+                                    ]
+                   }
+               ]
 }

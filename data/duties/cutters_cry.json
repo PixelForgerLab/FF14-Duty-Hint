@@ -1,78 +1,187 @@
 {
-  "id": "cutters_cry",
-  "name": "流沙迷宮樵鳴洞",
-  "nameEn": "Cutter's Cry",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 41,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "Chimera：注意 Boss 的元素切換（火/雷/水）",
-    "看 Boss 頭部顏色決定要躲什麼",
-    "Hedetet：閃毒液 AoE"
-  ],
-  "notes": "等級 38 的 4 人副本。Chimera 是 mini boss，最終 boss 是 Hedetet（蝎子）。Chimera 有元素轉換機制要注意。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "奇美拉",
-      "nameEn": "Chimera",
-      "mnemonic": [
-        "3 頭混合 boss：羊頭(雷)、龍頭(冰)、獅頭(普攻)",
-        "看亮起的頭判斷下一個攻擊",
-        "雷 → 散開、冰 → 集合避凍"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "元素準備",
-              "type": "other",
-              "description": "Boss 的頭部會發光，預告下一個元素攻擊（雷/冰）。",
-              "tips": [
-                "雷準備 → 散開避免共擔過大",
-                "冰準備 → 集合或互相靠近避免單獨被凍",
-                "看訊息提示判斷"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體元素傷害。",
-              "tips": [
-                { "text": "預判補血", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "赫德提特",
-      "nameEn": "Hedetet",
-      "mnemonic": [
-        "蝎子 boss，閃尾部毒液",
-        "腳下 AoE 注意走位"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "毒液 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈毒液。",
-              "tips": [
-                "看到圓圈立刻走出去",
-                { "text": "中毒可解毒", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "cutters_cry",
+    "name":  "科特之嚎",
+    "nameEn":  "Cutter\u0027s Cry",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  41,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Myrmidon Princess：Stone II / Mandible Bite / Silence",
+                     "2）B2 Giant Tunnel Worm：Sandstorm / Sand Cyclone / Sand Pillar",
+                     "3）B3 Chimera (Boss)：Cacophony / Lightning Storm"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 41)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is a telegraphed circle AoE on a player\u0027s location.",
+                                                                "name":  "Stone II",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a telegraphed frontal conal AoE.",
+                                                                "name":  "Mandible Bite",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a spell used to silence Silence a party member for a short time. Can be interrupted to stop.",
+                                                                "name":  "Silence",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a multi-hit instant melee attack.",
+                                                                "name":  "Trap Jaws",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is the least dangerous add type. It only has a basic attack.",
+                                                                "name":  "Myrmidon Soldier",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a slightly stronger add. It also has Mandible Bite, the frontal AoE cone ability.",
+                                                                "name":  "Myrmidon Guard",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is the strongest add. It has an AoE frontal cone ability, Mandible Bite, that damages all targets caught within. The Marshal can also use an ability n...",
+                                                                "name":  "Myrmidon Marshal",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Myrmidon Princess",
+                       "nameEn":  "Myrmidon Princess",
+                       "mnemonic":  [
+                                        "Stone II",
+                                        "Mandible Bite",
+                                        "Silence"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "is an instant frontal attack that deals a small amount of damage.",
+                                                                "name":  "Sandstorm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a spell that targets a random party member. It does a small amount of damage and inflicts a damage over time debuff.",
+                                                                "name":  "Sand Cyclone",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is used when it is burrowed. Sand Pillar damages any player standing on top of the sand trap.",
+                                                                "name":  "Sand Pillar",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is used when it is burrowed. Tunnel Worm explodes out of the ground and heavily damages anyone near it.",
+                                                                "name":  "Earthbreak",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is used by the Worm when it is burrowed. It appears as a whirlwind on the ground, does small amount of damage and pulls all party members towards its ...",
+                                                                "name":  "Bottomless Desert",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a single-target ability used by the Worm. It inflicts a heavy sludge Sludge DoT (~200 HP per tick) on a player which should be removed as soon as p...",
+                                                                "name":  "Sludge",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Giant Tunnel Worm",
+                       "nameEn":  "Giant Tunnel Worm",
+                       "mnemonic":  [
+                                        "Sandstorm",
+                                        "Sand Cyclone",
+                                        "Sand Pillar"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "The Chimera will re-center itself and mark one player with an orange marker. It then sends out a purple ball of energy that travels to the target and ...",
+                                                                "name":  "Cacophony",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed circle AoEs at two random players\u0027 locations.",
+                                                                "name":  "Lightning Storm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Chimera (Boss)",
+                       "nameEn":  "Chimera (Boss)",
+                       "mnemonic":  [
+                                        "Cacophony",
+                                        "Lightning Storm"
+                                    ]
+                   }
+               ]
 }

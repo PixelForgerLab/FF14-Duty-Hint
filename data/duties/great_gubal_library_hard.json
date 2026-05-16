@@ -1,37 +1,201 @@
 {
-    "id": "great_gubal_library_hard",
-    "name": "古巴爾要塞圖書館（高難度）",
-    "nameEn": "The Great Gubal Library (Hard)",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "3.x HW Hard 副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
-    "bosses": [
-        {
-            "name": "Strix",
-            "nameEn": "斯特利克斯",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "great_gubal_library_hard",
+    "name":  "古巴爾大圖書館 (零式)",
+    "nameEn":  "The Great Gubal Library (Hard)",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "raidwide",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Demon of the Tome：",
+                     "2）B2 Liquid Flame：Bibliocide / Sea of Flames / Slosh",
+                     "3）B3 Strix (Boss)：Check Out / On the Properties of Quakes / On the Properties of Tornados"
+                 ],
+    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) raidwide (Lv 60)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "場上多重 AoE。",
+                                                                "name":  "AoE 連發",
+                                                                "tips":  [
+                                                                             "閃預警"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Tankbuster。",
+                                                                "name":  "Tankbuster",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "全屏。",
+                                                                "name":  "全屏 AoE",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Demon of the Tome",
+                       "nameEn":  "Demon of the Tome",
+                       "mnemonic":  [
+
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Unavoidable party-wide AoE for moderate damage.",
+                                                                "name":  "Bibliocide",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Scorched earth AoE attack, much like Ifrit\u0027s.",
+                                                                "name":  "Sea of Flames",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A random player gets tethered to the boss; it will shortly charge at them; the player has to run far away from the boss.",
+                                                                "name":  "Slosh",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Players get + and - marks, if your mark is the same as the boss\u0027s, run close to the boss. Otherwise, run away.",
+                                                                "name":  "Ferrofluid",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Players get sun and moon marks; run to the corresponding sun or moon sigil on the floor.",
+                                                                "name":  "Seal of Night and Day",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Liquid Flame",
+                       "nameEn":  "Liquid Flame",
+                       "mnemonic":  [
+                                        "Bibliocide",
+                                        "Sea of Flames",
+                                        "Slosh"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Spawns a set of circles for resolving upcoming mechanics.",
+                                                                "name":  "Check Out",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Raidwide. Damages anyone without Levitation, stunStunning them for 3s and inflicting a 30s vulnerability upVulnerability Up stack.",
+                                                                "name":  "On the Properties of Quakes",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Hits each player with a tornado AoE. If you don\u0027t have heavyHeavy, each tornado you\u0027re clipped by deals damage, knocks you into the air, and inflictin...",
+                                                                "name":  "On the Properties of Tornados",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Toggles everyone\u0027s imp status.",
+                                                                "name":  "On the Properties of Imps",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Marks everyone with a purple marker, then hits each of them with an AoE. Used after On the Properties of Imps. If you are still an imp, each AoE you\u0027r...",
+                                                                "name":  "On the Properties of Thunder III",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Mini TB.",
+                                                                "name":  "On the Properties of Darkness",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Raidwide.",
+                                                                "name":  "On the Properties of Darkness II",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Strix (Boss)",
+                       "nameEn":  "Strix (Boss)",
+                       "mnemonic":  [
+                                        "Check Out",
+                                        "On the Properties of Quakes",
+                                        "On the Properties of Tornados"
+                                    ]
+                   }
+               ]
 }

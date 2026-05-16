@@ -1,168 +1,149 @@
 {
-    "id": "interphos",
-    "name": "永恆女王殲滅戰",
-    "nameEn": "The Interphos",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": 700,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）Legitimate Force 看發光手位置（兩手對角 = 兩段 cleave）。",
-        "2）綠色網格扭曲處 = 致命錐 AoE，會把人吸入即死。",
-        "3）Virtual Shift 變沙漏場地，後段變兩塊浮空小平台。",
-        "4）Absolute Authority 快速組合機制（散+疊+定點+凝視），可用補 LB3。"
-    ],
-    "notes": "DT 7.0 MSQ 終戰之一（Lv 100，ilvl 670/700）。Queen Eternal 為 Sphene 終戰。後段浮空場地是 trial 特色。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "永恆女王",
-            "nameEn": "Queen Eternal",
-            "mnemonic": ["看手位置預判 cleave", "綠網扭曲處致命", "Absolute Authority 用補 LB3"],
-            "phases": [
-                {
-                    "name": "Phase 1",
-                    "mechanics": [
-                        {
-                            "name": "Legitimate Force",
-                            "type": "aoe",
-                            "description": "Boss 一隻手發光 → 對側手再發光，順序兩段半場 cleave。後續可能同側兩手發光。",
-                            "tips": ["看手位置繞對側"]
-                        },
-                        {
-                            "name": "Aethertithe",
-                            "type": "other",
-                            "description": "持續輕度全體魔法傷。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "綠網扭曲（吸入即死）",
-                            "type": "aoe",
-                            "description": "場上綠色網格扭曲處 = 錐 AoE 朝 Boss，被打中吸入即死。3 個區域：東北、中、西北。",
-                            "tips": ["遠離扭曲區域"]
-                        },
-                        {
-                            "name": "Coronation",
-                            "type": "aoe",
-                            "description": "橘色追蹤環追玩家，鎖定後 8 條短線 AoE 朝中心收斂。",
-                            "tips": ["持續移動拉開追蹤環", "鎖定後遠離環中心"]
-                        },
-                        {
-                            "name": "Prosecution of War",
-                            "type": "tankbuster",
-                            "description": "對主 T 物理坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Virtual Shift (沙漏)",
-                            "type": "raidwide",
-                            "description": "全體魔法傷 + 場地縮為沙漏形（中間有兩個縫）。",
-                            "tips": ["別站場邊縫"]
-                        },
-                        {
-                            "name": "Coronation (連繩線)",
-                            "type": "aoe",
-                            "description": "移動線 AoE 連兩名玩家，跟著平均 Y 軸位置。",
-                            "tips": ["兩個連繩玩家盡量同 Y 位置"]
-                        },
-                        {
-                            "name": "Downburst",
-                            "type": "other",
-                            "description": "從角落放射狀擊退。",
-                            "tips": ["位置調整被擊退過對角", "或用抗擊退"]
-                        },
-                        {
-                            "name": "Brutal Crown",
-                            "type": "aoe",
-                            "description": "5 個浮空附肢匯聚成甜甜圈 AoE。",
-                            "tips": ["跑到匯聚點"]
-                        },
-                        {
-                            "name": "Powerful Gust",
-                            "type": "other",
-                            "description": "東或西橫向擊退。",
-                            "tips": ["位置調整擊退到上/下邊", "或用抗擊退"]
-                        },
-                        {
-                            "name": "Royal Domain",
-                            "type": "raidwide",
-                            "description": "全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "浮空階段（兩平台）",
-                    "mechanics": [
-                        {
-                            "name": "Gravitational Anomaly",
-                            "type": "other",
-                            "description": "全員浮起可自由移動，但碰邊界即死。",
-                            "tips": ["別碰邊界"]
-                        },
-                        {
-                            "name": "Castellation",
-                            "type": "other",
-                            "description": "北方城牆衝鋒，留上/下方有洞。命中擊退致死。",
-                            "tips": ["看洞位置（上/下）", "與洞水平對齊"]
-                        },
-                        {
-                            "name": "Gravity Increases/Decreases",
-                            "type": "other",
-                            "description": "重力切換，停下浮空時要站在兩個小平台之一。",
-                            "tips": ["重力增加 = 落地", "重力減少 = 浮起"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Absolute Authority 階段",
-                    "mechanics": [
-                        {
-                            "name": "Absolute Authority",
-                            "type": "other",
-                            "description": "緩慢 cast 開啟快速組合：DPS 4 個 flare 散開、紅疊機（至少 2 人）、圓 AoE 安全位、再來一組圓 AoE、Acceleration Bomb 倒數結束別動、雙補凝視。",
-                            "tips": [
-                                { "text": "DPS flare 走場邊", "role": "dps" },
-                                "找安全位 + 至少 2 人疊",
-                                "Acceleration 結束時定住",
-                                { "text": "雙補背對隊友（凝視）", "role": "healer" },
-                                { "text": "結束後可用 LB3 救人", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Divide and Conquer",
-                            "type": "spread",
-                            "description": "個別玩家線 AoE 後接全員線 AoE。",
-                            "tips": ["散開閃線"]
-                        }
-                    ]
-                },
-                {
-                    "name": "終末（30%以下）",
-                    "mechanics": [
-                        {
-                            "name": "Dynastic Diadem",
-                            "type": "aoe",
-                            "description": "Boss 正前方甜甜圈 AoE。",
-                            "tips": ["貼 Boss"]
-                        },
-                        {
-                            "name": "Royal Banishment",
-                            "type": "raidwide",
-                            "description": "5 段全體魔法傷 + 錐 AoE。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }, "閃錐 AoE"]
-                        },
-                        {
-                            "name": "Dawn's Resolve",
-                            "type": "other",
-                            "description": "全員獲得增傷 buff。",
-                            "tips": ["爆發輸出收尾"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "interphos",
+    "name":  "天際層星海",
+    "nameEn":  "The Interphos",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raidwide",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Queen Eternal：Legitimate Force",
+                     "2）Aethertithe / Coronation",
+                     "3）Royal Banishment"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) raidwide (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "One of the boss\u0027s four hands will begin glowing, followed by another on the opposite side, indicating two sequential half-room AoEs from the glowing h...",
+                                                                "name":  "Legitimate Force",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Will do continuous light magical damage for the next set of mechanics, requiring healing.",
+                                                                "name":  "Aethertithe",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Multiple moving orange targeting rings will sequentially appear and follow random players. A few seconds later, they will lock in (become partially gr...",
+                                                                "name":  "Coronation",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage and transitions the arena to a smaller hourglass shape, leaving two gaps in the middle.",
+                                                                "name":  "Virtual Shift",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed radial knockback from one corner of the arena. Players should position to be knocked back across the diagonal to avoid falling off, or use...",
+                                                                "name":  "Downburst",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Five floating noulith-like appendages will converge on one position, indicating a donut AoE with a late telegraph.",
+                                                                "name":  "Brutal Crown",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed horizontal knockback from the east or west. Players should position to be knocked back across the top or bottom edge to avoid falling off,...",
+                                                                "name":  "Powerful Gust",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Royal Domain",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss summons a castle wall on the north, leaving some holes within. The holes will either be at the top or the bottom. The castle wall will charge...",
+                                                                "name":  "Castellation",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A slow cast that begins a fast-paced series of mechanics:",
+                                                                "name":  "Absolute Authority",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Sequential telegraphed line AoEs on random players dealing magical damage, followed by another set of telegraphed line AoEs hitting all players at onc...",
+                                                                "name":  "Divide and Conquer",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed donut AoE directly in front of the boss.",
+                                                                "name":  "Dynastic Diadem",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Five hits of party-wide magical damage. During this, telegraphed conal AoEs will originate from the boss and should be dodged.",
+                                                                "name":  "Royal Banishment",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Queen Eternal",
+                       "nameEn":  "Queen Eternal",
+                       "mnemonic":  [
+                                        "Legitimate Force",
+                                        "Aethertithe",
+                                        "Coronation"
+                                    ]
+                   }
+               ]
 }

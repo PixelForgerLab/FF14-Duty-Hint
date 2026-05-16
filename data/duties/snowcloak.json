@@ -1,60 +1,178 @@
 {
-  "id": "snowcloak",
-  "name": "凜冽洞天披雪大冰壁",
-  "nameEn": "Snowcloak",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "冰雪主題副本",
-    "Fenrir：芬裡爾，最終 boss",
-    "閃冰雪 AoE，注意減速 debuff"
-  ],
-  "notes": "等級 50 的 4 人副本（2.4 雪海披雪）。冰雪主題，最終 boss 是芬裡爾。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "芬裡爾",
-      "nameEn": "Fenrir",
-      "mnemonic": [
-        "巨型雪狼 boss",
-        "閃冰錐 AoE",
-        "場上會留下冰雪減速區"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "冰錐 AoE",
-              "type": "aoe",
-              "description": "場上落下冰錐 AoE。",
-              "tips": [
-                "看落點走位"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體冰傷。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            },
-            {
-              "name": "Tankbuster",
-              "type": "tankbuster",
-              "description": "對主 T 的單體大傷。",
-              "tips": [
-                { "text": "T 開減傷", "role": "tank" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "snowcloak",
+    "name":  "雪斗篷",
+    "nameEn":  "Snowcloak",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Wandil：Cold Wave / Snow Drift / Hypothermal Combustion",
+                     "2）B2 Yeti (Boss)：Buffet / {{action icon|Northerlies}} / Updrift",
+                     "3）B3 Fenrir：Heavensward Roar / Ecliptic Bite / Thousand Year Storm"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Summons AoE circles beneath each player. Inflicts a stack of File:Frozen icon1.png Frozen debuff.",
+                                                                "name":  "Cold Wave",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Deals unavoidable raid-wide damage. Inflicts a stack of File:Frozen icon1.png Frozen. Keep moving to negate the debuff.",
+                                                                "name":  "Snow Drift",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Arena wide AoE. Inflicts a stack of File:Frozen icon1.png Frozen.",
+                                                                "name":  "Hypothermal Combustion",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Wandil",
+                       "nameEn":  "Wandil",
+                       "mnemonic":  [
+                                        "Cold Wave",
+                                        "Snow Drift",
+                                        "Hypothermal Combustion"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Frontal cone AoE.",
+                                                                "name":  "Buffet",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons six untargetable snowballs, each with a point blank AoE. Yeti will breathe on one to two of the snowballs, increasing the size of the snowball...",
+                                                                "name":  "{{action icon|Northerlies}}",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Launches players into the air, dealing damage and preventing movement. Cast shortly after Northerlies.",
+                                                                "name":  "Updrift",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Point blank AoE, immediately followed by a donut AoE.",
+                                                                "name":  "Spin",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Player targeted AoE.",
+                                                                "name":  "Frozen Spike",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Yeti (Boss)",
+                       "nameEn":  "Yeti (Boss)",
+                       "mnemonic":  [
+                                        "Buffet",
+                                        "{{action icon|Northerlies}}",
+                                        "Updrift"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a cone attack in front of Fenrir which puts no AoE indicator on the ground but has a long animation time. Move to Fenrir\u0027s sides or rear.",
+                                                                "name":  "Heavensward Roar",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "very high damage tank buster",
+                                                                "name":  "Ecliptic Bite",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "unavoidable party-wide attack",
+                                                                "name":  "Thousand Year Storm",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Four icicles drop to the ground in a diamond pattern, preempted by circular AoE indicators. Immediately followed by Lunar Cry.",
+                                                                "name":  "Howling Moon",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Long-duration cast that will instantly knock out any players not hiding behind an icicle. The first time Lunar Cry is cast, you can hide behind any of...",
+                                                                "name":  "Lunar Cry",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Fenrir",
+                       "nameEn":  "Fenrir",
+                       "mnemonic":  [
+                                        "Heavensward Roar",
+                                        "Ecliptic Bite",
+                                        "Thousand Year Storm"
+                                    ]
+                   }
+               ]
 }

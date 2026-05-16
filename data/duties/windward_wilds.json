@@ -1,105 +1,157 @@
 {
-    "id": "windward_wilds",
-    "name": "護鎖刃龍狩獵戰",
-    "nameEn": "The Windward Wilds",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）Boss 沒 cast bar，全看動作預判。",
-        "2）衝鋒裂痕顏色：白=線、紅=兩側線（中央安全）。",
-        "3）有 10 個 Mega Potion 可用，但有施法延遲；Well-done, Steak buff 持續 HoT。",
-        "4）Exaflares 第一輪炸水晶留地雷，後續閃 + 散開（魔法易傷別重疊）。"
-    ],
-    "notes": "DT 7.35 怪物獵人聯動（Lv 100，ilvl 725）。Guardian Arkveld 為 Monster Hunter Wilds 的白幽龍護鎖刃龍。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "護鎖刃龍",
-            "nameEn": "Guardian Arkveld",
-            "mnemonic": ["看動作預判", "白裂痕=線、紅裂痕=兩側線", "Mega Potion 救命"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Cleave",
-                            "type": "aoe",
-                            "description": "Boss 舉一隻爪 → 該側 + hitbox 寬線 AoE，對側安全。",
-                            "tips": ["看爪方向繞對側"]
-                        },
-                        {
-                            "name": "Charge + 白色裂痕",
-                            "type": "aoe",
-                            "description": "Boss 跳邊衝鋒留白色地面裂痕，接著沿裂痕線 AoE。",
-                            "tips": ["跑到衝鋒線兩側"]
-                        },
-                        {
-                            "name": "Charge + 紅色裂痕",
-                            "type": "aoe",
-                            "description": "紅色裂痕對應兩側寬線 AoE，中央窄安全。",
-                            "tips": ["站到中央窄帶"]
-                        },
-                        {
-                            "name": "Cascading Line",
-                            "type": "aoe",
-                            "description": "中央線 AoE 朝兩邊擴散。後段會打到場邊紅雲，引發二次擴散 AoE。",
-                            "tips": ["先閃中央", "再閃紅雲二段"]
-                        },
-                        {
-                            "name": "三段衝鋒 + 漸減 AoE",
-                            "type": "aoe",
-                            "description": "3 段線衝鋒，每段結束顯示圓 AoE 外擴箭頭，最後依序爆漸減同心甜甜圈。",
-                            "tips": ["記三個衝鋒位置", "依序閃同心 AoE"]
-                        },
-                        {
-                            "name": "半場 cleave",
-                            "type": "aoe",
-                            "description": "Boss 抬頭 + 一側身體傾斜 = 該側半場 cleave。",
-                            "tips": ["看身體傾向繞對側"]
-                        },
-                        {
-                            "name": "尾巴線 AoE",
-                            "type": "aoe",
-                            "description": "Boss 抬尾巴 = 後方窄線 AoE。",
-                            "tips": ["遠離 Boss 後方"]
-                        },
-                        {
-                            "name": "Towers + 圓 AoE 引爆",
-                            "type": "stack",
-                            "description": "6 個塔（2 個對角坦塔 + 4 個普通塔）。期間玩家有 2 組圓 AoE 標記，引到塔外再進塔。",
-                            "tips": ["引 AoE 遠離塔", "再回塔疊機"]
-                        },
-                        {
-                            "name": "Exaflares + 水晶",
-                            "type": "spread",
-                            "description": "4 組 exaflares 交替基本/對角方向，第一組炸水晶留點 AoE，後續搭配散開標記（魔法易傷別重疊）。",
-                            "tips": ["跟著 exaflare 縫跑", "散開時別撞到隊友"]
-                        },
-                        {
-                            "name": "Multi-hit Raidwide + Guardian Will",
-                            "type": "raidwide",
-                            "description": "3 段全體傷（前 2 物理 + 1 魔法），全員疊上易傷 + DoT。",
-                            "tips": [{ "text": "全程補血 + 減傷", "role": "healer" }, "用 Mega Potion 自救"]
-                        },
-                        {
-                            "name": "Roar",
-                            "type": "raidwide",
-                            "description": "Boss 撐牆 = 全體魔法傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Rotating Line + 散開",
-                            "type": "spread",
-                            "description": "紫線 AoE 沿箭頭旋轉 + 全員散開標記。",
-                            "tips": ["先繞箭頭背面", "再散開"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "windward_wilds",
+    "name":  "西風荒野",
+    "nameEn":  "The Windward Wilds",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "spread",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Guardian Arkveld：Cleave",
+                     "2）Charge + follow-up AoE: / White",
+                     "3）Rotating line AoE"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) spread (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "The boss raises one of its claws, indicating a wide, late telegraphed line AoE that will hit that side and through its hitbox, leaving its opposite fl...",
+                                                                "name":  "Cleave",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will jump to one edge of the arena. It will then charge to the opposite side (with colored cracks on the ground as an indicator), damaging an...",
+                                                                "name":  "Charge + follow-up AoE:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A late telegraphed line AoE through the cracks, leaving the sides safe.",
+                                                                "name":  "White",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Two late telegraphed wide line AoEs to the sides of the cracks, leaving a narrow region in the middle safe.",
+                                                                "name":  "Red",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed line AoE with arrows will appear, then gradually cascade outwards in both directions as late telegraphed line AoEs. In later uses of thi...",
+                                                                "name":  "Cascading line AoEs",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will show three line AoE charge telegraphs in sequence. At the end of each charge, a circle AoE telegraph with outward arrows will be briefly...",
+                                                                "name":  "Multiple charges + epicenter AoEs",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will raise its head and one side of its body in one direction, indicating a late-telegraphed half-room cleave in that direction.",
+                                                                "name":  "Half-room cleave:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will then raise its tail, indicated a narrow late-telegraphed line AoE hitting its rear.",
+                                                                "name":  "Rear line AoE",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A random player is targeted with a stack.",
+                                                                "name":  "Stack marker",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "Six towers spawn: two tankbuster towers (opposite each other) and four normal towers. When the towers are active, random players will receive two sets...",
+                                                                "name":  "Towers and baited AoEs",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "Guardian Arkveld gathers energy... Four \"exaflare\" moving circle AoE telegraphs will spawn from the middle, on all cardinals or intercardinals. There ...",
+                                                                "name":  "Exaflares",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Guardian Arkveld brings its might to bear! The boss deals three hits of raid-wide damage (first two physical, third magical) that should be healed thr...",
+                                                                "name":  "Multi-hit raid-wide",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will rear back for a few seconds when at a wall, indicating a magical party-wide attack.",
+                                                                "name":  "Roar",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss spawns a purple line AoE telegraph that will rotate in the direction of the arrows. Get behind the arrows, then spread out, because each play...",
+                                                                "name":  "Rotating line AoE",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Guardian Arkveld",
+                       "nameEn":  "Guardian Arkveld",
+                       "mnemonic":  [
+                                        "Cleave",
+                                        "Charge + follow-up AoE:",
+                                        "White"
+                                    ]
+                   }
+               ]
 }

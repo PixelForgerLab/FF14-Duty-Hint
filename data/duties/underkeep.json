@@ -1,48 +1,187 @@
 {
-    "id": "underkeep",
-    "name": "深底地宮",
-    "nameEn": "The Underkeep",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）DT 7.3 post-MSQ 副本 (Lv 100)。",
-        "2）3 boss + 全屏 AoE + 散開 + 分擔基礎機制。",
-        "3）詳細機制待補充。"
-    ],
-    "notes": "DT 7.3 post-MSQ 副本 (Lv 100)。位於深底地宮。3 boss。Quality 為 needs-update 因 wiki 資料尚未完整。",
-    "bosses": [
-        {
-            "name": "Boss 1",
-            "nameEn": "Boss 1",
-            "mnemonic": ["待補充詳細機制"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "全體 AoE",
-                            "type": "raidwide",
-                            "description": "全屏魔法 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Tankbuster",
-                            "type": "tankbuster",
-                            "description": "對 1 仇單體高傷。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "underkeep",
+    "name":  "地下要塞",
+    "nameEn":  "The Underkeep",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "stack",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Gargant (boss)：Chilling Chirp / Almighty Racket / Earthsong",
+                     "2）B2 Soldier S0：Field of Scorn / Thunderous Slash / Sector Bisector",
+                     "3）B3 Valia Pira：Entropic Sphere / Coordinate March / Electric Field"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) stack (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Chilling Chirp",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will face a random player and use a late telegraphed 180 degree frontal cleave. Get behind.",
+                                                                "name":  "Almighty Racket",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns two sets of untargetable Sand Sphere adds, each of which will use a telegraphed point-blank AoE (Sphere Shatter). The first set has 7 spheres a...",
+                                                                "name":  "Earthsong",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed physical tankbuster.",
+                                                                "name":  "Trap Jaws",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Gargant (boss)",
+                       "nameEn":  "Gargant (boss)",
+                       "mnemonic":  [
+                                        "Chilling Chirp",
+                                        "Almighty Racket",
+                                        "Earthsong"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Field of Scorn",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed magical tankbuster.",
+                                                                "name":  "Thunderous Slash",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will brandish its glowing sword to its left or right, while a small purple wave of energy will appear at its feet on that side. It will then ...",
+                                                                "name":  "Sector Bisector",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns four untargetable Add Blocks in pairs outside of the arena. These will use a late telegraphed line AoE in front of them, leaving one quadrant o...",
+                                                                "name":  "Ordered Fire",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Soldier S0",
+                       "nameEn":  "Soldier S0",
+                       "mnemonic":  [
+                                        "Field of Scorn",
+                                        "Thunderous Slash",
+                                        "Sector Bisector"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Entropic Sphere",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will tether two tiles with magenta tethers and the edge of the south two tiles with blue tethers. The magenta tethers will spawn a magenta or...",
+                                                                "name":  "Coordinate March",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Each player will receive a conal spread marker while multiple conal AoE floor telegraphs will appear. The spread markers and telegraphs will begin exp...",
+                                                                "name":  "Electric Field",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will face one cardinal and use a late telegraphed 180 degree frontal cleave, while all players receive a spread marker AoE (Hypercharged Ligh...",
+                                                                "name":  "Neutralize Front Lines",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Line stack AoE marker on one player, dealing magical damage.",
+                                                                "name":  "Deterrent Pulse",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Valia Pira",
+                       "nameEn":  "Valia Pira",
+                       "mnemonic":  [
+                                        "Entropic Sphere",
+                                        "Coordinate March",
+                                        "Electric Field"
+                                    ]
+                   }
+               ]
 }

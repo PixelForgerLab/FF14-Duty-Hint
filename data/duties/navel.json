@@ -1,6 +1,6 @@
 {
     "id": "navel",
-    "name": "泰坦討伐戰",
+    "name": "大地之臍",
     "nameEn": "The Navel",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "trial",
@@ -8,45 +8,27 @@
     "iLvlSync": null,
     "jobLevelSync": 36,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-                     "泰坦討伐戰 (一般難度)",
-                     "Geocrush 靠邊吃擊退"
-                 ],
-    "notes": "Primal Titan 一般難度版本。⚠️ AI 預填內容。",
+        "1）Titan 泰坦：Geocrush 場地外緣崩塌，Landslide 直線擊退要小心邊緣。",
+        "2）80% Titan 飛起 + 大 AoE 摧毀外圍 → 紅環區會掉下去。",
+        "3）Heart 心臟召喚要快殺；Bomb 炸彈計時要拉開。",
+        "4）Weight of the Land 場上多重圓 AoE 散開。"
+    ],
+    "notes": "ARR 2.0 MSQ trial (Lv 36)。Titan (泰坦) 簡易版。注意場地外緣會崩塌變紅環。",
     "bosses": [
-                   {
-                       "name": "Titan",
-                       "nameEn": "Titan",
-                       "mnemonic": [
-                                        "簡化版 Titan"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "Titan",
+            "nameEn": "Titan",
+            "mnemonic": ["Geocrush 場地縮小", "Landslide 直線擊退", "Heart 心臟召喚", "Bomb 拉開"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Geocrush 地裂", "type": "other", "description": "Titan 跳起，落地時場地外緣崩塌變紅環。", "tips": ["80% 後注意縮小的場地"] },
+                { "name": "Landslide 山崩", "type": "knockback", "description": "前方直線擊退。", "tips": [{ "text": "MT 把 boss 面向場邊", "role": "tank" }, "靠中央站避免被擊飛出去"] },
+                { "name": "Weight of the Land 大地之重", "type": "aoe", "description": "場上多重圓 AoE。", "tips": ["散開避免重疊"] },
+                { "name": "Bomb 炸彈", "type": "other", "description": "場上召喚 Granite Gaol，計時自爆。", "tips": [{ "text": "DPS 立刻打掉", "role": "dps" }] },
+                { "name": "Heart of the Mountain 心臟", "type": "other", "description": "Titan 召喚心臟必須打掉，否則放 Tumult 大傷害。", "tips": [{ "text": "DPS 集火心臟", "role": "dps" }] },
+                { "name": "Earthen Fury 大地之怒", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

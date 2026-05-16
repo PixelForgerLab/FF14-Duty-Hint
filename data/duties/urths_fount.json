@@ -1,64 +1,109 @@
 {
-  "id": "urths_fount",
-  "name": "奧丁殲滅戰",
-  "nameEn": "Urth's Fount",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "奧丁戰，騎著八腳馬 Sleipnir",
-    "Boss 揮劍 → Zantetsuken 即死技",
-    "場上需要躲場邊或站對位避免被砍",
-    "閃前方扇形與直線"
-  ],
-  "notes": "Primal 奧丁戰（彩虹之神兵）。著名 Zantetsuken 即死機制。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "奧丁",
-      "nameEn": "Odin",
-      "mnemonic": [
-        "Zantetsuken（斬鐵劍）：即死技，看走位",
-        "前方扇形/直線 AoE",
-        "騎著八腳馬移動快",
-        "DPS check 高，要快"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "Zantetsuken",
-              "type": "other",
-              "description": "奧丁揮劍即死技，需要躲到劍範圍外。",
-              "tips": [
-                "看劍指向，跑反向",
-                "失敗 = 即死",
-                { "text": "若 T 接到 Zantetsuken 要立刻 invuln", "role": "tank" }
-              ]
-            },
-            {
-              "name": "前方扇形",
-              "type": "aoe",
-              "description": "前方扇形劍氣。",
-              "tips": [
-                "閃側面或背後"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "urths_fount",
+    "name":  "大地之泉",
+    "nameEn":  "Urth\u0027s Fount",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Odin：Hall of Sorrow",
+                     "2）Hall of Lead / Hall of Stone",
+                     "3）Gagnrath"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Raid-wide magical damage.",
+                                                                "name":  "Hall of Sorrow",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Targets 3 random party members (never the main tank) with a medium circle AoE, dealing magical damage and inflicting a cleanseable 10s slow Slow on al...",
+                                                                "name":  "Hall of Lead",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Targets random party members with an avoidable circle AoE, leaving ~2s to run out.",
+                                                                "name":  "Hall of Stone",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Raid-wide magical damage with a 3s cast time.",
+                                                                "name":  "Einherjar",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed, medium-sized circle AoE around Odin.",
+                                                                "name":  "Valknut",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Tankbuster with a 3s cast time.",
+                                                                "name":  "Sanngetall",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "right after it hits (followed by the former main-tank using Shirk on the player who just Provoked, aka a tank swap).",
+                                                                "name":  "Provoke",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Red spears appear on the outside of the arena and dash across in a straight line.",
+                                                                "name":  "Gagnrath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Odin",
+                       "nameEn":  "Odin",
+                       "mnemonic":  [
+                                        "Hall of Sorrow",
+                                        "Hall of Lead",
+                                        "Hall of Stone"
+                                    ]
+                   }
+               ]
 }

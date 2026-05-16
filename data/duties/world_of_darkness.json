@@ -1,73 +1,267 @@
 {
-  "id": "world_of_darkness",
-  "name": "水晶塔 暗之世界",
-  "nameEn": "The World of Darkness",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "raid",
-  "playerCount": 24,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "水晶塔第三部，最終決戰",
-    "途中遇 Acheron Hellhound、Angra Mainyu 等",
-    "最終 boss 暗黑之雲：分區 + 連線機制",
-    "閃地面 AoE、按隊伍分工"
-  ],
-  "notes": "水晶塔三部曲第三部，24 人聯軍副本。最終 boss 是暗黑之雲。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "暗黑之雲",
-      "nameEn": "Cloud of Darkness",
-      "mnemonic": [
-        "場上分區：注意 debuff 處理",
-        "Anti-air Particle Beam：直線 AoE",
-        "Flood of Darkness：全體高傷",
-        "按隊伍策略分擔機制"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "Anti-air Particle Beam",
-              "type": "aoe",
-              "description": "Boss 前方多條直線 AoE。",
-              "tips": [
-                "閃到線外"
-              ]
-            },
-            {
-              "name": "Flood of Darkness",
-              "type": "raidwide",
-              "description": "全體高傷暗屬性攻擊。",
-              "tips": [
-                { "text": "AoE 滿血滿條治療", "role": "healer" },
-                { "text": "T 開減傷", "role": "tank" }
-              ]
-            },
-            {
-              "name": "Anti-air Particle Beam（連線）",
-              "type": "other",
-              "description": "玩家被點名連線，需要按隊伍策略走位避免重疊。",
-              "tips": [
-                "看點名拉線到指定位置",
-                "依預定走位策略"
-              ]
-            },
-            {
-              "name": "Particle Beam（直線）",
-              "type": "stack",
-              "description": "玩家集合分擔的射線傷害。",
-              "tips": [
-                "集合分擔",
-                "依分工分組站位"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "world_of_darkness",
+    "name":  "暗之世界",
+    "nameEn":  "The World of Darkness",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "stack",
+    "playerCount":  24,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Angra Mainyu：Double Vision / Mortal Gaze / Roulette",
+                     "2）B2 Five-headed Dragon：Ice Floor\u0027 / The Last Song / Fermata",
+                     "3）B3 Cerberus (boss)：Devour / Open Fetters / Tail Swipe",
+                     "4）B4 Cloud of Darkness：Feint Particle Beam / Zero-form Particle Beam / Particle Beam"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) stack (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  ", a floor-covering AoE that is split into red and white, which gives a stacking debuff depending on what colour you\u0027re standing on.",
+                                                                "name":  "Double Vision",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  ", anyone looking in his direction will receive a doom Doom (status effect) debuff that kills you in 10 seconds.",
+                                                                "name":  "Mortal Gaze",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ", signified by a finger and a cone that rotates clockwise around the boss room, occurs when 4 Final Hourglasses spawn at the outer edge of the room.",
+                                                                "name":  "Roulette",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  ", an attack that will do raid-wide damage if not interrupted.",
+                                                                "name":  "Ancient Flare",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  ".",
+                                                                "name":  "Void Call",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ", another interruptible attack.",
+                                                                "name":  "Ancient Quaga",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Angra Mainyu",
+                       "nameEn":  "Angra Mainyu",
+                       "mnemonic":  [
+                                        "Double Vision",
+                                        "Mortal Gaze",
+                                        "Roulette"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "s AoE expands if it hits a player.",
+                                                                "name":  "Ice Floor\u0027",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  ") on the entire raid.",
+                                                                "name":  "The Last Song",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ") and inflicting a stack of Vulnerability Up.",
+                                                                "name":  "Fermata",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "you have to kill the 5 extra heads that appear or the raid will wipe.",
+                                                                "name":  "Discordance",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ") and deal damage, inflicting stacks of Vulnerability Up.",
+                                                                "name":  "Radiance",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "will tether a player and inflicts a stacking Suppuration debuff, reducing their maximum HP and increasing damage taken.",
+                                                                "name":  "Dragonfire Fly",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is a raid-wide attack used when the boss\u0027 HP is low.",
+                                                                "name":  "Heatwave",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  ", an untelegraphed radial knockback.",
+                                                                "name":  "Shockwave",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Five-headed Dragon",
+                       "nameEn":  "Five-headed Dragon",
+                       "mnemonic":  [
+                                        "Ice Floor\u0027",
+                                        "The Last Song",
+                                        "Fermata"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "ed by the boss.",
+                                                                "name":  "Devour",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "on his sides by interacting with them.",
+                                                                "name":  "Open Fetters",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "attack that hits players behind him in a cone.",
+                                                                "name":  "Tail Swipe",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is a roar that causes players who are not around other players to become feared for 15 seconds.",
+                                                                "name":  "Ululation",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Cerberus (boss)",
+                       "nameEn":  "Cerberus (boss)",
+                       "mnemonic":  [
+                                        "Devour",
+                                        "Open Fetters",
+                                        "Tail Swipe"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  ").",
+                                                                "name":  "Feint Particle Beam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ") through the center of the area.",
+                                                                "name":  "Zero-form Particle Beam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "finishes casting, they will explode for massive damage.",
+                                                                "name":  "Particle Beam",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  ") that deals damage and inflicts a stack of Vulnerability Up.",
+                                                                "name":  "Black Thunder",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Cloud of Darkness",
+                       "nameEn":  "Cloud of Darkness",
+                       "mnemonic":  [
+                                        "Feint Particle Beam",
+                                        "Zero-form Particle Beam",
+                                        "Particle Beam"
+                                    ]
+                   }
+               ]
 }

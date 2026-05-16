@@ -1,188 +1,259 @@
 {
-    "id": "skydeep_cenote",
-    "name": "神聖禁地深空天坑",
-    "nameEn": "The Skydeep Cenote",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 96,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）羽魟：Nuisance debuff 讓你模仿 Boss 攻擊，別面對隊友；泡泡網格看缺口預判風向。",
-        "2）火器：藍色鏡子反射雷射打到黃球爆，站「黃球對側」；箭頭格指示十字 AoE。",
-        "3）重錘骷髏：擊退會掉下舞台！盡量靠近藍圈邊緣站；Maulwork 看綠箭頭找線縫。"
-    ],
-    "notes": "DT 中期 MSQ 副本（Lv 95-96）。重錘骷髏的擊退是少數可能讓玩家死於跌落的副本。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "羽魟",
-            "nameEn": "Feather Ray",
-            "mnemonic": ["Nuisance debuff 別面對人", "泡泡網格看風向"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Immersion",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Troublesome Tail / Nuisance",
-                            "type": "other",
-                            "description": "全員獲得 Nuisance debuff，會模仿 Boss 下次攻擊。",
-                            "tips": ["看清楚自己頭頂時間", "下面解釋的 Worrisome Wave / Trouble Bubbles 都會被觸發"]
-                        },
-                        {
-                            "name": "Worrisome Wave",
-                            "type": "aoe",
-                            "description": "隨機玩家前方錐 AoE。Nuisance 期間每人會放窄錐 AoE。",
-                            "tips": ["別面對隊友", "面向場邊或無人方向"]
-                        },
-                        {
-                            "name": "Hydro Ring",
-                            "type": "aoe",
-                            "description": "甜甜圈 AoE，場邊生成 AoE 壓縮場地。",
-                            "tips": ["站近 Boss 中央"]
-                        },
-                        {
-                            "name": "Blowing Bubbles",
-                            "type": "aoe",
-                            "description": "Boss 噴出泡泡緩慢往外移動。",
-                            "tips": ["閃避泡泡", "結束後場地恢復"]
-                        },
-                        {
-                            "name": "Bubble Bomb + Rolling Current",
-                            "type": "aoe",
-                            "description": "場上生成泡泡網格留空位；東邊水流推所有泡泡西移一格。",
-                            "tips": ["看清楚空格位置", "預判水流推動後的安全位"]
-                        },
-                        {
-                            "name": "Trouble Bubbles",
-                            "type": "other",
-                            "description": "Nuisance 期間每人持續向前射泡泡，被別人泡泡擊中會受傷。",
-                            "tips": ["別面對隊友", "排成單列同方向最安全"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "火器",
-            "nameEn": "Firearms",
-            "mnemonic": ["站黃球對側", "看鏡子反射路徑"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Dynamic Dominance",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害並在場邊生成 AoE。",
-                            "tips": ["別站場邊"]
-                        },
-                        {
-                            "name": "Mirror Maneuver",
-                            "type": "aoe",
-                            "description": "牆上藍色鏡子，角落黃球。Boss 跳到黃球旁角落射線 AoE 反射到鏡子再打到黃球，造成大範圍點 AoE。",
-                            "tips": ["站到黃球正對面（最遠處）"]
-                        },
-                        {
-                            "name": "Ancient Artillery → Emergent Artillery",
-                            "type": "aoe",
-                            "description": "2 格出現橘色箭頭符號，指示十字形 AoE 從格子向箭頭方向擴張爆炸。",
-                            "tips": ["看箭頭方向找安全格"]
-                        },
-                        {
-                            "name": "Pummel",
-                            "type": "tankbuster",
-                            "description": "對主 T 物理坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Mirror Maneuver (進階)",
-                            "type": "aoe",
-                            "description": "2 鏡子 + 3 黃球，雷射反射 2 次。",
-                            "tips": ["判斷最終會擊中哪顆黃球", "遠離該黃球"]
-                        },
-                        {
-                            "name": "Ancient Artillery (進階) + Thunderblight Flurry",
-                            "type": "spread",
-                            "description": "3 個十字 AoE 只留 1 格安全；同時散開標記。",
-                            "tips": ["先進到唯一安全格", "再馬上散開"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "重錘骷髏",
-            "nameEn": "Maulskull",
-            "mnemonic": ["擊退會跌落舞台", "靠近藍圈邊緣站", "可用抗擊退技能保命"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Stonecarver",
-                            "type": "aoe",
-                            "description": "Boss 一隻拳發光（含音效），接著另一隻，預示兩段半場 cleave。",
-                            "tips": ["聽聲音/看發光順序判斷哪邊先爆"]
-                        },
-                        {
-                            "name": "Skullcrush + Destructive Heat",
-                            "type": "spread",
-                            "description": "北方生成藍色擊退圈，全員散開標記。擊退距離很長，可能會掉下舞台。",
-                            "tips": ["盡可能靠近藍圈站", "朝西南或東南被推", "或用抗擊退（Arm's Length 等）"]
-                        },
-                        {
-                            "name": "Maulwork",
-                            "type": "aoe",
-                            "description": "Boss 召喚紫方塊揍它，三組圓 AoE，第三組有綠箭頭預示寬線 AoE 留邊或中央安全。",
-                            "tips": ["看綠箭頭朝向找安全位"]
-                        },
-                        {
-                            "name": "Deep Thunder",
-                            "type": "stack",
-                            "description": "多段疊機高塔，全員疊靠 3 段物理傷。",
-                            "tips": ["全員集中踩塔"]
-                        },
-                        {
-                            "name": "Ringing Blows",
-                            "type": "other",
-                            "description": "Stonecarver 半場 cleave + Skullcrush 擊退（無散開）的組合。",
-                            "tips": ["先被擊退到安全位", "再閃半場 cleave"]
-                        },
-                        {
-                            "name": "Wrought Fire",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Colossal Impact (疊)",
-                            "type": "stack",
-                            "description": "藍色擊退圈出現在下角落 + 疊機標記。",
-                            "tips": ["全員疊靠標記", "確保被擊退到對角不掉場外"]
-                        },
-                        {
-                            "name": "Colossal Impact (散)",
-                            "type": "spread",
-                            "description": "再次擊退 + 散開標記。",
-                            "tips": ["散開不掉場"]
-                        },
-                        {
-                            "name": "Ashlayer",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "skydeep_cenote",
+    "name":  "天淵深穴",
+    "nameEn":  "The Skydeep Cenote",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "raidwide",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  96,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Feather Ray：Immersion / Troublesome Tail / Worrisome Wave",
+                     "2）B2 Firearms (boss)：Dynamic Dominance / Mirror Maneuver / Ancient Artillery",
+                     "3）B3 Maulskull：Stonecarver / Skullcrush / Maulwork"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) raidwide (Lv 96)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Immersion",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Gives each player a File:Nuisance icon.png Nuisance debuff with the combat message: You are cursed to be a nuisance to the party.... This debuff cause...",
+                                                                "name":  "Troublesome Tail",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed frontal conal AoE on a random player. Nuisance will cause each player will shoot a narrow untelegraphed conal AoE in front of them once ...",
+                                                                "name":  "Worrisome Wave",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed donut AoE that spawns a dangerous AoE at the edge of the arena, compressing it to a smaller circle.",
+                                                                "name":  "Hydro Ring",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Feather Ray produces copious bubbles... Numerous bubbles will originate from the boss and slowly move out, requiring players to dodge. The arena will ...",
+                                                                "name":  "Blowing Bubbles",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns multiple floating bubbles in a grid formation, leaving some empty spots.",
+                                                                "name":  "Bubble Bomb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A current from the east will shift all bubbles west by one position. Players will need to identify the empty spots considering the shift, because each...",
+                                                                "name":  "Rolling Current",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "then Troublesome Tail are used again, giving everyone File:Nuisance icon.png Nuisance.",
+                                                                "name":  "Hydro Bomb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Each player will periodically shoot two slow-moving bubbles in front of where they are facing. Players must avoid being hit by others\u0027 bubbles.",
+                                                                "name":  "Trouble Bubbles",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Feather Ray",
+                       "nameEn":  "Feather Ray",
+                       "mnemonic":  [
+                                        "Immersion",
+                                        "Troublesome Tail",
+                                        "Worrisome Wave"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage and spawns a dangerous AoE at the edge of the arena.",
+                                                                "name":  "Dynamic Dominance",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a blue mirror on one wall and a yellow orb on one corner. The boss will jump to a corner adjacent to the yellow orb and aim a telegraphed line ...",
+                                                                "name":  "Mirror Maneuver",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns an orange arrowkey-like glyph on two tiles. These indicate plus-shaped AoEs originating from them.",
+                                                                "name":  "Ancient Artillery",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The glyphs will expand in the direction of the arrows and explode.",
+                                                                "name":  "Emergent Artillery",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed physical tankbuster.",
+                                                                "name":  "Pummel",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Firearms (boss)",
+                       "nameEn":  "Firearms (boss)",
+                       "mnemonic":  [
+                                        "Dynamic Dominance",
+                                        "Mirror Maneuver",
+                                        "Ancient Artillery"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "(Maulskull draws power from its fists!): One of the boss\u0027 fists will begin glowing and make a sound effect, followed by the other one, indicating two ...",
+                                                                "name":  "Stonecarver",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a blue knockback AoE circle at the north or the arena. Also gives each player a spread marker. Players will need to be knocked back leaning tow...",
+                                                                "name":  "Skullcrush",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "The boss summons a large purple cube and punches it, telegraphing three sets of circle AoE. During the third set, either one two green arrow telegraph...",
+                                                                "name":  "Maulwork",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A tower with a multi-hit stack marker appears. The entire party should soak the tower, causing three hits of physical damage.",
+                                                                "name":  "Deep Thunder",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "A combination of Stonecarver half-room cleaves and Skullcrush knockback AoE (without the spread markers). Players will need to be knocked back safely ...",
+                                                                "name":  "Ringing Blows",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed AoE magical tankbuster.",
+                                                                "name":  "Wrought Fire",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "A blue knockback circle will spawn near a lower corner of the arena. In addition, a stack marker will spawn on a random player. The party will need to...",
+                                                                "name":  "Colossal Impact",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Ashlayer",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Maulskull",
+                       "nameEn":  "Maulskull",
+                       "mnemonic":  [
+                                        "Stonecarver",
+                                        "Skullcrush",
+                                        "Maulwork"
+                                    ]
+                   }
+               ]
 }

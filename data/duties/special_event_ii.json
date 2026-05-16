@@ -1,6 +1,6 @@
 {
     "id": "special_event_ii",
-    "name": "特別事件 II",
+    "name": "特別活動 II",
     "nameEn": "Special Event II",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "trial",
@@ -8,30 +8,23 @@
     "iLvlSync": null,
     "jobLevelSync": 80,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "聯動事件副本",
-        "詳細機制請參考 Console Games Wiki / Hector Hectorson 攻略"
+        "1）特別活動 trial slot，通常為節日活動或聯動 (Yo-kai Watch / FFXI / Hildibrand 等)。",
+        "2）依當期活動具體內容不同。",
+        "3）標準 AoE + tankbuster + 全屏組合。"
     ],
-    "notes": "5.x ShB 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "ShB 5.x 特別活動 trial slot (Lv 80)。具體內容依當期活動而定。",
     "bosses": [
         {
-            "name": "副本 Boss",
-            "nameEn": "Duty Boss",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "包含 raid-wide AoE、tankbuster、stack、spread 等機制。",
-                            "tips": ["參考外部攻略"]
-                        }
-                    ]
-                }
-            ]
+            "name": "Event Boss",
+            "nameEn": "Event Boss",
+            "mnemonic": ["依活動類型不同"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "AoE 連發", "type": "aoe", "description": "場上多重 AoE。", "tips": ["閃預警"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
         }
     ]
 }

@@ -1,195 +1,60 @@
 {
-    "id": "minstrels_ballad_sphenes_burden",
-    "name": "永恆女王憶想殲滅戰",
-    "nameEn": "The Minstrel's Ballad: Sphene's Burden",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 100,
-    "highEnd": true,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）4 個元素階段（風/土/冰 + Phase 2 Radical Shift）。",
-        "2）風階段：Aeroquell 補職點 AoE + 西/東風 debuff 預告擊退方向。",
-        "3）土階段：8 塔需踩 + Gravitational Empire 雙塔 + Meteor Impact 阻擋 Weighty Blow。",
-        "4）冰階段：4 個冰橋每橋限 1 人 + Drear Rising 點 AoE 連繩。",
-        "5）Authority Eternal = Phase 1 enrage；Phase 2 Radical Shift 多平台變化。"
-    ],
-    "notes": "DT 7.1 EX trial（Lv 100，ilvl 710）。Queen Eternal EX 機制最豐富的元素切換 trial 之一。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "永恆女王",
-            "nameEn": "Queen Eternal",
-            "mnemonic": ["風/土/冰 元素階段", "冰橋限 1 人", "Phase 2 看平台變化"],
-            "phases": [
-                {
-                    "name": "Phase 1",
-                    "mechanics": [
-                        {
-                            "name": "Aethertithe",
-                            "type": "raidwide",
-                            "description": "持續全體傷。",
-                            "tips": [{ "text": "持續補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Retribute",
-                            "type": "tankbuster",
-                            "description": "錐 AoE + 補職分擔線 AoE。",
-                            "tips": [
-                                { "text": "T 引錐遠離隊友", "role": "tank" },
-                                { "text": "補職集中分擔線", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Virtual Shift",
-                            "type": "raidwide",
-                            "description": "全體傷 + 場地變形。",
-                            "tips": ["看場地新形狀"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Wind Phase",
-                    "mechanics": [
-                        {
-                            "name": "Laws of Wind / Aeroquell",
-                            "type": "stack",
-                            "description": "補職分擔 AoE 留龍捲 + 西/東風 debuff（倒數結束擊退）。",
-                            "tips": [
-                                { "text": "看 debuff 方向預定位避免被推出", "role": "healer" },
-                                "其他人留龍捲遠離團隊"
-                            ]
-                        },
-                        {
-                            "name": "Missing Link",
-                            "type": "other",
-                            "description": "兩玩家連繩 DoT，拉繩打斷。",
-                            "tips": ["拉繩斷掉解 debuff"]
-                        },
-                        {
-                            "name": "Legitimate Force",
-                            "type": "aoe",
-                            "description": "兩段半場 cleave（一邊接另一邊）。",
-                            "tips": ["看劍光順序繞"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Earth Phase",
-                    "mechanics": [
-                        {
-                            "name": "Laws of Earth",
-                            "type": "stack",
-                            "description": "8 塔需踩（必須落地）。",
-                            "tips": ["分配踩塔位置"]
-                        },
-                        {
-                            "name": "Gravitational Empire",
-                            "type": "aoe",
-                            "description": "兩平台各 2 塔 + Gravity Pillar（大點 AoE）+ Gravity Ray（錐 cleave）。",
-                            "tips": ["看點名分配引導"]
-                        },
-                        {
-                            "name": "Meteor Impact + Weighty Blow",
-                            "type": "other",
-                            "description": "玩家位置生成隕石 + 後續 Weighty Blow 即死攻擊，可用隕石擋視線。",
-                            "tips": ["位置調整讓隕石擋 Weighty"]
-                        },
-                        {
-                            "name": "Coronation",
-                            "type": "aoe",
-                            "description": "4 條雷射連繩玩家，位置決定雷射朝向。",
-                            "tips": ["拉繩到安全角度"]
-                        },
-                        {
-                            "name": "Ruthless Regalia + Atomic Ray",
-                            "type": "aoe",
-                            "description": "三角線 AoE + 全員大點 AoE。",
-                            "tips": ["閃線 + 全員散開"]
-                        },
-                        {
-                            "name": "Absolute Authority",
-                            "type": "other",
-                            "description": "複合 AoE：誘導 + 漸減 + 疊機 + 紅三角點名。",
-                            "tips": ["跟著機制順序逐一解"]
-                        }
-                    ]
-                },
-                {
-                    "name": "Ice Phase",
-                    "mechanics": [
-                        {
-                            "name": "Laws of Ice",
-                            "type": "other",
-                            "description": "4 條冰橋 + Freezing Up 1 秒（不動會變 Deep Freeze）。同橋只能站 1 人。",
-                            "tips": ["分配各人 1 橋", "持續移動"]
-                        },
-                        {
-                            "name": "Rush",
-                            "type": "aoe",
-                            "description": "連繩玩家線 AoE，沒拉繩會即死。",
-                            "tips": ["拉繩到對角"]
-                        },
-                        {
-                            "name": "Drear Rising",
-                            "type": "spread",
-                            "description": "1 人線 AoE + 2 人連繩各大點 AoE，繩可轉移。",
-                            "tips": ["連繩交接", "點 AoE 散開遠離"]
-                        },
-                        {
-                            "name": "Authority Eternal (Phase 1 enrage)",
-                            "type": "raidwide",
-                            "description": "Phase 1 enrage，沒打到 0.1% 就團滅。",
-                            "tips": [{ "text": "全 DPS 爆發", "role": "dps" }]
-                        }
-                    ]
-                },
-                {
-                    "name": "Phase 2",
-                    "mechanics": [
-                        {
-                            "name": "Radical Shift",
-                            "type": "other",
-                            "description": "全員大點 AoE + 場地變三種形態之一。",
-                            "tips": ["看新場地形狀調整站位"]
-                        },
-                        {
-                            "name": "Dimensional Distortion",
-                            "type": "aoe",
-                            "description": "Exaflare AoE。",
-                            "tips": ["跟著預警縫跑"]
-                        },
-                        {
-                            "name": "Tyranny's Grasp",
-                            "type": "other",
-                            "description": "摧毀前半場地 + 雙坦塔。",
-                            "tips": [
-                                "移到後半",
-                                { "text": "MT/OT 各踩 1 塔", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Dying Memory",
-                            "type": "raidwide",
-                            "description": "多段全體傷。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
-                        },
-                        {
-                            "name": "Royal Banishment",
-                            "type": "stack",
-                            "description": "多段疊機線 AoE。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Preservation (enrage)",
-                            "type": "raidwide",
-                            "description": "最終 enrage。",
-                            "tips": [{ "text": "前面所有 DPS check 必達", "role": "dps" }]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "minstrels_ballad_sphenes_burden",
+    "name":  "絲菲妮絕嘆殲殛戰",
+    "nameEn":  "The Minstrel\u0027s Ballad: Sphene\u0027s Burden",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "other",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Queen Eternal：Burst",
+                     "2）Gravity Pillar: / Gravity Ray",
+                     "3）Gravity Ray"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) other (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "- Damage taken from tower.",
+                                                                "name":  "Burst",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Large point-blank AoE on target.",
+                                                                "name":  "Gravity Pillar:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Conal cleave on target.",
+                                                                "name":  "Gravity Ray",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Queen Eternal",
+                       "nameEn":  "Queen Eternal",
+                       "mnemonic":  [
+                                        "Burst",
+                                        "Gravity Pillar:",
+                                        "Gravity Ray"
+                                    ]
+                   }
+               ]
 }

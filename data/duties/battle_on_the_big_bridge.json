@@ -1,56 +1,116 @@
 {
-  "id": "battle_on_the_big_bridge",
-  "name": "大橋上的決鬥",
-  "nameEn": "Battle on the Big Bridge",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "Gilgamesh + Enkidu 戰",
-    "Gilgamesh 換武器：不同攻擊模式",
-    "Enkidu：DPS 注意清",
-    "場地是橋上要小心擊退"
-  ],
-  "notes": "FFV 致敬 trial。Gilgamesh 與 Enkidu 對決。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "吉爾伽美什",
-      "nameEn": "Gilgamesh",
-      "mnemonic": [
-        "Gilgamesh 換武器（劍/斧/弓）",
-        "看武器判斷攻擊類型",
-        "Enkidu 援軍 DPS 清",
-        "場邊擊退要小心"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "換武器",
-              "type": "other",
-              "description": "Gilgamesh 切換不同武器，攻擊模式不同。",
-              "tips": ["看武器判斷下一個攻擊", "保持距離 vs 近戰各有策略"]
-            },
-            {
-              "name": "Enkidu 援軍",
-              "type": "other",
-              "description": "Enkidu 加入戰鬥。",
-              "tips": ["DPS 切清", { "text": "T 控制仇恨", "role": "tank" }]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [{ "text": "預判補血", "role": "healer" }]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "battle_on_the_big_bridge",
+    "name":  "大橋之戰",
+    "nameEn":  "Battle on the Big Bridge",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Gilgamesh：Bitter End",
+                     "2）Pradamante / Toad",
+                     "3）Whirlwinds"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a frontal cone AoE attack that has fairly long cast time. It can be easily avoided by moving out of the way.",
+                                                                "name":  "Bitter End",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "\u003cref\u003eThis attack name is both a pun on Bradamante (Nael van Darnus\u0027 gunhalberd) and a reference to [https://finalfantasy.fandom.com/wiki/Excalipoor_(w...",
+                                                                "name":  "Pradamante",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A random player will be turned into a File:Toad icon1.png Toad for 20 seconds causing \"Transformed into a toad and unable to execute actions.\". Will b...",
+                                                                "name":  "Toad",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Player will be File:Minimum icon1.png mini\u0027d for 20 seconds with a heavy Heavy debuff. Gilgamesh will chase them and use Bitter End repeatedly.",
+                                                                "name":  "Minimum",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Deals moderate damage and applies a confused Confused (Status Effect) debuff, which will cause the afflicted player to attack the nearest party member...",
+                                                                "name":  "Rocket Punch",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Used around ~50%. After the long cast, he will do a small AoE centered on himself.",
+                                                                "name":  "Grovel",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Used around ~40%. Does a small AoE centered on himself and runs away. Signals the start of Phase 2.",
+                                                                "name":  "Bomb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "AoE centered on the boss that deals moderate damage.",
+                                                                "name":  "Whirlwind Slash",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Marks a random player and after ~6 seconds leaps towards them, dealing damage to any players around them.",
+                                                                "name":  "Giga Jump",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Multiple Whirlwinds will spawn on the ground and remain for some time. Touching them causes them to explode and deal damage in an AoE around them.",
+                                                                "name":  "Whirlwinds",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Gilgamesh",
+                       "nameEn":  "Gilgamesh",
+                       "mnemonic":  [
+                                        "Bitter End",
+                                        "Pradamante",
+                                        "Toad"
+                                    ]
+                   }
+               ]
 }

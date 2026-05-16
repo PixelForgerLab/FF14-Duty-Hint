@@ -1,37 +1,196 @@
 {
-    "id": "lost_city_of_amdapor_hard",
-    "name": "失落之都 安姆達普爾遺址（高難度）",
-    "nameEn": "The Lost City of Amdapor (Hard)",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "3.2 HW Hard 副本",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
-    "bosses": [
-        {
-            "name": "Diabolos Hollow",
-            "nameEn": "迪亞布魯虛影",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "lost_city_of_amdapor_hard",
+    "name":  "安達普爾失落之都 (零式)",
+    "nameEn":  "The Lost City of Amdapor (Hard)",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "other",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Achamoth：Psycho Squamae: / Neura Squamae: / Toxic Squamae:",
+                     "2）B2 Winged Lion：Ancient Aero: / Ancient Stone: / Ancient Holy:",
+                     "3）B3 Kuribu：Glory (all Phases): / Cure IV (light circle, Phases 1 \u0026 3): / Cure IV (dark circle, Phases 2 \u0026 3 with the Reverse effect):"
+                 ],
+    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) other (Lv 60)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Targets a random player and starts casting a conal AoE in front of the boss aimed at the player.",
+                                                                "name":  "Psycho Squamae:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns ghosts of the players at their current positions that occasionally cast Enthrallment. See the ability below. Players should look at the walls o...",
+                                                                "name":  "Neura Squamae:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Targets a random player and creates a toxic cloud that tethers to them. If the toxic cloud reaches the player, it explodes, inflicting a stack of vuln...",
+                                                                "name":  "Toxic Squamae:",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            },
+                                                            {
+                                                                "description":  "The spawned ghosts from Neura Squamae cast a frontal cone AoE where the players were looking when it was cast.",
+                                                                "name":  "Enthrallment:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Achamoth",
+                       "nameEn":  "Achamoth",
+                       "mnemonic":  [
+                                        "Psycho Squamae:",
+                                        "Neura Squamae:",
+                                        "Toxic Squamae:"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Targets a random area with a large circular AoE. After the AoE explodes, a wind orb will be left on the battlefield that will slowly grow upwards, inc...",
+                                                                "name":  "Ancient Aero:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Targets 2 players with circular AoEs. Works the same as Ancient Aero; after Ancient Libra is cast at least once, the duty of popping the stone orb sho...",
+                                                                "name":  "Ancient Stone:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Winged Lion lifts into the air, becomes untargetable, and casts a circular AoE. An Arcane Sphere spawns on the ground that grows upwards over time bef...",
+                                                                "name":  "Ancient Holy:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Deals minor arena-wide AoE damage and randomly gives wind resistance down Wind Resistance Down II or earth resistance down Earth Resistance Down II to...",
+                                                                "name":  "Ancient Libra:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Winged Lion",
+                       "nameEn":  "Winged Lion",
+                       "mnemonic":  [
+                                        "Ancient Aero:",
+                                        "Ancient Stone:",
+                                        "Ancient Holy:"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Frontal Cone AoE aimed at the Tank.",
+                                                                "name":  "Glory (all Phases):",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Each player that steps into the circle removes a spike and reduces the HP she will recover; all 4 players in the circle will negate healing entirely.",
+                                                                "name":  "Cure IV (light circle, Phases 1 \u0026 3):",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Proximity AoE based at Kuribu\u0027s location. Edges of the arena are the safest spots.",
+                                                                "name":  "Cure IV (dark circle, Phases 2 \u0026 3 with the Reverse effect):",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Applies Rehabilitation buff to Kuribu within the AoE. Move her out of it to reduce healing.",
+                                                                "name":  "Regen (Phases 1 \u0026 3):",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Persistent ground AoE, being inside inflicts bleeding Bleeding. Stay out to avoid damage.",
+                                                                "name":  "Regen (Phases 2 \u0026 3 with the Reverse effect):",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Marks two players with large red ring AoEs; spread out to reduce damage taken.",
+                                                                "name":  "Cure III (Phase 2):",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns one of two adds depending on if the Reverse effect is active: a Low Putto with the Reverse effect active, which tethers to a player and inflict...",
+                                                                "name":  "Decoy (Phase 3)",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Grants Reverse to the boss, switching the effects of Cure IV and Regen to harm players instead of heal the boss.",
+                                                                "name":  "Reverse:",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Kuribu",
+                       "nameEn":  "Kuribu",
+                       "mnemonic":  [
+                                        "Glory (all Phases):",
+                                        "Cure IV (light circle, Phases 1 \u0026 3):",
+                                        "Cure IV (dark circle, Phases 2 \u0026 3 with the Reverse effect):"
+                                    ]
+                   }
+               ]
 }

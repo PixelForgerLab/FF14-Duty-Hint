@@ -1,188 +1,213 @@
 {
-    "id": "strayborough_deadwalk",
-    "name": "噩夢樂園迷途鬼區",
-    "nameEn": "The Strayborough Deadwalk",
-    "expansion": "7.x 黃金的遺產 (Dawntrail)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": 730,
-    "jobLevelSync": 100,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "1）獅頭王：玩偶會追，第一次追最遠玩家、第二次追最近；遠程引到南北邊。",
-        "2）罐中傑克：茶杯旋轉後爆，記住標記的杯子位置；後段多杯子有 90/180 度規律。",
-        "3）夢魘：踩鬼面板獲得 Ghostly Guise 才能解綁繩，但 Fleshbuster 期間又要在實體狀態。"
-    ],
-    "notes": "DT 後期副本（Lv 100，ilvl 670）。夢魘的鬼面板狀態切換是這座副本最複雜的機制。資料整理自 Console Games Wiki。",
-    "bosses": [
-        {
-            "name": "獅頭王雷諾格一世",
-            "nameEn": "His Royal Headness Leonogg I",
-            "mnemonic": ["玩偶追最遠/最近", "遠程引玩偶到南北"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Malicious Mist",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害，場邊生成 AoE。",
-                            "tips": ["別站場邊"]
-                        },
-                        {
-                            "name": "Falling Nightmare",
-                            "type": "aoe",
-                            "description": "每位玩家頭上生成漂浮的頭，幾秒後掉下圓 AoE，命中會 Benoggined 10 秒（無法行動）。",
-                            "tips": ["馬上移開站位"]
-                        },
-                        {
-                            "name": "Team Spirit + Spirited Charge",
-                            "type": "other",
-                            "description": "場上召喚多個玩偶連續衝鋒。第一次追最遠玩家、第二次追最近。碰到先 bind 5s 再 Benoggined 10s。",
-                            "tips": ["遠程站南北引玩偶", "繞時針方向跑避開", "回中央誘第二次"]
-                        },
-                        {
-                            "name": "Evil Scheme",
-                            "type": "aoe",
-                            "description": "場中央 4 個 exaflare AoE 互相 90 度，接著對角格再來一組。",
-                            "tips": ["等第一組爆兩次", "再進到第一組原位"]
-                        },
-                        {
-                            "name": "Looming Nightmare",
-                            "type": "aoe",
-                            "description": "2 名玩家獲得連續 5 段追蹤圓 AoE。",
-                            "tips": ["持續移動拉開 AoE"]
-                        },
-                        {
-                            "name": "Scream",
-                            "type": "aoe",
-                            "description": "三組連續錐 AoE 覆蓋全場。",
-                            "tips": ["跟著預警縫隙跑"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "罐中傑克",
-            "nameEn": "Jack-in-the-Pot",
-            "mnemonic": ["盯住有鬼的杯子", "後段 90 或 180 度規律"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Troubling Teacups / Tea Awhirl",
-                            "type": "aoe",
-                            "description": "場邊基本方向生成 4 茶杯，鬼附身 1 個，所有杯子旋轉混亂後，被附身的杯子爆大圓 AoE。",
-                            "tips": ["緊盯被連繩的杯子", "旋轉時別失焦"]
-                        },
-                        {
-                            "name": "Troubling Teacups (8 杯)",
-                            "type": "aoe",
-                            "description": "每個基本方向 2 個茶杯共 8 個，2 個被附身（相距 90 或 180 度）。",
-                            "tips": ["盯住附身杯子最終位置", "如果相鄰，往側邊 90 度找安全杯"]
-                        },
-                        {
-                            "name": "Toiling Teapots / Mad Tea Party",
-                            "type": "aoe",
-                            "description": "13 個茶杯加茶壺倒紫液體成擴大水坑，分批倒。水坑會流血 DoT 15 秒。",
-                            "tips": ["站到最後才倒的杯子旁", "舊水坑消失後再進入"]
-                        },
-                        {
-                            "name": "Last Drop",
-                            "type": "tankbuster",
-                            "description": "對主 T 魔法坦補。",
-                            "tips": [{ "text": "開減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Troubling Teacups (對角)",
-                            "type": "aoe",
-                            "description": "兩附身杯對角連繩。",
-                            "tips": ["盯住兩個對角的附身杯"]
-                        },
-                        {
-                            "name": "Sordid Steam",
-                            "type": "raidwide",
-                            "description": "全體魔法傷害。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "夢魘",
-            "nameEn": "Träumerei",
-            "mnemonic": ["踩面板=Ghostly Guise", "Fleshbuster 要實體", "Ghostduster 要鬼態"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Bitter Regret",
-                            "type": "aoe",
-                            "description": "場北/兩側生成藍色傳送門線 AoE。",
-                            "tips": ["看門位置躲側或中央"]
-                        },
-                        {
-                            "name": "Poltergeist",
-                            "type": "aoe",
-                            "description": "Boss 砸碎片到場上把場地分成 4 象限。",
-                            "tips": ["記住分區位置"]
-                        },
-                        {
-                            "name": "Ill Intent + Ghostly Guise",
-                            "type": "other",
-                            "description": "玩家被連繩到該象限的鬼小怪，需拉繩成紫色避免重擊。需先踩鬼面板獲得 Ghostly Guise 才能穿越障礙到別象限拉繩。",
-                            "tips": ["先踩面板變鬼", "穿越障礙拉繩"]
-                        },
-                        {
-                            "name": "Ghostduster",
-                            "type": "spread",
-                            "description": "全員大範圍散開標記。鬼態（Ghostly Guise）中此時被命中即死。",
-                            "tips": ["再踩面板變回實體", "散開不重疊"]
-                        },
-                        {
-                            "name": "Malicious Mist",
-                            "type": "raidwide",
-                            "description": "全體魔法傷 + 流血 DoT。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
-                        },
-                        {
-                            "name": "Memorial March",
-                            "type": "aoe",
-                            "description": "北牆兩組 Phantagenitrix 連續放線 AoE，搭配 Boss 的 Bitter Regret。",
-                            "tips": ["看最後一組的線安全位"]
-                        },
-                        {
-                            "name": "Fleshbuster",
-                            "type": "other",
-                            "description": "沒有 Ghostly Guise 即死。",
-                            "tips": ["馬上踩面板變鬼"]
-                        },
-                        {
-                            "name": "Poltergeist + Phantagenitrix",
-                            "type": "aoe",
-                            "description": "場地分區 + 半場線 AoE。需邊解繩邊閃 AoE。",
-                            "tips": ["往沒線 AoE 的半場跑"]
-                        },
-                        {
-                            "name": "Ghostcrusher",
-                            "type": "stack",
-                            "description": "線疊機 AoE。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "繩+Bitter Regret 組合",
-                            "type": "aoe",
-                            "description": "繩解完後 Boss 接 Bitter Regret 線 AoE。",
-                            "tips": ["拉繩同時注意線 AoE"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "strayborough_deadwalk",
+    "name":  "迷途亡靈巡步",
+    "nameEn":  "The Strayborough Deadwalk",
+    "expansion":  "7.x 黃金的遺產 (Dawntrail)",
+    "type":  "stack",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 His Royal Headness Leonogg I：Malicious Mist / Falling Nightmare / Team Spirit",
+                     "2）B2 Jack-in-the-Pot：Troubling Teacups / Tea Awhirl / Toiling Teapots",
+                     "3）B3 Träumerei：Bitter Regret / Poltergeist / Ghostduster"
+                 ],
+    "notes":  "7.x 黃金的遺產 (Dawntrail)[0]) stack (Lv 100)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage and spawns a dangerous AoE at the edge of the arena.",
+                                                                "name":  "Malicious Mist",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns a floating head above each player\u0027s location. After a few seconds, the head will drop from its spawn location (in a small late telegraphed circ...",
+                                                                "name":  "Falling Nightmare",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Summons several dolls around the arena.",
+                                                                "name":  "Team Spirit",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The dolls will begin running through the arena, aiming at certain players. Once each doll reaches the other side, it will run through the arena a seco...",
+                                                                "name":  "Spirited Charge",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Four exaflare AoE telegraphs will spawn in the middle, 90 degrees away from each other. This is followed by another set of exaflares in the previously...",
+                                                                "name":  "Evil Scheme",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "His Royal Headness Leonogg I",
+                       "nameEn":  "His Royal Headness Leonogg I",
+                       "mnemonic":  [
+                                        "Malicious Mist",
+                                        "Falling Nightmare",
+                                        "Team Spirit"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Spawns four teacups at the edges of the arena on the cardinals.",
+                                                                "name":  "Troubling Teacups",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A ghost appears, tethers, and possesses one teacup. Afterward, all of the tea cups will begin spinning multiple times, moving inwards and outwards to ...",
+                                                                "name":  "Tea Awhirl",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns 13 teacups, nine on the cardinals/center and four on the intercardinals.",
+                                                                "name":  "Toiling Teapots",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "is repeated again and functions similarly to its second incarnation. However, the ghosts will now tether two teacups on opposite cardinals.",
+                                                                "name":  "Troubling Teacups / Tea Awhirl",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Sordid Steam",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Jack-in-the-Pot",
+                       "nameEn":  "Jack-in-the-Pot",
+                       "mnemonic":  [
+                                        "Troubling Teacups",
+                                        "Tea Awhirl",
+                                        "Toiling Teapots"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "A large blue portal will spawn at the north, indicating a line AoE leaving the sides safe. This attack repeats, summoning two portals at the sides (wi...",
+                                                                "name":  "Bitter Regret",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss possesses debris and drops them on the arena (as telegraphed line AoEs), partitioning it into four quadrants.",
+                                                                "name":  "Poltergeist",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Träumerei prepares a ward against spirits! Each player will be given a large spread AoE marker. If they are hit by this with File:Ghostly guise icon.p...",
+                                                                "name":  "Ghostduster",
+                                                                "tips":  [
+                                                                             "全員散開"
+                                                                         ],
+                                                                "type":  "spread"
+                                                            },
+                                                            {
+                                                                "description":  "Party-wide magical damage that also inflicts bleed bleeding.",
+                                                                "name":  "Malicious Mist",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "Spawns multiple Stray Phantagenitrix at the north wall in two alternating groups. The first group will being floating up and charging a line AoE attac...",
+                                                                "name":  "Memorial March",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Träumerei prepares a ward against the living! An attack that will instantly kill anyone without File:Ghostly guise icon.png Ghostly Guise. Players mus...",
+                                                                "name":  "Fleshbuster",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Line stack AoE marker on one player, dealing magical damage.",
+                                                                "name":  "Ghostcrusher",
+                                                                "tips":  [
+                                                                             "疊接分擔"
+                                                                         ],
+                                                                "type":  "stack"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Träumerei",
+                       "nameEn":  "Träumerei",
+                       "mnemonic":  [
+                                        "Bitter Regret",
+                                        "Poltergeist",
+                                        "Ghostduster"
+                                    ]
+                   }
+               ]
 }

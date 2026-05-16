@@ -1,72 +1,103 @@
 {
-  "id": "striking_tree_hard",
-  "name": "拉姆殲滅戰",
-  "nameEn": "The Striking Tree (Hard)",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "拉姆雷神戰",
-    "看 Ramuh 動作判斷攻擊方向",
-    "Chain Lightning：分散連電",
-    "Judgment Bolt：全體大雷"
-  ],
-  "notes": "Primal 拉姆的殲滅戰版本。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "拉姆",
-      "nameEn": "Ramuh",
-      "mnemonic": [
-        "Judgment Bolt：全體大雷，預先減傷",
-        "Chain Lightning：散開避免連電",
-        "Thunderspark：腳下 AoE 圓圈",
-        "場上有水晶可踩取得 buff"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "Judgment Bolt（神判雷霆）",
-              "type": "raidwide",
-              "description": "全體大型雷擊。",
-              "tips": [
-                { "text": "AoE 滿血滿條治療", "role": "healer" },
-                { "text": "T 開減傷協助", "role": "tank" }
-              ]
-            },
-            {
-              "name": "Chain Lightning",
-              "type": "spread",
-              "description": "被點名玩家會跳電到附近隊友。",
-              "tips": [
-                "被點名快離開隊伍",
-                "互相散開避免共擔"
-              ]
-            },
-            {
-              "name": "Thunderspark",
-              "type": "aoe",
-              "description": "腳下雷電圓圈 AoE。",
-              "tips": [
-                "看到圓圈走出去"
-              ]
-            },
-            {
-              "name": "場上水晶",
-              "type": "other",
-              "description": "場上會出現水晶，玩家踩可獲得增益。",
-              "tips": [
-                "DPS 適時踩水晶獲取 buff"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "striking_tree_hard",
+    "name":  "衝擊之樹 (零式)",
+    "nameEn":  "The Striking Tree (Hard)",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Ramuh：{{action icon|Shock Strike}}",
+                     "2）Thunderspark / Thunderstorm",
+                     "3）Rolling Thunder"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Untelegraphed AoE tankbuster dealing moderate damage to the main tank and high damage to non-tanks.",
+                                                                "name":  "{{action icon|Shock Strike}}",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "AoE centered on Ramuh. Standing at max melee range allows you to dodge it. Can break Chaotic Strike stun.",
+                                                                "name":  "Thunderspark",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Random players and patches of ground will be marked with an AoE. Deals moderate damage and breaks Chaotic Strike. Ground Thunderstorms will leave behi...",
+                                                                "name":  "Thunderstorm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The more orbs on the ground, the higher the damage of Ramuh\u0027s abilities. Touching an orb gives a stacking buff called File:Electroconductivity icon1.p...",
+                                                                "name":  "Lightning Orbs",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Targets a random player and inflicts File:Terror icon1.png Terror on them for ~60s, preventing them from moving or executing actions. Can be freed wit...",
+                                                                "name":  "Chaotic Strike",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Three Grey Arbiter adds will appear around the arena. Players should immediately switch to them, halting DPS on the boss. They shoot lightning beams a...",
+                                                                "name":  "Grey Arbiters",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Ramuh\u0027s Ultimate. Wipes the group if any Arbiters are alive. Deals moderate damage otherwise.",
+                                                                "name":  "Judgment Bolt",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Tethers 2 players together, inflicting File:Causality icon1.png Causality. Every action used inflicts damage to the player, with casts causing them to...",
+                                                                "name":  "Rolling Thunder",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Ramuh",
+                       "nameEn":  "Ramuh",
+                       "mnemonic":  [
+                                        "{{action icon|Shock Strike}}",
+                                        "Thunderspark",
+                                        "Thunderstorm"
+                                    ]
+                   }
+               ]
 }

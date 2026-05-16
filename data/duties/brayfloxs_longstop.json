@@ -1,94 +1,242 @@
 {
-  "id": "brayfloxs_longstop",
-  "name": "休養勝地布雷福洛克斯野營地",
-  "nameEn": "Brayflox's Longstop",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 35,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "Kyklops：獨眼巨人，注意擊退別摔下台",
-    "Aiatar：兩棲 boss，閃毒液 + AoE 圓圈",
-    "場上有酸液池注意別站"
-  ],
-  "notes": "等級 32 的 4 人副本（哥布林劇情）。Aiatar 是最終 boss，主要小心毒液 AoE 與酸池。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "克琉普斯",
-      "nameEn": "Kyklops",
-      "mnemonic": [
-        "獨眼巨人，會擊退",
-        "靠場邊小心摔下台"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "擊退",
-              "type": "other",
-              "description": "對單體的擊退攻擊。",
-              "tips": [
-                "注意背後是否為平台邊緣",
-                { "text": "T 拉 boss 站靠中間", "role": "tank" }
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "阿傑特",
-      "nameEn": "Aiatar",
-      "mnemonic": [
-        "兩棲 boss，毒液 AoE 多",
-        "場上有酸池別站",
-        "DPS 清小怪避免疊毒"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "毒液 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈毒液，留下酸池。",
-              "tips": [
-                "看到圓圈立刻走出去",
-                "走位避開殘留酸池"
-              ]
-            },
-            {
-              "name": "召喚小怪",
-              "type": "other",
-              "description": "戰鬥中會召喚小怪。",
-              "tips": [
-                "DPS 優先清",
-                { "text": "T 注意拉小怪集中", "role": "tank" }
-              ]
-            },
-            {
-              "name": "毒 debuff",
-              "type": "raidwide",
-              "description": "全體中毒 debuff。",
-              "tips": [
-                { "text": "中毒時補血 + 可解毒", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "brayfloxs_longstop",
+    "name":  "布雷福洛斯長停",
+    "nameEn":  "Brayflox\u0027s Longstop",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  35,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Great Yellow Pelican：Numbing Breath / Hammer Beak",
+                     "2）B2 Inferno Drake：Levinfang/Levinshower / Blaze Spikes / Burning Cyclone",
+                     "3）B3 Hellbender：Bog Bubble / Stagnant Spray / Peculiar Light",
+                     "4）B4 Deep Jungle Coeurl：Charged Whisker / Chaotic Eye",
+                     "5）B5 Aiatar：Salivous Snap / Toxic Vomit / Dragon Breath"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) aoe (Lv 35)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a conal AoE from the boss that afflicts a cleansable paralysis Paralysis detrimental effect.",
+                                                                "name":  "Numbing Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "an uncasted moderately-damaging attack.",
+                                                                "name":  "Hammer Beak",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Great Yellow Pelican",
+                       "nameEn":  "Great Yellow Pelican",
+                       "mnemonic":  [
+                                        "Numbing Breath",
+                                        "Hammer Beak"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "an uncasted conal AoE that does light damage.",
+                                                                "name":  "Levinfang/Levinshower",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "is granted. Players attacking enemies with melee attacks will receive very light damage.",
+                                                                "name":  "Blaze Spikes",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Brayflox will then go to a random party member for the boss to use Burning Cyclone on, which does light-moderate damage in a cleave to the player. Thi...",
+                                                                "name":  "Burning Cyclone",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Inferno Drake",
+                       "nameEn":  "Inferno Drake",
+                       "mnemonic":  [
+                                        "Levinfang/Levinshower",
+                                        "Blaze Spikes",
+                                        "Burning Cyclone"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "an uncasted circular AoE around a random party member, dealing moderate damage.",
+                                                                "name":  "Bog Bubble",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "a casted conal AoE toward the main target.",
+                                                                "name":  "Stagnant Spray",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "an AoE centred around the boss. Will inflict a cleanseable magic vulnerability up Magic Vulnerability Up.",
+                                                                "name":  "Peculiar Light",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "the boss will target a random party member and encase them in a Queer Bubble add, inflicting bind Bind, Physical Damage Down (decreases the player\u0027s p...",
+                                                                "name":  "Effluvium",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "very light damage and a knockback from where Aiatar first descends.",
+                                                                "name":  "Touchdown",
+                                                                "tips":  [
+                                                                             "預判擊退方向或開 Arm\u0027s Length"
+                                                                         ],
+                                                                "type":  "knockback"
+                                                            },
+                                                            {
+                                                                "description":  "a magical tankbuster that inflicts a cleansable poison Poison detriment.",
+                                                                "name":  "Salivous Snap",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "a line AoE targeting a random party member. Inflicts poison Poison if hit.",
+                                                                "name":  "Dragon Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Hellbender",
+                       "nameEn":  "Hellbender",
+                       "mnemonic":  [
+                                        "Bog Bubble",
+                                        "Stagnant Spray",
+                                        "Peculiar Light"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "an AoE centred around the boss that inflicts paralysis Paralysis if hit.",
+                                                                "name":  "Charged Whisker",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "a narrow conal gaze AoE that inflicts a cleansable Physical Damage Down if hit.",
+                                                                "name":  "Chaotic Eye",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Deep Jungle Coeurl",
+                       "nameEn":  "Deep Jungle Coeurl",
+                       "mnemonic":  [
+                                        "Charged Whisker",
+                                        "Chaotic Eye"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a magical tankbuster that inflicts a cleansable poison Poison detriment.",
+                                                                "name":  "Salivous Snap",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "four small circular AoEs that appear around the arena. Will spawn poisonous pods that will grow in size and eventually explode in wider AoEs. Inflicts...",
+                                                                "name":  "Toxic Vomit",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "a line AoE targeting a random party member. Inflicts poison Poison if hit.",
+                                                                "name":  "Dragon Breath",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Aiatar",
+                       "nameEn":  "Aiatar",
+                       "mnemonic":  [
+                                        "Salivous Snap",
+                                        "Toxic Vomit",
+                                        "Dragon Breath"
+                                    ]
+                   }
+               ]
 }

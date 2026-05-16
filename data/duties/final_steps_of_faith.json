@@ -1,36 +1,47 @@
 {
     "id": "final_steps_of_faith",
-    "name": "蒼天決戰",
+    "name": "信仰的終末",
     "nameEn": "The Final Steps of Faith",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "trial",
     "playerCount": 8,
     "iLvlSync": null,
     "jobLevelSync": 60,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.3 HW Nidhogg 終戰",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）Phase 1 龍形：Hot Wing / Hot Tail 兩翼/尾線，飛離後跟著光跑避火痕。",
+        "2）Phase 2 Adds：左右兩翼 adds 拉外側，中間 add 不可坦會隨機 cleave。",
+        "3）Phase 3 人形：Akh Morn tankbuster，Geirskogul 直線、隕石散開。",
+        "4）Phase 4 Estinien：機制重組，最終 Final Steps 限時。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.0 MSQ 終戰 trial (Lv 60)。Nidhogg 4-phase 戰，HW 主線終 boss。",
     "bosses": [
         {
             "name": "Nidhogg",
-            "nameEn": "尼德霍格",
-            "mnemonic": ["看 telegraph 預警"],
+            "nameEn": "Nidhogg",
+            "mnemonic": ["P1 龍形翼/尾線 + 火痕", "P2 Adds DPS check", "P3 人形 Akh Morn + Geirskogul", "P4 Estinien 重組機制"],
             "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
+                { "name": "P1 龍形", "mechanics": [
+                    { "name": "Hot Wing 灼翼", "type": "aoe", "description": "Nidhogg 雙翼下兩條直線 AoE。", "tips": ["閃 boss 兩側"] },
+                    { "name": "Hot Tail 灼尾", "type": "aoe", "description": "沿 boss 朝向的跨場直線 AoE。", "tips": ["閃 boss 前後直線"] },
+                    { "name": "Deafening Bellow 震耳咆嘯", "type": "raidwide", "description": "全屏約 4k 傷害，後期會連放兩次。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                    { "name": "Hole AoE + Fire Trail 火痕", "type": "aoe", "description": "玩家腳下出洞，boss 飛走後沿軌跡留火痕。", "tips": ["集合中央 → 散開閃洞 → 跟著光跑避火痕"] }
+                ]},
+                { "name": "P2 Adds (DPS check)", "mechanics": [
+                    { "name": "Middle Add", "type": "other", "description": "中間 add 無法坦，隨機 cleave 玩家。", "tips": ["移動避開前方 telegraph"] },
+                    { "name": "Side Adds", "type": "other", "description": "兩翼 adds 由 tank 拉到場邊，cone 朝外。", "tips": [{ "text": "MT/OT 各坦一隻", "role": "tank" }] },
+                    { "name": "Transition DPS Check", "type": "raidwide", "description": "限時內未殺光 adds 會 wipe。", "tips": [{ "text": "全力 burst，可開 Limit Break", "role": "dps" }] }
+                ]},
+                { "name": "P3 人形", "mechanics": [
+                    { "name": "Akh Morn 阿克莫恩", "type": "tankbuster", "description": "對主仇恨者高傷 tankbuster，可分擔。", "tips": [{ "text": "MT 開大減傷，OT 接共擔", "role": "tank" }] },
+                    { "name": "Geirskogul 蓋爾斯戈爾", "type": "aoe", "description": "從 Nidhogg 向隨機玩家的直線 AoE。", "tips": ["閃直線"] },
+                    { "name": "Meteor 隕石散開", "type": "spread", "description": "場上多重圓 AoE。", "tips": ["散開"] }
+                ]},
+                { "name": "P4 Estinien", "mechanics": [
+                    { "name": "機制重組", "type": "other", "description": "前 3 階段機制混合連發。", "tips": ["保持冷靜按順序處理"] },
+                    { "name": "Final DPS Race", "type": "raidwide", "description": "最後階段限時打死。", "tips": [{ "text": "全力 DPS", "role": "dps" }] }
+                ]}
             ]
         }
     ]

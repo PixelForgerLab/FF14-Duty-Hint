@@ -1,52 +1,48 @@
 {
     "id": "halatali_hard",
-    "name": "劍鬥領域日影地修煉所",
+    "name": "哈利塔利 (零式)",
     "nameEn": "Halatali (Hard)",
     "expansion": "2.x 重生之境 (A Realm Reborn)",
     "type": "dungeon",
     "playerCount": 4,
-    "iLvlSync": 110,
+    "iLvlSync": null,
     "jobLevelSync": 50,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-                     "Halatali Hard",
-                     "龜型 + 鬥獸"
-                 ],
-    "notes": "等級 50 的 4 人 Hard 版本。⚠️ AI 預填內容。",
+        "1）B1 Tonberry：Karma 報仇越久越痛。",
+        "2）B2 Firemane 火焰豹：火 AoE 圓。",
+        "3）B3 Cuca Fera 牛魔：場上多重 cleave + AoE。"
+    ],
+    "notes": "ARR 2.1 dungeon Hard (Lv 50, ilvl 90)。Halatali 重製版。",
     "bosses": [
-                   {
-                       "name": "Cuca Fera",
-                       "nameEn": "Cuca Fera",
-                       "mnemonic": [
-                                        "Hard 版鬥獸場"
-                                    ],
-                       "phases": [
-                                      {
-                                          "name": "主戰",
-                                          "mechanics": [
-                                                            {
-                                                                "name": "腳下 AoE",
-                                                                "type": "aoe",
-                                                                "description": "腳下圓圈 AoE。",
-                                                                "tips": [
-                                                                             "看到圓圈走出去"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name": "全體 AoE",
-                                                                "type": "raidwide",
-                                                                "description": "全體傷害。",
-                                                                "tips": [
-                                                                             {
-                                                                                 "text": "預判補血",
-                                                                                 "role": "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+        {
+            "name": "Tonberry",
+            "nameEn": "Tonberry",
+            "mnemonic": ["Karma 報仇堆疊"],
+            "phases": [{ "name": "B1", "mechanics": [
+                { "name": "Karma 報仇", "type": "other", "description": "戰鬥越久越痛 (堆疊報仇)。", "tips": [{ "text": "DPS 快速擊殺", "role": "dps" }] },
+                { "name": "Everyone's Grudge 眾人怨恨", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "Firemane",
+            "nameEn": "Firemane",
+            "mnemonic": ["火 AoE 圓"],
+            "phases": [{ "name": "B2", "mechanics": [
+                { "name": "Fireball 火球", "type": "aoe", "description": "場上多重火 AoE。", "tips": ["閃預警"] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "Cuca Fera",
+            "nameEn": "Cuca Fera",
+            "mnemonic": ["牛魔 cleave + AoE"],
+            "phases": [{ "name": "B3", "mechanics": [
+                { "name": "Bull Rush 衝撞", "type": "aoe", "description": "場上多重 AoE + 衝撞。", "tips": ["跟預兆"] },
+                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "全體 AoE", "type": "raidwide", "description": "全屏。", "tips": [{ "text": "減傷", "role": "healer" }] }
+            ]}]
+        }
+    ]
 }

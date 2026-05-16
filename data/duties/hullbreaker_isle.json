@@ -1,85 +1,212 @@
 {
-  "id": "hullbreaker_isle",
-  "name": "財寶傳說破艦島",
-  "nameEn": "Hullbreaker Isle",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "海盜島主題副本",
-    "Cuca Fera：龜型 boss，閃水柱 AoE",
-    "Kraken：海怪，閃觸手 + 全體",
-    "場上注意海水與毒"
-  ],
-  "notes": "等級 50 的 4 人副本（破艦島）。海盜冒險主題，最終 boss 克拉肯。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "庫卡龍龜",
-      "nameEn": "Cuca Fera",
-      "mnemonic": [
-        "龜型 boss",
-        "閃 AoE 圓圈"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈 AoE。",
-              "tips": [
-                "看到圓圈走出去"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "克拉肯",
-      "nameEn": "Kraken",
-      "mnemonic": [
-        "巨型海怪",
-        "閃觸手攻擊 AoE",
-        "場上會被觸手抓住 → DPS 救援"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "觸手抓人",
-              "type": "other",
-              "description": "Boss 會用觸手抓住玩家，被抓的會持續受傷。",
-              "tips": [
-                "DPS 打觸手救援被抓的隊友",
-                { "text": "立刻補血給被抓玩家", "role": "healer" }
-              ]
-            },
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈 AoE。",
-              "tips": [
-                "看到圓圈走出去"
-              ]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [
-                { "text": "AoE 預先治療", "role": "healer" }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "hullbreaker_isle",
+    "name":  "破船島",
+    "nameEn":  "Hullbreaker Isle",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "other",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Sasquatch (Boss)：Wild Banana Tree / Chest Thump / Smallfoot Sifaka",
+                     "2）B2 Sjoorm：Upwell / Water Puddle / Watery Grave",
+                     "3）B3 Kraken (Hullbreaker Isle)：Platforms / Waterspouts / Wallop"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) other (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "There are 6 banana trees along the edges of the arena. Interacting with the tree drops a Banana Bunch on the ground. Used to interupt Chest Thump. Gra...",
+                                                                "name":  "Wild Banana Tree",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The boss rears back and thumps his chest repeatedly, dealing damage in an arena-wide AoE. Can be interupted with a Banana Bunch, where the boss will s...",
+                                                                "name":  "Chest Thump",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Small monkeys that spawn around when the boss casts Chest Thump. Will move towards and eat Banana Bunches. Should be killed quickly and/or tanked away...",
+                                                                "name":  "Smallfoot Sifaka",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will target a random player and throw poo at them, forming a large AoE around the player.",
+                                                                "name":  "Stool Pelt",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Sasquatch (Boss)",
+                       "nameEn":  "Sasquatch (Boss)",
+                       "mnemonic":  [
+                                        "Wild Banana Tree",
+                                        "Chest Thump",
+                                        "Smallfoot Sifaka"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Long frontal line AoE.",
+                                                                "name":  "Upwell",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Targets each player with a large AoE. After a few seconds, it will deal moderate damage to any player standing in the AoE.",
+                                                                "name":  "Water Puddle",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Large bubbles that spawn around the room in a 3x3 grid. Used to avoid Whirlpool. Imobilizes and deals slight damage to players while inside, and deals...",
+                                                                "name":  "Watery Grave",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will become untargetable and dive into the earth. Uses either Whirlpool or Tunnel.",
+                                                                "name":  "Burrow",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "A large, pulsing AoE will appear in the center of the room. Players need to step into Watery Grave bubbles to avoid the damage. Standing too soon or t...",
+                                                                "name":  "Whirlpool",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will move across the room in the direction of a random player, dealing damage in the form of small AoEs above it.",
+                                                                "name":  "Tunnel",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Used when the boss returns from Burrow. Deals heavy damage.",
+                                                                "name":  "Surface Breach",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Sjoorm",
+                       "nameEn":  "Sjoorm",
+                       "mnemonic":  [
+                                        "Upwell",
+                                        "Water Puddle",
+                                        "Watery Grave"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "There are 4 platforms in the arena that players can use Waterspouts to get to.",
+                                                                "name":  "Platforms",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Used to move between Platforms. Applies a 15-second stacking Suppuration debuff when used; avoid excessive/repeated use in a short time to keep the de...",
+                                                                "name":  "Waterspouts",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "frontal cone AoE.",
+                                                                "name":  "Wallop",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "A large AoE on a random player. Applies a slow debuff and a DoT.",
+                                                                "name":  "Inkblot",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Donut AoE. Stand within the hitbox to avoid being hit. Knocks back affected players, potentially into a Waterspout.",
+                                                                "name":  "Clearout",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Appears after 4 Arms have been killed. Killing it spawns a second, final tentacle. Should be focused over the Arm as it has more health and is more an...",
+                                                                "name":  "Tentacle",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Will pick up players, immobilizing them, and throw them onto random platforms.",
+                                                                "name":  "Scoop",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Kraken (Hullbreaker Isle)",
+                       "nameEn":  "Kraken (Hullbreaker Isle)",
+                       "mnemonic":  [
+                                        "Platforms",
+                                        "Waterspouts",
+                                        "Wallop"
+                                    ]
+                   }
+               ]
 }

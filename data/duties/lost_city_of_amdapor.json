@@ -1,54 +1,178 @@
 {
-  "id": "lost_city_of_amdapor",
-  "name": "腐壞遺跡無限城市街古跡",
-  "nameEn": "The Lost City of Amdapor",
-  "expansion": "2.x 重生之境 (A Realm Reborn)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "needs-update",
-  "mnemonic": [
-    "腐壞無限城 lvl 50 4 人副本",
-    "Diabolos 變體 boss",
-    "閃 AoE + 召喚物"
-  ],
-  "notes": "等級 50 的 4 人副本（無限城腐壞版）。⚠️ AI 預填內容。",
-  "bosses": [
-    {
-      "name": "虛空迪亞波羅斯",
-      "nameEn": "Diabolos Hollow",
-      "mnemonic": [
-        "虛空 boss",
-        "閃 AoE 圓圈",
-        "召喚援軍 DPS 清"
-      ],
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "腳下 AoE",
-              "type": "aoe",
-              "description": "腳下圓圈 AoE。",
-              "tips": ["看到圓圈走出去"]
-            },
-            {
-              "name": "召喚援軍",
-              "type": "other",
-              "description": "Boss 召喚援軍。",
-              "tips": ["DPS 切清援軍"]
-            },
-            {
-              "name": "全體 AoE",
-              "type": "raidwide",
-              "description": "全體傷害。",
-              "tips": [{ "text": "預判補血", "role": "healer" }]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "id":  "lost_city_of_amdapor",
+    "name":  "安達普爾失落之都",
+    "nameEn":  "The Lost City of Amdapor",
+    "expansion":  "2.x 重生之境 (A Realm Reborn)",
+    "type":  "tankbuster",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Decaying Gourmand：{{action icon|Devour}} / Moldy Phlegm / Spore Cloud",
+                     "2）B2 Arioch：Plague Swipe / {{action icon|Eerie Soundwave}}",
+                     "3）B3 Diabolos：Ruinous Omen / Graviball / Ultimate Terror"
+                 ],
+    "notes":  "2.x 重生之境 (A Realm Reborn)[0]) tankbuster (Lv 50)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a person will be marked with Prey Prey. After a delay, the person will get devoured and will be unable to execute any actions.",
+                                                                "name":  "{{action icon|Devour}}",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "a medium-sized circular AoE that leaves a puddle, inflicting Pollen to people standing in it, dealing damage-overtime.",
+                                                                "name":  "Moldy Phlegm",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "an instant-cast roomwide AoE, dealing light damage and inflicting a cleanseable stacking debuff of poison Poison.",
+                                                                "name":  "Spore Cloud",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "uncasted moderate damage on the main target.",
+                                                                "name":  "Dirty Sneeze",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Decaying Gourmand",
+                       "nameEn":  "Decaying Gourmand",
+                       "mnemonic":  [
+                                        "{{action icon|Devour}}",
+                                        "Moldy Phlegm",
+                                        "Spore Cloud"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a large conal AoE.",
+                                                                "name":  "Plague Swipe",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "roomwide AoE.",
+                                                                "name":  "{{action icon|Eerie Soundwave}}",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Arioch",
+                       "nameEn":  "Arioch",
+                       "mnemonic":  [
+                                        "Plague Swipe",
+                                        "{{action icon|Eerie Soundwave}}"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "a very hard-hitting roomwide AoE that will inflict three stacks of Diabolic Curse.",
+                                                                "name":  "Ruinous Omen",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "a player will be targeted with crosshairs and an orb will be fired at them, dealing light damage.",
+                                                                "name":  "Graviball",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "a donut-AoE centered around the boss.",
+                                                                "name":  "Ultimate Terror",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "a roomwide AoE that inflicts a cleanseable and short sleep sleep status effect. Taking any damage will remove this status effect.",
+                                                                "name":  "Nightmare",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "a targeted moderately-sized AoE under a person.",
+                                                                "name":  "Night Terror",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "magical tankbuster on the main target.",
+                                                                "name":  "Camisado",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Diabolos",
+                       "nameEn":  "Diabolos",
+                       "mnemonic":  [
+                                        "Ruinous Omen",
+                                        "Graviball",
+                                        "Ultimate Terror"
+                                    ]
+                   }
+               ]
 }

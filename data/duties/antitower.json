@@ -1,37 +1,176 @@
 {
-    "id": "antitower",
-    "name": "反塔",
-    "nameEn": "The Antitower",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "needs-update",
-    "mnemonic": [
-        "3.1 HW Lv 60 副本，水晶之塔致敬",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
-    ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
-    "bosses": [
-        {
-            "name": "Allagan Bolide",
-            "nameEn": "亞拉戈大彗星",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "antitower",
+    "name":  "反塔",
+    "nameEn":  "The Antitower",
+    "expansion":  "3.x 蒼穹的禁城 (Heavensward)",
+    "type":  "aoe",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  60,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）B1 Zuro Roggo：Water Bomb / Odious Croak (no castbar) / Frog Song",
+                     "2）B2 Ziggy：Gyrating Glare / Jittering Glare / Jittering Jounce",
+                     "3）B3 Calcabrina：Terrifying Glance (no castbar) / Knockout / Brace"
+                 ],
+    "notes":  "3.x 蒼穹的禁城 (Heavensward)[0]) aoe (Lv 60)。",
+    "bosses":  [
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Spawns a circle AoE telegraph at the location of two players.",
+                                                                "name":  "Water Bomb",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will use a persistent untelegraphed frontal conal AoE. Move away from the front.",
+                                                                "name":  "Odious Croak (no castbar)",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The boss will begin singing, turning two players (the healer and one DPS) into frogs which will prevent them from attacking, while continually spawnin...",
+                                                                "name":  "Frog Song",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "An untelegraphed tankbuster that will inflict Concussion for 10 seconds, stunning the target. This can be removed with Esuna.",
+                                                                "name":  "Toy Hammer",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Zuro Roggo",
+                       "nameEn":  "Zuro Roggo",
+                       "mnemonic":  [
+                                        "Water Bomb",
+                                        "Odious Croak (no castbar)",
+                                        "Frog Song"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Party-wide magical damage.",
+                                                                "name":  "Gyrating Glare",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ],
+                                                                "type":  "raidwide"
+                                                            },
+                                                            {
+                                                                "description":  "A telegraphed frontal conal AoE aimed at a random player.",
+                                                                "name":  "Jittering Glare",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "The system message \"Ziggy takes careful aim\" and the boss tethers one player and marks them with a crosshair. The targeted player should hide behind a...",
+                                                                "name":  "Jittering Jounce",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed tankbuster.",
+                                                                "name":  "Jittering Jab",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Ziggy",
+                       "nameEn":  "Ziggy",
+                       "mnemonic":  [
+                                        "Gyrating Glare",
+                                        "Jittering Glare",
+                                        "Jittering Jounce"
+                                    ]
+                   },
+                   {
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "description":  "Targets a player with a red eye above their head and strikes them with large untelegraphed frontal cone. Causes confusion if hit. This attack can be a...",
+                                                                "name":  "Terrifying Glance (no castbar)",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            },
+                                                            {
+                                                                "description":  "Telegraphed tankbuster.",
+                                                                "name":  "Knockout",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ],
+                                                                "type":  "tankbuster"
+                                                            },
+                                                            {
+                                                                "description":  "The boss summons three purple barriers, leaving one side empty. The boss will only be vulnerable to attacks from the empty side. Hitting it from a pro...",
+                                                                "name":  "Brace",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "other"
+                                                            },
+                                                            {
+                                                                "description":  "Transforms two players into dolls (Calca and Brina) that also inflicts a bleeding Bleeding damage-over-time. The dolls will use donut and conal AoE at...",
+                                                                "name":  "Dollhouse",
+                                                                "tips":  [
+                                                                             "看 telegraph 移動"
+                                                                         ],
+                                                                "type":  "aoe"
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "name":  "Calcabrina",
+                       "nameEn":  "Calcabrina",
+                       "mnemonic":  [
+                                        "Terrifying Glance (no castbar)",
+                                        "Knockout",
+                                        "Brace"
+                                    ]
+                   }
+               ]
 }
