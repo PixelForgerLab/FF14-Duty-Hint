@@ -1,74 +1,62 @@
 {
     "id": "anabaseios_the_tenth_circle",
-    "name": "煉獄 10",
+    "name": "萬魔殿 荒天之獄2",
     "nameEn": "Anabaseios: The Tenth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 645,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Silkspit：分散別讓蛛網連繩，被綁 5 次死。",
-        "2）Pand\u00e6monic Pillars：6 塔 1 人/塔，原沒塔的角是安全。",
-        "3）Pand\u00e6monic Ray：被打到 Hysteria 失控可能跑出場（用 Rescue 救）。",
-        "4）Touchdown：中央平台全紅 AoE 即死，用蛛網橋跑側。"
+        "1）Pandaemonium 萬魔殿主 (Themis 雙手形態)：Daimon's Roar 嗥叫。",
+        "2）Beastly Roar 獸吼 + 散開。",
+        "3）Sinister Eyes 邪眼：凝視機制。"
     ],
-    "notes": "6.4 EW Pandæmonium Anabaseios 第 10 層（Lv 90，ilvl 615）。Pandæmonium boss 形態。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 Pandæmonium Anabaseios P10 Normal (Lv 90, ilvl 645)。Pandaemonium 萬魔殿主。",
     "bosses": [
         {
-            "name": "潘德摩諾姆",
-            "nameEn": "Pandæmonium",
-            "mnemonic": ["蛛網分散避綁", "Ray Hysteria 用 Rescue", "Touchdown 跑側"],
+            "name": "萬魔殿主",
+            "nameEn": "Pandaemonium",
+            "mnemonic": [
+                "Sinister Eyes 邪眼凝視 → 背對。",
+                "Beastly Roar 獸吼 + 散開。",
+                "Daimon's Roar 嗥叫全屏。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Silkspit",
-                            "type": "aoe",
-                            "description": "玩家蛛網 + 連繩 → Soul Snare 5 stack 死。",
-                            "tips": ["拉開避免連繩", "被綁時走過蛛網解綁"]
-                        },
-                        {
-                            "name": "Pandæmonic Pillars",
-                            "type": "stack",
-                            "description": "6 塔 1 人/塔，留 Doom debuff。",
-                            "tips": ["分配踩塔", "原無塔角為安全"]
-                        },
-                        {
-                            "name": "Pandæmonic Ray",
-                            "type": "aoe",
-                            "description": "Boss 看方向 = 該側半場 cleave + Hysteria 失控。",
-                            "tips": [
-                                "看朝向繞對側",
-                                { "text": "用 Rescue 救即將墜落的隊友", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Parted Plumes",
-                            "type": "aoe",
-                            "description": "錐 AoE 旋轉繞中央。",
-                            "tips": ["站最後出現位置", "等爆後進剛剛位置"]
-                        },
-                        {
-                            "name": "Touchdown",
-                            "type": "other",
-                            "description": "中央平台變大紅 AoE 即死。",
-                            "tips": ["用蛛網橋跑側"]
-                        },
-                        {
-                            "name": "Harrowing Hell",
+                            "name": "Daimon's Roar 惡魔嗥叫",
                             "type": "raidwide",
-                            "description": "多段全體傷 + 中央擊退。",
-                            "tips": ["減傷 + 站近 Boss 避擊退"]
+                            "description": "全屏 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Wicked Step",
-                            "type": "stack",
-                            "description": "雙 T 塔。",
-                            "tips": [{ "text": "MT/OT 各 1 塔（左先解）", "role": "tank" }]
+                            "name": "Beastly Roar 獸吼",
+                            "type": "spread",
+                            "description": "全員散開 AoE。",
+                            "tips": ["clock 散開"]
+                        },
+                        {
+                            "name": "Sinister Eyes 邪眼",
+                            "type": "other",
+                            "description": "凝視攻擊。",
+                            "tips": ["背對 boss"]
+                        },
+                        {
+                            "name": "Foul Talisman 邪符",
+                            "type": "aoe",
+                            "description": "場上邪符 AoE。",
+                            "tips": ["閃邪符位置"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

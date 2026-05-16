@@ -1,6 +1,6 @@
 {
     "id": "anabaseios_the_twelfth_circle_savage",
-    "name": "煉獄零式 12",
+    "name": "萬魔殿 荒天之獄零式4",
     "nameEn": "Anabaseios: The Twelfth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,86 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P12S P1 Athena：Theos 雷射 + 配對機制。",
+        "2）Engravement of Souls 靈魂雕刻：4 種印玩家配對。",
+        "3）P2 Pallas Athena：Litany of Depravity 邪惡禱 + Crush Helm 砸盔。",
+        "4）Caloric Theory 強化版 + 火印傳遞。",
+        "5）Ultima Blade 究極之刃 終局秒殺。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.41 P12 Savage (Lv 90, ilvl 665)。Athena → Pallas Athena Savage = P12S。Pandæmonium 完整終戰。被認為 EW 最難 raid。",
     "bosses": [
         {
             "name": "雅典娜",
             "nameEn": "Athena",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Theos 雷射 + 配對機制。",
+                "Engravement of Souls 4 種印配對。",
+                "Mid-fight 變身 Pallas Athena。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "P1 - Athena",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Theos 雷射",
+                            "type": "aoe",
+                            "description": "場上雷射 AoE。",
+                            "tips": ["閃雷射預警"]
+                        },
+                        {
+                            "name": "Engravement of Souls 靈魂雕刻",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "玩家獲 4 種印 → 配對處理。",
+                            "tips": ["依印類型配對"]
+                        },
+                        {
+                            "name": "Glaukopis (Savage) 凝視",
+                            "type": "other",
+                            "description": "強化凝視。",
+                            "tips": ["背對 boss"]
+                        },
+                        {
+                            "name": "Apodialogos (Savage)",
+                            "type": "aoe",
+                            "description": "強化對話 AoE。",
+                            "tips": ["閃預警"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Pallas Athena",
+                    "mechanics": [
+                        {
+                            "name": "Pangenesis 萬源",
+                            "type": "other",
+                            "description": "場上多球 + 玩家配對 + 顏色處理。",
+                            "tips": ["依球顏色配對"]
+                        },
+                        {
+                            "name": "Litany of Depravity 邪惡禱",
+                            "type": "aoe",
+                            "description": "場地多重 AoE 連發。",
+                            "tips": ["跟預兆移動"]
+                        },
+                        {
+                            "name": "Crush Helm 砸盔",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷或無敵", "role": "tank" }]
+                        },
+                        {
+                            "name": "Caloric Theory (Savage)",
+                            "type": "other",
+                            "description": "強化卡路里理論 + 火印傳遞機制。",
+                            "tips": ["依火印配對傳遞"]
+                        },
+                        {
+                            "name": "Ultima Blade (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

@@ -1,6 +1,6 @@
 {
     "id": "abyssos_the_eighth_circle_savage",
-    "name": "煉獄零式 8",
+    "name": "萬魔殿 煉淨之獄零式4",
     "nameEn": "Abyssos: The Eighth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,81 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P8S P1 = Hephaistos 多形態轉換 (Snakes/Sphinx/Gorgon/Centaur)。",
+        "2）Quadruple Form 四形態組合機制。",
+        "3）P2 = Hephaistos II 心臟 + Inferno 多段地獄火。",
+        "4）Trinity 三相機制。",
+        "5）狂暴：Ultimate Hephaistos 終局秒殺。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.21 P8 Savage (Lv 90, ilvl 635)。Hephaistos Savage = P8S。Pandaemonium Abyssos 終戰。雙形態。",
     "bosses": [
         {
             "name": "赫菲斯托斯",
             "nameEn": "Hephaistos",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Snakes 蛇 / Sphinx 司芬克斯 / Gorgon 戈耳貢 / Centaur 馬人 4 形態。",
+                "Quadruple Form：4 種混合處理。",
+                "P2 Heart：3 連 Inferno 地獄火。",
+                "Trinity 三相機制。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "P1 - Hephaistos",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Snake Form (Savage) 蛇形態",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "蛇變色配對 + 凝視。",
+                            "tips": ["背對 + 配色"]
+                        },
+                        {
+                            "name": "Sphinx Form 司芬克斯",
+                            "type": "aoe",
+                            "description": "司芬克斯形態 cleave。",
+                            "tips": ["看朝向"]
+                        },
+                        {
+                            "name": "Gorgon Form 戈耳貢",
+                            "type": "other",
+                            "description": "戈耳貢凝視 + 石化機制。",
+                            "tips": ["背對 boss"]
+                        },
+                        {
+                            "name": "Centaur Form 馬人",
+                            "type": "aoe",
+                            "description": "馬人衝鋒直線 AoE。",
+                            "tips": ["閃突進路徑"]
+                        },
+                        {
+                            "name": "Quadruple Form 四形態",
+                            "type": "other",
+                            "description": "4 形態同時或連續處理。",
+                            "tips": ["依形態順序處理"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Hephaistos II Heart",
+                    "mechanics": [
+                        {
+                            "name": "Inferno (3 連)",
+                            "type": "raidwide",
+                            "description": "3 連地獄火全屏 AoE。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Trinity 三相",
+                            "type": "other",
+                            "description": "3 種機制配對 (火 + 雷 + 大地)。",
+                            "tips": ["依屬性處理"]
+                        },
+                        {
+                            "name": "Ultimate Hephaistos (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

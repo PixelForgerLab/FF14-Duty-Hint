@@ -1,59 +1,84 @@
 {
     "id": "asphodelos_the_first_circle",
-    "name": "煉獄 1",
+    "name": "萬魔殿 邊境之獄1",
     "nameEn": "Asphodelos: The First Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 565,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Gaoler's Flail：看 Boss 哪手揮鞭 = 該側半場，後面會無 cast 預警組合。",
-        "2）Pitiless Flail：被點的人站近 Boss，後面要疊機。",
-        "3）Intemperance：火/冰 debuff 要交替（吃對立色），別站場中央十字。",
-        "4）Aetherchain：球顏色 = 該色格爆，跑對色格；後段配 Aetherflail 半場 cleave。"
+        "1）Gaoler's Flail：boss 左右手鎖鏈 → 對應半場 cleave。",
+        "2）Pitiless Flail：直線 + 擊退 + stack 標記。",
+        "3）Intemperance：冰/火 debuff + 場地 4 象限水晶。",
+        "4）Aetherchain：場地紅藍楔形 + 球色配對。"
     ],
-    "notes": "6.01 EW Pandæmonium 第 1 層（Lv 90，ilvl 565）。Erichthonios 守衛者。Pandæmonium 主線開頭。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.01 Pandæmonium Asphodelos P1 Normal (Lv 90, ilvl 565)。Erichthonios 邪罪艾利克托尼歐斯。",
     "bosses": [
         {
-            "name": "厄里克托尼俄斯",
+            "name": "邪罪艾利克托尼歐斯",
             "nameEn": "Erichthonios",
-            "mnemonic": ["看鞭子手", "火/冰交替", "球色看格色"],
+            "mnemonic": [
+                "Gaoler's Flail 看手鎖鏈側 = 半場 cleave。",
+                "Intemperance：紅 = 火 (要冰打)；藍 = 冰 (要火打)。",
+                "Aetherchain：球色 = 紅 → 紅楔形爆，跑藍楔形。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Gaoler's Flail",
+                            "name": "Gaoler's Flail 獄卒鎖鏈",
                             "type": "aoe",
-                            "description": "Boss 揮左/右手鞭 = 該側半場 cleave。",
-                            "tips": ["看手繞對側"]
+                            "description": "Boss 左/右手鎖鏈旋轉 → 對應半場 AoE。",
+                            "tips": ["跑對側"]
                         },
                         {
-                            "name": "Pitiless Flail",
-                            "type": "stack",
-                            "description": "玩家線 AoE 擊退 + 後續疊機。",
-                            "tips": ["被點的人站近 Boss", "其他人閃線", "AoE 後快回中央疊"]
-                        },
-                        {
-                            "name": "Intemperance + Intemperate Torrent",
+                            "name": "Pitiless Flail 無情鎖鏈",
                             "type": "other",
-                            "description": "全員火/冰 debuff，4 個象限 3 層水晶輪流爆。需吃對立色（吃火者站冰水晶下方 = 吃冰）。",
-                            "tips": ["看自己 debuff 顏色找對色水晶", "別站場中央十字", "每次切換顏色找對應水晶"]
+                            "description": "對 1 玩家直線 + 擊退 + 後續 stack 標記。",
+                            "tips": ["被點者貼 boss 抗擊退", "其他人疊 stack"]
                         },
                         {
-                            "name": "Aetherchain + Aetherflail",
-                            "type": "aoe",
-                            "description": "場分藍紅色塊 + 球顏色 = 該色格爆，後段配半場 cleave。",
-                            "tips": ["看球色站對色格", "看鞭子手繞半場"]
-                        },
-                        {
-                            "name": "Heavy Hand / Warden's Wrath",
+                            "name": "Heavy Hand 沉重之手",
                             "type": "tankbuster",
-                            "description": "坦補 + 後續全體 AoE。",
-                            "tips": [{ "text": "減傷", "role": "tank" }, { "text": "預判補血", "role": "healer" }]
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Warden's Wrath 看守者之怒",
+                            "type": "raidwide",
+                            "description": "高傷 全體 AoE。",
+                            "tips": [{ "text": "全員大減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Intemperance 不節制",
+                            "type": "other",
+                            "description": "全員火 (紅) 或冰 (藍) debuff。場地 4 象限 3 水晶疊。底部水晶爆放對應屬性。同色 = 高傷，異色 = 安全 + 屬性切換。",
+                            "tips": [
+                                "紅 debuff → 站藍水晶下；藍 debuff → 站紅水晶下",
+                                "**禁止站象限十字線**"
+                            ]
+                        },
+                        {
+                            "name": "Shining Cells + Aetherchain",
+                            "type": "aoe",
+                            "description": "場地縮小 + 紅藍楔形。Boss 球色 = 對應顏色楔形爆。",
+                            "tips": ["看球色找對立色楔形站"]
+                        },
+                        {
+                            "name": "Aetherflail 以太鏈",
+                            "type": "aoe",
+                            "description": "Aetherchain + Gaoler's Flail 半場組合。",
+                            "tips": ["找對立色 + 安全半場交點"]
+                        },
+                        {
+                            "name": "Slam Shut 監牢關閉",
+                            "type": "raidwide",
+                            "description": "結束 Shining Cells 全體 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         }
                     ]
                 }

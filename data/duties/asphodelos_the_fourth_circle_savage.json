@@ -1,6 +1,6 @@
 {
     "id": "asphodelos_the_fourth_circle_savage",
-    "name": "煉獄零式 4",
+    "name": "萬魔殿 邊境之獄零式4",
     "nameEn": "Asphodelos: The Fourth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,80 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P4S = P4N + Belone Coils 雙形態 (Bear/Tower/Spear/Aero)。",
+        "2）Curtain Call 雙鎖鏈 + 雙形態轉換。",
+        "3）Wreath of Thorns：3 連鎖鏈 + 配色處理。",
+        "4）Acid Rain 酸雨 + 連線。",
+        "5）終戰：Searing Stream 噴射 + 全屏連發。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.11 P4 Savage (Lv 90, ilvl 605)。Hesperos Savage = P4S。雙形態 (Phase 1 + Phase 2)。",
     "bosses": [
         {
-            "name": "赫斯佩羅斯",
-            "nameEn": "Hesperos",
-            "mnemonic": ["Savage 強化版"],
+            "name": "赫斯珀羅斯 (P4S)",
+            "nameEn": "Hesperos (P4S)",
+            "mnemonic": [
+                "Belone Coils：4 種圖騰 (Bear/Tower/Spear/Aero) 配對。",
+                "Wreath of Thorns 鎖鏈 3 連 + 配色。",
+                "Curtain Call 雙形態切換。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "P1",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Decollation (Savage)",
+                            "type": "raidwide",
+                            "description": "全屏高傷。",
+                            "tips": [{ "text": "減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Pinax (Savage) 4 屬性",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "強化版 Pinax 機制 + 玩家位置記憶。",
+                            "tips": ["依屬性效果處理"]
+                        },
+                        {
+                            "name": "Belone Coils 圖騰",
+                            "type": "other",
+                            "description": "Bear/Tower/Spear/Aero 4 圖騰 → 玩家配對機制。",
+                            "tips": ["依圖騰指派處理"]
+                        },
+                        {
+                            "name": "Wreath of Thorns 荊棘冠",
+                            "type": "other",
+                            "description": "3 連鎖鏈 + 配色機制。",
+                            "tips": ["依顏色配對拉開"]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 Curtain Call",
+                    "mechanics": [
+                        {
+                            "name": "Curtain Call 謝幕",
+                            "type": "raidwide",
+                            "description": "雙形態切換 + 全屏 AoE。",
+                            "tips": [{ "text": "全員減傷 + LB", "role": "healer" }]
+                        },
+                        {
+                            "name": "Acid Rain 酸雨",
+                            "type": "aoe",
+                            "description": "場上連線 + 圓 AoE。",
+                            "tips": ["拉開連線"]
+                        },
+                        {
+                            "name": "Searing Stream 灼熱噴射",
+                            "type": "aoe",
+                            "description": "場上直線噴射 + 連發。",
+                            "tips": ["閃直線預警"]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

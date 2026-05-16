@@ -1,96 +1,62 @@
 {
     "id": "anabaseios_the_ninth_circle",
-    "name": "煉獄 9",
+    "name": "萬魔殿 荒天之獄1",
     "nameEn": "Anabaseios: The Ninth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 645,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Ravening 看 Boss 顏色：藍=法師、紅=戰士、綠=巨獸三種階段。",
-        "2）法師：Dualspell 看哪元素閃 = 該元素加強（散開或縮甜甜圈）。",
-        "3）戰士：Front/Rear Combination 大/甜甜圈 + 後半場 cleave。",
-        "4）巨獸：Ecliptic Meteor 躲未裂石頭後，爆完移開（石頭爆）。"
+        "1）Kokytos 科庫托斯 (Hesperos 雙腿形態)：Smash 砸擊 + Anguine Form 蛇形態。",
+        "2）Front/Back Combination：前後配對 cleave。",
+        "3）IL Sync + 多段機制。"
     ],
-    "notes": "6.4 EW Pandæmonium Anabaseios 第 9 層（Lv 90，ilvl 615）。Kokytos 三相 boss。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 Pandæmonium Anabaseios P9 Normal (Lv 90, ilvl 645)。Kokytos 科庫托斯 (赫斯珀羅斯下半身)。",
     "bosses": [
         {
             "name": "科庫托斯",
             "nameEn": "Kokytos",
-            "mnemonic": ["看顏色 = 法/戰/巨獸", "Ecliptic Meteor 躲未裂石後"],
+            "mnemonic": [
+                "Anguine Form 蛇形態 cleave。",
+                "Smash 砸擊 + 多段 AoE。",
+                "Front/Back 前後配對。"
+            ],
             "phases": [
                 {
-                    "name": "法師",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Fire III / Blizzard III / Dualspell",
-                            "type": "spread",
-                            "description": "火=散開、冰=甜甜圈，雙咒看閃光顏色決定哪個強化。",
-                            "tips": ["看閃光顏色站位"]
-                        },
-                        {
-                            "name": "Iceflame Summoning",
+                            "name": "Smash 砸擊",
                             "type": "aoe",
-                            "description": "2 火 + 2 冰石，閃光的會擴大，跑對立元素。",
-                            "tips": ["看閃光元素", "跑反向"]
-                        }
-                    ]
-                },
-                {
-                    "name": "戰士",
-                    "mechanics": [
+                            "description": "場上砸擊 AoE。",
+                            "tips": ["閃預警"]
+                        },
                         {
-                            "name": "Archaic Rockbreaker",
+                            "name": "Anguine Form 蛇形態",
                             "type": "aoe",
-                            "description": "中央擊退 + 岩漿線移動爆點 AoE（類似 Ravensclaw）。",
-                            "tips": ["站場邊預擊退", "看線停下位置避"]
+                            "description": "蛇形態 cleave + 環形 AoE。",
+                            "tips": ["看形態預判"]
                         },
                         {
-                            "name": "Archaic Demolish",
-                            "type": "stack",
-                            "description": "2 組疊機，各 4 人。",
-                            "tips": ["分組站位"]
-                        },
-                        {
-                            "name": "Front/Rear Combination",
+                            "name": "Front/Back Combination 前後配對",
                             "type": "aoe",
-                            "description": "大/甜甜圈 + 半場 cleave。",
-                            "tips": ["看名稱判斷"]
-                        }
-                    ]
-                },
-                {
-                    "name": "巨獸",
-                    "mechanics": [
-                        {
-                            "name": "Charybdis",
-                            "type": "spread",
-                            "description": "玩家圓 AoE 留水坑 DoT。",
-                            "tips": ["分散拉開"]
+                            "description": "前後分別 cleave。",
+                            "tips": ["看順序預判"]
                         },
                         {
-                            "name": "Beastly Roar",
-                            "type": "spread",
-                            "description": "中央擊退 + 散開。",
-                            "tips": ["抗擊退 + 散開"]
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Gluttonous Rampage",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "雙 T 連繩 + 中央漸減。",
-                            "tips": [
-                                { "text": "MT/OT 拉繩到 NW/NE", "role": "tank" },
-                                "其他人到 S"
-                            ]
-                        },
-                        {
-                            "name": "Comet + Ecliptic Meteor",
-                            "type": "other",
-                            "description": "3 漸減後生成石頭 + 中央隕石。",
-                            "tips": ["躲未裂石頭後", "爆完馬上移開"]
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

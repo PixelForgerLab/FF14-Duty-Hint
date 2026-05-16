@@ -1,6 +1,6 @@
 {
     "id": "asphodelos_the_second_circle_savage",
-    "name": "煉獄零式 2",
+    "name": "萬魔殿 邊境之獄零式2",
     "nameEn": "Asphodelos: The Second Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,61 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P2S = P2N + Sewage Eruption 污水噴發 + Loaded Sirens 配色機制。",
+        "2）Channeling Flow：場地箭頭水流 + 玩家位置記憶。",
+        "3）Doting Roar 強化版。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.11 P2 Savage (Lv 90, ilvl 605)。Hippokampos Savage。",
     "bosses": [
         {
-            "name": "海馬",
+            "name": "希波坎波斯",
             "nameEn": "Hippokampos",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Loaded Sirens：玩家獲不同顏色 buff → 配對處理。",
+                "Channeling Flow：場地箭頭水流 → 預判玩家位置記憶。",
+                "Sewage Eruption：場上多點圓 AoE 噴發。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Sewage Deluge (Savage)",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "場地下沉 + 滑行強化版。",
+                            "tips": ["跑場邊抗滑行"]
+                        },
+                        {
+                            "name": "Channeling Flow 河流",
+                            "type": "other",
+                            "description": "場地箭頭水流 + 玩家位置記憶 → 後續 AoE。",
+                            "tips": ["**移動避開記憶位置**"]
+                        },
+                        {
+                            "name": "Loaded Sirens 載入塞壬",
+                            "type": "other",
+                            "description": "玩家不同顏色 buff → 配對處理。",
+                            "tips": ["依顏色配對站位"]
+                        },
+                        {
+                            "name": "Sewage Eruption 污水噴發",
+                            "type": "aoe",
+                            "description": "場上多點圓 AoE。",
+                            "tips": ["散開避免重疊"]
+                        },
+                        {
+                            "name": "Doting Roar (Savage)",
+                            "type": "raidwide",
+                            "description": "全體高傷強化版。",
+                            "tips": [{ "text": "全員減傷 + LB", "role": "healer" }]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

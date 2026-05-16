@@ -1,6 +1,6 @@
 {
     "id": "anabaseios_the_eleventh_circle_savage",
-    "name": "煉獄零式 11",
+    "name": "萬魔殿 荒天之獄零式3",
     "nameEn": "Anabaseios: The Eleventh Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,56 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P11S = P11N + Symphonia 交響樂機制 (玩家位置歌譜)。",
+        "2）Letter of the Law 法律之印 + 配對。",
+        "3）Spell Cards 法術卡：4 種卡 (前/後/左/右) 配對。",
+        "4）狂暴：Soultwine 靈魂之絆 全屏即死。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.41 P11 Savage (Lv 90, ilvl 665)。Themis Savage = P11S。",
     "bosses": [
         {
             "name": "忒彌斯",
             "nameEn": "Themis",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Symphonia 玩家位置歌譜記憶。",
+                "Letter of the Law 印 + 配對。",
+                "Spell Cards 4 種卡 (前/後/左/右)。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Symphonia 交響樂",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "玩家位置歌譜記憶 → 後續機制依位置。",
+                            "tips": ["記憶位置"]
+                        },
+                        {
+                            "name": "Letter of the Law 法律之印",
+                            "type": "other",
+                            "description": "玩家獲印 → 配對處理。",
+                            "tips": ["依印類型配對"]
+                        },
+                        {
+                            "name": "Spell Cards 法術卡",
+                            "type": "other",
+                            "description": "4 種卡 (前/後/左/右) → 對應方向 cleave。",
+                            "tips": ["依卡方向預判"]
+                        },
+                        {
+                            "name": "Dike (Savage) 判決",
+                            "type": "other",
+                            "description": "強化判決機制。",
+                            "tips": ["依卡牌處理"]
+                        },
+                        {
+                            "name": "Soultwine (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

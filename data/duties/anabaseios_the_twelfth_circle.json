@@ -1,89 +1,97 @@
 {
     "id": "anabaseios_the_twelfth_circle",
-    "name": "煉獄 12",
+    "name": "萬魔殿 荒天之獄4",
     "nameEn": "Anabaseios: The Twelfth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 645,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Trinity of Souls：看翅膀環顏色順序，預判左右 AoE 順序。",
-        "2）Superchain Theory：球/環連繩，球=點 AoE / 環=全場 AoE，看連繩長度決定先後。",
-        "3）Ultima Blades：場地縮小 + Anthropos DPS check，沒打完 Theos's Ultima 團滅。",
-        "4）Unnatural Enchainment 場地缺塊，不能跳。"
+        "1）Athena 雅典娜 P1：Glaukopis 凝視 + 矛盾 (Doublethink) 機制。",
+        "2）P2 Pallas Athena 帕拉斯·雅典娜：Pangenesis 萬源 + 球機制。",
+        "3）Apodialogos 對話 + Trinity 三相。",
+        "4）Caloric Theory 卡路里理論 + 火印機制。"
     ],
-    "notes": "6.4 EW Pandæmonium Anabaseios 第 12 層（Lv 90，ilvl 615）。Athena 終戰。Pandæmonium 全終層。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 Pandæmonium Anabaseios P12 Normal (Lv 90, ilvl 645)。Athena 雅典娜 → Pallas Athena 帕拉斯·雅典娜。Anabaseios 終戰。雙形態。",
     "bosses": [
         {
             "name": "雅典娜",
             "nameEn": "Athena",
-            "mnemonic": ["翅膀環順序", "Superchain 看繩長", "Anthropos DPS check"],
+            "mnemonic": [
+                "Glaukopis 凝視 → 背對。",
+                "Doublethink 矛盾 + 配對。",
+                "Apodialogos 對話。"
+            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1",
                     "mechanics": [
                         {
-                            "name": "Trinity of Souls",
-                            "type": "aoe",
-                            "description": "翅膀環顏色出現順序 = 左/右 AoE 發動順序。",
-                            "tips": ["看順序預判位移"]
-                        },
-                        {
-                            "name": "Paradeigma",
-                            "type": "aoe",
-                            "description": "4 Anthropos 分身，2 個全場線、2 個連繩玩家線 AoE。",
-                            "tips": ["拉繩遠離隊友"]
-                        },
-                        {
-                            "name": "Superchain Theory",
-                            "type": "aoe",
-                            "description": "鏈連球（點 AoE）或環（全場），看繩長度決定先後。",
-                            "tips": ["短繩先爆", "看球/環判斷形狀"]
-                        },
-                        {
-                            "name": "Parthenos",
-                            "type": "aoe",
-                            "description": "Boss 轉向隨機 + 後方線 AoE 擊退。",
-                            "tips": ["看 Boss 朝向最後 cast 才預警"]
-                        },
-                        {
-                            "name": "Unnatural Enchainment",
+                            "name": "Glaukopis 灰眼凝視",
                             "type": "other",
-                            "description": "場地缺塊 + 玩家不能跳。",
-                            "tips": ["注意缺塊位置", "繞路移動"]
+                            "description": "凝視攻擊。",
+                            "tips": ["背對 boss"]
                         },
                         {
-                            "name": "Ultima Blades + Anthropos",
+                            "name": "Doublethink 矛盾",
                             "type": "other",
-                            "description": "場地縮小 + 4 個 Anthropos 需在 Athena's Power 100 前打完。",
-                            "tips": [{ "text": "全力 burst Anthropos", "role": "dps" }]
+                            "description": "玩家獲矛盾 debuff → 配對。",
+                            "tips": ["依矛盾類型處理"]
                         },
                         {
-                            "name": "Palladion / Clear Cut",
+                            "name": "Apodialogos 對話",
                             "type": "aoe",
-                            "description": "Boss 衝鋒玩家 + Anthropos 270 度錐。",
-                            "tips": ["被點的人拉到場邊"]
+                            "description": "場地對話 AoE 機制。",
+                            "tips": ["閃預警"]
                         },
                         {
-                            "name": "Theos's Ultima",
+                            "name": "全體 AoE",
                             "type": "raidwide",
-                            "description": "Anthropos 沒打完 = 團滅。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "帕拉斯·雅典娜",
+            "nameEn": "Pallas Athena",
+            "mnemonic": [
+                "Pangenesis 萬源 + 球機制。",
+                "Trinity 三相機制。",
+                "Caloric Theory 火印 + 雙形態。"
+            ],
+            "phases": [
+                {
+                    "name": "P2",
+                    "mechanics": [
+                        {
+                            "name": "Pangenesis 萬源",
+                            "type": "other",
+                            "description": "場上球 + 玩家配對機制。",
+                            "tips": ["依球顏色配對"]
                         },
                         {
-                            "name": "Dialogos",
-                            "type": "stack",
-                            "description": "疊機 + 全員圓 AoE。",
-                            "tips": ["先疊後散"]
+                            "name": "Trinity 三相",
+                            "type": "other",
+                            "description": "3 種屬性同時放招。",
+                            "tips": ["看屬性處理"]
                         },
                         {
-                            "name": "Glaukopis",
-                            "type": "tankbuster",
-                            "description": "T 線坦補。",
-                            "tips": [{ "text": "拉遠 + 減傷", "role": "tank" }]
+                            "name": "Caloric Theory 卡路里理論",
+                            "type": "aoe",
+                            "description": "場上火印 + 多段 AoE。",
+                            "tips": ["閃印位置"]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

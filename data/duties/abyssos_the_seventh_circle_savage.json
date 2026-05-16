@@ -1,6 +1,6 @@
 {
     "id": "abyssos_the_seventh_circle_savage",
-    "name": "煉獄零式 7",
+    "name": "萬魔殿 煉淨之獄零式3",
     "nameEn": "Abyssos: The Seventh Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,64 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P7S = P7N + Inviolate Bonds 不可侵犯之鏈。",
+        "2）Mid-fight 變身為惡魔形 (Forgiven Cruelty)。",
+        "3）多重 Forgivens：場上多個忘卻 boss 機制。",
+        "4）狂暴：Famine's Hunger 飢餓 全屏即死。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.21 P7 Savage (Lv 90, ilvl 635)。Agdistis Savage = Hera → Forgivens variant。",
     "bosses": [
         {
-            "name": "阿格狄絲提絲",
+            "name": "阿格狄斯提斯 (Savage)",
             "nameEn": "Agdistis",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Inviolate Bonds 鏈條配對。",
+                "Forgivens：召喚忘卻系列 boss 形態。",
+                "Famine 飢餓 dot 機制。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Inviolate Bonds 不可侵犯之鏈",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "玩家鏈條配對機制。",
+                            "tips": ["依鏈條顏色配對拉開"]
+                        },
+                        {
+                            "name": "Forgivens 召喚",
+                            "type": "other",
+                            "description": "場上多個 Forgiven (Cruelty/Hate/etc) 變身。",
+                            "tips": [
+                                { "text": "DPS 擊殺", "role": "dps" }
+                            ]
+                        },
+                        {
+                            "name": "Bough (Savage)",
+                            "type": "aoe",
+                            "description": "強化 cleave。",
+                            "tips": ["繞 boss 後"]
+                        },
+                        {
+                            "name": "Famine's Hunger 飢餓",
+                            "type": "other",
+                            "description": "玩家 dot + 倒數爆。",
+                            "tips": ["持續補血"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏高傷 AoE。",
+                            "tips": [{ "text": "減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

@@ -1,77 +1,67 @@
 {
     "id": "abyssos_the_eighth_circle",
-    "name": "煉獄 8",
+    "name": "萬魔殿 煉淨之獄4",
     "nameEn": "Abyssos: The Eighth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 615,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Sunforge：蛇 = 中央 AoE 跑邊；鳳凰 = 兩側 AoE 跑中。",
-        "2）Reforged Reflection：手鎖斷=Gorgon 凝視（背對）；腳鎖斷=擊退。",
-        "3）Volcanic Torches：藍火移動畫路徑封閉 3/4 場（後改 2 火）。",
-        "4）Cthonic Vent：火蛇跳水坑爆 1/4 場。"
+        "1）Hephaistos 赫菲斯托斯：Phase 1 武器轉換 + 不同 AoE。",
+        "2）Snake Form：蛇形態 + 變色配對。",
+        "3）Phase 2 - 場上 Heart 心臟 boss。"
     ],
-    "notes": "6.2 EW Pandæmonium Abyssos 第 8 層（Lv 90，ilvl 585）。Hephaistos。Pandæmonium Abyssos 終層。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.2 Pandæmonium Abyssos P8 Normal (Lv 90, ilvl 615)。Hephaistos 赫菲斯托斯。Abyssos 終戰。",
     "bosses": [
         {
             "name": "赫菲斯托斯",
             "nameEn": "Hephaistos",
-            "mnemonic": ["蛇中、鳳凰邊", "手 = 凝視、腳 = 擊退", "藍火路徑記住"],
+            "mnemonic": [
+                "武器轉換：火/雷不同 AoE。",
+                "蛇形態變色配對。",
+                "終戰 Heart 心臟形態。"
+            ],
             "phases": [
                 {
-                    "name": "主戰",
+                    "name": "P1",
                     "mechanics": [
                         {
-                            "name": "Genesis of Flame",
+                            "name": "Weapon Change 武器轉換",
+                            "type": "aoe",
+                            "description": "Boss 切換武器 → 不同屬性 AoE (火/雷)。",
+                            "tips": ["看武器類型預判"]
+                        },
+                        {
+                            "name": "Snake Form 蛇形態",
+                            "type": "other",
+                            "description": "蛇形態 + 變色配對機制。",
+                            "tips": ["依顏色配對"]
+                        },
+                        {
+                            "name": "全體 AoE",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏魔法 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 - Heart",
+                    "mechanics": [
+                        {
+                            "name": "Heart Phase 心臟形態",
+                            "type": "raidwide",
+                            "description": "Boss 變為心臟形態。多重 AoE。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
                         },
                         {
-                            "name": "Sunforge (蛇)",
+                            "name": "Final AoE",
                             "type": "aoe",
-                            "description": "中央 AoE 跨平台。",
-                            "tips": ["跑邊"]
-                        },
-                        {
-                            "name": "Sunforge (鳳凰)",
-                            "type": "aoe",
-                            "description": "兩側 AoE，中央安全。",
-                            "tips": ["跑中央"]
-                        },
-                        {
-                            "name": "Flameviper",
-                            "type": "tankbuster",
-                            "description": "T 線坦補。",
-                            "tips": [{ "text": "拉遠 + 減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Reforged Reflection (手)",
-                            "type": "other",
-                            "description": "Gorgon 從地下繞 + 凝視 Petrification + Gorgoneion 全體傷。",
-                            "tips": ["背對 Gorgon", "全力打 Gorgon"]
-                        },
-                        {
-                            "name": "Reforged Reflection (腳)",
-                            "type": "other",
-                            "description": "Blazing Footfalls 多次擊退（無法抗）+ Rearing Rampage 全體 AoE。",
-                            "tips": ["位置調好預擊退", "減傷"]
-                        },
-                        {
-                            "name": "Cthonic Vent",
-                            "type": "aoe",
-                            "description": "Boss 連繩兩個水坑 → 火蛇跳到另一個水坑 → 1/4 場 AoE。",
-                            "tips": ["看連繩終點避"]
-                        },
-                        {
-                            "name": "Volcanic Torches",
-                            "type": "aoe",
-                            "description": "3 個（後 2 個）藍火沿線移動畫路徑，封閉 3/4 場。",
-                            "tips": ["看路徑找安全 1/4 場"]
+                            "description": "場地多重 AoE 收尾。",
+                            "tips": ["閃預警"]
                         }
                     ]
                 }

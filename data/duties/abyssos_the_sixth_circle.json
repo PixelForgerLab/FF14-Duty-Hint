@@ -1,71 +1,62 @@
 {
     "id": "abyssos_the_sixth_circle",
-    "name": "煉獄 6",
+    "name": "萬魔殿 煉淨之獄2",
     "nameEn": "Abyssos: The Sixth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 615,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Aetheric Polyominoid：4 針掉落 + 不規則安全格，站非閃爍格。",
-        "2）Transmission：被連繩玩家面向場外讓錐 AoE 出場。",
-        "3）Strophe Ixou：Boss 旋轉 360 度 + 前後錐 AoE，跟著旋轉方向跑。",
-        "4）Aetherial Exchange：Polyominoid Sigma 配對交換位置 + 某些無安全位。"
+        "1）Hegemone 赫格蒙：Glaukopis 灰眼 + 變色機制。",
+        "2）Reek Havoc 嚎叫 + 散開。",
+        "3）Polyominoid：方塊機制。"
     ],
-    "notes": "6.2 EW Pandæmonium Abyssos 第 6 層（Lv 90，ilvl 585）。Hegemone。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.2 Pandæmonium Abyssos P6 Normal (Lv 90, ilvl 615)。Hegemone 赫格蒙妮。",
     "bosses": [
         {
-            "name": "黑格莫尼",
+            "name": "赫格蒙妮",
             "nameEn": "Hegemone",
-            "mnemonic": ["看格安全", "連繩面向場外", "旋轉跟方向"],
+            "mnemonic": [
+                "Glaukopis 凝視 → 背對 boss。",
+                "變色 debuff 配對。",
+                "Polyominoid 方塊配色。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Aetheric Polyominoid",
-                            "type": "aoe",
-                            "description": "4 個針指示 + 不規則格 AoE 圖案。",
-                            "tips": ["站非閃爍格"]
-                        },
-                        {
-                            "name": "Choros Ixou",
-                            "type": "aoe",
-                            "description": "Boss 雙手指 EW 或 NS = 該方向錐 AoE。",
-                            "tips": ["遠離指向方向"]
-                        },
-                        {
-                            "name": "Transmission",
+                            "name": "Glaukopis 灰眼凝視",
                             "type": "other",
-                            "description": "被連繩玩家獲得 Glossomorph，倒數結束被凍住放錐 AoE。",
-                            "tips": ["被點的人面向場外", "讓錐出場"]
+                            "description": "凝視攻擊。",
+                            "tips": ["背對 boss"]
                         },
                         {
-                            "name": "Strophe Ixou",
-                            "type": "aoe",
-                            "description": "Boss 旋轉 360 度 + 前後錐 AoE。",
-                            "tips": ["跟旋轉方向同步跑"]
+                            "name": "Reek Havoc 大破壞",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Dark Ashes",
-                            "type": "spread",
-                            "description": "玩家圓 AoE。",
-                            "tips": ["分散"]
+                            "name": "Polyominoid 方塊機制",
+                            "type": "other",
+                            "description": "場上方塊 + 配色機制。",
+                            "tips": ["依配色站位"]
                         },
                         {
-                            "name": "Aetherial Exchange + Polyominoid Sigma",
-                            "type": "aoe",
-                            "description": "Polyominoid 兩兩配對交換位置，某些無安全。",
-                            "tips": ["看配對預測新位置"]
+                            "name": "Color Change 變色",
+                            "type": "other",
+                            "description": "玩家獲不同顏色 debuff → 配對。",
+                            "tips": ["依顏色配對"]
                         },
                         {
-                            "name": "Synergy",
+                            "name": "Tankbuster",
                             "type": "tankbuster",
-                            "description": "雙 T 坦補。",
-                            "tips": [{ "text": "MT/OT 分散", "role": "tank" }]
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

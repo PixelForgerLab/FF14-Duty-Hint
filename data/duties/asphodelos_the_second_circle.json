@@ -1,92 +1,67 @@
 {
     "id": "asphodelos_the_second_circle",
-    "name": "煉獄 2",
+    "name": "萬魔殿 邊境之獄2",
     "nameEn": "Asphodelos: The Second Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 565,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Spoken Cataract：紅環 = Boss 前 + 黃環 = 寬線，站側面（非黃環方向）+ Boss 後（紅環外）。",
-        "2）Sewage Deluge：場地淹水，只能站平台與走道。",
-        "3）Predatory Sight：紅三角 debuff = 必須與隊友疊（不疊死）。",
-        "4）Dissociation 頭飛邊放半場 cleave + Sewage Eruption 多 AoE。"
+        "1）Hippokampos 海馬：Murky Depths 全屏 + 場上瘀血浮空。",
+        "2）Sewage Deluge：場地下沉 + 滑行機制。",
+        "3）Doting Roar：噪音吼，DPS check。"
     ],
-    "notes": "6.01 EW Pandæmonium 第 2 層（Lv 90，ilvl 565）。Hippokampos 海馬。淹水場地是核心。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.01 Pandæmonium Asphodelos P2 Normal (Lv 90, ilvl 565)。Hippokampos 希波坎波斯。",
     "bosses": [
         {
-            "name": "海馬",
+            "name": "希波坎波斯",
             "nameEn": "Hippokampos",
-            "mnemonic": ["紅環 = 前、黃環 = 寬線", "紅三角 = 必須疊"],
+            "mnemonic": [
+                "Sewage Deluge：場地下沉 → 滑行至安全格。",
+                "Murky Depths 全屏 + 場上瘀血浮空 → 必須踩浮塊避免下沉。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Murky Depths",
+                            "name": "Murky Depths 渾濁深淵",
                             "type": "raidwide",
-                            "description": "全體 AoE。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "description": "全屏 AoE + 場上瘀血浮空。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Doubled Impact",
-                            "type": "tankbuster",
-                            "description": "雙 T 疊機 AoE 坦補。",
-                            "tips": [{ "text": "MT/OT 集中", "role": "tank" }]
-                        },
-                        {
-                            "name": "Spoken Cataract",
-                            "type": "aoe",
-                            "description": "紅環（Boss 前方）+ 黃環（寬線，箭頭對側也打）。",
-                            "tips": ["看紅環避前", "看黃環箭頭避兩側"]
-                        },
-                        {
-                            "name": "Sewage Deluge",
+                            "name": "Sewage Deluge 污水洪流",
                             "type": "other",
-                            "description": "場地淹水 Dropsy DoT，只能站平台 + 走道。",
-                            "tips": ["站平台或走道"]
+                            "description": "場地下沉 + 玩家滑行 + 場邊安全格。",
+                            "tips": ["跑到場邊抗滑行"]
                         },
                         {
-                            "name": "Predatory Sight",
-                            "type": "stack",
-                            "description": "全員紅三角 debuff，需 2 人以上疊（不疊 = 大傷易傷）。",
-                            "tips": ["全員找另一人疊"]
-                        },
-                        {
-                            "name": "Dissociation",
-                            "type": "aoe",
-                            "description": "Boss 頭飛邊（北邊），對東或西半場 cleave。",
-                            "tips": ["看頭位置避對側"]
-                        },
-                        {
-                            "name": "Coherence",
-                            "type": "stack",
-                            "description": "1 T flare + 1 非坦疊機。",
-                            "tips": [
-                                { "text": "T 走遠", "role": "tank" },
-                                "其他人集中疊"
-                            ]
-                        },
-                        {
-                            "name": "Sewage Eruption",
-                            "type": "aoe",
-                            "description": "多個 AoE + 淹水期間限制移動。",
-                            "tips": ["全員集中 + 一起移開"]
-                        },
-                        {
-                            "name": "Shockwave",
-                            "type": "other",
-                            "description": "Boss 跳角落 + 擊退。",
-                            "tips": ["注意別被擊退到死區"]
-                        },
-                        {
-                            "name": "Tainted Flood",
+                            "name": "Sludge Slinger 污泥投擲",
                             "type": "spread",
-                            "description": "玩家紅 AoE 散開。",
-                            "tips": ["分散"]
+                            "description": "玩家圓 AoE 散開標記。",
+                            "tips": ["散開 clock 位"]
+                        },
+                        {
+                            "name": "Coherence 連結",
+                            "type": "aoe",
+                            "description": "場上連線 + 直線 AoE。",
+                            "tips": ["拉開連線"]
+                        },
+                        {
+                            "name": "Doting Roar 噪音吼",
+                            "type": "raidwide",
+                            "description": "全體高傷 AoE。",
+                            "tips": [{ "text": "減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

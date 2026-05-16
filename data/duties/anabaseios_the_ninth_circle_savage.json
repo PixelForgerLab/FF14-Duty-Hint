@@ -1,6 +1,6 @@
 {
     "id": "anabaseios_the_ninth_circle_savage",
-    "name": "煉獄零式 9",
+    "name": "萬魔殿 荒天之獄零式1",
     "nameEn": "Anabaseios: The Ninth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,66 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P9S = P9N + Limit Cut 1-8 編號斬擊。",
+        "2）Levinstrikes 雷擊雙線。",
+        "3）Beastly Bile 獸膽：玩家配對機制。",
+        "4）Ravenous Belly 飢餓之腹：吞食機制。",
+        "5）狂暴：Final Death 終局秒殺。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.41 P9 Savage (Lv 90, ilvl 665)。Kokytos Savage = P9S。",
     "bosses": [
         {
             "name": "科庫托斯",
             "nameEn": "Kokytos",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Limit Cut 1-8 編號斬擊。",
+                "Beastly Bile 獸膽配對 (火/雷)。",
+                "Ravenous Belly 吞食機制。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Limit Cut 編號斬擊",
+                            "type": "spread",
+                            "description": "8 人頭頂 1-8 編號 → 依序斬擊。",
+                            "tips": [
+                                "依編號到指派 clock 位",
+                                "面向外側避免反彈"
+                            ]
+                        },
+                        {
+                            "name": "Levinstrikes 雷擊",
+                            "type": "aoe",
+                            "description": "雙線雷 AoE。",
+                            "tips": ["閃雷線"]
+                        },
+                        {
+                            "name": "Beastly Bile 獸膽",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "玩家獲火/雷 buff → 配對機制。",
+                            "tips": ["依顏色配對"]
+                        },
+                        {
+                            "name": "Ravenous Belly 飢餓之腹",
+                            "type": "other",
+                            "description": "Boss 吞食玩家。",
+                            "tips": ["指派吞食玩家"]
+                        },
+                        {
+                            "name": "全體 AoE",
+                            "type": "raidwide",
+                            "description": "全屏高傷 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                        },
+                        {
+                            "name": "Enrage",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }

@@ -1,95 +1,74 @@
 {
     "id": "asphodelos_the_fourth_circle",
-    "name": "煉獄 4",
+    "name": "萬魔殿 邊境之獄4",
     "nameEn": "Asphodelos: The Fourth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 565,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Pinax 順序：雷（中心擊退到角）→ 水（中心擊退）→ 毒（散開）→ 火（疊機）。",
-        "2）Shift：劍 = 大 cone（一擊致命）；披風 = 擊退。",
-        "3）Belone Coils：4 個職業反向圖示塔，禁用對應職業踩。",
-        "4）Belone Bursts：球反向職業圖示，需用其他職業打掉。"
+        "1）Hesperos 赫斯珀羅斯：Decollation 全屏 + Belone Bursts 玩家配對機制。",
+        "2）Levinstrike Pinax：場上 4 個 Pinax 4 屬性 (火/水/雷/土)。",
+        "3）Bloody Cleave 血腥斬 + Devouring Brand 吞噬印。",
+        "4）Pinax 機制：依屬性效果不同 (火 = 直線；水 = 圓擊退；雷 = 連線；土 = 範圍 stack)。"
     ],
-    "notes": "6.01 EW Pandæmonium 第 4 層（Lv 90，ilvl 565）。Hesperos 守衛者首腦。Pandæmonium Asphodelos 終層。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.01 Pandæmonium Asphodelos P4 Normal (Lv 90, ilvl 565)。Hesperos 赫斯珀羅斯 (Asphodelos 終局)。",
     "bosses": [
         {
-            "name": "赫斯佩羅斯",
+            "name": "赫斯珀羅斯",
             "nameEn": "Hesperos",
-            "mnemonic": ["Pinax 雷水毒火", "Shift 劍致命", "Belone 反向職業"],
+            "mnemonic": [
+                "Pinax 4 屬性：火 (直線) / 水 (圓擊退) / 雷 (連線) / 土 (stack)。",
+                "Belone Bursts：玩家配對顏色，異色配對。",
+                "Decollation 全屏高傷。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Elegant Evisceration",
-                            "type": "tankbuster",
-                            "description": "坦補。",
-                            "tips": [{ "text": "減傷", "role": "tank" }]
-                        },
-                        {
-                            "name": "Pinax (雷)",
-                            "type": "other",
-                            "description": "Levinstrike Mekhane 中心漸減 AoE。",
-                            "tips": ["跑角落"]
-                        },
-                        {
-                            "name": "Pinax (水)",
-                            "type": "other",
-                            "description": "Well Mekhane 中心擊退。",
-                            "tips": ["位置調好或抗擊退"]
-                        },
-                        {
-                            "name": "Pinax (毒)",
-                            "type": "spread",
-                            "description": "Acid Mekhane 全員散開（一次重疊致命）。",
-                            "tips": ["完全分散"]
-                        },
-                        {
-                            "name": "Pinax (火)",
-                            "type": "stack",
-                            "description": "Lava Mekhane 疊機。",
-                            "tips": ["全員疊"]
-                        },
-                        {
-                            "name": "Hell Skewer",
-                            "type": "aoe",
-                            "description": "Boss 前方線 AoE。",
-                            "tips": ["繞 Boss 側"]
-                        },
-                        {
-                            "name": "Shift (劍)",
-                            "type": "aoe",
-                            "description": "場邊標記 + 劍 = 寬 cone 一擊致命。",
-                            "tips": ["跑到劍對側"]
-                        },
-                        {
-                            "name": "Shift (披風)",
-                            "type": "other",
-                            "description": "場邊標記 + 披風 = 擊退。",
-                            "tips": ["站披風前"]
-                        },
-                        {
-                            "name": "Bloodrake + Belone Coils",
-                            "type": "stack",
-                            "description": "Bloodrake 全體傷 + 4 個反向職業塔，禁用該職業踩。",
-                            "tips": ["看塔上反向職業，由其他職業踩"]
-                        },
-                        {
-                            "name": "Belone Bursts",
-                            "type": "aoe",
-                            "description": "場邊綠球反向職業，需用其他職業打掉。",
-                            "tips": ["看球上反向職業", "由其他職業打掉"]
-                        },
-                        {
-                            "name": "Decollation",
+                            "name": "Decollation 斬首",
                             "type": "raidwide",
-                            "description": "全體高傷。",
-                            "tips": [{ "text": "減傷 + 連補", "role": "healer" }]
+                            "description": "全屏高傷 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
+                        },
+                        {
+                            "name": "Levinstrike Pinax",
+                            "type": "other",
+                            "description": "場上 4 個 Pinax 對應 4 屬性 (火/水/雷/土)。各自不同效果。",
+                            "tips": [
+                                "火 = 直線 (側面安全)",
+                                "水 = 圓擊退 (中央外)",
+                                "雷 = 連線 (拉開)",
+                                "土 = 範圍 stack (疊接)"
+                            ]
+                        },
+                        {
+                            "name": "Belone Bursts 顏色配對",
+                            "type": "other",
+                            "description": "玩家獲不同顏色 → 配對處理。",
+                            "tips": ["異色配對站位"]
+                        },
+                        {
+                            "name": "Bloody Cleave 血腥斬",
+                            "type": "aoe",
+                            "description": "Boss 前方 cleave。",
+                            "tips": ["繞 boss 後"]
+                        },
+                        {
+                            "name": "Devouring Brand 吞噬印",
+                            "type": "aoe",
+                            "description": "場上多重印 AoE。",
+                            "tips": ["閃印位置"]
+                        },
+                        {
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

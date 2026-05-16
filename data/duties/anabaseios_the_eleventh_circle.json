@@ -1,74 +1,62 @@
 {
     "id": "anabaseios_the_eleventh_circle",
-    "name": "煉獄 11",
+    "name": "萬魔殿 荒天之獄3",
     "nameEn": "Anabaseios: The Eleventh Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 645,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Boss 環色：紫=靠近、金=遠離（光暗對立）。",
-        "2）Sigils of Discord：自己 debuff 是哪色，站對立色圓避免高傷。",
-        "3）Divisive Ruling：紫=進線剛爆位置；金=遠離。",
-        "4）Upheld Ruling：紫=T 連繩 cone + 甜甜圈；金=疊機 + 點 AoE（Boss 跳目標）。"
+        "1）Themis 忒彌斯 (判官形態)：Dike 判決 + 卡牌機制。",
+        "2）Trial of the Soul 靈魂審判 + 連線。",
+        "3）Judgment Day 審判日：場地全屏。"
     ],
-    "notes": "6.4 EW Pandæmonium Anabaseios 第 11 層（Lv 90，ilvl 615）。Themis 光暗判決。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.4 Pandæmonium Anabaseios P11 Normal (Lv 90, ilvl 645)。Themis 忒彌斯 (判官形態)。",
     "bosses": [
         {
             "name": "忒彌斯",
             "nameEn": "Themis",
-            "mnemonic": ["紫=近、金=遠", "Sigils 站對立色圓"],
+            "mnemonic": [
+                "Dike 判決 + 卡牌機制。",
+                "Trial of the Soul 連線靈魂。",
+                "Judgment Day 全屏審判。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Divisive Ruling",
-                            "type": "aoe",
-                            "description": "中央線 AoE + 後續 = 紫進剛爆位置、金跑遠。",
-                            "tips": ["看顏色決定位移"]
-                        },
-                        {
-                            "name": "Sigils of Discord",
+                            "name": "Dike 判決",
                             "type": "other",
-                            "description": "全員光/暗 debuff，站對立色圓避免高傷。",
-                            "tips": ["看自己 debuff 顏色找對應圓"]
+                            "description": "玩家獲判決 debuff + 卡牌效果。",
+                            "tips": ["依卡牌處理"]
                         },
                         {
-                            "name": "Dineis",
-                            "type": "aoe",
-                            "description": "中央站對應圓 + 誘導 2 組 AoE 後跑開。",
-                            "tips": ["按色站圓", "誘 AoE 後跑"]
-                        },
-                        {
-                            "name": "Dismissal Ruling",
+                            "name": "Trial of the Soul 靈魂審判",
                             "type": "other",
-                            "description": "擊退 + 紫=甜甜圈 / 金=點 AoE。",
-                            "tips": ["看顏色決定", "用抗擊退"]
+                            "description": "玩家連線 + 靈魂機制。",
+                            "tips": ["拉開連線"]
                         },
                         {
-                            "name": "Upheld Ruling",
-                            "type": "stack",
-                            "description": "紫=T 連繩 cone + 甜甜圈；金=疊機 + 點 AoE。繩不可換。",
-                            "tips": [
-                                { "text": "T 處理連繩", "role": "tank" },
-                                "看顏色找安全位"
-                            ]
+                            "name": "Judgment Day 審判日",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Shadowed Messenger",
+                            "name": "Holy Beam 神聖光束",
                             "type": "aoe",
-                            "description": "基本方向分身十字 AoE + 顏色機制。",
-                            "tips": ["先躲對角", "再站紫分身前"]
+                            "description": "直線光束 AoE。",
+                            "tips": ["閃直線預警"]
                         },
                         {
-                            "name": "Blinding Light",
-                            "type": "spread",
-                            "description": "全員散開。",
-                            "tips": ["分散"]
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

@@ -1,52 +1,62 @@
 {
     "id": "abyssos_the_fifth_circle",
-    "name": "煉獄 5",
+    "name": "萬魔殿 煉淨之獄1",
     "nameEn": "Abyssos: The Fifth Circle",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
     "playerCount": 8,
-    "iLvlSync": null,
+    "iLvlSync": 615,
     "jobLevelSync": 90,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "1）Ruby Glow 分半場/象限 + 後續法術會反射到整個區塊。",
-        "2）Searing Ray 站 Boss 後（角落跳到 Boss 位置時）。",
-        "3）Topaz Stones：水晶/毒石找安全格；Phase 2 毒石位置變得複雜。"
+        "1）Proto-Carbuncle 原型卡邦克：火/冰 stack 配色 + Ruby Glow 紅光寶石。",
+        "2）Topaz Stones 黃色石 + 玩家位置記憶。",
+        "3）Searing Ray 灼熱雷射 + cleave。"
     ],
-    "notes": "6.2 EW Pandæmonium Abyssos 第 5 層（Lv 90，ilvl 585）。Proto-Carbuncle。資料整理自 Console Games Wiki。",
+    "notes": "EW 6.2 Pandæmonium Abyssos P5 Normal (Lv 90, ilvl 615)。Proto-Carbuncle 原型卡邦克。",
     "bosses": [
         {
-            "name": "原型紅玉",
+            "name": "原型卡邦克",
             "nameEn": "Proto-Carbuncle",
-            "mnemonic": ["Ruby Glow 反射法術", "Searing 站 Boss 後", "Topaz 水晶/毒石"],
+            "mnemonic": [
+                "Ruby Glow 紅光：火屬性 stack。",
+                "Topaz Stones 黃色石擊退。",
+                "Searing Ray 灼熱雷射 cleave。"
+            ],
             "phases": [
                 {
                     "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "Ruby Glow",
+                            "name": "Ruby Glow 紅寶石光",
+                            "type": "stack",
+                            "description": "場上紅寶石分擔機制。",
+                            "tips": ["全員疊接"]
+                        },
+                        {
+                            "name": "Topaz Stones 黃寶石",
                             "type": "other",
-                            "description": "場地分半場或四象限，後續魔法 AoE 會反射到該區塊。",
-                            "tips": ["看分割方式", "魔法 AoE 範圍會擴大到整個格"]
+                            "description": "場上黃寶石擊退 + 位置記憶。",
+                            "tips": ["預判擊退方向"]
                         },
                         {
-                            "name": "Searing Ray",
+                            "name": "Searing Ray 灼熱雷射",
                             "type": "aoe",
-                            "description": "Boss 跳角後 180 度前方 AoE。",
-                            "tips": ["跑 Boss 後"]
+                            "description": "Boss 前方 cleave。",
+                            "tips": ["繞 boss 後"]
                         },
                         {
-                            "name": "Topaz Stones",
-                            "type": "aoe",
-                            "description": "水晶（小 AoE）或毒石（大 poison）+ 多種變形。",
-                            "tips": ["找安全格", "Phase 2 配 Ruby Glow 反射"]
+                            "name": "Sonic Howl 音波吼",
+                            "type": "raidwide",
+                            "description": "全體 AoE。",
+                            "tips": [{ "text": "減傷 + 補滿", "role": "healer" }]
                         },
                         {
-                            "name": "Acidic Slaver",
-                            "type": "other",
-                            "description": "過場全體傷。",
-                            "tips": [{ "text": "預判補血", "role": "healer" }]
+                            "name": "Tankbuster",
+                            "type": "tankbuster",
+                            "description": "Tankbuster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
                         }
                     ]
                 }

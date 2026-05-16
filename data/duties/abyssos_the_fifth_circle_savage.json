@@ -1,6 +1,6 @@
 {
     "id": "abyssos_the_fifth_circle_savage",
-    "name": "煉獄零式 5",
+    "name": "萬魔殿 煉淨之獄零式1",
     "nameEn": "Abyssos: The Fifth Circle (Savage)",
     "expansion": "6.x 曉月之終途 (Endwalker)",
     "type": "raid",
@@ -8,27 +8,62 @@
     "iLvlSync": null,
     "jobLevelSync": 90,
     "highEnd": true,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "保留 normal 機制 + Savage 強化（更快、新機制、嚴格 DPS check）",
-        "詳細請參考 Hector Hectorson 動畫攻略",
-        "建議與固定隊使用 Trigger / Cactbot 等輔助"
+        "1）P5S = P5N + Venom Pool 毒池 + Devour 吞食機制。",
+        "2）Ruby Reflection 紅寶反射 + Topaz Cluster 黃寶集群。",
+        "3）Double Rush：連續突進。",
+        "4）狂暴：Final Roar 終局吼。"
     ],
-    "notes": "EW Pandæmonium Savage 版本。⚠️ 完整機制因複雜度限制，建議參考 Hector Hectorson + LesBin + Materia 攻略。",
+    "notes": "EW 6.21 P5 Savage (Lv 90, ilvl 635)。Proto-Carbuncle Savage。",
     "bosses": [
         {
-            "name": "原型紅玉",
+            "name": "原型卡邦克",
             "nameEn": "Proto-Carbuncle",
-            "mnemonic": ["Savage 強化版"],
+            "mnemonic": [
+                "Devour 吞食：boss 吞玩家 + 持續傷害。",
+                "Ruby Reflection 紅寶反射。",
+                "Double Rush 連續突進。"
+            ],
             "phases": [
                 {
-                    "name": "Savage 主戰",
+                    "name": "主戰",
                     "mechanics": [
                         {
-                            "name": "強化機制",
+                            "name": "Devour 吞食",
                             "type": "other",
-                            "description": "保留 normal 機制 + 多新 Savage-only 機制 + 嚴格 DPS check。",
-                            "tips": ["參考外部攻略影片"]
+                            "description": "Boss 吞玩家 + 持續傷害 + 內部 buff。",
+                            "tips": ["指派玩家被吞 + 內部處理"]
+                        },
+                        {
+                            "name": "Venom Pool 毒池",
+                            "type": "other",
+                            "description": "場上毒池 + 持續傷害。",
+                            "tips": ["離開毒池"]
+                        },
+                        {
+                            "name": "Ruby Reflection 紅寶反射",
+                            "type": "aoe",
+                            "description": "強化紅寶石分擔 + 反射機制。",
+                            "tips": ["看反射方向"]
+                        },
+                        {
+                            "name": "Double Rush 雙重突進",
+                            "type": "aoe",
+                            "description": "連續突進直線 AoE。",
+                            "tips": ["閃突進路徑"]
+                        },
+                        {
+                            "name": "Topaz Cluster 黃寶集群",
+                            "type": "aoe",
+                            "description": "場上黃寶石組合 AoE。",
+                            "tips": ["散開避免重疊"]
+                        },
+                        {
+                            "name": "Final Roar (Enrage)",
+                            "type": "raidwide",
+                            "description": "狂暴強制秒殺。",
+                            "tips": [{ "text": "末段 DPS check", "role": "dps" }]
                         }
                     ]
                 }
