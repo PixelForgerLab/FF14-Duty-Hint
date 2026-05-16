@@ -1,36 +1,58 @@
 {
     "id": "sohm_al",
-    "name": "蒼天庇護所索姆阿爾",
+    "name": "蘇姆艾爾大山",
     "nameEn": "Sohm Al",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 53,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.0 HW MSQ 第二副本 (Lv 53)，龍主題",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）B1 Raskovnik 拉斯科夫尼克：Sweet Scent 召蜂群要在到 boss 前殺光，Flower Devour 是吸入後圓 AoE。",
+        "2）B2 Myath 米亞特：Primordial Roar 召喚紅藍 blob，紅→疊接、藍→散開；二次後會多出綠色 Chyme 必殺。",
+        "3）B3 Tioman 緹歐曼：Comet 標記要拉到場邊閃，50% 進入翼階段需打掉兩翼，Heavensfall + Dark Star 連發。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.0 MSQ dungeon (Lv 53, sync 54)。蘇姆艾爾大山中段，3 個 boss + 翼階段。",
     "bosses": [
         {
-            "name": "Tioman",
-            "nameEn": "提歐曼",
-            "mnemonic": ["看 telegraph 預警"],
+            "name": "拉斯科夫尼克",
+            "nameEn": "Raskovnik",
+            "mnemonic": ["Acid Rain 多重小圓", "Sweet Scent 召蜂 → 打掉避免吃 buff", "Flower Devour 標記 → 拉進來再放圓 AoE"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Acid Rain 酸雨", "type": "aoe", "description": "在全員腳下放小圓 AoE。", "tips": ["全員散開避免重疊"] },
+                { "name": "Sweet Scent + 召喚蜂群", "type": "other", "description": "召喚 Dravanian Hornet 緩慢移向 boss，蜂群接觸 boss 會給堆疊傷害提升。", "tips": [{ "text": "DPS 在蜂到 boss 前打掉", "role": "dps" }] },
+                { "name": "Flower Devour 花之吞噬", "type": "aoe", "description": "標記玩家後拉進來、暈 2 秒，再放圓 AoE。範圍內的蜂會給 boss 傷害提升。", "tips": ["被標記者跑離蜂群再被拉"] },
+                { "name": "Spit 唾液", "type": "raidwide", "description": "全體 AoE。", "tips": [{ "text": "補血", "role": "healer" }] }
+            ]}]
+        },
+        {
+            "name": "米亞特",
+            "nameEn": "Myath",
+            "mnemonic": ["Razor Scales 大扇形", "Primordial Roar 召紅藍 blob 紅疊藍散", "二次 Roar 多出綠 Chyme 必殺"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Razor Scales 利刃鱗甲", "type": "aoe", "description": "對隨機玩家放大型扇形 AoE。", "tips": ["閃扇形"] },
+                { "name": "Primordial Roar + 召 blob", "type": "other", "description": "全體小傷害 + 召喚 2 紅 (Blood of the Mountains) + 2 藍 (Rheum of the Mountains) blob。", "tips": [{ "text": "DPS 處理 blob", "role": "dps" }] },
+                { "name": "Mad Dash 瘋狂衝刺", "type": "stack", "description": "Boss 跳到 blob 上吃顏色 → 紅 = 對標記者疊接 / 藍 = 對標記者圓散開。", "tips": ["看顏色決定疊或散"] },
+                { "name": "Chyme of the Mountain (二次 Roar)", "type": "other", "description": "第二次 Primordial Roar 多召一隻綠色巨型 blob，立刻施放 The Last Song，沒打掉就會全滅。", "tips": [{ "text": "DPS 全力擊殺綠色 Chyme", "role": "dps" }, { "text": "Tank 拉穩 boss", "role": "tank" }] }
+            ]}]
+        },
+        {
+            "name": "緹歐曼",
+            "nameEn": "Tioman",
+            "mnemonic": ["Abyssic Buster 前方錐 → 背對隊伍", "Chaos Blast 多重直線", "Comet 標記 → 拉到場邊放再回來"],
             "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
+                { "name": "P1 主戰", "mechanics": [
+                    { "name": "Abyssic Buster 深淵衝擊", "type": "tankbuster", "description": "中等傷害前方錐形。", "tips": [{ "text": "MT 把 boss 面向背對隊伍", "role": "tank" }] },
+                    { "name": "Chaos Blast 混沌爆破", "type": "aoe", "description": "場上某點放多方向直線 AoE。", "tips": ["閃直線交界"] },
+                    { "name": "Comet 彗星", "type": "aoe", "description": "標記 2 名非坦克玩家（後期 3 名），標記消失後在原位放範圍 AoE。", "tips": ["被標者拉到場邊放，標記消失立刻跑回"] }
+                ]},
+                { "name": "P2 翼階段 (50%)", "mechanics": [
+                    { "name": "Wings 翼", "type": "other", "description": "Boss 50% 進入無敵，雙翼變成獨立目標必須打掉。", "tips": [{ "text": "DPS 集中打翼", "role": "dps" }] },
+                    { "name": "Heavensfall 落天", "type": "aoe", "description": "隨機標記玩家，先吃弱固定傷害再放圓 AoE。", "tips": ["被標者拉開後跑出圓"] },
+                    { "name": "Dark Star 暗星", "type": "raidwide", "description": "全體無法迴避傷害。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
+                ]}
             ]
         }
     ]

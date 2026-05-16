@@ -1,37 +1,60 @@
 {
     "id": "aery",
-    "name": "巢窟",
+    "name": "天龍王城",
     "nameEn": "The Aery",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 55,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.0 HW 龍詩戰爭 boss",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）B1 Rangda 蘭達：被 Prey debuff 要跑到場邊柱子轉移；Electric Cachexis 要貼近 boss。",
+        "2）B2 Gyascutus 蓋亞斯庫圖斯：Inflammable Fumes 後場地外圈不可踩；找 Pyre/Ouroboros + 煙圈安全交集。",
+        "3）B3 Nidhogg 尼德霍格：Hot Tail/Hot Wing 看翼/尾方向，Massacre 限時殺龍小怪；6.2 後 Estinien 已移除。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.0 MSQ dungeon (Lv 55, sync 56)。尼德霍格之巢，3 個 boss。注意 6.2 patch 後 Estinien 已從 boss 戰移除。",
     "bosses": [
         {
-            "name": "Nidhogg's Heart",
-            "nameEn": "尼德霍格",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
+            "name": "蘭達",
+            "nameEn": "Rangda",
+            "mnemonic": ["Electric Cachexis 貼緊 boss", "Prey debuff 跑到柱子轉移", "Leyak 小怪要快殺"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Electric Cachexis 電擊衰竭", "type": "raidwide", "description": "長詠唱，攻擊所有不在近戰範圍的玩家 (類似 Cutter's Cry 的 Dragon's Voice)。", "tips": ["全員貼近 boss"] },
+                { "name": "Prey 獵物 debuff", "type": "other", "description": "被標記者要轉移到場邊高柱上。", "tips": ["被標記跑到場邊柱子接觸轉移"] },
+                { "name": "Leyak 小怪召喚", "type": "other", "description": "場上會召喚 Leyak adds 必須殺掉。", "tips": [{ "text": "DPS 優先打 adds", "role": "dps" }] }
+            ]}]
+        },
+        {
+            "name": "蓋亞斯庫圖斯",
+            "nameEn": "Gyascutus",
+            "mnemonic": ["Proximity Pyre 圓 / Ashen Ouroboros 甜甜圈", "Inflammable Fumes 外圈紅環不可踩", "Body Slam 擊退要站近中央"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Proximity Pyre 近距烈焰", "type": "aoe", "description": "Boss 周圍近距圓 AoE。", "tips": ["遠離 boss"] },
+                { "name": "Ashen Ouroboros 灰燼咬尾", "type": "aoe", "description": "場地邊緣甜甜圈 AoE。", "tips": ["跑到中央"] },
+                { "name": "Inflammable Fumes 易燃煙霧", "type": "other", "description": "場地外圈出現紅環不可踩，場上有旋轉煙圈起初可踩；boss 接著放 Ouroboros 或 Pyre 時煙圈也會爆。", "tips": ["找煙圈外 + boss 攻擊外的安全位置"] },
+                { "name": "Crippling Blow 殘廢一擊", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Deafening Bellow 震耳咆嘯", "type": "raidwide", "description": "全屏無法迴避。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
+                { "name": "Body Slam 身體撞擊", "type": "knockback", "description": "從中央把所有玩家擊退；場地外圈是紅環危險區。", "tips": ["站近中央或開 Arm's Length / Surecast"] }
+            ]}]
+        },
+        {
+            "name": "尼德霍格",
+            "nameEn": "Nidhogg",
+            "mnemonic": ["Hot Tail 線跨場 / Hot Wing 雙翼線", "Cauterize boss 飛離 + 直線", "Massacre 限時殺龍 adds"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Deafening Bellow", "type": "raidwide", "description": "全屏無法迴避。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Hot Tail 灼熱之尾", "type": "aoe", "description": "沿 Nidhogg 朝向的直線跨場 AoE。", "tips": ["閃 boss 前後直線"] },
+                { "name": "Hot Wing 灼熱之翼", "type": "aoe", "description": "雙翼下兩條直線 AoE。", "tips": ["閃 boss 兩側"] },
+                { "name": "Eyeball Markers 眼球標記", "type": "spread", "description": "Hot Tail/Wing 有時會在玩家腳下出眼球圓 AoE，需離開。", "tips": ["跑出圓"] },
+                { "name": "Cauterize 灼燒", "type": "aoe", "description": "Nidhogg 飛離場地放跨場直線。", "tips": ["閃直線"] },
+                { "name": "Horrid Roar 恐怖咆嘯", "type": "spread", "description": "Cauterize 同時在玩家腳下標記圓 AoE。", "tips": ["全員散開"] },
+                { "name": "The Scarlet Price 緋紅代價", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "The Sable Price 黑貂代價", "type": "other", "description": "隨機玩家被囚禁，Sable Weave 詠唱時要打掉囚牢。", "tips": [{ "text": "DPS 立刻打囚牢", "role": "dps" }] },
+                { "name": "Massacre 大屠殺 (50%)", "type": "other", "description": "Nidhogg 飛離場地召喚多隻龍 adds，Rancor 條 100% 全滅。", "tips": [{ "text": "全力擊殺 adds", "role": "dps" }] },
+                { "name": "Horrid Blaze 恐怖烈焰", "type": "stack", "description": "Massacre 後的疊接標記。", "tips": ["全員疊接"] }
+            ]}]
         }
     ]
 }

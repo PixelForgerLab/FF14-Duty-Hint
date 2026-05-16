@@ -2,36 +2,55 @@
     "id": "dusk_vigil",
     "name": "黎明哨塔",
     "nameEn": "The Dusk Vigil",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 51,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.0 HW MSQ 第一副本 (Lv 51)，3 個 boss",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）B1 Towering Oliphant 高聳象鼻獸：tankbuster + 環狀 AoE + Rock of Ages 標記 → Rout 直線疊接。",
+        "2）B2 Ser Yuhelmeric 尤海爾梅利克騎士：召喚紅/藍小怪要拉開，Death Spiral 是甜甜圈 AoE。",
+        "3）B3 Opinicus 奧庇尼科斯：場上有瓦礫堆，Whirling Gaol/Winds of Winter 要躲在瓦礫後面避免被推到中央。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.0 MSQ 第一座副本 (Lv 51, sync 52)。位於庫爾札斯西部高地，3 個 boss。",
     "bosses": [
         {
-            "name": "Raven",
-            "nameEn": "渡鴉",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
+            "name": "高聳象鼻獸",
+            "nameEn": "Towering Oliphant",
+            "mnemonic": ["Trunk Tawse 鼻擊 tankbuster", "Rear 環狀 AoE 拉出來", "Rock of Ages → Wooly Inspiration → Rout 疊接"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Trunk Tawse 鼻擊", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Rear 後踢", "type": "aoe", "description": "Boss 周圍環狀 AoE。", "tips": [{ "text": "拉到場邊讓近戰能打", "role": "tank" }, "閃環外"] },
+                { "name": "Prehistoric Trumpet 史前號角", "type": "raidwide", "description": "全體魔法傷害。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Rock of Ages 上古之岩", "type": "other", "description": "標記隨機玩家並施加 Down for the Count，接著放 Wooly Inspiration。", "tips": ["被標記者站位置記好"] },
+                { "name": "Wooly Inspiration + Rout 連發", "type": "stack", "description": "被 Rock of Ages 標記的玩家會被拉向 boss，再放 Rout 直線分擔。", "tips": ["全員到被標記者與 boss 中間分擔 Rout 傷害"] }
+            ]}]
+        },
+        {
+            "name": "尤海爾梅利克騎士",
+            "nameEn": "Ser Yuhelmeric",
+            "mnemonic": ["Skullsplinter tankbuster", "Brain Drain 召喚紅/藍小怪", "Death Spiral 甜甜圈、Hell Slash 擊退"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Skullsplinter 碎顱", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Tumulus 古墳", "type": "aoe", "description": "Boss 周圍環狀 AoE。", "tips": ["拉到場邊"] },
+                { "name": "Brain Drain 噬腦 + 召喚物", "type": "other", "description": "全體傷害 + 召喚紅色 (Frozen Knight, 給 boss damage up) 或藍色 (Frozen Chirurgeon, 給 boss haste) 小怪。Boss 接觸小怪會吃到 buff。", "tips": [{ "text": "把 boss 拉離小怪", "role": "tank" }, { "text": "DPS 優先擊殺小怪", "role": "dps" }] },
+                { "name": "Death Spiral 死亡之渦", "type": "aoe", "description": "大型甜甜圈 AoE，通常接在召喚後。", "tips": ["貼緊 boss 腳邊"] },
+                { "name": "Hell Slash 地獄斬", "type": "knockback", "description": "強力擊退，常常接 Death Spiral。", "tips": ["背對場邊或開 arms length / surecast"] }
+            ]}]
+        },
+        {
+            "name": "奧庇尼科斯",
+            "nameEn": "Opinicus",
+            "mnemonic": ["Golden Talons tankbuster", "Alpine Draft 直線 AoE", "Whirling Gaol/Winds of Winter 要躲在瓦礫後面"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Golden Talons 黃金爪", "type": "tankbuster", "description": "物理 tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] },
+                { "name": "Alpine Draft 高山疾風", "type": "aoe", "description": "對隨機玩家施放的直線 AoE。", "tips": ["閃直線"] },
+                { "name": "Freefall 自由墜落", "type": "aoe", "description": "Boss 跳向一名玩家，大範圍預警圓形 AoE。", "tips": ["被瞄準者跑開讓 boss 落空"] },
+                { "name": "Whirling Gaol 旋風監牢", "type": "other", "description": "場地外圍會把玩家往中央推，被推到中央會被束縛、堆疊 Wind Resistance Down 並吃傷害。場地有瓦礫堆可遮擋。", "tips": ["躲到瓦礫後面避免被推到中央"] },
+                { "name": "Winds of Winter 冬之風", "type": "raidwide", "description": "全屏 AoE 並堆疊 Wind Resistance Down。場地有瓦礫堆遮擋可避免命中。", "tips": [{ "text": "全員躲到瓦礫後面", "role": "tank" }, { "text": "若全員都中，下次 raidwide 會更痛", "role": "healer" }] }
+            ]}]
         }
     ]
 }

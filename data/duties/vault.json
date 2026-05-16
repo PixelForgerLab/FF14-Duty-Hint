@@ -1,37 +1,57 @@
 {
     "id": "vault",
-    "name": "至高聖堂教皇廳",
+    "name": "天穹皇宮",
     "nameEn": "The Vault",
-    "expansion": "3.x 蒼穹之禁城 (Heavensward)",
+    "expansion": "3.x 蒼穹的禁城 (Heavensward)",
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
     "jobLevelSync": 57,
     "highEnd": false,
-    "quality": "needs-update",
+    "quality": "excellent",
     "mnemonic": [
-        "3.0 HW 教皇廳",
-        "詳細機制請參考 Console Games Wiki 或 Hector Hectorson 攻略"
+        "1）B1 Ser Adelphel 阿德爾菲爾騎士：先打雜兵 → 30% 變形 + 擊退；Holy Shield Bash 跳擊昏 + 連擊；Charge 留下光球。",
+        "2）B2 Ser Grinnaux 格利諾騎士：Hyperdimensional Slash 留下以太裂縫 → Faith Unmoving 擊退；裂縫聚集成一團方便面對。",
+        "3）B3 Ser Charibert 夏立伯特騎士：Holy Chain 鏈鎖拉開、騎士小兵列隊衝撞、半血召 Holy Flame 必殺。"
     ],
-    "notes": "FFXIV 副本。⚠️ 詳細機制限制建議參考外部攻略。",
+    "notes": "HW 3.0 MSQ dungeon (Lv 57, sync 58)。Heavens' Ward 三騎士戰，最後 boss 是 Charibert (麵包神官)。",
     "bosses": [
         {
-            "name": "Charibert",
-            "nameEn": "夏里貝爾",
-            "mnemonic": ["看 telegraph 預警"],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "標準機制",
-                            "type": "other",
-                            "description": "副本內含 raid-wide AoE、tankbuster、stack、spread 等標準機制。",
-                            "tips": ["參考外部攻略", "看 telegraph 與 AoE 預警"]
-                        }
-                    ]
-                }
-            ]
+            "name": "阿德爾菲爾騎士",
+            "nameEn": "Ser Adelphel Brightblade",
+            "mnemonic": ["先殺 3 隻小兵", "30% 變形 + 擊退", "Holy Shield Bash 跳擊昏，Charge 留光球"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "小兵階段", "type": "other", "description": "Adelphel 初期有 3 隻血量極低小兵，先殺光。", "tips": [{ "text": "DPS 先 AoE 小兵", "role": "dps" }] },
+                { "name": "Form Change (30%)", "type": "knockback", "description": "Adelphel 變形 + 擊退所有玩家，進入真正戰鬥。", "tips": ["預判擊退"] },
+                { "name": "Holy Shield Bash 神聖盾擊", "type": "other", "description": "Boss 跳到目標玩家 → 暈 + 連擊。", "tips": ["被瞄準者預判位置"] },
+                { "name": "Holiest of Holy 至聖", "type": "raidwide", "description": "全體中等傷害。", "tips": [{ "text": "補血", "role": "healer" }] },
+                { "name": "Charge 衝鋒 + 光球", "type": "aoe", "description": "Boss 在場上衝鋒留下會爆炸的光球，最後鎖定一名玩家落下。", "tips": ["閃光球與落地點"] }
+            ]}]
+        },
+        {
+            "name": "格利諾騎士",
+            "nameEn": "Ser Grinnaux The Bull",
+            "mnemonic": ["先殺小兵 → 變形", "Hyperdimensional Slash 留 Aetherial Tear", "Faith Unmoving 擊退要背對 Tear 集中區"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Form Change", "type": "knockback", "description": "Grinnaux 在小兵清完後變形 + 擊退進入正戰。", "tips": ["預判方向"] },
+                { "name": "Ground AoE 多重", "type": "aoe", "description": "場地多重 AoE 預警。", "tips": ["閃 telegraph"] },
+                { "name": "Hyperdimensional Slash 超次元斬", "type": "aoe", "description": "對隨機玩家放紅色直線 AoE，每次留下 Aetherial Tear 在牆上；每次連放兩次。", "tips": ["把 Tear 引到同一邊牆方便處理"] },
+                { "name": "Faith Unmoving 不動之信", "type": "knockback", "description": "全屏帶詠唱的擊退 → 把玩家從 boss 往後推。", "tips": ["背後不能是 Aetherial Tear；可用 Arm's Length / Surecast"] },
+                { "name": "Dimensional Rift 次元裂隙", "type": "aoe", "description": "場上圓形 AoE。", "tips": ["閃圓"] }
+            ]}]
+        },
+        {
+            "name": "夏立伯特騎士",
+            "nameEn": "Ser Charibert",
+            "mnemonic": ["Holy Chain 鏈鎖拉開破", "Heavensflame 火環", "騎士排排站要閃位置", "半血召 Holy Flame 必殺"],
+            "phases": [{ "name": "主戰", "mechanics": [
+                { "name": "Altar Pyre 祭壇焰", "type": "raidwide", "description": "全屏傷害。", "tips": [{ "text": "減傷", "role": "healer" }] },
+                { "name": "Holy Chain 神聖鎖鏈", "type": "other", "description": "兩名玩家被鏈鎖在一起，拉開斷鏈否則持續扣血。", "tips": ["被鏈玩家彼此跑開"] },
+                { "name": "Heavensflame 蒼穹炽焰", "type": "aoe", "description": "場上火環。", "tips": ["閃火環"] },
+                { "name": "Knights March 騎士列隊", "type": "other", "description": "場邊召喚一排騎士衝過場地，碰到會給 Slow。", "tips": ["閃騎士行進路徑"] },
+                { "name": "Half HP 召喚 Holy Flame", "type": "other", "description": "半血消失 → 出現 Dawn/Dusk Knight + 場外 Holy Flame；不殺光火會放高傷全屏。Knights 只要不站他們 AoE 即可忽略。", "tips": [{ "text": "DPS 速殺 Holy Flame", "role": "dps" }] },
+                { "name": "後半段強化", "type": "aoe", "description": "後半段 Knights 變兩排、Heavensflame 變兩組。", "tips": ["雙倍機制小心移動"] }
+            ]}]
         }
     ]
 }
