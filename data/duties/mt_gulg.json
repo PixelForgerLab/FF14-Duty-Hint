@@ -6,43 +6,108 @@
     "type": "dungeon",
     "playerCount": 4,
     "iLvlSync": null,
-    "jobLevelSync": 79,
+    "jobLevelSync": 77,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Forgiven Cruelty 殘酷之罪：火 + 直線。",
-        "2）Forgiven Whimsy 反復之罪：分身 + 圓擊退。",
-        "3）Forgiven Obscenity 醜惡之罪 (大 boss)：陽光機制 + 大圓 AoE。"
+        "1）B1 Forgiven Cruelty = 飛刀 line + 全屏。",
+        "2）B2 Forgiven Whimsy = 召小怪散場 + 大 AoE。",
+        "3）B3 Forgiven Obscenity = 召兩半身 + 全屏 + Pendulum line。"
     ],
-    "notes": "ShB 5.0 MSQ 第四個副本 (Lv 79)。位於 Mt. Gulg 格爾古山。3 boss (Forgiven 系列)。",
+    "notes": "ShB 5.0 MSQ dungeon (Lv 77)。Mt. Gulg 火山 Sin Eater 殺戮。",
     "bosses": [
         {
             "name": "殘酷之罪",
             "nameEn": "Forgiven Cruelty",
-            "mnemonic": ["火屬性 + 直線 AoE"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Fire AoE 火焰", "type": "aoe", "description": "火屬性 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B1",
+                    "mechanics": [
+                        {
+                            "name": "Carving Cleave",
+                            "type": "aoe",
+                            "description": "Boss 朝玩家 line 飛刀 AoE。",
+                            "tips": ["側步閃線"]
+                        },
+                        {
+                            "name": "Powerful Slash",
+                            "type": "tankbuster",
+                            "description": "MT cone buster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Aetheric Boom",
+                            "type": "raidwide",
+                            "description": "全屏。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "反復之罪",
             "nameEn": "Forgiven Whimsy",
-            "mnemonic": ["分身 + 圓擊退"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Doppelganger 分身", "type": "other", "description": "場上分身機制。", "tips": ["看分身朝向"] },
-                { "name": "Knockback 擊退", "type": "other", "description": "圓擊退 AoE。", "tips": ["預判落點"] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B2",
+                    "mechanics": [
+                        {
+                            "name": "Conjure 召 add",
+                            "type": "other",
+                            "description": "召小怪散場 → DPS 速殺。",
+                            "tips": [{ "text": "DPS 速殺 add", "role": "dps" }]
+                        },
+                        {
+                            "name": "Sweep",
+                            "type": "tankbuster",
+                            "description": "MT 高傷 buster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Burning Sphere AoE",
+                            "type": "spread",
+                            "description": "場上多 AoE 圈散。",
+                            "tips": ["散開避"]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "醜惡之罪",
             "nameEn": "Forgiven Obscenity",
-            "mnemonic": ["陽光機制", "大圓 AoE"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Sunshine 陽光", "type": "aoe", "description": "場地陽光區 + 持續傷害。", "tips": ["避開陽光區"] },
-                { "name": "Big Circle 大圓 AoE", "type": "aoe", "description": "場上大圓 AoE。", "tips": ["閃中央"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B3",
+                    "mechanics": [
+                        {
+                            "name": "Soul Vacuum 召兩半",
+                            "type": "other",
+                            "description": "Boss 召左右兩半身 add，DPS 殺。",
+                            "tips": [{ "text": "DPS 殺 add", "role": "dps" }]
+                        },
+                        {
+                            "name": "Pendulum line",
+                            "type": "aoe",
+                            "description": "Boss line AoE 穿場。",
+                            "tips": ["站側面"]
+                        },
+                        {
+                            "name": "Levin Bolt",
+                            "type": "spread",
+                            "description": "全員下 AoE 圈散。",
+                            "tips": ["散開避"]
+                        },
+                        {
+                            "name": "Aetheric Boom 全屏",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

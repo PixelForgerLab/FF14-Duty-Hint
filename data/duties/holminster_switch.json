@@ -8,41 +8,106 @@
     "iLvlSync": null,
     "jobLevelSync": 71,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Forgiven Dissonance 不諧之罪：場上連線 + 三角機制。",
-        "2）Tesleen the Forgiven 忒斯林：散開 + cleave。",
-        "3）Philia 菲利亞 (蘿莉巨人)：圓塔 + 連發 AoE。"
+        "1）B1 Forgiven Dissonance = Heavy Smash 直線 + Aetheric Boom 全屏。",
+        "2）B2 Tesleen = Banishment 玩家被吊起 (需擊殺 add 救)；之後大全屏。",
+        "3）B3 Philia = Right/Left Knout 半場 cleave + Pendulum line + 全屏。"
     ],
-    "notes": "ShB 5.0 MSQ 第一個副本 (Lv 71)。位於 Lakeland 拉凱蘭。3 boss。",
+    "notes": "ShB 5.0 MSQ 首個 dungeon (Lv 71)。Norvrandt 第一站 + Sin Eater 鎮壓。",
     "bosses": [
         {
             "name": "不諧之罪",
             "nameEn": "Forgiven Dissonance",
-            "mnemonic": ["連線 + 三角機制", "Twisting Scythe 旋鎌"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Twisting Scythe 旋鎌", "type": "aoe", "description": "場上旋轉鎌 AoE。", "tips": ["閃預警"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B1",
+                    "mechanics": [
+                        {
+                            "name": "Heavy Smash 重擊",
+                            "type": "aoe",
+                            "description": "Boss 朝隨機玩家直線 AoE。",
+                            "tips": ["看朝向 → 側步閃"]
+                        },
+                        {
+                            "name": "Aetheric Boom",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Right / Left Slash",
+                            "type": "aoe",
+                            "description": "半場 cleave 左或右。",
+                            "tips": ["看朝向 → 站對側"]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "忒斯林",
             "nameEn": "Tesleen the Forgiven",
-            "mnemonic": ["散開 + cleave 機制"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Befoulment 污染", "type": "spread", "description": "玩家圓 AoE。", "tips": ["散開"] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B2",
+                    "mechanics": [
+                        {
+                            "name": "Banishment 流放",
+                            "type": "other",
+                            "description": "Boss 抓玩家吊起 + 召 add；需殺 add 救人。",
+                            "tips": ["DPS 速殺 add 救人"]
+                        },
+                        {
+                            "name": "Aetheric Boom",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        },
+                        {
+                            "name": "Exorcise + Fierce Beating",
+                            "type": "aoe",
+                            "description": "Exorcise 場上多 AoE 圈散；Fierce Beating MT cone buster。",
+                            "tips": [{ "text": "MT 開減傷 + 散開避圈", "role": "tank" }]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "菲利亞",
             "nameEn": "Philia",
-            "mnemonic": ["圓塔機制", "連發 AoE"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Pendulum 鐘擺", "type": "aoe", "description": "場上多重圓塔 AoE。", "tips": ["閃塔位置"] },
-                { "name": "Right/Left Slice 左右斬", "type": "aoe", "description": "半場 cleave。", "tips": ["閃對側"] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B3",
+                    "mechanics": [
+                        {
+                            "name": "Right / Left Knout 鞭",
+                            "type": "aoe",
+                            "description": "半場 cleave 左或右。",
+                            "tips": ["看朝向 → 站對側"]
+                        },
+                        {
+                            "name": "Pendulum 擺錘 line",
+                            "type": "aoe",
+                            "description": "Boss 中央 + 直線 line AoE 穿場。",
+                            "tips": ["站側面"]
+                        },
+                        {
+                            "name": "Taphephobia 全屏",
+                            "type": "raidwide",
+                            "description": "高傷全屏 + 流血。",
+                            "tips": [{ "text": "全員減傷 + 連補", "role": "healer" }]
+                        },
+                        {
+                            "name": "Aethersup 召 add",
+                            "type": "other",
+                            "description": "召 add 從場邊 → DPS 殺 + 避線 AoE。",
+                            "tips": [{ "text": "DPS 速殺 add", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

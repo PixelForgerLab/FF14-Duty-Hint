@@ -1,6 +1,6 @@
 {
     "id": "qitana_ravel",
-    "name": "齊塔納拉維爾",
+    "name": "奇坦那神影洞",
     "nameEn": "The Qitana Ravel",
     "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
     "type": "dungeon",
@@ -8,41 +8,106 @@
     "iLvlSync": null,
     "jobLevelSync": 75,
     "highEnd": false,
-    "quality": "excellent",
+    "quality": "good",
     "mnemonic": [
-        "1）Lozatl 蝙蝠：吼叫機制 + 圓 AoE。",
-        "2）Batraal 卡卡魯 (Custos 守護者)：機械手臂 + 直線。",
-        "3）Eros 神官：召喚 + 連線分擔。"
+        "1）B1 Lozatl = Spit 線 AoE + 召 add。",
+        "2）B2 Batsquatch = Hot Charge 衝鋒 + Sound Conduction 全屏。",
+        "3）B3 Eros = Telltale Tears + 分身 + Cupid's Arrow 隨機標。"
     ],
-    "notes": "ShB 5.0 MSQ 第二個副本 (Lv 75)。位於 Rak'tika Greatwood 拉克泰卡。3 boss。",
+    "notes": "ShB 5.0 MSQ dungeon (Lv 75)。Ronka 古文明洞穴。",
     "bosses": [
         {
             "name": "Lozatl",
             "nameEn": "Lozatl",
-            "mnemonic": ["蝙蝠 + 吼叫機制"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Sonic Howl 音波吼", "type": "raidwide", "description": "全體 AoE。", "tips": [{ "text": "減傷 + 補滿", "role": "healer" }] },
-                { "name": "Tankbuster", "type": "tankbuster", "description": "Tankbuster。", "tips": [{ "text": "MT 開減傷", "role": "tank" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B1",
+                    "mechanics": [
+                        {
+                            "name": "Spit 唾線",
+                            "type": "aoe",
+                            "description": "Boss 朝隨機玩家直線 AoE。",
+                            "tips": ["側步閃"]
+                        },
+                        {
+                            "name": "Wing Strike",
+                            "type": "tankbuster",
+                            "description": "MT cone buster。",
+                            "tips": [{ "text": "MT 開減傷", "role": "tank" }]
+                        },
+                        {
+                            "name": "Aetheric Pulse",
+                            "type": "raidwide",
+                            "description": "全屏 + 召 add，DPS 殺 add。",
+                            "tips": [{ "text": "DPS 速殺 add", "role": "dps" }]
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "name": "Batraal",
-            "nameEn": "Batraal",
-            "mnemonic": ["機械手臂機制 + 直線 AoE"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Mechanical Arm 機械手臂", "type": "aoe", "description": "場上手臂 AoE。", "tips": ["閃預警"] },
-                { "name": "Line AoE 直線", "type": "aoe", "description": "前方直線 AoE。", "tips": ["閃直線"] }
-            ]}]
+            "name": "Batsquatch",
+            "nameEn": "Batsquatch",
+            "phases": [
+                {
+                    "name": "B2",
+                    "mechanics": [
+                        {
+                            "name": "Hot Charge",
+                            "type": "aoe",
+                            "description": "Boss 衝鋒 line AoE 朝隨機玩家。",
+                            "tips": ["看朝向 → 側步"]
+                        },
+                        {
+                            "name": "Sound Conduction",
+                            "type": "raidwide",
+                            "description": "全屏 + paralysis (可 Esuna)。",
+                            "tips": [{ "text": "全員減傷 + 補解 paralysis", "role": "healer" }]
+                        },
+                        {
+                            "name": "Soundless 凝視",
+                            "type": "other",
+                            "description": "Boss 凝視 → 看 boss = 死。",
+                            "tips": ["背對 boss"]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "Eros",
             "nameEn": "Eros",
-            "mnemonic": ["召喚小怪 + 連線分擔"],
-            "phases": [{ "name": "主戰", "mechanics": [
-                { "name": "Tether 連線", "type": "stack", "description": "連線玩家分擔。", "tips": ["全員疊接"] },
-                { "name": "Summon 召喚", "type": "other", "description": "場上召喚小怪。", "tips": [{ "text": "DPS 擊殺", "role": "dps" }] },
-                { "name": "全體 AoE", "type": "raidwide", "description": "全屏 AoE。", "tips": [{ "text": "減傷", "role": "healer" }] }
-            ]}]
+            "phases": [
+                {
+                    "name": "B3",
+                    "mechanics": [
+                        {
+                            "name": "Telltale Tears",
+                            "type": "aoe",
+                            "description": "場上多 AoE 圈散。",
+                            "tips": ["散開避圈"]
+                        },
+                        {
+                            "name": "Shadow Clones",
+                            "type": "other",
+                            "description": "召分身 + 本體 + 影各 cone 攻擊。",
+                            "tips": ["找本體 + 避分身 cone"]
+                        },
+                        {
+                            "name": "Cupid's Arrow",
+                            "type": "tankbuster",
+                            "description": "MT 標 line buster + 中標 cone。",
+                            "tips": [{ "text": "MT 拉外", "role": "tank" }]
+                        },
+                        {
+                            "name": "Aether Spray",
+                            "type": "raidwide",
+                            "description": "全屏，需減傷。",
+                            "tips": [{ "text": "全員減傷", "role": "healer" }]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
