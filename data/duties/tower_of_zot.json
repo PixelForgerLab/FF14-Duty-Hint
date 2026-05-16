@@ -1,127 +1,148 @@
 {
-    "id": "tower_of_zot",
-    "name": "佐特塔",
-    "nameEn": "The Tower of Zot",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 81,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Minduruva 米杜露娃：4 元素 (火/冰/雷/水) 連鎖魔法 + Manusya 元素咒語。",
-        "2）Sanduruva 桑杜露娃：分身連線 + 反射機制 + Sanctified 集合分擔。",
-        "3）Cinduruva 辛杜露娃：終戰 + Cinderspring 圓 + Soulswap 玩家位置交換。"
-    ],
-    "notes": "EW 6.0 MSQ 第一個 dungeon (Lv 81)。FFIV Magus 姐妹致敬。3 boss 對應 Magus 三姐妹。",
-    "bosses": [
-        {
-            "name": "米杜露娃",
-            "nameEn": "Minduruva",
-            "mnemonic": [
-                "看 cast 名稱判定元素：Fire = 火直線、Blizzard = 冰圓、Thunder = 雷散開、Water = 水分擔。",
-                "Manusya 連鎖：依序施放 4 元素咒語，記順序預判。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Manusya Fire / Blizzard / Thunder / Water",
-                            "type": "aoe",
-                            "description": "4 元素咒語：火 = 直線；冰 = 圓 AoE；雷 = 全員散開；水 = 分擔圓。",
-                            "tips": ["看 cast 名稱對應機制"]
-                        },
-                        {
-                            "name": "Trishula 三叉戟",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Dhrupad 連鎖咒語",
-                            "type": "other",
-                            "description": "Boss 連續施放 4 元素咒語 + 對應 AoE。",
-                            "tips": ["記憶順序預判"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "桑杜露娃",
-            "nameEn": "Sanduruva",
-            "mnemonic": [
-                "分身連線 + 反射 → 看哪個分身發動。",
-                "Sanctified 集合分擔。",
-                "Trishula 二段坦補。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Doppelganger 分身",
-                            "type": "other",
-                            "description": "召喚 2 個分身連線 boss → 發動對應 AoE (圓/donut/直線)。",
-                            "tips": ["看分身朝向預判 AoE"]
-                        },
-                        {
-                            "name": "Sanctified Bolt 集合分擔",
-                            "type": "stack",
-                            "description": "點名玩家分擔圓 AoE。",
-                            "tips": ["全員疊接"]
-                        },
-                        {
-                            "name": "Trishula 三叉戟",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "辛杜露娃",
-            "nameEn": "Cinduruva",
-            "mnemonic": [
-                "Cinderspring：玩家位置圓 AoE。",
-                "Soulswap：玩家位置交換。",
-                "Manusya Suzhonna 大招。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Cinderspring 灰燼之泉",
-                            "type": "spread",
-                            "description": "玩家位置圓 AoE。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "Soulswap 靈魂交換",
-                            "type": "other",
-                            "description": "玩家位置互相交換。",
-                            "tips": ["預判新位置"]
-                        },
-                        {
-                            "name": "Manusya Susanna 蘇珊娜",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 連補", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "tower_of_zot",
+    "name":  "佐特塔",
+    "nameEn":  "The Tower of Zot",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  81,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Minduruva 米杜露娃：4 元素 (火/冰/雷/水) 連鎖魔法 + Manusya 元素咒語。",
+                     "2）Sanduruva 桑杜露娃：分身連線 + 反射機制 + Sanctified 集合分擔。",
+                     "3）Cinduruva 辛杜露娃：終戰 + Cinderspring 圓 + Soulswap 玩家位置交換。"
+                 ],
+    "notes":  "EW 6.0 MSQ 第一個 dungeon (Lv 81)。FFIV Magus 姐妹致敬。3 boss 對應 Magus 三姐妹。",
+    "bosses":  [
+                   {
+                       "name":  "米杜露娃",
+                       "nameEn":  "Minduruva",
+                       "mnemonic":  [
+                                        "看 cast 名稱判定元素：Fire = 火直線、Blizzard = 冰圓、Thunder = 雷散開、Water = 水分擔。",
+                                        "Manusya 連鎖：依序施放 4 元素咒語，記順序預判。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Manusya Fire / Blizzard / Thunder / Water Manusya 火焰",
+                                                                "type":  "aoe",
+                                                                "description":  "4 元素咒語：火 = 直線；冰 = 圓 AoE；雷 = 全員散開；水 = 分擔圓。",
+                                                                "tips":  [
+                                                                             "看 cast 名稱對應機制"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Trishula 三叉戟",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Dhrupad 連鎖咒語",
+                                                                "type":  "other",
+                                                                "description":  "Boss 連續施放 4 元素咒語 + 對應 AoE。",
+                                                                "tips":  [
+                                                                             "記憶順序預判"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "桑杜露娃",
+                       "nameEn":  "Sanduruva",
+                       "mnemonic":  [
+                                        "分身連線 + 反射 → 看哪個分身發動。",
+                                        "Sanctified 集合分擔。",
+                                        "Trishula 二段坦補。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Doppelganger 分身",
+                                                                "type":  "other",
+                                                                "description":  "召喚 2 個分身連線 boss → 發動對應 AoE (圓/donut/直線)。",
+                                                                "tips":  [
+                                                                             "看分身朝向預判 AoE"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Sanctified Bolt 集合分擔",
+                                                                "type":  "stack",
+                                                                "description":  "點名玩家分擔圓 AoE。",
+                                                                "tips":  [
+                                                                             "全員疊接"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Trishula 三叉戟",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "辛杜露娃",
+                       "nameEn":  "Cinduruva",
+                       "mnemonic":  [
+                                        "Cinderspring：玩家位置圓 AoE。",
+                                        "Soulswap：玩家位置交換。",
+                                        "Manusya Suzhonna 大招。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Cinderspring 灰燼之泉",
+                                                                "type":  "spread",
+                                                                "description":  "玩家位置圓 AoE。",
+                                                                "tips":  [
+                                                                             "散開 clock 位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Soulswap 靈魂交換",
+                                                                "type":  "other",
+                                                                "description":  "玩家位置互相交換。",
+                                                                "tips":  [
+                                                                             "預判新位置"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Manusya Susanna 蘇珊娜",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體高傷 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }

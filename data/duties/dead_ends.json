@@ -1,178 +1,210 @@
 {
-    "id": "dead_ends",
-    "name": "末日終焉之地",
-    "nameEn": "The Dead Ends",
-    "expansion": "6.x 曉月之終途 (Endwalker)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 89,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）Caustic Grebuloff 苛性葛雷布洛夫：Miasmata 風吹圓 AoE + 必須解 Necrosis 否則陣亡。",
-        "2）Peacekeeper 維和者：Order to Fire 砲塔線 + No Future 圓 AoE 模式 + Peacefire 旋轉 AoE。",
-        "3）Hermes 赫密斯：Trismegistos 全體 + 4 phase quote 模式 + Meteor 流星機制。"
-    ],
-    "notes": "EW 6.0 MSQ 最終 dungeon (Lv 89)。位於月之底部世界。3 boss：Caustic Grebuloff (毒性) → Peacekeeper (防衛機械) → Hermes (赫密斯)。失誤 = 2 分鐘受傷加重疊層。**毒池踩入 = Toxicosis dot 10k/s**。",
-    "bosses": [
-        {
-            "name": "苛性葛雷布洛夫",
-            "nameEn": "Caustic Grebuloff",
-            "mnemonic": [
-                "Miasmata：圓 AoE 隨風移動 + Necrosis dot 必須解。",
-                "Cough Up：3 連散開 → 紅箭頭 + Hysteria debuff，未疊 = 失控。",
-                "Wave of Nausea：donut AoE 必須貼近。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Miasmata 瘴氣",
-                            "type": "raidwide",
-                            "description": "全體 AoE + 場上圓 AoE 隨風移動。命中附加 Necrosis dot (倒數 = 陣亡)。",
-                            "tips": [
-                                { "text": "Esuna/Warden's Paean 解 Necrosis", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Cough Up 嘔吐",
-                            "type": "spread",
-                            "description": "3 組散開圓 AoE + 紅箭頭 Craven Companionship。倒數結束時必須疊在一起，否則 Hysteria 控場。",
-                            "tips": [
-                                "先散開放圓",
-                                "紅箭頭出現後**立刻疊**"
-                            ]
-                        },
-                        {
-                            "name": "Wave of Nausea 反胃波",
-                            "type": "aoe",
-                            "description": "Boss 為心 donut AoE + Necrosis。",
-                            "tips": ["貼 boss 站"]
-                        },
-                        {
-                            "name": "Pox Flail 痘鞭",
-                            "type": "tankbuster",
-                            "description": "對 1 仇 tankbuster。",
-                            "tips": [
-                                { "text": "MT 開減傷", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Blighted Water + Befoulment",
-                            "type": "stack",
-                            "description": "Blighted Water = stack；Befoulment = 散開避免重疊。",
-                            "tips": ["看標記類型決定疊/散"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "維和者",
-            "nameEn": "Peacekeeper",
-            "mnemonic": [
-                "Electromagnetic Repellant：hitbox 內電麻痺 dot。",
-                "Order to Fire：boss 周圍砲塔 → 直線 AoE，找窄錐安全。",
-                "No Future：圓 AoE 模式，跑剛爆完的位置。",
-                "Eclipsing Exhaust：場邊圓 + 直線。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Decimation 大屠殺",
-                            "type": "raidwide",
-                            "description": "全體 AoE + 場外火 (踩入 burns dot)。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Electromagnetic Repellant 電磁排斥",
-                            "type": "other",
-                            "description": "Boss hitbox 內出現電場 + 電麻痺 dot。",
-                            "tips": ["遠離 boss hitbox"]
-                        },
-                        {
-                            "name": "Order to Fire 開火令",
-                            "type": "aoe",
-                            "description": "Boss 周圍砲塔 → 從 boss 朝外直線 AoE，砲塔間留窄錐安全 (在 hitbox 與場邊之間)。+ 點名散開 AoE。",
-                            "tips": ["找窄錐安全帶 + 散開"]
-                        },
-                        {
-                            "name": "No Future 無未來",
-                            "type": "aoe",
-                            "description": "圓 AoE 模式 (boss 中心向外或場邊向中心)。第一發 2 組、後續 3 組，每組旋轉。",
-                            "tips": [
-                                "站剛爆完的位置 (剛安全)",
-                                "**不要站 boss hitbox**"
-                            ]
-                        },
-                        {
-                            "name": "Peacefire 和平之火",
-                            "type": "aoe",
-                            "description": "Boss 周圍旋轉 AoE。常與其他機制組合 (Electromagnetic + Peacefire 強制站旋轉路徑)。",
-                            "tips": ["跟著旋轉避開"]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "赫密斯",
-            "nameEn": "Hermes",
-            "mnemonic": [
-                "Trismegistos：全體 AoE。",
-                "Meteor：場上隕石小怪需要擊殺。",
-                "後段引用 quote → 機制變化。"
-            ],
-            "phases": [
-                {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "Trismegistos 三重至聖",
-                            "type": "raidwide",
-                            "description": "全體高傷 AoE。",
-                            "tips": [
-                                { "text": "減傷 + 補滿", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Cosmic Kiss 宇宙之吻",
-                            "type": "spread",
-                            "description": "玩家身上隕石標記 → 圓 AoE。",
-                            "tips": ["散開 clock 位"]
-                        },
-                        {
-                            "name": "Meteor 隕石小怪",
-                            "type": "other",
-                            "description": "場上多個隕石小怪 → 倒數爆。必須擊殺。",
-                            "tips": [
-                                { "text": "DPS 集火擊殺", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Double / Quadruple Flame 雙/四重火焰",
-                            "type": "aoe",
-                            "description": "直線 + 雙線 AoE 組合。",
-                            "tips": ["閃直線預警"]
-                        },
-                        {
-                            "name": "Cosmic Kiss + Meteor 終局",
-                            "type": "other",
-                            "description": "玩家標記 + 隕石生成 + 多重 AoE 組合。",
-                            "tips": [
-                                "散開 + 擊殺隕石",
-                                { "text": "全員連補", "role": "healer" }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "dead_ends",
+    "name":  "末日終焉之地",
+    "nameEn":  "The Dead Ends",
+    "expansion":  "6.x 曉月之終途 (Endwalker)",
+    "type":  "dungeon",
+    "playerCount":  4,
+    "iLvlSync":  null,
+    "jobLevelSync":  89,
+    "highEnd":  false,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）Caustic Grebuloff 苛性葛雷布洛夫：Miasmata 風吹圓 AoE + 必須解 Necrosis 否則陣亡。",
+                     "2）Peacekeeper 維和者：Order to Fire 砲塔線 + No Future 圓 AoE 模式 + Peacefire 旋轉 AoE。",
+                     "3）Hermes 赫密斯：Trismegistos 全體 + 4 phase quote 模式 + Meteor 流星機制。"
+                 ],
+    "notes":  "EW 6.0 MSQ 最終 dungeon (Lv 89)。位於月之底部世界。3 boss：Caustic Grebuloff (毒性) → Peacekeeper (防衛機械) → Hermes (赫密斯)。失誤 = 2 分鐘受傷加重疊層。**毒池踩入 = Toxicosis dot 10k/s**。",
+    "bosses":  [
+                   {
+                       "name":  "苛性葛雷布洛夫",
+                       "nameEn":  "Caustic Grebuloff",
+                       "mnemonic":  [
+                                        "Miasmata：圓 AoE 隨風移動 + Necrosis dot 必須解。",
+                                        "Cough Up：3 連散開 → 紅箭頭 + Hysteria debuff，未疊 = 失控。",
+                                        "Wave of Nausea：donut AoE 必須貼近。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Miasmata 瘴氣",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體 AoE + 場上圓 AoE 隨風移動。命中附加 Necrosis dot (倒數 = 陣亡)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "Esuna/Warden\u0027s Paean 解 Necrosis",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cough Up 嘔吐",
+                                                                "type":  "spread",
+                                                                "description":  "3 組散開圓 AoE + 紅箭頭 Craven Companionship。倒數結束時必須疊在一起，否則 Hysteria 控場。",
+                                                                "tips":  [
+                                                                             "先散開放圓",
+                                                                             "紅箭頭出現後**立刻疊**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wave of Nausea 反胃波",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 為心 donut AoE + Necrosis。",
+                                                                "tips":  [
+                                                                             "貼 boss 站"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Pox Flail 痘鞭",
+                                                                "type":  "tankbuster",
+                                                                "description":  "對 1 仇 tankbuster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 開減傷",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Blighted Water + Befoulment 水",
+                                                                "type":  "stack",
+                                                                "description":  "Blighted Water = stack；Befoulment = 散開避免重疊。",
+                                                                "tips":  [
+                                                                             "看標記類型決定疊/散"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "維和者",
+                       "nameEn":  "Peacekeeper",
+                       "mnemonic":  [
+                                        "Electromagnetic Repellant：hitbox 內電麻痺 dot。",
+                                        "Order to Fire：boss 周圍砲塔 → 直線 AoE，找窄錐安全。",
+                                        "No Future：圓 AoE 模式，跑剛爆完的位置。",
+                                        "Eclipsing Exhaust：場邊圓 + 直線。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Decimation 大屠殺",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體 AoE + 場外火 (踩入 burns dot)。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Electromagnetic Repellant 電磁排斥",
+                                                                "type":  "other",
+                                                                "description":  "Boss hitbox 內出現電場 + 電麻痺 dot。",
+                                                                "tips":  [
+                                                                             "遠離 boss hitbox"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Order to Fire 開火令",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周圍砲塔 → 從 boss 朝外直線 AoE，砲塔間留窄錐安全 (在 hitbox 與場邊之間)。+ 點名散開 AoE。",
+                                                                "tips":  [
+                                                                             "找窄錐安全帶 + 散開"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "No Future 無未來",
+                                                                "type":  "aoe",
+                                                                "description":  "圓 AoE 模式 (boss 中心向外或場邊向中心)。第一發 2 組、後續 3 組，每組旋轉。",
+                                                                "tips":  [
+                                                                             "站剛爆完的位置 (剛安全)",
+                                                                             "**不要站 boss hitbox**"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Peacefire 和平之火",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周圍旋轉 AoE。常與其他機制組合 (Electromagnetic + Peacefire 強制站旋轉路徑)。",
+                                                                "tips":  [
+                                                                             "跟著旋轉避開"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "name":  "赫密斯",
+                       "nameEn":  "Hermes",
+                       "mnemonic":  [
+                                        "Trismegistos：全體 AoE。",
+                                        "Meteor：場上隕石小怪需要擊殺。",
+                                        "後段引用 quote → 機制變化。"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Trismegistos 三重至聖",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體高傷 AoE。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "減傷 + 補滿",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cosmic Kiss 宇宙之吻",
+                                                                "type":  "spread",
+                                                                "description":  "玩家身上隕石標記 → 圓 AoE。",
+                                                                "tips":  [
+                                                                             "散開 clock 位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Meteor 隕石小怪",
+                                                                "type":  "other",
+                                                                "description":  "場上多個隕石小怪 → 倒數爆。必須擊殺。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 集火擊殺",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Double / Quadruple Flame 雙/四重火焰",
+                                                                "type":  "aoe",
+                                                                "description":  "直線 + 雙線 AoE 組合。",
+                                                                "tips":  [
+                                                                             "閃直線預警"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Cosmic Kiss + Meteor 終局",
+                                                                "type":  "other",
+                                                                "description":  "玩家標記 + 隕石生成 + 多重 AoE 組合。",
+                                                                "tips":  [
+                                                                             "散開 + 擊殺隕石",
+                                                                             {
+                                                                                 "text":  "全員連補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
