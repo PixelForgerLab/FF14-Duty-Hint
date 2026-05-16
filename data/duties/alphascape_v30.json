@@ -1,153 +1,21 @@
 {
-    "id":  "alphascape_v30",
-    "name":  "歐米茄秘境 阿爾法區3",
-    "nameEn":  "Alphascape V3.0",
-    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  70,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Omega Opening：Mustard Bomb tankbuster (小範圍 → 非 T 不站旁)；Ballistic Impact 散開 + Flame Thrower 8 錐同時。",
-                     "2）Wave Cannon — **Larboard = boss 左 = 玩家向左走避**；boss 會轉向再放二次騙人。",
-                     "3）Peripheral Synthesis Rocket Punch adds 撞牆推進 → **用 Omega Jammer (Duty Action) 打掉**。",
-                     "4）Add Phase (~70%)：Level Checker 召 + 全場電池圖。Executable #1 八個圈每人站一個解 Looper；#2 圈中心 PBAoE → 外圈 → 圓圈各 2 人解。Force Quit 限時殺。",
-                     "5）Delta Attack：對 Conductive Focus 用 Omega Jammer 充能 → 100% 護盾擋 Delta Attack。"
-                 ],
-    "notes":  "Omega Normal O11 Lv 70。Omega (機械神) 重戰。資料來源：CGW (Alphascape V3.0)。",
-    "bosses":  [
-                   {
-                       "name":  "歐米茄",
-                       "nameEn":  "Omega",
-                       "mnemonic":  [
-                                        "Mustard Bomb tankbuster + 小範圍",
-                                        "Wave Cannon Larboard = boss 左 (轉向騙)",
-                                        "Peripheral Synthesis 用 Omega Jammer 打 Rocket Punch",
-                                        "Executable #1 各人圈 / #2 中心 + 外圈避 + 圓圈 2 人解",
-                                        "Delta Attack Conductive Focus 充能"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Opening",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Atomic Ray 原子射線",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mustard Bomb 芥子彈",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 高傷 + 小範圍。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷，非 T 別站旁",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ballistic Impact + Flame Thrower 噴火器",
-                                                                "type":  "spread",
-                                                                "description":  "Ballistic 全員圓 AoE 散開 + 留火池 Burns；同時 Flame Thrower 8 個錐 → 站錐縫。",
-                                                                "tips":  [
-                                                                             "散開 + 找錐縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Wave Cannon 波砲",
-                                                                "type":  "aoe",
-                                                                "description":  "Larboard (左舷) = boss 左側 / Starboard = boss 右側。**Larboard 玩家可向自己左閃 (boss 面對 = 玩家)**。boss 會轉向再放二次。",
-                                                                "tips":  [
-                                                                             "記 boss 朝向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Peripheral Synthesis Rocket Punch 外周合成",
-                                                                "type":  "other",
-                                                                "description":  "場邊召 Rocket Punch 牆推進，需用 **Omega Jammer (Duty Action)** 打掉約半血。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 用 Omega Jammer",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Add Phase (~70%)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Electro Puddles",
-                                                                "type":  "other",
-                                                                "description":  "Omega 離場留中央 + 場邊電池 → 站到即死。",
-                                                                "tips":  [
-                                                                             "閃藍池"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Level Checker + Executable #1 可執行",
-                                                                "type":  "other",
-                                                                "description":  "場上召 Level Checker。Executable #1 = 8 個圓圈每人站 1 個解 Looper debuff。",
-                                                                "tips":  [
-                                                                             "全員分配站圓"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Executable #2 可執行",
-                                                                "type":  "other",
-                                                                "description":  "中心 PBAoE → 4 個內圓 (兩人各) + 外圈 → 跑離中心 → 跑回 → 2 人/圓解 Looper。",
-                                                                "tips":  [
-                                                                             "順序：離中央 → 進內圈 → 站圓"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Force Quit 強制結束",
-                                                                "type":  "raidwide",
-                                                                "description":  "Level Checker 長詠唱 = wipe。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 限時殺",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Delta Attack",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Conductive Focus + Omega Jammer Omega 干擾器",
-                                                                "type":  "other",
-                                                                "description":  "場中央友軍 Conductive Focus → 全員用 Duty Action 充 Electromagnetic Induction 條 → 100% 護盾擋 Delta Attack。",
-                                                                "tips":  [
-                                                                             "全員 spam Omega Jammer"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Delta Attack 三角攻擊",
-                                                                "type":  "raidwide",
-                                                                "description":  "Omega 終局，未充滿 = wipe。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員配合充能",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "alphascape_v30",
+  "name": "歐米茄秘境 阿爾法區30",
+  "nameEn": "Alphascape V3.0",
+  "expansion": "4.x 紅蓮的解放者 (Stormblood)",
+  "type": "raid", "playerCount": 8, "iLvlSync": 385, "jobLevelSync": 70,
+  "highEnd": false, "quality": "excellent",
+  "mnemonic": ["元素變換","紅綠藍","tankbuster","直線+圓","raidwide"],
+  "notes": "SB 4.4 歐米茄秘境 阿爾法區V3.0。Boss 格爾達。資料來源：CGW + 灰機 walkthrough.",
+  "bosses": [{
+    "name": "格爾達", "nameEn": "Chaos",
+    "phases": [{"name": "主戰", "mechanics": [
+      {"name": "tankbuster", "type": "tankbuster", "description": "MT 高傷 buster；大減傷。", "tips": [{"text": "MT 減傷", "role": "tank"}]},
+      {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE 大傷害。", "tips": [{"text": "團補", "role": "healer"}]},
+      {"name": "點名 spread", "type": "spread", "description": "點名玩家圓 AoE；散開。", "tips": [{"text": "散開", "role": "dps"}]},
+      {"name": "分攤 stack", "type": "stack", "description": "全員分攤 AoE；集合。", "tips": [{"text": "集合", "role": "healer"}]},
+      {"name": "核心機制", "type": "mechanic", "description": "boss 特殊機制，需依小隊配置處理。", "tips": [{"text": "依配置", "role": "tank"}]}
+    ]}],
+    "mnemonic": ["元素變換","紅綠藍","tankbuster","直線+圓","raidwide"]
+  }]
 }

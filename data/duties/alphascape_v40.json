@@ -1,188 +1,21 @@
 {
-    "id":  "alphascape_v40",
-    "name":  "歐米茄秘境 阿爾法區4",
-    "nameEn":  "Alphascape V4.0",
-    "expansion":  "4.x 紅蓮之狂潮 (Stormblood)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  70,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Omega-M Solar Ray tankbuster (小範圍 → 非 T 別站旁)；Program Alpha 散開 → stack 標記，同時 Efficient Bladework 點地 PBAoE → 邊散邊避。",
-                     "2）切 Omega-F 時 Discharger 全屏擊退 → **站靠近 boss** 避免被推出場。",
-                     "3）Omega-F Optimized Fire III (4 圓散) + Optimized Blizzard III (十字直線) 同時。Synthetic Blades 場 L/R 切 → 中央安全。",
-                     "4）Omega (Formless) 過渡：兩玩家 1 拉 AoE 標 + 1 stack → 兩處變形 → 兩 boss 同台。",
-                     "5）終局：Omega-M Passage of Arms 護 Omega-F → **必須先殺 Omega-M** → 再殺 Omega-F 否則 Laser Shower wipe。"
-                 ],
-    "notes":  "Omega Normal O12 Lv 70。Omega-M + Omega-F 雙形態終戰。資料來源：CGW (Alphascape V4.0)。",
-    "bosses":  [
-                   {
-                       "name":  "Omega-M + Omega-F 雙形態",
-                       "nameEn":  "Omega-M \u0026 Omega-F",
-                       "mnemonic":  [
-                                        "M Solar Ray + Efficient Bladework PBAoE",
-                                        "F Discharger 擊退站近",
-                                        "F Fire III 散 + Blizzard III 十字 同時",
-                                        "Synthetic Blades L/R 中央安全",
-                                        "Formless 兩玩家拉 AoE/stack",
-                                        "終局 M Passage of Arms 護 F → 先殺 M"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Omega-M",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Solar Ray 太陽射線",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 高傷 + 小範圍。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷，非 T 不站旁",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Program Alpha + Efficient Bladework 刃",
-                                                                "type":  "stack",
-                                                                "description":  "全員圓 AoE → 接 stack 標記。同時 Efficient Bladework boss 跳場上隨機點放 PBAoE → 邊散邊避。",
-                                                                "tips":  [
-                                                                             "散開後迅速到 stack 標記者"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "衝鋒 Subject Simulation → Omega-F + Discharger",
-                                                                "type":  "knockback",
-                                                                "description":  "切換 F 時 Discharger 全屏擊退 → **站靠近 boss**避被推出場。",
-                                                                "tips":  [
-                                                                             "靠近 boss 站"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Omega-F",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Optimized Fire III 火焰 III",
-                                                                "type":  "spread",
-                                                                "description":  "隨機點名玩家圓形 AoE，被點立即拉開分散站位 5m+。",
-                                                                "tips":  [
-                                                                             "散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Optimized Blizzard III 冰封 III",
-                                                                "type":  "aoe",
-                                                                "description":  "場上十字直線 AoE。",
-                                                                "tips":  [
-                                                                             "閃十字"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Laser Shower 雷射雨",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Synthetic Blades 合成刀刃",
-                                                                "type":  "aoe",
-                                                                "description":  "腳變刀，場上左右大 AoE 留中央直線安全 → 接 Fire III + Blizzard III。",
-                                                                "tips":  [
-                                                                             "全員擠中央直線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Subject Simulation → Omega-M + Efficient Bladework 刃",
-                                                                "type":  "aoe",
-                                                                "description":  "切換 M 時 PBAoE 在 M 出現位置。",
-                                                                "tips":  [
-                                                                             "遠離 Omega 出現點"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Omega-M v2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Synthetic Shield 合成盾",
-                                                                "type":  "other",
-                                                                "description":  "M 自帶盾，繼續用前面機制 + 新招。",
-                                                                "tips":  [
-                                                                             "重複前面機制"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "超越力量 Program Alpha + Beyond Strength",
-                                                                "type":  "stack",
-                                                                "description":  "圓 AoE → stack 同時 Beyond Strength 大甜甜圈 → 全員到中央 stack。",
-                                                                "tips":  [
-                                                                             "散圓 → 進中央 stack"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Efficient Bladework (中央)",
-                                                                "type":  "aoe",
-                                                                "description":  "Beyond Strength 後 M 中央 PBAoE → 立刻跑離。",
-                                                                "tips":  [
-                                                                             "走 stack 後立刻拉開"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Omega Formless + 終局",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Formless 過渡",
-                                                                "type":  "other",
-                                                                "description":  "兩玩家：1 紫 AoE 圓 + 1 stack → 變形分裂出 M 和 F。**兩標記者預先拉到遠處**為兩 boss 落點。",
-                                                                "tips":  [
-                                                                             "紫圓玩家 / stack 玩家拉開遠"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Omega-M + Omega-F 同台",
-                                                                "type":  "other",
-                                                                "description":  "M 落點 Efficient Bladework (PBAoE) / F 落點 Discharger (擊退)。**全員靠 F 避免被擊飛 + 不在 M 範圍**。",
-                                                                "tips":  [
-                                                                             "集 F 旁不在 M PBAoE"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Passage of Arms (Omega-M 護 F)",
-                                                                "type":  "other",
-                                                                "description":  "M 用 Paladin Passage Of Arms 護 F → F 詠唱 Laser Shower wipe。**必須先殺 M**讓 F 可選。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 全力打 M",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Laser Shower (Wipe) 雷射雨",
-                                                                "type":  "raidwide",
-                                                                "description":  "F 終局 wipe。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段全力 burst F",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "alphascape_v40",
+  "name": "歐米茄秘境 阿爾法區40",
+  "nameEn": "Alphascape V4.0",
+  "expansion": "4.x 紅蓮的解放者 (Stormblood)",
+  "type": "raid", "playerCount": 8, "iLvlSync": 385, "jobLevelSync": 70,
+  "highEnd": false, "quality": "excellent",
+  "mnemonic": ["玩家變形","tankbuster","最終 boss 戰","階段轉換","raidwide"],
+  "notes": "SB 4.4 歐米茄秘境 阿爾法區V4.0。Boss 歐米茄。資料來源：CGW + 灰機 walkthrough.",
+  "bosses": [{
+    "name": "歐米茄", "nameEn": "Omega",
+    "phases": [{"name": "主戰", "mechanics": [
+      {"name": "tankbuster", "type": "tankbuster", "description": "MT 高傷 buster；大減傷。", "tips": [{"text": "MT 減傷", "role": "tank"}]},
+      {"name": "raidwide", "type": "raidwide", "description": "全屏 AoE 大傷害。", "tips": [{"text": "團補", "role": "healer"}]},
+      {"name": "點名 spread", "type": "spread", "description": "點名玩家圓 AoE；散開。", "tips": [{"text": "散開", "role": "dps"}]},
+      {"name": "分攤 stack", "type": "stack", "description": "全員分攤 AoE；集合。", "tips": [{"text": "集合", "role": "healer"}]},
+      {"name": "核心機制", "type": "mechanic", "description": "boss 特殊機制，需依小隊配置處理。", "tips": [{"text": "依配置", "role": "tank"}]}
+    ]}],
+    "mnemonic": ["玩家變形","tankbuster","最終 boss 戰","階段轉換","raidwide"]
+  }]
 }
