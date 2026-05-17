@@ -1,103 +1,181 @@
 {
-  "id": "cloud_deck",
-  "name": "鑽石武器破壞作戰",
-  "nameEn": "The Cloud Deck - The Diamond Weapon",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Diamond Weapon 鑽石武器：Magitek + Adamant Purge 堅硬清算 + 場上機制。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.5 ShB 鑽石武器破壞作戰（Lv 80）。Boss 依序為 Diamond Weapon 鑽石武器。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "鑽石武器",
-      "nameEn": "Diamond Weapon",
-      "phases": [
+    "id": "cloud_deck",
+    "name": "鑽石武器破壞作戰",
+    "nameEn": "The Cloud Deck - The Diamond Weapon",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：場上 2 艘船 + 4 個傳送台 → 用傳送躲機制。Diamond Rain 鑽石之雨 = 全屏無法閃避 → 預備團補。",
+        "P1 Adamant Purge 金剛肅清 = 看 boss 哪一邊手發光 → 被擊中即死（不分血量）→ 傳送到對側船。",
+        "P1 Attack 攻擊（auto） = 對雙 T 直線 AoE → 雙 T 分開拉避免重疊。Photon Burst 光子爆 = 雙 T 距離傷 → 拉開避免相互傳播。",
+        "P1 Diamond Flash 鑽石閃光 = boss 胸發黃光 + 點名 1 玩家直線 → 全員集合 share 傷害。",
+        "P2 Code Chi-Xi-Sigma 卸甲變身 → Auri Cyclone 黃金旋風 = 藍圓在一艘船上擊退 → 站圓邊或防擊退避免被推下船。",
+        "P2 Airship's Bane 飛艇剋星 = 暫時毀掉一艘船 → 必須撤離（被擊中即死）。boss 隨後跳到剩餘船上。",
+        "P2 Outrage 狂暴 = 高傷全屏。Auri Doomstead 黃金毀滅 = MT tankbuster。",
+        "P2 Auri Arts 黃金技藝 2 種：(1) 場外藍球指示 z 字線 + boss 攻擊船一側 + 擊退 + Vuln Up → 移到安全側；(2) boss 攻擊船中央 + 圓 AoE → 走兩側避直線後不踩圓。",
+        "P2 Vertical Cleave 垂直裂砍 = 船側擊退 → 站船角避免被推下船。",
+        "P3 Auri Arts 後 boss 復甲 → 另一艘船重生 + 傳送啟用 + 沿用 P1 + 新招。Diamond Shrapnel 鑽石彈片 = 2 玩家被 5 連 AoE 追蹤 → 看大 AoE 出現後立即傳送離團。",
+        "P3 Articulated Bits 機械手臂 = 10 隻手（每船 5 隻）釋直線 AoE → 跑到船另一側躲。可同時和 Adamant Purge 一起出。",
+        "P3 Adamant Sphere 金剛球 = 4 流星圓（每船 2）→ 1 人接 1 個。Homing Lasers 定位激光 = 全員圓 AoE → 散開不重疊。"
+    ],
+    "notes": "ShB 5.5 trial（Lv 80，sync 80，ilvl 495，8 人 trial，時限 60 分），位於 The Cloud Deck 雲之甲板。為 ShB 加雷馬武器計劃終戰 - 鑽石武器 The Diamond Weapon（致敬 FF7 鑽石武器，Mark I Anti-Eikon Warmachina）。劇情：在 Werlyt 一切武器計劃的結局，Gaius 之子 Allenoix 駕駛鑽石武器登場 → 父子和解契機。掉落 Diamond Weapon Card。場地獨特：2 艘飛船 + 4 傳送台。",
+    "bosses": [
         {
-          "name": "Diamond Weapon 主戰",
-          "mechanics": [
-            {
-              "name": "Code Smelt 編碼熔煉",
-              "type": "tankbuster",
-              "description": "MT 直線 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "鑽石武器",
+            "nameEn": "The Diamond Weapon",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Photon Burst 光子爆裂",
-              "type": "raidwide",
-              "description": "全屏 AoE + 場上輻射；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1（2 船 + 4 傳送）",
+                    "mechanics": [
+                        {
+                            "name": "Diamond Rain 鑽石之雨",
+                            "type": "raidwide",
+                            "description": "全屏無法閃避 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Adamant Purge 金剛肅清（傳送）",
+                            "type": "mechanic",
+                            "description": "看 boss 哪一邊手發光 → 那邊被擊中即死。所有玩家必須使用傳送台跳到對側船避免。",
+                            "tips": [
+                                {"text": "看發光手 → 傳送對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Attack 攻擊（雙 T 直線）",
+                            "type": "aoe",
+                            "description": "auto 攻擊對雙 T 直線 AoE → 雙 T 分開拉避免重疊。",
+                            "tips": [
+                                {"text": "雙 T 拉開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Photon Burst 光子爆",
+                            "type": "tankbuster",
+                            "description": "雙 T 距離傷害 → 雙 T 拉開避免互相傳播。",
+                            "tips": [
+                                {"text": "雙 T 拉遠", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Diamond Flash 鑽石閃光",
+                            "type": "stack",
+                            "description": "boss 胸發黃光 + 點名 1 玩家直線 stack → 全員集合 share 傷害。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Adaptive Wave Cannon 自適應波加農",
-              "type": "aoe",
-              "description": "場邊朝向直線 → 站側避開；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看方向側站"
-              ]
-            },
-            {
-              "name": "Tank Purge 坦克清除",
-              "type": "tankbuster",
-              "description": "雙 T 死刑 + 後續扇形；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P2（卸甲 + 船毀）",
+                    "mechanics": [
+                        {
+                            "name": "Code Chi-Xi-Sigma + Auri Cyclone",
+                            "type": "knockback",
+                            "description": "卸甲 + 立即 Auri Cyclone 藍圓在一艘船 + 擊退 → 站圓邊內側或防擊退避免被推下船。",
+                            "tips": [
+                                {"text": "圓邊內側接擊退", "role": "tank"},
+                                {"text": "防擊退保命", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Airship's Bane 飛艇剋星",
+                            "type": "mechanic",
+                            "description": "暫時毀一艘船 → 玩家必須撤離（被擊中即死）。boss 跳到剩餘船。",
+                            "tips": [
+                                {"text": "看標撤離船", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Outrage 狂暴",
+                            "type": "raidwide",
+                            "description": "高傷全屏 → 大團補。",
+                            "tips": [
+                                {"text": "大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Auri Doomstead 黃金毀滅",
+                            "type": "tankbuster",
+                            "description": "MT tankbuster。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Auri Arts 黃金技藝（2 型）",
+                            "type": "mechanic",
+                            "description": "型 1：場外藍球 z 字線 + boss 攻擊船一側 + 擊退 + Vuln Up → 移到安全側；型 2：boss 攻擊船中央 + 圓 AoE → 走兩側避直線後不踩圓。",
+                            "tips": [
+                                {"text": "看球位置選安全側", "role": "dps"},
+                                {"text": "閃直線後不踩圓", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Vertical Cleave 垂直裂砍",
+                            "type": "knockback",
+                            "description": "船側擊退 → 站船角避免被推下船。",
+                            "tips": [
+                                {"text": "站船角接擊退", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "雙 T 站位分擔",
-                  "role": "tank"
+                    "name": "P3（復甲 + 雙船 + 傳送啟用）",
+                    "mechanics": [
+                        {
+                            "name": "Diamond Shrapnel 鑽石彈片",
+                            "type": "aoe",
+                            "description": "2 玩家被 5 連 AoE 追蹤 → 看大 AoE 出現後立即傳送離團（高傷重疊死）。",
+                            "tips": [
+                                {"text": "被點玩家傳送離團", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Articulated Bits 機械手臂（+Adamant Purge）",
+                            "type": "aoe",
+                            "description": "10 隻手（每船 5 隻）釋直線 AoE → 跑到船另一側躲。可與 Adamant Purge 同時出現 → 看哪邊安全 + 看 boss 發光手判斷。",
+                            "tips": [
+                                {"text": "跑船另一側躲", "role": "dps"},
+                                {"text": "Purge + Bits 同時 → 看雙條件", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Adamant Sphere 金剛球",
+                            "type": "add",
+                            "description": "4 流星圓（每船 2 個）→ 4 人各 1 個接，未接 = 全屏 + 易傷。",
+                            "tips": [
+                                {"text": "4 人各 1 圓", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Homing Lasers 定位激光",
+                            "type": "spread",
+                            "description": "全員圓 AoE → 散開不重疊。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Outburst Plasma 爆發等離子",
-              "type": "aoe",
-              "description": "場上多 AoE 圓圈 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Articulated Bits 多節單元",
-              "type": "aoe",
-              "description": "6 個衛星發射直線 AoE → 看連線方向；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "預判直線安全縫"
-              ]
-            },
-            {
-              "name": "Diamond Rain 鑽石雨 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：Adamant Purge → 看發光手 → 傳送對側",
+                "P1：Diamond Flash → 全員集合 stack",
+                "P2：Code Chi-Xi-Sigma + Auri Cyclone 圓邊接擊退",
+                "P2：Airship's Bane → 撤離船 / Auri Arts 看球判斷型 1/2",
+                "P3：Diamond Shrapnel → 傳送離團 / Articulated Bits → 船另側",
+                "P3：Adamant Sphere → 4 人各 1 接 / Homing Lasers 散開"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Diamond Weapon 鑽石武器 機制：Magitek + Adamant Purge 堅硬清算 + 場上機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

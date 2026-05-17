@@ -1,100 +1,170 @@
 {
-  "id": "castrum_marinum",
-  "name": "翠玉武器破壞作戰",
-  "nameEn": "Castrum Marinum - The Emerald Weapon",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Emerald Weapon 翠玉武器：Magitek Cannon + Optical Sight 光學瞄準 + 場上機械。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.3 ShB 翠玉武器破壞作戰（Lv 80）。Boss 依序為 Emerald Weapon 翠玉武器。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "翠玉武器",
-      "nameEn": "Emerald Weapon",
-      "phases": [
+    "id": "castrum_marinum",
+    "name": "翠玉武器破壞作戰",
+    "nameEn": "Castrum Marinum - The Emerald Weapon",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 翠玉武器（Mark V Anti-Eikon Warmachina）：場邊掉落即死。Emerald Shot = MT 小 tankbuster。",
+        "P1 Emerald Beam 翠玉光束 = boss 前後雙錐 + 旋轉（看箭頭方向）+ 同時釋點下 AoE + 後續向外擴散環 AoE → 跟著旋轉 + 在環間踩。結束後場邊一圈塌陷縮小場地。",
+        "P1 Magitek Magnetism 魔導磁力 = 場上多個地雷帶磁石符號（+/-）→ 同號相斥 / 異號相吸 → 判斷推 / 拉方向 → 站不被磁石影響的雷外 + 推 / 拉後安全區。",
+        "P1 Optimized Ultima = 全屏無法閃避 → 預備團補。Split + Sidescathe + Drop-Down = boss 分上下 → 上半留場 + 釋半場雷射 → 下半飛場上放擊退標 → 跑場邊內側接擊退。",
+        "P1 第二輪：Emerald Hands 翠玉手 = 場上飛機械手 + 甜甜圈 AoE → 跑入 boss hitbox 躲。",
+        "P1 Divide Et Impera 各個擊破 = MT 死刑類 tankbuster（紅圓標）→ 大減傷。Pulse Laser 脈衝激光 = 3 條隨機直線 AoE 連發。",
+        "P1 Sidescathe + Emerald Hands + Drop-Down = 場外手釋慢移光彈穿場 + Sidescathe 半場 + Drop-Down 擊退 → 走縫 + 站對半 + 場邊內接擊退（場地已縮小）。",
+        "P2 1% checkpoint：場地變方形 + 場邊藍色能量牆即死。Divide Et Impera #2 = MT 死刑 + 其他玩家方向錐 AoE → MT 拉到牆邊角接 + 其他人散到 boss 對側。",
+        "P2 Primus Terminus Est 第一終局 = 3 玩家擊退標（藍柱 + 箭頭）→ 各自放柱 AoE + 被推 → 注意不重疊柱 + 不撞牆 + 同時 3 圓 AoE 在推方向 → 避開圓。",
+        "P2 Secundus Terminus Est 第二終局 = 全員『+』或『×』形標 → 從位置釋對應形狀直線 AoE → 提前集合到一角避免覆蓋場地（留大安全區）。",
+        "P2 Tertius Terminus Est 第三終局 = 3 對劍依序落下 → 全部落下後依生成順序釋 × 形直線 AoE → 站最後一對劍的火線方位（前面的劍先爆 = 安全縫）。",
+        "P2 Legio Phantasmatis 幻影軍團 = boss 消失 + Black Wolf（Gaius 影）登場 → T 控 add + 三排軍團從邊射直線 AoE → 每排有 1 個士兵缺失（/ 或 \\ 形） → 依序站缺位『穿』過。Black Wolf 受傷會轉移給 Emerald Weapon → 維持 uptime。"
+    ],
+    "notes": "ShB 5.4 trial（Lv 80，sync 80，ilvl 485，8 人 trial，時限 60 分），位於 Castrum Marinum 加雷馬海洋要塞。為 ShB 加雷馬武器計劃第二戰 - 翠玉武器 The Emerald Weapon（致敬 FF7 翠玉武器 + FF14 Gaius van Baelsar『黑狼』）。劇情：武器計劃裡 Gaius 之子 Rex 駕駛翠玉武器 → 玩家戰勝後揭開 Gaius 與 Rex 的過去。掉落 Emerald Weapon Card。",
+    "bosses": [
         {
-          "name": "Emerald Weapon 主戰",
-          "mechanics": [
-            {
-              "name": "Optimized Hawkblaster 鷹炮",
-              "type": "tankbuster",
-              "description": "MT 雙重 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "翠玉武器",
+            "nameEn": "The Emerald Weapon",
+            "phases": [
                 {
-                  "text": "MT 大減傷 + ST swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Aetheroplasm 以太質",
-              "type": "spread",
-              "description": "點名玩家圓形 AoE → 散開；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "被點散開"
-              ]
-            },
-            {
-              "name": "Optical Sight 光學瞄準",
-              "type": "aoe",
-              "description": "點名直線雷射 → 場邊引導；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Wave Repeater 波浪連射",
-              "type": "aoe",
-              "description": "場上多 AoE 圓圈散落；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Magnetism / Repel 磁鐵",
-              "type": "mechanic",
-              "description": "玩家被吸引或排斥；看 debuff 圖示；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "吸引者離 boss / 排斥者貼 boss"
-              ]
-            },
-            {
-              "name": "Diffractive Plasma 衍射等離子",
-              "type": "raidwide",
-              "description": "全屏 + 場邊風暴；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1 翠玉武器",
+                    "mechanics": [
+                        {
+                            "name": "Emerald Shot 翠玉射擊",
+                            "type": "tankbuster",
+                            "description": "MT 小 tankbuster。",
+                            "tips": [
+                                {"text": "MT 開減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Emerald Beam 翠玉光束（旋轉雙錐）",
+                            "type": "mechanic",
+                            "description": "boss 前後雙錐 + 旋轉（看箭頭方向）+ 同時點下 AoE + 後續向外擴散環 AoE → 跟著旋轉走 + 環間踩。結束後場邊塌陷縮場。",
+                            "tips": [
+                                {"text": "跟旋轉方向走 + 環間踩", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Magitek Magnetism 魔導磁力",
+                            "type": "mechanic",
+                            "description": "場上多個地雷帶磁石符號（+/-）→ 同號相斥 / 異號相吸 → 判斷推 / 拉方向 → 站不被磁石影響的雷外 + 推 / 拉後安全區。",
+                            "tips": [
+                                {"text": "看磁石符判 +/- 站位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Optimized Ultima 最終理論",
+                            "type": "raidwide",
+                            "description": "全屏無法閃避 → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Split + Sidescathe + Drop-Down",
+                            "type": "knockback",
+                            "description": "boss 分上下 → 上半釋 Sidescathe 半場雷射（站對半）→ 下半飛場放 Drop-Down 擊退標 → 跑場邊內側接擊退（不出場）。",
+                            "tips": [
+                                {"text": "站對半閃 Sidescathe", "role": "dps"},
+                                {"text": "場邊內側接擊退", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Emerald Hands 翠玉手",
+                            "type": "aoe",
+                            "description": "場上飛機械手 + 甜甜圈 AoE → 跑入 boss hitbox 躲。",
+                            "tips": [
+                                {"text": "貼 boss hitbox", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Divide Et Impera 各個擊破",
+                            "type": "tankbuster",
+                            "description": "MT 死刑類 tankbuster（紅圓標）→ 大減傷 + 補滿。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"},
+                                {"text": "盾補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Pulse Laser 脈衝激光",
+                            "type": "aoe",
+                            "description": "3 條隨機直線 AoE 連發 → 走線縫。",
+                            "tips": [
+                                {"text": "看直線走縫", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P2 方形場 / 牆即死（checkpoint）",
+                    "mechanics": [
+                        {
+                            "name": "場邊牆即死",
+                            "type": "mechanic",
+                            "description": "場地變方形 + 場邊藍色能量牆即死 → 不可觸碰 / 被擊退到邊。",
+                            "tips": [
+                                {"text": "勿觸牆", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Divide Et Impera #2 + 方向錐",
+                            "type": "tankbuster",
+                            "description": "MT 死刑 + 其他玩家方向錐 AoE → MT 拉到牆邊角接 + 其他人散到 boss 對側避錐。",
+                            "tips": [
+                                {"text": "MT 拉角接", "role": "tank"},
+                                {"text": "其他人站對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Primus Terminus Est 第一終局",
+                            "type": "knockback",
+                            "description": "3 玩家擊退標（藍柱 + 箭頭）→ 各放柱 AoE + 被推 → 注意不重疊柱 + 不撞牆 + 推方向同時 3 圓 AoE → 避圓。",
+                            "tips": [
+                                {"text": "拉開放柱 + 預判擊退落點", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Secundus Terminus Est 第二終局（+/×）",
+                            "type": "mechanic",
+                            "description": "全員『+』或『×』形標 → 從位置釋對應形狀直線 AoE → 提前集合到一角避免覆蓋場地（留大安全區）。",
+                            "tips": [
+                                {"text": "全員集到角留安全空", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tertius Terminus Est 第三終局",
+                            "type": "aoe",
+                            "description": "3 對劍依序落下 → 全部落下後依生成順序釋 × 形直線 AoE → 站最後一對劍的火線方位（前面的劍先爆 = 安全縫）。",
+                            "tips": [
+                                {"text": "記順序站最後一對劍火線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Legio Phantasmatis 幻影軍團",
+                            "type": "add",
+                            "description": "boss 消失 + Black Wolf（Gaius 影）登場 → T 控 add + 三排軍團從邊射直線 AoE → 每排有 1 個士兵缺失（/ 或 \\ 形）→ 依序站缺位『穿』過。Black Wolf 受傷會轉移給 Emerald Weapon → 維持 uptime 速殺。",
+                            "tips": [
+                                {"text": "MT 拉 Black Wolf", "role": "tank"},
+                                {"text": "DPS 找缺位站", "role": "dps"},
+                                {"text": "全力打 Black Wolf 轉傷", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Sidereal Vision 天體視界 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Emerald Beam 跟旋轉走 / 環間踩 → 場邊塌縮場",
+                "P1 Magitek Magnetism 看 +/- 站位 + Split/Sidescathe 對半 + Drop-Down 邊內接",
+                "P1 Divide Et Impera MT 死刑 + Pulse Laser 線縫",
+                "P2 場邊即死牆 + Primus 擊退（不撞牆）",
+                "P2 Secundus 集角 / Tertius 最後一對劍火線",
+                "P2 Legio → MT 拉 Black Wolf + 找缺位站 + 打 Wolf 轉傷"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Emerald Weapon 翠玉武器 機制：Magitek Cannon + Optical Sight 光學瞄準 + 場上機械。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

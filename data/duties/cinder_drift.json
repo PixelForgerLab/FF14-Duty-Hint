@@ -1,114 +1,211 @@
 {
-  "id": "cinder_drift",
-  "name": "紅寶石武器破壞作戰",
-  "nameEn": "Cinder Drift - The Ruby Weapon",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Ruby Weapon 紅寶石武器：Magitek Cannon + Crimson Cyclone 紅蓮旋風 + 場上機制。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.2 ShB 紅寶石武器破壞作戰（Lv 80）。Boss 依序為 Ruby Weapon 紅寶石武器。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "紅寶石武器",
-      "nameEn": "Ruby Weapon",
-      "phases": [
+    "id": "cinder_drift",
+    "name": "紅寶石武器破壞作戰",
+    "nameEn": "Cinder Drift - The Ruby Weapon",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 紅寶石武器（Mark III Anti-Eikon Warmachina）：Stamp = MT tank buster。Optimized Ultima = 全屏無法閃避 → 預備團補。",
+        "P1 Flexiclaw 屈爪 = boss 浮空 + 場上 8 條裂縫朝 4 方位 + 4 對角 → 長 / 短交替（長到場邊，短到半徑）→ 後接 Ravensclaw。",
+        "P1 Ravensclaw 鴉爪 = boss 腳下 + 8 條裂縫尾端各出圓 AoE → 同時爆 → 站非圓非裂縫位置避被擊中（中傷 + Vuln Up 疊層）。",
+        "P1 後續隨機 Undermine / Liquefaction：Undermine 破壞 = 所有裂縫爆炸 → 站裂縫間或遠離；Liquefaction 液化 = 場地變流沙 → 必須站裂縫上保命（反向）。看招判斷站位。",
+        "P1 Ruby Ray 紅寶石光線 = 點名玩家 + 紅光蓄力 → 直線 AoE → 繞背或側避。Helioclaw 日爪 = boss 浮空 + 3 圓 + 3 線扇形 → 站線間 + 預判圓移動方向。",
+        "P1 High-Powered Homing Laser 高功率定位激光 = 雙 stack 標 → 分兩光小隊各接 1 個。Ravensflight 鴉飛 = boss 跳場邊 + 連續衝刺 → 看 telegraph 順序找安全位（容易連中）。",
+        "P1 Ruby Dynamics 紅寶石動力 = Ravensflight 後大甜甜圈 → 立即跑入 boss hitbox。Homing Laser 定位激光 = 全員大圓 AoE → 散開不重疊。",
+        "P1 第二次 Ravensflight 後 → boss 開始長讀 Ultima 終極 → 必須在此前秒掉 boss 否則團滅。Phase 2 checkpoint：擊敗 Ruby Weapon → 進 Nael Deus Darnus（達魯密斯）虛影戰。",
+        "P2 Meteor Project 流星計劃 = 場景倒數計時 → 時間到 Dalamud 殞落造成大全屏。Negative Personae 負面化身 = 召 2 Raven's Image add → 雙 T 分拉。",
+        "P2 Meteor Stream 流星雨 = DPS 被點藍圓 AoE → 散開。Raven's Claw 鴉爪 = 雙 T 同時 5 hit tankbuster → 雙 T 多重減傷。",
+        "P2 Magitek Meteor 魔導流星 = 緩慢下降中央 → Magitek Comet 4 彗星標 → 站 boss hitbox 接彗星 → 4 彗星落下後玩家躲彗星後阻擋 Magitek Meteor。",
+        "P2 Mark II Magitek Meteor 二型魔導流星 = 4 小圓緩移 → 必須 4 人各踩 1 圓『接』彗星 → 接到的人不能動 + 持續傷害 → 自由玩家擊破被接的彗星救隊友。建議雙 T 接優先。",
+        "P2 Bradamante 直線 AoE × 2 → 走出 telegraph。第三次 Dalamud 降下前 boss 釋 Outrage 連續全屏直到擊敗 → 必須在 Dalamud 第三次降下前秒掉 boss。"
+    ],
+    "notes": "ShB 5.2 trial（Lv 80，sync 80，ilvl 470，8 人 trial，時限 60 分），位於 Cinder Drift 灰燼荒原。為 ShB 5.2『回歸 Ivalice』完成後，加雷馬帝國 武器計劃 紅寶石武器 The Ruby Weapon 戰（致敬 FF7 紅寶石武器 + FF14 邪龍 Nael 達魯密斯）。劇情：加雷馬武器系列第一戰 → P2 武器啟動內藏的 Nael Deus Darnus 虛影 → 致敬 BCoB T9 機制。掉落 Ruby Weapon Card。",
+    "bosses": [
         {
-          "name": "Ruby Weapon 主戰",
-          "mechanics": [
-            {
-              "name": "Magitek Ray 魔導雷射",
-              "type": "aoe",
-              "description": "直線 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Optimised Sagittarius Arrow 弓兵箭",
-              "type": "aoe",
-              "description": "點名玩家直線 AoE → 引導場邊；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Magitek Burst 魔導爆裂",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "紅寶石武器",
+            "nameEn": "The Ruby Weapon",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Drill Cannon 鑽頭加農",
-              "type": "cone",
-              "description": "雙 T cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+                    "name": "P1 紅寶石武器",
+                    "mechanics": [
+                        {
+                            "name": "Stamp 重擊",
+                            "type": "tankbuster",
+                            "description": "MT tank buster → MT 開減傷。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Optimized Ultima 最終理論",
+                            "type": "raidwide",
+                            "description": "無法閃避全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Flexiclaw 屈爪",
+                            "type": "mechanic",
+                            "description": "boss 浮空 + 場上 8 條裂縫朝 4 方位 + 4 對角 → 長 / 短交替（長到場邊，短到半徑）→ 後接 Ravensclaw。",
+                            "tips": [
+                                {"text": "看裂縫位置預備 Ravensclaw", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ravensclaw 鴉爪",
+                            "type": "aoe",
+                            "description": "boss 腳下 + 8 條裂縫尾端各出圓 AoE → 同時爆 → 站非圓非裂縫位置避被擊中（中傷 + Vuln Up 疊層）。",
+                            "tips": [
+                                {"text": "站圓間縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Undermine / Liquefaction（裂縫機制）",
+                            "type": "mechanic",
+                            "description": "隨機 Undermine（裂縫爆炸 → 站裂縫間或遠離）或 Liquefaction（場地液化 → 站裂縫上保命）→ 看招判斷站位。",
+                            "tips": [
+                                {"text": "Undermine = 站縫 / Liquefaction = 站線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ruby Ray 紅寶石光線",
+                            "type": "aoe",
+                            "description": "點名玩家 + 紅光蓄力 → 直線 AoE → 繞背或側避。",
+                            "tips": [
+                                {"text": "繞背或側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Helioclaw 日爪",
+                            "type": "mechanic",
+                            "description": "boss 浮空 + 3 圓 + 3 線扇形 → 站線間 + 預判圓移動方向（中央→外）。",
+                            "tips": [
+                                {"text": "站線間 + 跟圓走", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "High-Powered Homing Laser 高功率定位激光",
+                            "type": "stack",
+                            "description": "雙 stack 標 → 分兩光小隊（4-4）各接 1 個。",
+                            "tips": [
+                                {"text": "分兩光隊各接", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ravensflight 鴉飛",
+                            "type": "aoe",
+                            "description": "boss 跳場邊 + 連續多次衝刺 → 看 telegraph 順序找安全位（容易連中）。",
+                            "tips": [
+                                {"text": "看 telegraph 序找安全", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ruby Dynamics + Homing Laser",
+                            "type": "mechanic",
+                            "description": "Ruby Dynamics = Ravensflight 後大甜甜圈 → 立即跑入 boss hitbox。Homing Laser = 全員大圓 AoE → 散開不重疊。",
+                            "tips": [
+                                {"text": "Dynamics 貼 boss / Laser 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "終局 Ultima 讀條",
+                            "type": "mechanic",
+                            "description": "第二次 Ravensflight 後 → boss 開始長讀 Ultima → 必須在此前秒掉 boss 否則團滅。擊敗 = P2 checkpoint。",
+                            "tips": [
+                                {"text": "DPS 爆發秒 boss", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "雙 T 站位分擔",
-                  "role": "tank"
+                    "name": "P2 Nael Deus Darnus 虛影（checkpoint）",
+                    "mechanics": [
+                        {
+                            "name": "Meteor Project 流星計劃",
+                            "type": "mechanic",
+                            "description": "場景倒數 → 時間到 Dalamud 殞落造成大全屏 → 全員大團補 + 減傷。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Negative Personae + Raven's Image add",
+                            "type": "add",
+                            "description": "召 2 Raven's Image add → 雙 T 分拉。Nael 不可選直到 add 死。",
+                            "tips": [
+                                {"text": "雙 T 分拉 add", "role": "tank"},
+                                {"text": "DPS 集火其一", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Stream 流星雨",
+                            "type": "spread",
+                            "description": "DPS 被點藍圓 AoE → 散開不重疊。",
+                            "tips": [
+                                {"text": "DPS 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Raven's Claw 鴉爪（雙 T 5 hit）",
+                            "type": "tankbuster",
+                            "description": "雙 Raven's Image 同時 5 hit tankbuster → 雙 T 多重減傷。",
+                            "tips": [
+                                {"text": "雙 T 多重減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Magitek Comet + Magitek Meteor",
+                            "type": "mechanic",
+                            "description": "Magitek Meteor 緩慢下降中央 → Magitek Comet 4 彗星標於玩家位置 → 全員站 boss hitbox 接彗星（圓圍 boss）→ 4 彗星落下後玩家躲彗星後阻擋 Magitek Meteor。未阻擋 = 死。",
+                            "tips": [
+                                {"text": "彗星圍 boss 接", "role": "dps"},
+                                {"text": "躲彗星後擋 Meteor", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mark II Magitek Meteor",
+                            "type": "mechanic",
+                            "description": "4 小圓緩移 → 必須 4 人各踩 1 圓『接』彗星 → 接到的人不能動 + 持續傷害 → 自由玩家擊破被接的彗星救隊友。建議雙 T 優先接。",
+                            "tips": [
+                                {"text": "雙 T 優先接彗星", "role": "tank"},
+                                {"text": "自由人擊破救人", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Bradamante 直線 AoE",
+                            "type": "aoe",
+                            "description": "Nael 雙直線 AoE → 走出 telegraph。",
+                            "tips": [
+                                {"text": "看 telegraph 走出", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Outrage 終局狂暴",
+                            "type": "raidwide",
+                            "description": "第三次 Dalamud 降下前 boss 釋 Outrage 連續全屏直到擊敗 → 必須在 Dalamud 第三次降下前秒掉 boss。",
+                            "tips": [
+                                {"text": "DPS 爆發秒 boss", "role": "dps"},
+                                {"text": "連續團補維持", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Air Shot 高空射擊",
-              "type": "knockback",
-              "description": "場邊風暴擊退；提前Arm's Length或Surecast抗擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "全員避開"
-              ]
-            },
-            {
-              "name": "Tail Drive 尾驅",
-              "type": "tankbuster",
-              "description": "MT 直線 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Tactical Pod adds",
-              "type": "add",
-              "description": "場邊召喚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS AoE 殲滅",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Burning Battery 燃燒電池 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Flexiclaw → Ravensclaw 站圓 / 裂縫間",
+                "P1 Undermine = 站縫 / Liquefaction = 站線",
+                "P1 High-Powered Laser 分兩光隊接 / Ravensflight 看序找安全 / Ruby Dynamics 貼 boss",
+                "P2 Negative Personae 雙 T 分拉 + Meteor Stream 散開",
+                "P2 Magitek Comet 圍 boss 接 → 躲彗星後擋 Meteor",
+                "P2 Mark II → 雙 T 接彗星 + 自由人擊破救人",
+                "P2 Outrage 第三 Dalamud 降下前必秒"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Ruby Weapon 紅寶石武器 機制：Magitek Cannon + Crimson Cyclone 紅蓮旋風 + 場上機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
