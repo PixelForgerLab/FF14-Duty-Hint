@@ -1,92 +1,170 @@
 {
-  "id": "jade_stoa_extreme",
-  "name": "真 白虎殲殛戰",
-  "nameEn": "The Jade Stoa (Extreme) - Byakko",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Byakko 白虎：強化版 Roar + Sweep + Imperial Sword + 全屏拘束機制。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.3 SB 蛮神白虎極限版（Lv 70）。Boss 依序為 Byakko 白虎。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "白虎",
-      "nameEn": "Byakko",
-      "phases": [
+    "id": "jade_stoa_extreme",
+    "name": "真 白虎殲殛戰",
+    "nameEn": "The Jade Stoa (Extreme) - Byakko",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Storm Pulse 暴風脈衝 = 全屏 → 預備團補。Heavenly Strike 天擊 = MT tankbuster → 大減傷。",
+        "P1 State of Shock 震驚之態（雙連）= boss 抓 MT + 對面 stack 標 → 分兩半團接 2 連 slam（OT 第一抓後 Provoke 接第 2 抓）→ 雙吃會疊 Vuln + 致命。",
+        "P1 Unrelenting Anguish 無情之苦 + Ominous Wind = boss 中央釋螺旋 orb + T/H/DPS 各 1 玩家 Ominous Wind（互近爆炸）→ 拉開避免 2+ 玩家近距 + 避 orb。",
+        "P1 Fire & Lightning 火與電 = 點名直線 column → 走出。Hakutei 白虎 add + Aramata 兩 AoE puddle 點名 → 拉場邊 3 連點 → puddle 不可重疊。",
+        "P1 Distant Clap 遠雷 + 白虎 proximity tankbuster = 對 boss 釋甜甜圈 → 全員進 boss + OT 帶白虎到對側遠離。Roar of Thunder 雷霆怒吼 = 全屏依白虎剩餘血量。Aramata Orbs = 場邊 orb 移向中央 → 玩家撞 orb 消除（會 healed 白虎）→ 跑撞消（給 phys damage 降 debuff）。",
+        "Free-Fall：場邊即死 + boss 釋 orb 從下 + 甜甜圈（拉中央）+ 白虎直線（走出）→ 落地大 AoE。",
+        "P2：Heavenly Strike → Hundredfold Havoc 百折之災 = 兩組箭頭方向 outward AoE → 第 1 爆後跑進已爆位置避第 2。",
+        "P2 State of Shock + Sweep Of The Leg 掃腿（無預警）= 雙連 slam 後接無預警前扇 → slam 後立即站 boss 後。",
+        "P2 Unrelenting Anguish + Gale Force = 大 AoE puddle 點名 T/H/DPS → 拉開放 puddle（互疊團滅）+ Ominous Wind 同處理。",
+        "P2 Roar of Thunder + Aramata Orbs（更嚴格 DPS check）→ 可考慮 T LB3 接 + Storm Pulse 連環 → Hundredfold Havoc + Gale Force 同時。12 分鐘 enrage 連 4 Storm Pulse 強制團滅。"
+    ],
+    "notes": "SB 4.2 trial Ex（Lv 70，sync 70，ilvl 350，8 人 trial，時限 60 分），位於 The Jade Stoa Ex。為四聖之白虎 Byakko 極限版。掉落 ilvl 365 武器（10 Byakko Totem / 99 兌換 Auspicious Kamuy Fife）+ Byakko Card。State of Shock 雙連 slam + Gale Force puddle 不可重疊 + Aramata Orbs 撞球為核心。",
+    "bosses": [
         {
-          "name": "Byakko EX",
-          "mechanics": [
-            {
-              "name": "Storm Pulse 強化",
-              "type": "raidwide",
-              "description": "全屏 + 連發；全員預備減傷與大團補。",
-              "tips": [
+            "name": "白虎",
+            "nameEn": "Byakko",
+            "phases": [
                 {
-                  "text": "全員強減傷",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Sweep 連段",
-              "type": "tankbuster",
-              "description": "MT cone 連 buster + Vuln；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Storm Pulse 暴風脈衝",
+                            "type": "raidwide",
+                            "description": "全屏無法閃避 → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Heavenly Strike 天擊",
+                            "type": "tankbuster",
+                            "description": "MT tankbuster → 大減傷。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "State of Shock 震驚之態（雙連）",
+                            "type": "stack",
+                            "description": "boss 抓 MT + 對面 stack 標 → 分兩半團接 2 連 slam（OT 第 1 抓後 Provoke 接第 2 抓）→ 單 T 雙吃 = 致命（疊 Vuln）。",
+                            "tips": [
+                                {"text": "OT Provoke 接第 2", "role": "tank"},
+                                {"text": "分兩半團接 2 slam", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Unrelenting Anguish + Ominous Wind",
+                            "type": "mechanic",
+                            "description": "boss 中央 + 螺旋 orb 向外 + T/H/DPS 各 1 玩家 Ominous Wind（互近爆炸）→ 拉開避免 2+ 玩家近距 + 避 orb。",
+                            "tips": [
+                                {"text": "Wind 玩家三角拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fire & Lightning 火與電",
+                            "type": "aoe",
+                            "description": "點名直線 column → 走出。",
+                            "tips": [
+                                {"text": "走出直線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hakutei + Aramata（白虎 add + puddle）",
+                            "type": "add",
+                            "description": "白虎 add 出場 + Aramata = 兩玩家點名圓 puddle 3 連點 → 拉場邊放 puddle（不重疊 + 互不擾）。",
+                            "tips": [
+                                {"text": "Aramata 點名拉場邊", "role": "dps"},
+                                {"text": "puddle 不可重疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Distant Clap + 白虎 proximity TB",
+                            "type": "mechanic",
+                            "description": "Distant Clap = 對 boss 釋甜甜圈 → 全員進 boss + OT 帶白虎到對側遠離（白虎對 OT 釋 proximity tankbuster）。",
+                            "tips": [
+                                {"text": "全員貼 boss / OT 拉白虎遠", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Roar of Thunder + Aramata Orbs",
+                            "type": "mechanic",
+                            "description": "Roar = 全屏依白虎血量；Aramata Orbs = 場邊 orb 向中央 → 玩家撞 orb 消除（會 healed 白虎），給 phys damage down 短 debuff。",
+                            "tips": [
+                                {"text": "玩家撞 orb 消除", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 換手",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Distant Clap 連",
-              "type": "aoe",
-              "description": "場上連 line AoE + 多虎影；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫避連線"
-              ]
-            },
-            {
-              "name": "Heavenly Strike + Havoc 擊",
-              "type": "aoe",
-              "description": "中央 PBAoE + Hundredfold Havoc 多 AoE 連發；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "跑外 + 走縫"
-              ]
-            },
-            {
-              "name": "Fire and Lightning 連凝視",
-              "type": "other",
-              "description": "Boss 連凝視 → 背對；依預兆走位處理。",
-              "tips": [
-                "背對 boss"
-              ]
-            },
-            {
-              "name": "Imperial Aether 末段",
-              "type": "raidwide",
-              "description": "末段大全屏 + DPS check；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "Free-Fall 過場",
+                    "mechanics": [
+                        {
+                            "name": "Free-Fall 自由落體",
+                            "type": "mechanic",
+                            "description": "場邊即死 + boss orb 從下 + 甜甜圈（拉中央）+ 白虎直線（走出）→ 落地大 AoE → 治療補滿。",
+                            "tips": [
+                                {"text": "拉中央避甜甜圈 + 閃直線", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "末段催爆發",
-                  "role": "dps"
+                    "name": "P2 + Enrage 12 分鐘",
+                    "mechanics": [
+                        {
+                            "name": "Hundredfold Havoc 百折之災",
+                            "type": "aoe",
+                            "description": "兩組箭頭方向 outward AoE → 第 1 爆後跑進已爆位置避第 2。",
+                            "tips": [
+                                {"text": "第 1 爆位 = 第 2 安全", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sweep Of The Leg 掃腿（無預警）",
+                            "type": "cone",
+                            "description": "State of Shock 後接無預警前扇 → slam 後立即站 boss 後。",
+                            "tips": [
+                                {"text": "slam 後立即繞背", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Gale Force 風暴 puddle",
+                            "type": "mechanic",
+                            "description": "T/H/DPS 各 1 玩家大 AoE puddle 標 → 拉開放 puddle（互疊團滅）+ Ominous Wind 同處理。",
+                            "tips": [
+                                {"text": "puddle 三角拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "P2 Roar of Thunder（DPS check）",
+                            "type": "raidwide",
+                            "description": "依白虎血量 + Aramata Orbs（更嚴格）→ 可考慮 T LB3 接 + Storm Pulse 連環。",
+                            "tips": [
+                                {"text": "T LB3 接 Roar 選項", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "12 分鐘 Enrage",
+                            "type": "raidwide",
+                            "description": "12 分鐘後連 4 Storm Pulse 強制團滅 → 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "12 分內秒 boss", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "State of Shock 雙連 → OT Provoke 接第 2 + 分兩半團接",
+                "Unrelenting Anguish + Ominous Wind 三人拉開 + 避 orb",
+                "Aramata 拉場邊放 puddle（不重疊）",
+                "Distant Clap = 全員貼 boss / OT 拉白虎遠",
+                "P2 Sweep of the Leg slam 後立即繞背 + Gale Force puddle 不重疊",
+                "12 分鐘 enrage → 必秒"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Byakko 白虎 機制：強化版 Roar + Sweep + Imperial Sword + 全屏拘束機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
