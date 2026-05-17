@@ -1,118 +1,234 @@
 {
-  "id": "minstrels_ballad_tsukuyomis_pain",
-  "name": "月夜見討滅絕境戰",
-  "nameEn": "The Minstrel's Ballad: Tsukuyomi's Pain - Tsukuyomi",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Tsukuyomi 月夜見：Plenilune Light 滿月光 + 月圓 + 鏡面機制。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.55 SB 月夜見絕境戰（Lv 70）。Boss 依序為 Tsukuyomi 月夜見。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "月夜見",
-      "nameEn": "Tsukuyomi",
-      "mnemonic": [
-        "Tsukuyomi 月夜見 機制：Plenilune Light 滿月光 + 月圓 + 鏡面機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "minstrels_ballad_tsukuyomis_pain",
+    "name": "月夜見討滅絕境戰",
+    "nameEn": "The Minstrel's Ballad: Tsukuyomi's Pain",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1（100%~80%）：Reprimand 全屏 → Nightfall 看 boss 拿槍 / 矛：槍 = Lead of the Underworld 集合分攤；矛 = Steel of the Underworld 3 連砍 → T / H / D 三組分位（每組各承 1 連砍，吃 2 連 = 死）。第二次 Nightfall 必用另一個武器。",
+        "P1 結束：Nightbloom 全屏 + Stun 進 Add 階段。",
+        "Add 階段：T 拉非連線 add（Specter of Homeland / Empire）；其他人轉火連線 add（Specter of Patriarch / Matriarch / Asahi / Zenos 影）。",
+        "Add 第 3 組 開場：Zenos 影 Concentrativity 擊退 + 10s Down for the Count → 短時間後 Dispersivity 連續全屏 → 速殺。三組殺完 → 全屏高傷。",
+        "P2（80%~35%）：Supreme Selenomancy 月相 → 隨機 Moonlit / Moonshadowed debuff（初始 4 stack）→ 站對側轉移 stack。Moonlights add 在一側讀 Lunar Halo 月環 AoE → 邊閃 stack。月相結束場地某色變主導 → debuff 管理更危險。",
+        "P2 Meteor 流星：3 玩家（OT / 1H / 1D）頭上紅紫標 → 在 4 方位選 3 個放（白 / 黑流星按地板色決定）→ 留 1 個方位空格為安全區。流星二次爆炸後留下對應色水池 → Antitwilight / Perilune 時須踩對應色池。",
+        "P2 Midnight Rain：場地變全白 / 黑 + boss 加 Full Moon / New Moon buff → 接 Antitwilight（白月，無 Veil of Shadow = 死）/ Perilune（黑月，無 Veil of Light = 死）。",
+        "P2 Zashiki-asobi 座敷遊戲 + Torment Unto Death（前扇 tank buster + 易傷 → 必須 tank swap）+ Reprimand 循環。",
+        "P3（35%~0%）：Dance of the Dead 高傷全屏進 P3。Full Moon → Waxing Grudge（近身圓）= 站遠 / New Moon → Waning Grudge（甜甜圈）= 站近 boss。",
+        "P3 Bright Blade（左 + 後）= 站右 / Dark Blade（右 + 後）= 站左，必須同時躲 Full / New Moon。Lunacy = 1 玩家分攤標 4 連 hit → 全員 stack 集合。",
+        "P3 Hagetsu = 紅標 T / H / D 各 1 → 散開拉開。Tsuki-no-Kakera = 座敷扇 + 中央扇先爆 → 站最後生成扇內躲。",
+        "Enrage：Lunacy（狂暴版）持續 stack AoE 直到團滅 → 必須在此前秒 boss。"
+    ],
+    "notes": "SB 4.3 trial（Lv 70，sync 70，ilvl 365，8 人 trial，時限 60 分），位於 Castrum Fluminis。為月夜見 Tsukuyomi 的 Ex 極版『Minstrel's Ballad』形式。掉落 ilvl 365 武器（Tsukuyomi 之武器系列 + Lunar Kamuy Fife 月夜笛子）。需先完成 Castrum Fluminis（normal MSQ trial）。需要熟記 P2 Selenomancy debuff 管理 + Meteor 三方位 + Midnight Rain 月色判斷。",
+    "bosses": [
         {
-          "name": "Tsukuyomi EX 主戰",
-          "mechanics": [
-            {
-              "name": "Moonsault 月翻",
-              "type": "tankbuster",
-              "description": "對 MT 單體死刑 buster；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "月夜見",
+            "nameEn": "Tsukuyomi",
+            "phases": [
                 {
-                  "text": "MT 大減傷 + ST swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Veil of the Wraith 鬼影之紗 (分身)",
-              "type": "mechanic",
-              "description": "點名 1 人與 Tsukuyomi 同顯示分身 → 全員背對 boss + 分身。",
-              "tips": [
-                "看連線點名 → 背向旋轉",
-                {
-                  "text": "補 Esuna 解石化",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Dark Blade 暗影劍",
-              "type": "aoe",
-              "description": "直線 AoE → 看劍位走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "預判劍劃方向"
-              ]
-            },
-            {
-              "name": "Suijin 水神 (擊退)",
-              "type": "knockback",
-              "description": "全屏擊退 + 場邊水流；不抗擊退 → 被吹下；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length 必開",
-                "貼中央吃最短"
-              ]
-            },
-            {
-              "name": "Banish 放逐",
-              "type": "stack",
-              "description": "點名分攤大 AoE → 全員集合分攤；全員集合分攤傷害 缺人會爆血。",
-              "tips": [
-                "全員集合分攤"
-              ]
-            },
-            {
-              "name": "Moonlight 月光 (gaze)",
-              "type": "gaze",
-              "description": "Boss 凝視 → 全員背對 boss；場上月光圈 → 不要踩；看到讀條按相機背對boss避免石化。",
-              "tips": [
-                "看到讀條按相機背對",
-                "走縫避月光圈"
-              ]
-            },
-            {
-              "name": "Lunar Adds 月之 adds",
-              "type": "add",
-              "description": "Boss 召喚 Foes of the Moon → 必須速殺；未殺 → 月燭點亮 → 場上 AoE 增加。",
-              "tips": [
-                {
-                  "text": "DPS 速殺月之 add",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Final Phase: 8 Lunar Adds + Despair",
-              "type": "raidwide",
-              "description": "Final phase 召喚 8 Lunar adds + 釋放 Despair 全屏 → enrage。",
-              "tips": [
-                {
-                  "text": "全員爆發殺 add + boss",
-                  "role": "dps"
+                    "name": "P1（100%~80%）",
+                    "mechanics": [
+                        {
+                            "name": "Reprimand 申斥",
+                            "type": "raidwide",
+                            "description": "全屏中傷 AoE。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Nightfall（槍 / 矛）",
+                            "type": "mechanic",
+                            "description": "讀條後 boss 拿出『槍』或『矛』→ 兩次 Nightfall 必用一槍一矛（順序隨機）。槍 = 接 Lead of the Underworld 全員集合分攤；矛 = 接 Steel of the Underworld 對 T / H / D 三個玩家連續 3 個前扇（吃 2 個 = 死）。",
+                            "tips": [
+                                {"text": "看 boss 武器判斷", "role": "dps"},
+                                {"text": "T+H+D 三角站位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Steel of the Underworld（矛 3 連扇）",
+                            "type": "cone",
+                            "description": "boss 對 T / H / D 各 1 名玩家連續 3 個大前扇 → 每組各承 1 連扇（雙 T 站前 + H 在 boss 後一側 + DPS 後另一側）。吃 2 連扇 = 致命傷。",
+                            "tips": [
+                                {"text": "雙 T 站前", "role": "tank"},
+                                {"text": "H + D 分後兩側", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Lead of the Underworld（槍 集合）",
+                            "type": "stack",
+                            "description": "boss 對玩家附直線分攤標 → 全員集合分攤。",
+                            "tips": [
+                                {"text": "全員集合", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Nightbloom（80% 階段轉場）",
+                            "type": "raidwide",
+                            "description": "boss 80% 血量讀條 Nightbloom → 全屏高傷 + Stun → 進 Add 階段。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "補極限治療",
-                  "role": "healer"
+                    "name": "Add 階段",
+                    "mechanics": [
+                        {
+                            "name": "3 組 add",
+                            "type": "add",
+                            "description": "3 組 add 出場。T 拉非連線 add（Specter of Homeland / Empire）；其他人轉火連線 add（Specter of Patriarch / Matriarch / Asahi / Zenos 影）。Add 對 Yotsuyu 造傷 = Suffering 條累積 → 100 = 團滅。",
+                            "tips": [
+                                {"text": "T 拉非連線 add", "role": "tank"},
+                                {"text": "DPS 集火連線 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Zenos 影（Concentrativity + Dispersivity）",
+                            "type": "knockback",
+                            "description": "第 3 組 add 開場 Zenos 影 Concentrativity 擊退 + 10s Down for the Count + 全屏中傷。隨後 Dispersivity 連續全屏 → 速殺。",
+                            "tips": [
+                                {"text": "全員速殺 Zenos 影", "role": "dps"},
+                                {"text": "預備治療連 Cure", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2（80%~35%）",
+                    "mechanics": [
+                        {
+                            "name": "Supreme Selenomancy 月相",
+                            "type": "mechanic",
+                            "description": "隨機賦予全員 Moonlit / Moonshadowed debuff（初始 4 stack）→ 站白側加 Moonlit、站黑側加 Moonshadowed。每 5s 累 1 stack，5 stack = Doom 致死。處理：debuff 站對側才能轉移 stack。同時 Moonlights add 在一側讀 Lunar Halo 月環 → 邊閃邊管 stack。場地某色逐漸主導 → debuff 管理變難。",
+                            "tips": [
+                                {"text": "Moonlit → 站黑側", "role": "dps"},
+                                {"text": "Moonshadowed → 站白側", "role": "dps"},
+                                {"text": "閃 Lunar Halo 月環", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor 流星（4 方位選 3）",
+                            "type": "mechanic",
+                            "description": "Nightfall 後 3 玩家（OT / 1H / 1D）頭上紅紫標 → 4 方位選 3 個放流星（白 / 黑流星依地板色）→ 留 1 方位空格為安全區。流星 2 次爆炸後留下對應色水池 → Antitwilight / Perilune 時須踩對應色池避免致死。",
+                            "tips": [
+                                {"text": "3 玩家放 3 方位留 1 空", "role": "dps"},
+                                {"text": "Antitwilight / Perilune 時踩對應色池", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Midnight Rain（Full / New Moon）",
+                            "type": "mechanic",
+                            "description": "場地變全白（Full Moon）或全黑（New Moon）→ boss 獲對應 buff。Antitwilight = Full Moon 時用，無 Veil of Shadow = 致死；Perilune = New Moon 時用，無 Veil of Light = 致死。需踩對應色水池。",
+                            "tips": [
+                                {"text": "看場色 + 踩對應水池", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Zashiki-asobi 座敷遊戲",
+                            "type": "aoe",
+                            "description": "場上 2 組舞扇 → 第 1 組（含中央 1 個）先爆 → 站 2 組覆蓋區後跑進已爆區。",
+                            "tips": [
+                                {"text": "站第 2 組覆蓋區後跑回", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Torment Unto Death 折磨之死",
+                            "type": "tankbuster",
+                            "description": "對 MT 前扇 tank buster + 加 Magic / Physical Vulnerability Up → 必須 tank swap。",
+                            "tips": [
+                                {"text": "Tank swap 換 MT", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3（35%~0%）",
+                    "mechanics": [
+                        {
+                            "name": "Dance of the Dead 亡者之舞",
+                            "type": "raidwide",
+                            "description": "高傷全屏 → 階段轉場信號。預備大團補與大減傷。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Full Moon → Waxing Grudge（站遠）",
+                            "type": "mechanic",
+                            "description": "boss 變白獲『Full Moon』buff → 使用 Bright/Dark Blade 時同時釋『Waxing Grudge』近身圓 AoE → 站遠 boss 躲避。圓內被擊中加 Damage Down。",
+                            "tips": [
+                                {"text": "Full Moon = 站遠 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "New Moon → Waning Grudge（站近）",
+                            "type": "mechanic",
+                            "description": "boss 變黑獲『New Moon』buff → 使用 Bright/Dark Blade 時同時釋『Waning Grudge』甜甜圈（donut）→ 站近 boss 躲避。圓環外被擊中加 Damage Down。",
+                            "tips": [
+                                {"text": "New Moon = 站近 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Bright Blade / Dark Blade（左右半場）",
+                            "type": "cone",
+                            "description": "Bright Blade = 左 + 後 → 站 boss 右側；Dark Blade = 右 + 後 → 站 boss 左側。必須同時躲 Full / New Moon 機制。被擊中加 1 Vuln Up + 1 Damage Down。",
+                            "tips": [
+                                {"text": "Bright = 站右 / Dark = 站左", "role": "dps"},
+                                {"text": "同時躲月色機制", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lunacy 月狂",
+                            "type": "stack",
+                            "description": "1 玩家頭上 stack 標記 → 全員集合分攤連續 4 次傷害。",
+                            "tips": [
+                                {"text": "全員集合", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hagetsu 破月",
+                            "type": "spread",
+                            "description": "T / H / D 各 1 玩家頭上紅標 → 中等濺射傷害 → 散開拉距。",
+                            "tips": [
+                                {"text": "三角散開站位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tsuki-no-Kakera 月之碎片",
+                            "type": "aoe",
+                            "description": "場上多個舞扇加中央 1 個 → 依序爆炸 → 玩家站最後生成扇內 → 中央扇爆後跑進中央。",
+                            "tips": [
+                                {"text": "站最後生成扇", "role": "dps"},
+                                {"text": "中央爆後回中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lunacy Enrage（狂暴）",
+                            "type": "mechanic",
+                            "description": "boss 進狂暴期 → Lunacy 連續 stack AoE 直到團滅 → 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Nightfall 槍 / 矛 → 槍 = stack / 矛 = T+H+D 三角分位",
+                "Add 階段 = T 拉非連線 + DPS 轉火連線 → 第 3 組 Zenos 影速殺",
+                "P2 Selenomancy → 對側站轉移 debuff + Lunar Halo 月環閃",
+                "P2 Meteor 4 方位選 3 + 留 1 空 + 踩對應色池",
+                "P2 Midnight Rain → 看場色判斷 Antitwilight (Full) / Perilune (New)",
+                "P3 Full Moon = 站遠 / New Moon = 站近 + Bright = 站右 / Dark = 站左",
+                "P3 Lunacy 集合 + Hagetsu 三角 + Tsuki-no-Kakera 站最後扇",
+                "P3 Lunacy enrage → 必須在此前秒 boss"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
