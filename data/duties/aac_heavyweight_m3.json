@@ -1,113 +1,176 @@
 {
-  "id": "aac_heavyweight_m3",
-  "name": "阿卡狄亞登天鬥技場 重量級3",
-  "nameEn": "AAC Heavyweight M3",
-  "expansion": "7.x 黃金遺產 (Dawntrail)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": 745,
-  "jobLevelSync": 100,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）鑄兵之令：看武器 → 斧（內爆遠離）、鐮（外環貼身）、劍（十字找縫）",
-    "2）彗星雨 3 連 → 被點名走場邊持續移動",
-    "3）統治的戰舞 7 連 → 連 7 次團補",
-    "4）霸王大漩渦 → 6 把武器序列，西/東風屬性會生成漩渦",
-    "5）轟擊 / 王者陨石 → 看分攤標記分組站",
-    "6）登天碎地 → 看 boss 面向的平台會被舉起並擲到對面"
-  ],
-  "notes": "DT 7.4 阿卡狄亞登天鬥技場 重量級3（M11 普通）。Boss 霸王（Overlord）使用斧/鐮/劍三種武器強化機制。資料來源：灰機 阿卡狄亚登天斗技场 重量级3/B（命名與技能 S→T）+ CGW Overlord walkthrough。",
-  "bosses": [
-    {
-      "name": "霸王",
-      "nameEn": "Overlord",
-      "phases": [
-        {
-          "name": "P1：鑄兵之令 + 彗星雨",
-          "mechanics": [
-            {
-              "name": "天頂的主宰 Zenith's Domain",
-              "type": "raidwide",
-              "description": "全體 AoE 大傷害；準備團補 + 減傷。",
-              "tips": [{"text": "團補 + 減傷", "role": "healer"}]
-            },
-            {
-              "name": "鑄兵之令：猛攻 Forge: Onslaught（武器選擇）",
-              "type": "aoe",
-              "description": "boss 生成武器：斧頭（半徑 8 米圓形 AoE，跑外）/ 鐮刀（環形安全內圈半徑 5 米，貼身）/ 大劍（十字寬 10 米 AoE，找縫）。記三種武器對應走位。",
-              "tips": [{"text": "斧→跑外；鐮→貼身；劍→找十字縫", "role": "dps"}]
-            },
-            {
-              "name": "彗星雨 Meteor Rain（3 連）",
-              "type": "spread",
-              "description": "點名所有玩家半徑 4 米圓形 AoE，連 3 次間隔 2 秒。被點名後位置出彗星風暴（同範圍再炸一次）。要點：被點玩家持續移動到下一個安全位。",
-              "tips": [{"text": "持續移動避免疊圈", "role": "dps"}]
-            },
-            {
-              "name": "歷戰之兵武 Weapon Legacy",
-              "type": "aoe",
-              "description": "場上 3 把武器（斧/鐮/劍各一）等邊三角形位置。boss 突進至連線的武器中心並發動對應 AoE（同猛攻）。看連線預判方向。",
-              "tips": [{"text": "看連線 → 預判 boss 衝向哪武器", "role": "tank"}]
-            },
-            {
-              "name": "統治的戰舞 War Dance（7 連）",
-              "type": "raidwide",
-              "description": "boss 持大劍連 7 次全體 AoE，最後一次傷害最高。最後一次後場上 6 道直線劍氣 → 6 秒後寬 10 米直線 AoE（兩對角必有 + 4 邊中 3 + 中央 1 方向）。",
-              "tips": [{"text": "團補 7 次 + 找縫站", "role": "healer"}]
-            },
-            {
-              "name": "鑄兵之令：轟擊 Forge: Bombardment",
-              "type": "stack",
-              "description": "boss 持斧。點名 ST 為分攤目標，其他非 T 玩家各自 6 米圓 AoE。boss 突進到 ST 位置接分攤。",
-              "tips": [{"text": "ST 站定接分攤", "role": "tank"}, {"text": "非 T 拉開散開", "role": "dps"}]
-            }
-          ]
-        },
-        {
-          "name": "P2：霸王大漩渦 + 後續轉場",
-          "mechanics": [
-            {
-              "name": "霸王大漩渦 Tornado",
-              "type": "mechanic",
-              "description": "全員生命降為 1，場地風屬性。連續 6 把武器（斧鐮劍各 2 次，前/後組）。西側 + 東側武器帶風屬性 → 用後留下大漩渦 add，會發動扇形 AoE 並擊退。需避開漩渦本身 + 後續強風 8 方扇形。",
-              "tips": [{"text": "T 拉穩 boss + 注意漩渦位置", "role": "tank"}, {"text": "全員避漩渦扇形", "role": "healer"}]
-            },
-            {
-              "name": "王者陨石 Overlord Comet",
-              "type": "spread",
-              "description": "每 2 秒選 4 名玩家位置生 6 米圓 AoE 預兆，共 3 組。預兆 4 秒後發動。被點名持續移位。",
-              "tips": [{"text": "被點立刻往無人處", "role": "dps"}]
-            },
-            {
-              "name": "登天碎地 Cleave the Earth",
-              "type": "mechanic",
-              "description": "boss 面向東/西側平台 → 8 秒後舉起該平台（上面玩家陷入無法戰鬥）並擲到另一塊平台發動寬 40 米直線 AoE。看面向決定哪塊平台會被舉起。",
-              "tips": [{"text": "看 boss 面向 → 跑對側平台", "role": "tank"}]
-            },
-            {
-              "name": "獸焰連尾擊 Beast Tail Strike",
-              "type": "cone",
-              "description": "boss 面向東/西，前方 90° 扇形（火屬性）+ 後方 90° 扇形（無屬性）。站側面 90° 內為安全。",
-              "tips": [{"text": "T 拉到場邊側面為安全", "role": "tank"}]
-            },
-            {
-              "name": "碎心踢 Heart Crush",
-              "type": "stack",
-              "description": "boss 為中心 4 米連續分攤塔，5 次間隔 2 秒。無人接 → 大冲擊全體大傷。指定團員上塔。",
-              "tips": [{"text": "指定團員上塔", "role": "tank"}]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "斧→跑外；鐮→貼身；劍→找縫",
-        "彗星雨 3 連 → 移動避疊圈",
-        "戰舞 7 連 → 7 次團補",
-        "大漩渦 → 避漩渦扇形",
-        "登天碎地 → 看面向跑對側",
-        "碎心踢 → 指定接分攤"
-      ]
-    }
-  ]
+    "id":  "aac_heavyweight_m3",
+    "name":  "阿卡狄亞登天鬥技場 重量級3",
+    "nameEn":  "AAC Heavyweight M3",
+    "expansion":  "7.x 黃金遺產 (Dawntrail)",
+    "type":  "raid",
+    "playerCount":  8,
+    "iLvlSync":  745,
+    "jobLevelSync":  100,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）鑄兵之令：看武器 → 斧（內爆遠離）、鐮（外環貼身）、劍（十字找縫）",
+                     "2）彗星雨 3 連 → 被點名走場邊持續移動",
+                     "3）統治的戰舞 7 連 → 連 7 次團補",
+                     "4）霸王大漩渦 → 6 把武器序列，西/東風屬性會生成漩渦",
+                     "5）轟擊 / 王者陨石 → 看分攤標記分組站",
+                     "6）登天碎地 → 看 boss 面向的平台會被舉起並擲到對面"
+                 ],
+    "notes":  "DT 7.4 阿卡狄亞登天鬥技場 重量級3（M11 普通）。Boss 霸王（Overlord）使用斧/鐮/劍三種武器強化機制。資料來源：灰機 阿卡狄亚登天斗技场 重量级3/B（命名與技能 S→T）+ CGW Overlord walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "霸王",
+                       "nameEn":  "Overlord",
+                       "phases":  [
+                                      {
+                                          "name":  "P1：鑄兵之令 + 彗星雨",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "天頂的主宰 Zenith\u0027s Domain",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體 AoE 大傷害；準備團補 + 減傷。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補 + 減傷",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "鑄兵之令：猛攻 Forge: Onslaught（武器選擇）",
+                                                                "type":  "aoe",
+                                                                "description":  "boss 生成武器：斧頭（半徑 8 米圓形 AoE，跑外）/ 鐮刀（環形安全內圈半徑 5 米，貼身）/ 大劍（十字寬 10 米 AoE，找縫）。記三種武器對應走位。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "斧→跑外；鐮→貼身；劍→找十字縫",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "彗星雨 Meteor Rain（3 連）",
+                                                                "type":  "spread",
+                                                                "description":  "點名所有玩家半徑 4 米圓形 AoE，連 3 次間隔 2 秒。被點名後位置出彗星風暴（同範圍再炸一次）。要點：被點玩家持續移動到下一個安全位。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "持續移動避免疊圈",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "歷戰之兵武 Weapon Legacy",
+                                                                "type":  "aoe",
+                                                                "description":  "場上 3 把武器（斧/鐮/劍各一）等邊三角形位置。boss 突進至連線的武器中心並發動對應 AoE（同猛攻）。看連線預判方向。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看連線 → 預判 boss 衝向哪武器",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "統治的戰舞 War Dance（7 連）",
+                                                                "type":  "raidwide",
+                                                                "description":  "boss 持大劍連 7 次全體 AoE，最後一次傷害最高。最後一次後場上 6 道直線劍氣 → 6 秒後寬 10 米直線 AoE（兩對角必有 + 4 邊中 3 + 中央 1 方向）。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "團補 7 次 + 找縫站",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "鑄兵之令：轟擊 Forge: Bombardment",
+                                                                "type":  "stack",
+                                                                "description":  "boss 持斧。點名 ST 為分攤目標，其他非 T 玩家各自 6 米圓 AoE。boss 突進到 ST 位置接分攤。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "ST 站定接分攤",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "非 T 拉開散開",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2：霸王大漩渦 + 後續轉場",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "霸王大漩渦 Tornado",
+                                                                "type":  "mechanic",
+                                                                "description":  "全員生命降為 1，場地風屬性。連續 6 把武器（斧鐮劍各 2 次，前/後組）。西側 + 東側武器帶風屬性 → 用後留下大漩渦 add，會發動扇形 AoE 並擊退。需避開漩渦本身 + 後續強風 8 方扇形。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 拉穩 boss + 注意漩渦位置",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "全員避漩渦扇形",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "王者陨石 Overlord Comet",
+                                                                "type":  "spread",
+                                                                "description":  "每 2 秒選 4 名玩家位置生 6 米圓 AoE 預兆，共 3 組。預兆 4 秒後發動。被點名持續移位。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被點立刻往無人處",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "登天碎地 Cleave the Earth",
+                                                                "type":  "mechanic",
+                                                                "description":  "boss 面向東/西側平台 → 8 秒後舉起該平台（上面玩家陷入無法戰鬥）並擲到另一塊平台發動寬 40 米直線 AoE。看面向決定哪塊平台會被舉起。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看 boss 面向 → 跑對側平台",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "獸焰連尾擊 Beast Tail Strike",
+                                                                "type":  "cone",
+                                                                "description":  "boss 面向東/西，前方 90° 扇形（火屬性）+ 後方 90° 扇形（無屬性）。站側面 90° 內為安全。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 拉到場邊側面為安全",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "碎心踢 Heart Crush",
+                                                                "type":  "stack",
+                                                                "description":  "boss 為中心 4 米連續分攤塔，5 次間隔 2 秒。無人接 → 大冲擊全體大傷。指定團員上塔。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "指定團員上塔",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "斧→跑外；鐮→貼身；劍→找縫",
+                                        "彗星雨 3 連 → 移動避疊圈",
+                                        "戰舞 7 連 → 7 次團補",
+                                        "大漩渦 → 避漩渦扇形",
+                                        "登天碎地 → 看面向跑對側",
+                                        "碎心踢 → 指定接分攤"
+                                    ]
+                   }
+               ]
 }

@@ -1,144 +1,144 @@
 {
-  "id": "a_relic_reborn_the_chimera",
-  "name": "死化奇美拉討伐戰",
-  "nameEn": "A Relic Reborn: The Chimera",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": 52,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "1）打斷『雷電咆哮 The Dragon Voice』『寒冰咆哮 The Ram Voice』",
-    "2）冰咆哮 → 遠離 boss（近戰退出），雷咆哮 → 貼近 boss（遠程進近戰）",
-    "3）帶電/帶冰 buff → 對應吐息變即時，更危險",
-    "4）寒冰眼地板冰圈、嘈雜噪音追蹤球 → 都要主動移動",
-    "5）保持 Esuna 清除冻伤/麻痺/加重"
-  ],
-  "notes": "ARR 2.16 上古武器（Relic Weapon）任務鏈八人討伐戰（Lv 50），地點：庫爾札斯中央高地。資料來源：灰機 死化奇美拉讨伐战/B（命名與技能 S→T）+ CGW Dhorme Chimera 機制 walkthrough。",
-  "bosses": [
-    {
-      "name": "死化奇美拉",
-      "nameEn": "Dhorme Chimera",
-      "phases": [
-        {
-          "name": "主戰（雙頭咆哮 + 三頭吐息）",
-          "mechanics": [
-            {
-              "name": "蝎尾毒刺 Scorpion's Sting",
-              "type": "cone",
-              "description": "背後 90° 扇形 AoE，附加 30 秒『中毒』DoT。任何人都不要站 boss 屁股；T 把 boss 朝場邊面外，DPS 站側面。",
-              "tips": [
-                {
-                  "text": "T 將 boss 朝牆面對外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "雷電咆哮 The Dragon's Voice",
-              "type": "interrupt",
-              "description": "可打斷的環形 AoE，對非近戰範圍（middle/long）造成大傷害並附『麻痺』。沒打斷時遠程/治療『進近戰範圍』躲避；打斷優先級高，DPS 看到吟唱條立刻 Interject / Head Graze / 眩暈。",
-              "tips": [
-                {
-                  "text": "看到吟唱 → 全員嘗試打斷",
-                  "role": "dps"
-                },
-                {
-                  "text": "沒打斷 → 遠程治療立即進近戰範圍",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "寒冰咆哮 The Ram's Voice",
-              "type": "interrupt",
-              "description": "可打斷的圓形 AoE，對近 boss 範圍造成大傷害並附『凍傷』。沒打斷時近戰立即『退出』近戰範圍；打斷一樣優先。",
-              "tips": [
-                {
-                  "text": "沒打斷 → 近戰立刻退出 melee 圈",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "雷電吐息 Dragon's Breath",
-              "type": "cone",
-              "description": "boss 左前方扇形 AoE 附麻痺。T 朝場邊，左前方無人即可。boss 帶『帶電』buff 時此招變為即時無吟唱。",
-              "tips": [
-                {
-                  "text": "T 控制方向避免隊友吃到",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "寒冰吐息 Ram's Breath",
-              "type": "cone",
-              "description": "boss 右前方扇形 AoE 附加重。boss 帶『帶冰』buff 時此招即時無吟唱。",
-              "tips": [
-                "DPS 注意 boss 右前方"
-              ]
-            },
-            {
-              "name": "火焰吐息 Lion's Breath",
-              "type": "cone",
-              "description": "boss 正前方 180° 扇形 AoE，無吟唱時間（即時）。只能反應、不能預判；建議所有人避免站 boss 正前方。",
-              "tips": [
-                {
-                  "text": "T 拉穩讓近戰固定站側後",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "帶電 Static Charge / 帶冰 Gelid Charge",
-              "type": "mechanic",
-              "description": "boss 對自身施加 buff：『帶電』(左頭發光) → 雷電吐息即時、雷電咆哮吟唱縮短、嘈雜噪音追蹤球變大變快；『帶冰』(右頭發光) → 寒冰吐息即時、寒冰咆哮範圍變大且附加重、寒冰眼陷阱持續延長。觀察哪個頭發光即可預判即將被強化的技能。",
-              "tips": [
-                {
-                  "text": "看哪顆頭發光 → 預判防範",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "寒冰眼 Ram's Keeper",
-              "type": "spread",
-              "description": "點名一名玩家對其位置釋放冰屬性圓形 AoE，附『凍傷』+『加重』，並在該位置留下持續 60 秒（帶冰下 90 秒）的冰圈，進入冰圈會吃凍傷。被點名者往場邊角落放置。",
-              "tips": [
-                {
-                  "text": "被點名 → 立刻往場邊放置",
-                  "role": "dps"
-                },
-                {
-                  "text": "避開地上冰圈陷阱",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "嘈雜噪音 Cacophony",
-              "type": "spread",
-              "description": "boss 對一名玩家生成追蹤型紫色球體『嘈雜的噪音』，接觸玩家會炸開造成範圍傷害 + 30 秒麻痺。被追蹤者持續移動引誘球到無人處或繞圈遛球。",
-              "tips": [
-                {
-                  "text": "被追蹤 → 持續移動，遠離隊友",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "雷咆哮 → 進近戰；冰咆哮 → 退出近戰",
-        "打斷雷/冰咆哮優先級最高",
-        "帶電/帶冰 buff → 看頭發光預判",
-        "寒冰眼 → 場邊放冰圈",
-        "嘈雜噪音 → 持續遛球"
-      ]
-    }
-  ]
+    "id":  "a_relic_reborn_the_chimera",
+    "name":  "死化奇美拉討伐戰",
+    "nameEn":  "A Relic Reborn: The Chimera",
+    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  52,
+    "jobLevelSync":  50,
+    "highEnd":  false,
+    "quality":  "needs-update",
+    "mnemonic":  [
+                     "1）打斷『雷電咆哮 The Dragon Voice』『寒冰咆哮 The Ram Voice』",
+                     "2）冰咆哮 → 遠離 boss（近戰退出），雷咆哮 → 貼近 boss（遠程進近戰）",
+                     "3）帶電/帶冰 buff → 對應吐息變即時，更危險",
+                     "4）寒冰眼地板冰圈、嘈雜噪音追蹤球 → 都要主動移動",
+                     "5）保持 Esuna 清除冻伤/麻痺/加重"
+                 ],
+    "notes":  "ARR 2.16 上古武器（Relic Weapon）任務鏈八人討伐戰（Lv 50），地點：庫爾札斯中央高地。資料來源：灰機 死化奇美拉讨伐战/B（命名與技能 S→T）+ CGW Dhorme Chimera 機制 walkthrough。",
+    "bosses":  [
+                   {
+                       "name":  "死化奇美拉",
+                       "nameEn":  "Dhorme Chimera",
+                       "phases":  [
+                                      {
+                                          "name":  "主戰（雙頭咆哮 + 三頭吐息）",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "蝎尾毒刺 Scorpion\u0027s Sting",
+                                                                "type":  "cone",
+                                                                "description":  "背後 90° 扇形 AoE，附加 30 秒『中毒』DoT。任何人都不要站 boss 屁股；T 把 boss 朝場邊面外，DPS 站側面。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 將 boss 朝牆面對外",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雷電咆哮 The Dragon\u0027s Voice",
+                                                                "type":  "interrupt",
+                                                                "description":  "可打斷的環形 AoE，對非近戰範圍（middle/long）造成大傷害並附『麻痺』。沒打斷時遠程/治療『進近戰範圍』躲避；打斷優先級高，DPS 看到吟唱條立刻 Interject / Head Graze / 眩暈。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看到吟唱 → 全員嘗試打斷",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "沒打斷 → 遠程治療立即進近戰範圍",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "寒冰咆哮 The Ram\u0027s Voice",
+                                                                "type":  "interrupt",
+                                                                "description":  "可打斷的圓形 AoE，對近 boss 範圍造成大傷害並附『凍傷』。沒打斷時近戰立即『退出』近戰範圍；打斷一樣優先。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "沒打斷 → 近戰立刻退出 melee 圈",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "雷電吐息 Dragon\u0027s Breath",
+                                                                "type":  "cone",
+                                                                "description":  "boss 左前方扇形 AoE 附麻痺。T 朝場邊，左前方無人即可。boss 帶『帶電』buff 時此招變為即時無吟唱。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 控制方向避免隊友吃到",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "寒冰吐息 Ram\u0027s Breath",
+                                                                "type":  "cone",
+                                                                "description":  "boss 右前方扇形 AoE 附加重。boss 帶『帶冰』buff 時此招即時無吟唱。",
+                                                                "tips":  [
+                                                                             "DPS 注意 boss 右前方"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "火焰吐息 Lion\u0027s Breath",
+                                                                "type":  "cone",
+                                                                "description":  "boss 正前方 180° 扇形 AoE，無吟唱時間（即時）。只能反應、不能預判；建議所有人避免站 boss 正前方。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "T 拉穩讓近戰固定站側後",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "帶電 Static Charge / 帶冰 Gelid Charge",
+                                                                "type":  "mechanic",
+                                                                "description":  "boss 對自身施加 buff：『帶電』(左頭發光) → 雷電吐息即時、雷電咆哮吟唱縮短、嘈雜噪音追蹤球變大變快；『帶冰』(右頭發光) → 寒冰吐息即時、寒冰咆哮範圍變大且附加重、寒冰眼陷阱持續延長。觀察哪個頭發光即可預判即將被強化的技能。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "看哪顆頭發光 → 預判防範",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "寒冰眼 Ram\u0027s Keeper",
+                                                                "type":  "spread",
+                                                                "description":  "點名一名玩家對其位置釋放冰屬性圓形 AoE，附『凍傷』+『加重』，並在該位置留下持續 60 秒（帶冰下 90 秒）的冰圈，進入冰圈會吃凍傷。被點名者往場邊角落放置。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被點名 → 立刻往場邊放置",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "避開地上冰圈陷阱",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "嘈雜噪音 Cacophony",
+                                                                "type":  "spread",
+                                                                "description":  "boss 對一名玩家生成追蹤型紫色球體『嘈雜的噪音』，接觸玩家會炸開造成範圍傷害 + 30 秒麻痺。被追蹤者持續移動引誘球到無人處或繞圈遛球。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "被追蹤 → 持續移動，遠離隊友",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ],
+                       "mnemonic":  [
+                                        "雷咆哮 → 進近戰；冰咆哮 → 退出近戰",
+                                        "打斷雷/冰咆哮優先級最高",
+                                        "帶電/帶冰 buff → 看頭發光預判",
+                                        "寒冰眼 → 場邊放冰圈",
+                                        "嘈雜噪音 → 持續遛球"
+                                    ]
+                   }
+               ]
 }
