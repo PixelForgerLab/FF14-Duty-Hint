@@ -1,98 +1,181 @@
 {
-  "id": "minstrels_ballad_hadess_elegy",
-  "name": "哈帝斯討滅絕境戰",
-  "nameEn": "The Minstrel's Ballad: Hades's Elegy - Hades",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "Death of Death 死亡之死：點名圓 AoE。",
-    "Polydeuces 雙子：召喚雙頭 add。",
-    "Bident 雙叉戟：MT 死刑 buster。",
-    "哈帝斯絕境戰：強化版多階段機制。"
-  ],
-  "notes": "ShB 5.0 蛮神哈帝斯絕境戰（Lv 80）。劇情緊接 Amaurot 終戰，Hades 哈帝斯使用 Polydeuces 雙子與 Bident 雙叉戟，強化版絕境戰機制更密集。",
-  "bosses": [
-    {
-      "name": "哈帝斯",
-      "nameEn": "Hades",
-      "phases": [
+    "id": "minstrels_ballad_hadess_elegy",
+    "name": "哈帝斯討滅絕境戰",
+    "nameEn": "The Minstrel's Ballad: Hades's Elegy - Hades",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Ancient Double 古代雙重 = boss 自附 buff → 所有招式變雙重釋放。場邊欄杆初期防止掉落，後期會破壞。",
+        "P1 Shadowspread 影擴散 = 全員雙重點名前扇 → 8 方位站位（時鐘）→ 第 1 扇後側步避第 2。Bad Faith 惡信仰 = 中央紫牆雙向箭 → 站無箭側 → 第 2 次反轉（無預警）→ 換到對側。",
+        "P1 Ravenous Assault 殘暴突擊 = 雙 hit AoE tankbuster（雙重）→ 單 T invul 吃雙或 tank swap 換 T。",
+        "P1 Arcane Utterance + Control（紅球 / 藍鏡）：紅球 = 場上多紅球缺 1 個 → 站缺失位置避爆；藍鏡 = 場上多鏡缺 1 個 + 中央鏡指向缺位 → 站缺失『對面』鏡後（缺位不安全）。",
+        "P1 Broken Faith 破碎信仰 = 多個藍圓從天降下 + 慢落地爆 → 避前幾個 → 跑進已爆位置避新圓。地板花紋指示爆炸半徑。比一般 Hard 版多很多圓。",
+        "P1 結尾 Ancient Dark IV DPS check = boss 進狂暴狀態 + 強制讀條 → 必須打到 10% 過階段。",
+        "Shade of Nabriales：Quake III 長讀條 + DPS check（血量決定傷害，<50% 安全）。場上 pair 彗星 → 1 人 / 圓接 → 雙 T 接彗星（用 cooldown）+ DPS 維持 uptime。4 Shadow of the Ancients 連線 DPS → 拉開避免互打。後 Ancient Water III 雙奶 stack + Ancient Darkness 雙 T 圓。",
+        "Shades of Igeyorhm & Lahabrea：兩 tankable add 釋 Fire/Blizzard Sphere → 全員獲 Fire Brand / Freezing Brand → Fire Brand 打 Igeyorhm（冰）/ Freezing 打 Lahabrea（火）。4 Shadow 連線兩冰兩火 → 接元素 brand 對應的相反元素 tether（T+H 接 + DPS 維持 uptime）。",
+        "兩 add 後變 Ascian Prime → Universal Manipulation 全員血降至個位數 → debuff 套組：T+H = Doom（補滿解）+ Ancient Circle（甜甜圈）+ Cursed Shriek（視線石化）；DPS = Beyond Death（致死才解）+ Off-Balance（被擊中擊退）+ Forked Lightning（爆炸 AoE）。",
+        "Ascian Prime 處理：T+H 站 4 方位中央 → DPS 各自背對外緣站 T/H 後 → T/H 的 Ancient Circle 殺 DPS 解 Beyond Death + Off-Balance 把 DPS 擊退到場邊 → DPS 轉背避 Cursed Shriek 石化 → Forked Lightning 爆炸於場邊。",
+        "Ascian Prime 後續：Blight 全屏 + 30s 流血（治療連續補）→ Height Of Chaos 大 tankbuster → 循環直到擊敗。"
+    ],
+    "notes": "ShB 5.1 trial（Lv 80，sync 80，ilvl 465，8 人 trial，時限 60 分），位於 The Dying Gasp 瀕死之喘息（Hades's Elegy 即 minstrel 版）。為 ShB 主線『感謝的反叛者』前期 - 阿斯丁斯之首『艾默特賽爾克』Hades 化身的極限版。劇情：Emet-Selch 在悲嘆世界揭露阿斯丁斯歷史的最終戰 Ex 版。掉落 ilvl 480 武器（10 totems）+ Hades Card。整場致敬古代人歷史與多位 ascian 出場 → 機制密度極高。",
+    "bosses": [
         {
-          "name": "Hades EX",
-          "mechanics": [
-            {
-              "name": "Bident MT line 雙叉戟",
-              "type": "tankbuster",
-              "description": "MT line buster 三叉戟；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "哈帝斯",
+            "nameEn": "Hades",
+            "phases": [
                 {
-                  "text": "MT 拉外 + 開減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Telos AoE 終極",
-              "type": "aoe",
-              "description": "Boss line AoE 朝玩家；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側步閃"
-              ]
-            },
-            {
-              "name": "Ravenous Assault 強化",
-              "type": "tankbuster",
-              "description": "MT 連段 buster + Vuln Up；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1（Ancient Double 雙重）",
+                    "mechanics": [
+                        {
+                            "name": "Ancient Double + 場邊欄",
+                            "type": "mechanic",
+                            "description": "boss 自附 buff → 所有招式雙重釋放。場邊欄初期防止掉落，後期會破壞 → 注意位置。",
+                            "tips": [
+                                {"text": "所有招式雙重 → 預判第 2 次", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Shadowspread 影擴散",
+                            "type": "cone",
+                            "description": "全員雙重點名前扇 → 8 方位站位（時鐘）→ 第 1 扇後側步避第 2。",
+                            "tips": [
+                                {"text": "8 方位站 + 側步避雙", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Bad Faith 惡信仰（雙重牆）",
+                            "type": "aoe",
+                            "description": "中央紫牆雙向箭 → 站無箭側 → 第 2 次反轉（無預警）→ 換到對側。",
+                            "tips": [
+                                {"text": "第 1 避箭側 → 第 2 反轉換邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ravenous Assault 殘暴突擊",
+                            "type": "tankbuster",
+                            "description": "雙 hit AoE tankbuster（雙重）→ 單 T invul 吃雙 或 tank swap 換 T。",
+                            "tips": [
+                                {"text": "invul 雙吃 / 或 swap", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Arcane Utterance + Control（紅球 / 藍鏡）",
+                            "type": "mechanic",
+                            "description": "紅球 = 場上多紅球缺 1 個 → 站缺失位置避爆；藍鏡 = 多鏡缺 1 個 + 中央鏡指向缺位 → 站缺失『對面』鏡後（缺位不安全）。",
+                            "tips": [
+                                {"text": "紅球 = 站缺位 / 藍鏡 = 站對面缺位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Broken Faith 破碎信仰（藍圓雨）",
+                            "type": "aoe",
+                            "description": "多個藍圓從天降下 + 慢落地爆 → 避前幾個 → 跑進已爆位置避新圓。地板花紋指示爆炸半徑。比 Hard 多很多。",
+                            "tips": [
+                                {"text": "已爆位置安全", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ancient Dark IV（DPS check）",
+                            "type": "raidwide",
+                            "description": "boss 進狂暴 + 強制讀條 → 必須打到 10% 過階段 → 否則團滅。",
+                            "tips": [
+                                {"text": "DPS 全力推到 10%", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT/OT 換手",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Polydegmon's Purgation 萬有清滌",
-              "type": "other",
-              "description": "場分多 segment + 凝視 + 強制位移；依預兆走位處理。",
-              "tips": [
-                "背對 + 站對 segment"
-              ]
-            },
-            {
-              "name": "Hellfire Burst 地獄火",
-              "type": "raidwide",
-              "description": "全屏 + 多元素 AoE 圈散；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "Shade of Nabriales",
+                    "mechanics": [
+                        {
+                            "name": "Nabriales Quake III + 彗星",
+                            "type": "add",
+                            "description": "Nabriales 影長讀 Quake III（血量決定傷害，<50% 才安全）+ 場上 pair 彗星圓 → 雙 T 接彗星（用 cooldown）+ DPS 維持 uptime 打 Nabriales。",
+                            "tips": [
+                                {"text": "雙 T 接彗星", "role": "tank"},
+                                {"text": "DPS 全力打 Nabriales <50%", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Shadow of the Ancients 連線",
+                            "type": "aoe",
+                            "description": "4 Shadow of the Ancients 連線 4 DPS → 拉開避免互打。後續 Ancient Water III 雙奶 stack + Ancient Darkness 雙 T 圓 → 兩光隊分散。",
+                            "tips": [
+                                {"text": "被連 DPS 拉開引導", "role": "dps"},
+                                {"text": "雙奶 stack 分兩光隊", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員減傷 + 散",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Doom debuff 末日",
-              "type": "other",
-              "description": "全員掛 Doom + Magic Vuln，需強補解；依預兆走位處理。",
-              "tips": [
+                    "name": "Shades of Igeyorhm & Lahabrea",
+                    "mechanics": [
+                        {
+                            "name": "Fire Brand / Freezing Brand",
+                            "type": "mechanic",
+                            "description": "Igeyorhm（冰）+ Lahabrea（火）兩 tankable add 釋 Fire/Blizzard Sphere → 全員獲 Fire Brand 或 Freezing Brand。Fire Brand → 打 Igeyorhm（冰）/ Freezing → 打 Lahabrea（火）。",
+                            "tips": [
+                                {"text": "看 brand → 打反元素 add", "role": "dps"},
+                                {"text": "T 拉對應 brand", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "4 元素連線（雙冰雙火）",
+                            "type": "aoe",
+                            "description": "4 Shadow of the Ancients 連線兩冰兩火 → 接元素 brand 對應『相反』元素 tether（T+H 接 + DPS 維持 uptime）。",
+                            "tips": [
+                                {"text": "T+H 接相反元素 tether", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "強補 + 連補",
-                  "role": "healer"
+                    "name": "Ascian Prime",
+                    "mechanics": [
+                        {
+                            "name": "Universal Manipulation 普遍操縱",
+                            "type": "mechanic",
+                            "description": "全員血降至個位數 + 角色 debuff 套組。T+H = Doom（補滿解）+ Ancient Circle（甜甜圈）+ Cursed Shriek（視線石化）；DPS = Beyond Death（致死才解）+ Off-Balance（被擊中擊退）+ Forked Lightning（爆炸 AoE）。",
+                            "tips": [
+                                {"text": "治療立即補滿解 Doom", "role": "healer"},
+                                {"text": "DPS 站 T/H 後吃 Circle 解 Beyond Death", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "T/H 中央 + DPS 後對外",
+                            "type": "mechanic",
+                            "description": "T+H 站 4 方位中央 → DPS 各自背對外緣站 T/H 後 → T/H 的 Ancient Circle 殺 DPS 解 Beyond Death + Off-Balance 把 DPS 擊退到場邊 → DPS 轉背避 Cursed Shriek 石化 → Forked Lightning 爆炸於場邊。",
+                            "tips": [
+                                {"text": "T+H 站中央 4 方位", "role": "tank"},
+                                {"text": "DPS 背對外站 T/H 後", "role": "dps"},
+                                {"text": "擊退後轉背避視線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Blight + Height Of Chaos",
+                            "type": "mechanic",
+                            "description": "Blight = 全屏 + 30s 流血（治療連續補）→ Height Of Chaos 大 tankbuster → 循環直到擊敗。",
+                            "tips": [
+                                {"text": "Blight 後連續團補 30s", "role": "healer"},
+                                {"text": "MT 開大減傷接 Height", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Ancient Double → 所有招雙重",
+                "P1 Bad Faith 第 1 避箭側 → 第 2 反轉換邊",
+                "P1 Arcane Utterance：紅球 = 站缺位 / 藍鏡 = 站對面缺位",
+                "Nabriales Quake III <50% 安全 + 雙 T 接彗星",
+                "Igeyorhm/Lahabrea：看 brand 打相反元素 add + T+H 接相反元素 tether",
+                "Ascian Prime：T+H 中央 / DPS 背對外站 T/H 後 → 擊退轉背 + 補滿解 Doom"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Death of Death 死亡之死 → 點名圓",
-        "Polydeuces 雙子 → 召喚 add + 直線",
-        "Bident 雙叉戟 → MT 大減傷",
-        "全屏 AoE → 預備團補"
-      ]
-    }
-  ]
+    ]
 }

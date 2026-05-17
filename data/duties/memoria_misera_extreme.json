@@ -1,103 +1,201 @@
 {
-  "id": "memoria_misera_extreme",
-  "name": "苦痛記憶殲殛戰",
-  "nameEn": "Memoria Misera (Extreme) - Varis yae Galvus",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Varis yae Galvus 瓦里斯：Magitek 機甲 + Heart of Sword 劍之心 + 召喚加雷馬軍 add。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.25 ShB 苦痛記憶殲殛戰（Lv 80）。Boss 依序為 Varis yae Galvus 瓦里斯。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "瓦里斯",
-      "nameEn": "Varis yae Galvus",
-      "phases": [
+    "id": "memoria_misera_extreme",
+    "name": "苦痛記憶殲殛戰",
+    "nameEn": "Memoria Misera (Extreme) - Varis yae Galvus",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "場地：方形 + 場邊發光牆 → 觸到 Confines Of Memory 被囚禁 + 高 DoT + 無法行動 → 隊友速殺石牢救人。Duty gauge『Charge』條決定 Gunshield 招式釋放時機。",
+        "Gunshield 3 招（Charge 滿才放）：Loaded = 全員圓 AoE → 散開；Reinforced = boss 雙側護盾（攻擊有盾側 = 擊退 + debuff）→ 停手等待識別；Electrified = boss 為中心擊退 → 站場中央或防擊退。",
+        "P1 Altius + Terminus Est = 全屏 + 玩家當下位置和面向留 X 形標 → 後 X 標釋直線 AoE 過場 → 集合背 boss + MT 前 boss 互朝 → X 標相互蓋住 → 兩側安全。",
+        "P1 Alea Iacta Est = boss 連續 4 個 180° 前扇 + 最後 1 個延後背扇 → 前 4 站背 + 最後 1 換到前。期間第一次 Terminus Est X 標未解。",
+        "P1 Citius = 雙 T 大前扇 tankbuster → 雙 T 集合 share 或單 T invul。Ignis Est = 點非 T 玩家直線 + 同時點下圓 AoE → 集合 bait → 移開避線 + 圓。",
+        "P1 Festina Lente = 雙奶 stack 標 → 4-4 分兩光小隊各跟 1 奶。Ventus Est = 同 Ignis Est 但中央改成甜甜圈 → 站中央 + bait 直線。",
+        "P1 結尾 Vivere Militare Est = boss 出場 + 雙脈衝箭 → 雙 T 各接 1 脈衝 ATM → 其他人秒掉脈衝 → DPS check。",
+        "P2 三種 Gunshield mini-phase 隨機循環：Electrified = 5 砲台（3 可打 + 2 連線 T）+ 北方 clone X 標 + 知道 safe lane → 處理擊退 + Alea Iacta Est；Loaded = Ignis Est + clone X + Festina Lente + Citius；Reinforced = Altius+Terminus + 雙盾 + Ventus + Citius。",
+        "P2 完成三 Gunshield → boss 跳北 hard-cast Altius DPS check + Magitek Shield 護盾 → 隨機 Magitek Torch（全員 stack 在 T 後）/ Magitek Spark（散開半圓）→ 必須在 Altius 讀完前秒掉護盾。",
+        "P3 Loaded Gunshield #2：Fortius = 4 cleave（第 1 不可閃 + 留 puddle，其餘 3 順 / 逆時針旋轉）→ 預先 8 方位散開放 puddle → 站不動避第 2 → 跟旋轉側避第 3+4。後 Festina Lente + Citius。",
+        "P3 Electrified Gunshield #2：Fortius + 北方 clone X + 擊退 → 走 safe lane + 防擊退。後續循環之前見過的招式組合。"
+    ],
+    "notes": "ShB 5.3 trial（Lv 80，sync 80，ilvl 490，8 人 trial，時限 60 分），位於 Memoria Misera 苦痛記憶之地。為 ShB 5.3『感謝的反叛者』追加的極限 trial - 與 Varis yae Galvus 加雷馬帝皇瓦里斯（已死）的記憶幻影戰。劇情：在『犧牲之座』之前的記憶副本 → 玩家對抗瓦里斯的最後智慧。掉落 Varis Card + Memoria Misera 武器配方（10 totems）。整場機制密集，Gunshield Charge 條為核心節奏。",
+    "bosses": [
         {
-          "name": "Varis EX 主戰",
-          "mechanics": [
-            {
-              "name": "Slash 連環斬",
-              "type": "tankbuster",
-              "description": "MT 直線 buster + 後續 cleave；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "瓦里斯",
+            "nameEn": "Varis yae Galvus",
+            "phases": [
                 {
-                  "text": "MT 大減傷 + ST swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Falling Vapor 落霧",
-              "type": "aoe",
-              "description": "場上多 AoE 圓 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Magitek Magnetism 魔導磁力",
-              "type": "mechanic",
-              "description": "玩家被吸引/排斥 → 看 debuff 圖示；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "吸引者離 boss / 排斥者貼"
-              ]
-            },
-            {
-              "name": "Loaded Magitek Ray 待發雷射",
-              "type": "aoe",
-              "description": "場邊預讀直線雷射 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看預警走"
-              ]
-            },
-            {
-              "name": "Reinforce 增援",
-              "type": "tankbuster",
-              "description": "雙 T 死刑分攤；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "Gunshield 共通機制",
+                    "mechanics": [
+                        {
+                            "name": "Confines Of Memory 場邊牆",
+                            "type": "mechanic",
+                            "description": "場邊發光牆 → 觸到被囚禁 + 高 DoT + 完全無法行動 → 隊友速殺石牢（不耐打）救人。",
+                            "tips": [
+                                {"text": "勿觸場邊牆", "role": "tank"},
+                                {"text": "速殺石牢救人", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Loaded / Reinforced / Electrified Gunshield",
+                            "type": "mechanic",
+                            "description": "Duty gauge『Charge』滿後釋：Loaded = 全員圓 AoE → 散開；Reinforced = boss 雙側護盾（攻擊有盾側 = 擊退 + debuff）→ 停手識別側；Electrified = boss 為中心擊退 → 站場中央或防擊退。",
+                            "tips": [
+                                {"text": "Loaded → 8 散開", "role": "dps"},
+                                {"text": "Reinforced → 停手識盾側", "role": "dps"},
+                                {"text": "Electrified → 中央或防擊退", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "雙 T 站位分擔",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Star Shower 星之雨",
-              "type": "raidwide",
-              "description": "全屏 + 場上 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Altius + Terminus Est（X 標）",
+                            "type": "raidwide",
+                            "description": "Altius = 全屏 + 玩家當下位置面向留 X 標。Terminus Est = X 標釋直線 AoE 過場。策略：全員（除 MT）站 boss 後並面向 MT，MT 面向團 → X 標相互蓋住 → 標解前兩側站位安全。",
+                            "tips": [
+                                {"text": "MT 面團 / 團面 MT bait", "role": "tank"},
+                                {"text": "X 標解前移兩側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Alea Iacta Est（4+1 cleave）",
+                            "type": "cone",
+                            "description": "boss 連續 4 個 180° 前扇 + 最後 1 個延後背扇 → 前 4 站背 + 最後 1 換到前。期間 Terminus Est X 標未解。",
+                            "tips": [
+                                {"text": "前 4 背 boss / 最後 1 前 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Citius 雙 T tankbuster",
+                            "type": "tankbuster",
+                            "description": "雙 T 大前扇 tankbuster → 雙 T 集合 share 或單 T invul 吃。其他人勿站 boss 前。",
+                            "tips": [
+                                {"text": "雙 T share 或 invul", "role": "tank"},
+                                {"text": "其他人勿站前", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ignis Est 火（直線 + 點下圓）",
+                            "type": "aoe",
+                            "description": "點非 T 玩家直線 + 同時點下圓 AoE → 集合 bait → 移開避線 + 圓。地板花紋為圓大小指示。",
+                            "tips": [
+                                {"text": "集合 bait → 移開避線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Festina Lente 雙奶 stack",
+                            "type": "stack",
+                            "description": "雙奶 stack 標 → 分兩光小隊（4-4）各跟 1 奶分攤。",
+                            "tips": [
+                                {"text": "分兩光隊各跟奶", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ventus Est 風（直線 + 甜甜圈）",
+                            "type": "aoe",
+                            "description": "同 Ignis Est 機制但中央 AoE 變甜甜圈 → 站中央 + bait 直線。",
+                            "tips": [
+                                {"text": "站中央 + bait 直線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Vivere Militare Est（DPS check）",
+                            "type": "mechanic",
+                            "description": "boss 出場 + 雙脈衝箭 → 雙 T 各接 1 脈衝 ATM → 其他人秒掉脈衝。DPS check → 失敗團滅。",
+                            "tips": [
+                                {"text": "雙 T 各接 ATM", "role": "tank"},
+                                {"text": "DPS 速秒脈衝", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Heirsbane 後裔之災 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P2 Gunshield 三循環",
+                    "mechanics": [
+                        {
+                            "name": "Electrified mini-phase",
+                            "type": "mechanic",
+                            "description": "5 砲台（3 可打 + 2 連線 T）+ 北方 clone X 標 + safe lane → 雙 T 接連線 + DPS 秒砲台 → 識別 safe lane → Electrified 擊退 → Alea Iacta Est 4+1 扇。砲台若未殺爆炸 25k 傷 + Vuln。",
+                            "tips": [
+                                {"text": "T 接連線 + DPS 秒砲台", "role": "tank"},
+                                {"text": "找 safe lane + 防擊退", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Loaded mini-phase",
+                            "type": "mechanic",
+                            "description": "Ignis Est + 北方 clone X（找 safe lane）→ Festina Lente（分兩光隊在 safe lane 內）→ Citius 雙 T。",
+                            "tips": [
+                                {"text": "等 Ignis 解 → 進 safe lane", "role": "dps"},
+                                {"text": "兩光隊在 lane 內分散", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Reinforced mini-phase",
+                            "type": "mechanic",
+                            "description": "Altius+Terminus → 雙盾 + Ventus 甜甜圈（站中央）→ Citius。",
+                            "tips": [
+                                {"text": "bait X → 站中央避 Ventus", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Magitek Shield + Torch/Spark（DPS check）",
+                            "type": "mechanic",
+                            "description": "三 Gunshield 完 → boss 跳北 hard-cast Altius DPS check + Magitek Shield 護盾。隨機 Magitek Torch（全員 stack 在 T 後）/ Magitek Spark（散開半圓）→ 必須在 Altius 讀完前秒掉護盾。",
+                            "tips": [
+                                {"text": "看 Torch/Spark 判 stack/散開", "role": "dps"},
+                                {"text": "DPS 全力秒護盾", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員極限減傷",
-                  "role": "tank"
+                    "name": "P3 Loaded / Electrified Gunshield #2",
+                    "mechanics": [
+                        {
+                            "name": "Fortius 4 cleave（順 / 逆時針）",
+                            "type": "cone",
+                            "description": "4 cleave：第 1 不可閃 + 留 puddle，其餘 3 順 / 逆時針旋轉。預先 8 方位散開放 puddle → 站不動避第 2 → 跟旋轉側避第 3+4。",
+                            "tips": [
+                                {"text": "8 方位預散站放 puddle", "role": "dps"},
+                                {"text": "看旋轉方向側步", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Loaded #2 結尾組合",
+                            "type": "mechanic",
+                            "description": "Fortius → Loaded Gunshield（拉開 8 點散）→ Festina Lente 雙光隊 + Citius 雙 T。",
+                            "tips": [
+                                {"text": "8 點散 / 兩光隊 + 雙 T", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Electrified #2 + clone X + 擊退",
+                            "type": "mechanic",
+                            "description": "Fortius + 北方 clone X + Electrified 擊退 → 走 safe lane + 防擊退（puddle 已存在更危險）→ 循環之前機制至 boss 死。",
+                            "tips": [
+                                {"text": "防擊退（puddle 區危險）", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "場邊牆 = Confines Of Memory 即死 / Charge 條決定 Gunshield 釋放",
+                "Loaded = 散 / Reinforced = 雙盾識別 / Electrified = 中央或防擊退",
+                "P1 Altius bait X 標 / Alea Iacta Est 前 4 背 + 最後 1 前",
+                "P1 Ignis = 中央圓 + 直線 / Ventus = 甜甜圈 + 直線",
+                "P1 結尾 Vivere = 雙 T ATM + 速秒脈衝（DPS check）",
+                "P2 三 Gunshield + Magitek Shield 看 Torch/Spark stack/散",
+                "P3 Fortius 8 方位散 + 跟旋轉側步 → Electrified #2 防擊退過 puddle"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Varis yae Galvus 瓦里斯 機制：Magitek 機甲 + Heart of Sword 劍之心 + 召喚加雷馬軍 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
