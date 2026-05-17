@@ -1,108 +1,198 @@
 {
-  "id": "seat_of_sacrifice_extreme",
-  "name": "光之戰士殲殛戰",
-  "nameEn": "The Seat of Sacrifice (Extreme) - The Warrior of Light (Elidibus)",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Warrior of Light 光之戰士：強化版 Crystalline Stream + Job Mechanics 多階段 + 終局。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.3 光之戰士極限版（Lv 80）。Boss 依序為 Warrior of Light 光之戰士。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "光之戰士",
-      "nameEn": "Warrior of Light",
-      "phases": [
+    "id": "seat_of_sacrifice_extreme",
+    "name": "光之戰士殲殛戰",
+    "nameEn": "The Seat of Sacrifice (Extreme) - Warrior of Light (Elidibus)",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "預設站位：T 北 / 南、奶東 / 西、DPS 對角 → T+H 順時針配 DPS 共為 partner pair。兩光小隊（1T+1H+2DPS）。",
+        "重點：DPS LB 不能在 boss LB 剩餘時用 → boss Hallowed Ground 反制無敵 → 等 boss LB 用完再 LB。",
+        "P1：Terror Unleashed = 全員 1 HP + 場縮 → 治療補滿解 debuff。To The Limit = boss 充 1/2/3 LB → 對應招式：LB1 = 隨機 1T+1H+1DPS 紅箭高傷散；LB2 = Radiant Desperado 雙奶直線分攤；LB3 = 4 流星 Radiant Meteor 對 T/H 或 DPS → 各角散開。",
+        "P1 Solemn Confiteor 莊嚴懺悔 = 全員腳下圓 → 集合 bait → 圓爆後移到 clock 位避 Absolute Stone III。",
+        "P1 Imbued Saber x2（核心）：第 1 必為 stone（散），第 2 為 holy（集）/ fire（停手）/ blizzard（持續移）。Ex 多了 holy/blizzard 兩元素無 telegraph 看附身效果。第 2 輪反向處理。",
+        "P1 Imbued Coruscance = AoE 劍攻擊（甜甜圈或圓）+ 兩 imbued 元素 → 看劍 swirl 判 in/out + 依元素處理。",
+        "P1 Sword of Light（3 swords）+ Absolute Holy 同時：3 三角覆蓋場上 → 找沒有劍碰邊的安全 → 同時 stack 全員集合。",
+        "P1 Summon Wyrm + Solemn Confiteor + Gaze：Bahamut 北 → 跑南 + 集合 bait 圓 + 1 玩家 gaze 站 max melee 玩家面對外（避團 damage down）。Elddragon Dive 全屏 → 大團補。",
+        "P2 Specter of Light Add 階段：DRK + WAR（東西雙 T 隔開拉 + 打斷 Berserk/Deep Darkside）+ BRD（DPS flare 角分散）+ WHM/BLM（東西塔接 2 人）+ NIN（雙奶 stack）。",
+        "P2 SMN（4 Bahamut-egi 連線 4 玩家）→ 朝角引導吐息。LB DPS check：殺 add 防 boss LB 滿 → 全 LB3 後接 Ultimate Crossover → 必 T LB3。",
+        "P3 mini-phase 組合（隨機）+ Imbued Saber/LB charge 之間插入。Quintuplecast = 5 連 telegraph 記憶（stack/spread/stop/move/gaze 組合）。Sword of Light 速度更快。NIN/WHM+BLM/DRK+BRD/SMN/WAR 各 mini-phase 機制。"
+    ],
+    "notes": "ShB 5.3 trial Ex（Lv 80，sync 80，ilvl 490，8 人 trial，時限 60 分），位於 The Seat of Sacrifice Ex。為阿斯丁斯 Elidibus 化身光之戰士的極限版。掉落 ilvl 505 武器 + Warrior of Light Card。Imbued Saber 4 元素 + Quintuplecast 5 連記憶 + 多 mini-phase 為核心。",
+    "bosses": [
         {
-          "name": "WoL EX 主戰",
-          "mechanics": [
-            {
-              "name": "Heaven's Wrath 天罰",
-              "type": "cone",
-              "description": "MT 扇形 cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "光之戰士（伊蒂貝魯斯）",
+            "nameEn": "Warrior of Light (Elidibus)",
+            "phases": [
                 {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Coronation 加冕 (王座機制)",
-              "type": "mechanic",
-              "description": "場上 6 個王座 → 站對應安全座位；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看分組站位"
-              ]
-            },
-            {
-              "name": "Skyward Leap 朝天躍",
-              "type": "aoe",
-              "description": "點名玩家朝向預測 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看點名預判"
-              ]
-            },
-            {
-              "name": "Brilliant Sacrament 燦聖典",
-              "type": "tankbuster",
-              "description": "MT 雙重 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "預設 + DPS LB 規則",
+                    "mechanics": [
+                        {
+                            "name": "8 點站位 + 兩光隊",
+                            "type": "mechanic",
+                            "description": "T 北 / 南、奶東 / 西、DPS 對角 → T+H 順時針配 DPS partner pair。",
+                            "tips": [
+                                {"text": "預設 partner pair", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "DPS LB（Hallowed Ground 反制）",
+                            "type": "mechanic",
+                            "description": "DPS LB 不能在 boss LB 剩餘時用 → boss Hallowed Ground 反制無敵。等 boss LB 用完再 LB。",
+                            "tips": [
+                                {"text": "看 boss LB 條為 0 才 LB", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷 + ST swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Quadrastrike 4 連擊",
-              "type": "aoe",
-              "description": "場上 4 個影子分別釋放 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看 4 個影子方向"
-              ]
-            },
-            {
-              "name": "Slash 多連斬",
-              "type": "cone",
-              "description": "多連扇形 → 看刀位躲；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                "預判刀方向"
-              ]
-            },
-            {
-              "name": "Job Echoes 職業回響",
-              "type": "mechanic",
-              "description": "召喚 SAM/MNK/DRG/NIN/SMN/BRD 等招式；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看圖示辨職業"
-              ]
-            },
-            {
-              "name": "Aetheric Boom 以太爆 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Terror Unleashed + 場縮",
+                            "type": "raidwide",
+                            "description": "全員 1 HP + 場縮 → 治療補滿解 debuff。",
+                            "tips": [
+                                {"text": "治療立即補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "To The Limit + LB1/2/3 對應招",
+                            "type": "mechanic",
+                            "description": "boss 充 1-3 LB：LB1 = 1T+1H+1DPS 紅箭高傷散；LB2 = Radiant Desperado 雙奶直線分攤；LB3 = 4 Radiant Meteor 對 T/H 或 DPS → 各角散開。",
+                            "tips": [
+                                {"text": "看 LB 條數預判招式", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Solemn Confiteor + Absolute Stone III",
+                            "type": "mechanic",
+                            "description": "全員腳下圓 → 集合 bait → 圓爆後移到 clock 位避 Stone III 8 點 cleave。",
+                            "tips": [
+                                {"text": "bait 集合 → 移 clock 位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Imbued Saber x2（4 元素）",
+                            "type": "mechanic",
+                            "description": "第 1 必 stone（散）；第 2 = holy（集）/ fire（停手 Pyretic）/ blizzard（持續移）。Ex 無 telegraph 看附身效果。第 2 輪反向處理。",
+                            "tips": [
+                                {"text": "stone 散 / holy 集 / fire 停 / blizzard 移", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Imbued Coruscance（劍 swirl）",
+                            "type": "mechanic",
+                            "description": "AoE 劍攻擊（甜甜圈或圓）+ 兩 imbued 元素 → 看劍 swirl 判 in/out + 依元素處理。",
+                            "tips": [
+                                {"text": "swirl = donut / 無 = pb", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sword of Light + Absolute Holy",
+                            "type": "stack",
+                            "description": "3 swords 三角覆蓋場 → 找沒有劍碰邊的安全 + Absolute Holy 全員集合 stack。",
+                            "tips": [
+                                {"text": "找劍未碰邊安全 + 集合", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Summon Wyrm + Confiteor + Gaze",
+                            "type": "gaze",
+                            "description": "Bahamut 北 → 跑南 + bait 圓 + 1 玩家 gaze 站 max melee 面外（避團 damage down）。Elddragon Dive 全屏。",
+                            "tips": [
+                                {"text": "南側 + gaze 站 melee 面外", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員極限減傷",
-                  "role": "tank"
+                    "name": "P2 Specter of Light Add 階段",
+                    "mechanics": [
+                        {
+                            "name": "DRK + WAR（東西雙 T）",
+                            "type": "add",
+                            "description": "東西分拉 + 打斷 Berserk/Deep Darkside（不打斷會大傷）。",
+                            "tips": [
+                                {"text": "T 東西分拉 + 打斷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "BRD/WHM+BLM/NIN/SMN（Add 招）",
+                            "type": "mechanic",
+                            "description": "BRD = DPS flare 角散；WHM/BLM = 東西塔接 2 人；NIN = 雙奶 stack；SMN = 4 Bahamut-egi 連線 4 玩家朝角引導。",
+                            "tips": [
+                                {"text": "依 add 類型分組接", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ultimate Crossover（T LB3）",
+                            "type": "raidwide",
+                            "description": "Add 殺光 + 全 LB3 後接 Ultimate Crossover → 必 T LB3 抵擋。",
+                            "tips": [
+                                {"text": "T LB3 抵擋", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 mini-phase 隨機組合",
+                    "mechanics": [
+                        {
+                            "name": "Quintuplecast 5 連 telegraph",
+                            "type": "mechanic",
+                            "description": "5 連 telegraph 記憶 → 組合 stack/spread/stop/move/gaze 隨機。需記順序。",
+                            "tips": [
+                                {"text": "記 5 連順序", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sword of Light（更快）",
+                            "type": "aoe",
+                            "description": "P3 速度更快 → 立即找安全位移動。",
+                            "tips": [
+                                {"text": "速找安全立即移", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "NIN mini-phase（擊退）",
+                            "type": "mechanic",
+                            "description": "Solemn Confiteor bait → 移 clock → 擊退用 immunity 防 + Absolute Holy。",
+                            "tips": [
+                                {"text": "用防擊退保位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "WHM+BLM mini-phase（8 塔）",
+                            "type": "stack",
+                            "description": "8 流星塔依序 → HTMR（Healers/Tanks/Melee/Ranged）輪 2 次接。",
+                            "tips": [
+                                {"text": "HTMR 輪 2 次", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "DRK + BRD（domes + flare）",
+                            "type": "mechanic",
+                            "description": "bait Confiteor → DPS 角放擴大 domes（觸即死）→ Absolute Holy stack + 1T+1H+1DPS flare 分散（T 北 / DPS 南 / H 東西）。",
+                            "tips": [
+                                {"text": "DPS 角放 dome + flare 散", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "預設 8 點站位 + DPS LB 等 boss LB 用完",
+                "P1 To The Limit 看 LB 條數判招（LB1/2/3）",
+                "Imbued Saber 4 元素：stone 散 / holy 集 / fire 停 / blizzard 移",
+                "P1 Sword of Light 找劍未碰邊安全 + Holy 集合",
+                "P2 Add：DRK+WAR 雙 T 打斷 / BRD/WHM+BLM/NIN/SMN 依 add 分組",
+                "P3 Quintuplecast 5 連記順序 + mini-phase 依 specter 招式"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Warrior of Light 光之戰士 機制：強化版 Crystalline Stream + Job Mechanics 多階段 + 終局。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

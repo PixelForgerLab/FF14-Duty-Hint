@@ -1,122 +1,155 @@
 {
-  "id": "crown_of_the_immaculate_extreme",
-  "name": "真 純潔少年殲殛戰",
-  "nameEn": "The Crown of the Immaculate (Extreme) - Innocence",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Innocence 純潔少年：強化版 Pure of Heart + Bright Hunger + 雙形態切換。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.05 純潔少年極限版（Lv 80）。Boss 依序為 Innocence 純潔少年。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "純潔少年",
-      "nameEn": "Innocence",
-      "phases": [
+    "id": "crown_of_the_immaculate_extreme",
+    "name": "真 純潔少年殲殛戰",
+    "nameEn": "The Crown of the Immaculate (Extreme) - Innocence",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Shadowreaver 暗影收割者 = 無預警全屏 → 預備團補。Righteous Bolt 直擊雷 = tankbuster + 雷耐 debuff → tank swap。",
+        "P1 Winged Reprobation 翼之譴責 = 召喚劍 + 連線玩家 → 標玩家拉場邊 + 留圓 AoE → 劍朝標位射 + 後分 3 線 AoE 朝東 / 北 / 西 → 標放對角邊讓 3 線在外。",
+        "P1 Rightful Reprobation 正義之譴（hourglass）= 中央向外藍直線 AoE → 後反向回擊（延後 + 短預警）→ 預先位站好。",
+        "P1 Rotating Swords 旋轉劍 = 大劍從天降 + 扇形旋轉 → 站 3 安全區持續移動。Drop of Light 光之滴 = 2 玩家大 AoE 標 → 拉場邊互不疊。",
+        "P1 Winged + Rightful Reprobation 組合 + Light Pillar = 雙劍機制 + 奶 stack 直線 → 站位避所有線 + 沿線分攤。",
+        "P1 Winged + Rotating Sword 組合 = 1 條旋轉劍 + 連線標 + 縫可穿 → 標玩家避團 + 預判旋轉時機穿縫換區。",
+        "P2 DPS check：boss 不可選 + 2 Forgiven Venery（東西，雙 T 拉 tankbuster）+ 1 Forgiven Shame（中央，DPS 全力，釋全屏）→ 必須全殺否則 boss 充能團滅。",
+        "P3 Starbirth 星辰誕生 = 3 球場上 → 撞 AoE 會爆大範圍 → 拉 boss 到遠離球的位置 + 用 Light Pillar 線引爆指定球。Shadowreaver 會炸所有球。",
+        "P3 Beautific Vision 至福之景 = boss 衝場直線 + 路徑 cleave → 站場邊遠中央。配 Drop of Light + Starbirth = 標玩家不可炸球 + 拉位導指定球爆。",
+        "P3 God Ray 神光 = 三向扇 pizza + 安全縫 + 配 Rightful Reprobation hourglass → 等 hourglass 兩段完再進 God Ray 縫。",
+        "P3 Starbirth + Winged + Light Pillar 4 球大混合 → 走位避線 + 拉 boss 配 Light Pillar 引爆對角球 → 留安全位接 Shadowreaver。",
+        "P3 hard enrage = 長讀 Beatific Vision 必須在此前秒 boss。"
+    ],
+    "notes": "ShB 5.0 trial Ex（Lv 80，sync 80，ilvl 475，8 人 trial，時限 60 分），位於 The Crown of the Immaculate Ex。為光之主 Innocence 純潔少年極限版。掉落 ilvl 490 武器（5 Immaculate Totem 飾品 / 99 兌換 Innocent Gwiber Trumpet）+ Innocence Card。Starbirth 球 + Light Pillar 引爆配合為核心。",
+    "bosses": [
         {
-          "name": "Innocence EX 主戰",
-          "mechanics": [
-            {
-              "name": "Magic Eraser 魔法消除",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "純潔少年",
+            "nameEn": "Innocence",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Magic Sword Combo 魔劍組合 (4 連)",
-              "type": "mechanic",
-              "description": "4 連分身劍 → 看順序走位；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "預判每一個劍方向"
-              ]
-            },
-            {
-              "name": "Mighty Blow + Big Bang",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster + 全屏；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Shadowreaver + Righteous Bolt",
+                            "type": "tankbuster",
+                            "description": "Shadowreaver 全屏；Righteous Bolt tankbuster + 雷耐 debuff → tank swap。",
+                            "tips": [
+                                {"text": "tank swap + 預備團補", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Winged Reprobation 翼之譴責（劍連線）",
+                            "type": "aoe",
+                            "description": "召喚劍連線玩家 → 標玩家拉場邊放圓 + 劍朝標射 + 3 線分東 / 北 / 西 → 標放對角邊讓 3 線在外。",
+                            "tips": [
+                                {"text": "被標拉對角邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rightful Reprobation（hourglass）",
+                            "type": "aoe",
+                            "description": "中央向外藍直線 AoE → 後反向回擊（延後 + 短預警）→ 預先位站好。",
+                            "tips": [
+                                {"text": "預先站好兩段安全", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rotating Swords + Drop of Light",
+                            "type": "aoe",
+                            "description": "Rotating = 大劍扇形旋轉 + 3 安全區持續移動。Drop of Light = 2 玩家大 AoE 標 → 拉場邊互不疊。",
+                            "tips": [
+                                {"text": "持續移動 + 標拉場邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Winged + Rightful + Light Pillar",
+                            "type": "stack",
+                            "description": "雙機制混合 + Light Pillar 奶 stack 線 → 站位避所有線 + 沿線分攤。",
+                            "tips": [
+                                {"text": "避線 + 沿線分攤", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Winged + Rotating Sword",
+                            "type": "aoe",
+                            "description": "1 條旋轉劍 + 連線標 + 縫可穿 → 標玩家避團 + 預判旋轉時機穿縫換區。",
+                            "tips": [
+                                {"text": "預判旋轉穿縫換區", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Light's Wing 光翼",
-              "type": "aoe",
-              "description": "場邊直線 + 場中央圓組合；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看方向走縫"
-              ]
-            },
-            {
-              "name": "Star Prism 星稜鏡",
-              "type": "raidwide",
-              "description": "全屏 + 場上多 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P2 Add DPS check",
+                    "mechanics": [
+                        {
+                            "name": "Forgiven Venery × 2 + Shame × 1",
+                            "type": "add",
+                            "description": "boss 不可選 + 2 Venery（東西，雙 T 拉 tankbuster）+ 1 Shame（中央 DPS，釋全屏）→ 必須全殺否則 boss 充能團滅。",
+                            "tips": [
+                                {"text": "雙 T 拉東西 Venery", "role": "tank"},
+                                {"text": "DPS 全力 Shame 中央", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補補療 + 補盾",
-                  "role": "healer"
+                    "name": "P3 Starbirth",
+                    "mechanics": [
+                        {
+                            "name": "Starbirth 星辰誕生",
+                            "type": "mechanic",
+                            "description": "3 球場上 → 撞 AoE 會爆大範圍 → 拉 boss 遠離球 + 用 Light Pillar 線引爆指定球。Shadowreaver 會炸所有球。",
+                            "tips": [
+                                {"text": "拉 boss 遠球 + 引爆指定", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Beautific Vision 至福之景",
+                            "type": "aoe",
+                            "description": "boss 衝場直線 + 路徑 cleave → 站場邊遠中央。配 Drop of Light + Starbirth → 標玩家不可炸球。",
+                            "tips": [
+                                {"text": "站邊遠中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "God Ray + Rightful Reprobation",
+                            "type": "cone",
+                            "description": "三向扇 pizza + 安全縫 + 配 hourglass → 等 hourglass 兩段完再進 God Ray 縫。",
+                            "tips": [
+                                {"text": "等 hourglass 完再進 God Ray 縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Starbirth + Winged + Light Pillar（4 球）",
+                            "type": "mechanic",
+                            "description": "4 球大混合 → 走位避線 + 拉 boss 配 Light Pillar 引爆對角球 → 留安全位接 Shadowreaver。",
+                            "tips": [
+                                {"text": "引爆對角球留安全位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Enrage 長讀 Beatific Vision",
+                            "type": "raidwide",
+                            "description": "hard enrage = 長讀 Beatific Vision 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "DPS 全力 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Charge 衝鋒",
-              "type": "aoe",
-              "description": "Boss 直線衝鋒 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Holy 神聖",
-              "type": "spread",
-              "description": "全員分散 5m+；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "散開"
-              ]
-            },
-            {
-              "name": "Light Avatar 光之化身 add",
-              "type": "add",
-              "description": "場邊召喚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS 速殺",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Final 4 連 + enrage",
-              "type": "raidwide",
-              "description": "末段 4 連魔劍 + Big Bang + Holy → enrage；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Winged Reprobation 標玩家拉對角邊",
+                "P1 Rightful hourglass 預先站好兩段安全",
+                "P1 Rotating + Drop of Light 持續移動 + 拉場邊",
+                "P2 DPS check：雙 T 東西 Venery + DPS 中央 Shame",
+                "P3 Starbirth 拉 boss 遠球 + Light Pillar 引爆指定 + Beautific 站邊",
+                "P3 God Ray 等 hourglass 完再進縫 / 4 球終局留安全位"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Innocence 純潔少年 機制：強化版 Pure of Heart + Bright Hunger + 雙形態切換。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
