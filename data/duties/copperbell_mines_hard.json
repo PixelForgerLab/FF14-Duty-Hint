@@ -1,173 +1,269 @@
 {
-    "id":  "copperbell_mines_hard",
-    "name":  "騷亂坑道銅鈴銅山",
-    "nameEn":  "Copperbell Mines (Hard)",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）銅鈴銅山 Hard 版：boss 機制強化 + 新 add。",
-                     "2）場上炸彈雷管 + 落石機制 → 走位閃避。",
-                     "3）tankbuster + raidwide → MT 大減傷 + 團補。"
-                 ],
-    "notes":  "ARR 2.2 副本 Hard 版（Lv 50），西拉諾西亞銅鈴銅山騷亂坑道。Boss 強化版機制 + 新陷阱機關。",
-    "bosses":  [
-                   {
-                       "name":  "百手巨人主腦",
-                       "nameEn":  "Hecatoncheir Mastermind",
-                       "mnemonic":  [
-                                        "Darkfire 燒橋逼前進",
-                                        "Flambeau 炸彈到燒區 = 全滅，可 stun"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Darkfire 暗火",
-                                                                "type":  "other",
-                                                                "description":  "每 45-60 秒燒掉一段橋，玩家被迫往前。",
-                                                                "tips":  [
-                                                                             "跟著移動"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Flambeau 炸彈怪",
-                                                                "type":  "other",
-                                                                "description":  "Darkfire 時場底端出現，朝燒區移動。**到燒區 = 全滅**；自爆也會全滅。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 全力打掉 Flambeau",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "可 stun 延緩"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "Gogmagolem + Biggy",
-                       "nameEn":  "Gogmagolem",
-                       "mnemonic":  [
-                                        "Bomb 機制 → 放路徑炸 boss",
-                                        "Kindling Sprite adds 速殺",
-                                        "Boss 死後 Biggy 大炸彈廣範圍"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Bomb 機制",
-                                                                "type":  "other",
-                                                                "description":  "場上 Improved Blasting Device 一 DPS 操作生 Waymaker Bomb，撿起來放 boss 路徑上 5 秒後炸主要傷害。Black Bombs 也會自爆要避。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "指派 1 DPS 操作 Device",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Kindling Sprite adds 召怪",
-                                                                "type":  "other",
-                                                                "description":  "場邊召喚精靈 adds。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "其他 DPS 殺 adds",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Plaincracker 平原破",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 tank 前方錐高傷 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "非 tank 不要站 boss 前面"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Biggy spriggan",
-                                                                "type":  "other",
-                                                                "description":  "Gogmagolem 死後 Biggy 出，**召大炸彈 (廣範圍爆炸)**。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 殺 Biggy，遠離大炸彈",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "烏拉諾斯",
-                       "nameEn":  "Ouranos",
-                       "mnemonic":  [
-                                        "Giga adds 隨機追要殺",
-                                        "Sand Worm Searching for Fodder → 放 Crystallized Rock 沙地",
-                                        "未放 Rock → Bottomless Desert 拉中央高傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B3",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Cone AoE 前錐",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 前方錐 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "非 tank 不站前",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Giga adds 召怪",
-                                                                "type":  "other",
-                                                                "description":  "場上召 Giga 隨機追玩家，無法強制接仇。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 集火 adds",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Sand Worm 沙蟲",
-                                                                "type":  "other",
-                                                                "description":  "場上提示「The abyss worm is searching for fodder」→ 找場邊 Crystallized Rock 放沙地引開沙蟲。**未放 = Bottomless Desert**。",
-                                                                "tips":  [
-                                                                             "指派 1 名玩家專門 Rock duty"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bottomless Desert 無底沙漠",
-                                                                "type":  "raidwide",
-                                                                "description":  "未放 Rock 時 Sand Worm 拉全隊到中央 + 高傷，可能 wipe。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "copperbell_mines_hard",
+    "name": "騷亂坑道銅鈴銅山",
+    "nameEn": "Copperbell Mines (Hard)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Hecatoncheir Mastermind 百臂主腦巨人：Darkfire 黑暗爆炎點燃場地一段 → 全員退後新區；Flambeau 燃火彈怪每次點燃後出現 → 必須秒掉，碰到火直接自爆團滅。",
+        "2）B2 Gogmagolem 哥革巨像（高防）：1 名 DPS 互動新型爆破裝置生成 Waymaker Bomb 碎岩炸彈 → 搬到 Golem 路徑前放下，10 秒倒數爆炸對 Golem 造成 30,000 固定傷害（玩家僅 2,000 傷）。其他 DPS 清 Kindling Sprite 燃火元精 add。",
+        "3）B2 結束後 Biggy 比吉墜下 → 比吉破壞爆破裝置 spawn 破碎爆彈怪 → DPS 切目標秒比吉並注意爆彈自爆圓。",
+        "4）B3 Ouranos 烏拉諾斯：場上沙地 + 沙邊岩壁多顆 Crystallized Rock 結晶石。Sand Worm 深淵巨蟲 出現後玩家撿結晶石放沙地，巨蟲嗅到味道後吃掉。",
+        "5）B3 文字提示「深淵巨蟲正在尋找食物……」→ 沒及時餵就會用 Bottomless Desert 大流沙把全員吸到場中 + 致命傷團滅，必須指定一人專責搬石。",
+        "6）B3 < 70%、< 40%、< 20% HP：召喚 1/1/2 隻百臂裂岩巨人 add（鎖定非 T） → DPS 速秒。"
+    ],
+    "notes": "ARR 2.1 副本 Hard 版（Lv 50，sync 50，ilvl 110），西部薩納蘭銅鈴銅山，劇情上巨人族『百臂巨人』第二次起義，礦工失蹤。Boss 依序為 Hecatoncheir Mastermind 百臂主腦巨人、Gogmagolem 哥革巨像（內含 Biggy 比吉，兩階段）、Ouranos 烏拉諾斯（Biggy 之父）。本副本核心特色：B2 利用『搬運炸彈擊倒高防 boss』、B3 利用『搬運結晶石餵食沙蟲避免大流沙團滅』兩個 carry-mechanic，搬運狀態被攻擊會掉物品。",
+    "bosses": [
+        {
+            "name": "百臂主腦巨人",
+            "nameEn": "Hecatoncheir Mastermind",
+            "phases": [
+                {
+                    "name": "主戰（橋上 + 黑暗爆炎 + Flambeau）",
+                    "mechanics": [
+                        {
+                            "name": "Darkfire 黑暗爆炎",
+                            "type": "mechanic",
+                            "description": "每 45-60 秒讀條，對場地入口或被點燃的場地邊緣生成圓形 AoE 預兆，咏唱完爆炸火屬性傷害 + Burns 15 秒火傷 debuff，並點燃一段場地。角色進入被點燃區域會持續上火傷 stack。4 次後場地完全被點燃，boss 不再使用此招。全員必須朝橋的另一端後退。",
+                            "tips": [
+                                {"text": "看圓 → 退到無火區", "role": "tank"},
+                                {"text": "Esuna 清火傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Flambeau 燃火彈怪（add）",
+                            "type": "add",
+                            "description": "每次 Darkfire 後從場地出口端 spawn 1 隻 Flambeau 燃火彈怪緩慢向場地入口移動。Flambeau 接觸到被點燃的場地會立刻自爆全屏團滅；HP 過低也會自爆。DPS 必須立刻切目標秒掉。可以用 Stun 暫停其前進。",
+                            "tips": [
+                                {"text": "DPS 立刻秒 Flambeau", "role": "dps"},
+                                {"text": "Stun 可短暫拖住", "role": "tank"},
+                                {"text": "千萬不要讓它走到火區", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Super Cyclone 超猛擊",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體高傷害無屬性打擊；MT 開減傷。",
+                            "tips": [
+                                {"text": "MT 減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ice 冰結",
+                            "type": "mechanic",
+                            "description": "boss 的普通攻擊改為冰屬性魔法傷害；治療注意 MT 受傷類型偏魔法。",
+                            "tips": [
+                                {"text": "治療補 MT", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Charge 蓄力",
+                            "type": "mechanic",
+                            "description": "boss 為自身賦予 30 秒蓄力 buff，後續技能傷害提高；治療準備團補 + 玩家準備閃。",
+                            "tips": [
+                                {"text": "看 buff → 預備治療", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Darkfire 黑暗爆炎 → 退到無火區",
+                "Flambeau 燃火彈 → DPS 立刻秒，不可碰火",
+                "Super Cyclone 超猛擊 → MT 減傷"
+            ]
+        },
+        {
+            "name": "哥革巨像",
+            "nameEn": "Gogmagolem",
+            "phases": [
+                {
+                    "name": "P1 巨像（搬炸彈傷高防 boss）",
+                    "mechanics": [
+                        {
+                            "name": "高防 + 路徑移動",
+                            "type": "mechanic",
+                            "description": "Gogmagolem 哥革巨像有極高防禦，普通輸出傷害微薄。開場不動，HP < 90% 後沿入口-場地最前方往復移動；露出核心後路徑加入新型爆破裝置點。MT 用 AoE 持續仇恨。",
+                            "tips": [
+                                {"text": "MT 維持仇恨即可", "role": "tank"},
+                                {"text": "普通輸出傷害很低", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Waymaker Bomb 碎岩炸彈（搬運機制）",
+                            "type": "mechanic",
+                            "description": "場地左側有 Improved Blasting Device 新型爆破裝置。1 名 DPS 互動裝置 → 生成 1 顆 Waymaker Bomb + 1 或 3 隻爆破爆彈怪 add。互動者獲得『搬運』buff 30 秒，可用『放置』把炸彈放下。10 秒倒數後爆炸：對玩家 2,000 固定傷害、對 Gogmagolem 30,000 固定傷害。搬運者被攻擊會減少 buff 10 秒、buff 消失就掉炸彈。把炸彈放在哥革巨像移動路徑上，等其走過引爆。",
+                            "tips": [
+                                {"text": "指定 1 名 DPS 專責搬炸彈", "role": "dps"},
+                                {"text": "T 注意拉 add 不要打搬運者", "role": "tank"},
+                                {"text": "搬運中遠離 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Bomb Adds 爆破爆彈怪",
+                            "type": "add",
+                            "description": "互動裝置時 spawn 1 或 3 隻 add；2 秒讀條後圓 AoE 自爆，火屬性高傷。其他 DPS 切目標秒掉，距離拉開避免自爆。",
+                            "tips": [
+                                {"text": "其他 DPS 速秒爆彈", "role": "dps"},
+                                {"text": "看 2s 讀條 → 拉開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Kindling Sprite 燃火元精（add）",
+                            "type": "add",
+                            "description": "場地固定 4 個位置定期 spawn Kindling Sprite 燃火元精，鎖定隨機玩家攻擊 + 火傷 stack。DPS 切目標秒掉。",
+                            "tips": [
+                                {"text": "DPS 持續清燃火元精", "role": "dps"},
+                                {"text": "Esuna 清火傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Plaincracker 平原震裂",
+                            "type": "aoe",
+                            "description": "Gogmagolem 開始移動後使用，自身周圍生成圓 AoE 預兆，咏唱完地屬性 AoE；近戰看預兆退離。",
+                            "tips": [
+                                {"text": "近戰退離 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rock Throw 岩石崩潰",
+                            "type": "aoe",
+                            "description": "對隨機較遠距離角色方向釋放直線地屬性魔法傷害；遠距 DPS / 治療注意方向避開。",
+                            "tips": [
+                                {"text": "遠距看自己方向走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Core Light 核心之光（核心露出後）",
+                            "type": "aoe",
+                            "description": "Gogmagolem 露出核心後施放，對隨機玩家腳下圓 AoE + 留下藍色火圈，進入火圈會 Burns 火傷 stack。重要：藍色火圈內的 Waymaker Bomb 會立刻被引爆！可利用此機制讓 boss 接近未爆炸的 bomb 加速。",
+                            "tips": [
+                                {"text": "被點走出後留位", "role": "dps"},
+                                {"text": "可利用火圈引爆 bomb", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 比吉 Biggy（巨像擊倒後）",
+                    "mechanics": [
+                        {
+                            "name": "Biggy 比吉登場",
+                            "type": "mechanic",
+                            "description": "擊敗 Gogmagolem 後，內部的 Spriggan 比吉墜入場地，可以直接攻擊。比吉會先衝向新型爆破裝置開始破壞，文字提示『比吉開始破壞新型爆破裝置！』、『新型爆破裝置的控制桿被破壞了！』、『新型爆破裝置由於過熱導致失控！破碎爆彈怪出現了！』",
+                            "tips": [
+                                {"text": "DPS 集火比吉", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Shattered Bomb 破碎爆彈怪",
+                            "type": "add",
+                            "description": "比吉破壞裝置後場地 3 個固定位置之一會 spawn 1 隻破碎爆彈怪。隨比吉 HP 降低最多 3 個位置同時 spawn。4 秒讀條後自爆圓大範圍火屬性高傷。DPS 秒掉或拉開。",
+                            "tips": [
+                                {"text": "看 4s 讀條 → 拉開", "role": "tank"},
+                                {"text": "DPS 速秒爆彈怪", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Frolic 嬉鬧攻擊",
+                            "type": "cone",
+                            "description": "比吉對一仇前方 90° 扇形 AoE 預兆，咏唱完無屬性打擊傷害；MT 朝外，非 T 站背。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 高防 → 搬 Waymaker Bomb 碎岩炸彈，放路徑前引爆對 boss 30000 傷",
+                "P1 爆彈 add → 其他 DPS 速秒；火圈可引爆 bomb",
+                "P2 比吉 → 集火 + 注意破碎爆彈怪自爆"
+            ]
+        },
+        {
+            "name": "復仇者 烏拉諾斯",
+            "nameEn": "Ouranos",
+            "phases": [
+                {
+                    "name": "P1 100%-70% HP（沙蟲 + Crystallized Rock）",
+                    "mechanics": [
+                        {
+                            "name": "Mercurial Strike 水銀強擊",
+                            "type": "aoe",
+                            "description": "讀條 3 秒後對自身周圍圓 AoE + 擊飛範圍內所有角色；近戰看讀條退離。",
+                            "tips": [
+                                {"text": "近戰看讀條退", "role": "dps"},
+                                {"text": "Surecast 抗擊退", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Forceful Strike 強力攻擊",
+                            "type": "spread",
+                            "description": "讀條 2 秒對隨機玩家腳下圓 AoE + 加重 30 秒。被點玩家走出 + 治療 Esuna 清加重。",
+                            "tips": [
+                                {"text": "被點走出", "role": "dps"},
+                                {"text": "Esuna 清加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Shock Strike 衝擊咆哮",
+                            "type": "raidwide",
+                            "description": "讀條 4 秒對全場無屬性魔法傷害；治療團補 + 全員減傷。",
+                            "tips": [
+                                {"text": "團補連發", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Sand Worm + Crystallized Rock 深淵巨蟲與結晶石（核心機制）",
+                            "type": "mechanic",
+                            "description": "一段時間後沙地裡 spawn 深淵巨蟲圍繞沙地邊緣鑽地移動，文字提示『深淵巨蟲出現了！』。場地岩壁多顆 Crystallized Rock 結晶石（消耗後不再生成）。1 名玩家互動結晶石獲得『搬運』30s buff，把結晶石放在沙地上。深淵巨蟲嗅到味道後直線移動到結晶石位置吃掉（『深淵巨蟲嗅到了結晶石的味道！』、『深淵巨蟲開始捕食結晶石！』）。注意路徑上會吃到沙柱地屬性傷害，所以放完石頭快走。",
+                            "tips": [
+                                {"text": "指定 1 名玩家專責搬石", "role": "dps"},
+                                {"text": "放石後立刻離開石頭位置", "role": "dps"},
+                                {"text": "搬運者遠離 add", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Bottomless Desert 大流沙（沒餵食的懲罰）",
+                            "type": "raidwide",
+                            "description": "如果深淵巨蟲一段時間沒吃結晶石（文字提示『深淵巨蟲正在尋找食物……』），會移動到場中央釋放 Bottomless Desert 大流沙，將不可見極大範圍內全員吸引至場中 + 地屬性致命傷害（多數情況團 wipe）。必須在文字提示出現後立刻把結晶石搬到沙地。",
+                            "tips": [
+                                {"text": "看到『正在尋找食物』→ 立刻搬石", "role": "dps"},
+                                {"text": "搬不及就 wipe 重來", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 70% HP（百臂裂岩巨人 add 階段）",
+                    "mechanics": [
+                        {
+                            "name": "Hecatoncheir Rocksplitter 百臂裂岩巨人（< 70%、< 40%、< 20% HP）",
+                            "type": "add",
+                            "description": "HP < 70% 與 < 40% 各召喚 1 隻百臂裂岩巨人，< 20% 召喚 2 隻。Add 鎖定隨機非 T 玩家攻擊（仇恨拉不過去），對該玩家施放精準刺單體突刺傷害。DPS 切目標速秒。",
+                            "tips": [
+                                {"text": "DPS 切 add 速秒", "role": "dps"},
+                                {"text": "被鎖玩家 → 治療補", "role": "healer"},
+                                {"text": "20% 出 2 隻 → DPS 全力 AoE", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Mercurial Strike 水銀強擊 → 近戰退離 + Surecast",
+                "Forceful Strike 強力攻擊 → 被點走出 + Esuna 加重",
+                "Shock Strike 衝擊咆哮 → 團補",
+                "Sand Worm 機制 → 指定搬石玩家，看『尋找食物』立即餵食",
+                "Bottomless Desert 大流沙 → 沒餵就團滅",
+                "70/40/20% HP → 百臂裂岩巨人 add 速秒（鎖定非 T）"
+            ]
+        }
+    ]
 }
