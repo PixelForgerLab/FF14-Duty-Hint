@@ -1,152 +1,77 @@
 {
-    "id":  "a_relic_reborn_the_hydra",
-    "name":  "海德拉討伐戰",
-    "nameEn":  "A Relic Reborn: The Hydra",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  52,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）三頭政權 Triumvirate 必須雙 T 重疊站位分攤",
-                     "2）白吐息 White Breath / 輝光吐息 Radiant Breath → 不站正前方 + 中距離",
-                     "3）冰球/火球 → 點名遠離隊友，地板冰/火避開",
-                     "4）boss 跑到場中讀『恐懼迷霧』→ 全員貼 boss 腳下",
-                     "5）雙足飛龍 Wyvern add 速殺，否則 boss 永久加 buff"
-                 ],
-    "notes":  "ARR 2.16 上古武器（Relic Weapon）任務鏈八人討伐戰（Lv 50），地點：哈拉塔利日影地修練所鬥技場。Boss 為 Hydra 海德拉 + 雙足飛龍 Wyvern add。重點：B 三頭政權需雙 T 重疊分攤、White Breath/Radiant Breath 需站近戰或最遠避中距離、Fear Itself 恐懼貼 boss 腳。",
-    "bosses":  [
-                   {
-                       "name":  "海德拉",
-                       "nameEn":  "Hydra",
-                       "phases":  [
-                                      {
-                                          "name":  "主戰（雙 T 分攤三頭政權 + 速殺飛龍）",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "三頭政權 Triumvirate",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 正前方無吟唱大傷害，可一擊秒殺單 T；傷害依命中人數平攤。雙 T 重疊站在 boss 正前方共同分攤，並各自開減傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT/ST 站 boss 正前方重疊 + 開大減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "兩位 T 同時準備大補/盾",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蝎尾劈擊 Dissever",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 即時單體小傷害（普攻型）；T 維持仇恨即可。",
-                                                                "tips":  [
-                                                                             "T 維持仇恨"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蝎尾掃擊 Mean Thrash",
-                                                                "type":  "cone",
-                                                                "description":  "boss 背後扇形 AoE 大傷害；任何人不要站 boss 屁股，包括近戰；站側面為安全位。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 把 boss 朝牆 / 場邊",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "白吐息 White Breath",
-                                                                "type":  "cone",
-                                                                "description":  "boss 正前方扇形 AoE 大傷害，附加『虛弱 Infirmity』Debuff（無法用 Esuna 清除，治療減半）。所有人不可站正前方。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS / 治療站側面或背側（注意 Mean Thrash）",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "輝光吐息 Radiant Breath",
-                                                                "type":  "aoe",
-                                                                "description":  "boss 對中距離（medium range）全方位 AoE，附『虛弱』Debuff。要點：所有人站在『近戰範圍』或『遠距離』，不要卡在中距離。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "遠程 → 站滿距；近戰 → 緊貼 boss",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰球 Ball of Ice",
-                                                                "type":  "spread",
-                                                                "description":  "點名一名玩家投擲冰球，造成中傷害 + 加重 Debuff，並在落點留下冰地板。被點名者往場邊放置避免阻擋走位。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點名 → 場邊放置",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火球 Ball of Fire",
-                                                                "type":  "spread",
-                                                                "description":  "點名一名玩家投擲火球，大傷害 + 灼燒 DoT，並在落點留下火地板。被點名者往場邊角落放置。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點名 → 場邊角落",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "用 Esuna 清灼燒",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "恐懼迷霧 Fear Itself",
-                                                                "type":  "stack",
-                                                                "description":  "boss 跑到場中央吟唱大範圍 AoE，附『恐慌 Hysteria』Debuff（中標者自動跑路）。Hysteria 只影響近戰範圍『外』的人；所有人立即衝到 boss 腳底貼身集中即可避免。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "看到 boss 走場中 → 全員貼 boss 腳",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "建議 T 平時把 boss 拉場邊，移動明顯",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雙足飛龍 Wyvern（add）/ 勇猛 Bravery",
-                                                                "type":  "add",
-                                                                "description":  "boss 召喚 add『雙足飛龍』，會對其他人施毒 DoT，且若不擊殺一段時間後會使用『勇猛』buff 永久提升 boss 傷害。DPS 立即切換目標速殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 看到 add 立刻切目標",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 拉穩 add 仇恨",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "三頭政權 → 雙 T 重疊分攤 + 大減傷",
-                                        "Mean Thrash → 別站 boss 屁股",
-                                        "Radiant Breath → 站近戰或最遠",
-                                        "boss 走場中 → 全員貼 boss 腳避恐慌",
-                                        "雙足飛龍 add → 速秒"
-                                    ]
-                   }
-               ]
+    "id": "a_relic_reborn_the_hydra",
+    "name": "海德拉討伐戰",
+    "nameEn": "A Relic Reborn: The Hydra",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）海德拉討伐戰：Relic 神器任務系列討伐戰。Boss 為 Hydra 海德拉（三頭龍）。",
+        "2）Fear Mist 恐懼迷霧：boss 移到場地中間讀條時 → 全員應在 boss 腳底集中避免吃到 Fear 恐慌 debuff。",
+        "3）Tripartite 三頭政權（無讀條 MT 順劈大傷）→ 可由兩個 T 重疊站位進行分攤處理。",
+        "4）Wyvern 雙足飛龍 add：一段時間後場地內出現飛龍 add → DPS 及時轉火擊殺。",
+        "5）add 未及時清光：飛龍會對 boss 疊加 Damage Up 傷害增加 buff → 傷害大幅提高。",
+        "6）注意 boss 普攻 + 三頭分別前方扇形（中間頭主，左右兩頭分支扇形）→ MT 朝場邊面外。",
+        "7）此戰為較短的單階段戰鬥，主要考驗 T 分攤與 add 處理。"
+    ],
+    "notes": "ARR 2.0 trial（Lv 50，sync 50，8 人 trial），Relic 神器任務系列討伐戰。Boss 為 Hydra 海德拉（三頭龍）。本戰是 Cutter's Cry 中 Hydra 機制的升級版。Hard Mode 不存在。",
+    "bosses": [
+        {
+            "name": "海德拉",
+            "nameEn": "Hydra",
+            "phases": [
+                {
+                    "name": "主戰（三頭龍）",
+                    "mechanics": [
+                        {
+                            "name": "Fear Mist 恐懼迷霧",
+                            "type": "mechanic",
+                            "description": "boss 移到場地中間讀條時 → 全員應在 boss 腳底集中避免吃到 Fear 恐慌 debuff（無法行動）。",
+                            "tips": [
+                                {"text": "全員站 boss 腳下", "role": "tank"},
+                                {"text": "Esuna 不可解 → 自然消失", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Tripartite 三頭政權（雙坦分攤）",
+                            "type": "stack",
+                            "description": "無讀條技能，對當前 MT 造成大量順劈傷害。可由兩個 T 重疊站位進行分攤處理（雙 T 站一起接傷）。",
+                            "tips": [
+                                {"text": "雙 T 重疊站位分攤", "role": "tank"},
+                                {"text": "MT/ST 同時開減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Wyvern 雙足飛龍（add）",
+                            "type": "add",
+                            "description": "戰鬥中一段時間後場地內出現 Wyvern 雙足飛龍 add。DPS 必須及時轉火擊殺。如果一段時間內 add 未被擊殺 → 飛龍對 boss 疊加 Damage Up 傷害增加 buff（boss 傷害大幅提高）。",
+                            "tips": [
+                                {"text": "DPS 轉火 add", "role": "dps"},
+                                {"text": "MT 拉 add 過來", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "三頭扇形攻擊",
+                            "type": "cone",
+                            "description": "boss 三個頭分別對前方扇形 AoE（中間頭主，左右兩頭分支扇形）。MT 朝場邊面外避免影響隊友。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "非 T 站背 / 側", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Fear Mist 恐懼迷霧 → 全員站 boss 腳下",
+                "Tripartite 三頭政權 → 雙 T 重疊分攤",
+                "Wyvern 雙足飛龍 add → 及時清防 boss 增傷",
+                "三頭扇形 → MT 朝外"
+            ]
+        }
+    ]
 }

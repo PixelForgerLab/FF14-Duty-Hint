@@ -1,122 +1,95 @@
 {
-    "id":  "chrysalis",
-    "name":  "無限城的死鬥",
-    "nameEn":  "The Chrysalis - Nabriales",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Void Sphere 虛無球：場上虛無球需破除避免爆炸。",
-                     "2）Vaccuum Wave 真空波：全屏擊退，開抗擊退。",
-                     "3）Erupting Light 噴發光：點名圓 AoE，被點往場邊。"
-                 ],
-    "notes":  "ARR 2.55 主線討伐戰（Lv 50），『無限城的死鬥』為阿斯特蘇族（Ascian）那布里亞勒斯的劇情戰鬥。Boss 為 Nabriales 那布里亞勒斯，引導進入 3.0 蒼天伊修加爾德。",
-    "bosses":  [
-                   {
-                       "name":  "那布里亞勒斯",
-                       "nameEn":  "Nabriales",
-                       "mnemonic":  [
-                                        "Void Sphere 虛無球 → 場上虛無球破除",
-                                        "Vaccuum Wave 真空波 → 全屏擊退",
-                                        "Erupting Light 噴發光 → 點名圓"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Nabriales 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Heavenly Strike 神聖打擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 釋放直線冰柱 buster；命中後可能凍結短時間；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝場邊面對 boss 開減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "ST 在 MT 被凍結時 provoke 接替",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Holy 神聖",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE + 對全員附加點名小範圍分散 AoE，需各自離隊散開；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             "全員分散 5m 以上",
-                                                                             {
-                                                                                 "text":  "補大團補 + 補散開後補療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Forbidden Magic 禁忌魔法",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 召喚分身 + 多方向直線 AoE；本體與分身同時施放，需看清位置避免被多重直線命中。",
-                                                                "tips":  [
-                                                                             "看本體與分身的朝向找縫站",
-                                                                             {
-                                                                                 "text":  "T 把本體拉到場邊讓分身排列",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Dark Sphere 黑暗球",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多個圓形 AoE 散落，走縫避開；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "看圈分布找空隙"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Death Beckons 凝視",
-                                                                "type":  "gaze",
-                                                                "description":  "Boss 凝視點名玩家，若面對 boss → 受傷 + 石化 debuff；看到讀條按相機背對boss避免石化。",
-                                                                "tips":  [
-                                                                             "看到讀條立即按相機背對 boss",
-                                                                             "石化期間無法行動 → 補 Esuna 解"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Spheroid 球 adds",
-                                                                "type":  "add",
-                                                                "description":  "場上會生成黑暗球體 adds，會放凝視 + AoE，必須速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 切目標秒殺球",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 拉球到 MT 附近",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aetheric Boom 末段以太爆 / Ultima Magic",
-                                                                "type":  "raidwide",
-                                                                "description":  "末段 boss HP 進入低血時釋放高傷害全屏，可能多次釋放 = 變相 DPS check。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 推輸出快速擊殺",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "全員減傷 + 補極限治療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "chrysalis",
+    "name": "無限城的死鬥",
+    "nameEn": "The Chrysalis",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）無限城的死鬥（後續因傳承記憶整合改名）：劇情核心戰，FF14 ARR 主線最終接近終局，玩家對抗 Nabriales 納布利亞勒斯（無影之一）。",
+        "2）Boss 為 Nabriales 納布利亞勒斯，搭配劇情 NPC Moenbryda 默恩布麗達戰友。",
+        "3）Nabriales 主要技能：Boundless 無際全屏 AoE → 治療團補。",
+        "4）Magick Hammer 魔法鎚：對 MT 死刑前扇 → MT 朝外大減傷。",
+        "5）Far-flung Spell 投擲法術：隨機點名玩家圓 AoE → 散開拉開。",
+        "6）Black Hole 黑洞：場上召喚黑洞 → 拉拉所有玩家。Surecast 抗或預判位置。",
+        "7）Voidsent Adds 虛無生物 add：boss 召喚 add → DPS 切目標清掉，避免影響輸出。",
+        "8）關鍵劇情：戰鬥末段 Moenbryda 默恩布麗達使用 Aether 以太將 Nabriales 鎖入虛無界 → 完成戰鬥。"
+    ],
+    "notes": "ARR 2.55 主線 trial（Lv 50，sync 50，8 人 trial），『無限城的死鬥』，於無限城。劇情上玩家對抗 Nabriales 納布利亞勒斯（無影之一 Ascian），是 ARR 主線結尾的重要 boss。Moenbryda 默恩布麗達犧牲自己將 Nabriales 永久鎖入虛無界，是 ARR → HW 的轉折劇情。",
+    "bosses": [
+        {
+            "name": "納布利亞勒斯",
+            "nameEn": "Nabriales",
+            "phases": [
+                {
+                    "name": "主戰（無影之一）",
+                    "mechanics": [
+                        {
+                            "name": "Boundless 無際",
+                            "type": "raidwide",
+                            "description": "全屏 AoE 中傷害；治療團補。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Magick Hammer 魔法鎚",
+                            "type": "tankbuster",
+                            "description": "對 MT 死刑單體（前扇）；MT 朝場邊面外大減傷 + 治療大補。",
+                            "tips": [
+                                {"text": "MT 朝外大減傷", "role": "tank"},
+                                {"text": "治療大補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Far-flung Spell 投擲法術",
+                            "type": "spread",
+                            "description": "隨機點名玩家腳下圓 AoE；被點走出 + 散開。",
+                            "tips": [
+                                {"text": "看腳下圓走出", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Black Hole 黑洞",
+                            "type": "mechanic",
+                            "description": "場上召喚 Black Hole 黑洞 → 不斷拉所有玩家向其位置。Surecast 抗或預判位置（站場中遠離黑洞方向）。",
+                            "tips": [
+                                {"text": "Surecast 抗", "role": "tank"},
+                                {"text": "預判位置", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Voidsent Adds 虛無生物 add",
+                            "type": "add",
+                            "description": "boss 召喚虛無生物 add → DPS 切目標清掉避免影響輸出。",
+                            "tips": [
+                                {"text": "DPS 清 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Moenbryda's Sacrifice 默恩布麗達犧牲（劇情演出）",
+                            "type": "mechanic",
+                            "description": "戰鬥末段 Moenbryda 使用 Aether Burst 以太爆破將 Nabriales 永久鎖入虛無界。劇情演出，玩家無需操作。",
+                            "tips": [
+                                {"text": "劇情演出 → 等待", "role": "tank"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Boundless 無際（全屏）→ 團補",
+                "Magick Hammer 魔法鎚（MT 死刑）→ MT 大減傷",
+                "Far-flung Spell 投擲法術 → 點名走出",
+                "Black Hole 黑洞 → Surecast 或預判位置",
+                "Voidsent Adds → DPS 清",
+                "末段 Moenbryda 犧牲劇情"
+            ]
+        }
+    ]
 }

@@ -1,279 +1,230 @@
 {
-    "id":  "minstrels_ballad_ultimas_bane",
-    "name":  "究極武器討滅絕境戰",
-    "nameEn":  "The Minstrel\u0027s Ballad: Ultima\u0027s Bane - The Ultima Weapon",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）本體機制貫穿全程：吸附式炸彈 (T) 每 45 秒疊一層 → 5 層秒 T → 提前 swap。",
-                     "2）魔導浮游炮：6 中央或 8 場邊 → 突擊加農炮直線 AoE。",
-                     "3）追蹤射線 (非 MT)：高 AoE → 拉到場邊；擴散射線 (MT) 扇形死刑。",
-                     "4）以太炸彈 (綠球)：撞到或 5s 沒人撞會爆 → 躲不撞。",
-                     "5）P1 風神：寒風之歌 大綠扇 → 站背後。",
-                     "6）P2 土神：大地之重 + 光輝炎柱組合 → 看圈走。",
-                     "7）P3 火神：火神爆裂 (補盾抵消) + 光輝炎柱 + 地火噴發 + 深紅旋風 (場外伊弗利特衝過來) 6 重炎柱組合 = 容錯最低。",
-                     "8）P4：以太波動 + 以太炸彈鎖鏈 (2/3/4 組: X / キキ / 口)，全員撞球分攤；融合爆炸即死。",
-                     "9）究極：每次 10 秒倒讀 2w 傷害全屏，T 即死；未殺 boss 復讀直至團滅。"
-                 ],
-    "notes":  "ARR 2.x Ultimate (假想作戰) - 究極神兵討滅絕境戰 (Lv 50, ilvl 130)。Ultima Weapon Ultimate；同步等級非常嚴格，4 階段機制累加。",
-    "bosses":  [
-                   {
-                       "name":  "究極神兵",
-                       "nameEn":  "The Ultima Weapon",
-                       "mnemonic":  [
-                                        "吸附式炸彈 → T swap 每 5 層",
-                                        "P1 風神 / P2 土神 / P3 火神 / P4 全機制",
-                                        "以太炸彈 → 躲不撞",
-                                        "P3 深紅旋風 + 6 重炎柱 = 死亡組合",
-                                        "P4 以太波動 X/キキ/口 連環撞",
-                                        "究極 = 10 秒倒數團滅"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "貫穿機制 (全戰)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Vulcan Magnet 吸附式炸彈",
-                                                                "type":  "tankbuster",
-                                                                "description":  "每 ~45 秒一次對當前 MT 附加可疊加持續 60s 的 debuff，5 層時對 T 約 3s 一跳 1w3 同步等級秒殺級 dot。提前 swap。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT/ST 每 3-4 層 provoke swap",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補注意 swap 時補療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magitek Bit 魔導浮游炮",
-                                                                "type":  "add",
-                                                                "description":  "場中 6 個或場邊 8 個浮游炮頻繁讀條突擊加農炮 → 面向隨機目標直線 AoE。",
-                                                                "tips":  [
-                                                                             "看浮游炮朝向走縫",
-                                                                             {
-                                                                                 "text":  "DPS 處理本體優先，浮游炮自然分布",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Homing Lasers 追蹤射線",
-                                                                "type":  "aoe",
-                                                                "description":  "隨機面對非 MT 玩家釋放高額 AoE 傷害。",
-                                                                "tips":  [
-                                                                             "被點往場邊離隊",
-                                                                             {
-                                                                                 "text":  "補補回血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Diffusion Ray 擴散射線",
-                                                                "type":  "tankbuster",
-                                                                "description":  "頻繁面向 MT 的高額 AoE 扇形魔法傷害 = MT 死刑。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 必開大減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "面外場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aetheric Bombs 以太炸彈 (本體)",
-                                                                "type":  "mechanic",
-                                                                "description":  "對隨機非 MT 玩家放出緩慢移動的綠球，5s 內沒人撞會原地爆炸高 AoE。撞球人數與後續以太波動連線長度無關，所以躲避即可。",
-                                                                "tips":  [
-                                                                             "綠球追過來就跑遠",
-                                                                             "不要嘗試撞掉避免重疊機制"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magitek Detonation 魔導核爆",
-                                                                "type":  "raidwide",
-                                                                "description":  "巨大傷害全屏魔法 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補 + 補盾",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magitek Laser 魔科學雷射",
-                                                                "type":  "aoe",
-                                                                "description":  "向正 / 右前 45° / 左前 45° 方向釋放綠色直線 AoE。",
-                                                                "tips":  [
-                                                                             "回避處理 → 站側邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tracking Explosion 追蹤爆炸",
-                                                                "type":  "aoe",
-                                                                "description":  "同時出現多個距離衰減 AoE，伴隨驅逐艦墜落動畫，遠離各 AoE 源。",
-                                                                "tips":  [
-                                                                             "看墜落點往對側跑"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aetheric Profusion 青磷放射",
-                                                                "type":  "raidwide",
-                                                                "description":  "對神兵身邊略大於近戰最大距離範圍內無讀條瞬發中額魔法 AoE；會打掉近戰身上的盾。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "H2 必須立即補盾 → 否則 P3 火神爆裂擊退無法抵消",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "近戰意識遠離後重新接"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P1 - 風神階段",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Wicked Wheel 寒風之歌",
-                                                                "type":  "cone",
-                                                                "description":  "場中迦樓羅面向正面釋放大範圍可見綠色扇形順劈 AoE；場上無石柱可擋。",
-                                                                "tips":  [
-                                                                             "站迦樓羅正後方避開扇形",
-                                                                             {
-                                                                                 "text":  "MT 將本體拉到背對迦樓羅",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 - 土神階段",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Weight of the Land 大地之重",
-                                                                "type":  "aoe",
-                                                                "description":  "地面可見 AoE；常與大範圍的光輝炎柱組合出現。",
-                                                                "tips":  [
-                                                                             "看 2 種圈走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Earthen Shatter 大地粉碎",
-                                                                "type":  "raidwide",
-                                                                "description":  "無讀條瞬發以場中為圓心的距離衰減 AoE。",
-                                                                "tips":  [
-                                                                             "看到動作立刻往場邊跑"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P3 - 火神階段 (容錯最低)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Vulcan Burst 火神爆裂",
-                                                                "type":  "knockback",
-                                                                "description":  "可被足額盾值抵消的微小 AoE + 擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "H2 必須補盾抵消擊退",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "Arm\u0027s Length 也可免位移"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Radiant Plume 光輝炎柱",
-                                                                "type":  "aoe",
-                                                                "description":  "地面可見 AoE；判定時間約晚於讀條結束 0.5s，需以動畫為準。",
-                                                                "tips":  [
-                                                                             "等動畫結束再離開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Eruption 地火噴發",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機 2 個非 MT 目標釋放四連可見步進式大範圍高傷害 AoE。",
-                                                                "tips":  [
-                                                                             "被點往場邊走 + 後續每秒拉走",
-                                                                             {
-                                                                                 "text":  "補大量補療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Crimson Cyclone 深紅旋風 (組合)",
-                                                                "type":  "aoe",
-                                                                "description":  "場外伊弗利特對面前發動火神衝；與六重光輝炎柱一起釋放，是本副本低裝等下容錯率最低的機制。組合形式為以下圖形的左右/中心對稱形狀。",
-                                                                "tips":  [
-                                                                             "提前在場中準備躲避該組合技",
-                                                                             "看深紅旋風來向 → 站斜縫避光輝炎柱"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P4 - 三神全剝離後額外機制",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Aetheric Wave 以太波動 + 連環炸彈",
-                                                                "type":  "mechanic",
-                                                                "description":  "對全隊中額 AoE 並長距離擊退；隨後場上刷新若干對彼此連線並不斷靠近的以太炸彈。3 次以太波動數量分別為 2/3/4 組，形狀分別為 X / キキ / 口。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "我方撞炸彈 → 大範圍可分攤 AoE，傷害極高但 T 全減可單吃",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "隊友沒及時集合 → 灵性犧牲自己單人撞掉避免融合",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補大團補 + 各種減傷叠加",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Fusion Explosion 融合爆炸",
-                                                                "type":  "raidwide",
-                                                                "description":  "炸彈與炸彈撞到時造成全屏的同步等級時巨額即死級 AoE。",
-                                                                "tips":  [
-                                                                             "必須在炸彈相撞前撞掉其中一個"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ultima 究極 (enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "第三次以太波動後一段時間使用，螢幕可見倒計時 10 秒讀條 2w 傷害全屏 AoE；同步等級非 T 即死，若未團滅 8 人將復讀直至我方團滅或 boss 被擊殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS check：90 級 ilvl carry 可活 1 人 → boss 殺",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 開極限大減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補極限治療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "minstrels_ballad_ultimas_bane",
+    "name": "究極武器討滅絕境戰",
+    "nameEn": "The Minstrel's Ballad: Ultima's Bane",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）究極武器討滅絕境戰：吟遊詩人版 Ultima Weapon Extreme。9 階段戰鬥，10 分鐘狂暴 → Ultima 全屏團滅。",
+        "2）Viscous Aetheroplasm 黏稠以太質：每 ~20s 對 MT 疊 1 層，5 層死亡。3 層換 T 是基準。",
+        "3）P1 Garuda 風神：站 Garuda 背後 + Mistral Shriek 寒風之嘯時跑遠 + Eye of the Storm 颱風眼留場邊（紫色消失後跑外圈避 Titan 砸場中）。",
+        "4）P2 Titan 土神：Outer Plumes 外圈炎柱 / Inner Plumes 內圈炎柱輪換 + Tank Purge 攻城炮（全屏 AoE）→ 全員集合治療團補。",
+        "5）P3 Ifrit 火神：兩個玩家點名 Eruption 噴發 → 兩人同向繞場邊（順時針）跑 5 次後結束 + 4 炎柱 + 1 排炎柱（Ifrit 衝鋒過場）+ 繼續 Tank Purge。",
+        "6）轉場：Magitek Ray 魔導激光（綠線 + 三條直線）；Orbs 點名追蹤球 → 拉離隊伍；Diffractive Laser 散射激光無讀條前扇高傷 → 僅 MT 站正面。",
+        "7）P4 Aetheric Boon 1 以太波動 1：4 個球（南北、東西兩對）連線 → 全員集合分組撞球。撞掉兩對解。",
+        "8）P5a Magitek Bits 1 魔導浮游炮 1：5 個炮在中央 → 從靠近近戰那個開始順時針清。",
+        "9）P5b Airship 1 飛艇 1：2 飛艇 從東西方向墜落 → 非 T 站場地正南；MT 站正北。1 治療留外圈附近 MT 補位。",
+        "10）P6 Aetheric Boon 2：6 個球 → 1 短南北（優先）+ 2 長東西。先撞短的，再依次撞長的。",
+        "11）P7a Magitek Bits 2：浮游炮散布在場地外圍 → DPS 順時針從東北清（離近戰最近）。",
+        "12）P7b Airship 2：4 飛艇從東北南西北墜落 → 非 T 站場中央；MT 朝北吃高傷（不能轉中央，會用 Diffractive Laser）。",
+        "13）P8 Aetheric Boon 3 最終：4 個極短對角短連線（西-南、西-北、北-東、東-南，鑽石形）。坦克 LB3 期間玩家穿過 4 個球。或 2 玩家分組（西 2 + 東 2）。",
+        "14）P9 結束（< 10 分鐘）：終局 DPS race。如果 10 分鐘後 boss 讀條 Ultima → 必死團滅，可用 LB 救場。"
+    ],
+    "notes": "ARR 2.1 Extreme trial（Lv 50，sync 50，8 人 trial highEnd），『究極武器討滅絕境戰』，於 Porta Decumana。吟遊詩人系列副本，劇情上吟遊詩人重新講述玩家的勝利。是 ARR Ex 中最具技術深度的 trial，9 階段戰鬥包含三神考驗 + Aetheric Boon 球機制 + Magitek Bits + Airships + 三次 Boon。終局 10 分鐘 Ultima hard enrage 強制團滅。",
+    "bosses": [
+        {
+            "name": "究極武器",
+            "nameEn": "The Ultima Weapon",
+            "phases": [
+                {
+                    "name": "P1 Garuda 風神階段",
+                    "mechanics": [
+                        {
+                            "name": "Viscous Aetheroplasm 黏稠以太質（雙坦輪換）",
+                            "type": "mechanic",
+                            "description": "boss 每約 20 秒對 MT 疊 1 層 Viscous Aetheroplasm 黏稠以太質。5 層 → 死亡。3 層換 T 是基準（4 層風險太高）。其他玩家避免站 boss 前方（會吃 stack）。",
+                            "tips": [
+                                {"text": "MT 3 層換 T", "role": "tank"},
+                                {"text": "非 T 不站 boss 前方", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Garuda + Mistral Shriek 寒風之嘯 + 颱風眼",
+                            "type": "mechanic",
+                            "description": "Garuda 出現場中央，Ultima 試圖將玩家擊退到 Garuda AoE 內。站 Garuda 背後避免被擊退到 AoE。Eye of the Storm 颱風眼出現後到場中央邊緣（紫色消失後跑外圈躲 Titan 砸地）。Mistral Shriek 寒風之嘯 → 跑遠離 Garuda。",
+                            "tips": [
+                                {"text": "站 Garuda 背後", "role": "dps"},
+                                {"text": "MT 同樣要閃 Eye of the Storm", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 Titan 土神階段",
+                    "mechanics": [
+                        {
+                            "name": "Radiant Plume 炎柱輪換 + Tank Purge 攻城炮",
+                            "type": "mechanic",
+                            "description": "Titan 完整循環：Outer Plumes 外圈炎柱 → Inner Plumes 內圈炎柱 → Tank Purge 攻城炮（全屏 AoE）→ Inner Plumes → Outer Plumes。避炎柱 + Tank Purge 時全員集合方便治療團補。",
+                            "tips": [
+                                {"text": "外圈 → 站中；內圈 → 站邊", "role": "dps"},
+                                {"text": "Tank Purge 集合 + 團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 Ifrit 火神階段",
+                    "mechanics": [
+                        {
+                            "name": "Eruption 噴發（2 人連跑 5 次）",
+                            "type": "mechanic",
+                            "description": "Ifrit phase 開始 → 2 名隨機玩家被 Eruption 噴發點名 → 兩人同方向（建議順時針）沿場邊繞跑。5 次後結束。不要把噴發帶到 MT 區。",
+                            "tips": [
+                                {"text": "被點 2 人同向繞跑", "role": "dps"},
+                                {"text": "避開 MT 區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ifrit 衝鋒 + 4 炎柱",
+                            "type": "aoe",
+                            "description": "4 炎柱出現 → 1 排炎柱加 Ifrit 衝鋒（同時爆第 2 組）→ 跑到場邊根據情況調整。Ifrit 可從任意方向衝。建議離開中央（衝鋒會穿過中央）。",
+                            "tips": [
+                                {"text": "離開中央", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3.5 轉場（新技能）",
+                    "mechanics": [
+                        {
+                            "name": "Magitek Ray 魔導激光（綠線三直線）",
+                            "type": "aoe",
+                            "description": "boss 轉身畫綠線（地面 3 條直線）。停留會中等到高傷。看綠線走縫。",
+                            "tips": [
+                                {"text": "看綠線走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Orbs 追蹤球 + Diffractive Laser 散射激光",
+                            "type": "mechanic",
+                            "description": "Orbs：boss 釋放綠球追蹤玩家，被點玩家頭上有符號 → 跑開讓球追。Diffractive Laser 散射激光：無讀條前扇高傷（i80 BRD 約 3600 傷）。建議僅 MT 站 boss 前方。",
+                            "tips": [
+                                {"text": "被追玩家跑開遛球", "role": "dps"},
+                                {"text": "非 T 不站 boss 前方", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 Aetheric Boon 1（4 球 2 對）",
+                    "mechanics": [
+                        {
+                            "name": "Aetheric Boon 1 以太波動 1",
+                            "type": "mechanic",
+                            "description": "4 個球出現連線（1 南北 + 1 東西，2 對）→ 向中央匯合 → 球撞球 = 團滅。先指定 1 玩家為集合點，Aetheric Boon 釋放擊退後全員集合該玩家 → 撞球。每對撞 1 個解除。時間充裕。",
+                            "tips": [
+                                {"text": "指定集合點", "role": "tank"},
+                                {"text": "全員撞球順序", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P5 Magitek Bits 1 + Airship 1",
+                    "mechanics": [
+                        {
+                            "name": "Magitek Bits 1（中央 5 浮游炮）",
+                            "type": "add",
+                            "description": "5 個 Magitek Bits 魔導浮游炮在場中央發射雷射。從近戰最近一個開始順時針清。",
+                            "tips": [
+                                {"text": "順時針清", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Airship 1（東西 2 飛艇）",
+                            "type": "aoe",
+                            "description": "2 飛艇從東西方向墜落（衰減 AoE）→ 非 T 站場地正南；MT 站正北。1 治療留外圈附近 MT 補位。飛艇墜落結束後清剩餘 Bits。",
+                            "tips": [
+                                {"text": "非 T 正南 / MT 正北", "role": "tank"},
+                                {"text": "1 治療外圈跟 MT", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P6 Aetheric Boon 2（6 球 3 對）",
+                    "mechanics": [
+                        {
+                            "name": "Aetheric Boon 2（短南北 + 2 長東西）",
+                            "type": "mechanic",
+                            "description": "6 個球：1 對短南北（優先撞）+ 2 對長東西。擊退後立刻集合撞短的 → 再依次撞長的（允許治療補位）。時間緊迫於短連線。",
+                            "tips": [
+                                {"text": "優先短南北", "role": "dps"},
+                                {"text": "再撞長東西", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P7 Magitek Bits 2 + Airship 2",
+                    "mechanics": [
+                        {
+                            "name": "Magitek Bits 2（場地外圍）",
+                            "type": "add",
+                            "description": "Bits 在場地外圍。DPS 順時針從東北（近戰最近）開始清。",
+                            "tips": [
+                                {"text": "DPS 順時針從東北清", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Airship 2（4 飛艇對角）",
+                            "type": "aoe",
+                            "description": "4 飛艇從東北、東南、西南、西北墜落 → 非 T 站正中央；MT 朝北吃高傷（不能轉中央，會用 Diffractive Laser）。注意：Bits 會對中央射線 → 飛艇到達後立刻離開中央，繼續清外圈 Bits。",
+                            "tips": [
+                                {"text": "非 T 中央 / MT 朝北", "role": "tank"},
+                                {"text": "飛艇近 → 離開中央回外圈", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P8 Aetheric Boon 3（4 對角短連線 終極）",
+                    "mechanics": [
+                        {
+                            "name": "Aetheric Boon 3 最終（鑽石形 4 短連線）",
+                            "type": "mechanic",
+                            "description": "4 個極短對角連線：西-南、西-北、北-東、東-南（鑽石形）。時間極緊迫。建議：① Boon 讀條時坦克開 LB3，全員穿 4 球；② 2 玩家分組（西 2 + 東 2）各撞 2 球。若任何球碰撞 → 團滅。",
+                            "tips": [
+                                {"text": "坦克 LB3 全員穿球", "role": "tank"},
+                                {"text": "或 2 玩家分組撞各 2 球", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P9 終局 DPS race（10 分鐘 enrage Ultima）",
+                    "mechanics": [
+                        {
+                            "name": "終局 burn phase + Ultima Hard Enrage",
+                            "type": "raidwide",
+                            "description": "通過最終 Boon 後進入終局 burn phase。10 分鐘狂暴 → Ultima Weapon 傳送到場中央讀條 Ultima → 完成全員瞬死。LB 可用救場（DPS LB3 / 坦克 LB3）。",
+                            "tips": [
+                                {"text": "DPS 全力爆發秒掉", "role": "dps"},
+                                {"text": "10 分鐘前完成", "role": "tank"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Viscous Aetheroplasm 黏稠以太質 → 3 層換 T",
+                "P1 Garuda → 站背 + 颱風眼留場邊",
+                "P2 Titan → 外/內炎柱輪換 + Tank Purge 集合",
+                "P3 Ifrit → 2 人 Eruption 同向繞 5 次 + 衝鋒避中央",
+                "P4 Boon 1（4 球）→ 集合撞球",
+                "P5 Bits 1 + Airship 1 → 非 T 正南 / MT 正北",
+                "P6 Boon 2（6 球）→ 短南北優先",
+                "P7 Bits 2 + Airship 2 → 非 T 中央 / MT 朝北",
+                "P8 Boon 3 最終（鑽石 4 球）→ LB3 全員穿",
+                "P9 10 分鐘 Ultima → 必擊敗"
+            ]
+        }
+    ]
 }
