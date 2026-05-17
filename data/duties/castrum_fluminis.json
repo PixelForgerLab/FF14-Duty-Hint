@@ -1,121 +1,165 @@
 {
-  "id": "castrum_fluminis",
-  "name": "真 月夜見殲滅戰",
-  "nameEn": "Castrum Fluminis - Zenos yae Galvus",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "SB 4.0 MSQ 最終戰之 1：1 對 1 武士決鬥（4 人小隊版亦有）。",
-    "Concentrativity 集中：boss 蓄力一刀斬 → 拉到場邊閃身。",
-    "Vein Splitter 破裂斷：MT 直線 buster。",
-    "Hissatsu: Kaiten / Yukikaze / Gekko / Higanbana 居合連環 → 看刀位躲扇形。",
-    "Iaijutsu 居合術讀條 → boss 拔刀大絕：場邊閃 / 走後再回。",
-    "Aether Strike 以太擊：點名遠程玩家直線 → 引導到場邊。",
-    "Burning Dome 燃燒之圓 → 場邊圓 AoE 走縫。",
-    "Berserker Mode 狂戰士模式 (低血)：所有招式縮短 cooldown，全速輸出。"
-  ],
-  "notes": "SB 4.0 MSQ trial - 魔導要塞 / 與傑諾斯決戰 (Lv 70)。Castrum Fluminis；Zenos yae Galvus，使用其奧之太刀「卑流刀真」。MSQ 場合多為 1 對 1 段落，正式副本為 4 人。",
-  "bosses": [
-    {
-      "name": "傑諾斯",
-      "nameEn": "Zenos yae Galvus",
-      "mnemonic": [
-        "Concentrativity 蓄力一刀 = 場邊閃",
-        "Iaijutsu 居合術 = 拔刀大絕 → 走縫",
-        "Aether Strike 點名直線 → 拉場邊",
-        "狂戰士模式 = 縮 CD 全力推輸出"
-      ],
-      "phases": [
+    "id": "castrum_fluminis",
+    "name": "真 月夜見殲滅戰",
+    "nameEn": "Castrum Fluminis",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 月夜見 Tsukuyomi（月之女神，与一夜花夢化身）：Torment Unto Death 折磨之死 = 大前扇 tankbuster → MT 背對人群。",
+        "P1 Zashiki-Asobi 座敷遊戲：依生成順序爆炸的扇形 → 站尚未爆炸的扇內躲先爆的，中央扇先爆 → 站外圍扇後再回中央。",
+        "P1 Nightfall 落夜：隨後施放 4 種隨機 AoE 之一：Steel of the Underworld（前扇）/ Reprimand（全屏 raidwide）/ Midnight Haze（兩 add 對面生成 → 殺前阻止連線 To Ashes）/ Lead of the Underworld（直線分攤）。",
+        "P2 Nightbloom 夜之開花：全屏 + Stun 進入第二階段。",
+        "P2 Suffering 受苦條（時間累積 + 殺 add 不及 = 滿 100% 團滅）→ 4 波 add 全數速殺：Wave1 父母 / Wave2 故鄉×3+帝國×3 / Wave3 朝日 / Wave4 傑諾斯（影）。",
+        "P3 沿用 P1 招式 + Selenomancy 月相分割：場地分兩半 → 站一邊累 debuff 至 5 = Doom + 流血 → 必須換邊（換邊需『站到下次 stack 觸發前』才能解 debuff，移動後須留在新邊）。",
+        "P3 Selenomancy 期間沿用 Midnight Haze cloud add + 月環 AoE → 切換月相時要注意 add 在哪一半。",
+        "P3 Antitwilight / Perilune 反月光：移除 Selenomancy 與 debuff + 全屏。",
+        "P3 Dance of the Dead 亡者之舞：階段轉場高傷全屏。Lunacy 月狂 = Akh Morn 連續 stack（1 hit + 暫停 + 2 quick hits）→ 集合保持。Dark/Bright Blade 暗 / 明刀 = boss 砍場地一半 → 看顏色判斷站位。"
+    ],
+    "notes": "SB 4.3 MSQ trial（Lv 70，sync 70，ilvl 335，8 人 trial，時限 60 分），位於奧薩德 多瑪城下天文要塞 Castrum Fluminis。為一夜花（Yotsuyu）變身月之女神月夜見 Tsukuyomi 的決戰。劇情：4.3『信念之火』結局，一夜花在絕望中召喚出月之女神，光之戰士需在多瑪保衛戰中將其擊敗。掉落 ilvl 350 武器（百萬詩學票兌換相關）。Tsukuyomi 為日本神話中的月之神，故事中一夜花選擇以亡者之姿守護自己最後的尊嚴。",
+    "bosses": [
         {
-          "name": "Zenos 決鬥",
-          "mechanics": [
-            {
-              "name": "Concentrativity 集中",
-              "type": "aoe",
-              "description": "Boss 蓄力釋放一刀斬大範圍 AoE；MT 必須拉到場邊閃身；看圖示提前走位避開預兆範圍。",
-              "tips": [
+            "name": "月夜見",
+            "nameEn": "Tsukuyomi",
+            "phases": [
                 {
-                  "text": "MT 朝場邊閃身",
-                  "role": "tank"
-                },
-                "看蓄力動畫提前移動"
-              ]
-            },
-            {
-              "name": "Vein Splitter 破裂斷",
-              "type": "tankbuster",
-              "description": "對 MT 直線單體高傷害 buster；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 開大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Hissatsu Combo 居合連環",
-              "type": "cone",
-              "description": "Boss 連續釋放 Kaiten / Yukikaze / Gekko / Higanbana 等居合扇形/直線；看刀位躲扇形 (前/後/側)。",
-              "tips": [
-                "看刀劃方向 → 站非攻擊側",
-                "近戰提前預判位置"
-              ]
-            },
-            {
-              "name": "Iaijutsu 居合術",
-              "type": "raidwide",
-              "description": "讀條技能；boss 拔刀大絕全屏 AoE；場邊閃 / 走後再回；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員退到場邊",
-                  "role": "tank"
-                },
-                {
-                  "text": "補大團補 + 大盾",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Aether Strike 以太擊",
-              "type": "aoe",
-              "description": "點名遠程玩家釋放直線 AoE → 引導到場邊；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊拉線",
-                "其他人離被點玩家"
-              ]
-            },
-            {
-              "name": "Burning Dome 燃燒之圓",
-              "type": "aoe",
-              "description": "場邊出現圓形 AoE → 走縫躲避；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈分布走縫"
-              ]
-            },
-            {
-              "name": "Berserker Mode 狂戰士模式 (低血 enrage)",
-              "type": "other",
-              "description": "Boss 低血時所有招式 cooldown 縮短 → 機制密度加倍；依預兆走位處理。",
-              "tips": [
-                {
-                  "text": "DPS 推輸出快速結束",
-                  "role": "dps"
+                    "name": "P1 月之女神",
+                    "mechanics": [
+                        {
+                            "name": "Torment Unto Death 折磨之死",
+                            "type": "cone",
+                            "description": "大前扇 tankbuster → 對 MT 前方扇形高傷。MT 必須拉 boss 背對人群。",
+                            "tips": [
+                                {"text": "MT 背對人群拉 boss", "role": "tank"},
+                                {"text": "MT 開大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Zashiki-Asobi 座敷遊戲",
+                            "type": "aoe",
+                            "description": "場上生成多個扇形，依生成順序爆炸（中央 1 個 + 周圍多個）。站在『尚未爆炸的扇形內』躲先爆的，中央扇先爆 → 玩家先站外圍扇 → 中央爆後再回中央。",
+                            "tips": [
+                                {"text": "中央先 → 站外圍扇", "role": "dps"},
+                                {"text": "中央爆後跑回中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Nightfall 落夜",
+                            "type": "mechanic",
+                            "description": "在 Zashiki-Asobi 期間讀條 → 隨後施放 4 種 AoE 中隨機 1 種：Steel of the Underworld（前扇） / Reprimand（全屏 raidwide） / Midnight Haze（兩 add 生成於對面 → 必須殺前阻止連線 To Ashes） / Lead of the Underworld（直線分攤 stack 標）。",
+                            "tips": [
+                                {"text": "看接續招式判斷處理", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lead of the Underworld 黃泉誘導",
+                            "type": "stack",
+                            "description": "對某玩家附帶直線分攤標 → 全員須與被點玩家排成直線分攤傷害。若場上有 Midnight Haze add，被點玩家可與 add 對齊 → 其他玩家可同時繼續攻擊 add。",
+                            "tips": [
+                                {"text": "全員與被點玩家對齊", "role": "dps"},
+                                {"text": "對齊 add 同時 DPS", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Midnight Haze 暗夜之霧",
+                            "type": "add",
+                            "description": "場上兩側對面生成兩個 add → 必須在它們碰面或完成 To Ashes 之前擊殺。",
+                            "tips": [
+                                {"text": "DPS 立即轉火 add", "role": "dps"},
+                                {"text": "MT 控 boss 別擋", "role": "tank"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "補連續主動補療",
-                  "role": "healer"
+                    "name": "P2 受苦階段（小怪 + Suffering 條）",
+                    "mechanics": [
+                        {
+                            "name": "Nightbloom 夜之開花",
+                            "type": "raidwide",
+                            "description": "進 P2 開場全屏 AoE + Stun → 預備大團補與大減傷。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"},
+                                {"text": "全員大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Suffering 受苦條",
+                            "type": "mechanic",
+                            "description": "P2 期間 Suffering 條隨時間累積 → 越久越高傷 → 滿 100% 強制團滅。必須盡快擊殺 4 波 add。",
+                            "tips": [
+                                {"text": "DPS 速殺 add 壓低 Suffering", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "4 波 add",
+                            "type": "add",
+                            "description": "依序出現：Wave 1 = 父母（Specter of Matriarch + Patriarch）；Wave 2 = 故鄉 ×3 + 帝國 ×3；Wave 3 = 朝日（Asahi 影）；Wave 4 = 傑諾斯（Zenos 影）。",
+                            "tips": [
+                                {"text": "DPS 依序速殺", "role": "dps"},
+                                {"text": "MT 撿不停拉", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 Selenomancy 月相分割",
+                    "mechanics": [
+                        {
+                            "name": "Selenomancy 月相",
+                            "type": "mechanic",
+                            "description": "場地分為兩半 → 站某邊累 debuff stack → 5 stack = Doom + 流血（會死）。必須換邊清 debuff。換邊判定：到新邊『等到下次 stack 觸發前』才會清 → 建議 3 stack 時換邊（安全餘量）。期間有 doughnut AoE 和 Nightfall 同時釋。",
+                            "tips": [
+                                {"text": "建議 3 stack 時換邊", "role": "dps"},
+                                {"text": "換邊後留在新邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Antitwilight / Perilune 反月光",
+                            "type": "raidwide",
+                            "description": "移除 Selenomancy 場地分割與 debuff → 同時釋全屏 AoE。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Dance of the Dead 亡者之舞",
+                            "type": "raidwide",
+                            "description": "高傷全屏 → 階段轉場信號 → 預備大團補。",
+                            "tips": [
+                                {"text": "全員大減傷 + 補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Lunacy 月狂",
+                            "type": "stack",
+                            "description": "類似龍王 Akh Morn → 連續分攤集合（1 hit + 暫停 + 2 quick hits）→ 全員 stack 集合並保持 group。",
+                            "tips": [
+                                {"text": "全員集合分攤", "role": "dps"},
+                                {"text": "保持集合 3 hits", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dark/Bright Blade 暗 / 明刀",
+                            "type": "cone",
+                            "description": "boss 拔刀砍場地『略大於一半』→ 看刀刃顏色判斷砍哪一側 → 站對應安全側。",
+                            "tips": [
+                                {"text": "看刀顏色站對應安全側", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：折磨之死 = 大前扇 tankbuster / 座敷遊戲 = 站未爆扇 → 中央先 / Nightfall 4 種 AoE 隨機",
+                "P2：Nightbloom 開場全屏 + Stun → 4 波 add 速殺壓 Suffering（滿 100% 團滅）",
+                "P3 Selenomancy 月相分割 → 3 stack 換邊清 debuff",
+                "P3 Lunacy = Akh Morn 集合 3 hits / Dark Bright Blade 看刀色站安全側"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

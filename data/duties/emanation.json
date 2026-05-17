@@ -1,130 +1,103 @@
 {
-  "id": "emanation",
-  "name": "真 拉克什米殲滅戰",
-  "nameEn": "Emanation - Lakshmi",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 64,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Lakshmi 拉克什米：Pure Heart 純粹心 + Pall of Light 光暗 + 召喚輝光花。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.1 SB 蛮神拉克什米輝光放射首戰（Lv 64）。Boss 依序為 Lakshmi 拉克什米。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "拉克什米",
-      "nameEn": "Lakshmi",
-      "mnemonic": [
-        "Lakshmi 拉克什米 機制：Pure Heart 純粹心 + Pall of Light 光暗 + 召喚輝光花。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "emanation",
+    "name": "真 拉克什米殲滅戰",
+    "nameEn": "Emanation",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 68,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "開場 Lakshmi 被屏障保護 + 兩側各 1 隻 Dreaming Kshatriya（守夢者） add → 必須先殺 add 解除屏障 → 但 boss AoE 會治療這些 add → 必須集火依序殺 1 個再殺 1 個。",
+        "Vril（生命之力）橘色 orb：Duty 機制 → 玩家可持 1 個 charge，激活後 30 秒大幅減傷。Lakshmi 釋全屏無安全區 AoE 時必須 use Vril 否則秒殺。",
+        "Vril 補給 orb：每次大招前場上生成新 orb → 已有 charge 的玩家『不要踩』（會消耗 orb 但無法疊層）。",
+        "Hand 機制：『Target Left』= 藍色圓池（吃傷後變大）；『Target Right』= 十字形範圍（從 2-3 名玩家身上發出）→ 看 boss 狀態判斷處理方式。",
+        "橘色 + 箭頭分攤標：點名 1 人附帶分攤標 → 全員集合分攤。",
+        "場邊 = 死亡：場地邊緣外為高空 → Lakshmi 全屏擊退即使開 Vril 也可能把人推出場 → 站位偏中央。",
+        "DPS 重點：1 隻殺完 1 隻 add（boss AoE 會回血）、Vril 大招時 use 否則秒殺、走位避開 Hand 範圍。"
+    ],
+    "notes": "SB 4.1 MSQ trial（Lv 67，sync 68，ilvl 320，8 人 trial，時限 60 分），位於基拉巴尼亞邊區 Djanan Qhat 蛇族要塞。為 Vira 蛇族支系『Qalyana』召喚的蠻神 Sri Lakshmi 拉克什米（喜悦女神）。劇情：4.1『翠雲石的少女』，Qalyana 在女王悲痛中召喚蠻神 → 光之戰士需深入要塞阻止。掉落 ilvl 330 武器（百萬詩學票兌換）。",
+    "bosses": [
         {
-          "name": "Lakshmi 主戰",
-          "mechanics": [
-            {
-              "name": "Hand of Grace 慈悲之手",
-              "type": "tankbuster",
-              "description": "對 MT 單體大傷害；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "拉克什米",
+            "nameEn": "Lakshmi",
+            "phases": [
                 {
-                  "text": "MT 大減傷 + ST swap",
-                  "role": "tank"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "屏障 + Dreaming Kshatriya 雙 add",
+                            "type": "add",
+                            "description": "開場 Lakshmi 被屏障保護 + 兩側各 1 隻 Dreaming Kshatriya 守夢者 add → 必須殺 add 才能傷害 boss。但 Lakshmi 的 AoE 攻擊會治療這些 add → 必須集火 1 隻殺完再殺 1 隻（分散打 = 兩隻都殺不死）。",
+                            "tips": [
+                                {"text": "DPS 集火 1 隻", "role": "dps"},
+                                {"text": "MT 撿另 1 隻", "role": "tank"},
+                                {"text": "禁止分散攻擊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Vril 生命之力（橘色 orb）",
+                            "type": "mechanic",
+                            "description": "Duty 機制 → 玩家可持 1 個 charge → 激活後 30 秒大幅減傷 + 防擊退。Lakshmi 飛離平台釋放『無安全區全屏 AoE』時 → 必須激活 Vril 否則秒殺。Add 殺完後不久 boss 第一次釋放。",
+                            "tips": [
+                                {"text": "Add 殺完即激活 Vril", "role": "tank"},
+                                {"text": "看 boss 飛離平台時激活", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Vril 補給 orb",
+                            "type": "mechanic",
+                            "description": "每次大招前場上生成新 Vril orb → 已有 charge 的玩家『絕對不要踩』（會消耗 orb 但無法疊層 → 其他玩家無法用）。每人 1 charge 上限。",
+                            "tips": [
+                                {"text": "已有 charge 別踩新 orb", "role": "dps"},
+                                {"text": "沒 charge 才撿", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Target Left（Hand of Bliss 藍池）",
+                            "type": "aoe",
+                            "description": "boss 賦予 Target Left 狀態 → 釋出『Hand of Bliss』藍色圓池效果 → 吃傷的玩家會讓池子變大 → 玩家需離開圓池範圍避免擴大。",
+                            "tips": [
+                                {"text": "看狀態 → 離開藍池", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Target Right（Hand of Bliss 十字）",
+                            "type": "aoe",
+                            "description": "boss 賦予 Target Right 狀態 → 釋出十字形 AoE 從 2-3 名隨機玩家身上發出 → 玩家拉開避免互相重疊。",
+                            "tips": [
+                                {"text": "被點玩家拉場邊", "role": "dps"},
+                                {"text": "避免 cross 互疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Inner Demons 心魔（分攤標）",
+                            "type": "stack",
+                            "description": "點名 1 玩家頭頂橘色帶箭頭標記 → 全員集合分攤傷害。",
+                            "tips": [
+                                {"text": "全員集合分攤", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "全屏擊退 + 出場風險",
+                            "type": "knockback",
+                            "description": "Lakshmi 飛到平台中央釋全屏 AoE + 擊退 → 即使開 Vril 也可能被推到場邊外（場邊外 = 即死）。需站位偏中央 + Vril 激活減少擊退。",
+                            "tips": [
+                                {"text": "站位偏中央", "role": "dps"},
+                                {"text": "Vril + 防擊退", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Hand of Karma 因果之手",
-              "type": "cone",
-              "description": "對 ST 扇形 cleave；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                {
-                  "text": "ST 朝外避免噴隊伍",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Pure of Heart 純淨之心 (gaze)",
-              "type": "gaze",
-              "description": "Boss 凝視全場 → 面對 boss 中招 → 受傷 + 石化 / 暫時 debuff。",
-              "tips": [
-                "看到讀條全員按相機背對 boss",
-                {
-                  "text": "補 Esuna 解石化",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Divine Denial 神聖拒絕",
-              "type": "knockback",
-              "description": "全屏擊退 AoE；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length / Surecast 可免",
-                "靠中央吃最短"
-              ]
-            },
-            {
-              "name": "Path of Light 光之路",
-              "type": "aoe",
-              "description": "直線 AoE → 看燈方向走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "提前預判走位"
-              ]
-            },
-            {
-              "name": "Inner Demons 內心魔",
-              "type": "mechanic",
-              "description": "Boss 分身擊鼓 → 看哪個是本體；攻擊錯誤分身 → 受傷；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看擊鼓姿勢辨本體",
-                "等過場再輸出"
-              ]
-            },
-            {
-              "name": "The Stable Tower 穩定之塔",
-              "type": "mechanic",
-              "description": "場上出現塔需要 1 人踩；無人踩 → 全屏 AoE；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "1 人 (通常 T) 踩塔",
-                "其他人在 boss 周圍輸出"
-              ]
-            },
-            {
-              "name": "Sky Heelers 天蹬蛙怪 (adds)",
-              "type": "add",
-              "description": "場邊召喚 8 隻蛙怪 add → 必須速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS AoE 殲滅蛙怪",
-                  "role": "dps"
-                },
-                {
-                  "text": "T AoE 仇恨拉攏",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Despair 絕望",
-              "type": "raidwide",
-              "description": "高傷害全屏 AoE；adds 殺光後釋放；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補 + 補盾",
-                  "role": "healer"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Add 1 隻 1 隻殺（boss AoE 會回血 → 集火）",
+                "Vril 大招前激活否則秒殺 → 有 charge 別踩補給 orb",
+                "Hand of Bliss → 藍池離開 / 十字 cross 拉開",
+                "全屏擊退 → 站位偏中央 + Vril 防出場"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
