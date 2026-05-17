@@ -1,203 +1,254 @@
 {
-  "id": "great_gubal_library_hard",
-  "name": "秘本寶庫迦巴勒幻想圖書館",
-  "nameEn": "The Great Gubal Library (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Mecanopendragon 機械龍：機械龍機制 + 點名圓。",
-    "B2 Strix 鴞：Void Fire 虛無火 + 書本。",
-    "B3 Demon Wall 惡魔牆：場地前推 + 召喚 add。"
-  ],
-  "notes": "HW 3.3 hard 版圖書館（Lv 60）。Boss 依序為 Mecanopendragon 機械龍、Strix 鴞、Demon Wall 惡魔牆。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "great_gubal_library_hard",
+    "name": "秘本寶庫迦巴勒幻想圖書館",
+    "nameEn": "The Great Gubal Library (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 書本惡魔 Demon of the Tome：tank 側站讓所有 AoE 預警可見。狹邊預警 + 後接大 AoE → 走位站位檢查。",
+        "B1 三連爪對 T 死刑 + 駭人嚎叫近身 AoE。再版 Reprint 兩種：第 1 次黑域擊退 + 兩側書本（黑域內免擊退）；第 2 次多本書連續砸下 → 依順序閃 AoE。",
+        "B2 液態火焰 Liquid Flame：3 形態。人形態：熱風前扇／火海連 3 段腳下／突進連線 + 距離衰減。",
+        "B2 龍卷風形態：場外環火 + 中央龍卷 → 磁石點名（同號靠近、異號遠離 boss）。",
+        "B2 手形態：刻印讀條 → 玩家頭頂出現太陽 / 月亮 → 站對應顏色亮起地板躲傷害與易傷。",
+        "B3 縞鴞 Strix：Check Out 點名圓圈：白圈（浮空 → 抗 Quakes）／黑圈（沉重 → 抗 Tornados）／綠圈（變河童 / 解河童 → 抗 Imps + 雷耐）。",
+        "B3 地震 → 需浮空（白）；龍卷 → 需沉重（黑）；河童 → 進綠圈解；河童狀態 + 暴雷 = 大傷需先變回人。",
+        "B3 1 分 40 秒生 Behemoth Ward → 持續詠唱 Ecliptic Meteor 流星 → 場上出現 2 個小隕石 → 躲到隕石後阻擋直線傷害。"
+    ],
+    "notes": "HW 3.1 副本 Hard 版（Lv 60，sync 60，ilvl 175 / sync 240，4 人 dungeon，時限 90 分），位於庫爾札斯西部高地迦巴勒幻想圖書館。為 HW 主線『迦巴勒幻想圖書館』Normal 的 Hard 版（patch 3.1）。Boss 依序為 Demon of the Tome 書本惡魔、Liquid Flame 液態火焰、Strix 縞鴞。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "場上多重 AoE。",
-              "name": "AoE 連發",
-              "tips": [
-                "閃預警"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Tankbuster。；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Tankbuster 坦克爆擊",
-              "tips": [
+            "name": "書本惡魔",
+            "nameEn": "Demon of the Tome",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "三連爪 Triple Claw",
+                            "type": "tankbuster",
+                            "description": "對 MT 死刑類大傷。MT 需開大減傷。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"},
+                                {"text": "盾補維持", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "駭人嚎叫 Awesome Howl",
+                            "type": "aoe",
+                            "description": "boss 近身 AoE，看圓圈外移即可。",
+                            "tips": [
+                                {"text": "圓外站位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "再版 Reprint（第一次）",
+                            "type": "knockback",
+                            "description": "第一次：場中央產生黑色擊退區（站在黑域不被擊退）+ 兩側後方各出現 1 本書（書本範圍 AoE）→ 玩家必須貼黑色區域避免被擊退到書本 AoE 內。大書砸下後需立即跑場地中間 → 躲兩側小書 AoE 延伸。註：學者 / 占星 / 騎士盾減傷 0 傷可免疫擊退。",
+                            "tips": [
+                                {"text": "貼黑色區避擊退", "role": "dps"},
+                                {"text": "大書後跑場中", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "再版 Reprint（第二次）",
+                            "type": "aoe",
+                            "description": "第二次：多本書連續落下 + 合上造成 AoE → 依落下順序依次走位閃避。",
+                            "tips": [
+                                {"text": "看順序連續閃 AoE", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tank 側站",
+                            "type": "mechanic",
+                            "description": "策略建議：MT 將 boss 拉到場側讓所有 AoE 預警可見（避免被 boss 模型擋預警）。注意邊緣狹窄預警後接大 AoE。",
+                            "tips": [
+                                {"text": "MT 拉 boss 側面", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "AoE 全屏 : 全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "AoE 全屏",
-              "tips": [
-                {
-                  "text": "減傷",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
-        }
-      ],
-      "name": "機械龍",
-      "nameEn": "Mecanopendragon",
-      "mnemonic": [
-        "Mecanopendragon 機械龍 機制：機械龍機制 + 點名圓。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "MT 拉 boss 側面 → 看所有 AoE 預警",
+                "Reprint 第一次 → 貼黑域避擊退 + 大書後跑中央",
+                "Reprint 第二次 → 多本書依序閃 AoE"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Unavoidable party-wide AoE for moderate damage.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Bibliocide 焚書",
-              "tips": [
+            "name": "液態火焰",
+            "nameEn": "Liquid Flame",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "Phase 1 人形態",
+                    "mechanics": [
+                        {
+                            "name": "熱風 Sea of Flames（前扇）",
+                            "type": "cone",
+                            "description": "boss 正前方扇形 AoE。手形態也會用。",
+                            "tips": [
+                                {"text": "繞背避面向", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "火海 Bibliocide",
+                            "type": "aoe",
+                            "description": "點名除 T 以外的玩家 → 對其腳下連續 3 次爆發火焰 AoE → 不斷移動躲避即可。",
+                            "tips": [
+                                {"text": "被點 → 不斷移動 3 次", "role": "dps"},
+                                {"text": "拉開避免互傷", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "突進 Slosh",
+                            "type": "knockback",
+                            "description": "boss 連線 1 玩家衝鋒 → 對被連線玩家與途中造成距離衰減傷害 → 其他玩家避免站在連線上。",
+                            "tips": [
+                                {"text": "被連線玩家拉遠 boss", "role": "dps"},
+                                {"text": "其他人離開連線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "火炎 Ferrofluid（全屏）",
+                            "type": "raidwide",
+                            "description": "全屏 AoE 攻擊。龍卷風形態期間也會用。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2 龍卷風形態",
+                    "mechanics": [
+                        {
+                            "name": "場外環火 + 中央龍卷",
+                            "type": "mechanic",
+                            "description": "變為龍卷風後施放火炎 → 場地外圍出現持續火焰區（踩到持續傷害）+ 中央 boss 變龍卷亦同樣造成傷害。",
+                            "tips": [
+                                {"text": "保持中環區域", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "磁石 Ferrofluid（+/-）",
+                            "type": "mechanic",
+                            "description": "玩家頭上出現正（+）負（-）標記並連線中央龍卷 → 同標誌靠近 boss、不同標誌遠離 boss。",
+                            "tips": [
+                                {"text": "看 boss + / - 對應靠近 / 遠離", "role": "dps"},
+                                {"text": "MT 控制 boss 位置", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3 手形態",
+                    "mechanics": [
+                        {
+                            "name": "刻印 Seal of Night and Day",
+                            "type": "mechanic",
+                            "description": "讀條期間玩家頭上出現太陽（Day）或月亮（Night）標記 → 玩家需站在和自己標誌相同顏色的『亮起地板』上以躲避傷害和易傷 debuff。",
+                            "tips": [
+                                {"text": "看頭頂日 / 月", "role": "dps"},
+                                {"text": "踩對應亮地板", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Scorched earth AoE attack, much like Ifrit's.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Sea of Flames 火焰",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "A random player gets tethered to the boss; it will shortly charge at them; the player has to run far away from the boss.；依預兆走位處理。",
-              "name": "Slosh",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Players get + and - marks, if your mark is the same as the boss's, run close to the boss. Otherwise, run away.；依預兆走位處理。",
-              "name": "Ferrofluid",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Players get sun and moon marks; run to the corresponding sun or moon sigil on the floor.；依預兆走位處理。",
-              "name": "Seal of Night and Day 日夜印",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "鴞",
-      "nameEn": "Strix",
-      "mnemonic": [
-        "Strix 鴞 機制：Void Fire 虛無火 + 書本。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "Phase 1 人形態：熱風前扇 / 火海移動 / 突進連線 + 火炎全屏",
+                "Phase 2 龍卷風：場外環火 + 磁石 +/- 同號近 boss / 異號遠 boss",
+                "Phase 3 手形態：刻印 → 日 / 月對應地板站位"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Spawns a set of circles for resolving upcoming mechanics.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Check Out",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Raidwide. Damages anyone without Levitation, stunStunning them for 3s and inflicting a 30s vulnerability upVulnerability Up stack.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "On the Properties of Quakes 關於地震的性質",
-              "tips": [
+            "name": "縞鴞",
+            "nameEn": "Strix",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰（Check Out 圓圈機制）",
+                    "mechanics": [
+                        {
+                            "name": "Check Out 點圈",
+                            "type": "mechanic",
+                            "description": "讀條 → 場上出現一組圓圈，用以對抗即將到來的機制：白圈 = 站內獲『浮空』Levitation（抗 Quakes 地震）／黑圈 = 站內獲『沉重』Heavy/Leaden（抗 Tornados 龍卷）／綠圈 = 切換『河童』Imp 狀態（不是河童踩會變河童 + 雷耐降；是河童踩會解）。第 1 次 Check Out 出 4 白；第 2 次出 2 黑 + 2 綠；第 4 次出 1 白 + 1 黑 + 1 綠。",
+                            "tips": [
+                                {"text": "看圓圈組合判斷對應機制", "role": "dps"},
+                                {"text": "MT 拉 boss 不擋圓圈", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Quakes 地震",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。無『浮空』Levitation 的玩家受傷 + Stun 3s + 30s 易傷 1 層 → 需提前進白圈。",
+                            "tips": [
+                                {"text": "進白圈獲浮空", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Tornados 龍卷",
+                            "type": "aoe",
+                            "description": "對每人釋出龍卷 AoE。無『沉重』Leaden 的玩家被掃到會被擊飛 + 30s 易傷 1 層 → 需提前進黑圈。注意：sevenity check 在傷害結算時判定，不在讀條結束時 → 別太早離圈。",
+                            "tips": [
+                                {"text": "進黑圈獲沉重", "role": "dps"},
+                                {"text": "傷害結算前勿離圈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Imps 河童",
+                            "type": "mechanic",
+                            "description": "切換全員河童狀態。判定時間在讀條結束 → 但變身有延遲 → 應該等讀條結束『感覺自己已變河童』才踩綠圈解除（若太早踩 = 被變兩次 = 還是河童）。",
+                            "tips": [
+                                {"text": "讀條結束等變身 → 踩綠圈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Thunder III 三連雷",
+                            "type": "aoe",
+                            "description": "On the Properties of Imps 之後使用。每人頭上紫標 → 對每人 AoE。若還是河童 → 高傷 + Down for the Count 5s + 30s 易傷 1 層。若 Sprint 也會被擊飛。",
+                            "tips": [
+                                {"text": "先確保不是河童", "role": "dps"},
+                                {"text": "不要開 Sprint", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Darkness 暗章",
+                            "type": "tankbuster",
+                            "description": "小 tankbuster 對 MT。",
+                            "tips": [
+                                {"text": "MT 開小減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "On the Properties of Darkness II 暗章 II",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Behemoth Ward + Ecliptic Meteor 隕石",
+                            "type": "mechanic",
+                            "description": "1 分 40 秒後第 3 次 Check Out → boss 移到場北詠唱 → 召喚不可選中 Behemoth Ward → 慢慢詠唱 Ecliptic Meteor。期間場上 2 個近爆 AoE 落點後留下小隕石 → 玩家需躲到小隕石後阻擋 Ecliptic Meteor 直線。若隕石未在你與 Behemoth 之間 → 大傷致死。",
+                            "tips": [
+                                {"text": "躲到小隕石背後", "role": "dps"},
+                                {"text": "確認隕石在你與 Behemoth 之間", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Hits each player with a tornado AoE. If you don't have heavyHeavy, each tornado you're clipped by deals damage, knocks you into the air, and inflictin；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "On the Properties of Tornados 關於 X 的性質",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Toggles everyone's imp status.；依預兆走位處理。",
-              "name": "On the Properties of Imps 關於 X 的性質",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Marks everyone with a purple marker, then hits each of them with an AoE. Used after On the Properties of Imps. If you are still an imp, each AoE you'r；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "On the Properties of Thunder III 雷光 III",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Mini TB.；依預兆走位處理。",
-              "name": "On the Properties of Darkness 關於暗的性質",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Raidwide.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "On the Properties of Darkness II 關於暗的性質",
-              "tips": [
-                {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Check Out 圓圈：白＝浮空（地震）/ 黑＝沉重（龍卷）/ 綠＝切河童",
+                "Quakes → 進白；Tornados → 進黑（傷害結算前勿離）",
+                "Imps → 讀條結束等變身才踩綠；Thunder III → 先解河童再吃",
+                "Behemoth Ward 隕石 → 躲小隕石後阻擋 Ecliptic Meteor"
+            ]
         }
-      ],
-      "name": "惡魔牆",
-      "nameEn": "Demon Wall",
-      "mnemonic": [
-        "Demon Wall 惡魔牆 機制：場地前推 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

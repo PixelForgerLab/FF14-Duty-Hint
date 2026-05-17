@@ -1,163 +1,223 @@
 {
-  "id": "lost_city_of_amdapor_hard",
-  "name": "神聖遺跡無限城市街古跡",
-  "nameEn": "The Lost City of Amdapor (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Aenc Thon 安克頓：聖光斬 + 召喚 add。",
-    "B2 Forgall 福爾加：直線 AoE + 圓爆。",
-    "B3 Diabolic Hallow 神聖惡魔：Dark Mist 暗霧 + 召喚妖異。"
-  ],
-  "notes": "HW 3.3 hard 版無限城市街（Lv 60）。Boss 依序為 Aenc Thon 安克頓、Forgall 福爾加、Diabolic Hallow 神聖惡魔。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "安克頓",
-      "nameEn": "Aenc Thon",
-      "phases": [
+    "id": "lost_city_of_amdapor_hard",
+    "name": "神聖遺跡無限城市街古跡",
+    "nameEn": "The Lost City of Amdapor (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 阿卡莫斯 Achamoth：幻惑鱗粉讀條 → 全屏 AoE + 在玩家位置產生分身（會釋出 Enthrallment 扇形）→ 玩家貼邊緣 + 面向場外。",
+        "B1 魅惑鱗粉 → 正前方大扇形 + 10s 混亂 → 躲背側。毒素鱗粉點名 → 毒霧球連線 → 滿場跑甩開。",
+        "B2 有翼之獅 Winged Lion：古代神聖讀條 → boss 不可選 + 中央生立體魔法陣 → 秒掉避免團滅 + 第二次後出白魔腐屍 add。",
+        "B2 古代偵測：2 人土耐降低 + 2 人風耐降低 → 古代疾風『風』殘留圓 = 風耐正常玩家踩消、古代飛石『土』殘留小圓 = 土耐正常玩家踩消。",
+        "B3 基路冰 Kuribu：3 次復活，每次拿一層受傷降低（標示階段）。第二次復活後使用『逆轉』反轉白魔法效果（治療變傷害）。",
+        "B3 圣疗 Cure IV：正版 → 4 人都踩魔法陣阻擋恢復；逆轉版 → boss 為中心衰減 AoE，遠離 boss。",
+        "B3 再生 Regen：正版 = boss 腳下罩子 → MT 拉出範圍；逆轉版 = 罩子變流血 DoT → MT 拉出 + 隊友勿入。",
+        "B3 引诱 Decoy：召喚高位小天使（連 boss 治療）優先擊殺；逆轉版 → 低位小天使連線奶媽 + 流血 → 靠近其他玩家轉移連線。"
+    ],
+    "notes": "HW 3.2 副本 Hard 版（Lv 60，sync 60，ilvl 180，4 人 dungeon，時限 90 分），位於黑衣森林南部林區無限城。為 ARR 無限城（Normal）地點延伸的 HW 版本，劇情：擊敗迪亞波羅斯後本應淨化的城市仍有殘留邪念，元素精靈拒絕協助 → Padjals 再度委託光之戰士深入。Boss 依序為 Achamoth 阿卡莫斯（彩蛾）、Winged Lion 有翼之獅、Kuribu 基路冰。",
+    "bosses": [
         {
-          "name": "B1 主戰",
-          "mechanics": [
-            {
-              "name": "Dark AoE 黑暗 AoE",
-              "type": "aoe",
-              "description": "場上多黑 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Cleave 扇形",
-              "type": "cone",
-              "description": "MT 扇形；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "阿卡莫斯",
+            "nameEn": "Achamoth",
+            "phases": [
                 {
-                  "text": "MT 朝外",
-                  "role": "tank"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "幻惑鱗粉 Neura Squamae",
+                            "type": "mechanic",
+                            "description": "讀條技能 → 全屏 AoE + 在玩家當下位置產生分身（ghost）→ 分身會釋出 Enthrallment（玩家被讀條前面向的方向釋放大扇形 AoE）。對策：讀條結束前盡量靠近場地邊緣 + 面向最近邊緣 → 降低分身扇形覆蓋場內範圍。",
+                            "tips": [
+                                {"text": "讀條前 → 貼邊緣 + 面向場外", "role": "dps"},
+                                {"text": "預備團補應對全屏", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "魅惑鱗粉 Psycho Squamae",
+                            "type": "cone",
+                            "description": "讀條技能 → boss 正前方大扇形 AoE，被擊中受傷 + 10s 混亂效果（會攻擊隊友）。",
+                            "tips": [
+                                {"text": "繞背避面向", "role": "dps"},
+                                {"text": "MT 控制方向", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "毒素鱗粉 Toxic Squamae",
+                            "type": "mechanic",
+                            "description": "無讀條，點名 1 玩家 → 場上出現毒霧球連線玩家。一段時間內未追上玩家會消失；若追上則小範圍 AoE + 受傷加重 + 留下毒沼（踩進去受猛毒 DoT）。對策：滿場跑甩開；若與幻惑鱗粉重疊安全區不足時可硬吃一次。",
+                            "tips": [
+                                {"text": "被點 → 繞場跑", "role": "dps"},
+                                {"text": "毒沼絕對不踩", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
-              "type": "tankbuster",
-              "description": "MT 死刑；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "Aenc Thon 安克頓 機制：聖光斬 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "name": "福爾加",
-      "nameEn": "Forgall",
-      "phases": [
+            ],
+            "mnemonic": [
+                "幻惑鱗粉讀條 → 貼邊緣 + 面向場外（控制分身扇形）",
+                "魅惑鱗粉前扇 → 繞背躲；毒素鱗粉連線 → 場上跑甩"
+            ]
+        },
         {
-          "name": "B2 主戰",
-          "mechanics": [
-            {
-              "name": "Charge 衝鋒",
-              "type": "aoe",
-              "description": "直線衝鋒 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Roar 咆哮",
-              "type": "raidwide",
-              "description": "全屏咆哮；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "有翼之獅",
+            "nameEn": "Winged Lion",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "古代神聖 Ancient Holy",
+                            "type": "add",
+                            "description": "boss 飛升不可選中 + 場中央生『立體魔法陣』（Arcane Sphere）→ 隨時間長大、傷害提升 → 蓄滿則團滅。需立即集火秒掉。第二次古代神聖後會額外出白魔腐屍（Amdapori Gargoyle）add → 仍以魔法陣為優先。",
+                            "tips": [
+                                {"text": "DPS 開大轉火魔法陣秒掉", "role": "dps"},
+                                {"text": "MT 撿白魔腐屍 add", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "古代偵測 Ancient Libra",
+                            "type": "mechanic",
+                            "description": "場地全屏小傷 + 隨機賦予：2 人『土屬性耐性大幅降低』、2 人『風屬性耐性大幅降低』→ 後續對應屬性傷害大幅提升。",
+                            "tips": [
+                                {"text": "看頭頂 debuff 記住屬性", "role": "dps"},
+                                {"text": "土耐降的人吃風技、風耐降的人吃土技", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "古代疾風 Ancient Aero",
+                            "type": "aoe",
+                            "description": "點名玩家大圓 AoE → 爆炸後在該位置留下『魔法的痕跡』（風球），會持續成長後爆炸全屏 AoE。對策：身上『沒有』風耐降低的玩家進入痕跡範圍受小傷阻止生效。",
+                            "tips": [
+                                {"text": "風耐正常者 → 踩風痕", "role": "dps"},
+                                {"text": "風耐降者 → 千萬不踩", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "古代飛石 Ancient Stone",
+                            "type": "aoe",
+                            "description": "點名 2 玩家小圓 AoE → 爆炸後留下『魔法的痕跡』（土球）→ 場地隨機小圓 AoE 無預警。對策：身上『沒有』土耐降低的玩家進入痕跡範圍受小傷阻止生效。",
+                            "tips": [
+                                {"text": "土耐正常者 → 踩土痕", "role": "dps"},
+                                {"text": "土耐降者 → 千萬不踩", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Cleave 扇形",
-              "type": "cone",
-              "description": "MT 扇形；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "Forgall 福爾加 機制：直線 AoE + 圓爆。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "name": "神聖惡魔",
-      "nameEn": "Diabolic Hallow",
-      "phases": [
+            ],
+            "mnemonic": [
+                "古代神聖 → 中央魔法陣秒掉避免團滅",
+                "古代偵測 → 看 debuff 分配誰踩風 / 土痕跡",
+                "古代疾風（風）/ 古代飛石（土）→ 對應耐性正常者踩消"
+            ]
+        },
         {
-          "name": "B3 主戰",
-          "mechanics": [
-            {
-              "name": "Holy Light 神聖光線",
-              "type": "aoe",
-              "description": "直線神聖光；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Gaze 凝視",
-              "type": "gaze",
-              "description": "Boss 凝視 → 背對；看到讀條按相機背對boss避免石化；看到讀條按相機背對boss避免石化。",
-              "tips": [
-                "背對 boss"
-              ]
-            },
-            {
-              "name": "Multi AoE 多 AoE",
-              "type": "aoe",
-              "description": "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
-              "type": "tankbuster",
-              "description": "MT 死刑；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "基路冰",
+            "nameEn": "Kuribu",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "Phase 1（2 層復活印記）",
+                    "mechanics": [
+                        {
+                            "name": "榮耀之劍 Glory",
+                            "type": "cone",
+                            "description": "boss 正前方大扇形 AoE 對 MT。每階段都會用。",
+                            "tips": [
+                                {"text": "繞背躲扇", "role": "dps"},
+                                {"text": "MT 維持背向團", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "圣疗 Cure IV（白圈，正常版）",
+                            "type": "mechanic",
+                            "description": "boss 瞬移到隨機位置讀條 → 腳下出現魔法陣（白圈）→ 4 人都需進入魔法陣，否則讀條結束後 boss 恢復體力 + 15s 持續治療 buff，戰鬥時間大幅延長。",
+                            "tips": [
+                                {"text": "4 人全部進白圈", "role": "dps"},
+                                {"text": "進圈每位都消一刺", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "再生 Regen（正常版）",
+                            "type": "mechanic",
+                            "description": "讀條 → boss 腳下小罩子 → 範圍內 boss 持續恢復體力。MT 將 boss 拉出範圍避免回血。",
+                            "tips": [
+                                {"text": "MT 拉 boss 出罩", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2（第一次復活 + 逆轉）",
+                    "mechanics": [
+                        {
+                            "name": "逆轉 Reverse",
+                            "type": "mechanic",
+                            "description": "boss 獲得『逆轉』buff → 白魔法技能效果反轉：治療變傷害，恢復罩變傷害罩。",
+                            "tips": [
+                                {"text": "看 boss 身上『逆轉』buff", "role": "dps"},
+                                {"text": "逆轉模式技能效果都相反", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "「逆轉」圣疗 Cure IV（黑圈）",
+                            "type": "knockback",
+                            "description": "讀條 → boss 為中心的距離衰減 AoE（離 boss 越遠越安全）→ 玩家需遠離 boss。",
+                            "tips": [
+                                {"text": "遠離 boss 邊緣站", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "「逆轉」再生 Regen",
+                            "type": "mechanic",
+                            "description": "讀條 → boss 腳下產生持續傷害罩子 + 流血 DoT。MT 拉出範圍 + 隊友勿入。",
+                            "tips": [
+                                {"text": "MT 拉 boss 出罩", "role": "tank"},
+                                {"text": "玩家不踩罩內", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "「逆轉」愈療 Cure III",
+                            "type": "spread",
+                            "description": "讀條 → 點名 2 名玩家大紅圈 AoE → 分散降低傷害。逆轉版專屬。",
+                            "tips": [
+                                {"text": "看點名 → 分散站位", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 3（第二次復活 + 引誘）",
+                    "mechanics": [
+                        {
+                            "name": "引诱 Decoy（正常）",
+                            "type": "add",
+                            "description": "召喚『高位小天使』High Putto → 連 boss 為其持續恢復體力。需轉火優先擊殺。",
+                            "tips": [
+                                {"text": "看到高位小天使 → 轉火", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "「逆轉」引诱 Decoy（逆轉）",
+                            "type": "add",
+                            "description": "召喚『低位小天使』Low Putto → 連線奶媽 → 賦予『獵物』+『魔法治療力降低』+ 持續流血 DoT。被連玩家靠近其他玩家轉移連線目標 → 再轉火擊殺。",
+                            "tips": [
+                                {"text": "治療被連 → 貼近隊友轉移", "role": "healer"},
+                                {"text": "DPS 立即轉火秒低位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Phase 1 正常版：Cure IV 白圈 4 人都踩 / Regen 罩 MT 拉出",
+                "Phase 2 逆轉：Cure IV → 衰減 AoE 遠離 boss / Regen → 罩傷害 MT 拉出 + 不踩",
+                "Phase 2 Cure III 點名 2 人分散",
+                "Phase 3 引誘 → 高位（連 boss）/ 低位（連奶 + 流血）皆轉火秒掉"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Diabolic Hallow 神聖惡魔 機制：Dark Mist 暗霧 + 召喚妖異。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

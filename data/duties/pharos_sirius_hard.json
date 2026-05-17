@@ -1,154 +1,159 @@
 {
-  "id": "pharos_sirius_hard",
-  "name": "領航明燈天狼星燈塔",
-  "nameEn": "Pharos Sirius (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Zu 祖：強化版水砲 + 點名圓。",
-    "B2 Old Beard 老海怪：Tail Whip 尾鞭 + 召喚海洋生物。",
-    "B3 Adjudicator 審判者：Sanctity 神聖結界 + 視線機制。"
-  ],
-  "notes": "HW 3.1 hard 版燈塔（Lv 60）。Boss 依序為 Zu 祖、Old Beard 老海怪、Adjudicator 審判者。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "祖",
-      "nameEn": "Zu",
-      "mnemonic": [
-        "Zu 祖 機制：強化版水砲 + 點名圓。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "pharos_sirius_hard",
+    "name": "地脈靈燈天狼星燈塔",
+    "nameEn": "Pharos Sirius (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 古拉光使 Ghrah Luminary：場上『腐蝕』Corruption add → 連線點名玩家加『獵物』→ 跑去場邊被動小怪身上接觸（pass）將 debuff 轉給小怪 → 小怪變敵對後速秒。",
+        "B1 蜘蛛小怪死後留毒池 → 擊殺前先拉到邊緣。",
+        "B2 第八階級族長貝古 8th Order Patriarch Be Gu：定期全屏 AoE → 地板出現裂縫漏氣 → 拉 Corrupted Gel 小怪到裂縫上擊殺『塞住』漏氣。",
+        "B2 召喚科博德 add + 紫色煉金引擎（Alchemy Engine）連線 boss → 引擎優先秒掉切斷連線。",
+        "B3 始祖母 Progenitrix：場周圍召喚 Grey bomb 灰彈 + Lava bomb 熔岩彈 → Grey bomb 優先秒（會引爆全屏）。",
+        "B3 始祖父 Progenitor（接續上場）：召喚 Grey bomb + Remedy bomb 藍藥彈 → 藍藥彈會連 Grey bomb 慢慢移動 → 攻擊藍藥彈將其推離 grey bomb 爭取秒掉時間。"
+    ],
+    "notes": "HW 3.1 副本 Hard 版（Lv 60，sync 60，ilvl 170 / sync 240，4 人 dungeon，時限 90 分），位於利姆薩．羅敏薩天狼星燈塔。原 ARR Lv 50 副本『地脈靈燈天狼星燈塔（Normal）』之 HW 延續：科博德族佔據燈塔再次威脅，紅潮海軍委託光之戰士深入塔底清剿。Boss 依序為 Ghrah Luminary 古拉光使、8th Order Patriarch Be Gu 第八階級族長貝古、Progenitrix／Progenitor 始祖母／始祖父。",
+    "bosses": [
         {
-          "name": "B1",
-          "mechanics": [
-            {
-              "name": "Corruption + Prey 連繩",
-              "type": "other",
-              "description": "Corruption 連繩標記玩家上 Prey → Aetheric Mimicry 詠唱 → **跑到場邊巡邏 mob 旁傳遞 debuff** → 該 mob 變敵且血低易殺。",
-              "tips": [
-                "被標者跑場邊到巡邏 mob 旁"
-              ]
-            },
-            {
-              "name": "蜘蛛 mob 毒池",
-              "type": "other",
-              "description": "被附身的蜘蛛死後留小毒池；依預兆走位處理。",
-              "tips": [
-                "拉到場邊再殺，避免毒池在中央"
-              ]
-            },
-            {
-              "name": "Tankbuster 坦克爆擊",
-              "type": "tankbuster",
-              "description": "Tankbuster；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "古拉光使",
+            "nameEn": "Ghrah Luminary",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Corruption 腐蝕 add",
+                            "type": "add",
+                            "description": "boss 生成『腐蝕』add → add 詠唱 Aetheric Mimicry → 同時對 1 名玩家連線 + 加『Prey 獵物』標記。被點名玩家需跑去場上被動繞圈的小怪身邊接觸 → debuff 轉嫁給小怪 → 該小怪短時間後變敵對。",
+                            "tips": [
+                                {"text": "頭頂連線 → 跑去被動小怪", "role": "dps"},
+                                {"text": "MT 撿轉化後小怪", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "蜘蛛 add 毒池",
+                            "type": "mechanic",
+                            "description": "Pass debuff 後變敵對的蜘蛛小怪死亡後會在地上留下小毒池。擊殺前先拉到場邊。",
+                            "tips": [
+                                {"text": "MT 拉蜘蛛到邊再殺", "role": "tank"},
+                                {"text": "避開毒池", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Aetheric Mimicry 以太擬態",
+                            "type": "interrupt",
+                            "description": "Corruption add 的讀條 → 完成後對 boss 加 buff。若無法 pass debuff，可考慮打斷或速秒 add。",
+                            "tips": [
+                                {"text": "打斷 / 速秒 Corruption", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "老海怪",
-      "nameEn": "Old Beard",
-      "mnemonic": [
-        "Old Beard 老海怪 機制：Tail Whip 尾鞭 + 召喚海洋生物。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
-        {
-          "name": "B2",
-          "mechanics": [
-            {
-              "name": "Room-wide AoE + Fissure 裂縫",
-              "type": "raidwide",
-              "description": "Boss 全屏 AoE 開地板裂縫，持續漏 aether；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Corrupted Gel 塞洞",
-              "type": "other",
-              "description": "拉 Corrupted Gel add 殺在 fissure 上塞洞；依預兆走位處理。",
-              "tips": [
-                "把 Gel 拉到裂縫上殺"
-              ]
-            },
-            {
-              "name": "Kobold + Alchemy Engine 哥布林族",
-              "type": "other",
-              "description": "後段召 Kobold + 紫色 Alchemy Engine 連繩 boss 給 buff，**Engine 必殺**。",
-              "tips": [
-                {
-                  "text": "DPS 優先紫 Engine",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "審判者",
-      "nameEn": "Adjudicator",
-      "mnemonic": [
-        "Adjudicator 審判者 機制：Sanctity 神聖結界 + 視線機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
-        {
-          "name": "P1 Progenitrix",
-          "mechanics": [
-            {
-              "name": "灰 Bomb + Lava Bomb 召喚",
-              "type": "other",
-              "description": "場邊召灰 Bomb + 熔岩 Bomb；依預兆走位處理。",
-              "tips": [
-                {
-                  "text": "DPS 立刻殺灰 Bomb",
-                  "role": "dps"
-                },
-                "閃熔岩"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Corruption add → 點名連線 = 跑被動小怪接觸 pass debuff",
+                "蜘蛛轉化後 → 拉邊緣再殺（毒池）"
+            ]
         },
         {
-          "name": "P2 Progenitor",
-          "mechanics": [
-            {
-              "name": "灰 Bomb + 藍 Remedy Bomb",
-              "type": "other",
-              "description": "Progenitrix 死後 Progenitor 出，召灰 Bomb + 藍 Remedy Bomb (連繩朝灰 Bomb)。**打藍 Bomb 推它** → 灰 Bomb 有時間殺。",
-              "tips": [
-                "藍 Bomb 打傷會被推開",
+            "name": "第八階級族長貝古",
+            "nameEn": "8th Order Patriarch Be Gu",
+            "phases": [
                 {
-                  "text": "DPS 一起處理灰 + 藍",
-                  "role": "dps"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "全屏 AoE + 地裂",
+                            "type": "raidwide",
+                            "description": "boss 定期釋出全屏 AoE → 地板出現裂縫，從裂縫漏出以太『羽流』，未處理會持續傷害全隊。",
+                            "tips": [
+                                {"text": "預備團補 + 減傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Corrupted Gel 塞地裂",
+                            "type": "mechanic",
+                            "description": "地裂出現後場上會刷 Corrupted Gel 小怪 → 玩家需把 Gel 拉到裂縫『羽流』上擊殺，殺死後 Gel 屍體會塞住裂縫停止傷害。",
+                            "tips": [
+                                {"text": "拉 Gel 到羽流上殺", "role": "tank"},
+                                {"text": "在裂縫上完成擊殺", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "煉金引擎 Alchemy Engine",
+                            "type": "add",
+                            "description": "boss 召喚科博德 add 同時出現紫色煉金引擎 → 引擎連線 boss 為其加 buff。引擎血量低，需立即轉火秒掉切斷連線。",
+                            "tips": [
+                                {"text": "看到紫色引擎 → 立即轉火", "role": "dps"},
+                                {"text": "MT 撿科博德 add", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "全屏 AoE + 地裂羽流 → 拉 Corrupted Gel 到裂縫上殺塞住",
+                "紫色煉金引擎連 boss → 立即秒掉切斷 buff"
+            ]
+        },
+        {
+            "name": "始祖母／始祖父",
+            "nameEn": "Progenitrix & Progenitor",
+            "phases": [
+                {
+                    "name": "Phase 1 始祖母",
+                    "mechanics": [
+                        {
+                            "name": "召喚 Grey Bomb 灰彈",
+                            "type": "add",
+                            "description": "Progenitrix 場周圍召喚 Grey bomb 灰彈 + Lava bomb 熔岩彈 → Grey bomb 不殺會自爆全屏大傷，需立即優先擊殺。",
+                            "tips": [
+                                {"text": "Grey bomb 優先秒", "role": "dps"},
+                                {"text": "Lava bomb 暫不管", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lava Bomb 熔岩彈",
+                            "type": "aoe",
+                            "description": "場上熔岩彈會釋出小範圍 AoE → 注意走位閃避。",
+                            "tips": [
+                                {"text": "看預警走位", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Phase 2 始祖父（始祖母死後出場）",
+                    "mechanics": [
+                        {
+                            "name": "Remedy Bomb 藍藥彈",
+                            "type": "mechanic",
+                            "description": "Progenitor 場周圍召喚 Grey bomb 灰彈 + Remedy bomb 藍藥彈 → 藍藥彈會連線最近的 Grey bomb 並慢慢移動過去『治療 / 復活』灰彈。攻擊藍藥彈會將其推離原方向，爭取時間秒掉灰彈。",
+                            "tips": [
+                                {"text": "攻擊藍藥彈推離", "role": "dps"},
+                                {"text": "同時秒 Grey bomb", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Grey Bomb 灰彈（Phase 2）",
+                            "type": "add",
+                            "description": "和 Phase 1 一樣，未秒掉會全屏自爆。藍藥彈靠近時尤其要快。",
+                            "tips": [
+                                {"text": "看藍藥連線判斷誰要秒", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Phase 1 始祖母 → Grey bomb 優先秒（會自爆全屏）",
+                "Phase 2 始祖父 → 藍藥彈推離 + 同時秒 Grey bomb"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

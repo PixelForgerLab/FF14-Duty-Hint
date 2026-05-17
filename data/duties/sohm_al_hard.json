@@ -1,209 +1,206 @@
 {
-  "id": "sohm_al_hard",
-  "name": "天山深境索姆阿爾靈峰",
-  "nameEn": "Sohm Al (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Sohm Al boss 1 天龍：強化龍息 + 場上機關。",
-    "B2 Sohm Al boss 2 噴火龍：Cauterize 灼燒 + 落岩。"
-  ],
-  "notes": "HW 3.4 hard 版天山深境（Lv 60）。Boss 依序為 Sohm Al boss 1 天龍、Sohm Al boss 2 噴火龍。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "sohm_al_hard",
+    "name": "天山深境索姆阿爾靈峰",
+    "nameEn": "Sohm Al (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 雷頓沃爾德 The Leightonward：『孢囊 Spore Sac』在地面產生兩種孢囊（小／大）→ 可燃性氣體（Inflammable Fumes）讀條會引爆所有孢囊。",
+        "B1 小孢囊 = 圓形 AoE 站位避開；大孢囊 = 距離衰減（離越遠越安全）。每次孢囊讀條都會新增更多大孢囊。",
+        "B2 戈烏羅 Gowrow：boss 隱形讀條，但動作有預警 → 暴烈龍吼後獲『傷害增加』buff，撕裂利爪／回旋尾／火球／狂野衝鋒會分別升級為留下旋風／背側 cleave／灼熱吐息／烈火衝鋒（擊退強）。",
+        "B2 所有攻擊（除暴烈龍吼）會疊 8s『虛弱』Infirmity → 玩家若擋盾／免傷可不掛 debuff。狂野衝鋒 → 拉開直線。",
+        "B3 熔岩天蠍 Lava Scorpion：致命尾刺對 T 死刑類 → 開減傷。炎絲噴射 Molten Silk → 270° 大扇形（背側安全）+ 常翻身重複。",
+        "B3 飛躍重壓 Flying Press：點名玩家飛撲 → 落點留下不可清除火焰範圍 → 被點玩家自行去場邊引導。",
+        "B3 呼喚 Hiss → 召喚尖尾蠍／硬螯蠍 add → 硬螯蠍會挖洞造火焰區域 → 優先擊殺正在挖洞的硬螯蠍（DPS 用 LB）。"
+    ],
+    "notes": "HW 3.5 副本 Hard 版（Lv 60，sync 60，ilvl 200 級，4 人 dungeon，時限 90 分），位於庫爾札斯西部高地索姆阿爾靈峰深處。為 HW 主線『索姆阿爾』Normal 的延伸 Hard 版（patch 3.5 收尾追加）。Boss 依序為 The Leightonward 雷頓沃爾德（孢囊植物）、Gowrow 戈烏羅（獨眼龍恐龍）、Lava Scorpion 熔岩天蠍。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Mini TB.；依預兆走位處理。",
-              "name": "Wild Horn 野",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Raidwide.；全員預備減傷與大團補。",
-              "name": "Inflamable Fumes 可燃煙",
-              "tips": [
+            "name": "雷頓沃爾德",
+            "nameEn": "The Leightonward",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Wild Horn 野角",
+                            "type": "tankbuster",
+                            "description": "對 MT 的小 tankbuster。",
+                            "tips": [
+                                {"text": "MT 開小減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Inflammable Fumes 可燃性氣體",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 同時引爆場上所有孢囊（搭配 Spore Sac 的孢囊機制）。預備團補 + 注意孢囊走位。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Spore Sac 孢囊（小／大）",
+                            "type": "mechanic",
+                            "description": "場上召喚『孢囊』有兩種：小孢囊 = 圓形 AoE 範圍傷害，大孢囊 = 距離衰減（離越遠越安全）。每次讀條會新增更多大孢囊。Inflammable Fumes 讀條時引爆全場孢囊。",
+                            "tips": [
+                                {"text": "站在所有大孢囊外緣", "role": "dps"},
+                                {"text": "閃小孢囊圓圈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Excretion 排泄",
+                            "type": "mechanic",
+                            "description": "對 1 名玩家造成傷害 + 30s 嚴重緩慢 Heavy debuff。",
+                            "tips": [
+                                {"text": "Esuna 解 Heavy", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Spawns many untargetable small spore sacs, which each explode in an AoE after a while.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Spore Sac 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Damages a target. Inflicts 30s of heavyHeavy.；依預兆走位處理。",
-              "name": "Excretion 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "天龍",
-      "nameEn": "Sohm Al boss 1",
-      "mnemonic": [
-        "Sohm Al boss 1 天龍 機制：強化龍息 + 場上機關。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "Spore Sac → 大孢囊距離衰減 = 站外緣 / 小孢囊 = 站圓外",
+                "Inflammable Fumes → 全屏 + 引爆孢囊 → 預備團補 + 確認站位",
+                "Excretion → Esuna 解 Heavy"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Raidwide. The boss gains temporary damage upDamage Up, which makes it glow red and enhances its attacks.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Volcanic Howl 嚎叫",
-              "tips": [
+            "name": "戈烏羅",
+            "nameEn": "Gowrow",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Volcanic Howl 暴烈龍吼",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + boss 獲『傷害增加』buff（變紅）→ 後續攻擊技能升級。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"},
+                                {"text": "看 buff 區分升級招", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ripper Claw 撕裂利爪",
+                            "type": "cone",
+                            "description": "可閃避的前方扇形 cleave，預警：boss 抬起左前爪。Buff 後升級『撕裂利爪』會在 MT 位置留旋風 → 數秒後爆炸 + 擊退。",
+                            "tips": [
+                                {"text": "繞背躲扇", "role": "dps"},
+                                {"text": "MT 拉開旋風", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Tail Smash 尾擊／Tail Swing 回旋尾",
+                            "type": "cone",
+                            "description": "Tail Smash = 後方扇形 cleave + 擊退（預警：boss 轉身翹尾）；Buff 後升級『Tail Swing 回旋尾』為近身圓形 cleave + 擊退。",
+                            "tips": [
+                                {"text": "看姿勢分扇／圓", "role": "dps"},
+                                {"text": "貼近 / 遠離應對", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fireball 火球／Lava Flow 灼熱吐息",
+                            "type": "aoe",
+                            "description": "Fireball = 鎖定一玩家位置 → 該位置 AoE（預警：boss 立起雙手）；Buff 後升級『Lava Flow』為連續錐形 AoE 持續傷害（預警相同）。",
+                            "tips": [
+                                {"text": "看到立手姿勢 → 移動", "role": "dps"},
+                                {"text": "Lava Flow → 大幅閃位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Wild Charge 狂野衝鋒／Hot Charge 烈火衝鋒",
+                            "type": "knockback",
+                            "description": "鎖玩家直線 AoE + 擊退（預警：boss 擺出肩衝姿勢）；Buff 後升級『Hot Charge』擊退距離更大。",
+                            "tips": [
+                                {"text": "拉開直線", "role": "dps"},
+                                {"text": "被鎖玩家貼牆受擊退", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Infirmity 虛弱 debuff",
+                            "type": "mechanic",
+                            "description": "除 Volcanic Howl 外，所有攻擊（含旋風）被打到都會疊 8s 不可解的『虛弱』Infirmity。若用盾／免傷擋下 0 傷則不會掛 debuff。",
+                            "tips": [
+                                {"text": "盾／免傷規避 debuff", "role": "tank"},
+                                {"text": "看招式預警盡量閃", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Dodgeable cleave. Telegraphed by the boss raising its left arm.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Ripper Claw 爪",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Dodgeable backwards cleave with knockback. Telegraphed by the boss twisting to its left and raising its tail.；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "Tail Smash 尾擊",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            },
-            {
-              "description": "Dodgeable melee-range circular cleave with knockback. Used instead of Tail Smash when the boss is buffed, and has the same telegraph.；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "Tail Swing 尾擺",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            },
-            {
-              "description": "Faces a target and remembers their location, then does an AoE there. Telegraphed by the boss standing upright and putting its hands together.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Fireball 火球",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Faces a target, then channels a continuous cone AoE. Used instead of Fireball when the boss is buffed, and has the same telegraph.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Lava Flow 熔岩流",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Charges up to a target in a line AoE with knockback. Telegraphed by the boss taking a shoulder charge stance.；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "Wild Charge 衝鋒",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            },
-            {
-              "description": "Charges in the direction of a target in a line AoE with massive knockback. Used instead of Wild Charge when the boss is buffed, and has the same teleg；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "Hot Charge 熾烈衝鋒",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            }
-          ]
-        }
-      ],
-      "name": "噴火龍",
-      "nameEn": "Sohm Al boss 2",
-      "mnemonic": [
-        "Sohm Al boss 2 噴火龍 機制：Cauterize 灼燒 + 落岩。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "暴烈龍吼後 buff 紅 → 所有招升級（旋風／圓 cleave／吐息／烈衝）",
+                "Ripper Claw 前扇 / Tail Smash 後扇 → 看姿勢繞位",
+                "盾／免傷規避『虛弱』Infirmity debuff"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "270° telegraphed close range cleave. Safe zone is directly behind. Often turns around and repeats from the other side.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Molten Silk 絲",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Very high damage attack on primary target.；依預兆走位處理。",
-              "name": "Deadly Thrust 致命突刺",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Summons 2-4 Scorpions which should be killed.；依預兆走位處理。",
-              "name": "Hiss 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Short range circular AoE around boss.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Realm Shaker 世界搖晃",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Randomly marks a party member for a moderate attack with splash damage. Will create lava puddles near point of impact, as well as expanding existing p；依預兆走位處理。",
-              "name": "Flying Press 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
+            "name": "熔岩天蠍",
+            "nameEn": "Lava Scorpion",
+            "phases": [
+                {
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Deadly Thrust 致命尾刺",
+                            "type": "tankbuster",
+                            "description": "對 MT 死刑類大傷 tankbuster。需開大減傷。被呼喚的尖尾蠍 add 也會用較弱版本，注意疊傷。",
+                            "tips": [
+                                {"text": "MT 開大減傷", "role": "tank"},
+                                {"text": "盾補 + Esuna", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Molten Silk 炎絲噴射",
+                            "type": "cone",
+                            "description": "270° 大扇形近身 cleave → 安全區僅正後方。常常翻身重複從另一側釋出 → 注意每次重新判方向。",
+                            "tips": [
+                                {"text": "貼背最安全", "role": "dps"},
+                                {"text": "看 boss 翻身重新貼背", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hiss 呼喚",
+                            "type": "add",
+                            "description": "召喚 2-4 隻小蠍：尖尾蠍（會對仇恨 1 目標用 Deadly Thrust 弱版）與硬螯蠍（會挖洞產生不可清除火焰持續傷區）。優先擊殺正在挖洞的硬螯蠍。第二次呼喚會生 2 隻硬螯蠍 + 2 尖尾蠍 → 建議遠程 DPS 用 LB 速秒。",
+                            "tips": [
+                                {"text": "優先轉火硬螯蠍（挖洞）", "role": "dps"},
+                                {"text": "MT 撿尖尾蠍", "role": "tank"},
+                                {"text": "第二次呼喚 → DPS LB", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Realm Shaker 震撼領域",
+                            "type": "aoe",
+                            "description": "boss 短距圓 AoE，有範圍提示。",
+                            "tips": [
+                                {"text": "看圓圈外移", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Flying Press 飛躍重壓",
+                            "type": "mechanic",
+                            "description": "核心機制：點名 1 玩家 → boss 飛撲到該位置 → 在該點留下不可清除『火焰持續傷害範圍』；之後每次飛躍重壓會擴大火山沸騰範圍。被點玩家應自行去場邊引導以保留場中空間。",
+                            "tips": [
+                                {"text": "被點 → 往場邊引導", "role": "dps"},
+                                {"text": "全員勿踩火焰區", "role": "dps"},
+                                {"text": "MT 拉 boss 不踩火", "role": "tank"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Deadly Thrust → MT 大減傷（add 也會用弱版疊傷）",
+                "Molten Silk 270° 大扇 → 貼背 / boss 翻身重新貼背",
+                "Hiss 呼喚 → 硬螯蠍（挖洞）優先轉火 + LB",
+                "Flying Press → 被點玩家往場邊引導，全員勿踩火"
+            ]
         }
-      ],
-      "name": "Lava Scorpion",
-      "nameEn": "Lava Scorpion",
-      "mnemonic": [
-        "Molten Silk",
-        "Deadly Thrust",
-        "Hiss"
-      ]
-    }
-  ]
+    ]
 }

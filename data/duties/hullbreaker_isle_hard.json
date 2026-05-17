@@ -1,271 +1,228 @@
 {
-  "id": "hullbreaker_isle_hard",
-  "name": "黑渦傳說破艦島",
-  "nameEn": "Hullbreaker Isle (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Sjofn 索芙恩：Hydroball 水球 + 點名直線。",
-    "B2 Halicarnassus 哈里卡納索斯：紙牌變換 + 圖形機制。",
-    "B3 Diabolic Hydra 惡魔海德拉：多頭龍機制 + 召喚 add。"
-  ],
-  "notes": "HW 3.1 hard 版破艦島（Lv 60）。Boss 依序為 Sjofn 索芙恩、Halicarnassus 哈里卡納索斯、Diabolic Hydra 惡魔海德拉。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "hullbreaker_isle_hard",
+    "name": "黑渦傳說破艦島",
+    "nameEn": "Hullbreaker Isle (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 戰鬥豹／赤血美人魚海賊團：5 波小怪 + 場外砲擊 → 第二／五波點名治療的長須豹優先擊殺。",
+        "B1 場外羅絲溫（Captain Rhoswen）廣播：集中（多個圓 AoE）／橫列（東西連串圓）／縱列（南北連串圓）→ 提前判斷走位。",
+        "B2 尤彌爾 Ymir：60% 換殼前用萬雷（全屏 AoE）+ 一萬伏特（點名 → 進場上泥池閉鎖躲避）。",
+        "B2 換殼後：全面冰凍場地變冰滑 → 冰塊點名玩家放邊緣後快速離開圓圈躲爆炸。",
+        "B3 紅潮海軍大統領斯拉夫尤里休恩（第一形態）：Maelstrike 全屏 + Ghomoro Splitter 地板火，依預警走位。",
+        "B3 50% 變身為霧鬚海盜 → 毒霧（不可解毒）→ 寶箱出現：藍藥盒解毒、炸彈盒爆炸 → 4 人分散各踩 1 個藍藥盒。",
+        "B3 Grenado Shot 點名 + Heavy → 治療立即 Esuna 解 Heavy → 被點玩家盡快離開人群引導 AoE。",
+        "B3 Firesand Kegs 油桶點燃 → 攻擊油桶推離爆炸範圍 → Bullet Hell 全屏前預備團補與減傷。"
+    ],
+    "notes": "HW 3.3 副本 Hard 版（Lv 60，sync 60，ilvl 200，4 人 dungeon，時限 90 分），位於下拉諾西亞破艦島。劇情：紅潮海軍將破艦島改為訓練場，玩家作為光之戰士被推上擂台 → 連戰戰鬥豹／赤血美人魚海賊團、尤彌爾，最終對決紅潮海軍大統領斯拉夫尤里休恩（變身霧鬚海盜）。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "場上多重 AoE。",
-              "name": "AoE 連發",
-              "tips": [
-                "閃預警"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Tankbuster。；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Tankbuster 坦克爆擊",
-              "tips": [
+            "name": "戰鬥豹／赤血美人魚海賊團",
+            "nameEn": "Battle Coeurl & Sanguine Sirens",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "5 波小怪 + 場外砲擊",
+                    "mechanics": [
+                        {
+                            "name": "5 波小怪戰",
+                            "type": "mechanic",
+                            "description": "波次戰。第 2 / 5 波出現連線治療職業的長須豹 Battle Coeurl，鎖治療仇恨且持續攻擊治療，並施加治療量降低 10s debuff（同時長須豹自身獲攻擊增加 buff），需優先擊殺。",
+                            "tips": [
+                                {"text": "看到 Battle Coeurl 立刻轉火", "role": "dps"},
+                                {"text": "治療被鎖時走位拉開", "role": "healer"},
+                                {"text": "MT 撿其他小怪", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "集中炮擊 Concentrated Cannons",
+                            "type": "aoe",
+                            "description": "場外 NPC Captain Rhoswen（羅絲溫）廣播後 → 場中多個圓形 AoE 同時落下。看廣播台詞提前找縫站位。",
+                            "tips": [
+                                {"text": "聽廣播找縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "橫列炮擊 Broadside",
+                            "type": "aoe",
+                            "description": "場外廣播後 → 場地東西向一整列圓 AoE。需提前移至南北邊安全帶。",
+                            "tips": [
+                                {"text": "聽廣播 → 走南北", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "縱列炮擊 Forward Battery",
+                            "type": "aoe",
+                            "description": "場外廣播後 → 場地南北向一整列圓 AoE。需提前移至東西邊安全帶。",
+                            "tips": [
+                                {"text": "聽廣播 → 走東西", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "甲板員 鋼鐵射擊",
+                            "type": "cone",
+                            "description": "甲板員小怪面向釋放小扇形 AoE，有範圍提示。仇恨控好後避開面向。",
+                            "tips": [
+                                {"text": "避開面向", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "領航員 直線砲",
+                            "type": "aoe",
+                            "description": "領航員小怪釋放長條 AoE，有範圍提示。橫向走位避開。",
+                            "tips": [
+                                {"text": "看預警橫向走", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "AoE 全屏 : 全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "AoE 全屏",
-              "tips": [
-                {
-                  "text": "減傷",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
-        }
-      ],
-      "name": "索芙恩",
-      "nameEn": "Sjofn",
-      "mnemonic": [
-        "Sjofn 索芙恩 機制：Hydroball 水球 + 點名直線。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "5 波小怪 → 治療被連線 = 長須豹優先轉火",
+                "集中／橫列／縱列炮擊 → 聽廣播台詞判斷走位",
+                "甲板員扇形 + 領航員直線 → 看範圍提示閃避"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "- deals a room-wide AoE, followed by a lightning tether between two players. Move away from each other to break the tether.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Blanket Thunder 毯雷",
-              "tips": [
+            "name": "尤彌爾",
+            "nameEn": "Ymir",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "第一階段（殼上）",
+                    "mechanics": [
+                        {
+                            "name": "首角搶攻 Goring Charge",
+                            "type": "tankbuster",
+                            "description": "對 MT 釋放小死刑 tankbuster，傷害約平 A 1.5 倍。配合平 A 期間不停釋出。",
+                            "tips": [
+                                {"text": "MT 持續維持小減傷", "role": "tank"},
+                                {"text": "盾補 + Esuna 維持血量", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "萬雷 Blanket Thunder",
+                            "type": "raidwide",
+                            "description": "全屏 AoE，需團補與減傷。後接 Megavolt 點名。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "一萬伏特 Megavolt",
+                            "type": "mechanic",
+                            "description": "對 1 名玩家頭頂出現雷標記。被點名玩家需進入場上的小泥池（slime puddle）讓自己被纏住，纏住期間免疫雷擊；若不進泥池會受高傷。",
+                            "tips": [
+                                {"text": "頭頂雷標 → 進泥池", "role": "dps"},
+                                {"text": "MT 拉 boss 預留泥池空間", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "第二階段（60% 換殼）",
+                    "mechanics": [
+                        {
+                            "name": "全面冰凍 Flash Freeze",
+                            "type": "mechanic",
+                            "description": "boss 60% 血量左右換殼後使用 → 整個場地變為冰面，玩家移動變成固定距離滑行（無法精細走位）。需提前用慣性站位。",
+                            "tips": [
+                                {"text": "預判滑行路徑", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "冰塊 Iceberg",
+                            "type": "aoe",
+                            "description": "點名玩家頭上有冰標記 → 點名結束時在當下位置產生冰塊 → 數秒後爆炸範圍 AoE。處理：邊緣集中放置冰塊（彼此不重疊），再滑走離開冰塊。",
+                            "tips": [
+                                {"text": "被點到 → 走邊緣放冰", "role": "dps"},
+                                {"text": "放完馬上滑離", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "- players will be marked with a red flag. If this happens, move into the slime to become fettered and also immune to the lightning.；依預兆走位處理。",
-              "name": "Megavolt 巨型雷擊",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "- makes the arena slippery for a few seconds, then marks players with an ice flag and a circle. Each marker will drop an Iceberg at the spot where it；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Flash Freeze",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            }
-          ]
-        }
-      ],
-      "name": "哈里卡納索斯",
-      "nameEn": "Halicarnassus",
-      "mnemonic": [
-        "Halicarnassus 哈里卡納索斯 機制：紙牌變換 + 圖形機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "Phase 1 殼上：Megavolt 點名 → 進泥池閉鎖躲雷",
+                "Phase 2 換殼：場地變冰面滑行 → Iceberg 點名邊緣放冰再離"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "- room-wide AoE.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Maelstrike 擊",
-              "tips": [
+            "name": "紅潮海軍大統領斯拉夫尤里休恩／霧鬚海盜",
+            "nameEn": "Grand Storm Marshal Slafyrsyn & Mistbeard",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "- fire puddles will appear on the ground, and then explode.；依預兆走位處理。",
-              "name": "Ghomoro Splitter",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "- All players will be inflicted with an un-Esunable poison Poison, and then several chests will appear. Chests containing a blue potion will cure one；依預兆走位處理。",
-              "name": "Poison Mist 毒",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "- high-damaging room-wide AoE.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Bullet Hell 彈幕地獄",
-              "tips": [
+                    "name": "第一形態 斯拉夫尤里休恩",
+                    "mechanics": [
+                        {
+                            "name": "Maelstrike 海漩擊",
+                            "type": "raidwide",
+                            "description": "全屏範圍 AoE。需團補與減傷。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Ghomoro Splitter 地裂火",
+                            "type": "aoe",
+                            "description": "場上隨機位置出現火地板預警 → 一段時間後爆炸。看預警走位。",
+                            "tips": [
+                                {"text": "看地板走縫", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "第二形態 霧鬚海盜（50% 變身）",
+                    "mechanics": [
+                        {
+                            "name": "Poison Mist 毒霧",
+                            "type": "mechanic",
+                            "description": "全員 un-Esunable 中毒 → 場上出現數個寶箱：藍藥（potion）寶箱可解 1 名玩家毒，炸彈（bomb）寶箱會引發全屏 AoE。4 人分散各踩 1 個藍藥寶箱。",
+                            "tips": [
+                                {"text": "4 人分散各踩 1 個藍藥", "role": "dps"},
+                                {"text": "看顏色 = 藍藥(踩) / 炸彈(避)", "role": "dps"},
+                                {"text": "防 全員無法 esuna 解毒", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Bullet Hell 彈幕地獄",
+                            "type": "raidwide",
+                            "description": "高傷害全屏 AoE。需團補與減傷。",
+                            "tips": [
+                                {"text": "預備大減傷 + 補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Grenado Shot 點名砲",
+                            "type": "aoe",
+                            "description": "點名 1 玩家畫十字 + 附加 Heavy（嚴重移動緩慢）→ 高傷 AoE 落點為被點玩家位置。治療需立即 Esuna 解 Heavy 讓玩家移動；若無法解則需補到全血讓玩家硬吃。",
+                            "tips": [
+                                {"text": "看到十字 → Esuna Heavy", "role": "healer"},
+                                {"text": "被點到 → 立刻離團", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Firesand Kegs 火藥桶",
+                            "type": "add",
+                            "description": "場上召喚火藥桶 → boss 依序鎖定 → 鎖定後爆炸大範圍 AoE。可攻擊火藥桶把它推開以遠離爆炸範圍。",
+                            "tips": [
+                                {"text": "DPS 推火藥桶遠離", "role": "dps"},
+                                {"text": "看鎖定預警閃位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "- A player is marked with a crosshair and inflicted with a severe heavy Heavy before the boss targets them with a high-damage AoE.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Grenado Shot 射",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "- The boss will spawn these around the arena, and then begin targeting them. After a few seconds, a targeted keg will explode, causing massive damage；依預兆走位處理。",
-              "name": "Firesand Kegs 火",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Phase 1 形態 1：Maelstrike 全屏 + Ghomoro Splitter 地板火預警走位",
+                "Phase 2 50% 變身：毒霧 + 寶箱 → 4 人分散各踩 1 個藍藥",
+                "Phase 2 Grenado Shot 點名 → Esuna 解 Heavy + 被點玩家離團",
+                "Phase 2 Firesand Kegs → 攻擊推開火藥桶遠離爆炸"
+            ]
         }
-      ],
-      "name": "惡魔海德拉",
-      "nameEn": "Diabolic Hydra",
-      "mnemonic": [
-        "Diabolic Hydra 惡魔海德拉 機制：多頭龍機制 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "場上多重 AoE。",
-              "name": "AoE 連發",
-              "tips": [
-                "閃預警"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Tankbuster。；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Tankbuster 坦克爆擊",
-              "tips": [
-                {
-                  "text": "MT 開減傷",
-                  "role": "tank"
-                }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "AoE 全屏 : 全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "AoE 全屏",
-              "tips": [
-                {
-                  "text": "減傷",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
-        }
-      ],
-      "name": "Battle Coeurl",
-      "nameEn": "Battle Coeurl",
-      "mnemonic": [
-        "AoE 連發 → 走縫",
-        "Tankbuster 坦克爆擊 → MT 開減傷",
-        "AoE 全屏 → 全員減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "場上多重 AoE。",
-              "name": "AoE 連發",
-              "tips": [
-                "閃預警"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Tankbuster。；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Tankbuster 坦克爆擊",
-              "tips": [
-                {
-                  "text": "MT 開減傷",
-                  "role": "tank"
-                }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "AoE 全屏 : 全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "AoE 全屏",
-              "tips": [
-                {
-                  "text": "減傷",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
-        }
-      ],
-      "name": "Ymir",
-      "nameEn": "Ymir",
-      "mnemonic": [
-        "AoE 連發 → 走縫",
-        "Tankbuster 坦克爆擊 → MT 開減傷",
-        "AoE 全屏 → 全員減傷"
-      ]
-    }
-  ]
+    ]
 }
