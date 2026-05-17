@@ -1,87 +1,142 @@
 {
-    "id":  "final_coil_of_bahamut_-_turn_1",
-    "name":  "巴哈姆特大迷宮 真源之章1",
-    "nameEn":  "The Final Coil of Bahamut - Turn 1",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "raid",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）真源之章1 - Kaliya 科埃修拉特斯：點名圓 + 召喚雙頭蛇 add + 點名標記。",
-                     "2）8 人 raid 機制：T/H/D 分工協同。",
-                     "3）tankbuster + raidwide：MT 大減傷、預備團補。"
-                 ],
-    "notes":  "ARR 2.5 8 人大型任務 巴哈姆特大迷宮 真源之章1，第三週期（真源）raid。Boss 為 Kaliya 科埃修拉特斯，點名圓 + 召喚雙頭蛇 add + 點名標記。是 FFXIV 第一個 high-end raid 系列收尾。",
-    "bosses":  [
-                   {
-                       "name":  "因杜杜 / 內爾 deus Darnus",
-                       "nameEn":  "Imdugud + Nael",
-                       "phases":  [
-                                      {
-                                          "name":  "T9 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Imdugud Phase 雷鳥階段",
-                                                                "type":  "aoe",
-                                                                "description":  "鳥神階段 + 雷擊；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Iceberg 冰山",
-                                                                "type":  "aoe",
-                                                                "description":  "場上冰山 AoE → 走縫；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Heavensfall 隕落天國",
-                                                                "type":  "mechanic",
-                                                                "description":  "場上多隕石 → 排列遮蔽全屏；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "躲隕石後"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Meteor Stream 隕石雨",
-                                                                "type":  "spread",
-                                                                "description":  "點名玩家分散站位；被點名玩家拉開分散站位5米以上。",
-                                                                "tips":  [
-                                                                             "分散"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Lunar Dynamo 月之動力",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 周身環形 AoE → 貼 boss 圓心。",
-                                                                "tips":  [
-                                                                             "貼 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bahamut\u0027s Claw 巴哈姆特爪",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑 buster；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Kaliya 機制：點名圓 + 召喚雙頭蛇 add + 點名標記。",
-                                        "tankbuster → MT 大減傷 + 雙 T swap",
-                                        "raidwide → 團補 + 全員減傷"
-                                    ]
-                   }
-               ]
+    "id": "final_coil_of_bahamut_-_turn_1",
+    "name": "巴哈姆特大迷宮 真源之章1",
+    "nameEn": "The Final Coil of Bahamut - Turn 1",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）真源之章1（T10）Imdugud 伊姆都古德：5 階段戰鬥。靜電充電 → 子女 add → 電光爆發 → 龍捲雷暴。",
+        "2）P1 100%-83%：刃尾橫掃後扇 + 暴擊撕裂單體 + Forked Lightning 叉形閃電（debuff → 結束時 stack 大量傷 + 麻痺）。83% Charge 蓄電進 P2。",
+        "3）P1 Wild Charge 狂野衝鋒：藍標 1N → 電場停留 + 衝鋒方向可分攤直線（越靠 boss 越高傷）。",
+        "4）P2 無敵 + 召喚 2 子 + 2 女：子死留電圈（踩傷）；女用叉形閃電。4 小怪死後解無敵 + 電光爆發全屏（依該階段時長 + 帶電 stack）。",
+        "5）P3 83%-54%：Shocking Strike 驚電（隨機 3 玩家 AoE + 受傷加重）。其餘同 P1。",
+        "6）P4 同 P2 + 20s 後再 spawn 1 對子女。",
+        "7）P5 54%-0%：Static Discharge 靜電放出 → 電圈從外側向中間擴散（站內每下 1100 傷）。Tornado Thunder 龍捲雷暴：boss 連線玩家 → 接線爆炸可分攤高傷 + 疊受傷加重。",
+        "8）長戰：電圈最終覆蓋全場 → 團滅。"
+    ],
+    "notes": "ARR 2.4 蠻神戰 - 巴哈姆特真源之章 1（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Imdugud 伊姆都古德（雷霆古龍）。最具技術深度的 ARR Coil 之一。5 階段戰鬥包含靜電擴散場地縮小機制。",
+    "bosses": [
+        {
+            "name": "伊姆都古德",
+            "nameEn": "Imdugud",
+            "phases": [
+                {
+                    "name": "P1 100%-83% HP（基礎）",
+                    "mechanics": [
+                        {
+                            "name": "Blade Tail Sweep 刃尾橫掃 / Critical Tear 暴擊撕裂",
+                            "type": "cone",
+                            "description": "刃尾橫掃對後方扇形 + 打傷；暴擊撕裂對 MT 高傷單體。MT 朝外 + 減傷。",
+                            "tips": [{"text": "MT 朝外 + 減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "Forked Lightning 叉形閃電（debuff 連鎖）",
+                            "type": "spread",
+                            "description": "點名玩家 Prey 獵物 debuff → 結束時小量傷 + 獲叉形閃電 debuff → 結束時大量傷 + 麻痺。可被抵消防 stack 進階。",
+                            "tips": [
+                                {"text": "被點注意倒數", "role": "dps"},
+                                {"text": "Esuna 清麻痺", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Wild Charge 狂野衝鋒（藍標分攤）",
+                            "type": "mechanic",
+                            "description": "隨機點名 1N 藍標 → 小型 AoE 眩暈 + 受傷加重 → 原地留電場（踩傷）→ 隨後向被點玩家衝鋒可分攤直線傷害（越靠 boss 越高傷）。",
+                            "tips": [
+                                {"text": "被鎖玩家準備分攤", "role": "dps"},
+                                {"text": "全員集合分攤", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 83% Charge 蓄電（子女 add）",
+                    "mechanics": [
+                        {
+                            "name": "Imdugud Charges + 2 Sons + 2 Daughters",
+                            "type": "add",
+                            "description": "boss 獲無敵 → 召喚 2 個 Imdugud's Son 之子 + 2 個 Daughter 之女。子女使用刃尾橫掃。子死留電圈（踩傷）；女用叉形閃電。",
+                            "tips": [
+                                {"text": "DPS 集火清 4 小怪", "role": "dps"},
+                                {"text": "避電圈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Electric Burst 電光爆發",
+                            "type": "raidwide",
+                            "description": "4 小怪死後 boss 解無敵 + 視時長累積 Charged 帶電 stack → 釋放全體 AoE 電光爆發（依 stack 增傷）。治療團補。",
+                            "tips": [
+                                {"text": "團補連發", "role": "healer"},
+                                {"text": "DPS 快速清", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 83%-54% HP（驚電）",
+                    "mechanics": [
+                        {
+                            "name": "Shocking Strike 驚電",
+                            "type": "spread",
+                            "description": "隨機點名 3 玩家造成 AoE 傷害 + 受傷加重 stack。被點散開。",
+                            "tips": [{"text": "被點散開", "role": "dps"}]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 召喚 2+2 + 20s 後再 spawn",
+                    "mechanics": [
+                        {
+                            "name": "二次召喚",
+                            "type": "add",
+                            "description": "同 P2 + 進入 20s 後場地再 spawn 1 對子女。DPS 需更快清光。",
+                            "tips": [{"text": "DPS 加速清", "role": "dps"}]
+                        }
+                    ]
+                },
+                {
+                    "name": "P5 54%-0% HP（靜電擴散 + 龍捲雷暴）",
+                    "mechanics": [
+                        {
+                            "name": "Static Discharge 靜電放出（擴散場地）",
+                            "type": "aoe",
+                            "description": "電圈從場地外側向中間擴散，站在內每下 1100 傷。場地空間越來越小。",
+                            "tips": [
+                                {"text": "盡量避免站電圈", "role": "tank"},
+                                {"text": "DPS 衝刺", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tornado Thunder 龍捲雷暴（連線分攤）",
+                            "type": "stack",
+                            "description": "boss 隨機連線 1 玩家 → 連線爆炸給接線玩家造成高額可分攤傷害 + 參與分攤者疊受傷加重。",
+                            "tips": [
+                                {"text": "全員集合分攤", "role": "tank"},
+                                {"text": "Esuna 清受傷加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "電圈覆蓋全場（軟狂暴）",
+                            "type": "raidwide",
+                            "description": "若戰鬥持續過長 → 電圈覆蓋整個場地 → 團滅。DPS race。",
+                            "tips": [{"text": "DPS race", "role": "dps"}]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 刃尾橫掃 + 叉形閃電 + Wild Charge 分攤",
+                "P2 83% 2 子 + 2 女 → 子留電圈 / 女用閃電 → 電光爆發",
+                "P3 驚電 → 散開",
+                "P4 二次召喚 → 加速清",
+                "P5 靜電擴散 → 場地縮小 + 龍捲雷暴分攤",
+                "DPS race 防團滅"
+            ]
+        }
+    ]
 }
