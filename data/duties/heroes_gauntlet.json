@@ -2,7 +2,7 @@
   "id": "heroes_gauntlet",
   "name": "暗影決戰諾弗蘭特",
   "nameEn": "The Heroes' Gauntlet",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
+  "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
   "type": "dungeon",
   "playerCount": 4,
   "iLvlSync": null,
@@ -10,172 +10,204 @@
   "highEnd": false,
   "quality": "excellent",
   "mnemonic": [
-    "B1 Spectral Berserker 幻靈狂戰士：Reckless Charge 莽撞衝擊 + 直線。",
-    "B2 Spectral Thief 幻靈盜賊：Steal 偷取 + 場上機關。",
-    "B3 Ran-jit 蘭吉特：武術連擊 + 召喚弟子 add。"
+    "B1 幻光盜賊 Spectral Thief：衝刺機制 - 看匕首標記 + 數綠球（boss 身邊 6 個慢慢消失，只剩 1 個時瞬移）→ 真空刃圓 AoE 或矩形斬直線。",
+    "B1 看標記類型：1 匕首 = 真空刃（遠離匕首位置）；2 匕首 = 分身衝刺，可能是矩形斬（站非匕首方向直線縫）或真空刃（遠離兩匕首）。",
+    "B1 投擲弱雞匕首 = 直線 AoE（場中誘導後閃）；幻光旋風 = 點名玩家圓 AoE 分散；幻光大旋風 = 全屏 raidwide。",
+    "道中：第一波小怪可拉到樂聖 因克·佐恩 NPC 前讓他變青蛙，輕鬆很多。",
+    "B2 幻光亡靈法師 Spectral Necromancer：絕對昏暗 = 對『最遠玩家』120° 大扇形 + 死亡宣告 debuff（治療 Esuna 解，否則倒數結束即死）。",
+    "B2 亡靈術（行走）= 召 4 亡靈爆彈 + 黃線連 4 玩家 → 爆彈追被連線者 → 拉到一起方便集中爆。亡靈爆發（行走）= 爆彈自爆無預警圓，遠離爆彈。",
+    "B2 亡靈術（爬行）= 4 爬行爆彈 + 紅線連 → 不久後被連線者『死亡引領』無法移動 → 必須提前分散站位接自爆。",
+    "B2 苦痛酸沼 = 半場 5 個無預警圓 AoE 留持續傷池。汙穢之指 = MT 單體大傷。混沌風暴 = 全屏。",
+    "B2 終局亡靈術（行走+爬行 + 黑浪）= 先黃線拉行走到場中 + 後紅線爬行 + 玩家腳下黑浪圓 → 黃線消失後分散處理爬行爆彈。",
+    "B3 幻光狂戰士 Spectral Berserker（Distant Ideal 遠望理想）：兽魂之愤怒 = 經典藍圈擊退（站圈邊接擊退）→ 藍圈位置留下『洞』。",
+    "B3 進洞累『逐漸狂暴』debuff（每秒 1 層），8 層變『純正狂暴』= 無法操控強制衝向 boss 自殘攻擊 → 兽魂之勇猛後立刻離洞。",
+    "B3 暴怒劈 = 前方無預警直線 AoE（兩次連發第 1 次 / 三次連發後續）→ 繞背躲。落石 = 點名圓 AoE + 留瓦礫。",
+    "B3 兽魂之苦痛（無瓦礫）= 集合分攤；兽魂之苦痛（瓦礫）= 全員與自己的瓦礫貼緊分攤 + 短暫易傷。",
+    "B3 兽魂之勇猛 = 大全屏 → 唯一安全區為藍圈留下的洞（站洞內躲傷害 → 躲完立刻出洞避免『純正狂暴』）。"
   ],
-  "notes": "ShB 5.3 ShB 主線英雄試煉（Lv 81）。Boss 依序為 Spectral Berserker 幻靈狂戰士、Spectral Thief 幻靈盜賊、Ran-jit 蘭吉特。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
+  "notes": "ShB 5.3 MSQ dungeon（Lv 80-81，sync 81，4 人 dungeon），位於諾弗蘭特各地（Mount Argai 礦山 → Summer Ballroom 夏季舞廳 → Illuminated Plaza 光輝廣場）。為『漆黑反叛者』5.3『水晶之光的尾聲』MSQ dungeon。劇情：諾弗蘭特各地對抗最終 Lightwarden 影子化身。所有 boss 與小怪皆為前作 FF 系列職業致敬（戰士/武士/吟遊/龍騎/盜賊/亡靈法/狂戰士等）。",
   "bosses": [
     {
-      "name": "幻靈狂戰士",
-      "nameEn": "Spectral Berserker",
-      "phases": [
-        {
-          "name": "B1 主戰",
-          "mechanics": [
-            {
-              "name": "Cleave 扇形",
-              "type": "cone",
-              "description": "MT 扇形；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Slam 砸地",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Circle AoE 圓圈",
-              "type": "aoe",
-              "description": "場上多圓 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "Spectral Berserker 幻靈狂戰士 機制：Reckless Charge 莽撞衝擊 + 直線。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "name": "幻靈盜賊",
+      "name": "幻光盜賊",
       "nameEn": "Spectral Thief",
       "phases": [
         {
-          "name": "B2 主戰",
+          "name": "主戰",
           "mechanics": [
             {
-              "name": "Phantom 分身",
-              "type": "mechanic",
-              "description": "場上影分身 → 看本體；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看本體位置"
-              ]
-            },
-            {
-              "name": "Backstab 偷襲",
-              "type": "aoe",
-              "description": "點名玩家背後 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點旋轉"
-              ]
-            },
-            {
-              "name": "Line AoE 直線",
-              "type": "aoe",
-              "description": "直線 AoE → 側閃；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
+              "name": "幻光三段 Spectral Dream",
               "type": "tankbuster",
-              "description": "MT buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
+              "description": "對 MT 三連擊 tankbuster（不重）。MT 開小減傷即可。",
+              "tips": [{"text": "MT 開小減傷", "role": "tank"}]
+            },
+            {
+              "name": "衝刺（1 匕首 + 真空刃）",
+              "type": "mechanic",
+              "description": "boss 場上釋放 1 個匕首標記 + 準備以 boss 為中心圓形鋼鐵 AoE『真空刃』→ boss 身邊出現 6 個綠球依序消失 → 只剩 1 個綠球時 boss 瞬移至匕首位置 → 綠球全消後真空刃生效。處理：遠離匕首位置回避。",
+              "tips": [{"text": "遠離匕首標記回避", "role": "dps"}]
+            },
+            {
+              "name": "分身衝刺（2 匕首 + 矩形斬/真空刃）",
+              "type": "mechanic",
+              "description": "2 匕首標記版本：(a) 矩形斬 = 站沒有匕首標記方向的直線區域；(b) 真空刃 = 遠離兩個匕首標記位置。看招式類型判斷。",
+              "tips": [{"text": "矩形斬走非匕首直線 / 真空刃遠離雙標", "role": "dps"}]
+            },
+            {
+              "name": "幻光大旋風 Spectral Whirlwind",
+              "type": "raidwide",
+              "description": "全屏 raidwide AoE。預備團補。",
+              "tips": [{"text": "預備團補", "role": "healer"}]
+            },
+            {
+              "name": "幻光旋風 Spectral Gust",
+              "type": "spread",
+              "description": "無讀條點名全員圓 AoE → 散開不互疊。",
+              "tips": [{"text": "全員拉開散位", "role": "dps"}]
+            },
+            {
+              "name": "投擲弱雞匕首 Chicken Knife",
+              "type": "aoe",
+              "description": "boss 對全員所在方向放匕首使用直線 AoE → 集中場中誘導匕首後一起閃避。",
+              "tips": [{"text": "場中集中誘導後閃", "role": "dps"}]
             }
           ]
         }
       ],
       "mnemonic": [
-        "Spectral Thief 幻靈盜賊 機制：Steal 偷取 + 場上機關。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
+        "B1：1 匕首 = 真空刃遠離 / 2 匕首 = 矩形斬走非匕首直線 或 真空刃遠離雙標",
+        "看綠球數量預判瞬移時機",
+        "幻光大旋風全屏 + 幻光旋風點名散開"
       ]
     },
     {
-      "name": "蘭吉特",
-      "nameEn": "Ran-jit",
+      "name": "幻光亡靈法師",
+      "nameEn": "Spectral Necromancer",
       "phases": [
         {
-          "name": "B3 主戰",
+          "name": "主戰",
           "mechanics": [
             {
-              "name": "Multiple AoE 多 AoE",
-              "type": "aoe",
-              "description": "場上多 AoE 圓 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Line AoE 直線",
-              "type": "aoe",
-              "description": "點名玩家直線 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
+              "name": "汙穢之指 Twisted Touch",
               "type": "tankbuster",
-              "description": "MT buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
+              "description": "對 MT 單體大傷 tankbuster。",
+              "tips": [{"text": "MT 開減傷", "role": "tank"}]
             },
             {
-              "name": "Raid-wide 全屏",
+              "name": "混沌風暴 Chaos Storm",
               "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
+              "description": "全屏 raidwide。預備團補。",
+              "tips": [{"text": "預備團補", "role": "healer"}]
+            },
+            {
+              "name": "絕對昏暗 Absolute Dark II",
+              "type": "cone",
+              "description": "對距 boss 最遠玩家釋 120° 大扇形 AoE + 死亡宣告 Doom debuff（治療 Esuna 解，否則倒數結束即死）。",
+              "tips": [{"text": "Esuna 解死亡宣告", "role": "healer"}, {"text": "預判最遠玩家方向", "role": "dps"}]
+            },
+            {
+              "name": "亡靈術（行走）+ 黃線",
+              "type": "add",
+              "description": "召 4 亡靈爆彈（行走）+ 黃線連 4 玩家 → 爆彈追被連線者。處理：拉到一起方便集中爆。",
+              "tips": [{"text": "黃線玩家拉到一起", "role": "dps"}]
+            },
+            {
+              "name": "亡靈爆發（行走）",
+              "type": "aoe",
+              "description": "爆彈自爆無預警圓 AoE → 遠離爆彈位置。",
+              "tips": [{"text": "遠離爆彈", "role": "dps"}]
+            },
+            {
+              "name": "亡靈術（爬行）+ 紅線",
+              "type": "mechanic",
+              "description": "召 4 爬行爆彈 + 紅線連 → 不久後被連線者『死亡引領』無法移動（無視距離）。處理：必須提前分散站位接自爆。",
+              "tips": [{"text": "預先分散站位", "role": "dps"}]
+            },
+            {
+              "name": "苦痛酸沼 Pain Mire",
+              "type": "aoe",
+              "description": "半場 5 個無預警圓 AoE → 爆後留持續傷池 + 易傷。看 telegraph 走縫。",
+              "tips": [{"text": "看圓走縫 + 避酸池", "role": "dps"}]
+            },
+            {
+              "name": "亡靈術（行走+爬行+黑浪）終局",
+              "type": "mechanic",
+              "description": "先黃線拉行走爆彈到場中 + 後紅線爬行爆彈 + 玩家腳下黑浪圓 → 黃線消失後分散處理爬行爆彈自爆。",
+              "tips": [{"text": "行走拉中 → 散處理爬行", "role": "dps"}]
             }
           ]
         }
       ],
       "mnemonic": [
-        "Ran-jit 蘭吉特 機制：武術連擊 + 召喚弟子 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
+        "絕對昏暗 → 最遠玩家 120° 扇 + Doom（Esuna 解）",
+        "亡靈術行走（黃線）= 集中爆 / 爬行（紅線）= 分散接",
+        "苦痛酸沼 5 圓走縫避酸池",
+        "終局：行走集中 + 爬行分散同時處理"
+      ]
+    },
+    {
+      "name": "幻光狂戰士",
+      "nameEn": "Spectral Berserker",
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "野獸之怒 Beastly Fury",
+              "type": "raidwide",
+              "description": "全屏 raidwide。首次使用會在場邊與四角填滿出血池 → 場地變成『+』字形。",
+              "tips": [{"text": "預備團補 + 預判場地縮成 +", "role": "healer"}]
+            },
+            {
+              "name": "兽魂之愤怒 Wild Rage",
+              "type": "knockback",
+              "description": "經典藍圈擊退 → 站圈邊接擊退（防擊退有效，勿踩圈內 = OHKO）→ 藍圈位置留下『洞』。",
+              "tips": [{"text": "站藍圈邊接擊退", "role": "tank"}, {"text": "勿踩圈內", "role": "dps"}]
+            },
+            {
+              "name": "暴怒劈 Raging Slice",
+              "type": "aoe",
+              "description": "前方無預警直線 AoE → 繞背躲。第一次 2 連，後續 3 連。",
+              "tips": [{"text": "繞背躲 + 連發次數", "role": "dps"}]
+            },
+            {
+              "name": "落石 Falling Rock",
+              "type": "spread",
+              "description": "點名全員圓 AoE → 散位放圓 → 玩家位置留瓦礫。",
+              "tips": [{"text": "8 散位放石", "role": "dps"}]
+            },
+            {
+              "name": "兽魂之苦痛（無瓦礫）Wild Anguish",
+              "type": "stack",
+              "description": "點名玩家分攤 + 短暫魔法易傷 → 全員集合分攤。",
+              "tips": [{"text": "全員集合 stack", "role": "dps"}]
+            },
+            {
+              "name": "兽魂之苦痛（瓦礫）",
+              "type": "stack",
+              "description": "落石後 → 全員與自己的瓦礫貼緊分攤（不互疊）。",
+              "tips": [{"text": "與瓦礫貼緊分攤", "role": "dps"}]
+            },
+            {
+              "name": "兽魂之勇猛 Wild Rampage + 洞躲避",
+              "type": "raidwide",
+              "description": "大全屏 OHKO 級傷害 → 唯一安全區為藍圈留下的洞（站洞內躲傷害）。",
+              "tips": [{"text": "站洞內躲", "role": "tank"}, {"text": "躲完立刻出洞", "role": "dps"}]
+            },
+            {
+              "name": "逐漸狂暴 / 純正狂暴 debuff",
+              "type": "mechanic",
+              "description": "站洞內累『逐漸狂暴』每秒 1 層 → 8 層變『純正狂暴』= 無法操控強制衝 boss 自殘攻擊（每擊自損）→ 躲完 Wild Rampage 立刻出洞。",
+              "tips": [{"text": "出洞時機要快", "role": "dps"}]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "野獸之怒 → 場地縮成 + 字形（四邊四角出血池）",
+        "兽魂之愤怒 = 站藍圈邊接擊退 → 留洞",
+        "暴怒劈 連發 2/3 次繞背 / 落石散位放石",
+        "Wild Rampage = 進洞躲 → 8 層 debuff 失控自殘",
+        "Wild Anguish 分攤：無瓦礫 = 集合 / 有瓦礫 = 各自貼瓦礫"
       ]
     }
   ]
