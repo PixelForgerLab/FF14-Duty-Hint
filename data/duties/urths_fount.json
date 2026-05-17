@@ -1,107 +1,149 @@
 {
-    "id":  "urths_fount",
-    "name":  "真 奧丁殲滅戰",
-    "nameEn":  "Urth\u0027s Fount - Odin",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Odin 奧丁：依機制走位處理。"
-                 ],
-    "notes":  "ARR 2.4 真 奧丁殲滅戰（Lv 50）。奧丁劇情戰。Boss 依序為 Odin 奧丁。重點：Zantetsuken 斬鐵劍 即死 + Geirrothr 雷神之槌，注意 add 速秒與 raidwide 減傷處理。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Raid-wide magical damage.；全員預備減傷與大團補。",
-                                                                "name":  "Hall of Sorrow 悲傷殿堂",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "Targets 3 random party members (never the main tank) with a medium circle AoE, dealing magical damage and inflicting a cleanseable 10s slow Slow on al；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Hall of Lead 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Targets random party members with an avoidable circle AoE, leaving ~2s to run out.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Hall of Stone 石",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Raid-wide magical damage with a 3s cast time.；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "name":  "Einherjar 英靈戰士",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "Telegraphed, medium-sized circle AoE around Odin.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Valknut 瓦爾克努特",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Tankbuster with a 3s cast time.；MT開大減傷 雙T swap接力。",
-                                                                "name":  "Sanngetall 桑格塔",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "Red spears appear on the outside of the arena and dash across in a straight line.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Gagnrath 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Three random party members (never the main tank) are targeted with a large circle AoE.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Gungnir 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "奧丁",
-                       "nameEn":  "Odin",
-                       "mnemonic":  [
-                                        "Odin 奧丁 機制",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補"
-                                    ]
-                   }
-               ]
+    "id": "urths_fount",
+    "name": "真 奧丁殲滅戰",
+    "nameEn": "Urth's Fount",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）真 奧丁殲滅戰：不包含於『隨機任務：討伐殲滅戰』。Boss Odin 奧丁『智慧之神』。",
+        "2）基本技能：Slaughter 屠戮結 boss 圓 AoE 60% 最大 HP 傷害 → 近戰退離 + 治療大補；Zantetsuken 真實斬 一仇前扇高傷 → MT 朝外。",
+        "3）Stone of Slate 飛石殿：隨機玩家腳下小圓 AoE + 5s 石化；被點走出；Esuna 清石化。",
+        "4）Penalty 悔恨殿：普通全場 AoE → 治療團補。",
+        "5）Gungnir Lance 決勝槍：若干神槍昆古尼爾 add 發射至場外，幾秒後對前方直線 AoE。兩種模式：『十字型』（2 條垂直 AoE）或『三橫型』（3 條橫向 AoE）→ 看槍位走縫。",
+        "6）Slow of Slate 遲緩殿：對 1 玩家無讀條 AoE 較小傷害 + 可驅散減速 → Esuna 清。",
+        "7）後半階段技能增強：Heavenfall 英靈衝擊全屏 + 可驅散 Bleed 出血；Gungnir 神枪昆古尼爾組合：點名圓 + 結算後該玩家位置生神槍 + 全場不可驅散出血。",
+        "8）決勝槍二連版（後期）：① 十字型二連（第 2 次為第 1 次 45° 旋轉）；② 三橫型二連（第 2 次覆蓋第 1 次安全點）。",
+        "9）狂暴：HP < 15% 或副本時間到 → 真·斬鐵劍讀條 → 動畫直接全員失去戰鬥能力。"
+    ],
+    "notes": "ARR 2.4 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』奧丁蠻神，於庫爾札斯西部高地烏爾斯泉。Boss 為 Odin 真奧丁『智慧之神』。奧丁是 FFXIV 中極具特色的 boss：擁有 Zantetsuken 真實斬名牌技能、配備 Gungnir 神槍 add 機制。本戰不算難但機制獨特。實際狂暴 Zantetsuken 真·斬鐵劍是 FF 系列傳統秒殺技。",
+    "bosses": [
+        {
+            "name": "真 奧丁",
+            "nameEn": "Odin",
+            "phases": [
+                {
+                    "name": "P1 100%-50% HP（基本技能）",
+                    "mechanics": [
+                        {
+                            "name": "Slaughter 屠戮結",
+                            "type": "aoe",
+                            "description": "以 boss 自身為圓心 AoE，造成 60% 最大 HP 傷害。近戰看圓退離 + 治療大補。",
+                            "tips": [
+                                {"text": "近戰退離 boss", "role": "dps"},
+                                {"text": "治療大補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Zantetsuken 真實斬",
+                            "type": "cone",
+                            "description": "對一仇前方扇形高傷攻擊；MT 朝場邊面外，非 T 站背。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "非 T 站背", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Stone of Slate 飛石殿",
+                            "type": "spread",
+                            "description": "隨機目標腳下小圓 AoE + 5s 石化狀態。被點走出 + Esuna 清石化。",
+                            "tips": [
+                                {"text": "看腳下圓走出", "role": "dps"},
+                                {"text": "Esuna 清石化", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Penalty 悔恨殿",
+                            "type": "raidwide",
+                            "description": "普通全場 AoE；治療團補。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Gungnir Lance 決勝槍（十字 / 三橫）",
+                            "type": "aoe",
+                            "description": "若干 Gungnir 神槍昆古尼爾 add 被奧丁發射至場外，幾秒後 add 向其正前方發出直線 AoE。兩種模式：① 十字型：2 條垂直 AoE；② 三橫型：3 條橫向 AoE。看槍位走縫到無 AoE 區。",
+                            "tips": [
+                                {"text": "看神槍位置走縫", "role": "dps"},
+                                {"text": "十字 → 找對角空位；三橫 → 找橫向空隙", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Slow of Slate 遲緩殿",
+                            "type": "aoe",
+                            "description": "對 1 玩家無讀條 AoE 較小傷害 + 可驅散減速狀態。Esuna 清。",
+                            "tips": [
+                                {"text": "Esuna 清減速", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 50% HP（技能增強）",
+                    "mechanics": [
+                        {
+                            "name": "Heavenfall 英靈衝擊",
+                            "type": "raidwide",
+                            "description": "全屏 AoE 傷害 + 可驅散 Bleeding 出血 debuff。治療團補 + Esuna 清出血。",
+                            "tips": [
+                                {"text": "團補 + Esuna 出血", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Gungnir 神槍昆古尼爾（組合招）",
+                            "type": "mechanic",
+                            "description": "組合技能：對非一仇玩家點名圓 AoE → 結算後在此玩家的位置產生 Gungnir 神槍 → 神槍存在期間對全場施加不可驅散的 Bleeding 出血 debuff。被點玩家拉場邊避免影響戰場走位。",
+                            "tips": [
+                                {"text": "被點玩家拉場邊", "role": "dps"},
+                                {"text": "Esuna 不可解此版本", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Gungnir Lance 決勝槍 - 十字型二連",
+                            "type": "aoe",
+                            "description": "連續兩次十字型 Gungnir Lance 決勝槍，第 2 次為第 1 次的 45° 旋轉。第 1 次安全位 → 第 2 次變為危險位。第 1 次後立刻移動到下一個安全位。",
+                            "tips": [
+                                {"text": "第 1 次安全 → 第 2 次跑到新安全位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Gungnir Lance 決勝槍 - 三橫型二連",
+                            "type": "aoe",
+                            "description": "連續兩次三橫型 Gungnir Lance 決勝槍，第 2 次覆蓋第 1 次的安全點。同樣需要移動到新安全位。",
+                            "tips": [
+                                {"text": "第 1 次安全 → 跑到第 2 次新安全位", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 狂暴（< 15% HP / 副本時間到）",
+                    "mechanics": [
+                        {
+                            "name": "Zantetsuken 真·斬鐵劍（狂暴秒殺）",
+                            "type": "raidwide",
+                            "description": "boss HP < 15% 或副本進行一定時間後讀條 Zantetsuken 真·斬鐵劍。讀條結束後動畫直接導致全員失去戰鬥能力（無法存活）。FF 系列經典秒殺技。必須在讀條前擊敗 boss。",
+                            "tips": [
+                                {"text": "讀條前秒掉 boss", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Slaughter 屠戮結（自身圓 60% 最大 HP）→ 近戰退離",
+                "Zantetsuken 真實斬（前扇）→ MT 朝外",
+                "飛石殿（腳下圓 + 石化）→ 走出 + Esuna",
+                "決勝槍 十字 / 三橫 → 看槍位走縫",
+                "後半英靈衝擊（出血）+ 神槍組合（不可驅散出血）",
+                "決勝槍二連 → 第 1 次安全 → 移動到新安全",
+                "< 15% Zantetsuken 真·斬鐵劍狂暴 → 必殺前擊敗"
+            ]
+        }
+    ]
 }

@@ -1,101 +1,133 @@
 {
-    "id":  "striking_tree_hard",
-    "name":  "真 拉姆殲滅戰",
-    "nameEn":  "The Striking Tree (Hard) - Ramuh",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Ramuh 拉姆：依機制走位處理。"
-                 ],
-    "notes":  "ARR 2.3 真 拉姆殲滅戰（Lv 50）。雷神拉姆首戰。Boss 依序為 Ramuh 拉姆。重點：Judgment Bolt 審判雷 + Thunderstorm 雷暴 + Adds 4 雷靈 add，注意 add 速秒與 raidwide 減傷處理。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Untelegraphed AoE tankbuster dealing moderate damage to the main tank and high damage to non-tanks.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-                                                                "name":  "Shock Strike 震擊",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "AoE centered on Ramuh. Standing at max melee range allows you to dodge it. Can break Chaotic Strike stun.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Thunderspark 雷電火花",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Random players and patches of ground will be marked with an AoE. Deals moderate damage and breaks Chaotic Strike. Ground Thunderstorms will leave behi；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Thunderstorm 雷暴",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "The more orbs on the ground, the higher the damage of Ramuh\u0027s abilities. Touching an orb gives a stacking buff called icon1.p；依預兆走位處理。",
-                                                                "name":  "Lightning Orbs 雷電球",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Targets a random player and inflicts icon1.png Terror on them for ~60s, preventing them from moving or executing actions. Can be freed wit；依預兆走位處理。",
-                                                                "name":  "Chaotic Strike 混沌打擊",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Three Grey Arbiter adds will appear around the arena. Players should immediately switch to them, halting DPS on the boss.；依預兆走位處理。",
-                                                                "name":  "Grey Arbiters 灰衣裁定者",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Ramuh\u0027s Ultimate. Wipes the group if any Arbiters are alive. Deals moderate damage otherwise.；依預兆走位處理。",
-                                                                "name":  "Judgment Bolt 審判閃電",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Tethers 2 players together, inflicting icon1.png Causality.；依預兆走位處理。",
-                                                                "name":  "Rolling Thunder 滾雷",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "拉姆",
-                       "nameEn":  "Ramuh",
-                       "mnemonic":  [
-                                        "Ramuh 拉姆 機制",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補"
-                                    ]
-                   }
-               ]
+    "id": "striking_tree_hard",
+    "name": "真 拉姆殲滅戰",
+    "nameEn": "The Striking Tree (Hard)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）真 拉姆殲滅戰：核心機制『雷暴-雷玉-轟雷』。地上隨機 2 個電圈 + 點名 1 玩家獲得電圈 → 不要疊。",
+        "2）電圈劈完留下電球（雷玉）→ 玩家可回收，連續吃 3 個獲 Avoid Lightning 避雷 buff（避免 boss 轟雷致命）。繼續疊 3 層 Surge 蓄電 → 治療效果大幅降低。",
+        "3）Heaven's Wrath 轟雷：對 MT AoE 死刑，非 T 玩家中招即死 → MT 固定站位 + 開減傷；非 T 遠離當前 MT。",
+        "4）Lightning 電光：boss 為中心圓 AoE，躲開即可。",
+        "5）Chaotic Strike 混亂衝擊：點名 1 玩家獲得恐怖 buff 無法移動 → 受電圈或 boss 電光傷後解除 → 被點玩家頭上標記讓隊友電你 / 站 boss 腳下等電光解除。",
+        "6）Judgement Bolt 制裁之雷：全屏 AoE，若場上 add 沒打完且 boss HP 過低 → 強制團滅。",
+        "7）Thunderstorm 滾雷：連線 2 玩家 → Causality 因果 buff（攻擊或施技就掉 HP）→ 其中 1 玩家連吃 3 個電球避雷解除。",
+        "8）P2 < 60% HP：場上出現 3 隻 Arbiter's Shade 仲裁者之影 → 立刻轉火 add（boss 會進入無敵）。未全清就強制團滅。",
+        "9）P3：3 影打完 boss 讀條制裁之雷進入最後階段 → 出現 Thunderstorm 滾雷 → 場地保留 3 電球供解。"
+    ],
+    "notes": "ARR 2.3 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』拉姆蠻神 Hard 版，於黑衣森林南部林區雷霆樹。Boss 為 Ramuh 真拉姆『雷霆蠻神』。本戰首次引入『雷玉/電球』buff 累積機制（Conductivity → Avoid Lightning → Surge 三級）。轟雷死刑是 MT 必須開減傷的核心威脅。",
+    "bosses": [
+        {
+            "name": "真 拉姆",
+            "nameEn": "Ramuh",
+            "phases": [
+                {
+                    "name": "P1 100%-60% HP（基礎機制）",
+                    "mechanics": [
+                        {
+                            "name": "Thunderstorm 雷暴（雷玉系統核心）",
+                            "type": "mechanic",
+                            "description": "場上隨機出現 2 個電圈 + 點名 1 名玩家獲得電圈。電圈不要疊。劈完後非點名雷圈會留下電球（雷玉）。",
+                            "tips": [
+                                {"text": "電圈不要疊", "role": "tank"},
+                                {"text": "看電圈走出", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Conductivity 雷玉 + Avoid Lightning 避雷",
+                            "type": "mechanic",
+                            "description": "電球可被玩家回收。回收至 3 個電球獲得 Avoid Lightning 避雷 buff（可避免 boss 轟雷致命傷）。繼續疊加進入 Surge 過量蓄電狀態，疊至 3 層 Surge 玩家獲得的治療效果大幅降低。",
+                            "tips": [
+                                {"text": "MT 收 3 球獲避雷 buff", "role": "tank"},
+                                {"text": "P1 電球可無視（非必要）", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Heaven's Wrath 轟雷（MT 死刑）",
+                            "type": "tankbuster",
+                            "description": "對當前 MT 釋放 AoE 型瞬發死刑，整場戰鬥都會用。MT 必須固定站位 + 合理安排減傷；非 T 玩家受到該傷害基本即死 → 遠離當前 MT。",
+                            "tips": [
+                                {"text": "MT 大減傷 + 收 3 球避雷", "role": "tank"},
+                                {"text": "非 T 遠離 MT", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lightning 電光",
+                            "type": "aoe",
+                            "description": "以 boss 為中心圓形 AoE，躲開即可。",
+                            "tips": [
+                                {"text": "看圓走出", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Chaotic Strike 混亂衝擊",
+                            "type": "mechanic",
+                            "description": "隨機點名 1 玩家獲得 Fear 恐怖 buff 無法移動，受到電圈或 boss 電光 AoE 傷害後解除。建議被點玩家頭上標記讓其他玩家電你；血量有自信者可站 boss 腳下等電光 AoE 解除。",
+                            "tips": [
+                                {"text": "被點頭上標記", "role": "dps"},
+                                {"text": "其他玩家把電圈電到被點者", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 60% HP（3 仲裁者之影）",
+                    "mechanics": [
+                        {
+                            "name": "Arbiter's Shade 仲裁者之影 x3（必清）",
+                            "type": "add",
+                            "description": "boss HP < 60% 後場地周圍出現 3 隻 Arbiter's Shade 仲裁者之影。立刻轉火 add 不要再打 boss！boss 會進入無敵狀態，若 add 沒全部擊殺則強制團滅（Judgement Bolt 制裁之雷）。MT 此時注意避開其他玩家攻擊，其他玩家遠離 MT。",
+                            "tips": [
+                                {"text": "DPS 立刻轉火 add", "role": "dps"},
+                                {"text": "MT 與隊友拉開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Judgement Bolt 制裁之雷（轉場/失敗懲罰）",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。若場上 add 沒打完且 boss HP 過低 → 強制團滅。正常清完 add 後做為轉場演出。",
+                            "tips": [
+                                {"text": "清 add 後正常接", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 制裁之雷後（滾雷 + 第 4 影）",
+                    "mechanics": [
+                        {
+                            "name": "Thunderstorm 滾雷 + Causality 因果",
+                            "type": "mechanic",
+                            "description": "P3 出現 Thunderstorm 滾雷：連線 2 名玩家，附加 Causality 因果 buff → 攻擊或使用技能均會損失 HP。其中任意 1 玩家在場上連吃 3 個電球獲避雷 buff 即可解除。場地最好留 3 個電球供解。",
+                            "tips": [
+                                {"text": "被連線者吃 3 球避雷", "role": "dps"},
+                                {"text": "場地保留 3 球以上", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "第 4 仲裁者之影",
+                            "type": "add",
+                            "description": "P3 後段會再出現 1 隻仲裁者之影，打掉即可。",
+                            "tips": [
+                                {"text": "切目標清", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "雷暴 → 電圈不疊 + 留電球（雷玉）",
+                "MT 收 3 球避雷 → 接轟雷死刑",
+                "Chaotic Strike → 被點頭上標記 + 隊友電你",
+                "60% → 3 仲裁者之影 → 必清防團滅",
+                "P3 滾雷 → 連線者吃 3 球避雷解",
+                "P3 → 場地保留 3 球以上"
+            ]
+        }
+    ]
 }
