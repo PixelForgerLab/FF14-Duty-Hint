@@ -1,167 +1,169 @@
 {
-    "id":  "sastasha",
-    "name":  "天然要害沙斯塔夏溶洞",
-    "nameEn":  "Sastasha",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  18,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Chopper 切碎者：海星 boss + 周身水波 AoE。",
-                     "2）B2 Captain Madison 黑鯊船長馬蒂森：戰前選對閘門 (看鯊魚雕像顏色)。",
-                     "3）B3 Denn the Orcatoothed 虎齒丹恩：點名直線 + 召喚鯊魚 add。"
-                 ],
-    "notes":  "ARR 2.0 主線第一個 4 人迷宮（Lv 15-18），海盜團藏匿之溶洞。Boss 依序為 Chopper 切碎者、Captain Madison 黑鯊船長馬蒂森、Denn the Orcatoothed 虎齒丹恩。重點：B2 戰前要看鯊魚雕像顏色選對閘門，避免召喚額外鯊魚 add。",
-    "bosses":  [
-                   {
-                       "name":  "切碎者",
-                       "nameEn":  "Chopper",
-                       "phases":  [
-                                      {
-                                          "name":  "B1 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Bloody Caress 血腥愛撫",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏小 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hydro Pull 水力拉拽",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 周身 AoE → 離 boss 站邊；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "離 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tank Hit 普攻",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 單體普攻；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 維持仇恨",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Bloody Caress 血腥愛撫 → 全員減傷",
-                                        "Hydro Pull 水力拉拽 → 走縫",
-                                        "Tank Hit 普攻 → MT 開減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "黑鯊海盜團船長 馬蒂森",
-                       "nameEn":  "Captain Madison",
-                       "phases":  [
-                                      {
-                                          "name":  "B2 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Choose Door 選擇閘門",
-                                                                "type":  "mechanic",
-                                                                "description":  "戰鬥前選擇對應鯊魚雕像顏色的閘門；選錯 → 召喚額外鯊魚。",
-                                                                "tips":  [
-                                                                             "觀察雕像顏色"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bloody Cleave 血腥劈擊",
-                                                                "type":  "cone",
-                                                                "description":  "對 MT 扇形 cleave；MT朝場邊面外 近戰站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝場外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Sharks summon 召喚鯊魚",
-                                                                "type":  "add",
-                                                                "description":  "召喚 2 條鯊魚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS AoE",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Raid AoE 全屏",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補補療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Choose Door 選擇閘門 → 看預兆",
-                                        "Bloody Cleave 血腥劈擊 → MT 朝外",
-                                        "Sharks summon 召喚鯊魚 → 速殺 add",
-                                        "Raid AoE 全屏 → 全員減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "虎齒丹恩",
-                       "nameEn":  "Denn the Orcatoothed",
-                       "phases":  [
-                                      {
-                                          "name":  "B3 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Tail Slam 尾擊",
-                                                                "type":  "aoe",
-                                                                "description":  "周身 AoE 擊退；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "離 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aqua Ball 水球",
-                                                                "type":  "aoe",
-                                                                "description":  "點名玩家圓形 AoE；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "被點往場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hard Cleave 強力劈擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑 buster；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Tail Slam 尾擊 → 走縫",
-                                        "Aqua Ball 水球 → 走縫",
-                                        "Hard Cleave 強力劈擊 → MT 開減傷"
-                                    ]
-                   }
-               ]
+  "id": "sastasha",
+  "name": "天然要害沙斯塔夏溶洞",
+  "nameEn": "Sastasha",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 18,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）B1 Chopper 切碎者：Bloody Caress 血腥愛撫全屏小 AoE + 周身水 AoE，T 拉穩。",
+    "2）B2 Captain Madison 黑鯊船長馬蒂森：戰前進房間看 3 座鯊魚雕像「眼睛顏色」→ 選對應顏色的閘門。",
+    "3）B3 Denn the Orcatoothed 虎齒丹恩：尾擊周身 + 水球點名 + 鯊魚 add；補頭 add 優先。",
+    "4）副本流程：簡單線性走，沒分岔；FATE / 路徑 add 順手清。"
+  ],
+  "notes": "ARR 2.0 主線第一個 4 人迷宮（Lv 15-18），位於西拉諾西亞海邊溶洞，黑鯊海盜團藏匿之地。Boss 依序為 Chopper 切碎者、Captain Madison 黑鯊船長馬蒂森、Denn the Orcatoothed 虎齒丹恩。最關鍵：B2 戰前要看雕像眼睛顏色選對應閘門，選錯會召喚額外鯊魚 add；其他兩個 boss 機制簡單，初心者熟練站位即可。",
+  "bosses": [
+    {
+      "name": "切碎者",
+      "nameEn": "Chopper",
+      "phases": [
+        {
+          "name": "B1 主戰（海星型 boss）",
+          "mechanics": [
+            {
+              "name": "Bloody Caress 血腥愛撫",
+              "type": "raidwide",
+              "description": "全屏小範圍 AoE，無預兆指示；治療要持續團補，T 維持仇恨即可。",
+              "tips": [
+                {"text": "團補 + 持續性回復", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Hydro Pull 水力拉拽",
+              "type": "aoe",
+              "description": "boss 周身圓形水 AoE，看地板水波擴散預兆；玩家需離 boss 至少 5 米，DPS 與治療站場邊。",
+              "tips": [
+                {"text": "DPS 拉開到 boss 5 米外", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Tank Hit 普攻",
+              "type": "tankbuster",
+              "description": "對第一仇恨單體普攻；MT 維持仇恨並注意自身血量，治療補主 T。Lv 18 副本本招傷害低，不需要開大減傷。",
+              "tips": [
+                {"text": "MT 維持仇恨即可", "role": "tank"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Bloody Caress 血腥愛撫 → 全屏小 AoE → 團補",
+        "Hydro Pull 水力拉拽 → 周身水 AoE → DPS 站場邊",
+        "Tank Hit 普攻 → MT 維持仇恨"
+      ]
+    },
+    {
+      "name": "黑鯊海盜團船長 馬蒂森",
+      "nameEn": "Captain Madison",
+      "phases": [
+        {
+          "name": "B2 戰前：選擇閘門（重要！）",
+          "mechanics": [
+            {
+              "name": "Choose Door 選擇閘門（戰前準備）",
+              "type": "mechanic",
+              "description": "進入 boss 房後，先觀察房間 3 座『鯊魚雕像』的眼睛顏色（紅/藍/綠其中一種），找對應顏色的閘門互動開啟即可避免 B2 戰中召喚額外鯊魚 add。雕像就在 boss 周圍，每位玩家輪流找一座觀察都行。",
+              "tips": [
+                {"text": "T 進房間先看雕像顏色，告訴大家", "role": "tank"},
+                {"text": "選錯閘門 → 戰中多波鯊魚 add", "role": "dps"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2 主戰（海盜船長 + add）",
+          "mechanics": [
+            {
+              "name": "Bloody Cleave 血腥劈擊",
+              "type": "cone",
+              "description": "對 MT 前方扇形 cleave；MT 把 boss 朝場邊面外，DPS 與治療站側後不要吃扇形。",
+              "tips": [
+                {"text": "MT 朝場邊面外", "role": "tank"},
+                {"text": "近戰站 boss 側後", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Sharks Summon 召喚鯊魚 add",
+              "type": "add",
+              "description": "boss 會召喚 2 條鯊魚 add；DPS 立刻切目標速秒 add 避免疊壓主戰。若戰前選錯閘門，會多召喚一波。",
+              "tips": [
+                {"text": "DPS 全力切目標清 add", "role": "dps"},
+                {"text": "T 拉穩仇恨防止 add 跑向治療", "role": "tank"}
+              ]
+            },
+            {
+              "name": "Raid AoE 全屏 AoE",
+              "type": "raidwide",
+              "description": "全屏 AoE 中等傷害，無預兆指示；治療準備團補 + 全員保持血量。",
+              "tips": [
+                {"text": "團補連發", "role": "healer"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "戰前 → 看雕像顏色選對閘門",
+        "Bloody Cleave 血腥劈擊 → MT 朝外接扇形",
+        "Sharks Summon 召喚鯊魚 → DPS 速殺 add",
+        "Raid AoE 全屏 → 團補連發"
+      ]
+    },
+    {
+      "name": "虎齒丹恩",
+      "nameEn": "Denn the Orcatoothed",
+      "phases": [
+        {
+          "name": "B3 主戰（海王虎齒）",
+          "mechanics": [
+            {
+              "name": "Tail Slam 尾擊",
+              "type": "aoe",
+              "description": "boss 周身圓形 AoE 並擊退；無玩家需求面向，所有人保持與 boss 3-5 米距離避免擊退到牆角。",
+              "tips": [
+                {"text": "DPS 拉開 boss 5 米外", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Aqua Ball 水球",
+              "type": "spread",
+              "description": "點名玩家頭頂水球，落地後周身圓形 AoE；被點玩家立刻往場邊角落跑避免炸到隊友。",
+              "tips": [
+                {"text": "被點往場邊角落", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Hard Cleave 強力劈擊",
+              "type": "tankbuster",
+              "description": "對 MT 高傷單體 buster；MT 開減傷（Sentinel / Rampart 等等級內可用的減傷），治療大補。",
+              "tips": [
+                {"text": "MT 開減傷接 buster", "role": "tank"},
+                {"text": "治療單補 MT", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Shark Adds 鯊魚 add",
+              "type": "add",
+              "description": "boss 血量過半召喚 2 隻小鯊魚 add；DPS 切目標速秒，T 用 AoE 仇恨技拉穩。",
+              "tips": [
+                {"text": "DPS 切目標", "role": "dps"},
+                {"text": "T AoE 拉穩 add", "role": "tank"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Tail Slam 尾擊 → 周身擊退 → DPS 站邊",
+        "Aqua Ball 水球 → 被點往場邊角落",
+        "Hard Cleave 強力劈擊 → MT 開減傷",
+        "Shark Adds 鯊魚 add → DPS 速秒"
+      ]
+    }
+  ]
 }

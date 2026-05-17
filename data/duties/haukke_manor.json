@@ -1,169 +1,39 @@
 {
-    "id":  "haukke_manor",
-    "name":  "名門府邸靜語莊園",
-    "nameEn":  "Haukke Manor",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  31,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Manor Jester 管家：Frightful Roar 驚悚咆哮 + 召喚 add。",
-                     "2）B2 Manor Steward 魔伯爵：Concuss 衝擊 + Sap Power 吸力 DoT。",
-                     "3）B3 Lady Amandine 魔女：Void Fire III 虛無火 + 召喚僕從 add。"
-                 ],
-    "notes":  "ARR 2.0 副本（Lv 28-31），靜語莊園為黑衣森林的鬧鬼別墅。Boss 依序為 Manor Jester 管家、Manor Steward 魔伯爵、Lady Amandine 魔女。重點：每個 boss 都會召喚 add，DPS 需切目標速秒；場地光源機關需先處理才能打 boss。",
-    "bosses":  [
-                   {
-                       "name":  "管家 ManorJester",
-                       "nameEn":  "Manor Jester",
-                       "phases":  [
-                                      {
-                                          "name":  "B1 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Add Summon 召喚僕從",
-                                                                "type":  "add",
-                                                                "description":  "召喚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS AoE",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Cleave 扇形",
-                                                                "type":  "cone",
-                                                                "description":  "MT 扇形；MT朝場邊面外 近戰站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 單體 buster；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Frightful Roar 驚悚咆哮 → 全屏恐慌 AoE",
-                                        "Void Fire III 虛無火 → 隨機點名圓",
-                                        "Add 召喚 → DPS 速秒"
-                                    ]
-                   },
-                   {
-                       "name":  "魔伯爵 Manor Steward",
-                       "nameEn":  "Manor Steward",
-                       "phases":  [
-                                      {
-                                          "name":  "B2 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Candle 蠟燭機制",
-                                                                "type":  "mechanic",
-                                                                "description":  "場上蠟燭 → 點燃驅散黑暗；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "點燃蠟燭"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Dark AoE 黑暗 AoE",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Raid AoE 全屏",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Concuss 衝擊 → MT 大減傷",
-                                        "Aero 風刃 → 點名圓避位",
-                                        "Sap Power 吸力 → 全屏 DoT 處理"
-                                    ]
-                   },
-                   {
-                       "name":  "魔女 Lady Amandine",
-                       "nameEn":  "Lady Amandine",
-                       "phases":  [
-                                      {
-                                          "name":  "B3 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Bewitching Bound 巫術束縛",
-                                                                "type":  "mechanic",
-                                                                "description":  "點名玩家被束縛 → 隊友救出；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 打破",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Dark Mist 黑霧",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏黑霧；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Charm 魅惑",
-                                                                "type":  "mechanic",
-                                                                "description":  "玩家被魅惑 → 對隊友攻擊；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "被魅惑時隊友打回去解除"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Void Lightning 虛無雷 → 點名直線",
-                                        "Void Fire III 虛無火 III → 全屏 AoE",
-                                        "Maids 召喚僕從 → add 速殺"
-                                    ]
-                   }
-               ]
+  "id": "haukke_manor",
+  "name": "名門府邸靜語莊園",
+  "nameEn": "Haukke Manor",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 31,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）B1 Manor Jester 管家：Frightful Roar 驚悚咆哮全屏恐慌 + Void Fire III 點名圓。",
+    "2）B2 Manor Steward 魔伯爵：Concuss 衝擊 + Aero 風刃 + Sap Power 吸力 DoT。",
+    "3）B3 Lady Amandine 魔女：Void Lightning 虛無雷 + Void Fire III 全屏 + 召喚僕從 add。",
+    "4）路徑機關：場上光源機關，互動點亮才能繼續前進。"
+  ],
+  "notes": "ARR 2.0 副本（Lv 28-31），位於黑衣森林靜語莊園廢墟，名門府邸轉為鬼魂聚集地。Boss 依序為 Manor Jester 管家、Manor Steward 魔伯爵、Lady Amandine 魔女。重點：路徑中需點亮光源機關才能前進；每個 boss 都召喚僕從 add，DPS 切目標清 add 是關鍵；Hard 版本後續會解鎖。",
+  "bosses": [
+    {"name": "管家", "nameEn": "Manor Jester", "phases": [{"name": "B1 主戰（鬼魂管家）", "mechanics": [
+      {"name": "Frightful Roar 驚悚咆哮", "type": "raidwide", "description": "全屏 AoE 並附『恐慌』短時間 Debuff（玩家會無法行動）；治療準備團補 + Esuna 清除。", "tips": [{"text": "團補 + Esuna 清恐慌", "role": "healer"}]},
+      {"name": "Void Fire III 虛無火 III", "type": "spread", "description": "點名玩家圓形 AoE 預兆；被點玩家立刻往場邊角落拉開。", "tips": [{"text": "被點往場邊", "role": "dps"}]},
+      {"name": "Adds 召喚", "type": "add", "description": "boss 召喚 1-2 隻僕從 add；DPS 速秒避免持續吸血。", "tips": [{"text": "DPS 速秒 add", "role": "dps"}]},
+      {"name": "Tank Hit 普攻", "type": "tankbuster", "description": "對 MT 高傷單體；MT 開減傷，治療大補。", "tips": [{"text": "MT 開減傷", "role": "tank"}]}
+    ]}], "mnemonic": ["Frightful Roar 驚悚咆哮 → 團補 + Esuna", "Void Fire III 虛無火 → 點名往邊", "Adds → 速秒"]},
+    {"name": "魔伯爵", "nameEn": "Manor Steward", "phases": [{"name": "B2 主戰（魔伯爵）", "mechanics": [
+      {"name": "Concuss 衝擊", "type": "tankbuster", "description": "對 MT 死刑單體 + 短暫眩暈；MT 開大減傷，治療大補。", "tips": [{"text": "MT 大減傷", "role": "tank"}]},
+      {"name": "Aero 風刃", "type": "aoe", "description": "點名玩家圓形 AoE；被點玩家拉開到場邊。", "tips": [{"text": "被點拉開", "role": "dps"}]},
+      {"name": "Sap Power 吸力", "type": "dispel", "description": "對隨機玩家附加吸血 DoT；治療持續團補或 Esuna。", "tips": [{"text": "Esuna 清吸血", "role": "healer"}]},
+      {"name": "Adds 召喚僕從", "type": "add", "description": "boss 召喚僕從 add；DPS 速秒。", "tips": [{"text": "DPS 速秒", "role": "dps"}]}
+    ]}], "mnemonic": ["Concuss 衝擊 → MT 大減傷", "Aero 風刃 → 拉開", "Sap Power 吸力 → Esuna", "Adds → 速秒"]},
+    {"name": "魔女", "nameEn": "Lady Amandine", "phases": [{"name": "B3 主戰（魔女召喚）", "mechanics": [
+      {"name": "Void Lightning 虛無雷", "type": "aoe", "description": "點名玩家直線雷擊 AoE；被點玩家拉到場邊讓直線無人受害。", "tips": [{"text": "被點拉到場邊", "role": "dps"}]},
+      {"name": "Void Fire III 虛無火 III", "type": "raidwide", "description": "全屏火 AoE 大傷害；治療準備團補連發 + 全員減傷。", "tips": [{"text": "團補 + 全員減傷", "role": "healer"}]},
+      {"name": "Adds Manor Maid 召喚僕從女僕", "type": "add", "description": "boss 召喚 2 隻女僕 add；DPS 切目標清 add，否則 add 持續吸血。", "tips": [{"text": "DPS AoE 清 add", "role": "dps"}]},
+      {"name": "Tank Hit 死刑單體", "type": "tankbuster", "description": "對 MT 死刑魔法單體；MT 開大減傷，治療大補。", "tips": [{"text": "MT 大減傷", "role": "tank"}]}
+    ]}], "mnemonic": ["Void Lightning 虛無雷 → 點名往邊", "Void Fire III 虛無火 III → 團補", "Adds 女僕 → DPS 速秒", "Tank Hit → MT 大減傷"]}
+  ]
 }

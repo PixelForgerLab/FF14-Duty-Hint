@@ -1,99 +1,112 @@
 {
-    "id":  "tamtara_deepcroft",
-    "name":  "地下靈殿塔姆‧塔拉墓園",
-    "nameEn":  "The Tam-Tara Deepcroft",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  19,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Manor Sentry 莊園守衛：周身環形 AoE + Acid Crawl 酸液池避位。",
-                     "2）B2 Galvanth the Dominator 操偶魔像加爾凡斯：Mind Blast 心靈爆裂 + 召喚 Adds 速殺。"
-                 ],
-    "notes":  "ARR 2.0 主線 4 人迷宮（Lv 16-19），塔姆塔拉墓園地下靈殿，東部薩納蘭沙漠之下的古老墓地。Boss 依序為 Manor Sentry 莊園守衛、Galvanth the Dominator 操偶魔像加爾凡斯。重點：B2 add 速秒避免治療被吸光，留意 Mind Blast 心靈爆裂的全屏 AoE。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "a buff that adds additional lightning damage to auto attacks. Initial cast can be Interrupt.；依預兆走位處理。",
-                                                                "name":  "Enthunder 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "additional light damage on the main target.；依預兆走位處理。",
-                                                                "name":  "Dark Orb 暗",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "conal AoE.；看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Comdemnation 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "莊園守衛",
-                       "nameEn":  "Manor Sentry",
-                       "mnemonic":  [
-                                        "Acid Crawl 酸液爬行 → 場上毒池避開",
-                                        "Voltage Surge 電壓激增 → 全屏 AoE 預備減傷",
-                                        "Stomp Strike 踏擊 → MT 朝外接"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "an AoE centred around the boss that will paralysis paralysis anyone caught in it.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Mind Blast 精神爆裂",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "additional light damage to the main target, with lifesteal. Used after the first set of adds.；依預兆走位處理。",
-                                                                "name":  "Drain Touch 招式",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "** Inconspicuous Imp will spawn and tether to the boss, making the boss invincible. Kill these enemies to make the boss vulnerable.；依預兆走位處理。",
-                                                                "name":  "Adds 召怪",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "操偶魔像 加爾凡斯",
-                       "nameEn":  "Galvanth the Dominator",
-                       "mnemonic":  [
-                                        "Mind Blast 心靈爆裂 → 全員 AoE",
-                                        "Drain Touch 抽取 → MT 大減傷",
-                                        "Adds 召喚 → DPS 速殺保護治療"
-                                    ]
-                   }
-               ]
+  "id": "tamtara_deepcroft",
+  "name": "地下靈殿塔姆‧塔拉墓園",
+  "nameEn": "Tam-Tara Deepcroft",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 19,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）B1 Manor Sentry 莊園守衛：Voltage Surge 電壓激增全屏 + Acid Crawl 酸液爬行毒池避位。",
+    "2）B2 Galvanth the Dominator 操偶魔像加爾凡斯：Mind Blast 心靈爆裂全屏 + 召喚 Adds 速殺。",
+    "3）路徑機關：場上箱型機關需互動開啟，DPS 順手清。",
+    "4）副本流程：東部薩納蘭墓園地下，4 人組隊線性。"
+  ],
+  "notes": "ARR 2.0 主線 4 人迷宮（Lv 16-19），位於東部薩納蘭塔姆塔拉墓園地下，由貴族墓地改造為亡靈聚集處。Boss 依序為 Manor Sentry 莊園守衛、Galvanth the Dominator 操偶魔像加爾凡斯。重點：B1 的酸液池要避位，B2 召喚的 Adds 必須速秒防止 boss 被加強。是初心者必走的低階副本，機制簡單但對於剛接觸 FFXIV 的玩家是基礎訓練。",
+  "bosses": [
+    {
+      "name": "莊園守衛",
+      "nameEn": "Manor Sentry",
+      "phases": [
+        {
+          "name": "B1 主戰（守衛雕像）",
+          "mechanics": [
+            {
+              "name": "Voltage Surge 電壓激增",
+              "type": "raidwide",
+              "description": "全屏雷屬性 AoE 中等傷害，無預兆；治療準備團補與全員保持血量。",
+              "tips": [
+                {"text": "團補 + 全員預備減傷", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Acid Crawl 酸液爬行",
+              "type": "aoe",
+              "description": "場上隨機位置出現酸液池（綠色地板預兆），踩入會持續吃毒 DoT；看地板顏色避位。",
+              "tips": [
+                {"text": "看地板綠色 → 跑開", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Stomp Strike 踏擊",
+              "type": "tankbuster",
+              "description": "對 MT 前方扇形踏擊；MT 把 boss 朝場邊面外，DPS 站側後。低階副本傷害較低。",
+              "tips": [
+                {"text": "MT 朝外", "role": "tank"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Voltage Surge 電壓激增 → 全屏 → 團補",
+        "Acid Crawl 酸液爬行 → 避綠地板",
+        "Stomp Strike 踏擊 → MT 朝外"
+      ]
+    },
+    {
+      "name": "操偶魔像 加爾凡斯",
+      "nameEn": "Galvanth the Dominator",
+      "phases": [
+        {
+          "name": "B2 主戰（魔像 + add）",
+          "mechanics": [
+            {
+              "name": "Mind Blast 心靈爆裂",
+              "type": "raidwide",
+              "description": "全屏心靈系魔法 AoE 大傷害；治療準備團補連發，所有人保持血量上限。",
+              "tips": [
+                {"text": "團補連 2-3 次", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Drain Touch 抽取",
+              "type": "tankbuster",
+              "description": "對 MT 單體吸血攻擊，並回復 boss 血量；MT 開減傷接，治療單補。",
+              "tips": [
+                {"text": "MT 開減傷", "role": "tank"},
+                {"text": "治療注意 MT 不要被吸到死", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Adds 召喚（Void Soulcounter）",
+              "type": "add",
+              "description": "boss 會召喚 1-2 隻虛無魂計者 add；DPS 立刻切目標速秒 add，否則 add 會持續吸取治療而影響戰局。",
+              "tips": [
+                {"text": "DPS 切目標清 add", "role": "dps"},
+                {"text": "T 用 AoE 仇恨拉穩 add", "role": "tank"}
+              ]
+            },
+            {
+              "name": "Dark Orb 暗影球",
+              "type": "spread",
+              "description": "點名玩家頭頂暗影球預兆，落地後周身圓形 AoE；被點玩家拉到場邊角落避免炸到隊友。",
+              "tips": [
+                {"text": "被點往場邊", "role": "dps"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Mind Blast 心靈爆裂 → 全屏 → 團補連發",
+        "Drain Touch 抽取 → MT 開減傷",
+        "Adds → 速秒避免吸血加成",
+        "Dark Orb 暗影球 → 被點往場邊"
+      ]
+    }
+  ]
 }

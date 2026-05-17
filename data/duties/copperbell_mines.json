@@ -1,165 +1,142 @@
 {
-    "id":  "copperbell_mines",
-    "name":  "封鎖坑道銅鈴銅山",
-    "nameEn":  "Copperbell Mines",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  20,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Kottos 巨人柯托斯：Lumbering Leap 笨拙跳躍 + 場上炸彈雷管。",
-                     "2）B2 Ichorous Ire 黏液之怒：Fluid Spread 液體噴濺 + Divide 分裂史萊姆速殺。",
-                     "3）B3 Gyges the Great 巨人吉戈斯：Gigantic Swing 巨擺扇形 + 場上落石。"
-                 ],
-    "notes":  "ARR 2.0 主線 4 人迷宮（Lv 17-20），銅鈴銅山封鎖坑道，西拉諾西亞地下廢棄礦場。Boss 依序為 Kottos 巨人柯托斯、Ichorous Ire 黏液之怒、Gyges the Great 巨人吉戈斯。重點：B1 用炸彈雷管破盾，B2 分裂史萊姆 add 速秒避免越戰越多。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Tankbuster. Tanks should use mitigation to lower the damage.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-                                                                "name":  "Grand Slam 大滿貫",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "Kottos will jump to 3 areas, causing a massive circle AoE to appear at the location. Players should move to the small safe spot at the edge of the are；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Lumbering Leap 躍",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "A large cone AoE targeted on a random player.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Colossal Slam 巨型衝擊",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Kottos will throw a rock at a random player, dealing moderate damage.；依預兆走位處理。",
-                                                                "name":  "Catapult 彈射",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "巨人 柯托斯",
-                       "nameEn":  "Kottos",
-                       "mnemonic":  [
-                                        "Grand Slam 大力擊 → MT 大減傷",
-                                        "Lumbering Leap 笨拙跳躍 → 圓形 AoE 預兆閃避",
-                                        "Colossal Slam 巨大擊 → 全屏 AoE 全員減傷"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Tankbuster.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-                                                                "name":  "Fluid Spread 散開",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "Circle AoEs will appear below all players, requiring them to move out of it.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Syrup",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "After 50% HP, Ichorous Ire will split up into many Ichorous Drips, which will each cast Burst, a circle AoE centered on the enemy.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Divide",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "膿汁之怒 黏液之怒",
-                       "nameEn":  "Ichorous Ire",
-                       "mnemonic":  [
-                                        "Fluid Spread 液體噴濺 → 點名圓 AoE 拉開",
-                                        "Syrup 糖漿 → 中毒 DoT 持續處理",
-                                        "Divide 分裂 → 召喚小史萊姆 add 速秒"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Tankbuster.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-                                                                "name":  "Grand Slam 大滿貫",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "A massive donut AoE centered on the boss. Players must move into the boss\u0027 hitbox to avoid excess damage.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Gigantic Swing 翼",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "The boss will recenter and cast a circle AoE in the center along with 5 more on the outside of the arena. Players should move into the safe spots in b；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Gigantic Smash 巨型衝擊",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "A large cone AoE targeted on a random player.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Colossal Slam 巨型衝擊",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "巨人 吉戈斯",
-                       "nameEn":  "Gyges the Great",
-                       "mnemonic":  [
-                                        "Grand Slam 大力擊 → MT 大減傷",
-                                        "Gigantic Swing 巨擺 → 周身扇形 AoE 站側",
-                                        "Gigantic Smash 巨擊 → 全屏 AoE 預備減傷"
-                                    ]
-                   }
-               ]
+  "id": "copperbell_mines",
+  "name": "封鎖坑道銅鈴銅山",
+  "nameEn": "Copperbell Mines",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 20,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "1）B1 Kottos 巨人柯托斯：Grand Slam 大力擊 + Lumbering Leap 笨拙跳躍圓 AoE。",
+    "2）B2 Ichorous Ire 黏液之怒：Fluid Spread 液體噴濺點名 + Divide 分裂史萊姆速秒。",
+    "3）B3 Gyges the Great 巨人吉戈斯：Gigantic Swing 巨擺扇形 + Gigantic Smash 全屏。",
+    "4）路徑機關：場上炸彈雷管引爆破除巨人盾牌。"
+  ],
+  "notes": "ARR 2.0 主線 4 人迷宮（Lv 17-20），位於西拉諾西亞銅鈴銅山地下廢棄礦場。Boss 依序為 Kottos 巨人柯托斯、Ichorous Ire 黏液之怒、Gyges the Great 巨人吉戈斯。重點：路徑中需引爆場上炸彈雷管破除巨人前進路線；B2 的分裂史萊姆 add 必須速秒避免越戰越多。是 ARR 主線少數帶有引爆機關的低階副本，劇情銜接 Sastasha 與 Tam-Tara。",
+  "bosses": [
+    {
+      "name": "巨人 柯托斯",
+      "nameEn": "Kottos",
+      "phases": [
+        {
+          "name": "B1 主戰（巨人重擊）",
+          "mechanics": [
+            {
+              "name": "Grand Slam 大力擊",
+              "type": "tankbuster",
+              "description": "對 MT 死刑單體重擊；MT 開減傷接，治療大補。Lv 20 此招傷害不致命但會吃掉一半血。",
+              "tips": [
+                {"text": "MT 開減傷", "role": "tank"}
+              ]
+            },
+            {
+              "name": "Lumbering Leap 笨拙跳躍",
+              "type": "aoe",
+              "description": "boss 跳到場上某點，落地周身圓形 AoE 預兆；看圈避位，被點地板者立刻移動。",
+              "tips": [
+                {"text": "看落點圓圈跑開", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Colossal Slam 巨大擊",
+              "type": "raidwide",
+              "description": "全屏 AoE 中傷害，無預兆指示；治療準備團補與全員減傷。",
+              "tips": [
+                {"text": "團補 + 全員小減傷", "role": "healer"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Grand Slam 大力擊 → MT 開減傷",
+        "Lumbering Leap 笨拙跳躍 → 看圈跑",
+        "Colossal Slam 巨大擊 → 團補"
+      ]
+    },
+    {
+      "name": "膿汁之怒",
+      "nameEn": "Ichorous Ire",
+      "phases": [
+        {
+          "name": "B2 主戰（史萊姆 + 分裂）",
+          "mechanics": [
+            {
+              "name": "Fluid Spread 液體噴濺",
+              "type": "spread",
+              "description": "點名玩家圓形 AoE 預兆；被點玩家拉開站場邊避免炸到隊友。",
+              "tips": [
+                {"text": "被點拉開到場邊", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Syrup 糖漿",
+              "type": "dispel",
+              "description": "對隨機玩家附加『糖漿』中毒 DoT；治療用 Esuna 清除或持續團補。",
+              "tips": [
+                {"text": "Esuna 清中毒", "role": "healer"}
+              ]
+            },
+            {
+              "name": "Divide 分裂",
+              "type": "add",
+              "description": "boss 分裂成 2-3 隻小史萊姆 add；DPS 立刻切目標速秒所有 add，否則 add 會持續分裂越戰越多。",
+              "tips": [
+                {"text": "DPS 全力 AoE 清 add", "role": "dps"},
+                {"text": "T 拉穩 add 防止跑向治療", "role": "tank"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Fluid Spread 液體噴濺 → 點名拉開",
+        "Syrup 糖漿 → Esuna 清",
+        "Divide 分裂 → DPS 速秒 add"
+      ]
+    },
+    {
+      "name": "巨人 吉戈斯",
+      "nameEn": "Gyges the Great",
+      "phases": [
+        {
+          "name": "B3 主戰（巨人重擊強化版）",
+          "mechanics": [
+            {
+              "name": "Grand Slam 大力擊",
+              "type": "tankbuster",
+              "description": "對 MT 死刑單體重擊；MT 開大減傷接，治療大補。",
+              "tips": [
+                {"text": "MT 大減傷", "role": "tank"}
+              ]
+            },
+            {
+              "name": "Gigantic Swing 巨擺",
+              "type": "cone",
+              "description": "boss 周身大範圍前方扇形 AoE；DPS 與治療站 boss 背後安全位。",
+              "tips": [
+                {"text": "DPS 站 boss 背後", "role": "dps"}
+              ]
+            },
+            {
+              "name": "Gigantic Smash 巨擊",
+              "type": "raidwide",
+              "description": "全屏 AoE 大傷害；治療準備團補連發 + 全員預備減傷。",
+              "tips": [
+                {"text": "團補連發 + 全員減傷", "role": "healer"}
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Grand Slam 大力擊 → MT 大減傷",
+        "Gigantic Swing 巨擺 → 站 boss 背後",
+        "Gigantic Smash 巨擊 → 團補 + 減傷"
+      ]
+    }
+  ]
 }
