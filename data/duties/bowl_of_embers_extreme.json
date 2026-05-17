@@ -1,214 +1,166 @@
 {
-    "id":  "bowl_of_embers_extreme",
-    "name":  "真 伊弗利特殲殛戰",
-    "nameEn":  "The Bowl of Embers (Extreme) - Ifrit",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）每輪固定：Eruption 點名 + Incinerate 扇形 + Vulcan Burst 圓 + Crimson Cyclone 線。",
-                     "2）Searing Wind 補本人不會吹走、其他人離 15m 外站。",
-                     "3）3 輪 Nail：4 → 8 → 13（中間 1 根血厚）；殘留越多 Hellfire 越大。",
-                     "4）Infernal Chain 連線 2T 與 DPS：保持極近距離降層數。",
-                     "5）3 次 Hellfire 全清 nail 為基本標準，否則 enrage 強制團滅。"
-                 ],
-    "notes":  "ARR 2.0 蠻神 Extreme - 伊弗利特殲殛戰 (Lv 50, ilvl 90)。Ifrit Extreme 為早期 ARR EX 標竿；引入 Searing Wind 灼熱補 + Infernal Chain 連線 + 13 根 nail。",
-    "bosses":  [
-                   {
-                       "name":  "伊弗利特",
-                       "nameEn":  "Ifrit",
-                       "mnemonic":  [
-                                        "灼熱補 → 補本人原地不動其他人遠離",
-                                        "Chain 連線 → 兩人黏死",
-                                        "3 輪 nail (4/8/13) 必清",
-                                        "中央大 nail 血厚 → 集火"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Phase 1 (100–66%)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Vulcan Burst 火神爆裂",
-                                                                "type":  "knockback",
-                                                                "description":  "Boss 周身不可見範圍圓形 AoE，命中後擊退；常與其他技能銜接。",
-                                                                "tips":  [
-                                                                             "貼 boss 中心吃擊退最短",
-                                                                             {
-                                                                                 "text":  "Arm\u0027s Length / Surecast 可免位移",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Searing Wind 灼熱咆哮",
-                                                                "type":  "spread",
-                                                                "description":  "隨機 1 名治療附 20 秒灼熱 debuff，每 ~3 秒判定半徑 15m AoE（Hot Foot 熱風）；命中非灼熱者會被大範圍擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "中灼熱者站場邊原地不動",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "其他人離灼熱補 15m 以上",
-                                                                             {
-                                                                                 "text":  "另一補要負責補灼熱本人",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Incinerate 烈焰焚燒",
-                                                                "type":  "cone",
-                                                                "description":  "對 1 仇方向扇形 AoE，疊一層灼傷 debuff；第 1/3/5 次召喚分別釋放 1/2/3 段。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝場邊面對 boss",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "灼傷可疊層，超過 3 層 T 需開大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Eruption 地火噴發",
-                                                                "type":  "aoe",
-                                                                "description":  "點名除 1 仇以外的隨機玩家，腳下圓形 AoE 預兆後爆炸。",
-                                                                "tips":  [
-                                                                             "被點立刻往場邊跑",
-                                                                             "Searing Wind 補不要被點 → 機制衝突難避"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 2 - 第 1 次 Nail (4 根)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Infernal Nails 火獄之楔 (4)",
-                                                                "type":  "add",
-                                                                "description":  "Boss 召喚 4 根 nail；必須在 Hellfire 之前全部打掉，殘留越多後續 Hellfire 越大。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "AoE 全分掉 4 根，補強化",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "Vuln Up 後 nail 血量隨著被打變高，速度要快",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hellfire Nail 火獄之炎",
-                                                                "type":  "raidwide",
-                                                                "description":  "每根 nail 被擊破後釋放全屏 AoE，並給全員 1 層 3 秒受傷加重 buff；連續擊破時間要錯開。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "打掉一根 → 等受傷 buff 結束再打下一根",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補大盾 + 補連線",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hellfire 地獄之火炎",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 上天後落下釋放全屏 AoE；場上剩 nail 越多傷害越高。每輪 nail 後固定使用。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員集合 + 補大團補 + 全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 3 - 第 2 次 Nail (8 根)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Infernal Nails 火獄之楔 (8)",
-                                                                "type":  "add",
-                                                                "description":  "第 2 次召喚 8 根 nail，分散於場上 8 個方位；繼續 AoE 殲滅模式。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "AoE 站位優化，FF + 連環刃同時掃 4 根",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 拉中央集中 nail",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Infernal Chain 火獄之鎖",
-                                                                "type":  "mechanic",
-                                                                "description":  "連線當前 2 仇與隨機進攻職玩家，附「火獄之鎖」debuff；距離越遠減傷越多、持續傷害越高；若一方倒下會重連並重新計時。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩人黏在一起把層數降到 1",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "ST 跟 DPS 同步移動",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "Eruption 時也要保持 0 距"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Radiant Plume 光輝炎柱",
-                                                                "type":  "aoe",
-                                                                "description":  "全場多個圓形 AoE 預警後爆發；本階段與 Chain / Searing Wind 同時生效，走位需注意三向。",
-                                                                "tips":  [
-                                                                             "提前看好安全縫不要黏住 nail",
-                                                                             "Chain 兩人選同個縫"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 4 - 第 3 次 Nail (13 根)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Infernal Nails 火獄之楔 (13)",
-                                                                "type":  "add",
-                                                                "description":  "第 3 次召喚 13 根 nail，其中正中央 1 根血量遠高於其他 12 根；若 3 次後仍未擊破會強制團滅。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 全力打中央大 nail",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 拉外圍 12 根 AoE 同步殲滅",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補神祕陣 / 圓盾 / Embrace 全推 DPS",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hellfire 地獄之火炎 (enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "若中央大 nail 未在限時內擊破，boss 連續釋放機制後使用 Hellfire 強制團滅。",
-                                                                "tips":  [
-                                                                             "中央 nail = DPS check，輸出不夠就重新組隊"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "bowl_of_embers_extreme",
+    "name": "真 伊弗利特殲殛戰",
+    "nameEn": "The Bowl of Embers (Extreme)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）Ifrit EX 真 伊弗利特殲殛戰：基於 Hard 升級，HP < 75% / < 45% / < 15% 三次召喚 Infernal Nail 火獄之楔（4 / 8 / 13 根，第三次中央一根更大更血厚）。",
+        "2）Searing Wind 灼熱咆哮：隨機點 1 名治療職能附加 20 秒 Searing Wind 灼熱 buff，每 3 秒對自身半徑 15m 釋放 Hot Wind 熱風 AoE → 除該治療外被命中者大範圍擊退。",
+        "3）Searing Wind 治療必須與隊友拉開距離（站場邊），避免熱風波及；其他玩家遠離該治療！",
+        "4）第一次 4 楔 → Hellfire 全屏（無受傷加重）；第二次 8 楔 → 楔多時更難清；第三次 13 楔（中央 1 根 HP 高）→ 終極 DPS check。",
+        "5）Hellfire 地獄之火炎：boss 上天再下來釋放全屏 AoE，如果場上還存在 Nail 會大幅提高傷害（楔多 → 直接團滅）。",
+        "6）Vulcan Burst 火神爆裂 → 自身圓 AoE + 擊退（無預兆）→ 近戰退離 + Surecast。",
+        "7）Eruption 地火噴發 → 點名隨機玩家圓 AoE → 拉場邊。Incinerate 烈焰焚燒 → 第一次 1 段、第三次連 2 段、第三次召喚後連 3 段 → MT 朝外接 + 治療連續團補。",
+        "8）Nail of Purgatory 火獄之鎖（EX 限定）：boss 連線當前二仇 + 隨機進攻職能玩家附加 Nail of Purgatory 火獄之鎖 → 雙方距離越遠層數越高，傷害降低 + 持續傷害提高。需保持兩人緊鄰減 stack。",
+        "9）Radiant Plume 光輝炎柱（EX 版）：全場多個圓 → 走縫到無圓區。第三次三次連發。"
+    ],
+    "notes": "ARR 2.0 主線蠻神戰 Extreme 版（Lv 50，sync 50，8 人 trial highEnd），『真』伊弗利特蠻神極殛版。最早期 ARR Extreme primal 之一，難度依時代來說屬中等。核心機制：三次召喚 Infernal Nail 火獄之楔（4 / 8 / 13 根遞增），每次後 Hellfire 全屏 + Nail of Purgatory 火獄之鎖連線（保持近距離降層）+ Searing Wind 灼熱（治療要拉開）。",
+    "bosses": [
+        {
+            "name": "真 伊弗利特",
+            "nameEn": "Ifrit",
+            "phases": [
+                {
+                    "name": "P1 100%-75% HP（第一次召喚前）",
+                    "mechanics": [
+                        {
+                            "name": "Vulcan Burst 火神爆裂",
+                            "type": "knockback",
+                            "description": "boss 周身釋放不可見圓形 AoE，被命中受到擊退。EX 版傷害較 Hard 更高。Surecast 抗擊退或預判退離。",
+                            "tips": [
+                                {"text": "預判退離 / Surecast", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Incinerate 烈焰焚燒",
+                            "type": "cone",
+                            "description": "boss 釋放無讀條對一仇方向扇形 AoE + Burns 灼傷 stack。第一次召喚前僅 1 段；第三次召喚時連 2 段；第三次召喚後連 3 段。MT 朝外接，治療準備連續團補。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "後期 3 連發 → 治療大補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Eruption 地火噴發",
+                            "type": "spread",
+                            "description": "點名一仇以外的隨機玩家腳下圓 AoE，預兆後爆炸。被點走出 + 拉場邊。",
+                            "tips": [
+                                {"text": "被點拉場邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Searing Wind 灼熱咆哮（治療獨享 buff）",
+                            "type": "mechanic",
+                            "description": "為隨機 1 名治療職能附加 20 秒 Searing Wind 灼熱 buff。灼熱每 3 秒判定一次半徑 15m 的 Hot Wind 熱風 AoE。除持有灼熱的治療外，被命中熱風會大範圍擊退（飛出場外 = 死）。對策：被點治療立刻拉到場邊遠離隊友 + 隊友主動遠離該治療 15m+。",
+                            "tips": [
+                                {"text": "灼熱治療 → 拉場邊遠離", "role": "healer"},
+                                {"text": "其他玩家遠離該治療 15m+", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 75% HP（第一次 4 楔）",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nail x4 火獄之楔（第 1 次）",
+                            "type": "add",
+                            "description": "boss 在場中央召喚 4 根 Infernal Nail 火獄之楔。必須在 Hellfire 前清光。全員 AoE 集火 4 楔。",
+                            "tips": [
+                                {"text": "全員 AoE 集火 4 楔", "role": "dps"},
+                                {"text": "MT 用 AoE 拉穩", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎（第 1 次）",
+                            "type": "raidwide",
+                            "description": "boss 上天再下來釋放全屏 AoE。如果場上還存在 Nail 會大幅提高傷害。0 Nail → 中傷可接 + 全員 1 層 3s 受傷加重。1+ Nail → 直接團滅。",
+                            "tips": [
+                                {"text": "0 Nail 全員減傷 + 大團補", "role": "healer"},
+                                {"text": "剩 Nail → 重來", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 < 45% HP（第二次 8 楔）",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nail x8 火獄之楔（第 2 次）",
+                            "type": "add",
+                            "description": "boss 召喚 8 根 Infernal Nail 火獄之楔。難度提升，需要分組分區清。MT 用 AoE 拉穩，DPS 分組或全員 AoE 集火。",
+                            "tips": [
+                                {"text": "DPS 分組或全員 AoE", "role": "dps"},
+                                {"text": "T/治療輔助 AoE", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Nail of Purgatory 火獄之鎖（EX 限定）",
+                            "type": "mechanic",
+                            "description": "連線當前二仇與隨機 1 名進攻職能玩家，附加 Nail of Purgatory 火獄之鎖。雙方距離越遠 stack 越高，造成傷害降低、受到持續傷害提高。對策：被連線兩人保持緊鄰（疊在一起）減 stack。若一名玩家陷入無法戰鬥 → 鎖會隨機連線另一名玩家重新計時。",
+                            "tips": [
+                                {"text": "被連線兩人疊在一起", "role": "dps"},
+                                {"text": "若一人倒 → 鎖會跳給他人", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Radiant Plume 光輝炎柱（多圓）",
+                            "type": "aoe",
+                            "description": "全場生成多個圓形 AoE。看圓走縫到無圓區。EX 版圓數量多且密。",
+                            "tips": [
+                                {"text": "走縫到無圓", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎（第 2 次）",
+                            "type": "raidwide",
+                            "description": "同 P2 機制，0 Nail 才可接。",
+                            "tips": [
+                                {"text": "0 Nail 接 + 全員減傷", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 < 15% HP（第三次 13 楔 終極 DPS check）",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nail x13 火獄之楔（第 3 次，中央 1 根更大）",
+                            "type": "add",
+                            "description": "boss 召喚 13 根 Infernal Nail 火獄之楔，中間一根更大且 HP 更多（核心楔）。終極 DPS check。三次召喚後若還未擊破 boss → 進行一些重複機制後使用 Hellfire 強制團滅。需要極限分工 + 集火完成。",
+                            "tips": [
+                                {"text": "全 DPS 集火外圍 12 楔", "role": "dps"},
+                                {"text": "T/治療輔助 AoE 中央大楔", "role": "tank"},
+                                {"text": "可用 Caster LB3", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄之火炎（第 3 次強制團滅）",
+                            "type": "raidwide",
+                            "description": "三次召喚後若未及時擊破 boss → 強制使用 Hellfire 全屏（依存活楔子計算），通常為團滅。",
+                            "tips": [
+                                {"text": "在強制團滅前秒掉 boss", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Vulcan Burst 火神爆裂 → 預判退 + Surecast",
+                "Incinerate 烈焰焚燒（前扇）→ MT 朝外（後期 3 連）",
+                "Eruption 地火噴發 → 拉場邊",
+                "Searing Wind 灼熱咆哮（治療獨享）→ 治療拉場邊 + 隊友遠 15m+",
+                "75% / 45% / 15% → 三次召喚 4 / 8 / 13 楔",
+                "Nail of Purgatory 火獄之鎖（45%）→ 兩人疊在一起",
+                "Hellfire 0 Nail 才可接；剩 1+ = 團滅",
+                "第三次 13 楔（中央大）→ 終極 DPS check"
+            ]
+        }
+    ]
 }
