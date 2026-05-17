@@ -1,103 +1,202 @@
 {
-  "id": "minstrels_ballad_zodiarks_fall",
-  "name": "索德雷恩討滅絕境戰",
-  "nameEn": "The Minstrel's Ballad: Zodiark's Fall - Zodiark",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "索德雷恩討滅絕境戰 - Zodiark 索德雷恩。",
-    "核心機制：強化版 Adikia + Astral Eclipse + 多階段。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.0 索德雷恩絕境戰（Lv 90）。Boss 為 Zodiark 索德雷恩。重點：強化版 Adikia + Astral Eclipse + 多階段。",
-  "bosses": [
-    {
-      "name": "索德雷恩",
-      "nameEn": "Zodiark",
-      "phases": [
+    "id": "minstrels_ballad_zodiarks_fall",
+    "name": "索德雷恩討滅絕境戰",
+    "nameEn": "The Minstrel's Ballad: Zodiark's Fall - Zodiark",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "場地無邊界 → 場邊掉落即死。多數機制隨機 → 沒有固定走位策略，需熟記招式。團隊可全員 stack 跟一個玩家 follow 走位（除 Ania tank swap 外）。",
+        "P1 Kokytos = 全員 1 HP → 集合補滿。Paradeigma 範式（3 種 add 組合）：(a) Behemoth 對 → 1/4 場 AoE；(b) Snake → 場邊 1/4 直線；(c) Quetzalcoatl 4 隻 → 4 角甜甜圈，只有頭下小紫符安全。",
+        "P1 Styx 冥河 = stack 6 hit → 全員集合分攤。Ania 怒意 = AoE tankbuster + Vuln Up → tank swap + 拉離團（小 AoE）。",
+        "P1 Exoterikos 外發 = 場邊發符：三角（紫光）= 對面 cone 覆蓋對角；方形（粉光 + 藍圈）= 半場 AoE → 看顏色判走位。Algedon 痛 = boss 跳角 + 對角穿場 wide AoE 擊退 → 跳開直線。",
+        "P1 Phobos 恐懼 = 全屏 + 重 Bleed dot → 連續治療。Astral Flow 占星流 = 場地旋轉 90°（看箭頭）→ Paradeigma add 也跟著轉（Exoterikos 不轉）→ 預判旋轉後位置。",
+        "P1 Adikia 不義 = 東西邊 2 大圓 AoE 中央重疊 → 站北 / 南安全區。",
+        "P2 Roiling Darkness 翻騰之闇 = 4 浮空球 → 累 boss 能量 → 滿 100 釋 Apomnemoneumata 強制團滅 → DPS 全力秒。期間 Esoteric Pattern 3 圖案組合（看符號顏色 + 位置選安全三角）。",
+        "P3 Astral Eclipse 星座蝕 = boss 飛繞 3 邊 → 各邊指向天空星圖（3x3 網格，2 個安全格）→ 13 秒判斷 + 移動。流星無預警 + 掉得快 + AoE 大 → 必須對齊網格中心。最後 Triple Esoteric Ray 三重激光 → 走中央或東西 1/3 → 切到第 1 雷射爆位避第 2。",
+        "P4 Astral Flow 加入火牆：對角生火牆隨場地旋轉 → 站火牆路徑外。Paradeigma 4 birds + Snake + 火牆 + 旋轉 → 在 bird 安全符上找未被火牆掃到的半。",
+        "P4 Triple Exoterikos = 3 邊各 1 符依序釋 → 連環走位。Phlegethon 火河 = 玩家腳下 3 連 AoE → 持續移動避波 → stack Styx 7-8 hit。",
+        "P4 終局：3 Exoterikos 連發 + Algedon → Styx 9 hit + Paradeigma 4 bird + 旋轉 + 火牆 → 第 2 Styx → 長讀 Apomnemoneumata enrage 強制團滅 → 必須在此前秒 boss。"
+    ],
+    "notes": "EW 6.1 trial Ex（Lv 90，sync 90，ilvl 590，8 人 trial，時限 60 分），位於 The Dark Inside Ex。為 EW MSQ 6.1 索德雷恩的『Minstrel's Ballad』極限版。掉落 ilvl 605 武器（5 Astral Totem 飾品 / 99 兌換 Lynx of Eternal Darkness Flute）+ Zodiark Card。隨機機制設計 → 需熟記招式而非固定走位。",
+    "bosses": [
         {
-          "name": "Zodiark EX 主戰",
-          "mechanics": [
-            {
-              "name": "Phobos 恐怖",
-              "type": "raidwide",
-              "description": "全屏 + 點名分散；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "索德雷恩",
+            "nameEn": "Zodiark",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Kokytos 哀哭",
+                            "type": "raidwide",
+                            "description": "開場全員 HP 1 → 集合補滿。場無邊界 → 場邊掉落即死。",
+                            "tips": [
+                                {"text": "全員集合補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Paradeigma 範式（3 種）",
+                            "type": "add",
+                            "description": "Behemoth 對 → 1/4 場 AoE；Snake → 場邊 1/4 直線；Quetzalcoatl 4 隻 → 4 角甜甜圈（頭下小紫符安全）。可組合 2 種 add 同時出。",
+                            "tips": [
+                                {"text": "Quetzalcoatl 站紫符上", "role": "dps"},
+                                {"text": "Behemoth/Snake 看 AoE 站對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Styx 冥河（stack）",
+                            "type": "stack",
+                            "description": "stack 6 hit → 全員集合分攤。",
+                            "tips": [
+                                {"text": "全員集合 stack 6 hit", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ania 怒意",
+                            "type": "tankbuster",
+                            "description": "AoE tankbuster + Vuln Up → tank swap + 拉離團（小 AoE）。",
+                            "tips": [
+                                {"text": "tank swap + 拉離團", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Exoterikos 外發（三角 / 方形）",
+                            "type": "mechanic",
+                            "description": "場邊發符：三角（紫光）= 對面 cone 覆蓋對角；方形（粉光 + 藍圈）= 半場 AoE。可同時 1-3 個符 → 看顏色判走位。",
+                            "tips": [
+                                {"text": "三角 = 對面外 / 方形 = 對半", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Algedon 痛（穿場 + 擊退）",
+                            "type": "knockback",
+                            "description": "boss 跳角 + 對角穿場 wide AoE + 擊退（可推下場）→ 跳開斜線。",
+                            "tips": [
+                                {"text": "看角位避斜線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Phobos + Bleed",
+                            "type": "raidwide",
+                            "description": "全屏 + 重 Bleed dot → 連續治療。",
+                            "tips": [
+                                {"text": "連續團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Astral Flow 占星流（旋轉）",
+                            "type": "mechanic",
+                            "description": "場地旋轉 90°（看箭頭）→ Paradeigma add 跟著轉（Exoterikos 不轉）→ 預判旋轉後位置。",
+                            "tips": [
+                                {"text": "預判旋轉後 add 位置", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Adikia 不義",
+                            "type": "aoe",
+                            "description": "東西邊 2 大圓 AoE 中央重疊 → 站北 / 南安全區。",
+                            "tips": [
+                                {"text": "站北 / 南", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "散開"
-              ]
-            },
-            {
-              "name": "Algedon 痛覺",
-              "type": "aoe",
-              "description": "點名玩家直線 → 場邊；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Astral Eclipse 星蝕",
-              "type": "mechanic",
-              "description": "場上分身 → 看本體位置；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看本體預判"
-              ]
-            },
-            {
-              "name": "Esoteric Sect 秘法宗派",
-              "type": "aoe",
-              "description": "場中央圓 + 場邊環組合；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圖示貼/離"
-              ]
-            },
-            {
-              "name": "Astral Flow 星流",
-              "type": "tankbuster",
-              "description": "雙 T 死刑 + 後續 cleave；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
                 {
-                  "text": "雙 T 站位分擔",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Cosmic Kiss 宇宙之吻",
-              "type": "aoe",
-              "description": "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Adikia 不義 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P2 Roiling Darkness（DPS check）",
+                    "mechanics": [
+                        {
+                            "name": "Roiling Darkness 翻騰之闇",
+                            "type": "add",
+                            "description": "4 浮空球 → 累 boss 能量 → 滿 100 釋 Apomnemoneumata 團滅 → DPS 全力秒 4 球。",
+                            "tips": [
+                                {"text": "DPS 速殺 4 球", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Esoteric Pattern 秘奧圖案",
+                            "type": "mechanic",
+                            "description": "3 種圖案組合：(a) 中央紫三角 + 兩側綠 Esoteric Ray → 站三角兩側；(b) 中央綠 Ray + 兩側紫三角 → 站三角側外；(c) 中央粉方 + 兩側綠 Ray → 站南半中央 1/3。看顏色判安全區。",
+                            "tips": [
+                                {"text": "看符號顏色 + 位置選安全", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員極限減傷",
-                  "role": "tank"
+                    "name": "P3 Astral Eclipse",
+                    "mechanics": [
+                        {
+                            "name": "Astral Eclipse 星座蝕（網格）",
+                            "type": "mechanic",
+                            "description": "boss 飛繞 3 邊 → 各邊指向天空星圖（3x3 網格，每邊 2 個安全格）→ 13 秒判斷 + 移動。流星無預警 + 掉得快 + AoE 大 → 對齊網格中心避傷。",
+                            "tips": [
+                                {"text": "對齊網格中心", "role": "dps"},
+                                {"text": "看星圖順時針逆時針", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Triple Esoteric Ray 三重激光",
+                            "type": "aoe",
+                            "description": "Astral Eclipse 後 3 連激光 → 走中央或東西 1/3 → 切到第 1 雷射爆位避第 2。",
+                            "tips": [
+                                {"text": "順序：第 1 安全 → 第 2 爆位", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 火牆 + 終局",
+                    "mechanics": [
+                        {
+                            "name": "Astral Flow + 火牆（沙漏路徑）",
+                            "type": "mechanic",
+                            "description": "對角生火牆 + 跟著場旋轉 → 站火牆沙漏路徑外（被擊中高傷 + Vuln）。Paradeigma 4 birds + Snake + 旋轉 → 站 bird 符上未被火牆掃半。",
+                            "tips": [
+                                {"text": "預判火牆旋轉路徑", "role": "dps"},
+                                {"text": "站 bird 符未被掃半", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Triple Exoterikos 三重外發",
+                            "type": "mechanic",
+                            "description": "3 邊各 1 符依序釋 → 連環走位 + Adikia 北 / 南安全。",
+                            "tips": [
+                                {"text": "看符順序連走", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Phlegethon 火河 + 大 Styx",
+                            "type": "mechanic",
+                            "description": "玩家腳下 3 連 AoE → 持續移動避波 → 接 Styx 7-8 hit stack。",
+                            "tips": [
+                                {"text": "持續移動 → 集合 stack", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Apomnemoneumata Enrage",
+                            "type": "raidwide",
+                            "description": "終局 3 Exoterikos + Algedon + Styx 9 hit + Paradeigma + 旋轉 + 火牆 + 第 2 Styx → 長讀 Apomnemoneumata 強制團滅 → 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "場無邊界 → 防擊退 / 全員 stack follow 走位策略",
+                "P1 Paradeigma 3 add：Behemoth/Snake/Quetzalcoatl 各對應走位",
+                "P1 Exoterikos：三角對面外 / 方形對半",
+                "P2 4 球速秒 + Esoteric Pattern 看顏色找三角",
+                "P3 Astral Eclipse 看星圖網格 + Triple Ray 順序",
+                "P4 火牆 + 旋轉 → 站 bird 符未被掃半",
+                "P4 終局 Apomnemoneumata 必秒前"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Zodiark 索德雷恩 機制：強化版 Adikia + Astral Eclipse + 多階段。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

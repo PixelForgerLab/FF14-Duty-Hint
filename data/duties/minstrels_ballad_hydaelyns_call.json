@@ -1,121 +1,208 @@
 {
-  "id": "minstrels_ballad_hydaelyns_call",
-  "name": "海德林歸來絕境戰",
-  "nameEn": "The Minstrel's Ballad: Hydaelyn's Call - Hydaelyn",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "海德林歸來絕境戰 - Hydaelyn 海德林。",
-    "核心機制：強化版 Echoes + Equinox + Anima。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.0 海德林絕境戰（Lv 90）。Boss 為 Hydaelyn 海德林。重點：強化版 Echoes + Equinox + Anima。",
-  "bosses": [
-    {
-      "name": "海德林",
-      "nameEn": "Hydaelyn",
-      "phases": [
+    "id": "minstrels_ballad_hydaelyns_call",
+    "name": "海德林歸來絕境戰",
+    "nameEn": "The Minstrel's Ballad: Hydaelyn's Call - Hydaelyn",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Heros's Radiance 全屏。Shining Saber = stack 全員集合。Magos's Radiance / Mousa's Scorn 雙 T 分攤 tankbuster。",
+        "P1 Crystallize 結晶（核心機制） = 顯示元素 + 武器（武器先解元素後解）。元素：水 = 雙奶圓兩光隊分攤 / 岩 = 1 玩家圓全員 stack / 冰 = 全員散開。武器：紅（Dancer Chakrams）= 甜甜圈 → 貼 boss / 綠（WhiteMage Staff）= 大圓 → 跑遠 / 藍（Paladin Sword）= 十字 → 站斜方位。",
+        "P1 Crystallize 順序：第 1 必為水 → 紅 / 綠；第 2 必為冰 → 綠 / 紅（與第 1 相反）；第 3 為岩 / 水 → 藍。",
+        "P1 Aureole 環狀 AoE 兩種：Aureole = 只有 boss 兩側安全；Lateral Aureole = 只有 boss 前後安全。看招式名判斷。",
+        "P2 6 水晶 + 2 Echo of Hydaelyn add：北南各 3 水晶 → 1 組 3 個會發光。雙 T 接 Echo 拉到 boss 另一側 → 每 Echo 連線最近 3 水晶 → 連線發光水晶加快 Conviction 條（滿 100 = 團滅）。",
+        "P2 程序：DPS 先打發光水晶 → 殺完 T 把 Echo 拉去另一側 → DPS 處理剩餘水晶 → 全部水晶死後 T 殺 Echo → boss 釋 Conviction（傷害由條決定）。Echo auto attack 強 → 持續團補。",
+        "P3 Lightwave 1：4 水晶（3 北或南 + 1 對側）→ 兩光波從 3 水晶側出（1 中央 + 1 東 / 西）→ 光波觸到水晶 → 水晶釋視線傷害 → 必須躲到其他水晶後阻擋。",
+        "P3 Infralateral Arc = 2 水晶被光波擊後 → boss 連續對 1 奶 1 T 1 DPS cleave → 各組站不同水晶後分散傷害。第 2 個 Lightwave（5 水晶六邊）= 中央水晶躲 4 collision + 第 5 collision 躲對角水晶。",
+        "P3 Hero's Glory = boss 前扇 cleave（2 次：collision 前 + 最後 collision 同時）→ 站 boss 後。",
+        "P4 沿用 P1 + Heros's Sundering 前扇 tankbuster + Parhelion/Subparhelion（Parhelion 3 chakram 連射直線 + 後續 Subparhelion 反向蓋全場直線；同時 Water Crystallize 雙奶分攤）+ Parhelic Circle 雪花綠標站線間。",
+        "P5 Lightwave 2：4 光波（2 方向各 2 + 中央 + 東/西）→ 1 個對角安全。Echoes = stack 多 hit + 散開 stack + 雙 T 分攤 tankbuster → 處理完接 4 光波 + Water Crystallize + Shining Saber。",
+        "終局 enrage = 長讀 Heros's Radiance 強制團滅 → 必須在此前秒 boss。"
+    ],
+    "notes": "EW 6.5 trial Ex（Lv 90，sync 90，ilvl 620，8 人 trial，時限 60 分），位於 The Mothercrystal Ex。為 EW MSQ 6.5 終局 海德林『Minstrel's Ballad』極限版。掉落 ilvl 635 武器（10 Umbral Totem / 99 兌換 Lynx of Divine Light Flute）+ Hydaelyn Card。整場著重看顏色判斷 + 視線阻擋。",
+    "bosses": [
         {
-          "name": "Hydaelyn EX",
-          "mechanics": [
-            {
-              "name": "Heros' Glory 強化",
-              "type": "raidwide",
-              "description": "高傷全屏，需強減傷 + 連補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "海德林",
+            "nameEn": "Hydaelyn",
+            "phases": [
                 {
-                  "text": "全員減傷 + 強補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Sublime Spark 崇高火花",
-              "type": "tankbuster",
-              "description": "雙坦 cone buster + Magic Vuln 連 hit；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1 主機制",
+                    "mechanics": [
+                        {
+                            "name": "Heros's Radiance 英雄光輝",
+                            "type": "raidwide",
+                            "description": "全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Shining Saber 閃耀劍",
+                            "type": "stack",
+                            "description": "stack 標 → 全員集合分攤。",
+                            "tips": [
+                                {"text": "全員集合", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Magos's / Mousa's Scorn 雙 T tankbuster",
+                            "type": "tankbuster",
+                            "description": "雙 T 分攤 tankbuster → MT/OT 集合接 + 大減傷。",
+                            "tips": [
+                                {"text": "雙 T 集合分攤", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Crystallize 結晶（武器 + 元素）",
+                            "type": "mechanic",
+                            "description": "顯示元素 + 武器（武器先解元素後解）。元素：水 = 雙奶圓兩光隊分攤；岩 = 1 玩家圓全員 stack；冰 = 全員散開。武器：紅（Chakrams）= donut 貼 boss；綠（Staff）= 大圓跑遠；藍（Sword）= 十字站斜方位。順序：水/紅或綠 → 冰/反向 → 岩或水/藍。",
+                            "tips": [
+                                {"text": "先解武器後解元素", "role": "dps"},
+                                {"text": "看顏色 + 元素分組站位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Aureole / Lateral Aureole",
+                            "type": "aoe",
+                            "description": "Aureole = 只有 boss 兩側安全；Lateral Aureole = 只有 boss 前後安全。看招式名判斷。",
+                            "tips": [
+                                {"text": "Aureole = 兩側 / Lateral = 前後", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "雙坦分坦 + 換手",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Echoes of the Lost 失落回音",
-              "type": "other",
-              "description": "召多分身 + 同步 cone + 連環機制；依預兆走位處理。",
-              "tips": [
-                "找本體 + 避分身連 cone"
-              ]
-            },
-            {
-              "name": "Anthem of Equality / Inequality 平等之歌",
-              "type": "stack",
-              "description": "Equality = 全員 stack；Inequality = 全員 spread。",
-              "tips": [
-                "看 cast 名 → 集合 / 散開"
-              ]
-            },
-            {
-              "name": "Magos Beacon 魔導燈塔",
-              "type": "aoe",
-              "description": "玩家標 line AoE + 凝視配合；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "背對 + 線往無人方向"
-              ]
-            },
-            {
-              "name": "Pulse of the Realm 強化",
-              "type": "raidwide",
-              "description": "全屏 + 多 AoE 圈 + 散標；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P2 水晶 + Echo（Conviction）",
+                    "mechanics": [
+                        {
+                            "name": "6 水晶 + 2 Echo of Hydaelyn",
+                            "type": "add",
+                            "description": "北南各 3 水晶 → 1 組 3 個會發光。雙 T 接 Echo 拉到 boss 另一側 → 每 Echo 連線最近 3 水晶 → 連線發光水晶加快 Conviction 條（滿 100 = 團滅）。DPS 先打發光水晶 → 拉 Echo 換邊 → 殺剩 → 殺 Echo。Echo auto 攻擊強 → 持續團補。",
+                            "tips": [
+                                {"text": "DPS 先打發光水晶", "role": "dps"},
+                                {"text": "T 拉 Echo 至對側", "role": "tank"},
+                                {"text": "持續團補 Echo auto", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Conviction 信念",
+                            "type": "raidwide",
+                            "description": "Conviction 條決定傷害（99 約 25k）→ 滿 100 團滅 → 控制條低 + 大團補。",
+                            "tips": [
+                                {"text": "大團補 + 減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員減傷 + 散開避圈",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Crystallize 結晶機制",
-              "type": "other",
-              "description": "場上召水晶 → 玩家被 Crystallized debuff，需特定處理；依預兆走位處理。",
-              "tips": [
-                "照固定圖解 debuff"
-              ]
-            },
-            {
-              "name": "Parhelion 散圈",
-              "type": "spread",
-              "description": "中標下 AoE 圈 + 全員散；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "散到場周"
-              ]
-            },
-            {
-              "name": "Roar of Light (末段)",
-              "type": "raidwide",
-              "description": "末段大全屏連發；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P3 Lightwave 1（視線阻擋）",
+                    "mechanics": [
+                        {
+                            "name": "Halo 光環",
+                            "type": "raidwide",
+                            "description": "全屏 → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Lightwave 光波（4 水晶 + 視線）",
+                            "type": "mechanic",
+                            "description": "4 水晶（3 北或南 + 1 對側）→ 兩光波從 3 水晶側出（1 中央 + 1 東/西）→ 光波觸水晶 → 水晶釋視線傷害 → 必須躲到其他水晶後阻擋。",
+                            "tips": [
+                                {"text": "預判光波路徑 + 躲水晶後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Infralateral Arc 弧光",
+                            "type": "cone",
+                            "description": "2 水晶被光波擊後 → boss 連續對 1 奶 1 T 1 DPS cleave → 各組站不同水晶後分散傷害。",
+                            "tips": [
+                                {"text": "T+H+DPS 各站不同水晶", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Lightwave 2（5 水晶 + Hero's Glory）",
+                            "type": "mechanic",
+                            "description": "5 水晶（1 中央 + 4 角）+ 2 光波（後續第 3 中央波）。前 4 collision 躲中央水晶後；第 5 躲對角水晶。Hero's Glory = boss 前扇 → 站 boss 後（cast 2 次：collision 前 + 最後 collision 同）。",
+                            "tips": [
+                                {"text": "前 4 躲中央 + 第 5 躲對角", "role": "dps"},
+                                {"text": "Hero's Glory 站 boss 後", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "末段催爆發 + 強減傷",
-                  "role": "dps"
+                    "name": "P4 沿用 + 新招",
+                    "mechanics": [
+                        {
+                            "name": "Heros's Sundering 英雄分裂",
+                            "type": "cone",
+                            "description": "前扇 tankbuster。",
+                            "tips": [
+                                {"text": "MT 拉背對團 + 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Parhelion + Subparhelion + Water Crystallize",
+                            "type": "mechanic",
+                            "description": "Parhelion = 3 chakram 連射直線；Subparhelion = chakram 反向蓋全場直線；同時 Water Crystallize 雙奶分攤 → 預先分兩光隊 + 跟著 chakram 順序走位。",
+                            "tips": [
+                                {"text": "分兩光隊 + 跟 chakram 順序", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Parhelic Circle 假日環",
+                            "type": "aoe",
+                            "description": "雪花綠標 → 中央 + 雪花尖端為 AoE → 站雪花線之間。",
+                            "tips": [
+                                {"text": "站雪花線間", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P5 Lightwave 2 + Enrage",
+                    "mechanics": [
+                        {
+                            "name": "Lightwave 2 + 對角安全",
+                            "type": "mechanic",
+                            "description": "4 光波（2 方向各 2 + 中央 + 東/西）→ 1 個對角安全。",
+                            "tips": [
+                                {"text": "找對角安全位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Echoes 餘響",
+                            "type": "stack",
+                            "description": "stack 多 hit → 散開 stack → 雙 T 分攤 tankbuster → 後續 4 光波 + Water Crystallize + Shining Saber。",
+                            "tips": [
+                                {"text": "stack 多 hit 後散開 stack", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Enrage 長讀 Heros's Radiance",
+                            "type": "raidwide",
+                            "description": "終局長讀 Heros's Radiance 強制團滅 → 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Crystallize：元素 + 武器（武器先解元素後解）",
+                "P1 Aureole = 兩側 / Lateral Aureole = 前後",
+                "P2 雙 T 拉 Echo 對側 + DPS 先打發光水晶 + Conviction 100 = 團滅",
+                "P3 Lightwave 視線 → 躲水晶後 / Infralateral Arc → T/H/DPS 各 1 水晶",
+                "P4 Parhelion → Subparhelion 跟順序 + Water 雙奶分攤",
+                "P5 Echoes stack 後散開 stack + 終局秒 boss"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Hydaelyn 海德林 機制：強化版 Echoes + Equinox + Anima。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
