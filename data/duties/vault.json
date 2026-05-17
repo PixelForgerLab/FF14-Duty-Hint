@@ -1,208 +1,242 @@
 {
-    "id":  "vault",
-    "name":  "聖教中樞伊修加德教皇廳",
-    "nameEn":  "The Vault",
-    "expansion":  "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  57,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Ser Adelphel Brightblade 聖騎士亞德爾菲爾：聖光斬 + 點名圓。",
-                     "2）B2 Ser Grinnaux the Bull 聖騎士格里諾：Knockback 擊退 + 場上炸彈。",
-                     "3）B3 Ser Charibert 聖騎士卡里貝爾：Heavensflame 蒼穹熾焰 + 召喚 add。"
-                 ],
-    "notes":  "HW 3.0 HW 主線伊修加德教皇廳（Lv 57）。Boss 依序為 Ser Adelphel Brightblade 聖騎士亞德爾菲爾、Ser Grinnaux the Bull 聖騎士格里諾、Ser Charibert 聖騎士卡里貝爾。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "聖騎士亞德爾菲爾",
-                       "nameEn":  "Ser Adelphel Brightblade",
-                       "mnemonic":  [
-                                        "Ser Adelphel Brightblade 聖騎士亞德爾菲爾 機制：聖光斬 + 點名圓。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "小兵階段",
-                                                                "type":  "other",
-                                                                "description":  "Adelphel 初期有 3 隻血量極低小兵；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 先 AoE 小兵",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Form Change (30%)",
-                                                                "type":  "knockback",
-                                                                "description":  "Adelphel 變形 + 擊退所有玩家進入真正戰鬥；提前Arm\u0027s Length或Surecast抗擊退。",
-                                                                "tips":  [
-                                                                             "預判擊退"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Holy Shield Bash 神聖盾擊",
-                                                                "type":  "other",
-                                                                "description":  "Boss 跳到目標玩家 → 暈 + 連擊；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "被瞄準者預判位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Holiest of Holy 至聖",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體中等傷害；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Charge 衝鋒 + 光球",
-                                                                "type":  "aoe",
-                                                                "description":  "場上衝鋒留下會爆炸的光球，最後鎖定一名玩家落下；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "閃光球與落地點"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "聖騎士格里諾",
-                       "nameEn":  "Ser Grinnaux the Bull",
-                       "mnemonic":  [
-                                        "Ser Grinnaux the Bull 聖騎士格里諾 機制：Knockback 擊退 + 場上炸彈。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Form Change 變形",
-                                                                "type":  "knockback",
-                                                                "description":  "Grinnaux 在小兵清完後變形 + 擊退進入正戰；提前Arm\u0027s Length或Surecast抗擊退。",
-                                                                "tips":  [
-                                                                             "預判方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ground AoE 地面 AoE",
-                                                                "type":  "aoe",
-                                                                "description":  "場地多重 AoE 預警；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "閃 telegraph"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hyperdimensional Slash 超次元斬",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機玩家放紅色直線 AoE，每次留下 Aetherial Tear 在牆上。**每次連放兩次**。",
-                                                                "tips":  [
-                                                                             "把 Tear 引到同一邊牆方便處理"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Faith Unmoving 不動之信",
-                                                                "type":  "knockback",
-                                                                "description":  "全屏帶詠唱的擊退 → 把玩家從 boss 往後推；提前Arm\u0027s Length或Surecast抗擊退。",
-                                                                "tips":  [
-                                                                             "背後不能是 Aetherial Tear；可用 Arm\u0027s Length / Surecast"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Dimensional Rift 次元裂隙",
-                                                                "type":  "aoe",
-                                                                "description":  "場上圓形 AoE；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "閃圓"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "聖騎士卡里貝爾",
-                       "nameEn":  "Ser Charibert",
-                       "mnemonic":  [
-                                        "Ser Charibert 聖騎士卡里貝爾 機制：Heavensflame 蒼穹熾焰 + 召喚 add。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B3",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Altar Pyre 祭壇焰",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Holy Chain 神聖鎖鏈",
-                                                                "type":  "other",
-                                                                "description":  "兩名玩家被鏈鎖在一起，拉開斷鏈否則持續扣血；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "被鏈玩家彼此跑開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Heavensflame 蒼穹炽焰",
-                                                                "type":  "aoe",
-                                                                "description":  "場上火環；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "閃火環"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Knights March 騎士列隊",
-                                                                "type":  "other",
-                                                                "description":  "場邊召喚一排騎士衝過場地，碰到會給 Slow；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "閃騎士行進路徑"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Half HP 召喚 Holy Flame",
-                                                                "type":  "other",
-                                                                "description":  "半血消失 → 出 Dawn/Dusk Knight + 場外 Holy Flame。**不殺光火會放高傷全屏**。Knights 不站他們 AoE 即可忽略。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 速殺 Holy Flame",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "後半段強化",
-                                                                "type":  "aoe",
-                                                                "description":  "後半段 Knights 變兩排、Heavensflame 變兩組；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "雙倍機制小心移動"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "vault",
+    "name": "聖教中樞伊修加德教皇廳",
+    "nameEn": "The Vault",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 57,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）聖教中樞伊修加德教皇廳（HW Lv 57 MSQ）：3 boss，劇情上是『教皇廳重大事件』終戰副本。",
+        "2）B1 阿代爾斐爾（光輝劍 → 聖騎士）：光輝劍模式：染血劍自身圓（吸血回 50%）+ 先鋒劍 MT 單體。30% HP 後再臨衝擊擊退 + 變身聖騎士滿血。",
+        "3）B1 聖騎士階段：聖盾猛擊綠標非 T 衝鋒 + 擊倒 + 連 2 次實體升天高傷；天斬前 90° 無預兆扇形高傷；光芒劍 Z 字衝鋒留下光明晶球（自爆 + 出血 stack）+ 處刑白標點名圓。",
+        "4）B2 格里諾（戰爭狂 → 聖騎士格里諾）：戰爭狂模式：超壓斧前扇 + 撕裂斧隨機方向直線。50% HP 後再臨衝擊擊退 + 變身。",
+        "5）B2 聖騎士格里諾：空間破碎 4 段 180° 環形 AoE（後期 6 段）+ 重揮前扇 + 多維空間斬隨機方向直線 + 留下次元裂縫連線受傷加重 + 堅定信仰自身擊退 + 空間裂痕點名圓 + 紫色星體吸引 + 加重。",
+        "6）B3 沙里貝爾（聖騎士沙里貝爾）：天火場上 3-4 圓 AoE；圣锁 2 玩家烈焰鏈連線 → 必須拉斷否則持續火傷；聖壇火葬全屏；圣壇蠟燭單體高傷。",
+        "7）B3 拂曉/黃昏騎士：場上 spawn 各 3 隻 → 向前步進 → 純白衝鋒（減速）/ 純黑衝鋒（出血）。",
+        "8）B3 < 60% HP：boss + 1 拂曉 + 1 黃昏閃現回場中不可選 + 召喚 8 個聖火 → 必殺聖火，否則純潔心靈全屏 + 聖火自爆連發。"
+    ],
+    "notes": "HW 3.3 主線副本（Lv 57，sync 57，4 人 dungeon），位於伊修加德教皇廳。劇情上聖教祭壇事件後玩家追擊托爾丹七世。Boss 依序為 Ser Adelphel 光輝劍 阿代爾斐爾、Ser Grinnaux 戰爭狂 格里諾、Ser Charibert 聖騎士 沙里貝爾。三騎士『再臨』機制是 HW 標誌性副本，本作中影響深遠。",
+    "bosses": [
+        {
+            "name": "光輝劍 阿代爾斐爾",
+            "nameEn": "Ser Adelphel",
+            "phases": [
+                {
+                    "name": "P1 光輝劍（100%-30%）",
+                    "mechanics": [
+                        {
+                            "name": "Bloody Sword 染血劍",
+                            "type": "aoe",
+                            "description": "自身周圍圓 AoE → 咏唱完無屬性傷害 + 回復 50% 傷害量體力（吸血）。近戰退離。",
+                            "tips": [{"text": "近戰退離 boss", "role": "dps"}]
+                        },
+                        {
+                            "name": "Vanguard Sword 先鋒劍",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體斬擊。MT 開減傷。",
+                            "tips": [{"text": "MT 減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "再臨衝擊 + 再臨（30% 變身）",
+                            "type": "mechanic",
+                            "description": "HP < 30% 立刻擊退全員 + 魔法傷 + 不可選。boss 變身為 Holy Knight Adelphel 聖騎士阿代爾斐爾 + 回復滿血。",
+                            "tips": [
+                                {"text": "Surecast 抗擊退", "role": "tank"},
+                                {"text": "預備 P2", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 聖騎士階段",
+                    "mechanics": [
+                        {
+                            "name": "Holiest of Holies 至聖",
+                            "type": "raidwide",
+                            "description": "聖騎士回場讀條 3s → 全屏無屬性 AoE。治療團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "Holy Shield 聖盾猛擊（綠標非 T 衝鋒）",
+                            "type": "mechanic",
+                            "description": "綠標點名 1 名非 T 玩家 → 衝向該角色 + 擊倒 → 連續 2 次實體升天高傷。被點玩家位置不要靠近隊友。",
+                            "tips": [
+                                {"text": "被點拉場邊", "role": "dps"},
+                                {"text": "治療補 2 連高傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Sky Sword 天斬（前 90° 無預兆扇形）",
+                            "type": "cone",
+                            "description": "立即對 MT 方向 90° 無預兆扇形 AoE 高傷。MT 朝外 + 大減傷。",
+                            "tips": [{"text": "MT 朝外大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "Lightning Sword 光芒劍（Z 字 + 晶球 + 處刑）",
+                            "type": "mechanic",
+                            "description": "boss 衝向場邊以 Z 字路徑衝鋒 → 路徑上玩家受傷 + 留下光明晶球。最後對隨機玩家施 Execution 處刑白標點名圓。光明晶球依次自爆（圓 AoE + 30s 出血 stack）。看 Z 字路徑避免站直線上，被點走出處刑圓。",
+                            "tips": [
+                                {"text": "看 Z 字路徑避", "role": "dps"},
+                                {"text": "被處刑點名走出", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 染血劍 → 近戰退；先鋒劍 → MT 減傷",
+                "30% 變身聖騎士滿血",
+                "P2 聖盾猛擊（綠標非 T）→ 拉場邊接 2 連",
+                "天斬（前 90° 無預兆）→ MT 大減傷",
+                "光芒劍 Z 字 + 晶球 + 處刑 → 避路 + 走圓"
+            ]
+        },
+        {
+            "name": "戰爭狂 格里諾",
+            "nameEn": "Ser Grinnaux",
+            "phases": [
+                {
+                    "name": "P1 戰爭狂（100%-50%）",
+                    "mechanics": [
+                        {
+                            "name": "Super Stomp 超壓斧 / Rip Axe 撕裂斧",
+                            "type": "cone",
+                            "description": "超壓斧：對 MT 方向扇形 AoE；撕裂斧：對隨機角色方向直線 AoE。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "看直線走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "50% 再臨衝擊 + 變身",
+                            "type": "mechanic",
+                            "description": "HP < 50% 擊退全員 + 變身聖騎士格里諾 + 滿血。",
+                            "tips": [{"text": "Surecast 抗", "role": "tank"}]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 聖騎士格里諾（多維空間）",
+                    "mechanics": [
+                        {
+                            "name": "Space Shattering 空間破碎（180° 環形 4-6 段）",
+                            "type": "aoe",
+                            "description": "場中和場邊生成 4 段 180° 紅黑色環形預兆 → 後期 6 段。看順序走縫。",
+                            "tips": [{"text": "看 4/6 環順序走", "role": "dps"}]
+                        },
+                        {
+                            "name": "Multi-Dimensional Sword 多維空間斬 + 次元裂縫",
+                            "type": "aoe",
+                            "description": "對隨機角色方向直線 AoE + 擊退 + 在預兆盡頭生成次元裂縫 → 連線最近角色釋放 Dimensional Wave 次元波（受傷加重 stack）。打掉裂縫或拉開角色。",
+                            "tips": [
+                                {"text": "拉開避連線", "role": "dps"},
+                                {"text": "Esuna 清受傷加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Firm Faith 堅定信仰（自身擊退）",
+                            "type": "knockback",
+                            "description": "自身為中心擊退所有角色 + 傷害。Surecast 抗或站場中央。",
+                            "tips": [{"text": "Surecast 抗", "role": "tank"}]
+                        },
+                        {
+                            "name": "Space Fissure 空間裂痕 + 星體",
+                            "type": "mechanic",
+                            "description": "對隨機目標腳下圓 AoE → 場上生紫色星體。進入星體被吸引到中心 → 自爆魔法傷 + 20s 加重。避星體。",
+                            "tips": [
+                                {"text": "避紫色星體", "role": "dps"},
+                                {"text": "Esuna 清加重", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 超壓斧 / 撕裂斧 → MT 朝外 + 走縫",
+                "50% 變身",
+                "P2 空間破碎 4-6 環 → 看序",
+                "多維空間斬 + 次元裂縫 → 拉開斷線",
+                "堅定信仰擊退 → Surecast",
+                "紫色星體 → 避"
+            ]
+        },
+        {
+            "name": "聖騎士 沙里貝爾",
+            "nameEn": "Ser Charibert",
+            "phases": [
+                {
+                    "name": "P1 100%-60% HP（拂曉黃昏騎士）",
+                    "mechanics": [
+                        {
+                            "name": "Sacred Flame 圣坛蜡烛 / Heavenly Fire 天火",
+                            "type": "mechanic",
+                            "description": "圣坛蜡烛：MT 高傷單體。天火：場上 3-4 圓 AoE。看圓走縫。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"},
+                                {"text": "看圓走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Holy Chain 圣鎖（烈焰鏈連線）",
+                            "type": "mechanic",
+                            "description": "對隨機 2 角色賦予 15s 烈焰鏈 + 拉線預兆。沒拉斷 → 持續火傷。被連線兩人拉開距離斷線。",
+                            "tips": [{"text": "被連線拉開斷", "role": "dps"}]
+                        },
+                        {
+                            "name": "Funeral Pyre 圣坛火葬",
+                            "type": "raidwide",
+                            "description": "boss 回場咏唱 → 全屏火傷。團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "Dusk/Dawn Knight 拂曉/黃昏騎士",
+                            "type": "add",
+                            "description": "氣泡台詞『魔法人偶們……給我出來』後場地一側 spawn 3 拂曉騎士 + 3 黃昏騎士 → 步進對路徑造成傷害。拂曉純白衝鋒（減速）、黃昏純黑衝鋒（出血）。走縫到無 add 路徑區。",
+                            "tips": [
+                                {"text": "看 add 朝向走縫", "role": "dps"},
+                                {"text": "Esuna 清減速/出血", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 60% HP（聖火 + 純潔心靈）",
+                    "mechanics": [
+                        {
+                            "name": "閃現回場中（不可選 + 8 聖火）",
+                            "type": "mechanic",
+                            "description": "boss 與 1 拂曉 + 1 黃昏騎士閃現回場中 + 不可選 + 場周圍 spawn 8 聖火。",
+                            "tips": [{"text": "DPS 切目標清聖火", "role": "dps"}]
+                        },
+                        {
+                            "name": "White/Black Knight's Journey 白/黑騎士之旅",
+                            "type": "aoe",
+                            "description": "拂曉/黃昏騎士對隨機方向直線 AoE 預兆 → 完畢無屬性魔法傷 + 減速/出血。走縫。",
+                            "tips": [{"text": "看直線走縫 + Esuna", "role": "dps"}]
+                        },
+                        {
+                            "name": "Pure Heart 純潔心靈（聖火懲罰）",
+                            "type": "raidwide",
+                            "description": "聖火都被消滅 / 一段時間後 boss 釋放 Pure Heart 純潔心靈全屏火傷。若還存在聖火 → 聖火依次自爆（額外全屏火傷）。",
+                            "tips": [
+                                {"text": "聖火必清", "role": "dps"},
+                                {"text": "團補 + 全員減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 圣坛蠟燭 MT 高傷 + 天火 3-4 圓",
+                "圣鎖烈焰鏈 → 兩人拉開斷",
+                "拂曉/黃昏騎士 → 看朝向走縫",
+                "< 60% 8 聖火 → 速殺防純潔心靈"
+            ]
+        }
+    ]
 }
