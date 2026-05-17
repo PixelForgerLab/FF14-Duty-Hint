@@ -1,47 +1,173 @@
 {
-    "id": "second_coil_of_bahamut_-_turn_3",
-    "name": "巴哈姆特大迷宮 侵略之章3",
-    "nameEn": "The Second Coil of Bahamut - Turn 3",
-    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "T8 The Avatar 主機。11 分鐘 enrage。boss 固定中央不動，MT 太遠會用範圍激光（比近戰平 A 高傷）。",
-        "Biotower 核心機制：場上 4 個 Biotower（北東南西），每組刷 2-3 個。Tower 累積 charge（每 15-20s 1 charge），達 5 自爆。",
-        "Tower 自爆機制：北 Tower = 召 Clockwork Dreadnought 大斧；東 Tower = 3 隨機地雷（15s 後 boss 強制爆全屏）→ Arm's Length 防擊退；南/西 Tower = 全屏 2500 傷。",
-        "玩家手動充能：站 Tower 旁電場 → 1 charge/玩家 + 加 Languishing debuff（90s）→ 後續充能更高 HP cost（10%/20%/40%/70%/120%）。",
-        "Phase 切換規則：Tower 在 charging 時 boss 不可切階段 → 可用於跳階。2+ tower 同時充滿 = enrage 連 Atomic Ray 團滅。2 tower 持平 = boss 增 Vuln Down + Damage Up。",
-        "P1（100%~75% 或 2:40）：Diffusion Ray 前 cleave + Bleed（Esuna 解）。Gaseous Bomb 點名圓 AoE。2 tower。",
-        "P2（~75%~45%）：3 tower 100s 循環。Ballistic Missile = 點 1 玩家直線 AoE → 散開。solo 模式 P2 = 即死（必須跳 P2）。",
-        "P3（~45%~0%）：終局沿用 + Atomic Ray 全屏連發 → enrage。必秒 boss。",
-        "團隊策略：T+H+1 DPS 輪流手動充 Tower（避 Vuln 持續高）+ 殺 Dreadnought + 看 boss 招式走位。"
-    ],
-    "notes": "ARR 2.4 BCoB 第 8 章（即 SCoB T3，Lv 50，sync 50，ilvl 100，echo 30，時限 90 分），位於 Ragnarok 中層。Boss 為 The Avatar 化身（主機）。Biotower 充能管理 + 跳階機制為核心。11 分鐘 hard enrage。掉落 High Allagan 系列裝備。",
-    "bosses": [
+  "id": "second_coil_of_bahamut_-_turn_3",
+  "name": "巴哈姆特大迷宮 侵略之章3",
+  "nameEn": "The Second Coil of Bahamut - Turn 3",
+  "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "T8 The Avatar 主機。11 分鐘 enrage。boss 固定中央不動，MT 太遠會用範圍激光（比近戰平 A 高傷）。",
+    "Biotower 核心機制：場上 4 個 Biotower（北東南西），每組刷 2-3 個。Tower 累積 charge（每 15-20s 1 charge），達 5 自爆。",
+    "Tower 自爆機制：北 Tower = 召 Clockwork Dreadnought 大斧；東 Tower = 3 隨機地雷（15s 後 boss 強制爆全屏）→ Arm's Length 防擊退；南/西 Tower = 全屏 2500 傷。",
+    "玩家手動充能：站 Tower 旁電場 → 1 charge/玩家 + 加 Languishing debuff（90s）→ 後續充能更高 HP cost（10%/20%/40%/70%/120%）。",
+    "Phase 切換規則：Tower 在 charging 時 boss 不可切階段 → 可用於跳階。2+ tower 同時充滿 = enrage 連 Atomic Ray 團滅。2 tower 持平 = boss 增 Vuln Down + Damage Up。",
+    "P1（100%~75% 或 2:40）：Diffusion Ray 前 cleave + Bleed（Esuna 解）。Gaseous Bomb 點名圓 AoE。2 tower。",
+    "P2（~75%~45%）：3 tower 100s 循環。Ballistic Missile = 點 1 玩家直線 AoE → 散開。solo 模式 P2 = 即死（必須跳 P2）。",
+    "P3（~45%~0%）：終局沿用 + Atomic Ray 全屏連發 → enrage。必秒 boss。",
+    "團隊策略：T+H+1 DPS 輪流手動充 Tower（避 Vuln 持續高）+ 殺 Dreadnought + 看 boss 招式走位。"
+  ],
+  "notes": "ARR 2.4 BCoB 第 8 章（即 SCoB T3，Lv 50，sync 50，ilvl 100，echo 30，時限 90 分），位於 Ragnarok 中層。Boss 為 The Avatar 化身（主機）。Biotower 充能管理 + 跳階機制為核心。11 分鐘 hard enrage。掉落 High Allagan 系列裝備。",
+  "bosses": [
+    {
+      "name": "化身",
+      "nameEn": "The Avatar",
+      "phases": [
         {
-            "name": "化身",
-            "nameEn": "The Avatar",
-            "phases": [
-                {"name": "Biotower 共通機制", "mechanics": [
-                    {"name": "4 Biotower 系統", "type": "mechanic", "description": "北東南西 4 個 Tower，每組 2-3 個刷新。Tower 自然每 15-20s 1 charge，5 charge 自爆。", "tips": [{"text": "管理 Tower 充能", "role": "tank"}]},
-                    {"name": "Tower 自爆效果", "type": "add", "description": "北 = Clockwork Dreadnought；東 = 3 地雷 + 15s 後強制爆；南/西 = 全屏 2500 傷。", "tips": [{"text": "北優先 / 東防地雷", "role": "tank"}]},
-                    {"name": "玩家手動充能", "type": "mechanic", "description": "站電場 → 充 charge + Languishing 90s + 後續 HP cost 10/20/40/70/120%。", "tips": [{"text": "T+H+1 DPS 輪流充", "role": "tank"}]},
-                    {"name": "2+ Tower 同時滿 = Enrage", "type": "raidwide", "description": "2 tower 同時自然充滿 = boss enrage Atomic Ray 團滅。2 tower 持平 = boss Vuln Down + Damage Up。", "tips": [{"text": "避免同時自滿", "role": "tank"}]}
-                ]},
-                {"name": "P1（100%~75% / 2:40）", "mechanics": [
-                    {"name": "Diffusion Ray + Gaseous Bomb", "type": "cone", "description": "Diffusion Ray = 前扇 + Bleed（Esuna 解）；Gaseous Bomb = 點名圓 AoE → 散開。", "tips": [{"text": "Esuna Bleed + 散開圓", "role": "healer"}]}
-                ]},
-                {"name": "P2（75%~45%）", "mechanics": [
-                    {"name": "Ballistic Missile + 3 Tower", "type": "aoe", "description": "Ballistic Missile = 點直線 → 散開（solo 必死）。3 Tower 100s 循環。", "tips": [{"text": "散開避直線", "role": "dps"}]}
-                ]},
-                {"name": "P3 終局 + Enrage", "mechanics": [
-                    {"name": "Atomic Ray Enrage", "type": "raidwide", "description": "終局沿用 + Atomic Ray 全屏連發 → 11 分 enrage 強制團滅 → 必秒 boss。", "tips": [{"text": "全力推 + LB3", "role": "dps"}]}
-                ]}
-            ]
+          "name": "Biotower 共通機制",
+          "mechanics": [
+            {
+              "name": "4 Biotower 系統",
+              "type": "mechanic",
+              "description": "北東南西 4 個 Tower，每組 2-3 個刷新。Tower 自然每 15-20s 1 charge，5 charge 自爆。",
+              "tips": [
+                {
+                  "text": "管理 Tower 充能",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Tower 自爆效果",
+              "type": "add",
+              "description": "北 = Clockwork Dreadnought；東 = 3 地雷 + 15s 後強制爆；南/西 = 全屏 2500 傷。",
+              "tips": [
+                {
+                  "text": "北優先 / 東防地雷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "玩家手動充能",
+              "type": "mechanic",
+              "description": "站電場 → 充 charge + Languishing 90s + 後續 HP cost 10/20/40/70/120%。",
+              "tips": [
+                {
+                  "text": "T+H+1 DPS 輪流充",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "2+ Tower 同時滿 = Enrage",
+              "type": "raidwide",
+              "description": "2 tower 同時自然充滿 = boss enrage Atomic Ray 團滅。2 tower 持平 = boss Vuln Down + Damage Up。",
+              "tips": [
+                {
+                  "text": "避免同時自滿",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P1（100%~75% / 2:40）",
+          "mechanics": [
+            {
+              "name": "Diffusion Ray + Gaseous Bomb",
+              "type": "cone",
+              "description": "Diffusion Ray = 前扇 + Bleed（Esuna 解）；Gaseous Bomb = 點名圓 AoE → 散開。",
+              "tips": [
+                {
+                  "text": "Esuna Bleed + 散開圓",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2（75%~45%）",
+          "mechanics": [
+            {
+              "name": "Ballistic Missile + 3 Tower",
+              "type": "aoe",
+              "description": "Ballistic Missile = 點直線 → 散開（solo 必死）。3 Tower 100s 循環。",
+              "tips": [
+                {
+                  "text": "散開避直線",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 終局 + Enrage",
+          "mechanics": [
+            {
+              "name": "Atomic Ray Enrage",
+              "type": "raidwide",
+              "description": "終局沿用 + Atomic Ray 全屏連發 → 11 分 enrage 強制團滅 → 必秒 boss。",
+              "tips": [
+                {
+                  "text": "全力推 + LB3",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "雙 T 配合",
+              "type": "mechanic",
+              "description": "MT/OT 配合 tank swap + Provoke + Shirk 處理 boss 攻擊。",
+              "tips": [
+                {
+                  "text": "tank swap 配合",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "雙奶配合",
+              "type": "mechanic",
+              "description": "雙奶分工 - 1 奶單補 MT，另 1 奶 AoE 補 + 解 debuff。",
+              "tips": [
+                {
+                  "text": "雙奶分工",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "LB 時機",
+              "type": "mechanic",
+              "description": "Limit Break 條滿 → 對應使用：T LB3 抵擋大招、DPS LB3 burst boss、奶 LB3 救團。",
+              "tips": [
+                {
+                  "text": "看時機釋 LB",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Enrage 倒數",
+              "type": "raidwide",
+              "description": "boss 在固定時間釋放 enrage 招式團滅 → 必須在此前秒掉。",
+              "tips": [
+                {
+                  "text": "DPS 全力推",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

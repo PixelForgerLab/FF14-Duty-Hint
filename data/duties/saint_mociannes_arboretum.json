@@ -1,126 +1,201 @@
 {
-    "id": "saint_mociannes_arboretum",
-    "name": "草木庭園聖茉夏娜植物園",
-    "nameEn": "Saint Mocianne's Arboretum",
-    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "B1 巨型魔界花：惡臭氣 → 4 隻小魔界花跟隨 boss 一起轉動釋放臭氣（麻痺/減速/中毒）→ 跟著臭氣轉動方向走位躲。",
-        "B1 播種召喚玫瑰果實 add → 速殺。",
-        "B2 女王蜂：攻擊指示 → 隨機玩家點名 4 次直線範圍 AoE + 蜂毒素飛濺，有預兆。",
-        "B2 防禦指示 → 女王蜂移到中央 + 與鷹蜂騎士連線獲無敵 → 必殺所有 add 解。",
-        "B2 協作指示 → 場外蜜蜂分兩部分直線貫場 AoE → 站側面。",
-        "B3 劇毒美人：阿托品孢子 → boss 為中心環形 AoE 全體。",
-        "B3 真空吸魂 → 全體 AoE + 召喚 add 後在 add 範圍內受到魔法傷害加重 debuff。",
-        "B3 魅惑視線 → 全體攻擊需背對 boss 回避。"
-    ],
-    "notes": "HW 3.4 副本（Lv 60，sync 60，4 人 dungeon），位於龍堡內陸低地聖茉夏娜植物園。Boss 依序為 Gourmand 巨型魔界花、Queen Bee 女王蜂、Beladonna 劇毒美人。本副本是 Sharlayan 古植物園主題副本。",
-    "bosses": [
+  "id": "saint_mociannes_arboretum",
+  "name": "草木庭園聖茉夏娜植物園",
+  "nameEn": "Saint Mocianne's Arboretum",
+  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 60,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 巨型魔界花：惡臭氣 → 4 隻小魔界花跟隨 boss 一起轉動釋放臭氣（麻痺/減速/中毒）→ 跟著臭氣轉動方向走位躲。",
+    "B1 播種召喚玫瑰果實 add → 速殺。",
+    "B2 女王蜂：攻擊指示 → 隨機玩家點名 4 次直線範圍 AoE + 蜂毒素飛濺，有預兆。",
+    "B2 防禦指示 → 女王蜂移到中央 + 與鷹蜂騎士連線獲無敵 → 必殺所有 add 解。",
+    "B2 協作指示 → 場外蜜蜂分兩部分直線貫場 AoE → 站側面。",
+    "B3 劇毒美人：阿托品孢子 → boss 為中心環形 AoE 全體。",
+    "B3 真空吸魂 → 全體 AoE + 召喚 add 後在 add 範圍內受到魔法傷害加重 debuff。",
+    "B3 魅惑視線 → 全體攻擊需背對 boss 回避。"
+  ],
+  "notes": "HW 3.4 副本（Lv 60，sync 60，4 人 dungeon），位於龍堡內陸低地聖茉夏娜植物園。Boss 依序為 Gourmand 巨型魔界花、Queen Bee 女王蜂、Beladonna 劇毒美人。本副本是 Sharlayan 古植物園主題副本。",
+  "bosses": [
+    {
+      "name": "巨型魔界花",
+      "nameEn": "Gourmand",
+      "phases": [
         {
-            "name": "巨型魔界花",
-            "nameEn": "Gourmand",
-            "phases": [
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "惡臭氣 Bad Breath（4 小魔界花跟轉）",
+              "type": "mechanic",
+              "description": "場上 spawn 4 隻小魔界花跟隨 boss 一起釋放臭氣並轉動。臭氣造成麻痺/減速/中毒 debuff。跟隨臭氣轉動方向走位躲避。",
+              "tips": [
                 {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "惡臭氣 Bad Breath（4 小魔界花跟轉）",
-                            "type": "mechanic",
-                            "description": "場上 spawn 4 隻小魔界花跟隨 boss 一起釋放臭氣並轉動。臭氣造成麻痺/減速/中毒 debuff。跟隨臭氣轉動方向走位躲避。",
-                            "tips": [
-                                {"text": "跟臭氣轉動方向走位", "role": "dps"},
-                                {"text": "Esuna 清三 debuff", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "播種 + 玫瑰果實 add",
-                            "type": "add",
-                            "description": "boss 召喚玫瑰果實 add → 必須及時擊殺。",
-                            "tips": [{"text": "DPS 速殺玫瑰果實", "role": "dps"}]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "惡臭氣 → 跟臭氣轉動躲（避麻痺/減速/中毒）",
-                "播種 → 速殺玫瑰果實"
-            ]
-        },
-        {
-            "name": "女王蜂",
-            "nameEn": "Queen Bee",
-            "phases": [
+                  "text": "跟臭氣轉動方向走位",
+                  "role": "dps"
+                },
                 {
-                    "name": "主戰（蜂群協作機制）",
-                    "mechanics": [
-                        {
-                            "name": "攻擊指示",
-                            "type": "aoe",
-                            "description": "對隨機玩家點名 → 4 次直線範圍 AoE + Bee Sting 蜂毒素飛濺，有範圍預兆。",
-                            "tips": [{"text": "看直線走縫", "role": "dps"}]
-                        },
-                        {
-                            "name": "防禦指示（無敵 + 鷹蜂騎士連線）",
-                            "type": "mechanic",
-                            "description": "女王蜂移到場地中央 + 與 Falcon Knight 鷹蜂騎士連線 + 獲得無敵狀態。必須擊殺所有 add 才能繼續攻擊 boss。",
-                            "tips": [{"text": "DPS 切目標清 add", "role": "dps"}]
-                        },
-                        {
-                            "name": "協作指示（直線貫場）",
-                            "type": "aoe",
-                            "description": "場外蜜蜂分成兩部分 → 向場地中央進行直線貫場 AoE。站側面或遠離直線。",
-                            "tips": [{"text": "站側面避貫場直線", "role": "dps"}]
-                        }
-                    ]
+                  "text": "Esuna 清三 debuff",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "攻擊指示 → 4 次直線走縫",
-                "防禦指示 → 必殺 add 解無敵",
-                "協作指示 → 站側面避貫場直線"
-            ]
-        },
-        {
-            "name": "劇毒美人",
-            "nameEn": "Beladonna",
-            "phases": [
+              ]
+            },
+            {
+              "name": "播種 + 玫瑰果實 add",
+              "type": "add",
+              "description": "boss 召喚玫瑰果實 add → 必須及時擊殺。",
+              "tips": [
                 {
-                    "name": "主戰",
-                    "mechanics": [
-                        {
-                            "name": "阿托品孢子 Atropine Spore",
-                            "type": "aoe",
-                            "description": "以 boss 為中心的全體環形 AoE。中央安全。",
-                            "tips": [{"text": "全員貼 boss", "role": "dps"}]
-                        },
-                        {
-                            "name": "真空吸魂 + add 範圍 debuff",
-                            "type": "add",
-                            "description": "全體範圍攻擊。召喚 add 後，在 add 範圍內會受到 Magical Damage Up 魔法傷害加重 debuff。",
-                            "tips": [
-                                {"text": "DPS 清 add", "role": "dps"},
-                                {"text": "離 add 範圍避加重", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "魅惑視線 Sweet Scent",
-                            "type": "gaze",
-                            "description": "需要背對 boss 回避的全體攻擊。",
-                            "tips": [{"text": "全員背對 boss", "role": "tank"}]
-                        }
-                    ]
+                  "text": "DPS 速殺玫瑰果實",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "阿托品孢子環形 → 貼 boss 中央",
-                "真空吸魂 + add 範圍 debuff → 離 add 範圍",
-                "魅惑視線 → 背對解"
-            ]
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "惡臭氣 → 跟臭氣轉動躲（避麻痺/減速/中毒）",
+        "播種 → 速殺玫瑰果實"
+      ]
+    },
+    {
+      "name": "女王蜂",
+      "nameEn": "Queen Bee",
+      "phases": [
+        {
+          "name": "主戰（蜂群協作機制）",
+          "mechanics": [
+            {
+              "name": "攻擊指示",
+              "type": "aoe",
+              "description": "對隨機玩家點名 → 4 次直線範圍 AoE + Bee Sting 蜂毒素飛濺，有範圍預兆。",
+              "tips": [
+                {
+                  "text": "看直線走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "防禦指示（無敵 + 鷹蜂騎士連線）",
+              "type": "mechanic",
+              "description": "女王蜂移到場地中央 + 與 Falcon Knight 鷹蜂騎士連線 + 獲得無敵狀態。必須擊殺所有 add 才能繼續攻擊 boss。",
+              "tips": [
+                {
+                  "text": "DPS 切目標清 add",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "協作指示（直線貫場）",
+              "type": "aoe",
+              "description": "場外蜜蜂分成兩部分 → 向場地中央進行直線貫場 AoE。站側面或遠離直線。",
+              "tips": [
+                {
+                  "text": "站側面避貫場直線",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "攻擊指示 → 4 次直線走縫",
+        "防禦指示 → 必殺 add 解無敵",
+        "協作指示 → 站側面避貫場直線"
+      ]
+    },
+    {
+      "name": "劇毒美人",
+      "nameEn": "Beladonna",
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "阿托品孢子 Atropine Spore",
+              "type": "aoe",
+              "description": "以 boss 為中心的全體環形 AoE。中央安全。",
+              "tips": [
+                {
+                  "text": "全員貼 boss",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "真空吸魂 + add 範圍 debuff",
+              "type": "add",
+              "description": "全體範圍攻擊。召喚 add 後，在 add 範圍內會受到 Magical Damage Up 魔法傷害加重 debuff。",
+              "tips": [
+                {
+                  "text": "DPS 清 add",
+                  "role": "dps"
+                },
+                {
+                  "text": "離 add 範圍避加重",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "魅惑視線 Sweet Scent",
+              "type": "gaze",
+              "description": "需要背對 boss 回避的全體攻擊。",
+              "tips": [
+                {
+                  "text": "全員背對 boss",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "平A 攻擊",
+              "type": "tankbuster",
+              "description": "boss 對 MT 持續攻擊 → 治療連續補。",
+              "tips": [
+                {
+                  "text": "MT 開減傷 + 持續補",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "MT 站位策略",
+              "type": "mechanic",
+              "description": "MT 拉 boss 朝場邊面向 → 避免前扇攻擊命中團隊。",
+              "tips": [
+                {
+                  "text": "MT 朝場邊面",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "DPS 走位 + 散位",
+              "type": "mechanic",
+              "description": "DPS 看 telegraph 預判走位 + 拉開避免互相重疊 AoE。",
+              "tips": [
+                {
+                  "text": "預判走位 + 拉開",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "阿托品孢子環形 → 貼 boss 中央",
+        "真空吸魂 + add 範圍 debuff → 離 add 範圍",
+        "魅惑視線 → 背對解"
+      ]
+    }
+  ]
 }

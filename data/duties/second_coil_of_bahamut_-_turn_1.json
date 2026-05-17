@@ -1,59 +1,172 @@
 {
-    "id": "second_coil_of_bahamut_-_turn_1",
-    "name": "巴哈姆特大迷宮 侵略之章1",
-    "nameEn": "The Second Coil of Bahamut - Turn 1",
-    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "T6 Rafflesia 大花。3 階段，多招式關於走位 + 限制空間。",
-        "P1（100%-70%）：Bloody Caress 血色撫摸 = cleave + 易傷 35s → tank swap。Briary Growth 荊棘成長 = 3 Dark Matter Bulb 隨機位 → 噴荊棘池（4 階擴大）→ 中央 bulb 必殺、外圍可忽略。",
-        "P1 Thorn Whip 荊棘鞭 = 2-6 玩家連線 + DoT → 必須拉長破鏈（兩端越遠越好）→ 預先集合再 spread 破。",
-        "P1 Floral Trap 花陷阱 = 黃標 1 玩家 + 後拉前方錐玩家到 boss 旁 → 標玩家站荊棘池內（不被拉）或用 Surecast；其他人去 boss 對側。Devour 吞食 = 在 boss 前者被吃增 boss buff → 停手等 Devour 完。Spit 吐出 = 全屏 2000 + 釋放被吃玩家。",
-        "P2（70%-40%）：保留 P1 + 新招（攻擊密度增加）。",
-        "P3（<40%）：終局加強招式 + DPS check → enrage 前秒。",
-        "策略：DPS+H 盡量站 boss 後 stack（方便破 Thorn Whip）+ 每兩次 Thorn Whip 後一定接 Floral Trap → 預判位置 + 標玩家跑荊棘。"
-    ],
-    "notes": "ARR 2.2 BCoB 第 6 章（即 SCoB T1，Lv 50，sync 50，ilvl 90，echo 30，時限 90 分），位於 Ragnarok 神艦下層。Boss 為 Rafflesia 巨大食人花。3 階段機制集中於 Thorn Whip 連線 + Floral Trap 標 + Briar 荊棘地形限制走位。",
-    "bosses": [
+  "id": "second_coil_of_bahamut_-_turn_1",
+  "name": "巴哈姆特大迷宮 侵略之章1",
+  "nameEn": "The Second Coil of Bahamut - Turn 1",
+  "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "T6 Rafflesia 大花。3 階段，多招式關於走位 + 限制空間。",
+    "P1（100%-70%）：Bloody Caress 血色撫摸 = cleave + 易傷 35s → tank swap。Briary Growth 荊棘成長 = 3 Dark Matter Bulb 隨機位 → 噴荊棘池（4 階擴大）→ 中央 bulb 必殺、外圍可忽略。",
+    "P1 Thorn Whip 荊棘鞭 = 2-6 玩家連線 + DoT → 必須拉長破鏈（兩端越遠越好）→ 預先集合再 spread 破。",
+    "P1 Floral Trap 花陷阱 = 黃標 1 玩家 + 後拉前方錐玩家到 boss 旁 → 標玩家站荊棘池內（不被拉）或用 Surecast；其他人去 boss 對側。Devour 吞食 = 在 boss 前者被吃增 boss buff → 停手等 Devour 完。Spit 吐出 = 全屏 2000 + 釋放被吃玩家。",
+    "P2（70%-40%）：保留 P1 + 新招（攻擊密度增加）。",
+    "P3（<40%）：終局加強招式 + DPS check → enrage 前秒。",
+    "策略：DPS+H 盡量站 boss 後 stack（方便破 Thorn Whip）+ 每兩次 Thorn Whip 後一定接 Floral Trap → 預判位置 + 標玩家跑荊棘。"
+  ],
+  "notes": "ARR 2.2 BCoB 第 6 章（即 SCoB T1，Lv 50，sync 50，ilvl 90，echo 30，時限 90 分），位於 Ragnarok 神艦下層。Boss 為 Rafflesia 巨大食人花。3 階段機制集中於 Thorn Whip 連線 + Floral Trap 標 + Briar 荊棘地形限制走位。",
+  "bosses": [
+    {
+      "name": "巨花",
+      "nameEn": "Rafflesia",
+      "phases": [
         {
-            "name": "巨花",
-            "nameEn": "Rafflesia",
-            "phases": [
+          "name": "P1（100%~70%）",
+          "mechanics": [
+            {
+              "name": "Bloody Caress 血色撫摸",
+              "type": "cone",
+              "description": "cleave + 易傷 35s 疊層 → tank swap。",
+              "tips": [
                 {
-                    "name": "P1（100%~70%）",
-                    "mechanics": [
-                        {"name": "Bloody Caress 血色撫摸", "type": "cone", "description": "cleave + 易傷 35s 疊層 → tank swap。", "tips": [{"text": "tank swap", "role": "tank"}]},
-                        {"name": "Briary Growth 荊棘成長", "type": "add", "description": "3 Bulb 隨機位 → 噴荊棘池（4 階擴大）→ 中央 bulb 必殺 + 外圍可忽略。", "tips": [{"text": "中央 bulb 速秒", "role": "dps"}]},
-                        {"name": "Thorn Whip 荊棘鞭（連線）", "type": "mechanic", "description": "2-6 玩家連線 + DoT → 拉長破鏈（兩端越遠越好）→ 預先集合再 spread 破。", "tips": [{"text": "stack 再 spread 破", "role": "dps"}]},
-                        {"name": "Floral Trap 花陷阱（黃標）", "type": "mechanic", "description": "黃標 1 玩家 + 拉前方錐玩家到 boss 旁 → 標玩家站荊棘池內（不被拉）或用 Surecast；其他人去 boss 對側。", "tips": [{"text": "標玩家站荊棘 / 其他對側", "role": "dps"}]},
-                        {"name": "Devour 吞食", "type": "mechanic", "description": "Floral Trap 後 boss 吃前面玩家 → 增傷 buff → 停手等 Devour 完。", "tips": [{"text": "停手等 Devour", "role": "dps"}]},
-                        {"name": "Spit 吐出", "type": "raidwide", "description": "全屏 2000 + 釋放被吃玩家。", "tips": [{"text": "預備團補", "role": "healer"}]}
-                    ]
-                },
-                {
-                    "name": "P2（70%~40%）",
-                    "mechanics": [
-                        {"name": "P1 機制 + 加強", "type": "mechanic", "description": "保留 P1 全機制 + 新招（密度增加）。", "tips": [{"text": "節奏更快預判", "role": "dps"}]}
-                    ]
-                },
-                {
-                    "name": "P3（<40%）",
-                    "mechanics": [
-                        {"name": "終局加強 + DPS check", "type": "raidwide", "description": "終局加強招式 + DPS check enrage → 必秒。", "tips": [{"text": "全力推 + LB3", "role": "dps"}]}
-                    ]
+                  "text": "tank swap",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "Thorn Whip：stack 再 spread 破鏈",
-                "Floral Trap 黃標站荊棘 + 其他對側 → 停手等 Devour",
-                "Briary 中央 bulb 必殺",
-                "每 2 次 Thorn Whip 接 Floral Trap"
-            ]
+              ]
+            },
+            {
+              "name": "Briary Growth 荊棘成長",
+              "type": "add",
+              "description": "3 Bulb 隨機位 → 噴荊棘池（4 階擴大）→ 中央 bulb 必殺 + 外圍可忽略。",
+              "tips": [
+                {
+                  "text": "中央 bulb 速秒",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Thorn Whip 荊棘鞭（連線）",
+              "type": "mechanic",
+              "description": "2-6 玩家連線 + DoT → 拉長破鏈（兩端越遠越好）→ 預先集合再 spread 破。",
+              "tips": [
+                {
+                  "text": "stack 再 spread 破",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Floral Trap 花陷阱（黃標）",
+              "type": "mechanic",
+              "description": "黃標 1 玩家 + 拉前方錐玩家到 boss 旁 → 標玩家站荊棘池內（不被拉）或用 Surecast；其他人去 boss 對側。",
+              "tips": [
+                {
+                  "text": "標玩家站荊棘 / 其他對側",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Devour 吞食",
+              "type": "mechanic",
+              "description": "Floral Trap 後 boss 吃前面玩家 → 增傷 buff → 停手等 Devour 完。",
+              "tips": [
+                {
+                  "text": "停手等 Devour",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Spit 吐出",
+              "type": "raidwide",
+              "description": "全屏 2000 + 釋放被吃玩家。",
+              "tips": [
+                {
+                  "text": "預備團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2（70%~40%）",
+          "mechanics": [
+            {
+              "name": "P1 機制 + 加強",
+              "type": "mechanic",
+              "description": "保留 P1 全機制 + 新招（密度增加）。",
+              "tips": [
+                {
+                  "text": "節奏更快預判",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3（<40%）",
+          "mechanics": [
+            {
+              "name": "終局加強 + DPS check",
+              "type": "raidwide",
+              "description": "終局加強招式 + DPS check enrage → 必秒。",
+              "tips": [
+                {
+                  "text": "全力推 + LB3",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "雙 T 配合",
+              "type": "mechanic",
+              "description": "MT/OT 配合 tank swap + Provoke + Shirk 處理 boss 攻擊。",
+              "tips": [
+                {
+                  "text": "tank swap 配合",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "雙奶配合",
+              "type": "mechanic",
+              "description": "雙奶分工 - 1 奶單補 MT，另 1 奶 AoE 補 + 解 debuff。",
+              "tips": [
+                {
+                  "text": "雙奶分工",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "LB 時機",
+              "type": "mechanic",
+              "description": "Limit Break 條滿 → 對應使用：T LB3 抵擋大招、DPS LB3 burst boss、奶 LB3 救團。",
+              "tips": [
+                {
+                  "text": "看時機釋 LB",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Thorn Whip：stack 再 spread 破鏈",
+        "Floral Trap 黃標站荊棘 + 其他對側 → 停手等 Devour",
+        "Briary 中央 bulb 必殺",
+        "每 2 次 Thorn Whip 接 Floral Trap"
+      ]
+    }
+  ]
 }

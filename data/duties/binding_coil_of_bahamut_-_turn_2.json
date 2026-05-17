@@ -1,51 +1,167 @@
 {
-    "id": "binding_coil_of_bahamut_-_turn_2",
-    "name": "巴哈姆特大迷宮 邂逅之章2",
-    "nameEn": "The Binding Coil of Bahamut - Turn 2",
-    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "場上 6 個 ADS Node（『Build Your Own Boss』機制）→ 必須先殺 3+ Node 才能殺中央 ADS。每殺 Node 給其他 boss 增益但移除 ADS 招式（Monitoring 除外）。",
-        "Monitoring Node = 計時開始 → 10 分鐘 enrage 倒數。",
-        "全 Node 通用：High Voltage 高壓（可打斷麻痺）/ Repelling Cannons 圓 AoE / Cleave 易傷。",
-        "Sanitary Node = Ballast 3 個 270° 錐連波 → 跟波後安全位。Defense Node = Chain Lightning 雷跳 → 散開拉開。",
-        "Attack Node = Gravity Field 點下毒池 + Heavy + Bleed → 拉場邊放。Disposal Node = Firestream 5 條直線 + Burns DoT → 找縫站。",
-        "Quarantine Node = Allagan Rot 15s debuff → 時間到 / 死亡 = 全屏大傷 → 傳給其他玩家共享。",
-        "策略：建議殺 Monitoring + Sanitary + Quarantine 3 個（避免 ADS 用 270° 錐 + 跳雷 + 油爆 3 招），然後中央集火 ADS 通常用 Gravity/Firestream（簡單）。",
-        "ADS 中央戰：被殺的 Node 招式被移除 → ADS 招式越少越好處理。enrage 前秒殺。"
-    ],
-    "notes": "ARR 2.0 BCoB 第 2 章（Lv 50，sync 50，echo 30，時限 90 分），位於拉諾西亞下層阿勒戈倫敵亞地。為『Build Your Own Boss』機制 - 6 Node 玩家選擇殺哪些以決定中央 ADS 的招式組合。Monitoring Node 觸發 10 分鐘 enrage。常見策略：先 Monitoring + Sanitary + Quarantine → 集火 ADS。",
-    "bosses": [
+  "id": "binding_coil_of_bahamut_-_turn_2",
+  "name": "巴哈姆特大迷宮 邂逅之章2",
+  "nameEn": "The Binding Coil of Bahamut - Turn 2",
+  "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "場上 6 個 ADS Node（『Build Your Own Boss』機制）→ 必須先殺 3+ Node 才能殺中央 ADS。每殺 Node 給其他 boss 增益但移除 ADS 招式（Monitoring 除外）。",
+    "Monitoring Node = 計時開始 → 10 分鐘 enrage 倒數。",
+    "全 Node 通用：High Voltage 高壓（可打斷麻痺）/ Repelling Cannons 圓 AoE / Cleave 易傷。",
+    "Sanitary Node = Ballast 3 個 270° 錐連波 → 跟波後安全位。Defense Node = Chain Lightning 雷跳 → 散開拉開。",
+    "Attack Node = Gravity Field 點下毒池 + Heavy + Bleed → 拉場邊放。Disposal Node = Firestream 5 條直線 + Burns DoT → 找縫站。",
+    "Quarantine Node = Allagan Rot 15s debuff → 時間到 / 死亡 = 全屏大傷 → 傳給其他玩家共享。",
+    "策略：建議殺 Monitoring + Sanitary + Quarantine 3 個（避免 ADS 用 270° 錐 + 跳雷 + 油爆 3 招），然後中央集火 ADS 通常用 Gravity/Firestream（簡單）。",
+    "ADS 中央戰：被殺的 Node 招式被移除 → ADS 招式越少越好處理。enrage 前秒殺。"
+  ],
+  "notes": "ARR 2.0 BCoB 第 2 章（Lv 50，sync 50，echo 30，時限 90 分），位於拉諾西亞下層阿勒戈倫敵亞地。為『Build Your Own Boss』機制 - 6 Node 玩家選擇殺哪些以決定中央 ADS 的招式組合。Monitoring Node 觸發 10 分鐘 enrage。常見策略：先 Monitoring + Sanitary + Quarantine → 集火 ADS。",
+  "bosses": [
+    {
+      "name": "ADS 群組",
+      "nameEn": "Multiple ADS Nodes",
+      "phases": [
         {
-            "name": "ADS 群組",
-            "nameEn": "Multiple ADS Nodes",
-            "phases": [
+          "name": "P1 6 Node 選擇",
+          "mechanics": [
+            {
+              "name": "全 Node 通用",
+              "type": "mechanic",
+              "description": "High Voltage 可打斷麻痺 + Repelling Cannons 圓 AoE + Cleave 易傷。",
+              "tips": [
                 {
-                    "name": "P1 6 Node 選擇",
-                    "mechanics": [
-                        {"name": "全 Node 通用", "type": "mechanic", "description": "High Voltage 可打斷麻痺 + Repelling Cannons 圓 AoE + Cleave 易傷。", "tips": [{"text": "Interject 打斷 High Voltage", "role": "tank"}]},
-                        {"name": "Monitoring Node（計時）", "type": "mechanic", "description": "Vacuum Wave 全屏（不可移除）+ 觸發 10 分 enrage 倒數。", "tips": [{"text": "壓 enrage 前完", "role": "dps"}]},
-                        {"name": "Sanitary Node", "type": "cone", "description": "Ballast 3 個 270° 錐連波 → 跟波後安全位。", "tips": [{"text": "跟波後", "role": "dps"}]},
-                        {"name": "Defense Node", "type": "spread", "description": "Chain Lightning 雷跳 → 散開避相互傷害。", "tips": [{"text": "散開拉開", "role": "dps"}]},
-                        {"name": "Attack Node", "type": "aoe", "description": "Gravity Field 毒池 + Heavy + Bleed → 拉場邊放。", "tips": [{"text": "Esuna 解 Heavy", "role": "healer"}]},
-                        {"name": "Disposal Node", "type": "aoe", "description": "Firestream 5 條直線 + Burns → 找縫站。", "tips": [{"text": "看線縫站", "role": "dps"}]},
-                        {"name": "Quarantine Node（Allagan Rot）", "type": "mechanic", "description": "點 1 玩家 15s debuff → 時間到 / 死 = 全屏大傷 → 傳給其他玩家（站近接傳）。", "tips": [{"text": "Rot 玩家傳接力", "role": "dps"}]}
-                    ]
-                },
-                {
-                    "name": "P2 中央 ADS（殺 3+ Node 後）",
-                    "mechanics": [
-                        {"name": "ADS 中央戰", "type": "mechanic", "description": "ADS 使用未殺 Node 對應招式 → 越少越好處理。常見策略殺 Monitoring + Sanitary + Quarantine = ADS 只用 Gravity/Firestream。", "tips": [{"text": "依殺 Node 順序預判 ADS 招", "role": "dps"}]},
-                        {"name": "10 分鐘 Enrage", "type": "raidwide", "description": "ADS 釋全屏無法閃避 enrage → 必須在此前秒掉。", "tips": [{"text": "DPS 全力推 + LB3", "role": "dps"}]}
-                    ]
+                  "text": "Interject 打斷 High Voltage",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": ["6 Node 選 3+ 殺 → 中央 ADS 用未殺 Node 招式", "建議：Monitoring + Sanitary + Quarantine = ADS 簡單", "10 分鐘 enrage 前秒"]
+              ]
+            },
+            {
+              "name": "Monitoring Node（計時）",
+              "type": "mechanic",
+              "description": "Vacuum Wave 全屏（不可移除）+ 觸發 10 分 enrage 倒數。",
+              "tips": [
+                {
+                  "text": "壓 enrage 前完",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Sanitary Node",
+              "type": "cone",
+              "description": "Ballast 3 個 270° 錐連波 → 跟波後安全位。",
+              "tips": [
+                {
+                  "text": "跟波後",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Defense Node",
+              "type": "spread",
+              "description": "Chain Lightning 雷跳 → 散開避相互傷害。",
+              "tips": [
+                {
+                  "text": "散開拉開",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Attack Node",
+              "type": "aoe",
+              "description": "Gravity Field 毒池 + Heavy + Bleed → 拉場邊放。",
+              "tips": [
+                {
+                  "text": "Esuna 解 Heavy",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Disposal Node",
+              "type": "aoe",
+              "description": "Firestream 5 條直線 + Burns → 找縫站。",
+              "tips": [
+                {
+                  "text": "看線縫站",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Quarantine Node（Allagan Rot）",
+              "type": "mechanic",
+              "description": "點 1 玩家 15s debuff → 時間到 / 死 = 全屏大傷 → 傳給其他玩家（站近接傳）。",
+              "tips": [
+                {
+                  "text": "Rot 玩家傳接力",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 中央 ADS（殺 3+ Node 後）",
+          "mechanics": [
+            {
+              "name": "ADS 中央戰",
+              "type": "mechanic",
+              "description": "ADS 使用未殺 Node 對應招式 → 越少越好處理。常見策略殺 Monitoring + Sanitary + Quarantine = ADS 只用 Gravity/Firestream。",
+              "tips": [
+                {
+                  "text": "依殺 Node 順序預判 ADS 招",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "10 分鐘 Enrage",
+              "type": "raidwide",
+              "description": "ADS 釋全屏無法閃避 enrage → 必須在此前秒掉。",
+              "tips": [
+                {
+                  "text": "DPS 全力推 + LB3",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "雙 T 配合",
+              "type": "mechanic",
+              "description": "MT/OT 配合 tank swap + Provoke + Shirk 處理 boss 攻擊。",
+              "tips": [
+                {
+                  "text": "tank swap 配合",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "雙奶配合",
+              "type": "mechanic",
+              "description": "雙奶分工 - 1 奶單補 MT，另 1 奶 AoE 補 + 解 debuff。",
+              "tips": [
+                {
+                  "text": "雙奶分工",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "6 Node 選 3+ 殺 → 中央 ADS 用未殺 Node 招式",
+        "建議：Monitoring + Sanitary + Quarantine = ADS 簡單",
+        "10 分鐘 enrage 前秒"
+      ]
+    }
+  ]
 }

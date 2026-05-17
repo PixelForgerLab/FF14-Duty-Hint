@@ -1,124 +1,193 @@
 {
-    "id": "containment_bay_p1t6",
-    "name": "真 祖爾宛殲滅戰",
-    "nameEn": "Containment Bay P1T6 - Zurvan",
-    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 60,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "P1 開場：圓形場地會逐塊崩落 → 注意走位不要掉下去。出啥躲啥 → 最後一塊板子伴隨全屏白光 → 全員降落地面進 P2。",
-        "P2 開場 MT 將 boss 拉背對人群（boss 使用超遠距離前方順劈 → MT 必須時刻維持背對，可在 12 點標 A 確認方向）。",
-        "P2 出現各種圓圈、直線、分攤（一般默認場中央分攤）→ boss 隨機點名 1 玩家讀條『波動砲』→ 全員注意躲開 boss 正面（被點玩家拉場邊散開引導）。",
-        "P3 小怪階段：DPS 先集火『智慧信徒』（站原地讀條的）→ 兩 T 撿剩餘小怪 → 智慧死後轉火『意志信徒』→ 最後集火剩下。共 3 波。",
-        "P3 小怪秩序：智慧信徒 → 意志信徒。",
-        "P4 阿胡拉馬茲達進最終階段 → 只比之前多冰火 buff。當場地出現冰火圖騰 → 看自身 buff 屬性：冰踩冰、火踩火。",
-        "P4 其他機制（圓圈、直線、分攤、波動砲）跟 P2 相同（都有範圍提示）→ 注意維持背對 + 冰火塔對應屬性。"
-    ],
-    "notes": "HW 3.4 戰爭三神第 3 戰（Lv 60，sync 60，ilvl 235，8 人 trial，時限 90 分），位於阿巴拉提亞雲海博物戰艦無限回廊（祖爾宛封印之地）。為『戰爭三神（Warring Triad）』第 3 戰 → 祖爾宛（戰爭暴政之神，又名阿胡拉馬茲達）。劇情：戰爭三神最後一神，光之戰士需阻止帝國回收三神。掉落 ilvl 240 武器與裝備。",
-    "bosses": [
+  "id": "containment_bay_p1t6",
+  "name": "真 祖爾宛殲滅戰",
+  "nameEn": "Containment Bay P1T6 - Zurvan",
+  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 60,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "P1 開場：圓形場地會逐塊崩落 → 注意走位不要掉下去。出啥躲啥 → 最後一塊板子伴隨全屏白光 → 全員降落地面進 P2。",
+    "P2 開場 MT 將 boss 拉背對人群（boss 使用超遠距離前方順劈 → MT 必須時刻維持背對，可在 12 點標 A 確認方向）。",
+    "P2 出現各種圓圈、直線、分攤（一般默認場中央分攤）→ boss 隨機點名 1 玩家讀條『波動砲』→ 全員注意躲開 boss 正面（被點玩家拉場邊散開引導）。",
+    "P3 小怪階段：DPS 先集火『智慧信徒』（站原地讀條的）→ 兩 T 撿剩餘小怪 → 智慧死後轉火『意志信徒』→ 最後集火剩下。共 3 波。",
+    "P3 小怪秩序：智慧信徒 → 意志信徒。",
+    "P4 阿胡拉馬茲達進最終階段 → 只比之前多冰火 buff。當場地出現冰火圖騰 → 看自身 buff 屬性：冰踩冰、火踩火。",
+    "P4 其他機制（圓圈、直線、分攤、波動砲）跟 P2 相同（都有範圍提示）→ 注意維持背對 + 冰火塔對應屬性。"
+  ],
+  "notes": "HW 3.4 戰爭三神第 3 戰（Lv 60，sync 60，ilvl 235，8 人 trial，時限 90 分），位於阿巴拉提亞雲海博物戰艦無限回廊（祖爾宛封印之地）。為『戰爭三神（Warring Triad）』第 3 戰 → 祖爾宛（戰爭暴政之神，又名阿胡拉馬茲達）。劇情：戰爭三神最後一神，光之戰士需阻止帝國回收三神。掉落 ilvl 240 武器與裝備。",
+  "bosses": [
+    {
+      "name": "祖爾宛",
+      "nameEn": "Zurvan",
+      "phases": [
         {
-            "name": "祖爾宛",
-            "nameEn": "Zurvan",
-            "phases": [
+          "name": "P1 初始場地崩落",
+          "mechanics": [
+            {
+              "name": "場地崩落",
+              "type": "mechanic",
+              "description": "圓形場地逐塊崩落 → 必須注意走位不要掉下去。最後一塊板子伴隨全屏白光 → 全員降落到下方戰場進 P2。",
+              "tips": [
                 {
-                    "name": "P1 初始場地崩落",
-                    "mechanics": [
-                        {
-                            "name": "場地崩落",
-                            "type": "mechanic",
-                            "description": "圓形場地逐塊崩落 → 必須注意走位不要掉下去。最後一塊板子伴隨全屏白光 → 全員降落到下方戰場進 P2。",
-                            "tips": [
-                                {"text": "預判崩落方向移動", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "P1 即時躲機制",
-                            "type": "mechanic",
-                            "description": "P1 期間 boss 釋出各種 AoE（圓圈、直線、分攤）→ 都有範圍提示 → 看圖示閃避。",
-                            "tips": [
-                                {"text": "看預警走位", "role": "dps"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 主戰",
-                    "mechanics": [
-                        {
-                            "name": "金屬利刃（超遠順劈）",
-                            "type": "cone",
-                            "description": "boss 使用無讀條前方超遠距離 120° 扇形 AoE 對一仇 → MT 必須時刻維持 boss 背對人群。可在 12 點標 A 指示方向避免轉向錯誤。",
-                            "tips": [
-                                {"text": "MT 背對人群拉 boss", "role": "tank"},
-                                {"text": "標記 12 點方位", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "圓圈 / 直線 / 分攤 AoE",
-                            "type": "aoe",
-                            "description": "boss 釋出各種可閃避的圓 AoE / 直線 / 分攤標 → 都有範圍提示。一般分攤默認在場中央集合。",
-                            "tips": [
-                                {"text": "看標示分攤集合 / 散位", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "波動砲 Cool Run",
-                            "type": "aoe",
-                            "description": "boss 隨機點名 1 玩家讀條『波動砲』→ 對該方向釋直線 AoE。注意躲開 boss 正面 → 被點玩家朝場邊引導 + 其他人離直線。",
-                            "tips": [
-                                {"text": "被點玩家拉場邊", "role": "dps"},
-                                {"text": "其他人離開直線", "role": "dps"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 小怪階段",
-                    "mechanics": [
-                        {
-                            "name": "智慧信徒（優先 + 全屏 AoE）",
-                            "type": "add",
-                            "description": "P3 出 3 波小怪 → DPS 必須先集火『智慧信徒』（站原地讀條的）→ 不殺會持續釋全屏 AoE。",
-                            "tips": [
-                                {"text": "DPS 集火智慧信徒", "role": "dps"},
-                                {"text": "T 撿其他小怪", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "意志信徒（次目標）",
-                            "type": "add",
-                            "description": "智慧信徒死後轉火『意志信徒』（會自疊『傷害提高』buff）。最後集火剩下小怪。",
-                            "tips": [
-                                {"text": "智慧死後轉火意志", "role": "dps"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P4 阿胡拉馬茲達（冰火 buff）",
-                    "mechanics": [
-                        {
-                            "name": "冰火 buff（刻印）",
-                            "type": "mechanic",
-                            "description": "boss 進最終階段 → 多冰火 buff 機制：當場地出現冰火圖騰 → 看自身 buff 屬性 → 冰踩冰、火踩火。其他機制（圓圈、直線、分攤、波動砲）跟 P2 相同（都有範圍提示）。",
-                            "tips": [
-                                {"text": "冰踩冰 / 火踩火", "role": "dps"},
-                                {"text": "MT 維持背對 + 波動砲", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "預判崩落方向移動",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "P1：場地崩落走位 + 出啥躲啥 → 進 P2",
-                "P2：MT 背對人群（標 A 12 點）+ 波動砲被點拉場邊",
-                "P3：智慧信徒 → 意志信徒 → 其他（3 波）",
-                "P4：冰火 buff = 冰踩冰、火踩火 + 沿用 P2 機制"
-            ]
+              ]
+            },
+            {
+              "name": "P1 即時躲機制",
+              "type": "mechanic",
+              "description": "P1 期間 boss 釋出各種 AoE（圓圈、直線、分攤）→ 都有範圍提示 → 看圖示閃避。",
+              "tips": [
+                {
+                  "text": "看預警走位",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 主戰",
+          "mechanics": [
+            {
+              "name": "金屬利刃（超遠順劈）",
+              "type": "cone",
+              "description": "boss 使用無讀條前方超遠距離 120° 扇形 AoE 對一仇 → MT 必須時刻維持 boss 背對人群。可在 12 點標 A 指示方向避免轉向錯誤。",
+              "tips": [
+                {
+                  "text": "MT 背對人群拉 boss",
+                  "role": "tank"
+                },
+                {
+                  "text": "標記 12 點方位",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "圓圈 / 直線 / 分攤 AoE",
+              "type": "aoe",
+              "description": "boss 釋出各種可閃避的圓 AoE / 直線 / 分攤標 → 都有範圍提示。一般分攤默認在場中央集合。",
+              "tips": [
+                {
+                  "text": "看標示分攤集合 / 散位",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "波動砲 Cool Run",
+              "type": "aoe",
+              "description": "boss 隨機點名 1 玩家讀條『波動砲』→ 對該方向釋直線 AoE。注意躲開 boss 正面 → 被點玩家朝場邊引導 + 其他人離直線。",
+              "tips": [
+                {
+                  "text": "被點玩家拉場邊",
+                  "role": "dps"
+                },
+                {
+                  "text": "其他人離開直線",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 小怪階段",
+          "mechanics": [
+            {
+              "name": "智慧信徒（優先 + 全屏 AoE）",
+              "type": "add",
+              "description": "P3 出 3 波小怪 → DPS 必須先集火『智慧信徒』（站原地讀條的）→ 不殺會持續釋全屏 AoE。",
+              "tips": [
+                {
+                  "text": "DPS 集火智慧信徒",
+                  "role": "dps"
+                },
+                {
+                  "text": "T 撿其他小怪",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "意志信徒（次目標）",
+              "type": "add",
+              "description": "智慧信徒死後轉火『意志信徒』（會自疊『傷害提高』buff）。最後集火剩下小怪。",
+              "tips": [
+                {
+                  "text": "智慧死後轉火意志",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P4 阿胡拉馬茲達（冰火 buff）",
+          "mechanics": [
+            {
+              "name": "冰火 buff（刻印）",
+              "type": "mechanic",
+              "description": "boss 進最終階段 → 多冰火 buff 機制：當場地出現冰火圖騰 → 看自身 buff 屬性 → 冰踩冰、火踩火。其他機制（圓圈、直線、分攤、波動砲）跟 P2 相同（都有範圍提示）。",
+              "tips": [
+                {
+                  "text": "冰踩冰 / 火踩火",
+                  "role": "dps"
+                },
+                {
+                  "text": "MT 維持背對 + 波動砲",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "雙 T 配合",
+              "type": "mechanic",
+              "description": "MT/OT 配合 tank swap + Provoke + Shirk 處理 boss 攻擊。",
+              "tips": [
+                {
+                  "text": "tank swap 配合",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "雙奶配合",
+              "type": "mechanic",
+              "description": "雙奶分工 - 1 奶單補 MT，另 1 奶 AoE 補 + 解 debuff。",
+              "tips": [
+                {
+                  "text": "雙奶分工",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "LB 時機",
+              "type": "mechanic",
+              "description": "Limit Break 條滿 → 對應使用：T LB3 抵擋大招、DPS LB3 burst boss、奶 LB3 救團。",
+              "tips": [
+                {
+                  "text": "看時機釋 LB",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "P1：場地崩落走位 + 出啥躲啥 → 進 P2",
+        "P2：MT 背對人群（標 A 12 點）+ 波動砲被點拉場邊",
+        "P3：智慧信徒 → 意志信徒 → 其他（3 波）",
+        "P4：冰火 buff = 冰踩冰、火踩火 + 沿用 P2 機制"
+      ]
+    }
+  ]
 }
