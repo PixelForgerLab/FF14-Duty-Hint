@@ -1,108 +1,187 @@
 {
-  "id": "crown_of_the_immaculate",
-  "name": "真 純潔少年殲滅戰",
-  "nameEn": "The Crown of the Immaculate - Innocence",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 79,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Innocence 純潔少年：Pure of Heart 純粹心 + Bright Hunger 明亮飢渴 + Pillar of Light 光柱。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.0 ShB 蛮神純潔少年純白王冠首戰（Lv 79）。Boss 依序為 Innocence 純潔少年。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "純潔少年",
-      "nameEn": "Innocence",
-      "phases": [
+    "id": "crown_of_the_immaculate",
+    "name": "真 純潔少年殲滅戰",
+    "nameEn": "The Crown of the Immaculate - Innocence",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Realmrazer 蹂躪世界 = 中傷全屏 raidwide。Heavenly Host 召喚 = 1 Forgiven Venery（大）+ 4 Forgiven Shame（小）add 出場。",
+        "P1 Forgiven Venery 的 Holy Sword 弱 tankbuster；Forgiven Shame 的 Scold's Bridle 中傷全屏 → 速殺 Shame 優先。",
+        "P1 Day Break 破曉 = 3 DPS 玩家腳下圓 AoE → 散開放圓。",
+        "P1 Sinsphere 罪之球 + Enthrall 蠱惑同時釋放：4 流星 AoE 需各 1 人接（沒人 = 全屏分攤大傷）+ Enthrall 視線會給混亂 → 用第三人稱視角看流星不看 boss。",
+        "P1 Guiding Light 引導之光（第二次 Heavenly Host 後）= 給 add『Vauthry's Blessing』buff 增傷 → 速殺 add。",
+        "P1 Exalted Wing 至高之翼 = 連續中傷全屏 → P1 結束信號 → Exalted Plumes 最終擊 = 全屏 + Down for the Count → 進 P2。",
+        "P2 Innocence 滿血復活 + checkpoint。Righteous Bolt 直擊雷 = 單體 tankbuster。Winged Reprobation = 場上 2 把劍釋 3 組 3 直線 AoE 對稱圖。",
+        "P2 Rightful Reprobation = 中央 8 劍直線 + 後續返回直線 → 命中加 Physical Vulnerability Up。Soul and Body = 旋轉 S 型 AoE → 跟著 AoE 移動或站安全區。",
+        "P2 Shadowreaver 暗影收割者 = 大傷全屏。Flaming Sword 燃燒之劍 = boss 不可選 + 開始累 Immaculate Authority 條 + 同 5 add 重生（Venery 護盾）。",
+        "P2 Venery 連線各 Shame 釋 Holy Sword 讀條 → 必須在讀條前殺對應 Shame 否則被獻祭釋 Guilty Verdict（全屏 + Slashing Resistance Down 1 層）。Shame 殺完後 Venery 護盾消可打。",
+        "P2 Immaculate Authority 滿 100 = Flaming Sword 團滅；2 層減傷 debuff = 需大減傷；3+ 層建議 T LB。",
+        "P2 God Ray 神之光線 = 中央 3 連扇（近 → 中 → 遠）× 3 次 → 每次安全區變另一個。Light Pillar = 點名直線分攤。",
+        "P2 Beatific Vision 至福之景 = 距離衰減直線 boss 衝場 → 站越遠越安全（T 可站正面開 invul）。"
+    ],
+    "notes": "ShB 5.0 MSQ trial（Lv 80，sync 80，ilvl 460，8 人 trial，時限 60 分），位於聖恩泰倫 純潔王座。為 ShB MSQ 5.0 最終 Lightwarden（光之主）王 - Vauthry 化身光之主 Innocence 純潔少年。劇情：尤里西斯之地的暴君 Vauthry 在絕望中吸收光之主成為 Innocence → 玩家與 Ryne 之力決戰。掉落 Innocence Card 紙牌。",
+    "bosses": [
         {
-          "name": "Innocence 主戰",
-          "mechanics": [
-            {
-              "name": "Magic Eraser 魔法消除",
-              "type": "raidwide",
-              "description": "全屏 AoE + 場上有色標記；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "純潔少年",
+            "nameEn": "Innocence",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Reading 閱讀",
-              "type": "mechanic",
-              "description": "Boss 朝標記方向 → 站側避雷射；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看箭頭預判"
-              ]
-            },
-            {
-              "name": "Skyblind 天盲",
-              "type": "spread",
-              "description": "點名玩家頭頂雷射方向 → 站場邊朝外；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "被點往外走"
-              ]
-            },
-            {
-              "name": "True Light 真光",
-              "type": "aoe",
-              "description": "直線 AoE → 看劍位走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "預判走縫"
-              ]
-            },
-            {
-              "name": "Magicked Sword 魔法之劍",
-              "type": "mechanic",
-              "description": "場上分身劍揮舞 → 預判位置；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看分身朝向"
-              ]
-            },
-            {
-              "name": "Mighty Blow 強擊",
-              "type": "tankbuster",
-              "description": "MT 死刑單體 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Realmrazer 蹂躪世界",
+                            "type": "raidwide",
+                            "description": "中傷全屏 AoE。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Heavenly Host 召喚 + add",
+                            "type": "add",
+                            "description": "召喚 1 Forgiven Venery（大）+ 4 Forgiven Shame（小）add。Scold's Bridle（Shame）= 中傷全屏；Holy Sword（Venery）= 弱 tankbuster。處理：速殺 4 Shame 後再殺 Venery。",
+                            "tips": [
+                                {"text": "DPS 集火 4 Shame", "role": "dps"},
+                                {"text": "MT 拉 Venery 隔開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Day Break 破曉",
+                            "type": "spread",
+                            "description": "3 DPS 玩家腳下出現圓 AoE → 散開放圓避免重疊。",
+                            "tips": [
+                                {"text": "DPS 8 方位散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sinsphere + Enthrall（罪球 + 蠱惑）",
+                            "type": "stack",
+                            "description": "同時釋放：4 流星 AoE 各需 1 人接（沒人 = 全屏分攤大傷）；Enthrall = 視線會給混亂 → 玩家用第三人稱看流星不看 boss。",
+                            "tips": [
+                                {"text": "4 人各接 1 流星", "role": "tank"},
+                                {"text": "視角不看 boss 避混亂", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Guiding Light 引導之光",
+                            "type": "mechanic",
+                            "description": "第二次 Heavenly Host 後 → 給 add『Vauthry's Blessing』buff 增傷 → 必須速殺 add 避免疊太多 buff。",
+                            "tips": [
+                                {"text": "DPS 速殺 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Exalted Wing + Plumes（P1 結束）",
+                            "type": "raidwide",
+                            "description": "Exalted Wing = 連續中傷全屏（每幾秒釋直到 ~3% 血），結束時 Exalted Plumes 大全屏 + Down for the Count → 進 P2。",
+                            "tips": [
+                                {"text": "預備大團補 + 大減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "P2（滿血復活，checkpoint 起點）",
+                    "mechanics": [
+                        {
+                            "name": "Righteous Bolt 直擊雷",
+                            "type": "tankbuster",
+                            "description": "單體 tankbuster → MT 開大減傷。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Winged Reprobation 翼之譴責",
+                            "type": "aoe",
+                            "description": "場上 2 把劍 → 釋放 3 組 3 直線 AoE 對稱圖案 → 看劍方向 + 縫站。",
+                            "tips": [
+                                {"text": "看劍方向走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rightful Reprobation 正義之譴",
+                            "type": "aoe",
+                            "description": "boss 中央 → 釋出 8 劍直線 → 後續返回直線 → 命中加 Physical Vulnerability Up。",
+                            "tips": [
+                                {"text": "閃出去 + 閃回來", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Soul and Body S 形旋轉",
+                            "type": "aoe",
+                            "description": "旋轉 S 形 AoE → 跟著 AoE 走（與 AoE 同方向移動）或站 S 形內 2 個安全區。",
+                            "tips": [
+                                {"text": "跟 AoE 旋轉移動", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Shadowreaver 暗影收割者",
+                            "type": "raidwide",
+                            "description": "高傷全屏。預備大團補與大減傷。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Flaming Sword + Immaculate Authority",
+                            "type": "mechanic",
+                            "description": "boss 不可選 + 開始累 Immaculate Authority 條 + 同 5 add 重生（Venery 護盾）。Authority 100% = 全屏團滅。Venery 對 Shame 讀 Holy Sword → 必須讀條前殺 Shame 否則被獻祭釋 Guilty Verdict（全屏 + Slashing Resistance Down 1 層）。",
+                            "tips": [
+                                {"text": "DPS 速殺 Shame 防獻祭", "role": "dps"},
+                                {"text": "2 層 debuff 需大減傷", "role": "tank"},
+                                {"text": "3+ 層 = T LB", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Manacle 鎖鏈",
+                            "type": "aoe",
+                            "description": "Forgiven Shame 釋放腳下圓 AoE。走縫避開。",
+                            "tips": [
+                                {"text": "走縫避圓", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "God Ray 神之光線（3 連扇 ×3）",
+                            "type": "cone",
+                            "description": "boss 中央 → 3 連扇分 3 階段（近 → 中 → 遠）→ 連續釋放 3 次 → 每次安全區變另一個。看上一次安全區換到下一次。",
+                            "tips": [
+                                {"text": "看上次安全區換下次", "role": "dps"},
+                                {"text": "預判遠 → 中 → 近移動", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Light Pillar 光之柱",
+                            "type": "stack",
+                            "description": "點名玩家直線分攤標 → 全員與被點玩家連線分攤。",
+                            "tips": [
+                                {"text": "全員集合排線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Beatific Vision 至福之景",
+                            "type": "knockback",
+                            "description": "距離衰減直線 → boss 從場邊衝過場到對邊 → 站越遠越安全。T 可站正面開 invul cooldown 維持 uptime。",
+                            "tips": [
+                                {"text": "拉開距離站邊", "role": "dps"},
+                                {"text": "T invul 站正面 uptime", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Star of Light 光之星",
-              "type": "aoe",
-              "description": "場上多圓 AoE 散落；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Holy Bright 光之神聖 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：4 Shame 速殺 → 流星 4 人接 + 視角避 Enthrall 混亂",
+                "P1：Day Break DPS 散開 / Exalted Wing+Plumes 進 P2",
+                "P2：Soul and Body 跟 AoE 旋轉 / Rightful Reprobation 8 劍閃出去再閃回",
+                "P2 Flaming Sword：殺 Shame 防 Venery 獻祭 → Authority 100% 團滅",
+                "P2 God Ray 3 連扇 × 3 看上次安全區換 / Beatific Vision 距離衰減站遠"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Innocence 純潔少年 機制：Pure of Heart 純粹心 + Bright Hunger 明亮飢渴 + Pillar of Light 光柱。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

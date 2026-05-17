@@ -1,115 +1,196 @@
 {
-  "id": "dancing_plague",
-  "name": "真 緹坦妮婭殲滅戰",
-  "nameEn": "The Dancing Plague - Titania",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Titania 緹坦妮婭：Bright Sabbath 明亮安息日 + Phantom Out 幻影 + 召喚 fairy add。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.0 ShB 蛮神緹坦妮婭舞蹈瘟疫首戰（Lv 70）。Boss 依序為 Titania 緹坦妮婭。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "緹坦妮婭",
-      "nameEn": "Titania",
-      "phases": [
+    "id": "dancing_plague",
+    "name": "真 緹坦妮婭殲滅戰",
+    "nameEn": "The Dancing Plague - Titania",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 78,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1（100%~70%）：Divination Rune 占術符文 = 前扇 tankbuster → MT 背對人群。Bright Sabbath 光輝安息 = 無預警全屏。",
+        "P1 Phantom Rune 幻象符文：地板出現圖案 → 或要集合在 boss 下、或離開 boss（看圖案決定）。",
+        "P1 Water Rune 水之符文：4 灘水出現在中央 → 每池需 1 人站 → 空池會召 Spirit of Dew add（爆炸 Spring Shower 全屏大傷）。站水池 5 秒 = 火耐 buff。",
+        "P1 Flame Rune 火焰符文（Water 後 ~15s）：中央火拳 + 點名玩家集合標 → 全員必須在水池內集合分攤（同時吃火耐 buff）。被點玩家不站水池 = 全場火海大傷。",
+        "P2（70%~50%）Midsummer Night's Dream → 場地變草原。Growth Rune 成長符文：中央星標 → 根會朝該方向延伸 + 暈眩 + DoT。",
+        "P2 Frost Rune 寒霜符文：空中多個圓標延遲爆炸 → 依序爆 → 跑安全區。緊接 Mist Rune 霧之符文：點名玩家圓 AoE → 拉開避免重疊。",
+        "Add 階段（50%）：3 add 出場 - Puck（最危險，Hard Swipe 80k 無預警前扇）/ Peaseblossom（slam + AoE 標 Peasebomb）/ Mustardseed（直線連發，站縫即可，不需 tank）。建議雙 T 分拉 Puck 和 Peaseblossom 防 swipe 重疊。",
+        "Add 復活巨大化：3 add 站場北 / 東 / 西邊位 → 招式範圍變大。Puck's Rebuke 中央藍圈 = 即死 → 站近中央不入藍圈承擊退。",
+        "Add 階段結束：Being Mortal 全屏無法閃避 → 傷害值由 Titania's Power 條決定 → 條滿 = 團滅 → 速殺 add。",
+        "P3 沿用 P1 機制全套（不含 add 招）→ Growth Rune 蓋場 + Water/Phantom + Flame + Frost+Mist 連發 → 走位密度極高。"
+    ],
+    "notes": "ShB 5.0 MSQ trial（Lv 78，sync 78，ilvl 425，8 人 trial，時限 60 分），位於拉凱提卡大森林 蘿瑟之國度妖精古堡。為光之主『緹坦妮婭 Titania』妖精女王戰，ShB MSQ 5.0 第一個 Lightwarden（光之主）王。劇情：黑衣森林的妖精族長期被光淹沒，最後一位光之主以惡作劇與雙重身份引誘玩家進入古堡決戰。掉落 Titania Card 紙牌。",
+    "bosses": [
         {
-          "name": "Titania 主戰",
-          "mechanics": [
-            {
-              "name": "Bright Sabbath 明亮安息",
-              "type": "raidwide",
-              "description": "全屏 AoE + 點名玩家遠離；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "緹坦妮婭",
+            "nameEn": "Titania",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Phantom Rune 幻影符文",
-              "type": "mechanic",
-              "description": "場上 3 個顏色標記 → 對應位置處理；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看顏色找對應點"
-              ]
-            },
-            {
-              "name": "Mors Certa 必死之劫",
-              "type": "cone",
-              "description": "MT 扇形 cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Frondesce 葉茂",
-              "type": "aoe",
-              "description": "場上多個 AoE 圓圈散落；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走縫"
-              ]
-            },
-            {
-              "name": "Puck adds 妖精",
-              "type": "add",
-              "description": "場邊召喚妖精 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS AoE 殲滅",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Hard Mist 硬霧",
-              "type": "raidwide",
-              "description": "全屏 AoE + 視野模糊；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P1（100%~70%）",
+                    "mechanics": [
+                        {
+                            "name": "Divination Rune 占術符文",
+                            "type": "tankbuster",
+                            "description": "前扇 tankbuster → 對 MT 約 80k 無減傷傷害。MT 必須拉 boss 背對人群。",
+                            "tips": [
+                                {"text": "MT 背對人群拉 boss", "role": "tank"},
+                                {"text": "MT 開大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Bright Sabbath 光輝安息",
+                            "type": "raidwide",
+                            "description": "無預警全屏 AoE。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Phantom Rune 幻象符文",
+                            "type": "mechanic",
+                            "description": "地板出現圖案 → 兩種解：圖案 A = 全員集合在 boss 下；圖案 B = 全員離開 boss 範圍。看地板圖示判斷。",
+                            "tips": [
+                                {"text": "看地板圖判斷站位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Water Rune 水之符文",
+                            "type": "add",
+                            "description": "中央生成 4 灘水 → 每池倒數計時 → 空池會召 Spirit of Dew add → 爆炸 Spring Shower 全屏大傷。每池站 1 人即可。站水池 5 秒獲『火耐性提高』buff。",
+                            "tips": [
+                                {"text": "4 人各站 1 池", "role": "dps"},
+                                {"text": "T 站池中接 add", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Flame Rune 火焰符文",
+                            "type": "stack",
+                            "description": "Water Rune 後 ~15 秒釋放 → 中央火拳 + 點名玩家集合標 → 全員必須在水池內集合分攤（同時吃火耐 buff）。被點玩家不站水池 = 全場火海大傷。",
+                            "tips": [
+                                {"text": "全員在水池內集合", "role": "dps"},
+                                {"text": "被點玩家進水池", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "走縫"
-              ]
-            },
-            {
-              "name": "Bewitching Bound 巫術束縛",
-              "type": "mechanic",
-              "description": "連線 2 人撞球解；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "連線者撞球"
-              ]
-            },
-            {
-              "name": "Phantom Rune Final 最終符文",
-              "type": "raidwide",
-              "description": "末段加強符文機制 + 全屏；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
                 {
-                  "text": "全員減傷 + 補極限",
-                  "role": "tank"
+                    "name": "P2（70%~50%）森林化",
+                    "mechanics": [
+                        {
+                            "name": "Midsummer Night's Dream 仲夏夜之夢",
+                            "type": "mechanic",
+                            "description": "70% 階段轉場 → 場地變草原 + 新招式。",
+                            "tips": [
+                                {"text": "預備新機制", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Growth Rune 成長符文",
+                            "type": "mechanic",
+                            "description": "中央出現星標 → 根會朝該方向延伸並暈眩擊中玩家 + 持續 DoT。",
+                            "tips": [
+                                {"text": "看星方向避開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Frost Rune 寒霜符文",
+                            "type": "aoe",
+                            "description": "空中多個圓標延遲出現 → 依生成順序依序爆炸 → 跑安全區。後接 Mist Rune。",
+                            "tips": [
+                                {"text": "依順序跑安全區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mist Rune 霧之符文",
+                            "type": "spread",
+                            "description": "點名玩家頭頂圓 AoE → 全員拉開避免重疊。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Add 階段（50% 至 add 結束）",
+                    "mechanics": [
+                        {
+                            "name": "Puck（最危險）",
+                            "type": "add",
+                            "description": "Hard Swipe 無預警前扇 80k 大傷 → 一定要由 T 拉穩面向；DPS 不能站在 Puck 前方。",
+                            "tips": [
+                                {"text": "T1 拉 Puck 背對團", "role": "tank"},
+                                {"text": "DPS 永遠在 Puck 後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Peaseblossom（次危險）",
+                            "type": "add",
+                            "description": "slam 攻擊 MT + Peasebomb 放地面 AoE 標 → 雙 T 分拉 Puck 和 Peaseblossom 防 swipe 重疊。",
+                            "tips": [
+                                {"text": "T2 拉 Peaseblossom 隔開", "role": "tank"},
+                                {"text": "Peasebomb AoE 走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mustardseed（直線）",
+                            "type": "aoe",
+                            "description": "前方直線 AoE 連續多條 → 站線間縫即可。不需 tank。",
+                            "tips": [
+                                {"text": "站線縫 DPS 打", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Add 復活巨大化",
+                            "type": "mechanic",
+                            "description": "Add 殺完後 Titania 復活並讓 3 add 巨大化站場北 / 東 / 西邊位 → 招式範圍變大：Mustardseed 直線跨場、Peaseblossom AoE 標更大且頻繁、Puck's Breath 對 T 大傷。",
+                            "tips": [
+                                {"text": "更精準走位", "role": "dps"},
+                                {"text": "T 開大減傷防 Puck's Breath", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Puck's Rebuke 中央藍圈（OHKO）",
+                            "type": "knockback",
+                            "description": "巨大化階段 Titania 中央釋放 → 地板出現方向標朝外 + 中央藍圈 = 一擊死。處理：站近中央但不入藍圈 → 承擊退距離最短。",
+                            "tips": [
+                                {"text": "站近中央外緣", "role": "dps"},
+                                {"text": "絕對不入藍圈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Being Mortal 凡軀（add 結束）",
+                            "type": "raidwide",
+                            "description": "Add 階段結束 → Titania 釋『凡軀』無法閃避全屏。傷害值由『Titania's Power』條決定 → 條滿（add 殺不夠快）= 團滅 → 必須速殺 add。",
+                            "tips": [
+                                {"text": "DPS 速殺 add 壓 Power", "role": "dps"},
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 終局（沿用 P1 全機制）",
+                    "mechanics": [
+                        {
+                            "name": "全機制混合",
+                            "type": "mechanic",
+                            "description": "P3 沿用 P1 全機制（不含 add 招）+ 多次 Growth Rune 蓋場 + Water/Phantom + Flame + Frost+Mist 連發 → 走位密度極高。",
+                            "tips": [
+                                {"text": "走位密度高 → 預判機制", "role": "dps"},
+                                {"text": "Bright Sabbath 連團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：Divination 前扇 / Phantom 看圖 / Water 4 池站滿 / Flame 水池內 stack",
+                "P2 70%：Growth 星方向避 / Frost 順序圓 / Mist 散開",
+                "Add 50%：Puck 前扇優先 + 雙 T 分拉 + 巨大化避中央藍圈 + 速殺壓 Power",
+                "P3：P1 機制全套 + Growth 蓋場 → 走位密度高"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Titania 緹坦妮婭 機制：Bright Sabbath 明亮安息日 + Phantom Out 幻影 + 召喚 fairy add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

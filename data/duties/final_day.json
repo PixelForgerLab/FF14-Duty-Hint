@@ -1,102 +1,204 @@
 {
-  "id": "final_day",
-  "name": "真 終末之歌詠者殲滅戰",
-  "nameEn": "The Final Day - The Endsinger",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 終末之歌詠者殲滅戰 - Endsinger 終末之歌詠者。",
-    "核心機制：Aether Hue 以太色 + Elegy 輓歌 + 多階段機制。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.0 EW 主線終末之歌詠者（Lv 90）。Boss 為 Endsinger 終末之歌詠者。重點：Aether Hue 以太色 + Elegy 輓歌 + 多階段機制。",
-  "bosses": [
-    {
-      "name": "終末之歌詠者",
-      "nameEn": "Endsinger",
-      "phases": [
+    "id": "final_day",
+    "name": "真 終末之歌詠者殲滅戰",
+    "nameEn": "The Final Day - The Endsinger",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "場邊可掉下 → 防擊退保命。可在 Add 階段前用 LB3（Ultimate Fate 倒數前會立即充滿）。",
+        "P1：Elegeia 全屏 + 兩星圍場 → 看慢的那顆星 → 它撞上時釋大半場 AoE → 離開慢星方向。",
+        "P1 Galaxias 銀河 = 中央流星擊退 → 跑場中央接擊退（只被推一半距離）→ 有防擊退技能就用。",
+        "P1 Elenchos 駁論：看臉部特效 → 嘴發紫光 = 中央直線 → 站兩側；眼睛紫淚 = 兩側直線 → 站中央。",
+        "P1 Death's Embrace 死亡擁抱 = 點名追蹤錐形 AoE → 散開不重疊。隨後刷 Feather of Despair 羽毛 add → 釋 Pharmakon 圓 AoE → 走開羽毛。",
+        "P1 Aporrhos 漏失 = 4 個臉朝外釋直線 AoE（像 Elenchos 嘴版）→ 站臉之間的縫。Hubris 傲慢 = 雙 T tankbuster（AoE）→ 分開接 + 多重減傷。",
+        "P1 Elegeia Unforgotten 不被遺忘 = 全屏 + 兩星 → 同 Elegeia 但會 Fatalism 倒回事件再 replay → 注意慢星的爆炸順序（固定）。",
+        "P1 Ekstasis 出神 = 場上 AoE 池 → 變臉 → 再噴 AoE 池 → 站場邊四方位（東南西北）避免被池追到。",
+        "P1 Interstellar 星際 = voice『'Tis so lonely between the stars』→ boss 換位 + 中央直線 → 站兩邊 + 同時 4 玩家圓 AoE → 站位讓 AoE 不重疊且留安全區。",
+        "P1 Nemesis 復仇女神 = 全員腳下圓 AoE → 散開拉開。Planetes = 進 Add 階段（cutscene）。",
+        "Add 階段：Endsinger 召項鍊 Kakodaimon 充能紫色滅亡球 + Despair 條。Meteor Radiant = 彩虹箭指示流星落點 → 走開。Meteor Outburst = 每人 AoE → 散開。",
+        "Ultimate Fate 終極命運 = 高傷全屏，傷害值由 Despair 條決定。Despair 100% 或無 T LB3 = 團滅 → 必須 T LB3 + 大減傷。之後再釋第二次 Ultimate Fate（無 LB 可擋）→ 故意團滅 → 進 P2 cutscene。",
+        "P2：全員獲 Prayers of Hope 希望祈禱 buff 隨時間堆叠（大幅傷害增加）。Telos 全屏 → Telomania 連環機制（4 cleaves + raidwide + 3 組玩家腳下 AoE 池）→ 重複至 boss 死。每次 Telomania 後 boss 自疊 Damage Up buff → 必須抓緊輸出。"
+    ],
+    "notes": "EW 6.0 MSQ 終戰 trial（Lv 90，sync 90，ilvl 555，8 人 trial，時限 60 分），位於月之裏側 Ultima Thule 終末之地。為 EW MSQ 6.0 結尾 - 與終末之歌詠者 The Endsinger（Meteion 蛻變的負面情緒集合體）的決戰。劇情：曉月之終焉的高潮，光之戰士在月球外宇宙與所有絕望的化身對抗，最後依靠『希望』之力反擊。掉落 Meteion Card。整場是劇情與機制完美結合的代表作。",
+    "bosses": [
         {
-          "name": "Endsinger 主戰",
-          "mechanics": [
-            {
-              "name": "Aetheric Symphony 以太交響曲",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "終末之歌詠者",
+            "nameEn": "The Endsinger",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Diaresis 二聲符",
-              "type": "aoe",
-              "description": "場邊 + 場上多 AoE 連環；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Telomere 染色體",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Elegeia 哀歌 + 雙星撞擊",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 場外兩星圍繞 → 看『慢』的那顆星 → 它撞上時釋大半場 AoE → 玩家離開慢星方向。",
+                            "tips": [
+                                {"text": "看慢星方向避開", "role": "dps"},
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Galaxias 銀河",
+                            "type": "knockback",
+                            "description": "中央流星擊退 → 跑場中央接擊退（只被推一半距離）→ 有防擊退技能（Arm's Length / Surecast）就用。",
+                            "tips": [
+                                {"text": "中央接擊退", "role": "dps"},
+                                {"text": "用防擊退保命", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Elenchos 駁論（看臉部）",
+                            "type": "aoe",
+                            "description": "兩種：嘴發紫光 = 中央直線 → 站兩側；眼睛紫淚 = 兩側直線 → 站中央。看臉部特效判斷。",
+                            "tips": [
+                                {"text": "嘴 = 站兩側", "role": "dps"},
+                                {"text": "眼 = 站中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Death's Embrace 死亡擁抱 + Feather of Despair",
+                            "type": "cone",
+                            "description": "點名玩家追蹤錐形 AoE → 各自拉開不重疊。隨後刷 Feather of Despair 羽毛 add → 釋 Pharmakon 圓 AoE → 走開羽毛位置。",
+                            "tips": [
+                                {"text": "8 方位散開錐", "role": "dps"},
+                                {"text": "離開羽毛位置", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Aporrhos 漏失（4 臉直線）",
+                            "type": "aoe",
+                            "description": "場上 4 個臉朝外釋直線 AoE（像 Elenchos 嘴版）→ 站臉之間的縫（4 個安全角）。",
+                            "tips": [
+                                {"text": "站 4 臉之間縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hubris 傲慢",
+                            "type": "tankbuster",
+                            "description": "雙 T 各自 AoE tankbuster → 分開接（避免互相重疊）+ 多重減傷。",
+                            "tips": [
+                                {"text": "雙 T 拉開接", "role": "tank"},
+                                {"text": "MT/OT 多重減傷", "role": "tank"},
+                                {"text": "雙奶補 T", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Elegeia Unforgotten + Fatalism",
+                            "type": "raidwide",
+                            "description": "全屏 + 兩星出現 → boss 釋 Fatalism 倒回事件 → 兩星再次出現 → replay 撞擊（順序固定）→ 記住順序預判走位。",
+                            "tips": [
+                                {"text": "記住第一次順序", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ekstasis 出神（AoE 池追蹤）",
+                            "type": "aoe",
+                            "description": "場上落下 AoE 池 → 池變臉 → 再噴新 AoE 池 → 玩家站場邊 4 方位（東南西北最角）避免被池追到。",
+                            "tips": [
+                                {"text": "站場邊四方位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Interstellar 星際",
+                            "type": "mechanic",
+                            "description": "voice『'Tis so lonely between the stars』→ boss 換位 + 中央直線 → 站兩側 + 4 玩家頭頂圓 AoE → 站位讓 AoE 不重疊且留出 1 個無 AoE 玩家安全空間。",
+                            "tips": [
+                                {"text": "站兩側 + 4 圓拉開", "role": "dps"},
+                                {"text": "無 AoE 玩家有安全空", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Nemesis 復仇女神",
+                            "type": "spread",
+                            "description": "全員腳下圓 AoE → 散開拉開避免重疊。",
+                            "tips": [
+                                {"text": "全員散開", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Despair Unforgotten 不忘的絕望",
-              "type": "stack",
-              "description": "分組分攤 + 散標；全員集合分攤傷害 缺人會爆血；全員集合分攤傷害 缺人會爆血。",
-              "tips": [
-                "分組站位"
-              ]
-            },
-            {
-              "name": "Elenchos 駁論",
-              "type": "aoe",
-              "description": "場中央圓 + 場邊環 → 看圖示位置；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圖示貼/離"
-              ]
-            },
-            {
-              "name": "Twinsong 雙生之歌",
-              "type": "mechanic",
-              "description": "場上分身 → 看本體位置；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看本體預判"
-              ]
-            },
-            {
-              "name": "Ultimate Fate 終極命運 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "Add 階段（Despair + Ultimate Fate）",
+                    "mechanics": [
+                        {
+                            "name": "Kakodaimon 項鍊 + Despair 條",
+                            "type": "add",
+                            "description": "Planetes 進入 add 階段（cutscene）→ Endsinger 召項鍊 Kakodaimon 充能紫色滅亡球 + Despair 條時間累積。",
+                            "tips": [
+                                {"text": "DPS 速殺 Kakodaimon", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Radiant 流星輝光",
+                            "type": "aoe",
+                            "description": "Kakodaimon 召喚場外流星 → 彩虹箭指示流星落點 → 走開避免被擊中。",
+                            "tips": [
+                                {"text": "看彩虹箭走開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Outburst 流星爆裂",
+                            "type": "spread",
+                            "description": "每人頭頂 AoE → 散開拉距。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ultimate Fate 終極命運（必 T LB3）",
+                            "type": "raidwide",
+                            "description": "全屏 → 傷害值由 Despair 條決定。Despair 100% 或無 T LB3 = 團滅 → 必須 T LB3 + 大減傷。隨後再釋第二次 Ultimate Fate（無 LB 可擋）→ 故意團滅 → cutscene 進 P2。",
+                            "tips": [
+                                {"text": "T LB3 接第一次", "role": "tank"},
+                                {"text": "DPS 速殺壓 Despair 低", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員減傷",
-                  "role": "tank"
+                    "name": "P2 希望之力",
+                    "mechanics": [
+                        {
+                            "name": "Prayers of Hope 希望祈禱",
+                            "type": "mechanic",
+                            "description": "P2 全員獲 Prayers of Hope buff 隨時間堆叠 → 大幅傷害增加 + 提升強度。",
+                            "tips": [
+                                {"text": "全員爆發輸出", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Telos 終結",
+                            "type": "raidwide",
+                            "description": "全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Telomania 終結狂亂（連環機制）",
+                            "type": "mechanic",
+                            "description": "重複至 boss 死的連環機制：(1) 4 cleaves 半場 → 減傷補血；(2) 全屏中傷；(3) 3 組玩家腳下 AoE 池 → 走避。每次 Telomania 後 boss 自疊 Damage Up buff → 必須抓緊輸出。",
+                            "tips": [
+                                {"text": "持續走避 + DPS 全力", "role": "dps"},
+                                {"text": "連續團補維持", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Elegeia → 看慢星方向 / Galaxias → 中央接擊退",
+                "P1 Elenchos → 嘴 = 兩側 / 眼 = 中央",
+                "P1 Aporrhos → 4 臉間縫 / Hubris → 雙 T 拉開",
+                "P1 Ekstasis → 4 角站 / Interstellar → 兩側 + 4 圓拉開留安全空",
+                "Add → Kakodaimon 速殺 → Ultimate Fate 必 T LB3",
+                "P2 → Prayers of Hope buff 爆發 / Telomania 重複至 boss 死"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Endsinger 終末之歌詠者 機制：Aether Hue 以太色 + Elegy 輓歌 + 多階段機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

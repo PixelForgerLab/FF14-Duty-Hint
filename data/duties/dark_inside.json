@@ -1,91 +1,164 @@
 {
-  "id": "dark_inside",
-  "name": "真 索德雷恩殲滅戰",
-  "nameEn": "The Dark Inside - Zodiark",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 89,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 索德雷恩殲滅戰 - Zodiark 索德雷恩。",
-    "核心機制：Adikia 暴行 + Astral Eclipse 星蝕 + Algedon 痛苦 + Ania 不義。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.0 EW 主線蛮神索德雷恩（Lv 89）。Boss 為 Zodiark 索德雷恩。重點：Adikia 暴行 + Astral Eclipse 星蝕 + Algedon 痛苦 + Ania 不義。",
-  "bosses": [
-    {
-      "name": "索德雷恩",
-      "nameEn": "Zodiark",
-      "phases": [
+    "id": "dark_inside",
+    "name": "真 索德雷恩殲滅戰",
+    "nameEn": "The Dark Inside - Zodiark",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 83,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "場邊可掉落 → 防擊退保命。Zodiark 索德雷恩固定在場一側 → 不會移動到對面。",
+        "P1：Kokytos 開場 = 全員血量降到 1 → 治療立即補滿。",
+        "P1 Exoterikos 外發 = boss 射線打場邊 + 出現符文：紫色光 + 紫藍三角符 = 寬扇形 AoE 對面（覆蓋 boss → 對面兩角）→ 站貼近場邊；紅 / 粉光 + 紅符 = 半場 AoE → 站對半。看符文顏色判斷。",
+        "P1 Ania 怒意 = 中傷 tankbuster。Styx 冥河 = 極高傷 stack 標連續多 hit → 全員集合 + 大減傷 + 大團補。",
+        "P1 Paradeigma 範式：召兩種：(a) Behemoths 貝希摩斯 - 兩兩配對覆蓋一個象限 → 站其他兩個安全象限；(b) Snakes 蛇 - 兩條直線 AoE 占場一邊 1/4 → 站線間或邊縫。",
+        "P1 Adikia 不義 = 左右兩拳擊中場側 + 大圓中央會合 → 站場北 / 南安全區。Phlegeton 火河 = 玩家腳下 3 波 AoE → 持續移動避開。",
+        "P1 Complete Control 完全控制 = boss 變身進 P2。",
+        "P2 沿用 P1 招 + 新機制。Astral Flow 占星流動 = Paradeigma 後場地旋轉 90° → 蛇 / 貝希摩斯也跟著轉 → 預判旋轉後位置。",
+        "P2 Triple Esoteric Ray 三重秘奧射線 = 3 條激光依序射出 → 不滯留 → 看到激光當下立刻跑進該位置（已爆 = 安全）。固定 2 種序列：左右先 / 中央先。",
+        "P2 Algedon 痛 = boss 從前左或前右角斜對角穿場 + 擊退到場外（即死）→ AoE 預警極短 → 提前看 boss 走到哪角預判。",
+        "P2 Astral Eclipse 星座蝕 = boss 離場逆時針繞 → 對 3 個邊釋星圖（3x3 網格 + 對應隕石落點）→ 看星圖 3 種模式選安全 1x3 格走位。",
+        "P2 Trimorphos Exoterikos 三相外發 = 3 個 Exoterikos 在 3 個邊依序釋放 → 看符文順序連續走位。"
+    ],
+    "notes": "EW 6.1 MSQ trial（Lv 83，sync 83，ilvl 543，8 人 trial，時限 60 分），位於 The Dark Inside 終末之地。為 EW MSQ 6.1『新生』後段對抗復活的索德雷恩 Zodiark（終焉之神，三神之首）。劇情：在艾默特賽爾克失敗後，三神終焉再臨 → 玩家需粉碎索德雷恩的回歸。掉落 Zodiark Card。Zodiark 配對對手是 Hydaelyn（Mothercrystal）兩者皆為 EW MSQ 6.1 雙王 trial。",
+    "bosses": [
         {
-          "name": "Zodiark",
-          "mechanics": [
-            {
-              "name": "Algedon 招式",
-              "type": "raidwide",
-              "description": "全屏 + 流血；全員預備減傷與大團補。",
-              "tips": [
+            "name": "索德雷恩",
+            "nameEn": "Zodiark",
+            "phases": [
                 {
-                  "text": "全員減傷 + 連補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Astral Eclipse 日蝕",
-              "type": "other",
-              "description": "場分光暗，依顏色站對位；依預兆走位處理。",
-              "tips": [
-                "看光暗 → 站對色"
-              ]
-            },
-            {
-              "name": "Adikia line Adikia 線",
-              "type": "tankbuster",
-              "description": "雙坦 line buster + Magic Vuln；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Kokytos 哀哭 + 場邊即死",
+                            "type": "raidwide",
+                            "description": "開場 boss 將全員血量降到 1 → 治療必須立即補滿。場邊可掉落 → 防擊退保命。boss 固定在場一側不移動。",
+                            "tips": [
+                                {"text": "治療立即補滿", "role": "healer"},
+                                {"text": "防擊退保命", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Exoterikos 外發（看符文）",
+                            "type": "mechanic",
+                            "description": "boss 射線打場邊 + 出現符文：紫色光 + 紫藍三角符 = 寬扇形 AoE 對面（覆蓋 boss → 對面兩角）→ 站貼近場邊；紅 / 粉光 + 紅符 = 半場 AoE → 站對半。看顏色 + 符文形狀判斷。",
+                            "tips": [
+                                {"text": "三角符 → 站對面外側", "role": "dps"},
+                                {"text": "方形符 → 站對半", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ania 怒意",
+                            "type": "tankbuster",
+                            "description": "中傷 tankbuster。",
+                            "tips": [
+                                {"text": "MT 開減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Styx 冥河",
+                            "type": "stack",
+                            "description": "極高傷 stack 標 → 連續多 hit → 全員集合 + 大減傷 + 大團補。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"},
+                                {"text": "大減傷 + 補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Paradeigma 範式（Behemoth / Snake）",
+                            "type": "mechanic",
+                            "description": "召兩種隨機：Behemoth 貝希摩斯 - 兩兩配對覆蓋兩個象限 → 站其他兩個安全象限；Snake 蛇 - 兩條直線 AoE 占場 1/4 → 站線間或邊縫。",
+                            "tips": [
+                                {"text": "Behemoth → 站安全象限", "role": "dps"},
+                                {"text": "Snake → 站線間縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Adikia 不義",
+                            "type": "aoe",
+                            "description": "左右兩拳擊中場側 + 大圓中央會合 → 安全區為場地北 / 南 兩端。",
+                            "tips": [
+                                {"text": "站場北或南端", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Phlegeton 火河",
+                            "type": "aoe",
+                            "description": "玩家腳下 3 波 AoE 連續釋放 → 持續移動避開。",
+                            "tips": [
+                                {"text": "持續移動避波", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "雙坦分坦或換手",
-                  "role": "tank"
+                    "name": "P2 Complete Control 變身",
+                    "mechanics": [
+                        {
+                            "name": "Complete Control 完全控制",
+                            "type": "mechanic",
+                            "description": "boss 變身進 P2 → 沿用 P1 招 + 新機制。",
+                            "tips": [
+                                {"text": "預備新機制節奏", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Astral Flow 占星流動",
+                            "type": "mechanic",
+                            "description": "Paradeigma 後場地旋轉 90° → 蛇 / 貝希摩斯位置也跟著旋轉 → 預判旋轉後位置。",
+                            "tips": [
+                                {"text": "預判 90° 旋轉後位置", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Triple Esoteric Ray 三重秘奧射線",
+                            "type": "aoe",
+                            "description": "3 條激光依生成順序射出 → 不滯留 → 看到激光當下立刻跑進該位置（已爆 = 安全）。固定 2 種序列：左右先（中央安全）→ 中央射；或中央先（兩側安全）→ 左右射。",
+                            "tips": [
+                                {"text": "看激光順序預判走位", "role": "dps"},
+                                {"text": "已爆區立刻跑進", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Algedon 痛（穿場擊退）",
+                            "type": "knockback",
+                            "description": "boss 走到前左角或前右角 → 斜對角穿場 + 擊退到場外即死 → AoE 預警極短 → 提前看 boss 角位預判方向。",
+                            "tips": [
+                                {"text": "看 boss 角位預判方向", "role": "dps"},
+                                {"text": "提前移到非斜線位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Astral Eclipse 星座蝕",
+                            "type": "mechanic",
+                            "description": "boss 離場逆時針繞 → 對 3 個邊釋星圖 → 場地分 3x3 網格 → 星圖對應隕石落點。3 種模式（看圖選 1x3 安全格走位）。",
+                            "tips": [
+                                {"text": "看星圖選 1x3 安全格", "role": "dps"},
+                                {"text": "預判 boss 繞場順序", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Trimorphos Exoterikos 三相外發",
+                            "type": "mechanic",
+                            "description": "3 個 Exoterikos 在 3 個邊依序釋放 → 看符文順序連續走位（三角 / 方形組合）。",
+                            "tips": [
+                                {"text": "看 3 連符文順序走位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Phobos 凝視",
-              "type": "other",
-              "description": "Boss 凝視 → 看 = 致命；依預兆走位處理。",
-              "tips": [
-                "背對 boss"
-              ]
-            },
-            {
-              "name": "Paradeigma 範式",
-              "type": "other",
-              "description": "Boss 召分身 + 雙頭蛇 line AoE；依預兆走位處理。",
-              "tips": [
-                "看分身 + 走縫"
-              ]
-            },
-            {
-              "name": "Exoteric Pattern α/β 招式",
-              "type": "other",
-              "description": "場上 4 段機制鏈 (圈 / line / stack / spread) 連發。",
-              "tips": [
-                "照固定順序解"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Kokytos 開場 1HP → 治療補滿 / 場邊即死防擊退",
+                "Exoterikos：三角符 = 對面外側 / 方形符 = 對半",
+                "Paradeigma：Behemoth = 站對角象限 / Snake = 站線間",
+                "Adikia 站北 / 南 / Phlegeton 持續移動",
+                "P2 Astral Flow 90° 旋轉預判 / Triple Ray 看順序跑爆好位",
+                "P2 Algedon 看角位斜對角 / Astral Eclipse 看星圖選 1x3 安全格"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Zodiark 索德雷恩 機制：Adikia 暴行 + Astral Eclipse 星蝕 + Algedon 痛苦 + Ania 不義。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

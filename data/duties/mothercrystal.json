@@ -1,113 +1,181 @@
 {
-  "id": "mothercrystal",
-  "name": "真 海德林殲滅戰",
-  "nameEn": "The Mothercrystal - Hydaelyn",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 89,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 海德林殲滅戰 - Hydaelyn 海德林。",
-    "核心機制：Echoes 回響 + Equinox 春秋分點 + Anima 阿尼瑪。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.0 EW 主線蛮神海德林（Lv 89）。Boss 為 Hydaelyn 海德林。重點：Echoes 回響 + Equinox 春秋分點 + Anima 阿尼瑪。",
-  "bosses": [
-    {
-      "name": "海德林",
-      "nameEn": "Hydaelyn",
-      "phases": [
+    "id": "mothercrystal",
+    "name": "真 海德林殲滅戰",
+    "nameEn": "The Mothercrystal - Hydaelyn",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 89,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "場地外圈即死 → 不要被擊退或站太邊。",
+        "Heroes's Radiance / Magos's Radiance / Radiant Halo = 全屏 raidwide → 預備團補。Mousa's Scorn = 雙 T 分攤 tankbuster → MT/OT 集合接傷。",
+        "Dawn Mantle 黎明披風（核心機制）：看 boss 換武器 + 顏色判斷 AoE：紅 = Dancer Chakrams 大甜甜圈 → 站 boss hitbox 內；綠 = WhiteMage Staff 大圓 → 跑遠；藍 = Paladin Sword/Shield 十字（東南西北 4 方）→ 站斜方向（東北/東南/西北/西南）。注意：本招無橘色 AoE 預兆，必須看武器顏色！",
+        "Add 階段：voice『Crystals of Light, to me!』→ 玩家傳送至彩虹圓盤 + 周圍 6 水晶 → 必須在 Conviction 條達 100 前秒掉全部水晶（否則團滅）。",
+        "Add 階段招式：Hydaelyn's Ray = 中央橘色線距離衰減 → 站圓盤邊緣遠離中線。Crystalline Stone III = 集合分攤標。Crystalline Blizzard III = 散開圓 AoE。Exodus = 階段結束大全屏。",
+        "回原場：Crystallize 結晶 = boss 讀條後機制延後到下一個 Dawn Mantle 之後解 → 玩家先躲 Dawn Mantle 再分散 / 集合。",
+        "Parhelion 假日 = boss 釋 3 組直線 chakram → 依序爆 → 站第 1 組旁未爆區。Subparhelion = chakram 釋第二輪反向直線（蓋滿全場）→ 跟著爆好的區域走。",
+        "Parhelic Circle 假日環 = 雪花綠標 → 中央 + 雪花尖端為 AoE → 站雪花線之間的安全區。",
+        "Heroes's Sundering 英雄分裂 = MT 前扇 tankbuster → 其他人繞背。",
+        "Lightwave 光波 + Echoes 餘響：4 大波光從邊推進 → 兩兩錯開時間 → 站不會被波打的位置；隨後 Echoes 立即釋多次集合分攤 → 集合分攤完再閃光波（時間足夠）。"
+    ],
+    "notes": "EW 6.0 MSQ trial（Lv 89，sync 89，ilvl 525，8 人 trial / 也可 Duty Support，時限 60 分），位於 The Mothercrystal 母水晶之地。為 EW MSQ 6.0『曉月之終焉』前段，光之戰士與母水晶 Hydaelyn 海德林（最後的初代）的告別戰。本副本是遊戲史上第一個提供 Duty Support（NPC 編隊）的 8 人 trial。劇情：在前往月球之前，海德林化身為敵對形態考驗光之戰士的決心 → 用『光之武器』來模仿光戰士的招式（Dancer/WhiteMage/Paladin）。掉落 Hydaelyn Card 紙牌。",
+    "bosses": [
         {
-          "name": "Hydaelyn 主戰",
-          "mechanics": [
-            {
-              "name": "Heavenly Stretch 天伸",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "海德林",
+            "nameEn": "Hydaelyn",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Crystal Cleave 水晶劈擊",
-              "type": "cone",
-              "description": "MT 扇形 cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+                    "name": "P1 主戰",
+                    "mechanics": [
+                        {
+                            "name": "場邊即死",
+                            "type": "mechanic",
+                            "description": "場地外圈即死 → 不要被擊退到場邊。",
+                            "tips": [
+                                {"text": "防擊退保命", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Heroes's Radiance / Magos's Radiance",
+                            "type": "raidwide",
+                            "description": "全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Dawn Mantle 黎明披風（武器顏色辨識）",
+                            "type": "mechanic",
+                            "description": "boss 換武器 + 顏色提示 → 釋對應 AoE。紅（Dancer Chakrams）= 大甜甜圈 → 站 boss hitbox 內；綠（WhiteMage Staff）= 大圓 boss 中心 → 跑遠；藍（Paladin Sword/Shield）= 十字（東南西北 4 方）→ 站斜方位。注意：無橘色 AoE 預兆，看武器顏色！",
+                            "tips": [
+                                {"text": "紅 = 貼 boss 中心", "role": "dps"},
+                                {"text": "綠 = 跑遠", "role": "dps"},
+                                {"text": "藍 = 站斜方位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mousa's Scorn 繆思之怒",
+                            "type": "tankbuster",
+                            "description": "雙 T 分攤 tankbuster → MT + OT 站一起接傷。",
+                            "tips": [
+                                {"text": "雙 T 集合分攤", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Echoes 回響 (3 分身)",
-              "type": "mechanic",
-              "description": "場上 3 個分身發 AoE → 看本體走位；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看本體預判"
-              ]
-            },
-            {
-              "name": "Lateral Aureole 側暈",
-              "type": "aoe",
-              "description": "場邊圓形 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "離場邊"
-              ]
-            },
-            {
-              "name": "Magos's Radiance 魔光",
-              "type": "spread",
-              "description": "點名 3 人圓形 AoE → 散開；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "分散"
-              ]
-            },
-            {
-              "name": "Mousa's Scorn 嘲弄",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "Add 階段（水晶 + 圓盤）",
+                    "mechanics": [
+                        {
+                            "name": "Conviction 條 + 6 水晶",
+                            "type": "add",
+                            "description": "voice『Crystals of Light, to me!』→ 玩家傳送至彩虹圓盤 + 周圍 6 水晶 → 必須在 Conviction 條達 100 前秒掉全部水晶（否則團滅）。",
+                            "tips": [
+                                {"text": "DPS 集火依序殺", "role": "dps"},
+                                {"text": "全員爆發", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hydaelyn's Ray 海德林光線",
+                            "type": "knockback",
+                            "description": "中央橘色線距離衰減 → 站圓盤邊緣遠離中線降低傷害。",
+                            "tips": [
+                                {"text": "站圓盤邊緣遠中線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Crystalline Stone III / Blizzard III",
+                            "type": "mechanic",
+                            "description": "Stone III = 集合分攤標 → 全員 stack；Blizzard III = 散開圓 AoE → 各自拉開避免重疊。",
+                            "tips": [
+                                {"text": "Stone = 集合 / Blizzard = 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Exodus 出埃及（階段結束）",
+                            "type": "raidwide",
+                            "description": "Add 階段結束大全屏 → 預備大團補。",
+                            "tips": [
+                                {"text": "預備大團補 + 減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "P2 回原場（新增機制）",
+                    "mechanics": [
+                        {
+                            "name": "Crystallize 結晶（延後解算）",
+                            "type": "mechanic",
+                            "description": "boss 讀條 Crystallize → 機制不立即發動，延後到下一個 Dawn Mantle 之後解 → 玩家先躲 Dawn Mantle，再依 Crystallize 標記類型分散 / 集合。",
+                            "tips": [
+                                {"text": "先躲 Dawn Mantle 再解 Crystallize", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Parhelion 假日（3 組 chakram）",
+                            "type": "aoe",
+                            "description": "boss 釋 3 組直線 chakram → 依生成順序爆 → 站第 1 組旁未爆區。後續緊接 Subparhelion。",
+                            "tips": [
+                                {"text": "站第 1 組旁未爆區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Subparhelion 副假日",
+                            "type": "aoe",
+                            "description": "Parhelion 的 chakram 釋第二輪反向直線 → 蓋滿全場 → 玩家跟著爆好的區域走（第 1 組爆完跑進其位置）。",
+                            "tips": [
+                                {"text": "跟爆好的區域走", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Parhelic Circle 假日環",
+                            "type": "aoe",
+                            "description": "雪花形綠標出現 → 中央 + 雪花尖端為 AoE → 站雪花線之間的安全區。",
+                            "tips": [
+                                {"text": "站雪花線之間", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Heroes's Sundering 英雄分裂",
+                            "type": "cone",
+                            "description": "MT 前扇 tankbuster → 其他人繞背。",
+                            "tips": [
+                                {"text": "MT 拉背對團", "role": "tank"},
+                                {"text": "繞背避扇", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Radiant Halo 光輝光環",
+                            "type": "raidwide",
+                            "description": "全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Lightwave + Echoes 光波 + 餘響",
+                            "type": "mechanic",
+                            "description": "4 大波光從邊推進 → 兩兩錯開時間 → 找安全位（兩波之間的縫）。隨後 Echoes 立即釋多次集合分攤 → 集合分攤完再閃光波（時間足夠）。",
+                            "tips": [
+                                {"text": "找光波縫站", "role": "dps"},
+                                {"text": "Echoes 先 stack 再閃波", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Equinox 春秋分",
-              "type": "aoe",
-              "description": "場上多 AoE 散落 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Final enrage",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "場邊即死 → 防擊退",
+                "Dawn Mantle 看武器顏色：紅 = 貼 / 綠 = 遠 / 藍 = 斜方位（無橘色預兆）",
+                "Mousa's Scorn → 雙 T 分攤",
+                "Add 階段：6 水晶 Conviction 100 前秒完 + Hydaelyn's Ray 站邊遠中線",
+                "P2 Parhelion → Subparhelion 跟爆區走 / Parhelic Circle 站雪花線間",
+                "P2 Lightwave + Echoes → 集合分攤後閃光波"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Hydaelyn 海德林 機制：Echoes 回響 + Equinox 春秋分點 + Anima 阿尼瑪。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

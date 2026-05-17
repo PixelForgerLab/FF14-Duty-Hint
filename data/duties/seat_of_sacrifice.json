@@ -1,100 +1,222 @@
 {
-  "id": "seat_of_sacrifice",
-  "name": "光之戰士殲滅戰",
-  "nameEn": "The Seat of Sacrifice - The Warrior of Light (Elidibus)",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Warrior of Light 光之戰士：Crystalline Stream 水晶流 + Job Mechanics 各職業技能 + 召喚水晶 add。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.3 ShB 蛮神光之戰士犧牲之座（Lv 80）。Boss 依序為 Warrior of Light 光之戰士。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "光之戰士",
-      "nameEn": "Warrior of Light",
-      "phases": [
+    "id": "seat_of_sacrifice",
+    "name": "光之戰士殲滅戰",
+    "nameEn": "The Seat of Sacrifice - The Warrior of Light (Elidibus)",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "重要：DPS 不要在 boss 空檔釋放 LB → boss 會用『Hallowed Ground 神聖領域』8 秒無敵免疫 → 必須在 boss 讀條他招式時釋 LB。",
+        "P1：Terror Unleashed 釋放恐懼 = 全員血量降到 1 + True Walking Dead → 治療必須補滿才能解 debuff（時間到沒滿就死）。",
+        "P1 Solemn Confiteor = 4 玩家腳下圓 AoE → 散開放圓。Coruscant Saber 看劍紋：劍上有環 = 環狀 AoE 只中央 hitbox 安全；無環 = boss 為中心圓 AoE → 拉遠。",
+        "P1 Absolute Fire III =『暫停』標記 → 標記消後玩家受小傷 + Pyretic 3s（攻擊或移動會掉血）→ 立刻停手。Absolute Blizzard III =『播放』標記 → 受小傷 + Deep Freeze（不移動會凍）→ 持續移動。",
+        "P1 Imbued Coruscant = boss 加帶冰 / 火屬性的 Coruscant + 同時釋 Absolute Blizzard/Fire III → 看劍環 + 處理 Pyretic / Deep Freeze。",
+        "P1 Sword of Light 光之劍 = 場地暗 + 三角形畫線 → 範圍內被擊中極高傷 → 走三角外。Summon Wyrm = 場北召暗影 Bahamut 釋 Dive Bomb 半場 → 跑安全側。",
+        "P1 The Bitter End 苦澀終結 = tankbuster。Elddragon Dive = 全屏大傷。Ascendance 升格 = 全員 Fetters 拘束 → Absolute Teleport = 強制傳送到以太裂縫。",
+        "Intermission 裂縫：所有人 15s ATM 點按鈕保持 Will of Defiance 條不歸零 → 任何 1 人失敗 = 團滅。Familiar Ascian 救援 → 給 3 LB → Ultimate Crossover = 必須 T LB3 才能存活（系統提示『Transcend your limits』）→ 至少 1 人活 + boss 中傷 = checkpoint。",
+        "P2 滿血復活。Specter of Light 召喚 7 種職業 Specter 替 boss 釋招：White/Black Mage Twincast = 4 流星圓需 2 人站；Dark Knight Brimstone Earth = 對角 2 圓擴大 + Summon Wyrm（半場）；Bard Deluge of Death = 點名距離標 + Absolute Holy 集合分攤標。",
+        "P2 Ninja Suiton: San = 海嘯一邊推到對邊 + Katon: San 集合分攤標。Summoner Flare Breath = 4 Spectral Egi 對 4 玩家連線 → 大扇形跟連線方向。Warrior Perfect Decimation = 中央 2 組 4 扇 → 看順序站後爆的扇內。",
+        "P2 To the Limit = boss 累 LB 等級：Radiant Braver L1 = 3 玩家紅箭標 cone；Radiant Desperado L2 = 雙奶直線連續分攤標（給 Physical Vuln Up 防 stack 二次）；Radiant Meteor L3 = 4 玩家極大圓 AoE → 各自拉遠分散。",
+        "P2 Sword of Light 變雙劍（兩個三角形）→ 站雙三角外。"
+    ],
+    "notes": "ShB 5.3 trial（Lv 80，sync 80，ilvl 475，8 人 trial，時限 60 分），位於犧牲之座。為 ShB MSQ 5.3『感謝的反叛者』結尾與化身光之戰士的伊蒂貝魯斯 Elidibus 的最終戰。劇情：阿斯丁斯之首伊蒂貝魯斯吸收上代光之戰士的記憶與力量 → 化身為敵方光之戰士挑戰玩家 → 玩家以阿澤瑪水晶結束阿斯丁斯之首的悠久輪迴。掉落 ShB 光之戰士紙牌。整場精彩重現 FF 經典職業招式（白魔 / 黑魔 / 暗騎 / 吟遊 / 忍者 / 召喚 / 戰士）。",
+    "bosses": [
         {
-          "name": "WoL 主戰",
-          "mechanics": [
-            {
-              "name": "Heaven's Wrath 天罰",
-              "type": "cone",
-              "description": "MT 扇形 cleave；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "光之戰士（伊蒂貝魯斯）",
+            "nameEn": "Warrior of Light (Elidibus)",
+            "phases": [
                 {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Crystalline Slash 水晶斬",
-              "type": "aoe",
-              "description": "直線 AoE → 側閃；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Brimming Wave 滿溢波",
-              "type": "aoe",
-              "description": "場上多 AoE 圓圈 → 走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Job Combo 職業招式輪換",
-              "type": "mechanic",
-              "description": "採用 SAM / MNK / DRG / NIN / BLM / RDM / DRK / PLD 等職業招式。",
-              "tips": [
-                "看圖示辨職業"
-              ]
-            },
-            {
-              "name": "Slash 多連斬",
-              "type": "cone",
-              "description": "多連扇形 → 看刀位躲；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                "預判刀方向"
-              ]
-            },
-            {
-              "name": "Limit Break Echo 極限技回響",
-              "type": "raidwide",
-              "description": "Boss 模擬 LB 全屏 AoE；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "DPS LB 限制",
+                    "mechanics": [
+                        {
+                            "name": "Hallowed Ground 神聖領域（DPS LB 反制）",
+                            "type": "mechanic",
+                            "description": "若 DPS 在 boss 空檔釋放 LB → boss 喊『Clad in prayer, I am invincible!』獲『Hallowed Ground』無敵 8 秒 → 整套 LB 無效。必須在 boss 讀條釋他招式時才釋 LB。",
+                            "tips": [
+                                {"text": "DPS LB 必須在 boss 讀條時釋", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Heaven's Strike 天擊 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Terror Unleashed + True Walking Dead",
+                            "type": "raidwide",
+                            "description": "全員血量降到 1 + True Walking Dead debuff → 治療必須立即補到全血才能解 debuff（時間到沒滿則死）。",
+                            "tips": [
+                                {"text": "治療立即全補 → 解 debuff", "role": "healer"},
+                                {"text": "全員不亂吃傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Solemn Confiteor 莊嚴懺悔",
+                            "type": "aoe",
+                            "description": "4 隨機玩家腳下圓 AoE → 各自散開放圓避免重疊。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Coruscant Saber 燦光之刃",
+                            "type": "aoe",
+                            "description": "看劍紋判斷：(a) 劍上有環 = 環狀 AoE 只有中央 hitbox 安全 → 集合到 boss 中央；(b) 劍上無環 = boss 為中心圓 AoE → 拉遠站場邊。",
+                            "tips": [
+                                {"text": "看劍紋判斷貼近 / 遠離", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Absolute Fire III / Blizzard III",
+                            "type": "mechanic",
+                            "description": "Fire III =『暫停』標記 → 標記消後小傷 + Pyretic 3s（攻擊或移動掉血）→ 立刻停手。Blizzard III =『播放』標記 → 小傷 + Deep Freeze（不移動會凍）→ 持續移動。",
+                            "tips": [
+                                {"text": "暫停 = 停手 3s", "role": "dps"},
+                                {"text": "播放 = 持續移動", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Imbued Coruscant 屬性燦光",
+                            "type": "mechanic",
+                            "description": "boss 賦劍冰 / 火屬性 + 釋放 Coruscant Saber + 同時 Absolute Blizzard/Fire III → 必須同時處理劍環 AoE + Pyretic/Deep Freeze。",
+                            "tips": [
+                                {"text": "看劍環 + 對應屬性 buff", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sword of Light 光之劍",
+                            "type": "aoe",
+                            "description": "場地暗 + 光之劍切出三角形 → 三角形內極高傷 → 站三角外。",
+                            "tips": [
+                                {"text": "站三角形外", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Summon Wyrm 召龍 + Dive Bomb",
+                            "type": "aoe",
+                            "description": "場北召暗影 Bahamut → 釋 Dive Bomb 攻擊半場 → 跑安全側。",
+                            "tips": [
+                                {"text": "看 Bahamut 方向跑對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "The Bitter End 苦澀終結",
+                            "type": "tankbuster",
+                            "description": "對 MT tankbuster。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Elddragon Dive + Ascendance + Absolute Teleport",
+                            "type": "mechanic",
+                            "description": "Elddragon Dive = 全屏大傷 → Ascendance = 拘束全員 → Absolute Teleport = 強制傳送進以太裂縫 Intermission。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員減傷",
-                  "role": "tank"
+                    "name": "Intermission 以太裂縫",
+                    "mechanics": [
+                        {
+                            "name": "Active Time Maneuver (ATM)",
+                            "type": "mechanic",
+                            "description": "全員 15 秒內反覆點按鈕保持 Will of Defiance 條不歸零（任何按鈕除 chat）。條低時較易補。任何 1 人失敗 = 全員 wipe → 死掉的也參加。",
+                            "tips": [
+                                {"text": "全員瘋狂點按鈕", "role": "dps"},
+                                {"text": "死的也要參加", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ultimate Crossover（必 T LB3）",
+                            "type": "mechanic",
+                            "description": "ATM 成功後 Familiar Ascian 救援 + 給 3 LB → boss 直接釋 L4 LB『Ultimate Crossover』→ 必須 T LB3 才能存活。系統提示『Transcend your limits and weather the gathering storm!』時釋放。至少 1 人活 + boss 中傷 = checkpoint。",
+                            "tips": [
+                                {"text": "T 看系統提示釋 LB3", "role": "tank"},
+                                {"text": "至少 1 人活續關卡", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2（滿血復活）",
+                    "mechanics": [
+                        {
+                            "name": "Spectral White Mage + Black Mage Twincast",
+                            "type": "stack",
+                            "description": "場上 4 流星圓漸出 → 每圓需 2 人站接，沒人 = 全屏 + 易傷。",
+                            "tips": [
+                                {"text": "4 圓各 2 人站", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Spectral Dark Knight Brimstone Earth + Wyrm + Bard",
+                            "type": "mechanic",
+                            "description": "對角 2 圓擴大 AoE + 同時 boss 釋 Summon Wyrm 半場 + Bard Deluge of Death 點名距離標 → 跑安全角 + 被點玩家拉開 + 集合分攤 Absolute Holy。",
+                            "tips": [
+                                {"text": "看 Bahamut 方向 + 對角圓走縫", "role": "dps"},
+                                {"text": "被點玩家拉開引導", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Spectral Ninja Suiton + Katon: San",
+                            "type": "knockback",
+                            "description": "海嘯從一邊釋出 → 推到對邊 + 對 1 玩家 Katon: San 集合分攤。",
+                            "tips": [
+                                {"text": "全員集合對邊接擊退 + 分攤", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Spectral Summoner Flare Breath",
+                            "type": "cone",
+                            "description": "召喚 4 Spectral Egi → 各連線 4 玩家 → 大扇形跟連線方向釋出 → 被連玩家朝場外引導不重疊。",
+                            "tips": [
+                                {"text": "4 玩家各拉 1 方位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Spectral Warrior Perfect Decimation",
+                            "type": "cone",
+                            "description": "中央生成 2 組各 4 個扇形 → 第 1 組先爆 → 站第 2 組覆蓋區後跑進已爆區。",
+                            "tips": [
+                                {"text": "站第 2 組區後跑回", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "To the Limit（boss 累 LB）",
+                            "type": "mechanic",
+                            "description": "boss 累 LB 等級對應招式：Radiant Braver L1 = 3 玩家紅箭 cone；Radiant Desperado L2 = 雙奶直線連續分攤標（會給 Physical Vuln Up）；Radiant Meteor L3 = 4 玩家極大圓 AoE → 各自拉遠。",
+                            "tips": [
+                                {"text": "L1 紅箭散開 cone", "role": "dps"},
+                                {"text": "L2 兩奶分擔線", "role": "healer"},
+                                {"text": "L3 4 玩家拉遠角", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sword of Light（雙劍）",
+                            "type": "aoe",
+                            "description": "P2 變雙劍切出兩個三角 → 站兩個三角形外（中央安全或邊角）。",
+                            "tips": [
+                                {"text": "站雙三角外", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "DPS LB → boss 讀條時釋（否則被 Hallowed Ground 8s 無敵反制）",
+                "P1 Terror Unleashed → 全員 1HP → 治療補滿解 debuff",
+                "P1 Coruscant Saber → 看劍環判斷貼近 / 拉遠",
+                "P1 Fire III = 停手 / Blizzard III = 持續移動",
+                "Intermission → ATM 全員點按鈕 → Ultimate Crossover 必 T LB3",
+                "P2 Specter 7 種 + To the Limit 對應 L1/2/3 處理"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Warrior of Light 光之戰士 機制：Crystalline Stream 水晶流 + Job Mechanics 各職業技能 + 召喚水晶 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
