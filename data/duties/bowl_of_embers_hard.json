@@ -1,152 +1,155 @@
 {
-  "id": "bowl_of_embers_hard",
-  "name": "真 伊弗利特殲滅戰",
-  "nameEn": "The Bowl of Embers (Hard)",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "Ifrit 真 伊弗利特 (火神 Hard 版)：Incinerate 烈焰焚燒前方扇形（瞬發無預兆，約 1500-1900 傷） → MT 朝場邊面外。",
-    "Vulcan Burst 火神爆裂：boss 自身為中心圓 AoE + 擊退（無預兆） → 近戰退離 + Surecast。",
-    "Eruption 地火噴發：隨機點名玩家，腳下撕裂地面數秒後爆炸（約 2300-2800）→ 被點玩家立刻拉到場邊。",
-    "Crimson Cyclone 深紅旋風：boss 直線衝刺（無地面提示）→ 看 boss 朝向側身閃避。",
-    "Radiant Plume 光輝炎柱：場上多個圓 AoE → 數秒後中央火柱爆發（越近中央傷越高） → 看圓走縫到中央外。",
-    "Infernal Nail 火獄之楔（核心 DPS check）：boss 在場中央召喚 4 根 Infernal Nail 楔子 → DPS 必須在 boss 用 Hellfire 地獄之火炎前清光所有楔子，否則傷害依存活楔子數量大幅提高 → 團滅。",
-    "Hellfire 地獄之火炎：全屏 AoE，依場上殘存 Nail 數量計算 → 0 Nail 全員可接（治療大團補）；剩 1+ Nail 直接團滅。"
-  ],
-  "notes": "ARR 2.0 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』伊弗利特蠻神 Hard 版，於南部薩納蘭火光之碗（Bowl of Embers）。Boss 為 Ifrit 真伊弗利特。本戰首次引入 Infernal Nail 火獄之楔的 DPS check 機制（必須在 Hellfire 前清光楔子），會持續貫穿後續同類型蠻神戰。Crimson Cyclone 紅蓮旋風衝鋒在 EX 版會升級為更複雜的『移動閃避』考驗。",
-  "bosses": [
-    {
-      "name": "真 伊弗利特",
-      "nameEn": "Ifrit",
-      "phases": [
+    "id": "bowl_of_embers_hard",
+    "name": "真 伊弗利特殲滅戰",
+    "nameEn": "The Bowl of Embers (Hard) - Ifrit",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Incinerate 烈焰焚燒 = 前扇 cleave；Vulcan Burst 火神爆 = 近身圓 + 擊退；Eruption 爆裂 = 玩家腳下紅光圓 → 走開 + 可被打斷（stun 3 次後 1 分鐘抗性）；Crimson Cyclone 紅蓮颶風 = boss 場邊衝鋒直線。",
+        "P1 站位：非 T 站 boss 後 + 拉場邊讓 Vulcan Burst 不傷遠程。Eruption 點名玩家移開 + 嘗試打斷（stun 機制）。Crimson Cyclone 蓄力時不要站 boss 面向。",
+        "P2（~75%）：新招 Sear 灼燒 = 近身圓 + Radiant Plume 焰流 = 多個地板火圈 → 順序通常為外圈 → 內圈 → Eruption → Cyclone。",
+        "P3（~50%）：Hellfire 地獄火 = 場上 4 火爆地獄棘（Infernal Nails）→ 必須全數打掉 → Nails 殘留 = Hellfire 全員秒殺；全清 = Hellfire 大傷可生存。建議 BLM/SMN LB 秒掉。",
+        "P3 LB 策略：caster LB2+ 可秒掉 → 沒 caster LB 時近戰 LB → 打掉第 1 釘子 → 1 個 DPS 前進第 2 → LB → 打第 3 → LB 應再次可用打第 4。",
+        "P3 Hellfire 後 → 進 P4：沿用 P2 機制（無 Hellfire）。順序：外圈 Plume → 內圈 Plume → Eruption（可 stun）→ 全場 Plume（站 boss 後安全）→ 3 Ifrit 衝刺 dash（左 Ifrit 必先衝）。",
+        "團補：Vulcan Burst 後緊接 Hellfire 大傷 → 連續團補維持。"
+    ],
+    "notes": "ARR 2.0/2.1 trial Hard（Lv 50，sync 50，ilvl 50/sync 70，8 人 trial，時限 60 分），位於 The Bowl of Embers 灰燼之碗。為三神之首火神 Ifrit 伊弗利特的 Hard 版（Lv 50 Echo）。劇情：ARR 2.0 第二次召喚的 Hard 強化版，與 Garuda Hard + Titan Hard 組成三神挑戰。掉落 Ifrit Card + Ifrit's Horn + Ifrit 武器系列 + Inferno Weapon Coffer。Hellfire DPS check 是經典 ARR 試煉之首。",
+    "bosses": [
         {
-          "name": "主戰（火神 Hard 蠻神）",
-          "mechanics": [
-            {
-              "name": "Incinerate 烈焰焚燒",
-              "type": "cone",
-              "description": "對一仇 MT 方向前方扇形大範圍噴火，瞬發無預兆，約 1500-1900 傷害。MT 把 boss 朝場邊面外，DPS 站背 / 側。",
-              "tips": [
+            "name": "伊弗利特",
+            "nameEn": "Ifrit",
+            "phases": [
                 {
-                  "text": "MT 朝外",
-                  "role": "tank"
+                    "name": "P1（100%~75%）",
+                    "mechanics": [
+                        {
+                            "name": "Incinerate 烈焰焚燒",
+                            "type": "cone",
+                            "description": "前扇 cleave → 繞背躲 + MT 拉場邊面向。",
+                            "tips": [
+                                {"text": "繞背躲", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Vulcan Burst 火神爆",
+                            "type": "knockback",
+                            "description": "近身圓 + 擊退 → 遠程站 boss 拉開距離。",
+                            "tips": [
+                                {"text": "遠程拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Eruption 爆裂（可 stun）",
+                            "type": "aoe",
+                            "description": "玩家腳下紅光圓 → 走開 + 可被打斷（stun 3 次後 1 分鐘抗性）。",
+                            "tips": [
+                                {"text": "被點玩家移開", "role": "dps"},
+                                {"text": "stun 打斷（限 3 次）", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Crimson Cyclone 紅蓮颶風",
+                            "type": "aoe",
+                            "description": "boss 場邊蓄力 + 衝鋒直線 → 不站 boss 面向方向。",
+                            "tips": [
+                                {"text": "看 boss 場邊預判方向", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "非 T 站背",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Vulcan Burst 火神爆裂",
-              "type": "knockback",
-              "description": "以 boss 自身為中心圓形 AoE，命中目標約 500-600 傷害 + 擊退。瞬發無預兆。近戰退離 boss + Surecast 抗擊退（被擊退不會死但會丟仇恨）。",
-              "tips": [
-                {
-                  "text": "近戰退離 boss",
-                  "role": "dps"
+                    "name": "P2（~75%~50%）",
+                    "mechanics": [
+                        {
+                            "name": "Sear 灼燒",
+                            "type": "aoe",
+                            "description": "近身圓 → 遠程拉開。",
+                            "tips": [
+                                {"text": "拉開遠離", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Radiant Plume 焰流",
+                            "type": "aoe",
+                            "description": "場上多個紅圓 → 數秒後爆。順序通常為外圈 → 內圈 → Eruption → Cyclone。",
+                            "tips": [
+                                {"text": "順序外 → 內 → 預判走位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "Surecast 抗擊退",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Eruption 地火噴發",
-              "type": "spread",
-              "description": "隨機選 1 名玩家為目標，撕裂該玩家腳下地面，數秒後爆炸 → 約 2300-2800 傷害。被點玩家立刻拉到場邊（離隊友遠）。",
-              "tips": [
-                {
-                  "text": "被點拉場邊",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Crimson Cyclone 深紅旋風",
-              "type": "aoe",
-              "description": "Ifrit 向前直線衝刺，對所有撞到的目標約 2600 傷害。無地面提示，需看 boss 動作判斷。看 boss 朝向 → 側身閃避（往 boss 兩側走）。",
-              "tips": [
-                {
-                  "text": "看 boss 朝向側身閃",
-                  "role": "dps"
+                    "name": "P3 Hellfire DPS check（~50%）",
+                    "mechanics": [
+                        {
+                            "name": "Infernal Nails 地獄棘",
+                            "type": "add",
+                            "description": "場上 4 火爆釘子 → 必須全打掉 → Nails 殘留 = Hellfire 秒殺。建議 BLM/SMN LB 秒掉。",
+                            "tips": [
+                                {"text": "DPS 全力轉火秒釘", "role": "dps"},
+                                {"text": "caster LB 速秒", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hellfire 地獄火",
+                            "type": "raidwide",
+                            "description": "全屏大傷 → Nails 殘留 = 秒殺；全清 = 高傷可生存。集合 + 預備大團補。",
+                            "tips": [
+                                {"text": "預備大團補 + 大減傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "LB 接力策略（無 caster LB）",
+                            "type": "mechanic",
+                            "description": "近戰 LB 打第 1 釘子 → DPS 前進第 2 LB → 第 3 → LB 再次可用打第 4。",
+                            "tips": [
+                                {"text": "LB 連續循環", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "MT 預判閃避",
-                  "role": "tank"
+                    "name": "P4 終局（沿用 P2 + 終結）",
+                    "mechanics": [
+                        {
+                            "name": "招式順序",
+                            "type": "mechanic",
+                            "description": "Hellfire 後沿用 P2 機制（無 Hellfire）。固定順序：外圈 Plume → 內圈 Plume → Eruption（可 stun）→ 全場 Plume（站 boss 後安全）→ 3 Ifrit 衝刺 dash（左 Ifrit 必先衝）。",
+                            "tips": [
+                                {"text": "固定順序預判走位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "全場 Plume（站 boss 後）",
+                            "type": "aoe",
+                            "description": "全場 Radiant Plume → 站 boss 後唯一安全。",
+                            "tips": [
+                                {"text": "站 boss 後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "3 Ifrit 衝刺",
+                            "type": "aoe",
+                            "description": "3 個 Ifrit 在場邊蓄力 → 依序衝刺直線 AoE → 左 Ifrit 必先衝。",
+                            "tips": [
+                                {"text": "左 Ifrit 先衝 + 預判 3 順序", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Hot Wind 熱風",
-              "type": "aoe",
-              "description": "對 boss 周圍所有目標約 200 傷害瞬發。近戰小傷。",
-              "tips": [
-                {
-                  "text": "小傷可忽略",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Radiant Plume 光輝炎柱",
-              "type": "aoe",
-              "description": "在戰鬥場地內施放多個圓形 AoE 預兆，數秒後圓形中央爆發火柱。越靠近圓形中央受傷越高（中央約 2400 傷）。看圓走縫到圓邊以外的位置（圓邊緣傷較低 / 圓外無傷）。",
-              "tips": [
-                {
-                  "text": "看圓走縫到圓外",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Infernal Nail 火獄之楔（核心 DPS check）",
-              "type": "add",
-              "description": "Ifrit 在戰鬥場地中央召喚 4 個 Infernal Nail 火獄之楔（不可移動 add）。DPS 必須在 Ifrit 接下來釋放 Hellfire 地獄之火炎前清光所有 4 根楔子。MT 用 AoE 仇恨拉穩，DPS 全力 AoE 清。",
-              "tips": [
-                {
-                  "text": "全員 AoE 集火 4 楔",
-                  "role": "dps"
-                },
-                {
-                  "text": "MT AoE 維持仇恨",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Hellfire 地獄之火炎（依殘存楔子）",
-              "type": "raidwide",
-              "description": "對戰鬥場地內所有目標釋放 AoE，傷害量取決於場上剩餘的 Infernal Nail 火獄之楔數量。剩 0 Nail → 中傷可接；剩 1+ Nail → 直接團滅。",
-              "tips": [
-                {
-                  "text": "0 Nail → 全員減傷 + 大團補",
-                  "role": "healer"
-                },
-                {
-                  "text": "剩 Nail → 重來",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Eruption 點名走開 + 可 stun（限 3 次）",
+                "P1 Crimson Cyclone 看 boss 場邊預判直線",
+                "P2 Radiant Plume 外 → 內 → Eruption → Cyclone 順序",
+                "P3 Hellfire DPS check → 4 釘子全打掉（LB 秒）",
+                "P4 全場 Plume → 站 boss 後 / 3 Ifrit 左先衝"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Incinerate 烈焰焚燒（前扇）→ MT 朝外站背",
-        "Vulcan Burst 火神爆裂（自身圓 + 擊退）→ 退離 + Surecast",
-        "Eruption 地火噴發（腳下撕裂）→ 拉場邊",
-        "Crimson Cyclone 深紅旋風（無預兆衝刺）→ 看朝向側身閃",
-        "Radiant Plume 光輝炎柱 → 走縫到圓外",
-        "Infernal Nail 火獄之楔 → DPS 4 楔全清",
-        "Hellfire 地獄之火炎 → 0 Nail 才能接，否則團滅"
-      ]
-    }
-  ]
+    ]
 }

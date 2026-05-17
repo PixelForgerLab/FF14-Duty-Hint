@@ -1,134 +1,110 @@
 {
-  "id": "navel",
-  "name": "泰坦討伐戰",
-  "nameEn": "The Navel - Titan",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 36,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "80% Titan 跳起，回來時場外圈崩塌變紅環掉下去 = 即死；可站靠紅環邊減傷。",
-    "Landslide 山崩直線擊退要靠中央，被擊飛出場 = 即死。",
-    "50% Titan 再跳一次後心臟外露 (Heart) → DPS 全力集火，否則 Tumult 強制團滅。",
-    "Granite Gaol 花崗石牢隨機囚禁玩家要打破；若被囚者剛好在 Landslide 路徑上，先讓 Landslide 過再破石牢避免一解放就被擊飛。",
-    "Heart 死後 Titan 多一招天花板落石 (Weight of the Land 圓 AoE)。"
-  ],
-  "notes": "ARR 2.0 主線討伐戰（Lv 34-36），首次面對土神泰坦的劇情戰鬥，地點為庫爾札斯西部高地『大地之臍』。Boss 為 Titan 泰坦，特色機制 Geocrush 全屏擊退與場地隨血量縮小，被擊退到場邊紅環即死。",
-  "bosses": [
-    {
-      "name": "泰坦",
-      "nameEn": "Titan",
-      "mnemonic": [
-        "80% / 50% 兩次跳起，每次場地縮小",
-        "Landslide 山崩 → 站近中央",
-        "Heart 心臟 = DPS 全力集火避免 Tumult 團滅",
-        "Granite Gaol 石牢 → 破才能解救隊友"
-      ],
-      "phases": [
+    "id": "navel",
+    "name": "泰坦討伐戰",
+    "nameEn": "The Navel - Titan",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 36,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1（100%~80%）：boss 平 A + 定期 Stomp 重踏（全屏小傷）→ 治療團補。",
+        "P2（80%）：boss 跳起離場 → 回來釋大 AoE + 摧毀場邊牆。場外紅圈 = 即將崩塌 → 站近紅圈內側可降低傷害。新招 Landslide 山崩 = 直線衝擊波 → 擊飛玩家出場致死 → 必須提前避開。",
+        "P3（~50%）：boss 再跳起 + 回來大 AoE。Titan's Heart 心臟出現 + boss 不可選 → 必須速秒心臟（否則 enrage 團滅）。同時 Rock Tomb 石棺 CC 玩家（無法施法）→ 隊友打掉石棺救人。",
+        "P4 心臟破壞後 boss 復出新招：Mountain Buster 落岩（從天降）+ Stomp 連續 2 次 → 走位避落岩 + 治療連續團補。",
+        "P4 招式輪：boss 每用 2 次 Landslide 後接 Rock Tomb（gaol）→ 救人 + 維持輸出。"
+    ],
+    "notes": "ARR 2.0 MSQ trial（Lv 34，sync 36，ilvl 同步，4 人 trial / 也可 Duty Support，時限 60 分），位於拉諾西亞上層 The Navel 泰坦之臍。為三神之一土神 Titan 泰坦 MSQ 首戰。劇情：ARR MSQ Lv 34 與 Company of Heroes 試煉後挑戰泰坦。掉落 Titan 系列。場地崩塌 + Landslide 擊退致死為核心難點。",
+    "bosses": [
         {
-          "name": "P1 80% 前",
-          "mechanics": [
-            {
-              "name": "Rock Buster 碎岩",
-              "type": "tankbuster",
-              "description": "對 MT 方向釋放的物理扇形 AoE，無讀條無預警；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "泰坦",
+            "nameEn": "Titan",
+            "phases": [
                 {
-                  "text": "MT 注意面向避免誤傷隊友、適時開減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Tumult 怒震",
-              "type": "raidwide",
-              "description": "全屏無讀條 AoE；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1（100%~80%）",
+                    "mechanics": [
+                        {
+                            "name": "Stomp 重踏 + 平 A",
+                            "type": "raidwide",
+                            "description": "boss 定期 Stomp 全屏小傷 → 治療團補。平 A 對 MT。",
+                            "tips": [
+                                {"text": "MT 拉穩 / 連續團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補血",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Weight of the Land 大地之重",
-              "type": "aoe",
-              "description": "讀條技，可見圓形 AoE；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走位閃預兆"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 80% Geocrush 後",
-          "mechanics": [
-            {
-              "name": "Geocrush 大地粉碎",
-              "type": "other",
-              "description": "Titan 跳上天 → 落地時以場中央為點全屏 AoE (距離衰減傷害)，外圈紅環區地面崩塌成懸崖。",
-              "tips": [
-                "盡量遠離落點但避開紅環，會掉下去即死"
-              ]
-            },
-            {
-              "name": "Landslide 地裂",
-              "type": "knockback",
-              "description": "讀條技，可見直線 AoE，附加擊退；因場地縮小極易被打下懸崖；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "看 telegraph 走位回避，或開 Arm's Length / Surecast"
-              ]
-            },
-            {
-              "name": "Rock Throw 落岩",
-              "type": "aoe",
-              "description": "核心機制：(1) 場外圍掉一圈小岩 + 中央落一顆 → 依落下順序爆炸；先觀察第 1 顆爆點，第 1 顆爆完跑到它原位置躲後續。(2) 三排岩石依序爆 → 跑到最後一排等第 1 排爆完再衝到第 1 排安全區。",
-              "tips": [
-                "走到先爆岩石的『已爆位置』躲後續",
-                "千萬不要在第 2 排等第 1 排爆，間隔極短"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P3 50% Heart 階段",
-          "mechanics": [
-            {
-              "name": "Heart of the Mountain 泰坦的核心",
-              "type": "other",
-              "description": "第二次 Geocrush 後 Titan 無敵化，胸部露出心臟。長時間未擊殺後續 AoE 強制團滅。",
-              "tips": [
+                    "name": "P2（80%）場地縮小",
+                    "mechanics": [
+                        {
+                            "name": "場邊崩塌 + 紅圈",
+                            "type": "mechanic",
+                            "description": "boss 跳離 → 大 AoE + 摧毀場邊牆 → 場外紅圈即將崩塌 → 站紅圈內側降傷。",
+                            "tips": [
+                                {"text": "站紅圈內側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Landslide 山崩",
+                            "type": "knockback",
+                            "description": "直線衝擊波 → 擊飛玩家出場致死 → 預判方向走出。",
+                            "tips": [
+                                {"text": "預判方向 → 走出", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "DPS 全力集火心臟",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Granite Gaol 花崗石牢",
-              "type": "other",
-              "description": "點名隨機 1 人關進石牢無法行動，需其他人集火打破。會與衝拳組合：若被關隊友在衝拳路徑上，暫停集火，等衝拳判定後再破石牢，否則隊友被解放瞬間被擊飛出場。",
-              "tips": [
-                "看石牢與衝拳路徑判斷時機"
-              ]
-            },
-            {
-              "name": "Earthen Fury 大地之怒",
-              "type": "raidwide",
-              "description": "心臟未擊殺的狂暴 AoE，全屏；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P3 心臟（~50%）",
+                    "mechanics": [
+                        {
+                            "name": "Titan's Heart 心臟（DPS check）",
+                            "type": "add",
+                            "description": "boss 再跳 + 回來大 AoE → 心臟出現 + boss 不可選 → 必須速秒心臟否則 enrage 團滅。",
+                            "tips": [
+                                {"text": "DPS 全力秒心臟", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rock Tomb 石棺",
+                            "type": "mechanic",
+                            "description": "1 玩家被 CC 進石棺（無法施法）→ 隊友打掉石棺救人。",
+                            "tips": [
+                                {"text": "隊友速秒石棺", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "減傷 + 補滿，但心臟未死則直接團滅",
-                  "role": "healer"
+                    "name": "P4 心臟破壞後",
+                    "mechanics": [
+                        {
+                            "name": "Mountain Buster 落岩",
+                            "type": "aoe",
+                            "description": "從天降落岩 + Stomp 連續 2 次 → 走位避落岩 + 連續團補。",
+                            "tips": [
+                                {"text": "看 telegraph 走位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Rock Tomb 輪替",
+                            "type": "mechanic",
+                            "description": "boss 每 2 次 Landslide 後接 Rock Tomb → 救人 + 維持輸出。",
+                            "tips": [
+                                {"text": "持續救石棺 + DPS uptime", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Stomp 全屏 + 平 A",
+                "P2 80% 場縮 → 站紅圈內側 + Landslide 預判方向",
+                "P3 心臟必秒 + 救石棺",
+                "P4 落岩走位 + Landslide+Rock Tomb 輪替"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
