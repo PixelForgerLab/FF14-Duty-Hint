@@ -1,178 +1,225 @@
 {
-    "id":  "snowcloak",
-    "name":  "凜冽洞天披雪大冰壁",
-    "nameEn":  "Snowcloak",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Yeti 凜冽雪魔：依機制走位處理。",
-                     "2）B2 Daivadipa 妖怪魔靈：依機制走位處理。",
-                     "3）B3 Fenrir 芬里爾：依機制走位處理。"
-                 ],
-    "notes":  "ARR 2.4 披雪大冰壁（Lv 50）。冰雪洞窟。Boss 依序為 Yeti 凜冽雪魔、Daivadipa 妖怪魔靈、Fenrir 芬里爾。重點：依場上 boss 機制處理，注意 add 速秒與 raidwide 減傷處理。",
-    "bosses":  [
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Summons AoE circles beneath each player. Inflicts a stack of icon1.png Frozen debuff.；隨機點名玩家集合分攤 AoE，全員集合分攤傷害。",
-                                                                "name":  "Cold Wave 波",
-                                                                "tips":  [
-                                                                             "疊接分擔"
-                                                                         ],
-                                                                "type":  "stack"
-                                                            },
-                                                            {
-                                                                "description":  "Deals unavoidable raid-wide damage. Inflicts a stack of icon1.png Frozen. Keep moving to negate the debuff.；隨機點名玩家集合分攤 AoE，全員集合分攤傷害。",
-                                                                "name":  "Snow Drift 雪堆",
-                                                                "tips":  [
-                                                                             "疊接分擔"
-                                                                         ],
-                                                                "type":  "stack"
-                                                            },
-                                                            {
-                                                                "description":  "Arena wide AoE. Inflicts a stack of icon1.png Frozen.；隨機點名玩家集合分攤 AoE，全員集合分攤傷害。",
-                                                                "name":  "Hypothermal Combustion 極低溫燃燒",
-                                                                "tips":  [
-                                                                             "疊接分擔"
-                                                                         ],
-                                                                "type":  "stack"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "凜冽雪魔",
-                       "nameEn":  "Yeti",
-                       "mnemonic":  [
-                                        "Yeti 凜冽雪魔 機制",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "Frontal cone AoE.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Buffet",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Summons six untargetable snowballs, each with a point blank AoE. Yeti will breathe on one to two of the snowballs, increasing the size of the snowball；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Northerlies 謊言",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Launches players into the air, dealing damage and preventing movement. Cast shortly after Northerlies.；依預兆走位處理。",
-                                                                "name":  "Updrift 上升漂移",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            },
-                                                            {
-                                                                "description":  "Point blank AoE, immediately followed by a donut AoE.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Spin 旋轉",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Player targeted AoE.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Frozen Spike 刺",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "妖怪魔靈",
-                       "nameEn":  "Daivadipa",
-                       "mnemonic":  [
-                                        "Daivadipa 妖怪魔靈 機制",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補"
-                                    ]
-                   },
-                   {
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "description":  "a cone attack in front of Fenrir which puts no AoE indicator on the ground but has a long animation time. Move to Fenrir\u0027s sides or rear.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Heavensward Roar 咆哮",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "very high damage tank buster；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-                                                                "name":  "Ecliptic Bite 咬",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ],
-                                                                "type":  "tankbuster"
-                                                            },
-                                                            {
-                                                                "description":  "unavoidable party-wide attack；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "name":  "Thousand Year Storm 千年風暴",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ],
-                                                                "type":  "raidwide"
-                                                            },
-                                                            {
-                                                                "description":  "Four icicles drop to the ground in a diamond pattern, preempted by circular AoE indicators. Immediately followed by Lunar Cry.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "name":  "Howling Moon 嚎叫",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "aoe"
-                                                            },
-                                                            {
-                                                                "description":  "Long-duration cast that will instantly knock out any players not hiding behind an icicle.；依預兆走位處理。",
-                                                                "name":  "Lunar Cry 月嚎",
-                                                                "tips":  [
-                                                                             "看 telegraph 移動"
-                                                                         ],
-                                                                "type":  "other"
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "name":  "芬里爾",
-                       "nameEn":  "Fenrir",
-                       "mnemonic":  [
-                                        "Fenrir 芬里爾 機制",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補"
-                                    ]
-                   }
-               ]
+    "id": "snowcloak",
+    "name": "凜冽洞天披雪大冰壁",
+    "nameEn": "Snowcloak",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Wandil 萬迪爾（冰魔像）：場上各玩家腳下圓 AoE + 全屏 Snow Drift 風雪 → 持續移動免 Frozen 凝凍疊層；Frozen 4 層 → Deep Freeze 凍結 10 秒。",
+        "2）B1 召喚 Frost Bomb 寒霜爆彈 → DPS 速秒，否則自爆全屏 + 疊 Frozen。",
+        "3）B2 Yeti 雪人：Northerlies 狂風暴雪召喚 6 個雪球，boss 對 1-2 個吹雪變大雪球 → Updrift 震飛後雪球落地爆炸；提前遠離大雪球。",
+        "4）B2 Spin 回轉：boss 自身圓 → 環形 AoE 連發，先站圓邊外等圓炸再進空地。",
+        "5）B3 Fenrir 芬里爾：Howling Moon 月夜狼嚎場上 4 根冰柱菱形 → Lunar Cry 月下咆哮全屏，必須躲冰柱後。",
+        "6）B3 第 2 次起 4 根冰柱中 3 根碎裂發紫光 → 只能躲在唯一藍色冰柱後；或遠離冰柱位置同時擋視線。",
+        "7）B3 Lunar Cry 結束 boss 會跳 MT → MT 開減傷接。"
+    ],
+    "notes": "ARR 2.4 主線副本（Lv 50，sync 50，ilvl 80），位於庫爾札斯中央高地，靈災後的巨大冰壁，伊瑟爾（伊塞拉）的異端團在冰壁內鑿出隧道作為據點。6.2 加入 Duty Support 並進行更新。Boss 依序為 Wandil 萬迪爾（冰魔像，由濕婆創造）、Yeti 雪人、Fenrir 芬里爾（月之大狼）。整個副本主題為 Frozen 凝凍 debuff，疊到 4 層會被凍結 10 秒無法行動。Fenrir 是後續『始源神兵芬里爾』extreme 的雛形。",
+    "bosses": [
+        {
+            "name": "萬迪爾",
+            "nameEn": "Wandil",
+            "phases": [
+                {
+                    "name": "P1 100%-40% HP（基礎機制）",
+                    "mechanics": [
+                        {
+                            "name": "Cold Wave 寒潮",
+                            "type": "spread",
+                            "description": "各玩家腳下顯示圓形 AoE 預兆，命中疊一層 Frozen 凝凍 debuff；玩家散開讓圓不重疊，並快走出圓。",
+                            "tips": [
+                                {"text": "看自己腳下圓走出", "role": "dps"},
+                                {"text": "散開站位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Snow Drift 風雪",
+                            "type": "raidwide",
+                            "description": "讀條全屏 AoE 必中，並疊一層 Frozen 凝凍。技能判定瞬間如果玩家在移動就可以免 debuff，因此施法時全員保持移動（小幅平移即可）。",
+                            "tips": [
+                                {"text": "判定瞬間保持移動可免 debuff", "role": "tank"},
+                                {"text": "團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Frost Bomb 寒霜爆彈（add）",
+                            "type": "add",
+                            "description": "boss 數次召喚 Frost Bomb 寒霜爆彈 add；一段時間後讀條 Hypothermal Combustion 全屏 AoE 自爆並對玩家疊一層 Frozen。DPS 必須優先切目標秒掉，否則自爆會讓全員 Frozen stack 暴增。",
+                            "tips": [
+                                {"text": "DPS 優先秒 Frost Bomb", "role": "dps"},
+                                {"text": "T 用 AoE 拉穩", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Frozen 凝凍 stack（疊到 4 → Deep Freeze）",
+                            "type": "mechanic",
+                            "description": "Frozen 凝凍 debuff 可疊層，疊到 4 層後玩家被 Deep Freeze 凍結 10 秒無法行動且 HP 持續減少。治療必須監控全員 stack 數並提前補滿 HP，玩家也應盡量避免 Frozen 疊到 4 層。",
+                            "tips": [
+                                {"text": "治療監控 Frozen stack", "role": "healer"},
+                                {"text": "DPS 注意自己 stack，避免疊 4", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 40% HP（凍原階段）",
+                    "mechanics": [
+                        {
+                            "name": "Frozen Field 凍原",
+                            "type": "mechanic",
+                            "description": "boss HP 約 40% 後施放，場地外圈被藍色冰原覆蓋。玩家長時間踩在藍色區域會持續疊 Frozen 凝凍 buff。盡量站在場中央未被覆蓋的圓區。",
+                            "tips": [
+                                {"text": "全員留中央未染色區", "role": "tank"},
+                                {"text": "藍區短暫停留即返中", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Cold Wave 寒潮 → 看腳下圓散開走",
+                "Snow Drift 風雪 → 判定瞬間保持移動可免 debuff",
+                "Frost Bomb → DPS 速秒",
+                "Frozen 4 層 → Deep Freeze 10 秒，治療監控",
+                "40% HP → Frozen Field 凍原，留中央"
+            ]
+        },
+        {
+            "name": "雪人",
+            "nameEn": "Yeti",
+            "phases": [
+                {
+                    "name": "主戰（雪球大師）",
+                    "mechanics": [
+                        {
+                            "name": "Buffet 毆打",
+                            "type": "cone",
+                            "description": "boss 前方扇形 AoE；MT 朝場邊面外，非 T 站背。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "非 T 站背", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Northerlies 狂風暴雪",
+                            "type": "mechanic",
+                            "description": "讀條全屏 AoE，同時在場上召喚 6 個 untargetable 小雪球。boss 對其中 1-2 個雪球吹雪，使它們變成大雪球。看 boss 對哪個雪球吹氣，提前遠離將要變大的雪球。第一次 Northerlies 出 4 個小雪球（1 大），之後 6 個（2 大）。",
+                            "tips": [
+                                {"text": "看 boss 吹雪方向 → 遠離將變大的球", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Updrift 震飛",
+                            "type": "raidwide",
+                            "description": "接在 Northerlies 後讀條，震飛場上的雪球和玩家。玩家落地後場上每個雪球同時爆炸：小雪球範圍小（其自身體積），大雪球範圍大。落地瞬間就會判定，所以必須在 Updrift 讀條期間預先站到大雪球範圍外。",
+                            "tips": [
+                                {"text": "提前站到大雪球範圍外", "role": "dps"},
+                                {"text": "看雪球位置決定落地點", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Spin 回轉",
+                            "type": "aoe",
+                            "description": "boss 回到場中央，依序釋放自身為中心的圓形 AoE 與環形 AoE。先站圓 AoE 邊緣外側等圓判定 → 圓炸完立刻走進已炸過的空地（圓內）以避環形 AoE。",
+                            "tips": [
+                                {"text": "圓 → 圓邊外等；環 → 進圓內", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Frozen Spike 凍刺",
+                            "type": "spread",
+                            "description": "對隨機玩家點名圓 AoE；被點玩家拉開避免疊隊友。",
+                            "tips": [
+                                {"text": "被點拉開", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Buffet 毆打 → MT 朝外",
+                "Northerlies 狂風暴雪 → 看 boss 吹哪個球 → 提前遠離大球",
+                "Updrift 震飛 → 落地瞬間爆，提前站大球外",
+                "Spin 回轉 → 圓邊外 → 圓內（避環）",
+                "Frozen Spike 凍刺 → 散開"
+            ]
+        },
+        {
+            "name": "芬里爾",
+            "nameEn": "Fenrir",
+            "phases": [
+                {
+                    "name": "主戰（月夜狼嚎循環）",
+                    "mechanics": [
+                        {
+                            "name": "Heavensward Roar 蒼穹咆哮",
+                            "type": "cone",
+                            "description": "讀條技能，對前方約 30° 扇形 AoE 無範圍提示，命中附加 10 秒 Deep Freeze 凍結。看到讀條 → 非 T 立刻退離 boss 正面。MT 把 boss 朝場邊面外。",
+                            "tips": [
+                                {"text": "看到讀條 → 退離 boss 正面", "role": "dps"},
+                                {"text": "MT 朝外", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ecliptic Bite 冰狼蝕日",
+                            "type": "tankbuster",
+                            "description": "對 MT 死刑單體 buster；MT 必須開大減傷 + 治療大補。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"},
+                                {"text": "治療大補 + 護盾", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Thousand Year Storm 千年風雪",
+                            "type": "raidwide",
+                            "description": "必中全屏 AoE 中傷害；治療團補。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Howling Moon 月夜狼嚎",
+                            "type": "mechanic",
+                            "description": "場上召喚 4 根冰柱以菱形分布，每根冰柱腳下有圓形 AoE 預兆。看預兆躲開冰柱落地點。第 2 次及之後召喚的 4 根冰柱中，3 根會呈碎裂紋理且散發紫光（不能躲）；只有 1 根藍色完整冰柱才能擋視線。",
+                            "tips": [
+                                {"text": "看冰柱落地預兆閃避", "role": "dps"},
+                                {"text": "第2次起 → 認紫色（壞）與藍色（好）冰柱", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Lunar Cry 月下咆哮",
+                            "type": "mechanic",
+                            "description": "必然接在 Howling Moon 後的長讀條全屏 AoE，命中直接 KO（脆皮直接秒）並附加 10 秒 Deep Freeze。玩家必須躲在冰柱後方擋視線。第一次 4 根都能躲；第二次起只有藍色完整冰柱能躲，紫色裂柱會在 Lunar Cry 過程中碎裂並對腳下圓範圍 AoE + 10 秒 Deep Freeze。最佳站位：躲在藍色冰柱後且保持一段距離（同時擋 Lunar Cry 與冰柱 AoE）。",
+                            "tips": [
+                                {"text": "第1次 → 任一冰柱後", "role": "dps"},
+                                {"text": "第2次起 → 只能躲藍色完整冰柱", "role": "dps"},
+                                {"text": "躲冰柱後但保持距離（避自爆 AoE）", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Lunar Cry 後跳 MT",
+                            "type": "tankbuster",
+                            "description": "Lunar Cry 讀條結束後 Fenrir 會直接跳到 MT 造成中等傷害，無預兆。MT 必須隨時準備接 + 開減傷。",
+                            "tips": [
+                                {"text": "Lunar Cry 結束 → MT 準備接跳", "role": "tank"},
+                                {"text": "治療補 MT", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Heavensward Roar 蒼穹咆哮 → 退離 boss 正面",
+                "Ecliptic Bite 冰狼蝕日 → MT 大減傷",
+                "Thousand Year Storm 千年風雪 → 團補",
+                "Howling Moon → Lunar Cry：躲冰柱後（第2次起只有藍色可躲）",
+                "Lunar Cry 結束 → boss 跳 MT 接位"
+            ]
+        }
+    ]
 }

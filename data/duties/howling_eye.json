@@ -1,138 +1,156 @@
 {
-    "id":  "howling_eye",
-    "name":  "迦樓羅討伐戰",
-    "nameEn":  "The Howling Eye - Garuda",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  46,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Friction 摩擦：點名圓 AoE，被點離隊往場邊。",
-                     "2）Slipstream 滑流：場上龍捲風 AoE，看預兆閃位。",
-                     "3）Wicked Wheel 邪輪：周身大圓 AoE，全員離 boss。",
-                     "4）Mistral Song 北風之歌：全屏 AoE，預備團補。"
-                 ],
-    "notes":  "ARR 2.0 主線討伐戰（Lv 44-46），首次面對風神迦樓羅 Garuda 的劇情戰鬥，地點是『風颶之眼』。簡易版本只有基礎機制 (Friction 摩擦、Slipstream 滑流、Wicked Wheel 邪輪)，後續可解鎖 Hard 與 Extreme。",
-    "bosses":  [
-                   {
-                       "name":  "迦樓羅",
-                       "nameEn":  "Garuda",
-                       "mnemonic":  [
-                                        "Friction 摩擦 → 點名圓 AoE 拉開",
-                                        "Slipstream 滑流 → 場上龍捲風 AoE 避位",
-                                        "Wicked Wheel 邪輪 → 周身大圓 AoE 離 boss"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 100%-50%",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Downburst 下擊風",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 前方錐 AoE；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "非 tank 不站前",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Friction 摩擦 / Wicked Wheel 邪輪",
-                                                                "type":  "aoe",
-                                                                "description":  "Friction 對隨機玩家 + 周圍中等 AoE，Wicked Wheel Boss 周圍 AoE。**兩者都會打壞石柱**。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 把 boss 拉到遠離石柱的邊緣",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "全員散開避免 Friction 範圍包含柱"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Slipstream 順風",
-                                                                "type":  "aoe",
-                                                                "description":  "前方錐形大傷 + 暈。無 telegraph 但可閃；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "看 boss 朝向走位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mistral Song 西北風之歌",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 消失 → 場一側出現 → 視線範圍內高傷；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             "全員躲石柱後破視線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Razor Plume adds 剃刀羽",
-                                                                "type":  "other",
-                                                                "description":  "Mistral Song 後召喚，會打石柱；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 立刻全力 AoE adds",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aerial Blast 終末嵐",
-                                                                "type":  "raidwide",
-                                                                "description":  "50% 詠唱必中全屏，**石柱越多受傷越少**。可用 tank LB 減傷；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "石柱保護到此刻是關鍵",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 50%-0%",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Eye of the Storm 風暴之眼",
-                                                                "type":  "other",
-                                                                "description":  "場邊環形龍捲縮小有效場地到中央。被外圍掃到極高傷；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "全員擠中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mistral Shriek 西北風尖嘯",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 傳送到一側 → 全屏 AoE。**這次跑到她身後**安全；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "看 boss 傳送方向跑反方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mistral Song (P2) 密斯特拉之歌",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 傳送中央 → 視線傷害；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             "跑到她身後"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Razor Plumes (P2) 火羽",
-                                                                "type":  "other",
-                                                                "description":  "25% 召 Razor Plumes 對隨機玩家；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 速殺",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "howling_eye",
+    "name": "迦樓羅討伐戰",
+    "nameEn": "The Howling Eye",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 46,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）絕對不能讓 Garuda 打壞石柱！P1 場上 4 根石柱，Friction 摩擦力／Wicked Wheel 邪輪旋風／Downburst 下行突風／Slipstream 螺旋氣流／剛羽 自爆 都會打壞石柱。",
+        "2）MT 把 Garuda 拉到場邊遠離石柱，DPS/治療散開避免 Friction 圓 AoE 波及石柱。",
+        "3）Mistral Song 寒風之歌（P1）：boss 瞬移到場邊，從場邊射視線 AoE → 全員躲到石柱後方擋視線。",
+        "4）Razor Plume 剛羽 add：boss 召喚多隻會自爆破壞石柱，DPS 立刻切目標清掉（AoE 群打）。",
+        "5）Aerial Blast 大氣爆發（HP 50%）：終 phase 全屏簽名招，傷害取決於剩餘石柱數量；坦克 LB 可進一步減傷。",
+        "6）P2 Eye of the Storm 颱風眼：場邊龍捲風，全員留在場中央圓圈內；Mistral Shriek 寒風之嘯 boss 瞬移到場邊 → 跑離；Mistral Song 寒風之歌 boss 瞬移到中央 → 繞到 boss 背後。"
+    ],
+    "notes": "ARR 2.0 主線 trial（Lv 44，sync 46），加魯達『擒風蠻神』正常版，4 人 trial。地點：阿巴拉提亞雲海颶風眼。Garuda 第一次出場戰，核心機制是『石柱守護』——P1 場上有 4 根石柱，玩家必須避免 boss 的攻擊打壞它們，並在 Mistral Song 寒風之歌時躲到石柱後擋視線。P1 結束 Aerial Blast 大氣爆發是簽名絕招，傷害依剩餘石柱數量計算，沒石柱直接團滅。P2 進入颱風眼模式，場地縮小為中央圓圈。Garuda 的『剛羽』與『躲石柱』機制將成為後續 Hard / Extreme 版本的核心進化。",
+    "bosses": [
+        {
+            "name": "加魯達",
+            "nameEn": "Garuda",
+            "phases": [
+                {
+                    "name": "P1（100%-50% HP，石柱階段）",
+                    "mechanics": [
+                        {
+                            "name": "Downburst 下行突風",
+                            "type": "cone",
+                            "description": "對 MT 方向釋放前方扇形 AoE 無範圍提示。MT 把 boss 朝場邊面外（遠離石柱），非 T 站背。會破壞石柱，務必朝場外。",
+                            "tips": [
+                                {"text": "MT 把 boss 朝場邊面外", "role": "tank"},
+                                {"text": "非 T 站背", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Friction 摩擦力（烈風刃）",
+                            "type": "spread",
+                            "description": "隨機玩家為圓心圓 AoE 無範圍提示；同時會破壞石柱。DPS/治療盡量散開站位，遠離石柱以免波及。",
+                            "tips": [
+                                {"text": "散開站，遠離石柱", "role": "dps"},
+                                {"text": "Friction 是破壞石柱主因", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Wicked Wheel 邪輪旋風",
+                            "type": "aoe",
+                            "description": "boss 自身為圓心圓 AoE 無範圍提示；同時破壞石柱。近戰必須立刻退離 boss，MT 把 boss 拉遠離石柱。",
+                            "tips": [
+                                {"text": "近戰看 boss 動作退離", "role": "dps"},
+                                {"text": "MT 拉 boss 遠離石柱", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Slipstream 螺旋氣流",
+                            "type": "aoe",
+                            "description": "讀條技能，對 MT 方向釋放前方直線 AoE + Stun 眩暈，無範圍提示但可走位閃避。會破壞石柱，MT 朝場邊面外。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "看讀條走位閃", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mistral Song 寒風之歌（P1）",
+                            "type": "mechanic",
+                            "description": "讀條技能，Garuda 瞬移到場地一側，從該側射出視線 AoE 範圍極大、無範圍提示。中招直接秒。玩家必須立刻躲到石柱後方擋視線。看 boss 瞬移位置決定躲哪根石柱。",
+                            "tips": [
+                                {"text": "看 boss 瞬移位置 → 躲石柱後", "role": "dps"},
+                                {"text": "中招會秒殺", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Razor Plume 剛羽（add）",
+                            "type": "add",
+                            "description": "Garuda 召喚多隻 Razor Plume 剛羽 add。剛羽會強制靠近石柱，一段時間後自爆破壞石柱（若場上沒石柱會主動接近玩家自爆）。DPS 必須立刻切目標、用 AoE 群打迅速清光。",
+                            "tips": [
+                                {"text": "DPS 切目標 AoE 群打", "role": "dps"},
+                                {"text": "T 用範圍仇恨拉到一起", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Aerial Blast 大氣爆發（簽名絕招 ~50% HP）",
+                            "type": "raidwide",
+                            "description": "HP 約 50% 時 Garuda 瞬移到場中央讀條，全屏 AoE 強制破壞所有石柱。傷害依剩餘石柱數量計算：石柱越多傷害越低，沒石柱直接團滅。坦克可開 LB1 進一步減傷。施放後進入 P2，全程只出現 1 次。",
+                            "tips": [
+                                {"text": "全員減傷 + 大補", "role": "tank"},
+                                {"text": "T 開 LB1 救場", "role": "tank"},
+                                {"text": "團補連發", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2（50%-0% HP，颱風眼縮場）",
+                    "mechanics": [
+                        {
+                            "name": "Eye of the Storm 颱風眼",
+                            "type": "mechanic",
+                            "description": "P2 開場 Garuda 施放，場地外圈出現龍捲風區域有範圍提示。玩家必須留在場中央圓圈內，踩出去吃高傷。此效果持續到戰鬥結束。",
+                            "tips": [
+                                {"text": "全員留在中央圈", "role": "tank"},
+                                {"text": "不要踩到場邊藍色區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mistral Shriek 寒風之嘯",
+                            "type": "aoe",
+                            "description": "Garuda 瞬移到場地 12 點方向（場邊），立刻施放自身周圍大範圍 AoE 極高傷害。看到 boss 瞬移到場邊立刻跑到對側遠離。",
+                            "tips": [
+                                {"text": "boss 瞬移到場邊 → 跑對側", "role": "dps"},
+                                {"text": "不要待在 boss 附近", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Mistral Song 寒風之歌（P2）",
+                            "type": "mechanic",
+                            "description": "Garuda 瞬移到場中央，對前方 180° 釋放視線 AoE 無範圍提示。此時場上已無石柱，玩家必須跑到 boss 背後擋視線。",
+                            "tips": [
+                                {"text": "boss 瞬移到中央 → 繞到背後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Razor Plume 剛羽（~25% HP）",
+                            "type": "add",
+                            "description": "HP 約 25% 時 Garuda 召喚 Razor Plume 剛羽 add，會對隨機玩家做遠距攻擊。DPS 立刻切目標 AoE 清掉。",
+                            "tips": [
+                                {"text": "DPS 速秒剛羽", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Downburst / Friction / Wicked Wheel / Slipstream 沿用",
+                            "type": "mechanic",
+                            "description": "P1 的四個基本技能繼續使用，但已無石柱可破壞。MT 持續朝外，DPS 注意走位閃 Slipstream + 散開避 Friction。",
+                            "tips": [
+                                {"text": "MT 持續朝外", "role": "tank"},
+                                {"text": "看讀條走位", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1 不破石柱 → MT 拉場邊、Friction 散開",
+                "Mistral Song 寒風之歌 P1 → 躲石柱後",
+                "剛羽 → DPS 立即 AoE 清",
+                "Aerial Blast 大氣爆發（50%）→ 全員大減傷 + 坦克 LB",
+                "P2 Eye of the Storm → 留中央圈",
+                "Mistral Shriek 瞬移到場邊 → 跑對側",
+                "Mistral Song 瞬移到中央 → 繞背後"
+            ]
+        }
+    ]
 }
