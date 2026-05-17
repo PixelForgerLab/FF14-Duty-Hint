@@ -1,176 +1,171 @@
 {
-  "id": "antitower",
-  "name": "星海空間顛倒塔",
-  "nameEn": "The Antitower",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Zuro Roggo 祖洛羅戈：Water Bomb 水球 + Odious Croak 不悅咆哮 + Frog Song 蛙之歌。",
-    "B2 Ziggy 齊吉：Gyrating Glare 旋轉視線 + Jittering Glare 顫抖視線 + Jittering Jounce 顫跳。",
-    "B3 Calcabrina 卡爾卡布琳娜：Terrifying Glance 恐怖一瞥 + Knockout 擊倒 + Brace 振奮。"
-  ],
-  "notes": "HW 3.3 星海空間顛倒塔（Lv 60）。Boss 依序為 Zuro Roggo 祖洛羅戈、Ziggy 齊吉、Calcabrina 卡爾卡布琳娜。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "antitower",
+    "name": "星海空間顛倒塔",
+    "nameEn": "The Antitower",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 Tesleen 蛙女歌手：玩具錘 MT 死刑 + 腦震盪無法操作；蛙變之歌變 2 隊友 + spawn 水蛙合唱團 add → 必殺解蛙變。",
+        "B2 Manipulator 星塵碎片：場上 4 顆陨石 → 連線點名直線時躲陨石後可解（陨石擋線後爆炸 → 遠離）。固定點 T 扇形已改隨機點 + 有預兆。",
+        "B3 Calcabrina 卡爾克布莉娜（FF4 致敬）：開場 3 隻卡爾克 + 3 隻布莉娜（圓形/環形 AoE）→ 全清後合體 boss。",
+        "B3 恐懼之瞳 點名玩家眼睛標記 → 扇形範圍背對點名玩家解；未解陷入混亂攻擊隊友。變成人偶 眩暈 2 名 DPS + 變人偶 + 出血 → 隊友打掉解人偶；同時鬧劇多段全屏。",
+        "B3 抱頭防禦 隨機轉向東南西北 → 除正面外其他方向攻擊會反擊 + 擊退 → 看朝向只從正面打。"
+    ],
+    "notes": "HW 3.1 副本（Lv 60，sync 60，4 人 dungeon），位於空白堂顛倒塔內部。Boss 依序為 Tesleen the Forgiven 蛙女歌手、Manipulator 操作者（陨石機制）、Calcabrina 卡爾克布莉娜（FF4 致敬的人偶 boss）。本副本特色：B3 開場小 boss 二合一 + 反擊機制需看朝向打。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Spawns a circle AoE telegraph at the location of two players.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Water Bomb 炸彈",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "The boss will use a persistent untelegraphed frontal conal AoE. Move away from the front.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Odious Croak (no castbar) 吟唱",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "The boss will begin singing, turning two players (the healer and one DPS) into frogs which will prevent them from attacking, while continually spawnin；依預兆走位處理。",
-              "name": "Frog Song 歌",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "An untelegraphed tankbuster that will inflict Concussion for 10 seconds, stunning the target. This can be removed with Esuna.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Toy Hammer 玩具錘",
-              "tips": [
+            "name": "蛙女歌手",
+            "nameEn": "Tesleen the Forgiven",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "音痴的熱唱 Tone-Deaf Aria",
+                            "type": "cone",
+                            "description": "前方持續扇形 AoE。MT 朝場邊面外，非 T 站背 / 側。",
+                            "tips": [{"text": "MT 朝外", "role": "tank"}]
+                        },
+                        {
+                            "name": "水球 Water Orb",
+                            "type": "aoe",
+                            "description": "場上出現水球 → 一段時間後爆炸 + 對範圍內玩家附加『傷害降低』debuff。看圓避位。",
+                            "tips": [{"text": "看水球範圍避", "role": "dps"}]
+                        },
+                        {
+                            "name": "蛙變之歌 Frog Song",
+                            "type": "add",
+                            "description": "選擇 2 隊友變青蛙 + spawn 2 隻水蛙合唱團 add。蛙變玩家腳下圓 AoE。必殺合唱團解蛙變。",
+                            "tips": [
+                                {"text": "DPS 速殺合唱團", "role": "dps"},
+                                {"text": "蛙變者拉場邊不要疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "玩具錘 Toy Hammer",
+                            "type": "tankbuster",
+                            "description": "一仇 MT 死刑 + 腦震盪 debuff（無法操作）→ 隨後固定面向釋放持續扇形 AoE 音痴的熱唱。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"},
+                                {"text": "Esuna 清腦震盪", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            }
-          ]
-        }
-      ],
-      "name": "祖洛羅戈",
-      "nameEn": "Zuro Roggo",
-      "mnemonic": [
-        "Zuro Roggo 祖洛羅戈 機制：Water Bomb 水球 + Odious Croak 不悅咆哮 + Frog Song 蛙之歌。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "音痴的熱唱（前扇）→ MT 朝外",
+                "水球 → 看範圍避（傷害降低）",
+                "蛙變之歌 → 殺合唱團解",
+                "玩具錘 → MT 死刑 + 腦震盪"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Party-wide magical damage.；全員預備減傷與大團補。",
-              "name": "Gyrating Glare 招式",
-              "tips": [
+            "name": "操作者",
+            "nameEn": "Manipulator",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰（陨石擋線機制）",
+                    "mechanics": [
+                        {
+                            "name": "星塵碎片 Stardust Shard（4 陨石）",
+                            "type": "mechanic",
+                            "description": "場地固定出現 4 枚陨石（鋼鐵讀條，短預兆 AoE → 靠近場邊躲避）。陨石可用來擋連線。",
+                            "tips": [{"text": "靠場邊躲鋼鐵 AoE", "role": "dps"}]
+                        },
+                        {
+                            "name": "連線點名 Tether",
+                            "type": "aoe",
+                            "description": "單次直線點名 AoE → 躲在陨石後可被陨石擋下（陨石抵擋後爆炸範圍 AoE → 遠離陨石）。",
+                            "tips": [
+                                {"text": "被點玩家拉到陨石後", "role": "dps"},
+                                {"text": "陨石擋後爆炸 → 退離", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "隨機點扇形 AoE",
+                            "type": "cone",
+                            "description": "之前固定點 T 的扇形現在隨機點任一隊員，有範圍預兆 + 長讀條，容易躲。",
+                            "tips": [{"text": "看預兆走縫", "role": "dps"}]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "A telegraphed frontal conal AoE aimed at a random player.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Jittering Glare 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "The system message \"Ziggy takes careful aim\" and the boss tethers one player and marks them with a crosshair.；依預兆走位處理。",
-              "name": "Jittering Jounce 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Telegraphed tankbuster.；MT開大減傷 雙T swap接力。",
-              "name": "Jittering Jab 抖動戳擊",
-              "tips": [
-                {
-                  "text": "MT 開減傷",
-                  "role": "tank"
-                }
-              ],
-              "type": "tankbuster"
-            }
-          ]
-        }
-      ],
-      "name": "齊吉",
-      "nameEn": "Ziggy",
-      "mnemonic": [
-        "Ziggy 齊吉 機制：Gyrating Glare 旋轉視線 + Jittering Glare 顫抖視線 + Jittering Jounce 顫跳。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "星塵碎片 4 陨石 → 鋼鐵 AoE 靠場邊躲",
+                "連線點名 → 躲陨石後擋線 → 退離爆炸",
+                "隨機扇形 AoE → 看預兆走縫"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Targets a player with a red eye above their head and strikes them with large untelegraphed frontal cone. Causes confusion if hit.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Terrifying Glance (no castbar) 吟唱",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Telegraphed tankbuster.；MT開大減傷 雙T swap接力。",
-              "name": "Knockout 招式",
-              "tips": [
+            "name": "卡爾克布莉娜",
+            "nameEn": "Calcabrina",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "P1 6 小怪合體",
+                    "mechanics": [
+                        {
+                            "name": "Calca + Brina 開場 6 小怪",
+                            "type": "add",
+                            "description": "開場 3 隻 Calca 卡爾克 + 3 隻 Brina 布莉娜。自主移動不主動攻擊，但分別釋放以自身為圓心的圓 AoE 與環形 AoE（炽熱凝視）。全部擊殺後跳場中央合體成 boss。",
+                            "tips": [
+                                {"text": "DPS AoE 速清 6 小怪", "role": "dps"},
+                                {"text": "避圓 + 環 AoE", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 卡爾克布莉娜主戰",
+                    "mechanics": [
+                        {
+                            "name": "恐懼之瞳 Eye of Fear",
+                            "type": "gaze",
+                            "description": "隨機點名 1 玩家眼睛標記 → 扇形範圍背對點名玩家解。未解陷入混亂自動攻擊隊友。",
+                            "tips": [
+                                {"text": "看眼睛背對點名者", "role": "tank"},
+                                {"text": "中招 Esuna 清混亂", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "擊暈 Stun（MT 高傷）",
+                            "type": "tankbuster",
+                            "description": "對一仇 MT 高傷單體；MT 大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "變成人偶 + 鬧劇",
+                            "type": "mechanic",
+                            "description": "眩暈 2 名 DPS → 分別變成 Calca 與 Brina 人偶 + 出血 DoT。同時鬧劇 多段全屏 AoE。隊友需要打掉人偶解 DPS。",
+                            "tips": [
+                                {"text": "隊友打掉人偶解 DPS", "role": "dps"},
+                                {"text": "Esuna 清出血", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "抱頭防禦 Guard",
+                            "type": "mechanic",
+                            "description": "boss 隨機轉向東南西北一個方向 → 除正面外其他方向攻擊會反擊 + 擊退。只能從 boss 正面攻擊（看朝向繞到前面）。",
+                            "tips": [
+                                {"text": "看朝向繞正面打", "role": "dps"},
+                                {"text": "其他方向會被反擊", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "The boss summons three purple barriers, leaving one side empty. The boss will only be vulnerable to attacks from the empty side. Hitting it from a pro；依預兆走位處理。",
-              "name": "Brace 支撐",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Transforms two players into dolls (Calca and Brina) that also inflicts a bleeding Bleeding damage-over-time. The dolls will use donut and conal AoE at；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Dollhouse 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 3 Calca + 3 Brina → AoE 清 → 合體",
+                "恐懼之瞳眼睛 → 背對點名解",
+                "擊暈 → MT 大減傷",
+                "變成人偶 → 隊友打掉解 + 鬧劇全屏",
+                "抱頭防禦 → 看朝向只從正面打"
+            ]
         }
-      ],
-      "name": "卡爾卡布琳娜",
-      "nameEn": "Calcabrina",
-      "mnemonic": [
-        "Calcabrina 卡爾卡布琳娜 機制：Terrifying Glance 恐怖一瞥 + Knockout 擊倒 + Brace 振奮。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

@@ -1,200 +1,206 @@
 {
-  "id": "xelphatol",
-  "name": "險峻峽谷塞爾法特爾溪谷",
-  "nameEn": "Xelphatol",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Apademak 阿帕德馬克：Steel Beak 鋼喙 + 點名圓。",
-    "B2 Garuda 迦樓羅化身：Slipstream 滑流 + Wicked Wheel 邪輪。",
-    "B3 Tozkapan 托茲卡潘：Tornado 龍捲 + 召喚伊舒戰士 add。"
-  ],
-  "notes": "HW 3.0 HW 副本伊舒納地（Lv 60）。Boss 依序為 Apademak 阿帕德馬克、Garuda 迦樓羅化身、Tozkapan 托茲卡潘。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "xelphatol",
+    "name": "險峻峽谷塞爾法特爾溪谷",
+    "nameEn": "Xelphatol",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 鳥人弓手：烈風爆射長矩形雷射 → 看朝向避；半血升空 + 召喚 1 氣球炮塔 + 2 氣球縫製員（速殺）。",
+        "B1 氣球炮塔爆裂射擊單體 + 裂傷；擊破時氣浪爆全場擊飛 → 1 名玩家站 boss 正下方被吹飛 + 衝破氣球讓 boss 落地。",
+        "B1 落地後出 2 起風珠連線 boss → boss 無敵 → 集火珠子；隨後疾風射擊單體 + 裂傷。",
+        "B2 鳥人首領：扇風前扇明顯預兆；大扇風場中央全屏 + 長擊退 → 站場邊擋板防被推到外圈陷阱（持續傷 + 受傷加深）。",
+        "B2 黑旋風 2 非 T 玩家點名 AoE；颶風 2 個擋板前讀條後留下飓風範圍 → 大扇風時躲另外兩擋板。",
+        "B2 身輕如燕 5s 加速 → 扇風變快 → 治療注意。",
+        "B3 風神配下：鳥人暴風全場 + 驅鷹1 全員綠標分散 + 鳥人烈風非 T 矩形 + 驅鷹2 非 T 分攤。",
+        "B3 半血召喚迦樓羅1：迦樓羅 120° 半圓 + 場外圈攻擊 + 全員驅鷹1 → 三重預警避位（活動範圍只剩內圓 2/3）。",
+        "B3 召喚迦樓羅2：場地內外圈攻擊 → 站在外圈與內圈之間的縫隙無傷。"
+    ],
+    "notes": "HW 3.2 副本（Lv 60，sync 60，4 人 dungeon），位於阿爾迪納德次大陸塞爾法特爾。劇情上對抗風神信徒鳥人族。Boss 依序為 Apkallu of Lahmu 鳥人弓手、Tozkapu Apkallu 鳥人首領、Kreios 風神配下（含迦樓羅召喚機制）。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "path aoe；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Wind Blast 爆裂",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "he jumps up and summons adds, including a turret；依預兆走位處理。",
-              "name": "Lift",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "party wide aoe；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Air Raid",
-              "tips": [
+            "name": "鳥人弓手",
+            "nameEn": "Apkallu of Lahmu",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "party wide aoe cast by the turrets, it launches everyone up in the air；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Hot Air 熱氣",
-              "tips": [
+                    "name": "P1 100%-50% HP（基礎）",
+                    "mechanics": [
+                        {
+                            "name": "烈風爆射 Wind Shot",
+                            "type": "aoe",
+                            "description": "向某名玩家當前位置蓄力一次長矩形雷射（預警明顯，蓄力時間長）。看朝向避。",
+                            "tips": [{"text": "看朝向走縫", "role": "dps"}]
+                        }
+                    ]
+                },
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "P2 < 50% HP（升空 + 氣球炮塔）",
+                    "mechanics": [
+                        {
+                            "name": "上升 + 1 氣球炮塔 + 2 氣球縫製員",
+                            "type": "add",
+                            "description": "boss 升空不可選 + 召喚 1 氣球炮塔 + 2 氣球縫製員。縫製員血少快速解決；炮塔有爆裂射擊（單體 + 裂傷 buff 持續掉血）。",
+                            "tips": [{"text": "DPS 先清縫製員再炮塔", "role": "dps"}]
+                        },
+                        {
+                            "name": "氣浪爆（炮塔擊破回降機制）",
+                            "type": "knockback",
+                            "description": "氣球炮塔被擊破時 → 保留 1 HP + 蓄力一次全場擊飛 → 1 名玩家必須站 boss 正下方被吹飛 + 衝破 boss 身上氣球讓 boss 降落。否則會再次召喚炮塔重複此過程。",
+                            "tips": [
+                                {"text": "1 名玩家站 boss 正下方", "role": "dps"},
+                                {"text": "被吹飛衝破氣球", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "空襲",
+                            "type": "raidwide",
+                            "description": "boss 升空時不定期釋放無蓄力全場 AoE，傷害較低但頻繁。",
+                            "tips": [{"text": "治療團補連發", "role": "healer"}]
+                        },
+                        {
+                            "name": "起風珠（落地後）",
+                            "type": "add",
+                            "description": "boss 落地後場地召喚 2 起風珠連線 boss → boss 無敵。必須儘快集火起風珠解無敵。",
+                            "tips": [{"text": "DPS 集火起風珠", "role": "dps"}]
+                        },
+                        {
+                            "name": "疾風射擊 Wind Strike",
+                            "type": "tankbuster",
+                            "description": "對某名玩家蓄力 → 單體傷害 + 裂傷 buff 持續掉血。",
+                            "tips": [{"text": "Esuna 清裂傷", "role": "healer"}]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "an add tethered to the boss or turret, kill asap；依預兆走位處理。",
-              "name": "Airstone 石",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "unavoidable, targets random player；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Long Burst 爆裂",
-              "tips": [
-                {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ],
-              "type": "raidwide"
-            }
-          ]
-        }
-      ],
-      "name": "阿帕德馬克",
-      "nameEn": "Apademak",
-      "mnemonic": [
-        "Apademak 阿帕德馬克 機制：Steel Beak 鋼喙 + 點名圓。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "烈風爆射長矩形 → 看朝向避",
+                "半血升空 → 殺縫製員 + 炮塔 + 1 人站 boss 正下被吹破氣球",
+                "落地起風珠 → 集火解無敵"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "frontal cleave aimed at the tank；依預兆走位處理。",
-              "name": "On Low",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "party wide aoe with push back, stand with your back to the barriers or you will fall in the spike pit；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "On High 高處",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            },
-            {
-              "description": "targets random player with aoe, spread out；隨機點名玩家圓形 AoE，被點立即拉開分散站位 5m+。",
-              "name": "Dark Wings 暗翼",
-              "tips": [
-                "全員散開"
-              ],
-              "type": "spread"
-            },
-            {
-              "description": "targets barrier and spawns windy aoe；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Stormcoming 風暴",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Causes the next On Low to be almost instant. On Low is used right after. Cannot be dodged to the side as the cast is instant.；依預兆走位處理。",
-              "name": "Swiftfeather 迅羽",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "迦樓羅化身",
-      "nameEn": "Garuda",
-      "mnemonic": [
-        "Garuda 迦樓羅化身 機制：Slipstream 滑流 + Wicked Wheel 邪輪。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "party wide aoe；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Ixali Aero III 疾風 III",
-              "tips": [
+            "name": "鳥人首領",
+            "nameEn": "Tozkapu Apkallu",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "扇風 Fan Wind",
+                            "type": "cone",
+                            "description": "對一仇方向蓄力扇形（蓄力久範圍明顯）。MT 朝外。",
+                            "tips": [{"text": "看預兆避", "role": "dps"}]
+                        },
+                        {
+                            "name": "大扇風 + 場外陷阱",
+                            "type": "knockback",
+                            "description": "boss 移到場中央蓄力全圖 AoE + 長距離擊退。被擊退到場外圈陷阱地形 → 持續高傷 + 受傷加深 buff。對策：boss 移場中央時找場邊擋板擋擊退。",
+                            "tips": [
+                                {"text": "找擋板擋擊退", "role": "tank"},
+                                {"text": "不要被推到場邊陷阱", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "黑旋風 Black Whirlwind",
+                            "type": "spread",
+                            "description": "2 名非一仇玩家點名 AoE（有預兆）。被點玩家拉開不要疊。",
+                            "tips": [{"text": "被點拉開", "role": "dps"}]
+                        },
+                        {
+                            "name": "颶風 Cyclone",
+                            "type": "mechanic",
+                            "description": "讀條依次對隨機 2 個擋板前釋放黃圈 AoE + 生成不可移動的颶風（持續到該次大扇風結束）。隨後 boss 回場中放大扇風 → 站到另外 2 個沒颶風的擋板前等擊退。",
+                            "tips": [
+                                {"text": "看哪 2 擋板沒颶風", "role": "tank"},
+                                {"text": "站沒颶風的擋板擋擊退", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "身輕如燕 Light as a Feather",
+                            "type": "mechanic",
+                            "description": "boss 原地蓄力（紅光）→ 5 秒 Haste 加速 → 攻擊間隔變短 + 咏唱變快（扇風頻率提高）。治療注意減傷與大團補。",
+                            "tips": [
+                                {"text": "MT 連發減傷", "role": "tank"},
+                                {"text": "治療大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "path aoe；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Ixali Aero II 疾風 II",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "resolves to either a stack marker or a spread marker；隨機點名玩家集合分攤 AoE，全員集合分攤傷害。",
-              "name": "Hawk 鷹",
-              "tips": [
-                "疊接分擔"
-              ],
-              "type": "stack"
-            },
-            {
-              "description": "he summons untargetable Garuda, she fires a room wide aoe with some safe areas and marks everyone with green crystals and aoe rings, spread out；隨機點名玩家圓形 AoE，被點立即拉開分散站位 5m+。",
-              "name": "Summon Garuda 召嘉魯達",
-              "tips": [
-                "全員散開"
-              ],
-              "type": "spread"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "扇風前扇 → 看預兆避",
+                "大扇風 + 擊退 → 站擋板防被推外圈陷阱",
+                "黑旋風 2 非 T 點名 → 拉開",
+                "颶風 → 站另 2 沒颶風的擋板擋擊退",
+                "身輕如燕 5s 加速 → MT 連發減傷"
+            ]
+        },
+        {
+            "name": "風神配下",
+            "nameEn": "Kreios",
+            "phases": [
+                {
+                    "name": "P1 100%-50% HP（基礎）",
+                    "mechanics": [
+                        {
+                            "name": "鳥人暴風",
+                            "type": "raidwide",
+                            "description": "boss 蓄力全場 AoE。治療團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "驅鷹 1 全員點名 AoE",
+                            "type": "spread",
+                            "description": "點名所有玩家綠色標記 + 各自周圍綠圓預警 → 短暫延遲傷害。散開站位。",
+                            "tips": [{"text": "全員散開", "role": "tank"}]
+                        },
+                        {
+                            "name": "鳥人烈風",
+                            "type": "aoe",
+                            "description": "對非一仇方向蓄力長矩形 AoE。",
+                            "tips": [{"text": "看朝向避", "role": "dps"}]
+                        },
+                        {
+                            "name": "驅鷹 2（分攤）",
+                            "type": "stack",
+                            "description": "點名某非一仇玩家分攤預警圈。全員集合該玩家分攤。",
+                            "tips": [{"text": "全員集合分攤", "role": "tank"}]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 50% HP（迦樓羅召喚）",
+                    "mechanics": [
+                        {
+                            "name": "召喚迦樓羅 1",
+                            "type": "mechanic",
+                            "description": "boss 移場邊召喚迦樓羅 → 場中央暴風 → 迦樓羅出現 + boss 對全員驅鷹 1（綠標散）+ 場外圈攻擊預警。短暫延遲後迦樓羅選定方向 120° 半圓蓄力。三重預警同時發動 → 可活動範圍只剩內圓 2/3 → 走位躲敵人 AoE + 別讓隊友吃自己點名 AoE。",
+                            "tips": [
+                                {"text": "活動範圍只剩內圓 2/3", "role": "dps"},
+                                {"text": "看 3 重預警綜合走位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "召喚迦樓羅 2",
+                            "type": "aoe",
+                            "description": "boss 蓄力再次召喚迦樓羅 → 對場地外圈與內圈發起攻擊預警。安全位：外圈和內圈之間的縫隙 → 無傷躲過。",
+                            "tips": [{"text": "站外圈內圈之間縫隙", "role": "dps"}]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "鳥人暴風全場 → 團補",
+                "驅鷹 1 全員散開",
+                "鳥人烈風矩形 → 看朝向避",
+                "驅鷹 2 分攤 → 集合",
+                "召喚迦樓羅 1 → 內圓 2/3 走位 + 3 重預警",
+                "召喚迦樓羅 2 → 站外圈內圈縫隙無傷"
+            ]
         }
-      ],
-      "name": "托茲卡潘",
-      "nameEn": "Tozkapan",
-      "mnemonic": [
-        "Tozkapan 托茲卡潘 機制：Tornado 龍捲 + 召喚伊舒戰士 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

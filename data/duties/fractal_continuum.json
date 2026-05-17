@@ -1,165 +1,210 @@
 {
-  "id": "fractal_continuum",
-  "name": "博物戰艦無限迴廊",
-  "nameEn": "The Fractal Continuum",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Sycorax 西科拉克斯：機械爪 + 直線 AoE。",
-    "B2 Servomechanical Chimera 機械奇美拉：火/雷/冰咆哮 + Cacophony 雜亂之音。",
-    "B3 Quickthinx Allthoughts 奎克辛克斯：機甲 boss 機制 + 召喚 add。"
-  ],
-  "notes": "HW 3.0 HW 副本博物戰艦（Lv 60）。Boss 依序為 Sycorax 西科拉克斯、Servomechanical Chimera 機械奇美拉、Quickthinx Allthoughts 奎克辛克斯。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "fractal_continuum",
+    "name": "博物戰艦無限迴廊",
+    "nameEn": "The Fractal Continuum",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 母盤：亞拉戈重力 圓 AoE + 留陷阱（踩到扣 50% HP + 加重 38s）；雷力供給激活原形浮游炮。",
+        "B1 奇數次雷力供給 → 浮游炮隨機位置擴散射線（有預兆）+ 魔科學激光單體；偶數次 → 浮游炮一字排列 → 半場直線 AoE 無預兆 + boss 攻城炮自身前直線 + 高壓雷流（碰電流擊退 + 受傷加重 60s）。",
+        "B2 究極戰士：以太爆雷 MT 單體大傷；攻城炮無預兆直線（隨機 + 受傷加重）；大型以太爆雷分攤；青磷放射全屏 + 擊退。",
+        "B2 荒蠻以太 三斗神 3 種變體：① 魔神-意志（全員圓 + 留陷阱不斷變大 + 無限傷）；② 女神-罪與罰（黑白圈標 → 不同色重疊抵消，否則全屏）；③ 鬼神-冰炎刻印（冰/炎刻印 → 對應紋章內必須有對應刻印玩家否則紋章爆全屏）。",
+        "B3 究極神兽：死亡迴旋無預兆自身圓（看抬爪）；以太曲折無預兆環形（看雙腳站立）；耀星全屏 + 留岩漿陷阱。",
+        "B3 亞拉戈重力全員圓不可閃；光柱花瓣狀多段圓 AoE（第 1 次有預兆）；後天野兽 boss 自疊增傷 buff 到戰鬥結束。",
+        "B3 亞究極全屏 + 亞拉戈核爆點 T 全屏衰減 → T 拉到場邊；亞究極黑暗 3 分 10 秒固定狂暴或低血提前 → 全屏秒殺，必先擊敗。"
+    ],
+    "notes": "HW 3.2 副本（Lv 60，sync 60，4 人 dungeon），位於魔大陸阿濟茲拉博物戰艦。劇情上玩家調查阿拉戈帝國黑科技。Boss 依序為 Motherbit 母盤、Quickthinx Allthoughts 究極戰士、Ultros Daemonus 究極神兽。本副本是 HW 阿拉戈科技主題副本。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "a double conal AoE that fans out directly in front of and behind the boss, and then repeats on either side of the boss.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Double Sever 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "is a tank buster; use cooldowns as necessary to mitigate the damage.；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Rapid Sever 招式",
-              "tips": [
+            "name": "母盤",
+            "nameEn": "Motherbit",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰（浮游炮機制）",
+                    "mechanics": [
+                        {
+                            "name": "Magitek Laser 魔科學激光",
+                            "type": "tankbuster",
+                            "description": "boss 普攻單體魔法。",
+                            "tips": [{"text": "MT 接住", "role": "tank"}]
+                        },
+                        {
+                            "name": "Allagan Gravity 亞拉戈重力 + 陷阱",
+                            "type": "aoe",
+                            "description": "boss 讀條釋放圓 AoE + 留下陷阱區域（持續一段時間）。被 AoE 打到 / 踩入 → 強制扣 50% HP + 38s 加重。",
+                            "tips": [
+                                {"text": "看圓走出 + 避陷阱", "role": "dps"},
+                                {"text": "Esuna 清加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Electric Supply 雷力供給（奇數）",
+                            "type": "mechanic",
+                            "description": "奇數次：浮游炮隨機分布形狀 → 釋放擴散射線直線 AoE（有預兆）+ 接著魔科學激光單體物理。",
+                            "tips": [{"text": "看直線預兆走縫", "role": "dps"}]
+                        },
+                        {
+                            "name": "Electric Supply 雷力供給（偶數 + 一字排列）",
+                            "type": "mechanic",
+                            "description": "偶數次：浮游炮固定一字排列 → 同一側發射無預兆覆蓋半場直線 AoE。同時 boss 攻城炮對自身前無預兆直線 AoE。隨後浮游炮一字形成高壓雷流（碰電流擊退 + 60s 受傷加重）。",
+                            "tips": [
+                                {"text": "偶數次站對側避半場 AoE", "role": "tank"},
+                                {"text": "避開高壓雷流線", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            }
-          ]
-        }
-      ],
-      "name": "西科拉克斯",
-      "nameEn": "Sycorax",
-      "mnemonic": [
-        "Sycorax 西科拉克斯 機制：機械爪 + 直線 AoE。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
+            ],
+            "mnemonic": [
+                "亞拉戈重力圓 + 陷阱 → 走出 + 避陷阱（扣 50% HP）",
+                "雷力供給奇數 → 隨機浮游炮擴散射線",
+                "雷力供給偶數 → 一字排列半場 AoE + 攻城炮 + 高壓雷流"
+            ]
+        },
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "deals mild AoE damage and knockback.；擊退 AoE，提前 Arm's Length / Surecast 抗擊退或預判落點。",
-              "name": "Disorienting Groan 呻吟",
-              "tips": [
-                "預判擊退方向或開 Arm's Length"
-              ],
-              "type": "knockback"
-            }
-          ]
-        }
-      ],
-      "name": "機械奇美拉",
-      "nameEn": "Servomechanical Chimera",
-      "mnemonic": [
-        "Servomechanical Chimera 機械奇美拉 機制：火/雷/冰咆哮 + Cacophony 雜亂之音。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "adds will periodically spawn occasionally along the edge of the arena; each will occupy a single square, infusing it with a debuff that damages any pl；依預兆走位處理。",
-              "name": "Clockwork Alarum 鎖",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "依預兆走位處理。",
-              "name": "Aetherochemical Explosive 以太化學爆炸",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "will light up a pattern of floor tiles.；依預兆走位處理。",
-              "name": "The Educator 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "奎克辛克斯",
-      "nameEn": "Quickthinx Allthoughts",
-      "mnemonic": [
-        "Quickthinx Allthoughts 奎克辛克斯 機制：機甲 boss 機制 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "場上多重 AoE；看圖示提前走位避開預兆範圍。",
-              "name": "AoE 連發",
-              "tips": [
-                "閃預警"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Tankbuster；MT開大減傷 雙T swap接力。",
-              "name": "Tankbuster 坦克爆擊",
-              "tips": [
+            "name": "究極戰士",
+            "nameEn": "Quickthinx Allthoughts",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰（三斗神荒蠻以太）",
+                    "mechanics": [
+                        {
+                            "name": "Aether Spark 以太爆雷",
+                            "type": "tankbuster",
+                            "description": "讀條對 MT 單體大量傷害。MT 大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "攻城炮 Siege Cannon",
+                            "type": "aoe",
+                            "description": "boss 轉向隨機玩家釋放無預兆直線 AoE + 60s 受傷加重。",
+                            "tips": [{"text": "看 boss 朝向避", "role": "dps"}]
+                        },
+                        {
+                            "name": "大型以太爆雷（分攤）",
+                            "type": "stack",
+                            "description": "讀條點名隨機 1 人可分攤傷害。全員集合分攤。",
+                            "tips": [{"text": "全員集合分攤", "role": "tank"}]
+                        },
+                        {
+                            "name": "青磷放射 Ceruleum Vent",
+                            "type": "knockback",
+                            "description": "讀條全屏 AoE + 擊退。Surecast 抗或預判位置。",
+                            "tips": [{"text": "Surecast 抗", "role": "tank"}]
+                        },
+                        {
+                            "name": "荒蠻以太 - 魔神-意志（圓陷阱）",
+                            "type": "mechanic",
+                            "description": "對全員附加圓形 AoE 點名 → 傷害後該位置生成不斷變大的圓形陷阱 → 內部每隔一段時間產生『無限』傷害。被點玩家拉到場邊不要在中央。",
+                            "tips": [{"text": "被點拉場邊", "role": "dps"}]
+                        },
+                        {
+                            "name": "荒蠻以太 - 女神-罪與罰（黑白圈）",
+                            "type": "mechanic",
+                            "description": "對全員附加黑色或白色圓圈標記。判定時若每個黑白圈均與不同色黑白圈重疊 → 無事；否則 → 產生全屏 AoE。對策：黑白配對相疊。",
+                            "tips": [{"text": "黑配白配對相疊", "role": "tank"}]
+                        },
+                        {
+                            "name": "荒蠻以太 - 鬼神-冰炎刻印",
+                            "type": "mechanic",
+                            "description": "對全員附加 Ice 冰之刻印或 Fire 炎之刻印。場上同時出現冰和火紋章。判定時若冰紋章內無冰刻印玩家、或火紋章內無炎刻印玩家 → 紋章爆炸全屏 AoE。對策：玩家依刻印類型站對應紋章。",
+                            "tips": [
+                                {"text": "冰刻印站冰紋章", "role": "tank"},
+                                {"text": "炎刻印站炎紋章", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "全屏；全員預備減傷與大團補。",
-              "name": "AoE 全屏",
-              "tips": [
+            ],
+            "mnemonic": [
+                "以太爆雷 → MT 大減傷",
+                "攻城炮無預兆直線 → 看朝向避",
+                "大型以太爆雷分攤 → 集合",
+                "青磷放射全屏擊退 → Surecast",
+                "荒蠻以太 3 變體：① 圓陷阱避中央 / ② 黑白配對 / ③ 冰炎刻印站對應紋章"
+            ]
+        },
+        {
+            "name": "究極神兽",
+            "nameEn": "Ultros Daemonus",
+            "phases": [
                 {
-                  "text": "減傷",
-                  "role": "healer"
+                    "name": "主戰（多形態 + 狂暴）",
+                    "mechanics": [
+                        {
+                            "name": "死亡迴旋 Spinning Death（看抬爪）",
+                            "type": "aoe",
+                            "description": "boss 抬起一只爪子蓄力後 → 無預兆自身為中心圓 AoE。近戰看抬爪退離。",
+                            "tips": [{"text": "看抬爪退離", "role": "dps"}]
+                        },
+                        {
+                            "name": "以太曲折 Aether Distort（看雙腳站立）",
+                            "type": "aoe",
+                            "description": "boss 雙腳站立蓄力後 → 無預兆自身環形 AoE（中央安全）。看雙腳站立進到 boss 近身圈。",
+                            "tips": [{"text": "看雙腳 → 貼 boss 站", "role": "dps"}]
+                        },
+                        {
+                            "name": "耀星 Starfall",
+                            "type": "raidwide",
+                            "description": "讀條釋放伤害隨距離衰減全屏 AoE。落點處形成圓形岩漿陷阱（踩入持續傷）。",
+                            "tips": [
+                                {"text": "拉開降低衰減傷", "role": "dps"},
+                                {"text": "避岩漿陷阱", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "亞拉戈重力 Allagan Gravity",
+                            "type": "spread",
+                            "description": "讀條點名全員不可閃黑色圓 AoE。全員散開不疊。",
+                            "tips": [{"text": "全員散開", "role": "tank"}]
+                        },
+                        {
+                            "name": "光柱 Light Pillar",
+                            "type": "aoe",
+                            "description": "讀條花瓣狀步進式多段圓 AoE。第 1 次有預兆，後續無預兆 → 按花瓣方向走縫。",
+                            "tips": [{"text": "看第 1 次花瓣預兆 → 預判後續", "role": "dps"}]
+                        },
+                        {
+                            "name": "後天野兽 Acquired Beast（永久增傷）",
+                            "type": "mechanic",
+                            "description": "讀條 boss 自疊 Damage Up 增傷直到戰鬥結束（軟狂暴）。",
+                            "tips": [
+                                {"text": "MT 連發減傷", "role": "tank"},
+                                {"text": "治療大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "亞拉戈核爆 Allagan Nuke（T 蓝标）",
+                            "type": "aoe",
+                            "description": "讀條點名 T 蓝色倒三角 → 以其為中心伤害隨距離衰減全屏 AoE。MT 拉到場邊讓隊友拉開降低衰減。",
+                            "tips": [{"text": "MT 拉場邊 + 隊友拉開", "role": "tank"}]
+                        },
+                        {
+                            "name": "亞究極全屏 / 亞究極黑暗（狂暴 3:10）",
+                            "type": "raidwide",
+                            "description": "亞究極全屏：讀條全屏 AoE（治療團補）。亞究極黑暗：40s 長讀條，從戰鬥開始 3 分 10 秒固定發動或 boss 血量低時提前發動 → 全屏秒殺。必先擊敗 boss。",
+                            "tips": [
+                                {"text": "3:10 內必擊敗", "role": "dps"},
+                                {"text": "DPS race", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "死亡迴旋（抬爪）→ 退離；以太曲折（雙腳）→ 貼 boss",
+                "耀星全屏 + 岩漿陷阱",
+                "亞拉戈重力全員圓 → 散開",
+                "光柱花瓣多段 → 第 1 次預判",
+                "後天野兽 → 永久增傷軟狂暴",
+                "亞拉戈核爆 T 蓝标 → 場邊拉開",
+                "亞究極黑暗 3:10 狂暴秒殺 → 必先擊敗"
+            ]
         }
-      ],
-      "name": "Phantom Ray",
-      "nameEn": "Phantom Ray",
-      "mnemonic": [
-        "AoE 連發 → 走縫",
-        "Tankbuster 坦克爆擊 → MT 開減傷",
-        "AoE 全屏 → 全員減傷"
-      ]
-    }
-  ]
+    ]
 }

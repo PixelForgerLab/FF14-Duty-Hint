@@ -1,163 +1,181 @@
 {
-  "id": "neverreap",
-  "name": "空中神域不獲島",
-  "nameEn": "Neverreap",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Vedrfolnir 韋多福爾尼爾：Beak 啄擊 + 點名圓 + 場上空中機關。",
-    "B2 Sawtooth 鋸齒：鋸齒攻擊 + 召喚小鋸。",
-    "B3 Phaia 法亞：Whirlwind 旋風 + 場上機關。"
-  ],
-  "notes": "HW 3.0 HW 副本空中神域（Lv 60）。Boss 依序為 Vedrfolnir 韋多福爾尼爾、Sawtooth 鋸齒、Phaia 法亞。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "韋多福爾尼爾",
-      "nameEn": "Vedrfolnir",
-      "phases": [
+    "id": "neverreap",
+    "name": "空中神域不獲島",
+    "nameEn": "Neverreap",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 奴涅努克：毛羽 MT 單體高傷；狂風暴羽圓 AoE 羽毛從天而降。反蔭蔽 → boss 躲雲間 + 全員水毒 → 找潛伏的奴涅努克之影，進包圍圈獲識破 buff 才可打。",
+        "B1 50% 影血 → 出大量羽毛 飛彈爆炸 + 受傷加重 → 優先擊殺羽毛。boss 血越低羽毛越多。",
+        "B2 圖騰巫師：瓦努擊前扇 + 晨雲出血（可驅散）+ 召喚圖騰點名 2 玩家（後期 4 玩家）位置落圖騰。",
+        "B2 圖騰再生紫色魔法陣 → 讀條結束時陣內有圖騰 → 召喚卡努瓦努圖騰連線 boss 給無敵 + 增傷 → 必須搬運圖騰移出陣外。",
+        "B3 風神配下：鱗鳍射線 MT 單體；射水點名 + 召喚神域水泡 add（速殺）。",
+        "B3 大蕭條：boss 疊順風 stack → 達到層數變風壁 + 無敵 + 隨機直線移動 + 召喚 3 神域旋風。真空波接近 boss 會傷 → 邊閃 boss 邊殺旋風。",
+        "B3 渦輪：3 旋風被殺後讀條全體擊退 → 場地是浮島墜崖即死（半場距離）→ Surecast 或站場中央。",
+        "B3 神域龍捲風：場上多個會把人吹上天的龍捲風，後半段數量增加 → 走位避開。"
+    ],
+    "notes": "HW 3.0 副本（Lv 60，sync 60，4 人 dungeon），位於阿巴拉提亞雲海不獲島。劇情上鳥人族『不獲島』神聖領域。Boss 依序為 Anunnaki 奴涅努克（影分身）、Sahuagin Wonderworker 圖騰巫師、Wamoura 風神配下（浮島擊退即死）。本副本特色：B3 場地為浮島，被擊退到場外直接墜崖即死。",
+    "bosses": [
         {
-          "name": "B1 主戰",
-          "mechanics": [
-            {
-              "name": "Element Switch 元素切換",
-              "type": "mechanic",
-              "description": "Boss 火/雷/冰元素切換；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看顏色預判"
-              ]
-            },
-            {
-              "name": "Cleave 扇形",
-              "type": "cone",
-              "description": "MT 扇形；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "奴涅努克",
+            "nameEn": "Anunnaki",
+            "phases": [
                 {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
-              "type": "tankbuster",
-              "description": "MT 單體；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1 100%-某 HP（基礎）",
+                    "mechanics": [
+                        {
+                            "name": "毛羽 Down Feather",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體較高傷害。MT 減傷。",
+                            "tips": [{"text": "MT 減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "狂風暴羽 Plume Whirl",
+                            "type": "aoe",
+                            "description": "圓形範圍攻擊，羽毛從天而降造成傷害。看圓走出。",
+                            "tips": [{"text": "看圓走出", "role": "dps"}]
+                        },
+                        {
+                            "name": "側滑 Sideslip",
+                            "type": "raidwide",
+                            "description": "無讀條全體範圍攻擊。治療團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "P2 < 某 HP（反蔭蔽 + 影分身）",
+                    "mechanics": [
+                        {
+                            "name": "反蔭蔽 Camouflage（雲間 + 水毒）",
+                            "type": "mechanic",
+                            "description": "boss 躲入雲間不可選 + 給全體 Waterlogged 水毒 debuff（不可驅散 + 持續疊加）。場上 spawn Anunnaki Shade 奴涅努克之影 帶 Stealth 潛伏。玩家必須進入包圍圈獲得 Sense 識破 buff 才可攻擊影。",
+                            "tips": [
+                                {"text": "進包圍圈獲識破 buff", "role": "dps"},
+                                {"text": "DPS 殺影 → boss 飛回", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "奴涅努克之羽（影 50% HP）",
+                            "type": "add",
+                            "description": "影 HP 50% → 出現大量羽毛 add（飛彈）→ 一段時間後爆炸 + 全員 1 層受傷加重。boss 血越低羽毛數量越多。必須優先擊殺羽毛。",
+                            "tips": [
+                                {"text": "優先殺羽毛防爆炸", "role": "dps"},
+                                {"text": "Esuna 清受傷加重", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "Vedrfolnir 韋多福爾尼爾 機制：Beak 啄擊 + 點名圓 + 場上空中機關。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "name": "鋸齒",
-      "nameEn": "Sawtooth",
-      "phases": [
+            ],
+            "mnemonic": [
+                "毛羽 MT 單體 → 減傷",
+                "狂風暴羽圓 → 走出",
+                "反蔭蔽 → 進包圍圈獲識破殺影",
+                "影 50% 大量羽毛 → 優先殺"
+            ]
+        },
         {
-          "name": "B2 主戰",
-          "mechanics": [
-            {
-              "name": "Summon 召喚",
-              "type": "add",
-              "description": "場上召喚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
+            "name": "圖騰巫師",
+            "nameEn": "Sahuagin Wonderworker",
+            "phases": [
                 {
-                  "text": "DPS AoE",
-                  "role": "dps"
+                    "name": "主戰（圖騰搬運機制）",
+                    "mechanics": [
+                        {
+                            "name": "瓦努擊 Vanu Strike",
+                            "type": "cone",
+                            "description": "短讀條正面扇形 AoE。MT 朝外。",
+                            "tips": [{"text": "MT 朝外", "role": "tank"}]
+                        },
+                        {
+                            "name": "晨雲 Morning Cloud",
+                            "type": "spread",
+                            "description": "隨機給予 1 玩家 Bleed 出血 debuff（可驅散）。",
+                            "tips": [{"text": "Esuna 清出血", "role": "healer"}]
+                        },
+                        {
+                            "name": "召喚圖騰 Summon Totem",
+                            "type": "mechanic",
+                            "description": "點名 2 玩家落圖騰（boss 血量低後點 4 玩家）。被點玩家位置落下圖騰。",
+                            "tips": [{"text": "被點玩家走位讓圖騰落在魔法陣外", "role": "dps"}]
+                        },
+                        {
+                            "name": "圖騰再生 Totem Regenerate（搬運機制）",
+                            "type": "mechanic",
+                            "description": "生成紫色魔法陣區域。讀條結束時若魔法陣內有圖騰 → 召喚 Kanu Vanu Totem add 連線 boss → 給 boss 無敵 + 增傷。對策：玩家搬運圖騰移出魔法陣外。Vine Whip 蜿蜒：小怪極短讀條圓 AoE。",
+                            "tips": [
+                                {"text": "玩家搬運圖騰移出魔法陣", "role": "dps"},
+                                {"text": "已召喚 → DPS 速殺 totem", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Multi AoE 多 AoE",
-              "type": "aoe",
-              "description": "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Raid AoE 全屏",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "mnemonic": [
-        "Sawtooth 鋸齒 機制：鋸齒攻擊 + 召喚小鋸。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "name": "法亞",
-      "nameEn": "Phaia",
-      "phases": [
+            ],
+            "mnemonic": [
+                "瓦努擊前扇 → MT 朝外",
+                "晨雲出血 → Esuna",
+                "召喚圖騰點 2 → 後期 4 玩家",
+                "圖騰再生紫陣 → 搬運圖騰移出"
+            ]
+        },
         {
-          "name": "B3 主戰",
-          "mechanics": [
-            {
-              "name": "Thunderbolt 雷霆",
-              "type": "aoe",
-              "description": "場上雷 AoE → 走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫"
-              ]
-            },
-            {
-              "name": "Wind Storm 風暴",
-              "type": "knockback",
-              "description": "全員擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length"
-              ]
-            },
-            {
-              "name": "Charge 衝鋒",
-              "type": "aoe",
-              "description": "直線衝鋒；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側閃"
-              ]
-            },
-            {
-              "name": "Tankbuster 死刑",
-              "type": "tankbuster",
-              "description": "MT 死刑；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "風神配下",
+            "nameEn": "Wamoura",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "主戰（順風 stack + 浮島擊退）",
+                    "mechanics": [
+                        {
+                            "name": "鱗鳍射線",
+                            "type": "tankbuster",
+                            "description": "對 MT 單體傷害。MT 減傷。",
+                            "tips": [{"text": "MT 減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "射水（神域水泡 add）",
+                            "type": "add",
+                            "description": "點名玩家造成傷害 + 投擲生成神域水泡 add → 儘快擊殺。",
+                            "tips": [{"text": "DPS 速殺水泡", "role": "dps"}]
+                        },
+                        {
+                            "name": "大蕭條 + 風壁 + 3 神域旋風",
+                            "type": "mechanic",
+                            "description": "boss 不停疊 Tailwind 順風 stack → 達到層數 → 發動大蕭條變 Windwall 風壁 → boss 無敵 + 隨機直線移動 + 召喚 3 隻 Whirlwind 神域旋風。Vacuum Wave 真空波：接近 boss 受傷 → 邊閃 boss 邊殺旋風。",
+                            "tips": [
+                                {"text": "邊閃 boss 邊集火 3 旋風", "role": "dps"},
+                                {"text": "MT 不要追 boss", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "渦輪 Turbine（擊退即死）",
+                            "type": "knockback",
+                            "description": "3 旋風被擊殺後 boss 讀條渦輪 → 全體擊退（約場地一半距離）。浮島地圖墜崖即死。Surecast 抗或站場中央。",
+                            "tips": [
+                                {"text": "Surecast 抗擊退", "role": "tank"},
+                                {"text": "站場中央留距離", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "神域龍捲風（場上障礙）",
+                            "type": "mechanic",
+                            "description": "場上多個 Cyclone 神域龍捲風 → 觸碰會被吹上天。後半段數量增加 → 走位避開。",
+                            "tips": [{"text": "避開龍捲風", "role": "dps"}]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "鱗鳍射線 → MT 減傷",
+                "射水 + 水泡 add → 速殺",
+                "大蕭條順風 stack → 風壁無敵 + 3 旋風殺",
+                "渦輪 → 浮島墜崖即死 → Surecast + 站中央",
+                "龍捲風 → 避開"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Phaia 法亞 機制：Whirlwind 旋風 + 場上機關。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
