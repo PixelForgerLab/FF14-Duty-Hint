@@ -1,244 +1,203 @@
 {
-    "id":  "aery",
-    "name":  "邪龍王座龍巢神殿",
-    "nameEn":  "The Aery",
-    "expansion":  "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Gyascutus 雷雅克魔靈：Shock 感電 + 蓄勢乘雷觸雕像。",
-                     "2）B2 Gyzparuk 格茲普魔靈：可燃性氣體 + 燒焰點火。",
-                     "3）B3 Nidhogg 尼德霍格：Tail Slam 尾擊 + 漆黑之珠 + 屠戮蓄魔。"
-                 ],
-    "notes":  "HW 3.0 HW 主線邪龍王座尼德霍格巢穴（Lv 60）。Boss 依序為 Gyascutus 雷雅克魔靈、Gyzparuk 格茲普魔靈、Nidhogg 尼德霍格。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "雷雅克魔靈",
-                       "nameEn":  "Gyascutus",
-                       "phases":  [
-                                      {
-                                          "name":  "B1 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "放電雷息 Voltage",
-                                                                "type":  "cone",
-                                                                "description":  "對前方一仇放出狹小扇形 AoE；MT 朝外接，DPS 站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷雲放射 Cloud Discharge",
-                                                                "type":  "raidwide",
-                                                                "description":  "全場圓形 AoE；準備減傷團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "團補 + 減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "感電 Shock",
-                                                                "type":  "aoe",
-                                                                "description":  "隨機點名 3 人不可閃避直線 AoE + 擊退。被點者拉到場邊。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點往場邊",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蓄勢乘雷 Wing-storm",
-                                                                "type":  "mechanic",
-                                                                "description":  "點名連線，附『引雷』buff。觸碰場邊『上古雕像』可瞬間漂移到該雕像，可用於避雷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "看 buff 觸雕像漂移",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "避雷 Lightning Bypass",
-                                                                "type":  "aoe",
-                                                                "description":  "引雷 buff 10 秒後對目標巨大傷害 + 麻痺。需在到期前漂移破解。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "10 秒內觸雕像",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Gyascutus 雷雅克魔靈 機制：Shock 感電 + 蓄勢乘雷觸雕像。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "格茲普魔靈",
-                       "nameEn":  "Gyzparuk",
-                       "phases":  [
-                                      {
-                                          "name":  "B2 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "可燃性氣體 Combustible Gas",
-                                                                "type":  "mechanic",
-                                                                "description":  "場上生成緩慢移動的氣體雲。boss 用『燒焰』/『點火』點燃 → 對覆蓋區域 AoE 並留下危險區域（裂傷 DoT）。需避開氣體軌跡 + 點燃區域。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "看氣體 + 點火 → 跑安全處",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "燒焰 / 點火 Ignite",
-                                                                "type":  "aoe",
-                                                                "description":  "圓形 AoE 並點燃氣體雲。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "避點火位置",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "齊射 Volley",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE 大傷害；團補 + 減傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "團補 + 減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "體震擊 Body Slam",
-                                                                "type":  "knockback",
-                                                                "description":  "場中央擊退攻擊；用 Surecast/Arm\u0027s Length 抗擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "開抗擊退",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "痛擊 Wallop",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對一仇死刑單體 buster；MT 大減傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Gyzparuk 格茲普魔靈 機制：可燃性氣體 + 燒焰點火。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "尼德霍格",
-                       "nameEn":  "Nidhogg",
-                       "phases":  [
-                                      {
-                                          "name":  "B3 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "真理之珠 Truth Orb",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對一仇死刑；MT 大減傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "聲嚎 Roar",
-                                                                "type":  "raidwide",
-                                                                "description":  "周身全屏 AoE；團補 + 減傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "燃龍之尾 / 燃龍之翼",
-                                                                "type":  "aoe",
-                                                                "description":  "尾 = boss 前後直線 AoE；翼 = boss 兩側大範圍 AoE。看技能名跑對應方向。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "尾 → 站兩側；翼 → 站前後",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "恐懼咆哮 Fear Roar",
-                                                                "type":  "spread",
-                                                                "description":  "兩種：紫眼睛點名一人圓形 AoE；或全員不可閃避圓形 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點往邊",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "漆黑之珠 Dark Sphere",
-                                                                "type":  "add",
-                                                                "description":  "隨機 2 名非 T 玩家生成漆黑之珠，玩家被拘束。若未在時限內擊破 → 即死。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 立刻打破珠",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "邪炎俯衝 + 屠戮 Wyrm Sweep",
-                                                                "type":  "mechanic",
-                                                                "description":  "boss 離場做場外滾圓形 AoE；第二次離場蓄魔，召喚 add；add 全部擊倒前如未中斷蓄魔 → 屠戮全屏即死。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "速秒 add",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Nidhogg 尼德霍格 機制：Tail Slam 尾擊 + 漆黑之珠 + 屠戮蓄魔。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   }
-               ]
+    "id": "aery",
+    "name": "邪龍王座龍巢神殿",
+    "nameEn": "The Aery",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）邪龍王座龍巢神殿（HW Lv 60 MSQ）：3 boss。B1 雷雲龍 Zaharak、B2 火龍 Gyascutus、B3 Nidhogg 尼德霍格。",
+        "2）B1 蓄電乘雷：點名玩家連線 + 引雷 buff → 觸碰場邊上古雕像可轉移連線 → 10s 後避雷大傷 + 15s 麻痺。非連線者每秒落雷小圓避位。",
+        "3）B1 放電雷息前扇 + 雷雲放射環形 + 感電隨機 3 玩家直線擊退。50% HP 後雷雅克魔龍 add 加重 debuff。",
+        "4）B2 可燃性氣體：場上圓盤雲狀物緩慢移動。第一次可燃性氣體後場外變危險區域 + 裂傷風屬性流血。氣體被圓焰圓 AoE 或環火環 AoE 點燃會爆炸。",
+        "5）B2 龍嘯全屏 + 軀體震擊全屏擊退 + 痛擊 MT 死刑。",
+        "6）B3 Nidhogg：真紅之珠 MT 死刑；龍嘯全屏；燃燒之尾前後條形 AoE；燃燒之翼兩側大範圍。",
+        "7）B3 恐懼咆哮：2 玩家腳下藍眼睛圓 / 全員不可閃圓 AoE。漆黑縛炎：非 T 玩家拘束 + 漆黑之珠 → 必須擊破否則漆黑火焰即死。恐懼之炎分攤。",
+        "8）B3 邪炎俯衝：boss 離開場地 → 條形 AoE 俯衝過場中。屠戮：boss 二次離場 + 蓄力 + 同時 spawn add → 必須在蓄滿前清光否則屠戮全屏即死。"
+    ],
+    "notes": "HW 3.0 主線副本（Lv 60，sync 60，4 人 dungeon），位於翻雲霧海邪龍王座龍巢神殿。劇情上玩家對抗 Nidhogg 尼德霍格『邪龍』。3.0 主線終戰之一。Boss 依序為 Zaharak 雷雲龍、Gyascutus 火龍、Nidhogg 尼德霍格。",
+    "bosses": [
+        {
+            "name": "雷雲龍",
+            "nameEn": "Zaharak",
+            "phases": [
+                {
+                    "name": "主戰（引雷連線機制）",
+                    "mechanics": [
+                        {
+                            "name": "Discharge Breath 放電雷息 / Thunder Burst 雷雲放射 / Electrocute 感電",
+                            "type": "mechanic",
+                            "description": "放電雷息：對一仇無讀條前扇 AoE。雷雲放射：讀條釋放環形 AoE。感電：對隨機 3 玩家直線 AoE + 擊退。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "環形站邊 / 直線走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Thunder Embrace 蓄電乘雷（核心連線）",
+                            "type": "mechanic",
+                            "description": "點名 1 玩家連線 boss + 引雷 buff。觸碰場邊上古雕像可轉移連線。10 秒後 boss 釋放避雷大傷 + 15s 不可驅散麻痺 debuff。",
+                            "tips": [
+                                {"text": "被點玩家觸碰雕像轉線", "role": "dps"},
+                                {"text": "10 秒倒數內必轉", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Lightning 落雷",
+                            "type": "spread",
+                            "description": "對非連線玩家中隨機 2 名腳下連續釋放小範圍圓 AoE。看圓走出。",
+                            "tips": [{"text": "看腳下圓走出", "role": "dps"}]
+                        },
+                        {
+                            "name": "Reverse Current 逆流（50% HP add）",
+                            "type": "add",
+                            "description": "boss HP < 50% 後蓄電乘雷同時場邊召喚 1 隻雷雅克魔龍 add → 對攻擊玩家附加可驅散加重 debuff。",
+                            "tips": [
+                                {"text": "DPS 清魔龍", "role": "dps"},
+                                {"text": "Esuna 清加重", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "放電雷息（前扇）/ 雷雲放射（環）/ 感電（3 玩家直線擊退）",
+                "蓄電乘雷 → 觸碰雕像轉線（10s 內）",
+                "落雷 → 看腳下圓走",
+                "50% 魔龍 add → 清 + Esuna 加重"
+            ]
+        },
+        {
+            "name": "火龍",
+            "nameEn": "Gyascutus",
+            "phases": [
+                {
+                    "name": "主戰（可燃氣體 + 危險區域）",
+                    "mechanics": [
+                        {
+                            "name": "Combustible Gas 可燃性氣體 + 危險區域",
+                            "type": "mechanic",
+                            "description": "場上生成緩慢移動的圓盤雲狀物。第一次可燃性氣體後外場變為危險區域（持續到戰鬥結束，踩入裂傷風屬性流血，離開後持續 15 秒）。",
+                            "tips": [
+                                {"text": "全員留場中", "role": "tank"},
+                                {"text": "Esuna 清裂傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Round Flame 圓焰 / Ring Fire 環火（點燃氣體爆炸）",
+                            "type": "aoe",
+                            "description": "Round Flame 圓 AoE + 點燃可燃性氣體；Ring Fire 環形 AoE + 點燃。氣體被點燃會爆炸並對所覆蓋區域造成 AoE。看 boss 招式預判爆炸範圍。",
+                            "tips": [{"text": "預判爆炸範圍走縫", "role": "dps"}]
+                        },
+                        {
+                            "name": "Dragon Cry 龍嘯",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "Body Slam 軀體震擊（全屏擊退）",
+                            "type": "knockback",
+                            "description": "場地中心全屏擊退 AoE。Surecast 抗或站中央。",
+                            "tips": [{"text": "Surecast 抗", "role": "tank"}]
+                        },
+                        {
+                            "name": "Pound 痛擊（MT 死刑）",
+                            "type": "tankbuster",
+                            "description": "對 MT 讀條死刑。大減傷 + 治療大補。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "可燃氣體 + 場外裂傷區",
+                "圓焰 / 環火 點燃氣體 → 預判走縫",
+                "Dragon Cry 全屏 → 團補",
+                "Body Slam 擊退 → Surecast",
+                "Pound 痛擊 → MT 大減傷"
+            ]
+        },
+        {
+            "name": "尼德霍格",
+            "nameEn": "Nidhogg",
+            "phases": [
+                {
+                    "name": "主戰（邪龍 + 漆黑機制）",
+                    "mechanics": [
+                        {
+                            "name": "Crimson Orb 真紅之珠（MT 死刑）",
+                            "type": "tankbuster",
+                            "description": "對 MT 死刑單體。大減傷 + 治療大補。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "Dragon Cry 龍嘯 / Tail Flame 燃燒之尾 / Wing Flame 燃燒之翼",
+                            "type": "mechanic",
+                            "description": "Dragon Cry：讀條全屏；Tail Flame：boss 前後方向條形 AoE；Wing Flame：boss 兩側大範圍。MT 把 boss 朝場邊面外，DPS/治療站背 / 側。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "非 T 站側 / 背避翼", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fear Howl 恐懼咆哮（雙形式）",
+                            "type": "mechanic",
+                            "description": "兩種形式：① 隨機 2 玩家腳下藍色眼睛圓 AoE；② 點名全體玩家不可閃圓 AoE。看預兆應對。",
+                            "tips": [{"text": "看預兆走位", "role": "dps"}]
+                        },
+                        {
+                            "name": "Black Bind 漆黑縛炎 + 漆黑之珠（必擊破）",
+                            "type": "mechanic",
+                            "description": "隨機點名非 T 玩家 → 生成漆黑之珠 + 該玩家拘束。必須在讀條結束前擊破漆黑之珠，否則漆黑火焰即死被困玩家。",
+                            "tips": [
+                                {"text": "全力擊破漆黑之珠", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fear of Flame 恐懼之炎（分攤）",
+                            "type": "stack",
+                            "description": "分攤 AoE。全員集合分攤。",
+                            "tips": [{"text": "全員集合分攤", "role": "tank"}]
+                        },
+                        {
+                            "name": "Searing Dive 邪炎俯衝（離場 + 條形俯衝）",
+                            "type": "aoe",
+                            "description": "boss 第一次離開場地不可選 → 以隨機玩家位置為基準在場地北邊出現 → 對場中條形 AoE 俯衝。看 boss 朝向走縫。",
+                            "tips": [{"text": "看俯衝方向避", "role": "dps"}]
+                        },
+                        {
+                            "name": "Massacre 屠戮（蓄力 + add 必清）",
+                            "type": "mechanic",
+                            "description": "boss 第二次離場 → 蓄積魔力。同時場上 spawn 多個 add，必須在蓄滿前清光。清光 → boss 中斷蓄力 + 釋放屠戮（全屏大傷）；蓄滿 → 屠戮即死全屏。",
+                            "tips": [
+                                {"text": "DPS 集火 add", "role": "dps"},
+                                {"text": "MT 拉穩 add", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Touchdown 空降",
+                            "type": "raidwide",
+                            "description": "每次上天後回歸戰鬥場地時對全場 AoE。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "真紅之珠 → MT 大減傷",
+                "燃燒之尾 / 翼 → MT 朝外站側",
+                "恐懼咆哮 → 看眼睛圓",
+                "漆黑縛炎 + 之珠 → 必擊破否則即死",
+                "邪炎俯衝 → 看朝向避",
+                "屠戮 → spawn add → 必清防即死",
+                "空降 → 團補"
+            ]
+        }
+    ]
 }
