@@ -1,95 +1,159 @@
 {
-  "id": "kugane_ohashi",
-  "name": "九古納大橋之戰",
-  "nameEn": "Kugane Ohashi - Yotsuyu (Magitek)",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Yotsuyu 悅：場上紙符機關 + 召喚妖怪 + Doman 攻擊。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.4 SB 蛮神悅九古納大橋（Lv 70）。Boss 依序為 Yotsuyu 悅。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "悅",
-      "nameEn": "Yotsuyu",
-      "mnemonic": [
-        "Yotsuyu 悅 機制：場上紙符機關 + 召喚妖怪 + Doman 攻擊。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "kugane_ohashi",
+    "name": "九古納大橋之戰",
+    "nameEn": "Kugane Ohashi - Yojimbo (Gilgamesh)",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Hildibrand 任務線 trial。boss 用語音對話提示招式。",
+        "P1 Yojimbo 用務：Inoshikacho 豬鹿蝶 = 召喚 4 蝴蝶 + 落地大圓 AoE → 提前集合預判蝴蝶分散方向。Metta-giri 滅多斬 = 中傷全屏。",
+        "P2（80%）：Yojimbo 變身為 Gilgamesh『Gilgameshing time!』→ 使用更複雜招式。",
+        "P2 Icewind 冰風 + Gekko 月光：Icewind = 多條交叉直線 AoE + 方形安全 → 解後新一輪 → 換位。Gekko = 點每人白圈 + 後接粉甜甜圈安全區（站不動）→ 散開不疊白圈不互踩甜甜圈。",
+        "P2 Bitter End 苦澀終結 = MT 前扇 → 繞背。Tiny Song 小調 = 紅箭頭標 → 全員 stack 避 Minimum debuff。",
+        "P2 Dragon's Head 龍頭 + Dragon Night 龍夜：場邊出現龍頭排（有縫）→ 慢移過場 → 站縫避開 → 龍移到對邊釋 Dragon Night 全屏。",
+        "P3（~40%）Embodiment 化身 = 雙 T flare 標 → 各拉對角 → add 跳到 T 釋距離 AoE → 在 Divine Epicness 條 100% 前殺。Ame-no-Murakumo = 全屏依條強度。Giga Jump = MT flare → 距離 AoE → 預判 P4。",
+        "P4 沿用 P2 + 新招：Electrogenetic Force 電流力 = 紫雷球 + 大 AoE 重疊 → 找無球安全位；變體 = 玩家身上落球。Enchain 鏈鎖 = 雙 T+ 雙奶被連線 → 短時 Iron Chains 拘束 + Hells' Gate 致死 → DPS 必須打掉鏈條（被連離 boss 越遠鏈條越強）。",
+        "P4 Masamune 正宗 = 長直線 AoE + 衝鋒讀 Zanma Zanmai → 全員 1 HP → 接 Epic Stormsplitter 大半場（中央藍線細安全）→ 等藍 AoE 爆 → 站藍線中。"
+    ],
+    "notes": "SB 4.0 trial（Lv 70，sync 70，ilvl 同步，8 人 trial / 60 分），位於 Kugane Ohashi 九古納大橋。為 Hildibrand 任務線『Even Further Hildibrand Adventures』結尾與 Yojimbo / Gilgamesh 的搞笑致敬戰。掉落 Stormblood Gilgamesh Card + Yojimbo Barding。boss 多用語音對話提示招式 + Gilgamesh 變身為招式核心。",
+    "bosses": [
         {
-          "name": "Yotsuyu / Mega Sigma 主戰",
-          "mechanics": [
-            {
-              "name": "Aetheric Boom 以太爆",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補。",
-              "tips": [
+            "name": "用務",
+            "nameEn": "Yojimbo (Gilgamesh)",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P1 Yojimbo",
+                    "mechanics": [
+                        {
+                            "name": "Inoshikacho 豬鹿蝶",
+                            "type": "aoe",
+                            "description": "召喚 4 蝴蝶 + 落地大圓 AoE → 提前集合預判蝴蝶分散方向 → 各自閃。",
+                            "tips": [
+                                {"text": "預先集合 + 預判分散", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Metta-giri 滅多斬",
+                            "type": "raidwide",
+                            "description": "中傷全屏 → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 Gilgamesh（80%~50%）",
+                    "mechanics": [
+                        {
+                            "name": "Gilgamesh 變身",
+                            "type": "mechanic",
+                            "description": "Yojimbo 80% → 進中央 → 變身 Gilgamesh『Gilgameshing time!』。",
+                            "tips": [
+                                {"text": "預備新機制", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Icewind + Gekko",
+                            "type": "mechanic",
+                            "description": "Icewind = 多條交叉直線 AoE + 方形安全 → 解後新一輪換位。Gekko = 點每人白圈 + 後接粉甜甜圈安全（站不動）→ 散開不疊白圈不互踩甜甜圈。",
+                            "tips": [
+                                {"text": "Gekko 站不動 + 散開拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Bitter End 苦澀終結",
+                            "type": "cone",
+                            "description": "MT 前扇 → 繞背。",
+                            "tips": [
+                                {"text": "MT 拉背對團", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Tiny Song 小調",
+                            "type": "stack",
+                            "description": "紅箭頭標全員 → 全員 stack 避 Minimum debuff。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dragon's Head + Dragon Night",
+                            "type": "mechanic",
+                            "description": "場邊龍頭排（有縫）→ 慢移過場 → 站縫避；龍移到對邊釋 Dragon Night 全屏 → 治療補滿。",
+                            "tips": [
+                                {"text": "站龍頭間縫", "role": "dps"},
+                                {"text": "Dragon Night 前補滿", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3（~40%）Embodiment",
+                    "mechanics": [
+                        {
+                            "name": "Embodiment 化身（DPS check）",
+                            "type": "add",
+                            "description": "雙 T flare 標 → 各拉對角 → add 跳到 T 釋距離 AoE → 在 Divine Epicness 條 100% 前殺。Add 不可堆疊（會接近無敵）。",
+                            "tips": [
+                                {"text": "雙 T 對角拉", "role": "tank"},
+                                {"text": "Embodiment 不重疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ame-no-Murakumo + Giga Jump",
+                            "type": "raidwide",
+                            "description": "Ame-no-Murakumo = 全屏依條強度。Giga Jump = MT flare → 距離 AoE → 預判 P4。",
+                            "tips": [
+                                {"text": "壓低條後續傷低", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 沿用 + 新招",
+                    "mechanics": [
+                        {
+                            "name": "Electrogenetic Force 電流力",
+                            "type": "mechanic",
+                            "description": "紫雷球 + 大 AoE 重疊 → 找無球安全位；變體 = 玩家身上落球 → 移開。",
+                            "tips": [
+                                {"text": "找無球安全 / 拉開放球", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Enchain + Iron Chains + Hells' Gate",
+                            "type": "mechanic",
+                            "description": "雙 T+ 雙奶連線 → 短時 Iron Chains 拘束 + 讀 Hells' Gate 致死 → DPS 必須打掉鏈條（被連離 boss 越遠 = 鏈條越強，建議集合保護）。",
+                            "tips": [
+                                {"text": "DPS 速秒鏈條救 T+H", "role": "dps"},
+                                {"text": "被鏈玩家集合", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Masamune + Zanma Zanmai + Epic Stormsplitter",
+                            "type": "mechanic",
+                            "description": "Masamune = 長直線；衝鋒 → Zanma Zanmai 全員 1 HP → 接 Epic Stormsplitter 大半場（中央藍線細安全）→ 等藍 AoE 爆 → 站藍線中。",
+                            "tips": [
+                                {"text": "等藍 AoE 爆後站藍線", "role": "dps"},
+                                {"text": "治療立即補滿", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Iaijutsu 居合術",
-              "type": "aoe",
-              "description": "Boss 拔刀大絕直線 / 扇形 AoE；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看刀位走縫"
-              ]
-            },
-            {
-              "name": "Withering Wing 枯翼",
-              "type": "aoe",
-              "description": "直線 AoE 點名 → 引導場邊；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊拉線"
-              ]
-            },
-            {
-              "name": "Pillar of Light 光柱 (站位)",
-              "type": "mechanic",
-              "description": "場上 4 個柱子；站柱旁避免 Magitek 雷射全屏；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看 boss 朝向選對應柱子",
-                "離柱太遠 = 被雷射打到"
-              ]
-            },
-            {
-              "name": "Iron Splitter 鐵裂",
-              "type": "aoe",
-              "description": "Boss 環形 AoE → 貼近 boss 圓心安全；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "貼 boss 圓心"
-              ]
-            },
-            {
-              "name": "Magitek Cannon 魔導加農炮",
-              "type": "aoe",
-              "description": "點名 1-2 人直線 AoE → 引導場邊；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往無人方向拉線"
-              ]
-            },
-            {
-              "name": "Final Mega Sigma 撤離",
-              "type": "other",
-              "description": "低血時 Mega Sigma 機甲撤離 → Yotsuyu 露面，劇情結束戰鬥；依預兆走位處理。",
-              "tips": [
-                "壓血到 enrage 前推完"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Inoshikacho 預集合 + 預判蝴蝶散開",
+                "P2 Gekko 白圈 → 站不動 + 不疊甜甜圈",
+                "P2 Dragon's Head 站縫 + Dragon Night 補滿",
+                "P3 Embodiment 雙 T 對角拉 + 壓 Epicness 條",
+                "P4 Enchain → DPS 速秒鏈條 / Masamune → 藍線安全"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

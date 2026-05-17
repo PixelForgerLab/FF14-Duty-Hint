@@ -1,100 +1,160 @@
 {
-  "id": "great_hunt",
-  "name": "大狩獵",
-  "nameEn": "The Great Hunt - Rathalos",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Rathalos 雄火龍：Fireball 火球 + Tail Swipe 尾擊 + 兇暴模式。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.36 SB 連動大狩獵雄火龍（Lv 70）。Boss 依序為 Rathalos 雄火龍。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "雄火龍",
-      "nameEn": "Rathalos",
-      "mnemonic": [
-        "Rathalos 雄火龍 機制：Fireball 火球 + Tail Swipe 尾擊 + 兇暴模式。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "great_hunt",
+    "name": "大狩獵",
+    "nameEn": "The Great Hunt - Rathalos",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Monster Hunter 跨界活動。Rathalos 雷霸龍不可仇恨控（不可 tank）+ 無 auto attack → 看動畫 + 面向預判招式。每人 10 個 Mega Potion 可滿血。",
+        "P1 接地階段：Whipping Bite 鞭咬 = 抬尾向左 + 嘴張 → 前後咬 + 尾掃 → 走左側翼。Tail Swipe 尾掃 = 看右 + 抬尾 → 180° 逆時針掃（連續 2 次）→ 站左側 / 出範圍。",
+        "P1 Charging Bite 衝鋒咬 = 轉向玩家 + 短咆哮 → 衝鋒直線 → 側避。Fireball 火球 = 頭頂標記 + 仰頭 → 大火球濺射 + Burns（Esuna 解）→ 被標玩家拉場邊。Evasive Breath 閃避吐息 = 轉向 + 低身 → 前方火 + 後跳擊退 + Burns → 預警極短。",
+        "P2 80%：add 出場 → 場上多種野獸（Coeurl 大錐 AoE 優先轉火）→ T 拉 add 到 Rathalos 附近讓互傷。70% Rathalos 中央 + Stun + Garula 從東衝撞 → DPS check（殺 Garula + mount Rathalos 刺殺）。",
+        "P2 Mount 玩家受持續傷需治療 + Garula 大前扇要 face 場外。失敗 = Rathalos 飛離釋 King of the Skies 團滅。Garula 死 + mount 成功 → 站 Garula 屍後避 King of the Skies → 進 P3。",
+        "P3 飛行階段：Scalebound debuff = 治療無效（只能 Mega Potion）。Down Counter 充能條：對 boss 使用 GCD 技能會累積 → 滿條後 boss 被擊落地 → 攻擊尾巴可斷尾 + 大量輸出。LB 留下地時用。",
+        "P3 Claw Swipe 爪襲 = 衝鋒 + 中毒 + 暈 + 擊退 → 側避。Mangle 撕裂 / Sweeping Flames 焰掃 = 前扇 → 繞背 / 側翼。Fireball P3 變 stack 標 → 集合分攤 + 留火池（穿火加 Burns，治療用 Esuna）。"
+    ],
+    "notes": "SB 4.2 trial（Lv 70，sync 70，ilvl 同步，8 人 trial / 60 分），Monster Hunter: World 跨界活動的『大狩獵』。Rathalos 雷霸龍從荒漠之地登場。掉落 Rathalos Scale → 兌換主題裝。不可仇恨控 + Down Counter 充能 + Mega Potion 自治療為 MH 特殊機制。",
+    "bosses": [
         {
-          "name": "Rathalos 主戰",
-          "mechanics": [
-            {
-              "name": "Charge 衝鋒",
-              "type": "aoe",
-              "description": "Boss 直線衝鋒 AoE → 側閃；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看 boss 起手方向 → 站側"
-              ]
-            },
-            {
-              "name": "Tail Sweep 尾掃",
-              "type": "aoe",
-              "description": "Boss 360° 周身 AoE + 擊退；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "跳起避過或拉開",
-                "Arm's Length 可免擊退"
-              ]
-            },
-            {
-              "name": "Fire Breath 火焰吐息",
-              "type": "cone",
-              "description": "前方錐形吐息 AoE；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "雷霸龍",
+            "nameEn": "Rathalos",
+            "phases": [
                 {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
+                    "name": "P1 接地階段",
+                    "mechanics": [
+                        {
+                            "name": "不可仇恨控制 + Mega Potion",
+                            "type": "mechanic",
+                            "description": "Rathalos 無 auto + 不可 tank → 看動畫 + 面向預判。每人 10 個 Mega Potion 可滿血。",
+                            "tips": [
+                                {"text": "看面向 + Potion 自治療", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Whipping Bite 鞭咬",
+                            "type": "cone",
+                            "description": "抬尾向左 + 嘴張 → 前後咬 + 尾掃 → 走左側翼避。",
+                            "tips": [
+                                {"text": "站左側翼", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tail Swipe 尾掃（兩段）",
+                            "type": "aoe",
+                            "description": "看右 + 抬尾 → 180° 逆時針掃（2 次）+ 擊退 + 可能 Stun → 站左側或出範圍。",
+                            "tips": [
+                                {"text": "站左側翼避兩段", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Charging Bite 衝鋒咬",
+                            "type": "knockback",
+                            "description": "轉向玩家 + 短咆哮 → 衝鋒直線 + 擊退 + Stun → 側避。",
+                            "tips": [
+                                {"text": "看轉向 + 側避", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fireball 火球",
+                            "type": "aoe",
+                            "description": "頭頂標 + 仰頭 → 大火球濺射 + Burns（Esuna 解）→ 被標玩家拉場邊。",
+                            "tips": [
+                                {"text": "被標拉場邊", "role": "dps"},
+                                {"text": "Esuna 解 Burns", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Evasive Breath 閃避吐息（短預警）",
+                            "type": "aoe",
+                            "description": "轉向 + 低身 → 前方火 + 後跳擊退 + Burns → 預警極短 → 看姿勢預判。",
+                            "tips": [
+                                {"text": "看低身姿勢 + 閃位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "近戰站側後"
-              ]
-            },
-            {
-              "name": "Fireball 火球",
-              "type": "spread",
-              "description": "點名玩家圓形 AoE → 散開；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "被點往場邊散開"
-              ]
-            },
-            {
-              "name": "Aerial 飛起 + 俯衝",
-              "type": "aoe",
-              "description": "Boss 飛起 → 直線俯衝 + 落地 AoE；看陰影預判位置；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看天空陰影預判俯衝方向",
-                "落地 AoE 散開"
-              ]
-            },
-            {
-              "name": "Apceros adds 草食恐龍",
-              "type": "add",
-              "description": "場上召喚 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
                 {
-                  "text": "DPS AoE 殲滅",
-                  "role": "dps"
+                    "name": "P2 Add + Garula DPS check（80%~70%）",
+                    "mechanics": [
+                        {
+                            "name": "Add 階段",
+                            "type": "add",
+                            "description": "場上多種野獸 add：Coeurl 大錐 AoE 優先轉火。T 拉 add 到 Rathalos 附近讓互傷。",
+                            "tips": [
+                                {"text": "Coeurl 優先 + 拉近 boss 互傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Garula 衝撞 + Mount Rathalos",
+                            "type": "mechanic",
+                            "description": "70% Rathalos 中央 + Stun + Garula 從東衝撞 → 殺 Garula + 玩家 mount Rathalos 刺殺（ATM）。失敗 = King of the Skies 團滅。",
+                            "tips": [
+                                {"text": "DPS 速殺 Garula", "role": "dps"},
+                                {"text": "玩家 mount + 點 ATM", "role": "dps"},
+                                {"text": "Mount 玩家受 DoT 需治療", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "King of the Skies 避免",
+                            "type": "raidwide",
+                            "description": "Garula 死 + mount 成功後 → 站 Garula 屍後避 King of the Skies → 進 P3。",
+                            "tips": [
+                                {"text": "站 Garula 屍後", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 飛行階段",
+                    "mechanics": [
+                        {
+                            "name": "Scalebound + Down Counter",
+                            "type": "mechanic",
+                            "description": "Scalebound debuff = 治療無效（只能 Mega Potion）。Down Counter 條：對 boss 使用 GCD 技能累積 → 滿條後 boss 被擊落地 → 斷尾 + 大量輸出。LB 留下地時用。",
+                            "tips": [
+                                {"text": "Mega Potion 自療", "role": "dps"},
+                                {"text": "落地時 LB + 攻擊尾", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Claw Swipe 爪襲",
+                            "type": "knockback",
+                            "description": "衝鋒 + 中毒 + 暈 + 擊退 → 側避。",
+                            "tips": [
+                                {"text": "側避 + Esuna 解毒", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Mangle / Sweeping Flames",
+                            "type": "cone",
+                            "description": "前扇 → 繞背 / 側翼避。",
+                            "tips": [
+                                {"text": "繞背或側翼", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Fireball P3（stack）",
+                            "type": "stack",
+                            "description": "stack 標 → 集合分攤 + 留火池（穿火加 Burns，治療用 Esuna）。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"},
+                                {"text": "穿火 Esuna 解 Burns", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Limit Break 極限技 (Monster Hunter 致敬)",
-              "type": "mechanic",
-              "description": "可開隊伍極限技對 boss 造成大量傷害；是 Monster Hunter 致敬玩法。",
-              "tips": [
-                "在 boss 倒地時開極限技效率最高"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "不可仇恨控 + Mega Potion 10 個自療",
+                "看面向 + 動畫預判 P1 招式（無 telegraph）",
+                "P2：Coeurl 優先 + Garula DPS check + Mount Rathalos",
+                "P3 Scalebound 治療無效 → Mega Potion / Down Counter 落地時 LB 斷尾"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
