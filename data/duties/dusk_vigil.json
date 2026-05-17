@@ -1,217 +1,186 @@
 {
-    "id":  "dusk_vigil",
-    "name":  "冰雪廢堡暮衛塔",
-    "nameEn":  "The Dusk Vigil",
-    "expansion":  "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  51,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Iron Wolf 鐵狼：Hot Charge 火焰衝擊 + 點名圓。",
-                     "2）B2 Captain Galvoix 加爾沃船長：Magitek Cannon 魔導加農 + add。",
-                     "3）B3 Lyon the Last 最後的萊昂：直線 + 圓 AoE 連動。"
-                 ],
-    "notes":  "HW 3.0 HW 第一個副本，冰雪廢堡（Lv 51）。Boss 依序為 Iron Wolf 鐵狼、Captain Galvoix 加爾沃船長、Lyon the Last 最後的萊昂。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "鐵狼",
-                       "nameEn":  "Iron Wolf",
-                       "mnemonic":  [
-                                        "Iron Wolf 鐵狼 機制：Hot Charge 火焰衝擊 + 點名圓。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Trunk Tawse 鼻擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "物理 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Rear 後踢",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 周圍環狀 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "拉到場邊讓近戰能打",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Prehistoric Trumpet 史前號角",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Rock of Ages 上古之岩",
-                                                                "type":  "other",
-                                                                "description":  "標記隨機玩家並施加 Down for the Count → Wooly Inspiration。",
-                                                                "tips":  [
-                                                                             "被標記者站位置記好"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Wooly Inspiration + Rout 連發",
-                                                                "type":  "stack",
-                                                                "description":  "被 Rock of Ages 標記者被拉向 boss + 暈，再放 Rout 直線分擔。",
-                                                                "tips":  [
-                                                                             "全員到被標記者與 boss 中間分擔 Rout"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "加爾沃船長",
-                       "nameEn":  "Captain Galvoix",
-                       "mnemonic":  [
-                                        "Captain Galvoix 加爾沃船長 機制：Magitek Cannon 魔導加農 + add。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Skullsplinter 碎顱",
-                                                                "type":  "tankbuster",
-                                                                "description":  "物理 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tumulus 古墳",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 周圍環狀 AoE。",
-                                                                "tips":  [
-                                                                             "拉場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Brain Drain + 召喚 adds",
-                                                                "type":  "other",
-                                                                "description":  "全屏 + 召紅 Frozen Knight (近戰，boss 接觸獲 damage up) / 藍 Frozen Chirurgeon (法系，給 boss haste) adds。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "tank 把 boss 拉離 adds",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "DPS 優先擊殺 adds",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Death Spiral 死亡之渦",
-                                                                "type":  "aoe",
-                                                                "description":  "大型甜甜圈 AoE，通常接 adds 後。",
-                                                                "tips":  [
-                                                                             "貼緊 boss 腳邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Hell Slash 地獄斬",
-                                                                "type":  "knockback",
-                                                                "description":  "強力擊退，常接 Death Spiral。",
-                                                                "tips":  [
-                                                                             "背對場邊 / Arm\u0027s Length"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "最後的萊昂",
-                       "nameEn":  "Lyon the Last",
-                       "mnemonic":  [
-                                        "Lyon the Last 最後的萊昂 機制：直線 + 圓 AoE 連動。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B3",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Golden Talons 黃金爪",
-                                                                "type":  "tankbuster",
-                                                                "description":  "物理 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Alpine Draft 高山疾風",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機玩家的直線 AoE。",
-                                                                "tips":  [
-                                                                             "閃直線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Freefall 自由墜落",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 跳到一名玩家，大圓 AoE。",
-                                                                "tips":  [
-                                                                             "被瞄者跑開讓 boss 落空"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Whirling Gaol 旋風監牢",
-                                                                "type":  "other",
-                                                                "description":  "場地外圍把玩家往中央推 → 被推到中央會被束縛 + 堆 Wind Resistance Down + 傷害。",
-                                                                "tips":  [
-                                                                             "躲到瓦礫後避免被推到中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Winds of Winter 冬之風",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE 堆疊 Wind Resistance Down。瓦礫堆遮擋可免命中。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員躲瓦礫後",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "若全員都中，下次更痛",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "dusk_vigil",
+    "name": "冰雪廢堡暮衛塔",
+    "nameEn": "The Dusk Vigil",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 51,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）冰雪廢堡暮衛塔（HW 第一個副本）：3 boss。B1 Tusked Mammoth 角牙古象、B2 Iron Tongue 寒光劍 尤埃爾默里克、B3 Cuca Fera 獅身巨鷹。",
+        "2）B1 Ancient Stone 古代岩石：紅標點名玩家圓 AoE + 擊倒。隨後二選一：Tusks 象牙衝撞（前扇 + 長毛吸氣眩暈）或 Charge 猛進（直線可分攤 + 擊退）。",
+        "3）B1 Trumpet 象鼻抽打前扇 + Prehistoric Howl 史前咆哮全屏 + Stomp 怒踏自身圓 → 站 boss 側面。",
+        "4）B2 Brain Drain 吸腦全屏（每次後復活 2-3 冰封騎兵/法兵）；Tomb 古墓 boss 圓；Death Spiral 死亡螺旋環形（與古墓連發）；Hell Sweep 地獄揮擊退 + 接 Death Spiral；Crush 粉身碎骨單體高傷。",
+        "5）B2 冰封騎兵：Snarl 齜牙咧嘴給敵增傷 buff（90s）。冰封法兵：Tangle 無結之風加速 buff + 冰結/黑暗冰封/黑火噴發。注意拉 boss 避增益。",
+        "6）B3 Cuca Fera 獅身巨鷹：場上落石 2-3 枚 → 躲後可避 boss 特殊招。",
+        "7）B3 High-Altitude Drop 自由落體：點名非 T 跳擊 AoE；Aerial Slash 高山氣流非 T 直線；Winter's Wind 凜冬之風 boss 全屏 + 風耐降（站石堆後躲）+ 摧毀並刷新石堆。",
+        "8）B3 Cyclonic Cell 回轉牢獄：場中央龍捲風 → 5 次監禁吸入場中 + 拘束無法移動 → 站石堆後或 Surecast 抗。結束後高額擊飛 + 風耐降。"
+    ],
+    "notes": "HW 3.0 主線副本（Lv 51，sync 51-55，4 人 dungeon），位於庫爾札斯西部高地暮衛塔。蒼穹的伊修加爾德主線首章副本。Boss 依序為 Tusked Mammoth 角牙古象、Iron Tongue 寒光劍 尤埃爾默里克、Cuca Fera 獅身巨鷹。本副本特色：B3 落石機制（躲後避全屏與龍捲風吸入）。",
+    "bosses": [
+        {
+            "name": "角牙古象",
+            "nameEn": "Tusked Mammoth",
+            "phases": [
+                {
+                    "name": "主戰（象牙衝撞 + 猛進選擇）",
+                    "mechanics": [
+                        {
+                            "name": "Ancient Stone 古代岩石（紅標點名）",
+                            "type": "spread",
+                            "description": "隨機鎖定 1 玩家紅標 → boss 向該玩家位置釋放圓 AoE + Knockdown 擊倒。被點玩家走出位置。",
+                            "tips": [{"text": "被點走位", "role": "dps"}]
+                        },
+                        {
+                            "name": "Tusks 象牙衝撞 / Charge 猛進（二選一）",
+                            "type": "mechanic",
+                            "description": "Ancient Stone 後二選一：① Tusks 象牙衝撞 → 對擊倒玩家方向先扇形 AoE 吸氣（眩暈）→ 連續扇形衝撞 + 眩暈；② Charge 猛進 → 直線 AoE 可分攤 + 短擊退。",
+                            "tips": [
+                                {"text": "Tusks 看預兆閃", "role": "dps"},
+                                {"text": "Charge 全員集合分攤", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Trumpet 象鼻抽打",
+                            "type": "cone",
+                            "description": "對一仇前方扇形（無讀條）。MT 朝外。",
+                            "tips": [{"text": "MT 朝外", "role": "tank"}]
+                        },
+                        {
+                            "name": "Prehistoric Howl 史前咆哮 / Stomp 怒踏",
+                            "type": "raidwide",
+                            "description": "Prehistoric Howl 全屏；Stomp 自身圓 → 近戰退離。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"},
+                                {"text": "近戰退離", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Ancient Stone 紅標 → 被點走",
+                "Tusks 扇形吸氣眩暈 / Charge 直線分攤",
+                "Trumpet 前扇 → MT 朝外",
+                "Stomp 自身圓 → 近戰退"
+            ]
+        },
+        {
+            "name": "寒光劍 尤埃爾默里克",
+            "nameEn": "Iron Tongue",
+            "phases": [
+                {
+                    "name": "主戰（吸腦復活 + 冰封 add）",
+                    "mechanics": [
+                        {
+                            "name": "Brain Drain 吸腦（復活 add）",
+                            "type": "raidwide",
+                            "description": "全場 AoE。每次 Brain Drain 後場地屍體隨機復活 2 隻 add：第一次 2 冰封騎兵；第二次 2 冰封法兵；第三次 2 騎兵 + 1 法兵。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"},
+                                {"text": "DPS 清 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tomb 古墓 / Death Spiral 死亡螺旋",
+                            "type": "aoe",
+                            "description": "Tomb：boss 為圓心小範圍 AoE；Death Spiral：環形 AoE（圓邊有傷，中心安全）。有時連發，先躲圓再進中。",
+                            "tips": [
+                                {"text": "Tomb 退離 / Death Spiral 站中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hell Sweep 地獄揮 + Death Spiral",
+                            "type": "knockback",
+                            "description": "對 MT 擊退技能（無預兆）+ 接 Death Spiral。MT 拉 boss 站場中央。",
+                            "tips": [{"text": "MT 預判擊退", "role": "tank"}]
+                        },
+                        {
+                            "name": "Smash 粉身碎骨",
+                            "type": "tankbuster",
+                            "description": "MT 高傷單體（無預兆）。MT 大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "Iron Cavalier / Iron Mage 冰封 add 機制",
+                            "type": "add",
+                            "description": "冰封騎兵：Snarl 齜牙咧嘴給敵增傷 buff（90s）。冰封法兵：Tangle 無結之風加速 buff + 釋放冰結/黑暗冰封/黑火噴發 AoE。MT 拉 boss 避開 add 增益範圍。",
+                            "tips": [
+                                {"text": "MT 拉 boss 避 add 增益", "role": "tank"},
+                                {"text": "DPS 速秒 add", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Brain Drain 吸腦 → 復活騎兵/法兵 add",
+                "Tomb 圓 / Death Spiral 環形 → 應對連發",
+                "Hell Sweep 擊退 → MT 預判",
+                "Smash 粉身碎骨 → MT 大減傷",
+                "拉 boss 避 add 增益範圍"
+            ]
+        },
+        {
+            "name": "獅身巨鷹",
+            "nameEn": "Cuca Fera",
+            "phases": [
+                {
+                    "name": "主戰（落石躲避 + 龍捲牢獄）",
+                    "mechanics": [
+                        {
+                            "name": "Falling Rocks 落石（必躲點）",
+                            "type": "mechanic",
+                            "description": "場地外圍間斷刷新 2-3 枚落石堆。躲在石堆後可避 boss 凜冬之風與回轉牢獄。每次凜冬之風會摧毀石堆並刷新。",
+                            "tips": [
+                                {"text": "戰鬥中靠近石堆", "role": "tank"},
+                                {"text": "DPS 戰場意識", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "High-Altitude 高山氣流 / Free Fall 自由落體",
+                            "type": "aoe",
+                            "description": "高山氣流：非 T 隨機點名直線 AoE。自由落體：非 T 隨機點名跳擊 AoE（不可閃）。被點玩家拉開避隊友。",
+                            "tips": [{"text": "被點拉開", "role": "dps"}]
+                        },
+                        {
+                            "name": "Winter's Wind 凜冬之風（全屏 + 摧石）",
+                            "type": "raidwide",
+                            "description": "boss 為中心全屏 AoE + 風耐降 60s + 摧毀石堆並重新刷新。站石堆後可躲。",
+                            "tips": [
+                                {"text": "站石堆後", "role": "tank"},
+                                {"text": "新石堆出現 → 預示牢獄", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Gold Claw 黃金爪",
+                            "type": "tankbuster",
+                            "description": "對一仇單體高傷無讀條。MT 大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "Cyclonic Cell 回轉牢獄（核心機制）",
+                            "type": "mechanic",
+                            "description": "場地中間出現龍捲風 → 共 5 次 Imprison 監禁：不造成傷害，但會將不在石堆後的玩家向場中央吸入 → 吸入中央圓 → Bind 拘束無法移動。Imprison 結束後對場中玩家造成高額傷害 + 擊飛 + 60s 風耐降。對策：戰鬥中靠近石堆方便近戰躲；坦克可用 Surecast 等抗擊退技能。",
+                            "tips": [
+                                {"text": "站石堆後 5 次", "role": "tank"},
+                                {"text": "Surecast 抗擊退也可", "role": "tank"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "落石機制：戰鬥中靠近 + 凜冬之風後刷新",
+                "High-Altitude / Free Fall → 被點拉開",
+                "Winter's Wind 凜冬之風 → 站石堆後",
+                "Gold Claw 黃金爪 → MT 大減傷",
+                "Cyclonic Cell 回轉牢獄 5 監禁 → 站石堆後 / Surecast"
+            ]
+        }
+    ]
 }
