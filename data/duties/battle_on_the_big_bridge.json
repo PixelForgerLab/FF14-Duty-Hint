@@ -1,143 +1,50 @@
 {
-  "id": "battle_on_the_big_bridge",
-  "name": "大橋上的決鬥",
-  "nameEn": "Battle on the Big Bridge",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "大橋上的決鬥：FFV/FF VIII 致敬 trial，Boss 為 Gilgamesh 吉爾伽美什 + Enkidu 恩奇都（綠公雞）。",
-    "P1：Whirlwind Slash 旋風斬 boss 自身圓 AoE；Quick Lance 命盡於此正前方扇形。",
-    "Frog Song 蛙變之歌：每隔一段時間 Gilgamesh 隨機 1 玩家（含 MT）變成青蛙 → 不能攻擊使用技能 + 被 Enkidu 綠公雞追殺。",
-    "Reduce 縮小旋律：對隨機玩家 Mini 縮小 → 攻擊力降低 + 受傷增加。Esuna 不可解。",
-    "Apologize 下跪認錯：boss 撐場演出技能（無傷）。",
-    "P2（< 30% HP）：Gilgamesh 留下炸彈飛到大橋另一端 → 玩家通過大橋移動 + 擊敗 2 波小怪追擊。",
-    "P2 戰場：多隻綠公雞 + 多名玩家同時被變成青蛙（每隻青蛙被不同公雞追殺）。隨機玩家被 Confuse 混亂 buff → 治療奶滿即可解除。",
-    "整場戰鬥背景音樂為 FF V『Battle on the Big Bridge』經典曲目改編。"
-  ],
-  "notes": "ARR 2.51 trial（Lv 50，sync 50，8 人 trial），Hildibrand 任務系列副本，FF V 致敬作品（音樂改編自 FF V 的 Battle on the Big Bridge）。Boss 為 Gilgamesh 吉爾伽美什 + Enkidu 恩奇都（綠公雞，吉爾伽美什的搭擋）。本戰特色：被變青蛙無法行動 + 綠公雞追殺。FF 系列粉絲必玩的致敬副本。",
-  "bosses": [
-    {
-      "name": "吉爾伽美什 與 恩奇都",
-      "nameEn": "Gilgamesh & Enkidu",
-      "phases": [
+    "id": "battle_on_the_big_bridge",
+    "name": "大橋上的決鬥",
+    "nameEn": "Battle on the Big Bridge - Gilgamesh",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Hildibrand 任務線。boss Gilgamesh + 寵物 Enkidu。3 階段。",
+        "P1：Bitter End 苦澀終結 = 前扇 cleave 長讀條 → 走出。Pradamante = 點名圓 AoE 中傷無預警 → 散開。",
+        "P1 Toad 變蟾蜍 = 點 1 玩家 20s 無法動作 + Enkidu 追擊 → 蟾蜍玩家風箏 Enkidu 直到 debuff 結束。",
+        "P1 Minimum 縮小 = 玩家縮 + Heavy 20s → boss 追擊 Bitter End → 玩家走位避前扇。",
+        "P1 Rocket Punch 火箭拳 = 點 1 玩家 Confused → 攻擊隊友 → 治療補滿可解。",
+        "P1 ~50% Grovel 投降 = 長讀條 + 小 AoE。~40% Bomb 自爆 + 跑 → 進 P2。",
+        "P2：兩房間之間刷 add 波 → 集中拉 + AoE 速秒。",
+        "P3：沿用 P1（無 Grovel/Bomb）+ debuff 可中多人（2-8 同時）。Whirlwind Slash = boss 圓 AoE。Giga Jump = 點玩家 6s 後跳擊濺射。",
+        "P3 Whirlwinds 旋風 = 場上 whirlwind 停留 → 觸發爆 → 蟾蜍狀態下被擊飛會死 → 預判路徑。",
+        "策略：奶可持續 regen（會反覆 Toad 化）+ Confused 玩家治療補滿解。"
+    ],
+    "notes": "ARR 2.5 trial（Lv 50，sync 50，ilvl 同步，4 人 trial），Hildibrand 任務線『Yo Ho, Yo Ho, a Pirate's Life Fro Me』終點。為 FF 經典 boss Gilgamesh 大橋之戰致敬。掉落 Faded Copy of Battle on the Big Bridge 樂譜 + Gilgamesh & Enkidu Card。Toad / Minimum / Confused 多重 debuff 為特色。",
+    "bosses": [
         {
-          "name": "P1（大橋一端 100%-30% HP）",
-          "mechanics": [
-            {
-              "name": "Whirlwind Slash 旋風斬",
-              "type": "aoe",
-              "description": "Gilgamesh 自身為中心圓形 AoE。近戰退離。",
-              "tips": [
-                {
-                  "text": "近戰退離 boss",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Quick Lance 命盡於此",
-              "type": "cone",
-              "description": "Gilgamesh 正前方扇形 AoE；MT 朝場邊面外，非 T 站背 / 側。",
-              "tips": [
-                {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                },
-                {
-                  "text": "非 T 站背 / 側",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Frog Song 蛙變之歌",
-              "type": "mechanic",
-              "description": "每隔一段時間 Gilgamesh 隨機 1 玩家（包括當前 MT）變成 Frog 青蛙 → 不能攻擊與使用技能 + 被 Enkidu 綠公雞追殺。被青蛙者跑場邊讓 Enkidu 追，避免影響其他人。",
-              "tips": [
-                {
-                  "text": "被變青蛙 → 跑場邊",
-                  "role": "dps"
-                },
-                {
-                  "text": "其他玩家拉開 Enkidu",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Reduce 縮小旋律",
-              "type": "spread",
-              "description": "對隨機 1 玩家施放 Mini 縮小 debuff → 攻擊力降低 + 受傷增加。Esuna 不可解，等自然消失。",
-              "tips": [
-                {
-                  "text": "被縮小者注意 HP",
-                  "role": "healer"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2（< 30% HP，追擊大橋另一端）",
-          "mechanics": [
-            {
-              "name": "Stage Change 轉場（炸彈 + 過橋）",
-              "type": "mechanic",
-              "description": "boss HP 約 30% 時 Gilgamesh 留下一個炸彈後飛到大橋另一端 → 玩家通過大橋移動到另一端追擊。路上還需要擊敗 2 波 add。",
-              "tips": [
-                {
-                  "text": "全員過橋追",
-                  "role": "tank"
-                },
-                {
-                  "text": "DPS 清 2 波 add",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "多隻 Enkidu 公雞 + 多青蛙",
-              "type": "mechanic",
-              "description": "P2 戰場有不止 1 隻 Enkidu 綠公雞。每隔一段時間多名玩家同時被變青蛙，每隻青蛙被不同公雞追殺。被青蛙者跑場邊避免被打到。",
-              "tips": [
-                {
-                  "text": "被青蛙者跑場邊",
-                  "role": "dps"
-                },
-                {
-                  "text": "MT 拉公雞",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Confuse 混亂",
-              "type": "mechanic",
-              "description": "隨機玩家被 Confuse 混亂 buff（自動攻擊隊友）→ 治療奶滿 HP 即解除。",
-              "tips": [
-                {
-                  "text": "治療奶滿被混亂玩家",
-                  "role": "healer"
-                }
-              ]
-            }
-          ]
+            "name": "吉爾伽美什",
+            "nameEn": "Gilgamesh",
+            "phases": [
+                {"name": "P1（100%~40%）", "mechanics": [
+                    {"name": "Bitter End 苦澀終結", "type": "cone", "description": "前扇 cleave 長讀條 → 走出。", "tips": [{"text": "繞背躲", "role": "dps"}]},
+                    {"name": "Pradamante", "type": "aoe", "description": "點名圓 AoE 中傷無預警 → 散開。", "tips": [{"text": "8 散開", "role": "dps"}]},
+                    {"name": "Toad 變蟾蜍", "type": "mechanic", "description": "點 1 玩家 20s 無法動作 + Enkidu 追擊 → 風箏 Enkidu 等 debuff 結束。", "tips": [{"text": "Toad 風箏 Enkidu", "role": "dps"}]},
+                    {"name": "Minimum 縮小", "type": "mechanic", "description": "縮 + Heavy 20s → boss 追擊 Bitter End → 走位避前扇。", "tips": [{"text": "小心 boss 追", "role": "dps"}]},
+                    {"name": "Rocket Punch + Confused", "type": "mechanic", "description": "點玩家 Confused → 攻擊隊友 → 治療補滿可解。", "tips": [{"text": "Confused 玩家補滿", "role": "healer"}]},
+                    {"name": "Grovel + Bomb（50%~40%）", "type": "aoe", "description": "Grovel 投降 + 小 AoE；Bomb 自爆 + 跑 → 進 P2。", "tips": [{"text": "預備 P2", "role": "dps"}]}
+                ]},
+                {"name": "P2 Add 階段", "mechanics": [
+                    {"name": "Add 波刷", "type": "add", "description": "兩房間之間刷 add 波 → 集中拉 + AoE 速秒。", "tips": [{"text": "集中拉 AoE", "role": "tank"}]}
+                ]},
+                {"name": "P3 終局", "mechanics": [
+                    {"name": "多人 debuff", "type": "mechanic", "description": "P1 debuff 可中多人（2-8 同時）。Toad 多人需風箏。", "tips": [{"text": "多 Toad 玩家分風箏", "role": "dps"}]},
+                    {"name": "Whirlwind Slash 旋風砍", "type": "aoe", "description": "boss 圓 AoE → 拉開遠離。", "tips": [{"text": "遠程拉開", "role": "dps"}]},
+                    {"name": "Giga Jump 巨跳", "type": "aoe", "description": "點玩家 6s 後跳擊濺射 → 拉開不疊。", "tips": [{"text": "被點拉開", "role": "dps"}]},
+                    {"name": "Whirlwinds 場上旋風", "type": "aoe", "description": "場上 whirlwind 停留 → 觸即爆 → Toad 玩家被擊飛會死 → 預判路徑。", "tips": [{"text": "避 whirlwind 路徑", "role": "dps"}]}
+                ]}
+            ]
         }
-      ],
-      "mnemonic": [
-        "P1 Whirlwind Slash 旋風斬 → 近戰退",
-        "Quick Lance 命盡於此（前扇）→ MT 朝外",
-        "Frog Song 蛙變之歌 → 被變青蛙跑場邊",
-        "Reduce 縮小 → 等自然消失",
-        "P2 30% 轉場過橋 → 清 2 波 add",
-        "P2 多公雞多青蛙 → 跑場邊",
-        "Confuse 混亂 → 治療奶滿解"
-      ]
-    }
-  ]
+    ]
 }

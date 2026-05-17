@@ -1,148 +1,50 @@
 {
-  "id": "dragons_neck",
-  "name": "龍頸鬥技場",
-  "nameEn": "The Dragon's Neck",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "龍頸鬥技場：金碟遊樂場 Manderville Gold Saucer 內的特殊 trial，劇情 NPC Hildibrand 希爾迪布蘭特任務系列。",
-    "Boss 為 Ultros 烏爾特羅斯（章魚）與 Typhon 提豐（怪物）雙 boss 連戰。",
-    "P1 Ultros 烏爾特羅斯：Tentacles 觸手攻擊（仇恨單體 + 圓 AoE）；Ink Jet 噴墨點名圓 + Blind 失明。",
-    "P1 Strangle 絞殺：對隨機玩家連線 → 拉開斷開連線。",
-    "P2 Typhon 提豐（章魚被擊敗後）：Snort 噴氣 → 將玩家從場邊吹出場外或推離 boss → Surecast 抗或預判位置。",
-    "P2 Tail Slap 尾擊：後方扇形 → 站側面。",
-    "P2 Twister 龍捲風：點名玩家圓 AoE → 拉開避免疊。",
-    "P2 < 50% HP：Aerial Blast 大氣爆發全屏 → 治療團補。",
-    "戰鬥結束有 Hildibrand 劇情演出。"
-  ],
-  "notes": "ARR 2.51 trial（Lv 50，sync 50，8 人 trial），位於金碟遊樂場 Manderville Gold Saucer 龍頸鬥技場。Hildibrand 希爾迪布蘭特任務系列副本，劇情上 Hildibrand 一行人潛入金碟發現 Ultros 與 Typhon 進行戰鬥表演。Boss 為 Ultros（章魚）與 Typhon（FF VI 系列出現的角色），與 FFVI 致敬。難度較低，主要是劇情演出。",
-  "bosses": [
-    {
-      "name": "烏爾特羅斯 與 提豐",
-      "nameEn": "Ultros & Typhon",
-      "phases": [
+    "id": "dragons_neck",
+    "name": "龍頸鬥技場",
+    "nameEn": "The Dragon's Neck - Ultros & Typhon",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Hildibrand 任務線。Ultros + Typhon 雙 boss。全員被打出場 = 團滅；單一玩家出場 = 暈眩數秒後可跳回。",
+        "開場：雙 T 分拉（Ultros + Typhon）+ DPS 集火 Ultros。",
+        "Ultros：Megavolt 圓 AoE / Aqua Breath 前扇（青魔可學）。",
+        "Typhon：Grind 無預警 tankbuster / Fungah 前扇擊退 / Fungahhh 後扇擊退 / Fireball 點名圓。注意 Fungah 可能把 T 推出場 → de-aggro 攻擊隊友。",
+        "First Imp Phase（~80%）：Ultros Imp Song → DPS 變河童（只能 Imp Punch）。DPS 必須被 Ultros 的 Aqua Breath 擊中獲『Wet Plate』buff（疊 2 層為佳）→ 跑去打 Typhon 的 8 stack Invigorate 中斷 Severe Snort（每 Wet Plate 加成的 Punch 消 1 stack）。",
+        "First Imp Phase：未中斷 Severe Snort = 全屏擊退（站中央或防擊退避免出場）。",
+        "Second Imp Phase：再次 Imp Song + Typhon Snortsault 前後 cone 旋轉 + 逆時針 → 被推出場。Ultros 新招 4-tonze Weight 點名圓 + Down for the Count → 走出。",
+        "Final Phase：FUNGAH 紅圓標 = 玩家被向上擊飛 + 周圍人擊退 → 拉開不疊。Snortsault 終局版 = 中央大擊退 + 4 連 Snort → 持續跑中央。",
+        "Final Phase：Ultros 召 3 觸手 → Wallop 直線擊退 / Clearout 大錐朝中央 → 散開避線。"
+    ],
+    "notes": "ARR 2.51 trial（Lv 50，sync 50，ilvl 同步，4 人 trial），Hildibrand 任務線『Curious Gorge Goes to Town』終點。為 FF6 經典 boss Ultros 章魚 + Typhon 鼻王（噴鼻歐普斯）致敬。掉落 Terra Branford Card + Ultros & Typhon Card + Wind-up Ultros 寵物。Imp Song + Wet Plate Imp Punch 為核心。",
+    "bosses": [
         {
-          "name": "P1 Ultros 烏爾特羅斯（章魚）",
-          "mechanics": [
-            {
-              "name": "Tentacle 觸手攻擊",
-              "type": "tankbuster",
-              "description": "對一仇 MT 單體 + 周身圓 AoE；MT 減傷 + 近戰退離。",
-              "tips": [
-                {
-                  "text": "MT 減傷",
-                  "role": "tank"
-                },
-                {
-                  "text": "近戰退離 boss",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Ink Jet 噴墨",
-              "type": "spread",
-              "description": "點名玩家圓 AoE + Blind 失明 debuff；被點走出 + Esuna 清失明。",
-              "tips": [
-                {
-                  "text": "看腳下圓走出",
-                  "role": "dps"
-                },
-                {
-                  "text": "Esuna 清失明",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Strangle 絞殺",
-              "type": "mechanic",
-              "description": "對隨機玩家連線 → 連續傷害。被連線者拉開 boss 距離斷開連線。",
-              "tips": [
-                {
-                  "text": "被連線拉開斷線",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Cleave 前扇普攻",
-              "type": "cone",
-              "description": "boss 前方扇形 AoE；MT 朝外。",
-              "tips": [
-                {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 Typhon 提豐",
-          "mechanics": [
-            {
-              "name": "Snort 噴氣（擊退場外）",
-              "type": "knockback",
-              "description": "對玩家方向噴氣 → 將玩家從場邊吹出場外（fall off）或推離 boss。Surecast 抗擊退或預判位置（站場中央）。注意：場外可能等於死亡。",
-              "tips": [
-                {
-                  "text": "Surecast 抗擊退",
-                  "role": "tank"
-                },
-                {
-                  "text": "預判位置站場中",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Tail Slap 尾擊",
-              "type": "cone",
-              "description": "boss 後方扇形 AoE；近戰站側面避開。",
-              "tips": [
-                {
-                  "text": "近戰站側",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Twister 龍捲風",
-              "type": "spread",
-              "description": "點名玩家圓 AoE；被點拉開避免疊。",
-              "tips": [
-                {
-                  "text": "被點拉開",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Aerial Blast 大氣爆發（< 50% HP）",
-              "type": "raidwide",
-              "description": "boss HP < 50% 後施放全屏 AoE；治療團補 + 全員減傷。",
-              "tips": [
-                {
-                  "text": "團補 + 減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            "name": "Ultros + Typhon",
+            "nameEn": "Ultros & Typhon",
+            "phases": [
+                {"name": "開場 + 各 boss 招式", "mechanics": [
+                    {"name": "雙 T 分拉 + 場邊規則", "type": "mechanic", "description": "雙 T 分拉 Ultros + Typhon。全員出場 = 團滅；單人出場暈眩後可回。", "tips": [{"text": "雙 T 分拉 + 站中央", "role": "tank"}]},
+                    {"name": "Ultros：Megavolt + Aqua Breath", "type": "aoe", "description": "Megavolt 圓 AoE；Aqua Breath 前扇。青魔可學 Aqua Breath。", "tips": [{"text": "繞背避 Aqua Breath", "role": "dps"}]},
+                    {"name": "Typhon：Grind + Fungah/Fungahhh + Fireball", "type": "knockback", "description": "Grind 無預警 tankbuster；Fungah 前扇擊退；Fungahhh 後扇擊退；Fireball 點名圓。Fungah 可能把 T 推出場 = de-aggro。", "tips": [{"text": "T 站中央接 Fungah", "role": "tank"}]}
+                ]},
+                {"name": "First Imp Phase（80%）", "mechanics": [
+                    {"name": "Imp Song + Wet Plate", "type": "mechanic", "description": "DPS 變河童 → 必須被 Ultros Aqua Breath 擊中獲『Wet Plate』buff（疊 2 為佳）→ 打斷 Typhon Severe Snort。", "tips": [{"text": "DPS 站 Aqua Breath 範圍吃", "role": "dps"}]},
+                    {"name": "Severe Snort 中斷（Wet Plate Punch）", "type": "knockback", "description": "Typhon 8 stack Invigorate → 每 Wet Plate Punch 消 1 stack。未中斷 = 全屏擊退（站中央或防擊退）。", "tips": [{"text": "DPS 跑 Typhon 用 Imp Punch", "role": "dps"}]}
+                ]},
+                {"name": "Second Imp Phase", "mechanics": [
+                    {"name": "Snortsault 旋轉錐", "type": "knockback", "description": "Typhon 前後 cone 擊退 + 逆時針旋轉 → 站中央避被推出。", "tips": [{"text": "站中央避旋轉錐", "role": "dps"}]},
+                    {"name": "4-tonze Weight", "type": "aoe", "description": "Ultros 新招點名圓 + Down for the Count → 走出。青魔可學。", "tips": [{"text": "被點走出", "role": "dps"}]}
+                ]},
+                {"name": "Final Phase", "mechanics": [
+                    {"name": "FUNGAH 紅圓擊飛", "type": "knockback", "description": "紅圓標 = 玩家向上擊飛 + 周圍人擊退 → 拉開不疊。", "tips": [{"text": "被點拉開", "role": "dps"}]},
+                    {"name": "Snortsault 終局 + 4 連 Snort", "type": "knockback", "description": "中央大擊退 + 4 連 Snort → 持續跑中央。", "tips": [{"text": "持續跑中央", "role": "tank"}]},
+                    {"name": "Ultros 觸手 Wallop/Clearout", "type": "knockback", "description": "3 觸手：Wallop 直線擊退 / Clearout 大錐朝中央 → 散開避線。", "tips": [{"text": "看觸手招式走縫", "role": "dps"}]}
+                ]}
+            ]
         }
-      ],
-      "mnemonic": [
-        "P1 Ultros 章魚 → 觸手 / 噴墨 / 絞殺",
-        "P2 Typhon → Snort 擊退（Surecast 防掉場外）",
-        "Twister 龍捲風 → 點名拉開",
-        "Aerial Blast < 50% → 團補"
-      ]
-    }
-  ]
+    ]
 }

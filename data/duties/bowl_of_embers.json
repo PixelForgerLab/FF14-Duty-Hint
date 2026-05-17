@@ -10,13 +10,18 @@
   "highEnd": false,
   "quality": "excellent",
   "mnemonic": [
-    "Incinerate 烈焰焚燒：對 MT 扇形 cleave，T 朝場外。",
-    "Vulcan Burst 火神爆裂：周身圓形 AoE，全員離 boss。",
-    "Eruption 噴發：點名圓形 AoE，被點往場邊放置。",
-    "Radiant Plume 光輝羽翼：場上多圓 AoE，找縫站。",
-    "Hellfire 地獄之炎：全屏 AoE，預備團補與全員減傷。"
+    "ARR 2.0 主線首蠻神戰（Lv 20）。",
+    "Incinerate 烈焰焚燒 = 對 MT 扇形（瞬發無讀條無範圍）→ MT 朝場邊接。",
+    "Vulcan Burst 火神爆裂 = 周身圓 AoE + 擊退（無預警）→ 遠程站遠 + Arm's Length 防擊退。",
+    "Eruption 噴發 = 點名圓 AoE 讀條 → 被點往場邊走。",
+    "Radiant Plume 光輝炎柱 = 場上多圓 AoE → 走縫站（中央較安全機率高）。",
+    "Infernal Nail 火神之楔 = boss 召喚 1 根楔 → 必須速秒否則接下來 Hellfire 強制團滅。",
+    "Hellfire 地獄之炎 = 楔召喚後固定使用 → Nail 殘留 = 團滅；全打 = 全屏可生存。",
+    "Crimson Cyclone 紅蓮颶風 = boss 場邊衝鋒直線（少見於 Normal）→ 不要站 boss 面向。",
+    "boss 平 A 對 MT → 治療持續補。",
+    "策略：MT 朝場邊面 + DPS 集火 → Nail 召喚時全力轉火避 Hellfire 團滅。"
   ],
-  "notes": "ARR 2.0 主線首個討伐戰（Lv 20-22），首次面對蛮神火神。Boss 為 Ifrit 伊弗利特。本版本為簡易版本，只有基礎機制 (Incinerate 烈焰焚燒、Vulcan Burst 火神爆裂、Eruption 噴發)；後續會解鎖 Hard 版引入 Nail 火獄之楔機制。",
+  "notes": "ARR 2.0 主線首個討伐戰（Lv 20-22，sync 22，ilvl 同步，8 人 trial），首次面對蠻神火神。Boss 為 Ifrit 伊弗利特。為簡易版本（Hard 版有更多機制與 4 個 Nail）。掉落經驗值 + 任務進度。是 ARR 新手必學的蠻神戰範例。",
   "bosses": [
     {
       "name": "伊弗利特",
@@ -107,6 +112,31 @@
                   "text": "Hellfire 前確認補有 MP 補大量血",
                   "role": "healer"
                 }
+              ]
+            },
+            {
+              "name": "Crimson Cyclone 紅蓮颶風",
+              "type": "knockback",
+              "description": "boss 場邊衝鋒直線（少見於 Normal）→ 不要站 boss 面向方向。",
+              "tips": [
+                {"text": "看 boss 場邊預判方向", "role": "dps"}
+              ]
+            },
+            {
+              "name": "boss 平 A",
+              "type": "tankbuster",
+              "description": "對 MT 持續攻擊 → 治療連續補。",
+              "tips": [
+                {"text": "持續補 MT", "role": "healer"}
+              ]
+            },
+            {
+              "name": "策略：MT 朝場邊",
+              "type": "mechanic",
+              "description": "MT 朝場邊面 + DPS 集火 boss → Nail 召喚時全力轉火避免 Hellfire 團滅。",
+              "tips": [
+                {"text": "MT 朝場邊面", "role": "tank"},
+                {"text": "Nail 召喚 = 全力轉火", "role": "dps"}
               ]
             }
           ]
