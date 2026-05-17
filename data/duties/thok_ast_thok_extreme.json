@@ -1,115 +1,189 @@
 {
-  "id": "thok_ast_thok_extreme",
-  "name": "真 羅波那殲殛戰",
-  "nameEn": "Thok ast Thok (Extreme) - Ravana",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Ravana 羅波那：強化版 Liberation + Swift Liberation + 三 stance + Warlord Shell + Atma Linga 終極。"
-  ],
-  "notes": "HW 3.1 羅波那極限版（Lv 60）。Boss 依序為 Ravana 羅波那。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "羅波那",
-      "nameEn": "Ravana",
-      "mnemonic": [
-        "Ravana 羅波那 機制：強化版 Liberation + Swift Liberation + 三 stance + Warlord Shell + Atma Linga 終極。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "thok_ast_thok_extreme",
+    "name": "真 羅波那殲殛戰",
+    "nameEn": "Thok ast Thok (Extreme) - Ravana",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "鬥志條每次達 100 → boss 清零並自附『傷害提高』+ 進下一階段。",
+        "P1 開場 boss 拉背對人群 → 平 A 後讀『xx 防御』給三方向護盾 → 攻擊有護盾方向 = 反彈 + 減速。T 原地別轉向。",
+        "P1 鬥志滿 → 光焰化身 → 攻擊形態 → 光焰【序】大鋼鐵 AoE + 擊退 + 易傷 → 起飛 4 條直線 AoE 點名 4 人圓 → 光焰【破】270° 後擊退 + 易傷 → 火神四連衝。",
+        "P1 鬥志再滿 → 土之加護 + 連續兩次『xx 防御』→ 進 P2。",
+        "P2 不斷召月光蝶 / 夢幻蝶 → 蝴蝶打 2 次後讀『月剑招來』生不可破壞月剑 → 提高轉場技能傷害 → 必須及時殺蝴蝶。",
+        "P3 神通力長讀條 → 全員拘束 + 擊飛 → boss 拔場上月剑 → 每把對全隊 AoE + 易傷 → 用完月剑後 AoE 解拘束。神通力破壞部分場地邊緣，注意擊退方向 + 不要後跳出場。",
+        "P3 boss 自加護盾 + 距離衰減 AoE → 對 1 人 43000 點分攤 → 點名『獵物』後 4 次直線 AoE『穿甲散弹』→ 獵物傳 T 接傷，奶補 T 血。",
+        "P3 直線 AoE『鬥氣彈』破壞護欄 → 被點玩家引到無護欄處。鬥志滿 → 光焰【急】依序點 4 玩家 → 冲鋒 → 十字 AoE + 另外 4 玩家圓 AoE。",
+        "P3 終場：boss 身上 5 層『傷害提高』時下次鬥志滿 → 上天無限釋全屏『明月之笑』直到團滅 → 必須在此前秒掉 boss。"
+    ],
+    "notes": "HW 3.0 trial（Lv 60，sync 60，ilvl 195，8 人 trial，時限 60 分），位於落葉山觀景台。為 Ravana 蠻神羅波那的極限版。鬥志條決定形態切換 + 傷害提高堆叠。每次切換階段都有特殊輪替。掉落 Ravana 之角武器配方。劇情：龍詩戰爭結局後挑戰隱藏的蠻神極限版本。",
+    "bosses": [
         {
-          "name": "Dragonfly 蜻蜓姿態",
-          "mechanics": [
-            {
-              "name": "Blinding Blade 致盲之刃",
-              "type": "tankbuster",
-              "description": "前方錐高傷分擔；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "羅波那",
+            "nameEn": "Ravana",
+            "phases": [
                 {
-                  "text": "雙 T 共擔；若 1 T 把 boss 轉向隊伍",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "The Seeing X 視界 X",
-              "type": "other",
-              "description": "Boss 三面屏障 (Right/Left/Wings) → 撞會傷 + 擊退 + Slow。**Right = 從左攻擊 / Left = 從右 / Wings = 從前**。",
-              "tips": [
-                "看屏障位置移到安全側"
-              ]
-            },
-            {
-              "name": "Atma-Linga",
-              "type": "raidwide",
-              "description": "全屏；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1 普通 / 攻擊形態",
+                    "mechanics": [
+                        {
+                            "name": "鬥志條 / 形態切換",
+                            "type": "mechanic",
+                            "description": "鬥志條每次達 100 → boss 清零鬥志 + 自附 1 層『傷害提高』 + 進下一階段。整場核心節奏。",
+                            "tips": [
+                                {"text": "DPS 提高 → 注意配減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "xx 防御（招架）",
+                            "type": "mechanic",
+                            "description": "讀條後給三方向護盾 → 攻擊有護盾方向 = 反彈 + 減速。T 原地不要轉向。",
+                            "tips": [
+                                {"text": "T 原地不轉向", "role": "tank"},
+                                {"text": "DPS 看護盾方向攻擊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "光焰【序】Liberation",
+                            "type": "knockback",
+                            "description": "讀條 → 釋大範圍鋼鐵 AoE → 範圍內玩家擊退 + 易傷。提前遠離 boss 可躲避。",
+                            "tips": [
+                                {"text": "遠離 boss 提前", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "起飛 4 條直線 + 4 圓",
+                            "type": "aoe",
+                            "description": "boss 上天 → 場地出現 4 條直線 AoE + 點名 4 人大範圍圓 → 注意躲避同時不要重疊。",
+                            "tips": [
+                                {"text": "看直線縫站", "role": "dps"},
+                                {"text": "被點玩家拉開散位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "光焰【破】Crushing Blow",
+                            "type": "cone",
+                            "description": "讀條 → 前方 270° 範圍內擊退 + 易傷 → 玩家躲身後。",
+                            "tips": [
+                                {"text": "繞到 boss 身後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "火神四連衝",
+                            "type": "aoe",
+                            "description": "boss 釋放火神四連衝 → 看 telegraph 走位即可。",
+                            "tips": [
+                                {"text": "看預警閃位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "土之加護 + 雙重防御",
+                            "type": "mechanic",
+                            "description": "鬥志再滿 → boss 自附『土之加護』+ 連續兩次『xx 防御』→ 進 P2。",
+                            "tips": [
+                                {"text": "T 連續看招架方向", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "減傷",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Tapasya 苦行",
-              "type": "aoe",
-              "description": "前方錐 3 連擊；看圖示提前走位避開預兆範圍。",
-              "tips": [
+                    "name": "P2 月光蝶",
+                    "mechanics": [
+                        {
+                            "name": "月光蝶 / 夢幻蝶召喚",
+                            "type": "add",
+                            "description": "boss 不斷召喚月光蝶 + 夢幻蝶 → 蝴蝶攻擊 2 次後讀『月剑招來』→ 完成後變為不可破壞月剑留原地。每把月剑會提高轉場技能傷害。",
+                            "tips": [
+                                {"text": "DPS 即時殺蝴蝶", "role": "dps"},
+                                {"text": "T 撿月光蝶", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "P2 結束（鬥志滿）",
+                            "type": "mechanic",
+                            "description": "鬥志再滿 → 進 P3。",
+                            "tips": [
+                                {"text": "確保月剑數量盡量少", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 第一擊後跑側面",
-                  "role": "tank"
+                    "name": "P3 神通力",
+                    "mechanics": [
+                        {
+                            "name": "神通力 Trample",
+                            "type": "mechanic",
+                            "description": "boss 長讀條『神通力』→ 全員拘束 + 擊飛。boss 拔出所有插地月剑 → 每把對全隊一次 AoE + 1 層易傷 → 用完月剑後再次全屏 AoE 解拘束。會破壞部分場地邊緣 → 注意擊退方向 + 不要後跳出場。",
+                            "tips": [
+                                {"text": "預備極大團補", "role": "healer"},
+                                {"text": "防擊退技能保命", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "護盾 + 距離衰減 AoE",
+                            "type": "knockback",
+                            "description": "boss 自附護盾 + 釋以自身為中心距離衰減 AoE → 玩家遠離 boss 降低傷害。",
+                            "tips": [
+                                {"text": "遠離 boss 站外緣", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "43000 點分攤",
+                            "type": "stack",
+                            "description": "boss 選 1 玩家釋總傷害 43000 的分攤 → 注意全員集合分攤。",
+                            "tips": [
+                                {"text": "全員 stack 集合", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "獵物 + 穿甲散弹",
+                            "type": "tankbuster",
+                            "description": "boss 對 1 玩家標『獵物』→ 隨後施放 4 次直線 AoE『穿甲散弹』。被點玩家必須將標記傳給 T → 奶補 T 血。",
+                            "tips": [
+                                {"text": "傳獵物給 T", "role": "dps"},
+                                {"text": "T 接傷 + 補滿", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "鬥氣彈（破護欄）",
+                            "type": "aoe",
+                            "description": "boss 點 1 人釋直線 AoE『鬥氣彈』→ 該 AoE 會擊碎護欄。被點玩家須引導 AoE 打在『無護欄處』。",
+                            "tips": [
+                                {"text": "被點玩家面向無欄方向", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "光焰【急】Conviction",
+                            "type": "mechanic",
+                            "description": "鬥志滿 → 讀條『光焰【急】』→ 依序點名 4 玩家 → boss 依序冲鋒 → 結束釋十字 AoE + 點另外 4 玩家圓 AoE。",
+                            "tips": [
+                                {"text": "前 4 玩家冲鋒散開", "role": "dps"},
+                                {"text": "後 4 玩家圓 AoE 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "5 層傷害提高 → 強制團滅",
+                            "type": "mechanic",
+                            "description": "boss 身上達 5 層『傷害提高』時 → 下次鬥志滿 → boss 上天無限釋全屏『明月之笑』直到團滅 → 必須在此前秒掉 boss。",
+                            "tips": [
+                                {"text": "DPS 全爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Warlord Shell 戰王之殼",
-              "type": "other",
-              "description": "boss 上盾，**必須打破否則 wipe**；依預兆走位處理。",
-              "tips": [
-                {
-                  "text": "DPS 全力破盾",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Scorpion 蠍子姿態",
-          "mechanics": [
-            {
-              "name": "Prelude to Liberation 解放序曲",
-              "type": "aoe",
-              "description": "AoE 序列：#1 大近圓 → #2 直線 → #3 隨機圓 (Burns) → #4 5 玩家紫圈 (對側散開)。",
-              "tips": [
-                "按順序走位"
-              ]
-            },
-            {
-              "name": "Liberation 解放",
-              "type": "aoe",
-              "description": "#1 boss 全屏 AoE 唯一安全在背後 → #2 boss 跳到場邊 → #3 兩側 3 個 clones 各 PBAoE → #4 從原點依序衝刺。**站第 1 clone 落點對側**繞外圈躲衝刺。",
-              "tips": [
-                "跳起立刻擠中央 → 看第 1 clone 落點 → 跑對側 → 繞外圈避衝刺"
-              ]
-            },
-            {
-              "name": "Swift Liberation 迅速解放",
-              "type": "other",
-              "description": "4 玩家被劍 icon 標記 1-4 → **跑 A/B/C/D 對應 waymark**；其他玩家擠 D 或 C。Ravana 從落點依劍順序衝刺。",
-              "tips": [
-                "A=N B=E C=S D=W；劍 1 跑 A、劍 2 跑 B 等"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 開場：護盾方向 T 不轉向 → 光焰【序】遠離 + 起飛 4 直線 + 4 圓 + 【破】270° 繞背",
+                "P2：殺蝴蝶 → 減少月剑（神通力傷害）",
+                "P3 神通力：拘束 + 月剑連續 AoE + 解拘束",
+                "P3 43000 分攤 → 獵物傳 T 接 → 鬥氣彈引導到無護欄",
+                "P3 光焰【急】4 標冲 → 十字 → 4 圓散開",
+                "5 層 buff = 終結機制 → 必須在此前秒 boss"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

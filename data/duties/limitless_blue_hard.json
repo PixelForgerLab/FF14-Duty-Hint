@@ -1,133 +1,139 @@
 {
-  "id": "limitless_blue_hard",
-  "name": "真 俾斯麥殲滅戰",
-  "nameEn": "The Limitless Blue (Hard) - Bismarck",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 53,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Bismarck 俾斯麥：Hydroshot 水砲 + Body Slam 身擊 + 跳船機制。",
-    "T/H/D 分工：MT 接 tankbuster、治療注意團補、DPS 切目標。"
-  ],
-  "notes": "HW 3.0 HW 蛮神俾斯麥蒼藍深淵首戰（Lv 53）。Boss 依序為 Bismarck 俾斯麥。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "俾斯麥",
-      "nameEn": "Bismarck",
-      "mnemonic": [
-        "Bismarck 俾斯麥 機制：Hydroshot 水砲 + Body Slam 身擊 + 跳船機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "limitless_blue_hard",
+    "name": "真 俾斯麥殲滅戰",
+    "nameEn": "The Limitless Blue (Hard) - Bismarck",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 浮島開場：兩側刷出近戰／遠程小怪 → 2 個 T 把近戰拉到遠程旁（遠程不可拉）→ 集合 AoE 速秒。",
+        "P1 治療站中央壁障發生器位置 → 觀察場外俾斯麦，當它飛離原本視線位置 → 立即開啟壁障發生器（否則撞擊浮島 + 全體眩暈）。",
+        "P1 打完小怪 → 2 名玩家跑浮島兩側開砲拉 boss 過來 → boss 撞島後 → 全員（含遠程）上 boss 背打殼，否則傷害無效。",
+        "P2 風蛇／水蛇：2 T 分別拉風蛇（綠）／水蛇（藍）→ 必須拉開（否則小怪互相強化，有 buff 提示）→ 蛇對玩家附『支配於風／水』buff → 玩家不可打對應屬性蛇（高反射傷害）。",
+        "P3 改變天氣 + 水泡：雷雨（紫天）= 不打水泡 + 散開；暴雨（黃天）= 打掉水泡 + 場中集合；小雨（白天）= 打掉水泡 + 散開。",
+        "P3 重複開砲 → 上背 → 被甩下 → 打小怪 → 通常 1~2 次上背即可結束戰鬥。"
+    ],
+    "notes": "HW 3.0 主線劇情 trial（Lv 53，sync 53，ilvl 100，8 人）。為龍詩戰爭主線中段戰鬥，於阿巴拉提亞雲海上空與雲神俾斯麥（Bismarck）作戰。場地為浮空平台 → 注意不要被擊退 / 跳下平台（龍騎特別小心 Jump 系技能）。Boss 為 Bismarck 俾斯麦（雲神 / 白鯨）+ 風水雙蛇召喚物。劇情：博士首次帶光之戰士進入雲海挑戰雲神，揭開帝國挑釁與蠻神召喚的真相。",
+    "bosses": [
         {
-          "name": "P1 100%-Chitin",
-          "mechanics": [
-            {
-              "name": "Vundu adds 召怪",
-              "type": "other",
-              "description": "Vuk'maii + Lan'maii Vundu adds 會擊退；依預兆走位處理。",
-              "tips": [
+            "name": "俾斯麦",
+            "nameEn": "Bismarck",
+            "phases": [
                 {
-                  "text": "DPS 速殺",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Cetacean Rage 海獸之怒 + 盾",
-              "type": "other",
-              "description": "Bismarck 撞場地 → 開 Magitek Field Generator 盾減傷。**晚開或不開 = 場地高傷**。",
-              "tips": [
-                "看到 dive 動畫立刻開盾"
-              ]
-            },
-            {
-              "name": "Harpoon 魚叉 + Chitin",
-              "type": "other",
-              "description": "兩個魚叉啟動釘住 boss → 玩家站到 Bismarck 上打 Chitin Carapace。**最好一輪打掉**否則 boss 脫鉤重啟。",
-              "tips": [
-                {
-                  "text": "DPS 開 CD 全力打 Chitin",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 Sanuwa",
-          "mechanics": [
-            {
-              "name": "Ul'sanuwa + So'sanuwa 雙 adds",
-              "type": "other",
-              "description": "Bismarck 飛走召兩大 adds，**靠太近 → 互給 Vulnerability Down**。",
-              "tips": [
-                {
-                  "text": "MT/OT 分坦兩 adds 拉開",
-                  "role": "tank"
+                    "name": "P1 浮島階段（小怪 + 開砲）",
+                    "mechanics": [
+                        {
+                            "name": "小怪雙拉（近戰 + 遠程）",
+                            "type": "add",
+                            "description": "場上兩側刷出小怪：一邊是近戰、一邊是遠程（遠程不可拉動）。2 T 把近戰拉到遠程身邊，集合 AoE 速秒。",
+                            "tips": [
+                                {"text": "近戰拉到遠程旁", "role": "tank"},
+                                {"text": "集合 AoE 速秒", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "壁障發生器（防撞擊）",
+                            "type": "interrupt",
+                            "description": "中央有壁障發生器 → 治療站附近觀察場外俾斯麦。當俾斯麦讀條『白鯨之怒』飛離視線時 → 立即開啟壁障發生器，否則 boss 撞擊浮島 + 全體眩暈幾秒。",
+                            "tips": [
+                                {"text": "治療守壁障發生器", "role": "healer"},
+                                {"text": "看 boss 視線變化開啟", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "對龍弩砲 + 上背打殼",
+                            "type": "mechanic",
+                            "description": "打完小怪後 2 名玩家跑浮島兩側開砲 → boss 撞島後全員（含遠程！）上 boss 背打殼。否則傷害無效 + 會被崩回浮島重打小怪。",
+                            "tips": [
+                                {"text": "2 名玩家開砲（通常 DPS）", "role": "dps"},
+                                {"text": "全員上背打殼 + DPS 全開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "湍流 dot（背上）",
+                            "type": "mechanic",
+                            "description": "上 boss 背時被附加『湍流』dot 並逐漸叠層 → 同步最低裝等可能因此死亡。同時獲『鯨背』buff（僅有此 buff 時可對 boss 殼造成傷害）。",
+                            "tips": [
+                                {"text": "上背即全爆發", "role": "dps"},
+                                {"text": "湍流疊層持續團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 },
-                "面向場外避免前 cleave"
-              ]
-            },
-            {
-              "name": "Mechanic 場上龍捲 + 爆泡",
-              "type": "aoe",
-              "description": "場上 tornadoes 與爆炸氣泡 AoE；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走位避開"
-              ]
-            },
-            {
-              "name": "Breach Blast 突擊衝擊",
-              "type": "raidwide",
-              "description": "Bismarck 回來終局 AoE → adds 未殺光 = wipe。盾損壞，後續無減傷。",
-              "tips": [
                 {
-                  "text": "限時殺 adds",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P3 終局",
-          "mechanics": [
-            {
-              "name": "Vapor Bubble + Thunder/Rain 天氣輪",
-              "type": "other",
-              "description": "Thunder 時 → 殺 Vapor Bubble = 雷打隨機玩家 (拉開避免疊死)。Rain 時 → 殺 = adds 獲 Damage Up，不殺則雷打 adds 自滅。",
-              "tips": [
-                "看天氣判斷殺/不殺"
-              ]
-            },
-            {
-              "name": "Corona (Chitin 已破)",
-              "type": "other",
-              "description": "P3 Chitin 已破，Bismarck 鎖鏈時可直接打 Corona 本體；依預兆走位處理。",
-              "tips": [
+                    "name": "P2 風蛇水蛇",
+                    "mechanics": [
+                        {
+                            "name": "風蛇 / 水蛇 雙拉",
+                            "type": "add",
+                            "description": "場左右刷出一藍色腾雲水蛇 + 一綠色腾雲風蛇 → 2 個 T 分別拉，必須保持一定距離。否則雙方互相強化（有 buff 提示），打不動。",
+                            "tips": [
+                                {"text": "MT 拉風蛇 / OT 拉水蛇", "role": "tank"},
+                                {"text": "兩蛇必須拉開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "支配於風 / 水 debuff",
+                            "type": "mechanic",
+                            "description": "5 秒後兩蛇對全隊隨機附『支配於風』或『支配於水』buff → 攻擊對應屬性蛇會受到高額反射傷害。玩家須打對應的『反向』蛇（風 buff 打水蛇 / 水 buff 打風蛇）。擊殺一隻後 buff 全消除。",
+                            "tips": [
+                                {"text": "看 debuff → 打反向蛇", "role": "dps"},
+                                {"text": "勿打對應屬性蛇", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "DPS 全力",
-                  "role": "dps"
+                    "name": "P3 改變天氣 + 重複",
+                    "mechanics": [
+                        {
+                            "name": "雷雨（紫天）",
+                            "type": "spread",
+                            "description": "boss 改天氣為雷雨（天空變紫）+ 場上刷數個水泡 → 處理：不打水泡 + 全員散開（雷會點名 + 連線爆炸）。",
+                            "tips": [
+                                {"text": "散開 + 不打水泡", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "暴雨（黃天）",
+                            "type": "knockback",
+                            "description": "天空變土黃 → 打掉所有水泡 + 全員儘可能靠近場地中央（boss 會釋放隨機方向擊退 + 大範圍月環 AoE）。",
+                            "tips": [
+                                {"text": "打掉水泡", "role": "dps"},
+                                {"text": "拉中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "小雨（白天）",
+                            "type": "aoe",
+                            "description": "天空變白 → 打掉所有水泡 + 全員散開（會釋放小範圍鋼鐵 AoE）。",
+                            "tips": [
+                                {"text": "打掉水泡", "role": "dps"},
+                                {"text": "散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "重複開砲 → 上背",
+                            "type": "mechanic",
+                            "description": "天氣處理完 → 開啟兩個對龍弩砲將 boss 拉向浮島 → 全員上背打核心。通常第一次上背就能結束。",
+                            "tips": [
+                                {"text": "2 人開兩個弩砲", "role": "dps"},
+                                {"text": "上背即爆發 LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Mechanic 場地縮減",
-              "type": "other",
-              "description": "盾損壞，島血條變少；依預兆走位處理。",
-              "tips": [
-                "不能讓島跌到 24%"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：T 拉近戰至遠程旁 → 治療開壁障防撞 → 開砲 → 全員上背打殼",
+                "P2：風 / 水雙蛇拉開 → debuff 看屬性 → 打反向蛇（風 buff 打水）",
+                "P3 天氣：雷雨 = 不打水泡散開 / 暴雨 = 打水泡 + 中央 / 小雨 = 打水泡 + 散開",
+                "P3 結束：再次開砲 → 上背爆發秒 boss"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

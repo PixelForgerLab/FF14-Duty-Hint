@@ -1,158 +1,171 @@
 {
-  "id": "limitless_blue_extreme",
-  "name": "真 俾斯麥殲殛戰",
-  "nameEn": "The Limitless Blue (Extreme) - Bismarck",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Bismarck 俾斯麥：強化版 Hydroshot 水砲 + Body Slam + Tail Spin 尾旋 + 跳船。"
-  ],
-  "notes": "HW 3.0 俾斯麥極限版（Lv 60）。Boss 依序為 Bismarck 俾斯麥。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "俾斯麥",
-      "nameEn": "Bismarck",
-      "mnemonic": [
-        "Bismarck 俾斯麥 機制：強化版 Hydroshot 水砲 + Body Slam + Tail Spin 尾旋 + 跳船。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "limitless_blue_extreme",
+    "name": "真 俾斯麥殲殛戰",
+    "nameEn": "The Limitless Blue (Extreme) - Bismarck",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 開場移動到悬浮岛前三分之一進戰 → boss 撞擊一次浮島 → 刷 2 小怪：温杜兰麻义（近戰）拉到温杜乌麻义（遠程）旁集合 AoE 速秒。",
+        "P1 中央壁障發生器：boss 讀條『白鯨之怒』時開啟 → 抵擋下一次撞擊。",
+        "P1 boss 第二次撞擊後 → 場地兩端對龍弩砲啟動 → 讀條第二次『鯨須爆彈』前全開兩端弩砲 → 控住 boss 拉向浮島。未及時則重複階段。每次撞擊降低浮島強度，浮島強度 0 = 強制團滅。",
+        "P1 上背階段：被附『湍流』dot 持續叠層；獲『鯨背』buff 才能對殼造傷。擊殼後 boss 抖落全員進 P2。挣脱锁链時還在背上 = 甩落浮島死亡。",
+        "P2 場上龍卷風不斷移動 + 擊飛玩家 → 注意躲避。左右刷出蓝色腾云水蛇 + 绿色腾云风蛇，2 T 分拉。",
+        "P2 5 秒後兩蛇對全隊隨機附『支配於風』/『支配於水』buff → 打對應蛇受高額反射 → 打反向蛇。兩蛇靠近會連線高額減傷 → 必須拉開。擊殺速度過慢蛇讀『死水 / 死風』重抽 buff。",
+        "P2 時間過久『以太濃度上升』提示 → 未殺完則蛇消失強制團滅。",
+        "P3 改天氣 + 召 3 小怪：兩近戰拉向單獨遠程 → 集合 AoE 速秒。期間 boss 撞島 + 改第二次天氣 + 刷水泡。",
+        "P3 小雨：boss 讀『荒蛮之泪』後釋小範圍無提示鋼鐵 AoE → 吃到附易傷。暴雨：boss 讀『锋利之风』隨機方向擊退 + 大範圍無提示月環 AoE。雷雨：boss 讀『落雷』點名數玩家造 AoE（不可見點名）→ 隨後『雷暴雲砧』優先點水泡。",
+        "P3 處理完天氣 → 啟動兩個弩砲拉 boss 拉向浮島 → 上背擊殺核心。未及時則重複 P3。"
+    ],
+    "notes": "HW 3.0 俾斯麦殲殛戰（Lv 60，sync 60，ilvl 195，8 人 trial，時限 90 分），位於苍空神域不获岛。為 The Limitless Blue Extreme 雲神俾斯麦極限版。場地為浮空平台 + 浮島強度耗盡團滅機制。Boss 為雲神 Bismarck 俾斯麥 + 风蛇 / 水蛇 + 環境機制（弩砲、壁障、龍卷、天氣、水泡）。掉落 Bismarck 之角武器配方。劇情：龍詩戰爭結局後挑戰隱藏的雲神極限版本。",
+    "bosses": [
         {
-          "name": "P1 開場",
-          "mechanics": [
-            {
-              "name": "Dragonkiller Cannons 龍",
-              "type": "other",
-              "description": "**指派 2 名 healer 開砲**，10 秒內未開 → 失效。先 DPS 兩 adds 才能用。",
-              "tips": [
+            "name": "俾斯麦",
+            "nameEn": "Bismarck",
+            "phases": [
                 {
-                  "text": "Healer 1+2 立刻啟砲",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Cetacean Rage + Magitek Field Generator 場域",
-              "type": "other",
-              "description": "1 名 ranged 開 Generator 擋 Bismarck 撞擊。",
-              "tips": [
-                {
-                  "text": "DPS 開 Generator",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Turbulence 紊流 (站 boss 上)",
-              "type": "other",
-              "description": "站 Bismarck 上獲 Turbulence DoT，每 10 秒堆 1 stack，**5 stacks 會殺非 tank**。1 stack 立即給。",
-              "tips": [
-                "盡量 3 stacks 內打掉 Chitin",
-                {
-                  "text": "DPS 開 CD 全力 burst",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 Sanuwa",
-          "mechanics": [
-            {
-              "name": "Ul'Sanuwa (藍水) + So'Suwa (綠風)",
-              "type": "other",
-              "description": "雙 adds 太近 = Vulnerability Down。需分坦對側。",
-              "tips": [
-                {
-                  "text": "MT/OT 拉到對側朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Dead Water / Dead Wind 水",
-              "type": "other",
-              "description": "4 名 Will of the Wind + 4 名 Will of the Water debuff。**攻擊與 debuff 同色的 sanuwa = 傷害反彈**。應打相反色。Tank 可能需互換。",
-              "tips": [
-                "看 debuff 顏色換 sanuwa；tank swap 如需要"
-              ]
-            },
-            {
-              "name": "Wet/Dry Fin 前方錐",
-              "type": "aoe",
-              "description": "sanuwa 前方錐高傷。",
-              "tips": [
-                {
-                  "text": "Tank 把 sanuwa 朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Baleen Bomb 鯨鬚炸彈",
-              "type": "aoe",
-              "description": "Ul'sanuwa 場上藍色水圓 → 水球落下高傷。",
-              "tips": [
-                "閃預警"
-              ]
-            },
-            {
-              "name": "Vacuum Wave 真空波",
-              "type": "other",
-              "description": "So'Suwa 場角召龍捲 + 走向對側，碰到暈。",
-              "tips": [
-                "閃龍捲路徑"
-              ]
-            },
-            {
-              "name": "Dead Water/Wind ×3 → Enrage 狂暴",
-              "type": "raidwide",
-              "description": "3 次後 Bismarck 回來 wipe。",
-              "tips": [
-                {
-                  "text": "限時殺光 sanuwa",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P3 終局",
-          "mechanics": [
-            {
-              "name": "Breach Blast 爆裂",
-              "type": "raidwide",
-              "description": "Bismarck 回來全屏。**Generator 損壞，無減傷**。",
-              "tips": [
-                {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Nat'mai + 兩 Vundu",
-              "type": "other",
-              "description": "三 Vunu 出來，大型 Nat'mai 為終 boss。",
-              "tips": [
-                {
-                  "text": "DPS 集火 Nat'mai",
-                  "role": "dps"
+                    "name": "P1 浮島階段",
+                    "mechanics": [
+                        {
+                            "name": "小怪兩拉",
+                            "type": "add",
+                            "description": "進戰後 boss 撞擊一次浮島 → 刷 2 小怪：温杜乌麻义（遠程不可拉）+ 温杜兰麻义（近戰）。將近戰拉至遠程旁集合 AoE 速秒。",
+                            "tips": [
+                                {"text": "近戰拉遠程旁", "role": "tank"},
+                                {"text": "集合 AoE 秒", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "壁障發生器（白鯨之怒）",
+                            "type": "interrupt",
+                            "description": "中央壁障發生器 → boss 讀條『白鯨之怒』時開啟 → 抵擋下一次撞擊（否則全體眩暈幾秒）。",
+                            "tips": [
+                                {"text": "看讀條開啟壁障", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "對龍弩砲（鯨須爆彈）",
+                            "type": "mechanic",
+                            "description": "第二次撞擊後場地兩端弩砲啟動 → 必須在『鯨須爆彈』讀條前開啟兩個弩砲控住 boss 拉向浮島。失敗則重複階段。每次撞擊降低浮島強度，0 = 團滅。",
+                            "tips": [
+                                {"text": "2 玩家負責弩砲", "role": "dps"},
+                                {"text": "盡早完成階段", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "上背階段（湍流／鯨背）",
+                            "type": "mechanic",
+                            "description": "boss 被拉到浮島後 → 全員上背 → 被附『湍流』dot 持續叠層；獲『鯨背』buff 後才能對殼造成傷害。擊殼後 boss 抖落全員。挣脱锁链時還在背上 = 甩落死亡。",
+                            "tips": [
+                                {"text": "全員上背爆發 LB3", "role": "dps"},
+                                {"text": "湍流疊層補血", "role": "healer"}
+                            ]
+                        }
+                    ]
                 },
-                "閃 Vundu 擊退"
-              ]
-            }
-          ]
+                {
+                    "name": "P2 龍卷風 + 風水蛇",
+                    "mechanics": [
+                        {
+                            "name": "龍卷風（移動 + 擊飛）",
+                            "type": "mechanic",
+                            "description": "場上會刷出一個龍卷風 → 不斷移動 + 擊飛玩家。需注意走位躲避。",
+                            "tips": [
+                                {"text": "看龍卷位置走位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "風蛇 / 水蛇 雙拉",
+                            "type": "add",
+                            "description": "左右刷蓝色腾云水蛇 + 绿色腾云风蛇 → 兩 T 分拉。兩蛇靠近會連線獲高額減傷 → 必須拉開。",
+                            "tips": [
+                                {"text": "MT/OT 各拉一蛇", "role": "tank"},
+                                {"text": "兩蛇拉開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "支配於風 / 水 buff",
+                            "type": "mechanic",
+                            "description": "5 秒後兩蛇對全隊隨機附『支配於風』/『支配於水』buff → 打對應屬性蛇高額反射 → 打反向蛇。擊殺一隻後 buff 全消。",
+                            "tips": [
+                                {"text": "看 buff 打反向蛇", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "死風 / 死水重抽 buff",
+                            "type": "mechanic",
+                            "description": "擊殺過慢蛇會讀『死水』『死風』重抽 buff（可能需換 T）。當前版本因 DPS 高很少出現。",
+                            "tips": [
+                                {"text": "持續輸出避免重抽", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "以太濃度上升（強制團滅）",
+                            "type": "mechanic",
+                            "description": "提示後若未殺完兩蛇 → 蛇消失 → 強制團滅。",
+                            "tips": [
+                                {"text": "DPS check 必達", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 天氣循環",
+                    "mechanics": [
+                        {
+                            "name": "3 小怪 + 第二次撞擊",
+                            "type": "add",
+                            "description": "boss 改變天氣 + 召 3 小怪（2 近戰 + 1 遠程）→ 近戰拉向遠程集合 AoE 速秒。期間 boss 撞島 + 改第二次天氣 + 刷水泡。",
+                            "tips": [
+                                {"text": "近戰拉遠程", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "小雨（荒蛮之泪）",
+                            "type": "aoe",
+                            "description": "讀條『荒蛮之泪』後釋出小範圍無提示鋼鐵 AoE → 吃到附易傷。",
+                            "tips": [
+                                {"text": "看讀條後立即移動", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "暴雨（锋利之风 + 暴风骤雨）",
+                            "type": "knockback",
+                            "description": "讀條『锋利之风』隨機方向擊退 → 隨後讀條『暴风骤雨』大範圍無提示月環 AoE。",
+                            "tips": [
+                                {"text": "預判落點 + 走中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "雷雨（落雷 + 雷暴雲砧）",
+                            "type": "spread",
+                            "description": "讀條『落雷』點名數玩家 AoE 傷害（點名不可見）→ 隨後『雷暴雲砧』第二次點名 → 優先點水泡（接走點名）。",
+                            "tips": [
+                                {"text": "全員散開", "role": "dps"},
+                                {"text": "水泡接走點名", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "弩砲 + 上背核心",
+                            "type": "mechanic",
+                            "description": "天氣處理完 → 啟動兩個弩砲拉 boss 至浮島 → 上背擊殺核心。未及時則重複 P3。",
+                            "tips": [
+                                {"text": "全員上背 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "P1：近戰拉遠程旁 / 壁障擋撞 / 2 弩砲開齊拉 boss / 上背打殼",
+                "P2：龍卷躲位 / 兩蛇拉開 / 看 buff 打反向蛇 / DPS check",
+                "P3 小雨 = 看讀條躲鋼鐵；暴雨 = 預判擊退 + 月環；雷雨 = 散開 + 水泡接點",
+                "P3 弩砲 → 上背核心爆發秒 boss"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

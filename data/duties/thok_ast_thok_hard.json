@@ -1,154 +1,211 @@
 {
-  "id": "thok_ast_thok_hard",
-  "name": "真 羅波那殲滅戰",
-  "nameEn": "Thok ast Thok (Hard) - Ravana",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 58,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Ravana 羅波那：Liberation 自由 + Swift Liberation 急速自由 + 三 stance 切換 + Warlord Shell 領主之殼。",
-    "T/H/D 分工：MT 接 tankbuster、治療注意團補、DPS 切目標。"
-  ],
-  "notes": "HW 3.1 HW 蛮神羅波那托克斯托克斯首戰（Lv 58）。Boss 依序為 Ravana 羅波那。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "羅波那",
-      "nameEn": "Ravana",
-      "mnemonic": [
-        "Ravana 羅波那 機制：Liberation 自由 + Swift Liberation 急速自由 + 三 stance 切換 + Warlord Shell 領主之殼。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "thok_ast_thok_hard",
+    "name": "真 羅波那殲滅戰",
+    "nameEn": "Thok ast Thok (Hard) - Ravana",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "場地周圍 8 塊圍欄三層耐久（武神閃／鬼武神／鬥氣砲／鬥氣爆碎攻擊次數會破壞），完全破壞 = 玩家可從該方向掉出場地死亡。",
+        "羅波那有 3 種形態（普通／攻擊／防禦），切形態靠『鬥志條』集滿 100 → 自附 1 層『傷害提高』。",
+        "普通形態：武神閃（無讀條前扇 + 破圍欄）；前後／兩側防禦給 5s 招架 → 攻擊招架方向會被反擊 + 擊退；鬥志滿 → 光焰化身 → 攻擊形態。",
+        "攻擊形態 1：猛焰【序】= 自身大圓 + 擊退 → 起飛 → 4 條直線 AoE → 場中環形 AoE 落地。猛焰【破】= 270° 前扇 → 起飛 → 中央十字直線 + 火傷區域 + 隨機 2 人圓 AoE。",
+        "鬥志滿 → 武毅化身 → 第二次普通形態：召月光蝶 + 夢幻蝶 → 蝴蝶讀條『月剑招來』生月剑（不可破壞）→ 神通力（拘束 + 月剑數對應 AoE + 受傷加重 / 明月之笑全屏破圍欄）。",
+        "甲壳化身 → 防禦形態：固定中心不移動。冲天击距離衰減 AoE + 超長擊退 → 穿甲散弹獵物多段扇 AoE → 鬥氣彈：3 個鬥氣連線玩家 → 撞玩家或時間到爆破圍欄 → 鬥氣砲直線 + 超長擊退破圍欄。",
+        "攻擊形態 2：猛焰【急】= 隨機 4 玩家標 1~4 把劍 → 依序冲鋒 + 受傷加重 → 中央環形 AoE → 大圓自爆 + 擊退。",
+        "之後循環普通 → 防禦 → 攻擊。整場關鍵：管理圍欄耐久 + 不要被擊退出場 + 看形態切換的招架方向。"
+    ],
+    "notes": "HW 3.0 主線結尾 trial（Lv 53，sync 53，ilvl 100，8 人，時限 60 分），位於落葉山。劇情：龍詩戰爭中段，與帝國召喚的蠻神羅波那（哥布林族信仰的『四臂武神』）作戰。場地有 8 塊圍欄組成三層耐久，圍欄被破壞會讓人掉出場地死亡。整場戰鬥圍繞 boss 三形態切換與圍欄管理。Boss 掉落 Ravana 相關裝備。",
+    "bosses": [
         {
-          "name": "P1 主戰",
-          "mechanics": [
-            {
-              "name": "Cleave 普攻",
-              "type": "aoe",
-              "description": "Ravana 普攻前方錐。",
-              "tips": [
+            "name": "羅波那",
+            "nameEn": "Ravana",
+            "phases": [
                 {
-                  "text": "MT 朝場外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Prelude to Slaughter 屠殺序曲",
-              "type": "aoe",
-              "description": "AoE 序列：#1 近圓 → #2 多條直線火 (有空檔) → #3 場地除中央外 AoE。",
-              "tips": [
-                "先後處理 → 站中央"
-              ]
-            },
-            {
-              "name": "Slaughter 屠殺",
-              "type": "aoe",
-              "description": "AoE 序列：#1 前後直線擊退 → #2/#3 十字火 + 兩玩家紫圈 (對側散開避免疊死) → 火十字爆後留火痕，數秒內可穿過。",
-              "tips": [
-                "紫圈兩人對側散",
-                "趁火痕短時間穿過"
-              ]
-            },
-            {
-              "name": "Revenge 復仇",
-              "type": "other",
-              "description": "短時間 buff 自己增 Parry + 反傷，可忽略。",
-              "tips": [
-                "不痛"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Chandrahas (60% 過場)",
-          "mechanics": [
-            {
-              "name": "Moon Gana / Spirit Gana adds 召怪",
-              "type": "other",
-              "description": "兩 adds 詠唱 Falling Laughter。**Moon Gana (火) 快、Spirit Gana (冰) 慢**，先殺 Moon Gana。",
-              "tips": [
+                    "name": "普通形態（開場）",
+                    "mechanics": [
+                        {
+                            "name": "圍欄系統",
+                            "type": "mechanic",
+                            "description": "場地邊緣有 8 塊圍欄，每塊獨立耐久三層。會被武神閃 / 鬥氣砲 / 明月之笑等技能破壞 → 完全破壞後玩家從該方向掉出場地立即死亡。整場必須注意圍欄狀態 + 不要被擊退出場。",
+                            "tips": [
+                                {"text": "MT 控 boss 不要破壞太多圍欄", "role": "tank"},
+                                {"text": "勿站在破損圍欄邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "武神閃 Bladed Direction",
+                            "type": "cone",
+                            "description": "無讀條對一仇前方扇形 AoE → 會破壞圍欄。MT 必須將 boss 拉背對場心。",
+                            "tips": [
+                                {"text": "MT 朝場心拉 boss", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "前後 / 兩側防禦（招架）",
+                            "type": "mechanic",
+                            "description": "boss 對自身附 5 秒『招架』狀態 → 完全招架前後方位或兩側方位物理攻擊（含平 A）。攻擊招架方向 = 觸發『反意』被擊退 + 反擊。",
+                            "tips": [
+                                {"text": "看招架方向 → 反方向打", "role": "dps"},
+                                {"text": "T 原地不動別轉向", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "光焰化身（轉攻擊形態）",
+                            "type": "mechanic",
+                            "description": "鬥志條達 100 → boss 清零鬥志 + 自附『攻擊形態』buff + 持劍。受到傷害增加 → 全力輸出。",
+                            "tips": [
+                                {"text": "DPS 爆發", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "DPS 順序 Moon → Spirit",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Falling Laughter 落笑",
-              "type": "raidwide",
-              "description": "未殺光 adds → 全屏致死。",
-              "tips": [
-                "限時殺光"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 防禦/攻擊 buff 切換",
-          "mechanics": [
-            {
-              "name": "Buff 切換",
-              "type": "other",
-              "description": "攻擊 buff = Slaughter / 防禦 buff = Pillars + Surpanakha + Rose / 無 buff = 砍 tank。",
-              "tips": [
-                "看 buff icon 預判機制"
-              ]
-            },
-            {
-              "name": "Pillars of Heaven 天柱",
-              "type": "knockback",
-              "description": "全屏 + 擊退。",
-              "tips": [
-                "Arm's Length / 注意方向"
-              ]
-            },
-            {
-              "name": "Surpanakha 蘇潘娜卡",
-              "type": "aoe",
-              "description": "對 OT (或主仇恨) 連續 3 條直線 AoE。",
-              "tips": [
+                    "name": "第一次攻擊形態",
+                    "mechanics": [
+                        {
+                            "name": "猛焰【序】Liberation",
+                            "type": "knockback",
+                            "description": "焰劍 → 物理：以自身為中心大範圍圓 AoE + 範圍內擊退較遠 → 起飛不可選 → 魔法：4 條直線 AoE 對玩家方位 + 受傷加重 → 魔法：場中心環形 AoE + 受傷加重 → 落地。",
+                            "tips": [
+                                {"text": "圓 AoE 先拉開", "role": "dps"},
+                                {"text": "直線 AoE 看玩家位置走縫", "role": "dps"},
+                                {"text": "環形 → 跑場中", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "猛焰【破】Crushing Blow",
+                            "type": "aoe",
+                            "description": "焰劍 → 物理：正面 270° 扇形 → 起飛 → 魔法：場地中心十字直線 AoE + 留下 5s 火伤 dot 區域 → 魔法：隨機 2 玩家圓形大 AoE → 落地。",
+                            "tips": [
+                                {"text": "繞背躲扇", "role": "dps"},
+                                {"text": "不踩火傷區", "role": "dps"},
+                                {"text": "被點玩家拉開散位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "武毅化身（回普通）",
+                            "type": "mechanic",
+                            "description": "鬥志再次滿 → boss 變回普通形態。",
+                            "tips": [
+                                {"text": "形態變 buff 結束", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "OT 拉到場邊朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Rose of Hate / Rose of Conquest 征服之玫瑰",
-              "type": "other",
-              "description": "Rose of Hate 直線 AoE + 4 紫球連繩 4 玩家 (碰到爆 + vuln)。",
-              "tips": [
-                "閃直線 + 別碰紫球"
-              ]
-            },
-            {
-              "name": "Swift Slaughter 迅速屠殺",
-              "type": "aoe",
-              "description": "AoE 序列：#1 白標玩家散開 (boss 衝過) → #2 場外圈 (站中央) → #3 場中央 (站邊緣)。",
-              "tips": [
-                "看順序走位"
-              ]
-            },
-            {
-              "name": "Atma-Linga 阿特瑪靈伽",
-              "type": "raidwide",
-              "description": "全屏 AoE，可能連放兩次。",
-              "tips": [
+                    "name": "第二次普通形態（月光蝶）",
+                    "mechanics": [
+                        {
+                            "name": "月光蝶 / 夢幻蝶召喚",
+                            "type": "add",
+                            "description": "boss 召喚 4 隻夢幻蝶（先）+ 後續陸續出月光蝶 / 夢幻蝶。蝴蝶讀條『月剑招來』長詠唱 → 完成後在蝴蝶位置落下『明月之笑』月剑（不可破壞）。冰結／火焰為蝴蝶的單體普攻。",
+                            "tips": [
+                                {"text": "DPS 速殺蝴蝶避免落月剑", "role": "dps"},
+                                {"text": "T 撿月光蝶", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "鬼武神 / 武神魂",
+                            "type": "raidwide",
+                            "description": "第二次普通形態起新增：鬼武神 = 無讀條對一仇高傷扇 + 連續三次擊退；武神魂 = 全屏 AoE 無讀條。",
+                            "tips": [
+                                {"text": "MT 開減傷 + 注意連擊", "role": "tank"},
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "神通力 Trample",
+                            "type": "mechanic",
+                            "description": "鬥志滿 → 長讀條『神通力』→ 全員拘束。月光：根據場上月剑數量釋對應數的 AoE + 受傷加重 buff（最多 8 層）。明月之笑：全屏 AoE + 必破壞一塊圍欄。",
+                            "tips": [
+                                {"text": "讀條前殺盡蝴蝶 → 減少月剑", "role": "dps"},
+                                {"text": "預備極大團補與減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "防禦形態",
+                    "mechanics": [
+                        {
+                            "name": "甲壳化身（不移動）",
+                            "type": "mechanic",
+                            "description": "boss 固定場中央不移動，只轉向。",
+                            "tips": [
+                                {"text": "MT 不需移動 boss", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "冲天击 Skyshatter",
+                            "type": "knockback",
+                            "description": "以場地為中心距離衰減 AoE + 超長擊退 → 必須遠離 boss（並注意防擊退到場外）。",
+                            "tips": [
+                                {"text": "遠離 boss 並防擊退", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "穿甲散弹（獵物）",
+                            "type": "cone",
+                            "description": "對被視為『獵物』玩家釋多段扇形 AoE。獵物選擇：若一仇為 T → 隨機其他 T；若一仇非 T → 隨機 1 名玩家（含一仇）。",
+                            "tips": [
+                                {"text": "獵物拉開人群", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "鬥氣彈 / 鬥氣爆碎",
+                            "type": "add",
+                            "description": "boss 召 3 個鬥氣 → 隨機連線玩家（除一仇外）並朝其移動 → 撞玩家或時間到爆炸：小範圍圓 AoE + 受傷加重 + 破壞圍欄。",
+                            "tips": [
+                                {"text": "被連線拉到場外", "role": "dps"},
+                                {"text": "讓鬥氣朝場外爆", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "鬥氣砲",
+                            "type": "knockback",
+                            "description": "對獵物方向釋放直線 AoE + 超長擊退 + 破壞圍欄。",
+                            "tips": [
+                                {"text": "獵物引導向場外", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "第二次攻擊形態",
+                    "mechanics": [
+                        {
+                            "name": "猛焰【急】Conviction",
+                            "type": "mechanic",
+                            "description": "焰劍 → 物理：隨機 4 玩家標 1~4 把劍 → boss 起飛依序對被標玩家冲鋒 + 路徑上玩家受傷加重 → 魔法：場中心環形 AoE → 物理：自身大圓 AoE + 範圍內擊退較遠 → 落地。",
+                            "tips": [
+                                {"text": "被標玩家依序避免重疊", "role": "dps"},
+                                {"text": "閃環形 → 大圓拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "循環普通 / 防禦 / 攻擊",
+                            "type": "mechanic",
+                            "description": "之後按普通 → 防禦 → 攻擊的順序循環。每次鬥志滿 → 切換形態 + 堆叠『傷害提高』。",
+                            "tips": [
+                                {"text": "DPS check 防 buff 堆高", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "圍欄管理：8 塊三層耐久，破壞 = 掉場 → 注意走位 + 看擊退方向",
+                "普通形態：武神閃前扇 / 看招架方向反向打 → 鬥志滿轉攻擊",
+                "攻擊形態：猛焰【序】= 圓 + 直線 + 環形；【破】= 扇 + 十字 + 圓",
+                "第二普通：殺蝴蝶減少月剑 → 神通力前殺光",
+                "防禦形態：冲天击防擊退 / 獵物 + 鬥氣 / 鬥氣砲引向場外",
+                "攻擊形態 2：猛焰【急】4 人標號依序冲鋒 → 環 → 大圓"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
