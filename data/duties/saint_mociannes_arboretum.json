@@ -1,153 +1,126 @@
 {
-  "id": "saint_mociannes_arboretum",
-  "name": "草木庭園聖茉夏娜植物園",
-  "nameEn": "Saint Mocianne's Arboretum",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Mandragora Prince 曼陀蘿王子：Tussle 扭打 + 場上植物 add。",
-    "B2 Lycopodium 石松：Foul Bouquet 惡臭花束 + 拘束。",
-    "B3 Ngowayson 恩戈瓦伊森：Inhale 吸氣 + 圓爆 + 召喚毒霧。"
-  ],
-  "notes": "HW 3.4 HW 副本草木庭園（Lv 60）。Boss 依序為 Mandragora Prince 曼陀蘿王子、Lycopodium 石松、Ngowayson 恩戈瓦伊森。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "曼陀蘿王子",
-      "nameEn": "Mandragora Prince",
-      "mnemonic": [
-        "Mandragora Prince 曼陀蘿王子 機制：Tussle 扭打 + 場上植物 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "saint_mociannes_arboretum",
+    "name": "草木庭園聖茉夏娜植物園",
+    "nameEn": "Saint Mocianne's Arboretum",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 巨型魔界花：惡臭氣 → 4 隻小魔界花跟隨 boss 一起轉動釋放臭氣（麻痺/減速/中毒）→ 跟著臭氣轉動方向走位躲。",
+        "B1 播種召喚玫瑰果實 add → 速殺。",
+        "B2 女王蜂：攻擊指示 → 隨機玩家點名 4 次直線範圍 AoE + 蜂毒素飛濺，有預兆。",
+        "B2 防禦指示 → 女王蜂移到中央 + 與鷹蜂騎士連線獲無敵 → 必殺所有 add 解。",
+        "B2 協作指示 → 場外蜜蜂分兩部分直線貫場 AoE → 站側面。",
+        "B3 劇毒美人：阿托品孢子 → boss 為中心環形 AoE 全體。",
+        "B3 真空吸魂 → 全體 AoE + 召喚 add 後在 add 範圍內受到魔法傷害加重 debuff。",
+        "B3 魅惑視線 → 全體攻擊需背對 boss 回避。"
+    ],
+    "notes": "HW 3.4 副本（Lv 60，sync 60，4 人 dungeon），位於龍堡內陸低地聖茉夏娜植物園。Boss 依序為 Gourmand 巨型魔界花、Queen Bee 女王蜂、Beladonna 劇毒美人。本副本是 Sharlayan 古植物園主題副本。",
+    "bosses": [
         {
-          "name": "B1",
-          "mechanics": [
-            {
-              "name": "Spinning Breath 旋轉吐息",
-              "type": "aoe",
-              "description": "boss 召小 untargetable adds 各自吐息 + boss 隨機順/逆時針旋轉。",
-              "tips": [
-                "看 boss 旋轉方向走位"
-              ]
-            },
-            {
-              "name": "Rose Hips 玫瑰花蕾",
-              "type": "other",
-              "description": "第 2 次旋轉吐息起召氣球狀 adds，**不殺爆 = 全屏 raidwide**。",
-              "tips": [
+            "name": "巨型魔界花",
+            "nameEn": "Gourmand",
+            "phases": [
                 {
-                  "text": "DPS 優先殺 Rose Hips",
-                  "role": "dps"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "惡臭氣 Bad Breath（4 小魔界花跟轉）",
+                            "type": "mechanic",
+                            "description": "場上 spawn 4 隻小魔界花跟隨 boss 一起釋放臭氣並轉動。臭氣造成麻痺/減速/中毒 debuff。跟隨臭氣轉動方向走位躲避。",
+                            "tips": [
+                                {"text": "跟臭氣轉動方向走位", "role": "dps"},
+                                {"text": "Esuna 清三 debuff", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "播種 + 玫瑰果實 add",
+                            "type": "add",
+                            "description": "boss 召喚玫瑰果實 add → 必須及時擊殺。",
+                            "tips": [{"text": "DPS 速殺玫瑰果實", "role": "dps"}]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "石松",
-      "nameEn": "Lycopodium",
-      "mnemonic": [
-        "Lycopodium 石松 機制：Foul Bouquet 惡臭花束 + 拘束。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+            ],
+            "mnemonic": [
+                "惡臭氣 → 跟臭氣轉動躲（避麻痺/減速/中毒）",
+                "播種 → 速殺玫瑰果實"
+            ]
+        },
         {
-          "name": "B2",
-          "mechanics": [
-            {
-              "name": "Bees 蜂 + Column AoE",
-              "type": "aoe",
-              "description": "場邊 bees 對隨機玩家直線。Ally 兩組 bees 排場邊放雙列 AoE 無 telegraph (蜂混牆色)。",
-              "tips": [
-                "不站蜂前",
-                "Ally 時注意牆 → 找空隙"
-              ]
-            },
-            {
-              "name": "Knight Hawk adds (DPS check) 召怪",
-              "type": "other",
-              "description": "場上召 Knight Hawk 連繩 boss → 拖久 boss 全屏越痛。",
-              "tips": [
+            "name": "女王蜂",
+            "nameEn": "Queen Bee",
+            "phases": [
                 {
-                  "text": "DPS 全力速殺 Knight Hawk",
-                  "role": "dps"
+                    "name": "主戰（蜂群協作機制）",
+                    "mechanics": [
+                        {
+                            "name": "攻擊指示",
+                            "type": "aoe",
+                            "description": "對隨機玩家點名 → 4 次直線範圍 AoE + Bee Sting 蜂毒素飛濺，有範圍預兆。",
+                            "tips": [{"text": "看直線走縫", "role": "dps"}]
+                        },
+                        {
+                            "name": "防禦指示（無敵 + 鷹蜂騎士連線）",
+                            "type": "mechanic",
+                            "description": "女王蜂移到場地中央 + 與 Falcon Knight 鷹蜂騎士連線 + 獲得無敵狀態。必須擊殺所有 add 才能繼續攻擊 boss。",
+                            "tips": [{"text": "DPS 切目標清 add", "role": "dps"}]
+                        },
+                        {
+                            "name": "協作指示（直線貫場）",
+                            "type": "aoe",
+                            "description": "場外蜜蜂分成兩部分 → 向場地中央進行直線貫場 AoE。站側面或遠離直線。",
+                            "tips": [{"text": "站側面避貫場直線", "role": "dps"}]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Avail (BLU spell) 咒",
-              "type": "aoe",
-              "description": "場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "閃預警"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "恩戈瓦伊森",
-      "nameEn": "Ngowayson",
-      "mnemonic": [
-        "Ngowayson 恩戈瓦伊森 機制：Inhale 吸氣 + 圓爆 + 召喚毒霧。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+            ],
+            "mnemonic": [
+                "攻擊指示 → 4 次直線走縫",
+                "防禦指示 → 必殺 add 解無敵",
+                "協作指示 → 站側面避貫場直線"
+            ]
+        },
         {
-          "name": "B3",
-          "mechanics": [
-            {
-              "name": "Big AoE 大 AoE",
-              "type": "aoe",
-              "description": "場上大 AoE，**站 boss 旁安全**。",
-              "tips": [
-                "跑向 boss"
-              ]
-            },
-            {
-              "name": "Bulbs 球根 + Frond Fatale 魅惑",
-              "type": "other",
-              "description": "Bulbs 召 → 場上黃 AoE 區 (magic vuln)。Frond Fatale 短詠唱魅惑玩家跑進黃圓吃 debuff。",
-              "tips": [
-                "看到 Frond Fatale **立刻背對 boss** 避魅惑"
-              ]
-            },
-            {
-              "name": "Room-wide AoE 全屏",
-              "type": "raidwide",
-              "description": "全屏 AoE 約 4k。",
-              "tips": [
+            "name": "劇毒美人",
+            "nameEn": "Beladonna",
+            "phases": [
                 {
-                  "text": "減傷",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "阿托品孢子 Atropine Spore",
+                            "type": "aoe",
+                            "description": "以 boss 為中心的全體環形 AoE。中央安全。",
+                            "tips": [{"text": "全員貼 boss", "role": "dps"}]
+                        },
+                        {
+                            "name": "真空吸魂 + add 範圍 debuff",
+                            "type": "add",
+                            "description": "全體範圍攻擊。召喚 add 後，在 add 範圍內會受到 Magical Damage Up 魔法傷害加重 debuff。",
+                            "tips": [
+                                {"text": "DPS 清 add", "role": "dps"},
+                                {"text": "離 add 範圍避加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "魅惑視線 Sweet Scent",
+                            "type": "gaze",
+                            "description": "需要背對 boss 回避的全體攻擊。",
+                            "tips": [{"text": "全員背對 boss", "role": "tank"}]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Adds 召喚",
-              "type": "other",
-              "description": "場上召 targetable adds。",
-              "tips": [
-                {
-                  "text": "DPS 處理",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "阿托品孢子環形 → 貼 boss 中央",
+                "真空吸魂 + add 範圍 debuff → 離 add 範圍",
+                "魅惑視線 → 背對解"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

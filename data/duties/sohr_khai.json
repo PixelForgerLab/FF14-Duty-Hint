@@ -1,193 +1,150 @@
 {
-  "id": "sohr_khai",
-  "name": "天龍宮殿憶罪宮",
-  "nameEn": "Sohr Khai",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Sohr Khai boss 1 憶罪龍：Dragonbreath 龍息 + 召喚龍 add。",
-    "B2 Sohr Khai boss 2 憶罪魔：Mind Blast 心靈爆裂 + 圓 AoE。"
-  ],
-  "notes": "HW 3.4 HW 副本天龍宮殿（Lv 60）。Boss 依序為 Sohr Khai boss 1 憶罪龍、Sohr Khai boss 2 憶罪魔。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "sohr_khai",
+    "name": "天龍宮殿憶罪宮",
+    "nameEn": "Sohr Khai",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 長老莫古靈 + 護衛團（多 add）：千庫啵衝鋒前 180° + 絨絨神聖自身大圓 + 莫古之杖召喚旋轉杖（十字火 AoE + 受傷加重）。",
+        "B1 護衛團 7 隻陸續登場：團長莫古森連線給長老無敵（必先殺團長解無敵）+ 各成員獨特技能（捣捣亂毒針、砍砍斧扇形、柔柔歌增傷 buff、軟軟魔絨絨核爆圓、刺刺弓單體、絨絨幻治療）。",
+        "B1 絨絨激勵：護衛團成員死亡後 boss 紫色復活預兆 13s → 圈內成員復活滿血 + 最大體力增加 stack → 殺死後屍體可被攻擊鎖 1 血 + 攻擊方向擊退 → 把屍體擊出復活圈。",
+        "B3 赫拉斯瓦爾格（神聖龍王）：真龍爪擊 MT 高傷；神聖之翼 → boss 一側翅膀發光 → 該半場冰屬性 AoE + 受傷加重（站發光的對側）。",
+        "B3 神聖風暴全屏；神聖俯衝 → 場邊直線 AoE + 神聖球兩側步進式 5 圓 → 走縫到無圓區。",
+        "B3 死亡輪迴 → 治療分攤連 5 段；神聖吐息 → 全員粉色圓 AoE 點名 → 散開。",
+        "B3 鑽石風暴 → 全屏冰 + 場地變冰面（溜冰）；寒霜俯衝場邊直線 + 受傷加重；寒霜球場上隨機 3 輪多紅圈 + 受傷加重，結束後冰面消失。"
+    ],
+    "notes": "HW 3.3 副本（Lv 60，sync 60，4 人 dungeon），位於翻雲霧海天龍宮殿憶罪宮。劇情上玩家潛入古龍族『遺罪之宮』。Boss 依序為 Mogglemog Elder 長老莫古靈（多 add）+ Hraesvelgr 赫拉斯瓦爾格（神聖龍王）。本副本特色：B1 多 add 共血合體機制；B3 龍王複雜走位與冰面機制。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "he is alive and within range of Moglin, he'll tether to him and make him invincible.；依預兆走位處理。",
-              "name": "Captain Mogsun 莫古孫艦長",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Moogles of various classes will spawn throughout the fight.；依預兆走位處理。",
-              "name": "Resurrecting Moogles 復活莫古力",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "憶罪龍",
-      "nameEn": "Sohr Khai boss 1",
-      "mnemonic": [
-        "Sohr Khai boss 1 憶罪龍 機制：Dragonbreath 龍息 + 召喚龍 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "the walls on either side of the corridor can be knocked down in chunks by certain attacks Poqhiraj uses.；依預兆走位處理。",
-              "name": "Destructible Environment 可破壞環境",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Poqhiraj jumps, becomes untargetable as one might expect, and prepares to land at one end of the corridor using a familiar proximity indicator from ea；依預兆走位處理。",
-              "name": "Jump 跳",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "after landing, Poqhiraj charges down the corridor.；依預兆走位處理。",
-              "name": "Charge 衝鋒",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "unmarked line AoE with a reasonable cast time.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Quasar 類星體",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "one player will receive a purple marker; when the marker disappears, a thundercloud will spawn over their head.；依預兆走位處理。",
-              "name": "Cloud Call 雲",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "憶罪魔",
-      "nameEn": "Sohr Khai boss 2",
-      "mnemonic": [
-        "Sohr Khai boss 2 憶罪魔 機制：Mind Blast 心靈爆裂 + 圓 AoE。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Tankbuster；對 MT 釋放高傷害單體 buster，MT 開大減傷接傷，雙 T swap 接力。",
-              "name": "Wyrmclaw 龍爪",
-              "tips": [
+            "name": "長老莫古靈",
+            "nameEn": "Mogglemog Elder",
+            "phases": [
                 {
-                  "text": "MT 開減傷",
-                  "role": "tank"
+                    "name": "主戰（莫古力護衛團）",
+                    "mechanics": [
+                        {
+                            "name": "千庫啵衝鋒 / 絨絨神聖 / 莫古之杖（旋轉杖）",
+                            "type": "mechanic",
+                            "description": "千庫啵衝鋒：對一仇前 180° 扇形。絨絨神聖：boss 自身大範圍圓 AoE。莫古之杖：召喚不停旋轉的莫古之杖 → 對旋轉方向與其 90° 方向釋放十字火 AoE + 受傷加重 stack。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "看莫古之杖旋轉避十字", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "護衛團登場（7 隻）",
+                            "type": "add",
+                            "description": "經過一定時間後場地依序 spawn 護衛團：① 團長莫古森（連線 boss 給永久無敵 + 回轉莫古盾自身圓眩暈 → 必先殺團長解 boss 無敵）；② 捣捣亂（毒針 + 30s 中毒）；③ 砍砍斧（百庫啵橫掃前 90° 扇）；④ 柔柔歌（莫古力進行曲給護衛團增傷 stack）；⑤ 軟軟魔（絨絨核爆自身大圓火）；⑥ 刺刺弓（莫古神準箭單體）；⑦ 絨絨幻（絨絨治療回隊友血）。",
+                            "tips": [
+                                {"text": "先殺團長莫古森解無敵", "role": "dps"},
+                                {"text": "優先治療幻 + 柔柔歌（增益）", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "絨絨激勵（復活機制）",
+                            "type": "mechanic",
+                            "description": "護衛團成員無法戰鬥後，長老 13s 讀條 → 在最多 2 名成員腳下生成紫色圓形復活預兆 → 咏唱完畢復活成員 + 滿血 + 1 檔最大體力增加 stack（如果被 2 個圈覆蓋 → 疊 2 檔）。無法戰鬥的成員可被攻擊鎖 1 血 + 攻擊方向擊退 → 把屍體擊出復活圈。",
+                            "tips": [
+                                {"text": "把屍體擊出復活圈外", "role": "dps"},
+                                {"text": "避免成員被 2 圈覆蓋", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "tankbuster"
-            },
-            {
-              "description": "One of Hraesvelgr's wings will glow to indicate a cleave on either his right or left side. Move to the other side before the cast goes off.；依預兆走位處理。",
-              "name": "Hallowed Wings 神聖之翼",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Unavoidable party damage；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Holy Storm 神聖",
-              "tips": [
+            ],
+            "mnemonic": [
+                "千庫啵衝鋒前扇 + 絨絨神聖自身大圓",
+                "莫古之杖旋轉十字火 → 看方向避",
+                "7 護衛團：必先殺團長解無敵；各成員獨特技",
+                "絨絨激勵 → 屍體擊出復活圈外"
+            ]
+        },
+        {
+            "name": "赫拉斯瓦爾格",
+            "nameEn": "Hraesvelgr",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "P1 100%-某 HP（神聖系列）",
+                    "mechanics": [
+                        {
+                            "name": "真龍爪擊 True Claw",
+                            "type": "tankbuster",
+                            "description": "對一仇 MT 高傷單體（有預兆）。MT 大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "神聖之翼 Holy Wing（半場翅膀）",
+                            "type": "aoe",
+                            "description": "boss 一側翅膀發光 → 該半場冰屬性 AoE + 受傷加重 60s。站發光的對側半場。",
+                            "tips": [{"text": "站發光對側半場", "role": "dps"}]
+                        },
+                        {
+                            "name": "神聖風暴 Holy Storm",
+                            "type": "raidwide",
+                            "description": "boss 原地盤旋 → 全場 AoE。團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "神聖俯衝 + 神聖球",
+                            "type": "aoe",
+                            "description": "boss 飛到場邊 + 直線 AoE 預兆。神聖俯衝攻擊預兆兩側生成步進式圓形預兆共 5 次。走縫到無圓位置。",
+                            "tips": [{"text": "看直線 + 5 步進圓走縫", "role": "dps"}]
+                        },
+                        {
+                            "name": "死亡輪迴 Akh Morn（治療分攤 5 連）",
+                            "type": "stack",
+                            "description": "對治療生成分攤預兆 → 5 連無屬性魔法傷。全員集合治療分攤。",
+                            "tips": [
+                                {"text": "全員集合治療分攤", "role": "tank"},
+                                {"text": "治療連發團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "神聖吐息 Holy Breath",
+                            "type": "spread",
+                            "description": "對所有角色生成粉色圓形 AoE 預兆。全員散開不疊。",
+                            "tips": [{"text": "散開不疊", "role": "tank"}]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 後段（冰面機制）",
+                    "mechanics": [
+                        {
+                            "name": "鑽石風暴 Diamond Storm（冰面）",
+                            "type": "raidwide",
+                            "description": "全屏冰屬性 AoE + 場地變 Ice Floor 冰面（溜冰行走滑距離）。",
+                            "tips": [
+                                {"text": "團補", "role": "healer"},
+                                {"text": "小心冰面滑行", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "寒霜俯衝 Frost Dive + 寒霜球（紅圈）",
+                            "type": "mechanic",
+                            "description": "寒霜俯衝：boss 場邊直線冰 AoE + 受傷加重 stack。隨後寒霜球：場上隨機生成 3 輪多個紅圈預兆 → 冰屬性 + 受傷加重 stack。結束後冰面消失。",
+                            "tips": [
+                                {"text": "看直線 + 多紅圈走縫", "role": "dps"},
+                                {"text": "Esuna 清受傷加重", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Hraesvelgr leaves the arena and performs a line AoE across the middle. On the edges, two moving circle AoEs will spawn, so the player must move back t；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Hallowed Dive 聖俯衝",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Multi-hit stack marker.；隨機點名玩家集合分攤 AoE，全員集合分攤傷害。",
-              "name": "Akh Morn 苦痛",
-              "tips": [
-                "疊接分擔"
-              ],
-              "type": "stack"
-            },
-            {
-              "description": "依預兆走位處理。",
-              "name": "Diamond Storm 風暴",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "the arena is frozen, Hraesvelgr will perform a line AoE across the middle similar to Hallowed Dive.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Frigid Dive 俯衝",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Hraesvelgr plants purple AoE circles on every player, who should spread out to avoid overlapping.；隨機點名玩家圓形 AoE，被點立即拉開分散站位 5m+。",
-              "name": "Holy Breath 神聖",
-              "tips": [
-                "全員散開"
-              ],
-              "type": "spread"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "真龍爪擊 → MT 大減傷",
+                "神聖之翼 → 站對側半場",
+                "神聖俯衝 + 5 步進圓 → 走縫",
+                "Akh Morn 死亡輪迴 → 全員集合治療分攤",
+                "神聖吐息 → 散開",
+                "鑽石風暴 → 冰面溜冰",
+                "寒霜俯衝 + 寒霜球紅圈 → 走縫"
+            ]
         }
-      ],
-      "name": "Hraesvelgr",
-      "nameEn": "Hraesvelgr",
-      "mnemonic": [
-        "Wyrmclaw",
-        "Hallowed Wings",
-        "Holy Storm"
-      ]
-    }
-  ]
+    ]
 }

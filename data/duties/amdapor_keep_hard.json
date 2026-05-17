@@ -1,171 +1,170 @@
 {
-  "id": "amdapor_keep_hard",
-  "name": "邪念妖地無限城古堡",
-  "nameEn": "Amdapor Keep (Hard)",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Anchag 昂查格：Void Pulse 虛無脈衝 + 召喚 add。",
-    "B2 Saint Adama Landama 聖人亞達瑪藍達瑪：Punishment 懲罰 + 圓 AoE。",
-    "B3 Diabolos 迪亞布洛斯：Dark Mist 暗霧 + 召喚妖異。"
-  ],
-  "notes": "HW 3.4 hard 版邪念妖地（Lv 60）。Boss 依序為 Anchag 昂查格、Saint Adama Landama 聖人亞達瑪藍達瑪、Diabolos 迪亞布洛斯。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "昂查格",
-      "nameEn": "Anchag",
-      "mnemonic": [
-        "Anchag 昂查格 機制：Void Pulse 虛無脈衝 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "amdapor_keep_hard",
+    "name": "邪念妖地無限城古堡",
+    "nameEn": "Amdapor Keep (Hard)",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 妖龍：場周圍 4 座石像鬼雕像不可攻擊（用來躲視線）+ 避免 boss 攻擊到雕像。",
+        "B1 點名連線玩家給虛弱 + 受傷增加 + 連續攻擊大傷 → 立刻躲到石像鬼後切斷連線。",
+        "B1 隨機衝鋒玩家直線 + 擊退 → 被點玩家貼近 boss（路徑上不要有隊友 + 減少 boss 移動）。",
+        "B2 含光美人：boss 隱身時無法攻擊。隱身時場上刷光球 → 攻擊光球獲『含光』buff → 接觸 boss 虛影解隱身。",
+        "B2 大範圍扇形 AoE 對範圍內混亂 → 跑到 boss 背後躲；平時不要離 boss 過遠。",
+        "B2 半血以下分身 → 本體 + 分身都會隱身 + 範圍 AoE → 必須注意站位。",
+        "B2 24% 以下刷 add → 其中 self-destruct 自暴自棄技能對全員連續攻擊 → 優先擊殺。",
+        "B3 邪念戰士：① 85% / 50% HP 全能牌讀條 → boss 雙盾（物理 + 魔法）+ 召喚連線 add + 不斷擴大圓 AoE。必須讀條期間秒掉 add（boss 圓會停擴）→ 全員站圓外躲 → 解雙盾。",
+        "B3 ② 中途出膿腫拘束隊友（仇恨列表出現 → 第一時間解救）。50% 全能牌同時出膿腫 → 先救隊友再殺連線小怪（血厚）。腐蝕塊拘束怪不可自救。",
+        "B3 ③ 無讀條丟小旋風 AoE → 圈內出現鐮刀持續傷 → 遠離。"
+    ],
+    "notes": "HW 3.1 副本 Hard 版（Lv 60，sync 60，ilvl 165，4 人 dungeon），位於黑衣森林南部林區無限城古堡。基於 ARR Amdapor Keep（normal）地點延伸的 HW Hard 版本（patch 3.1）。Boss 依序為 Aiatar 妖龍、Glassy Eye 含光美人、Diabolic Soldier 邪念戰士。劇情上『虛無界邪念再起』。",
+    "bosses": [
         {
-          "name": "B1",
-          "mechanics": [
-            {
-              "name": "Red Marker 紅標記",
-              "type": "other",
-              "description": "玩家頭上紅標 → 必須躲到石像後讓石像吸傷害，否則 tether 高 DoT 多數玩家會死。",
-              "tips": [
-                "看到紅標立刻躲石像後"
-              ]
-            },
-            {
-              "name": "場上四石像",
-              "type": "other",
-              "description": "石像吸傷害保護玩家。boss 衝鋒 telegraph 命中會破壞石像。",
-              "tips": [
+            "name": "妖龍",
+            "nameEn": "Aiatar",
+            "phases": [
                 {
-                  "text": "MT 把 boss 拉中央遠離石像",
-                  "role": "tank"
-                },
-                "ranged/healer 站兩石像之間"
-              ]
-            },
-            {
-              "name": "Rush Attack 衝鋒",
-              "type": "knockback",
-              "description": "對玩家衝鋒擊退長矩形 AoE，會打壞路徑上的石像。",
-              "tips": [
-                "被瞄者跑到 boss 附近避免擊退距離破壞石像"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "聖人亞達瑪藍達瑪",
-      "nameEn": "Saint Adama Landama",
-      "mnemonic": [
-        "Saint Adama Landama 聖人亞達瑪藍達瑪 機制：Punishment 懲罰 + 圓 AoE。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
-        {
-          "name": "B2",
-          "mechanics": [
-            {
-              "name": "Invisibility 隱身 + Luminescence Orb",
-              "type": "other",
-              "description": "Boss 隱身不可選 → 殺場上 Luminescence 球 → 站區域內拿 Irradiance buff → 跑到隱身 boss 位置放 AoE 現形 + 擊退。",
-              "tips": [
-                "每次隱身重複此循環"
-              ]
-            },
-            {
-              "name": "Bloodmoon Sacrifice adds 召怪",
-              "type": "other",
-              "description": "55% 第一波殭屍 adds，30% 第二波 + boss 分裂。",
-              "tips": [
-                {
-                  "text": "DPS 速殺",
-                  "role": "dps"
+                    "name": "主戰（4 石像鬼擋線）",
+                    "mechanics": [
+                        {
+                            "name": "場上 4 石像鬼雕像（擋視線）",
+                            "type": "mechanic",
+                            "description": "場周圍有 4 座石像鬼雕像 → 用來躲避 boss 技能（不可攻擊）。需避免 boss 攻擊命中雕像。",
+                            "tips": [
+                                {"text": "MT 拉 boss 不要朝雕像", "role": "tank"},
+                                {"text": "DPS 不要打雕像", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "點名連線（虛弱 + 受傷增加）",
+                            "type": "mechanic",
+                            "description": "boss 隨機點名連線玩家 → 給予 Weakened 虛弱 + Damage Up 受傷增加 debuff + 連續攻擊大傷。對策：被連線玩家立刻躲到 4 個石像鬼後切斷連線。",
+                            "tips": [
+                                {"text": "被連線 → 躲石像後", "role": "dps"},
+                                {"text": "Esuna 清虛弱", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Charge 衝鋒",
+                            "type": "aoe",
+                            "description": "對隨機 1 玩家衝鋒 → 直線路徑造成傷害 + 擊退。被點玩家最好貼近 boss → boss 移動距離短 + 路徑上沒有其他玩家。",
+                            "tips": [
+                                {"text": "被鎖玩家貼 boss", "role": "dps"},
+                                {"text": "其他玩家拉開直線", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "30% 分裂兩 boss",
-              "type": "other",
-              "description": "Boss 分裂兩隻同時隱身，需玩家分組各拿 Irradiance buff 各自現形。",
-              "tips": [
-                "事先指派分組"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "迪亞布洛斯",
-      "nameEn": "Diabolos",
-      "mnemonic": [
-        "Diabolos 迪亞布洛斯 機制：Dark Mist 暗霧 + 召喚妖異。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+            ],
+            "mnemonic": [
+                "4 石像鬼雕像（不可攻擊 + 不讓 boss 打）",
+                "連線點名 → 躲石像後切斷",
+                "衝鋒 → 被點貼 boss"
+            ]
+        },
         {
-          "name": "B3",
-          "mechanics": [
-            {
-              "name": "Wicked Jester 連繩小丑",
-              "type": "other",
-              "description": "場邊出現連繩 add，Ferdiad 詠唱中央圓 AoE 逐漸擴大，未殺 add = 全屏 wipe。Ferdiad 此時不普攻，全員打 add。",
-              "tips": [
+            "name": "含光美人",
+            "nameEn": "Glassy Eye",
+            "phases": [
                 {
-                  "text": "全力打 Wicked Jester adds",
-                  "role": "dps"
+                    "name": "P1 100%-50% HP（隱身 + 含光 buff）",
+                    "mechanics": [
+                        {
+                            "name": "隱身機制（含光 buff 解）",
+                            "type": "mechanic",
+                            "description": "boss 戰鬥中會隱身 → 無法攻擊。隱身時場上刷光球 → 玩家攻擊光球獲『含光』buff → 接觸 boss（隱身後仍可看到虛影）解隱身。",
+                            "tips": [
+                                {"text": "看光球 → 攻擊獲含光", "role": "dps"},
+                                {"text": "接觸虛影解隱身", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "大範圍扇形 AoE（混亂）",
+                            "type": "cone",
+                            "description": "boss 大範圍扇形 AoE 對範圍內混亂 debuff → 跑到 boss 背後躲避。平時不要離 boss 過遠（怕中招）。",
+                            "tips": [
+                                {"text": "看預兆跑 boss 背後", "role": "dps"},
+                                {"text": "Esuna 清混亂", "role": "healer"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "tank/healer 也加入打 adds",
-                  "role": "tank"
+                    "name": "P2 < 50% HP（分身）",
+                    "mechanics": [
+                        {
+                            "name": "分身（本體 + 分身都隱身 + 範圍 AoE）",
+                            "type": "mechanic",
+                            "description": "boss < 50% HP 分身。本體與分身都會隱身 + 釋放範圍 AoE → 必須注意站位（兩個都要應對）。",
+                            "tips": [
+                                {"text": "辨認本體與分身", "role": "tank"},
+                                {"text": "雙倍站位注意", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 < 24% HP（自暴自棄 add）",
+                    "mechanics": [
+                        {
+                            "name": "自暴自棄 add（必先殺）",
+                            "type": "add",
+                            "description": "boss < 24% HP 後刷出 add → 其中一種會釋放 Self-Destruct 自暴自棄 技能對全員連續攻擊 → 必須優先擊殺。",
+                            "tips": [{"text": "優先殺自爆 add", "role": "dps"}]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Suppuration 黏液困人",
-              "type": "other",
-              "description": "玩家被黏液 add 困住無法移動 + cleave 高傷。需隊友打掉 add 解救。被困玩家也可自打。",
-              "tips": [
-                "立刻打黏液救人"
-              ]
-            },
-            {
-              "name": "Blue Scythes 藍鐮刀",
-              "type": "aoe",
-              "description": "後半場上玩家頭頂出現旋轉藍鐮刀，無 telegraph 要躲。",
-              "tips": [
-                "看到立刻離開"
-              ]
-            },
-            {
-              "name": "Criss-cross AoE 交叉 AoE",
-              "type": "aoe",
-              "description": "場上多重交叉直線 AoE (類似 Haukke Manor (Hard) Manor Jester)。",
-              "tips": [
-                "走交叉空隙"
-              ]
-            },
-            {
-              "name": "終局組合：雙黏液 + 連繩",
-              "type": "other",
-              "description": "兩玩家被黏液困 (這次不能自救) + 一隻強連繩 add。需快速判斷先救人還是先殺連繩。",
-              "tips": [
-                "大多數情況優先殺連繩 (即使 AoE 滿場)，若 2 名 DPS 都被困則先救",
-                "可開 DPS LB"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "隱身 → 殺光球獲含光 → 接觸虛影解",
+                "大範圍前扇 + 混亂 → 跑 boss 背後",
+                "50% 分身 → 雙倍站位",
+                "24% 自暴自棄 add → 優先殺"
+            ]
+        },
+        {
+            "name": "邪念戰士",
+            "nameEn": "Diabolic Soldier",
+            "phases": [
+                {
+                    "name": "主戰（全能牌 + 膿腫 + 旋風）",
+                    "mechanics": [
+                        {
+                            "name": "全能牌（85% / 50% 雙盾 + 圓擴大）",
+                            "type": "mechanic",
+                            "description": "85% 與 50% HP 各 1 次：boss 讀條全能牌 → 自身物理 + 法系雙盾（同步條件下無法打破）+ 召喚連線小怪 + 自身腳下生成不斷擴大的圓 AoE 直至全屏。咏唱完畢 → 大量傷害 + 解除雙盾。對策：讀條期間迅速殺光連線 add（boss 圓會停止擴大）→ 全員站圓外躲。",
+                            "tips": [
+                                {"text": "DPS 必殺連線 add", "role": "dps"},
+                                {"text": "站圓外躲 AoE", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "膿腫拘束（隊友必救）",
+                            "type": "mechanic",
+                            "description": "中途出 Abscess 膿腫拘束隊友（仇恨列表出現後第一時間解救）。50% HP 第二次全能牌同時出膿腫 → 先救隊友再殺連線 add（add 血厚）。Corrosion 腐蝕塊拘束怪不可自救。",
+                            "tips": [
+                                {"text": "DPS 必殺膿腫救隊友", "role": "dps"},
+                                {"text": "腐蝕塊不可自救", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "小旋風 AoE + 鐮刀持續傷",
+                            "type": "aoe",
+                            "description": "無讀條丟小旋風 AoE → 圈內出現 Sickle 鐮刀持續傷害 → 遠離旋風圈。",
+                            "tips": [{"text": "遠離小旋風圈", "role": "dps"}]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "85%/50% 全能牌雙盾 → 必殺連線 add + 站圓外",
+                "膿腫拘束 → DPS 必救（腐蝕塊不可自救）",
+                "小旋風 AoE → 遠離（鐮刀持續傷）"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

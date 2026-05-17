@@ -1,186 +1,203 @@
 {
-  "id": "baelsars_wall",
-  "name": "堅牢鐵壁巴埃薩長城",
-  "nameEn": "Baelsar's Wall",
-  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-  "type": "dungeon",
-  "playerCount": 4,
-  "iLvlSync": null,
-  "jobLevelSync": 60,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Magitek Predator 帝國魔導獵獸：Magitek Cannon 魔導加農 + 直線 AoE。",
-    "B2 Magitek Death Claw 帝國魔導死爪：點名圓 + 抓取。",
-    "B3 Magitek Colossus 帝國魔導巨人：直線+圓 + 召喚 add。"
-  ],
-  "notes": "HW 3.5 帝國巴埃薩長城（Lv 60）。Boss 依序為 Magitek Predator 帝國魔導獵獸、Magitek Death Claw 帝國魔導死爪、Magitek Colossus 帝國魔導巨人。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "phases": [
+    "id": "baelsars_wall",
+    "name": "堅牢鐵壁巴埃薩長城",
+    "nameEn": "Baelsar's Wall",
+    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 60,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 魔導獵手：魔導爪 MT 死刑；2 魔導浮空裝甲支援型連線 2 DPS 用魔導鉤；魔導導彈點 2 DPS 紅標扣 50% HP；魔導激光對隨機方向直線。",
+        "B2 武裝重甲：運動體探知干擾器 全員 4s 慎行警告 debuff → 倒數結束時不能有任何動作（移動/施技），否則中傷 + 昏迷。1-2s 時停下。",
+        "B2 魔導加農炮 MT 無預兆單體；火箭炮全屏；擴散射線圓 AoE；請求支援大量魔導螳螂 add（速殺）；浮游炮射出 → 數秒後全場網格 AoE → 看空隙躲。",
+        "B2 慎行警告 + 擴散射線 + 網格 AoE 三技組合 → 提前移動 + 1-2s 停下後快速跑開（不能同時吃 2 技）。",
+        "B3 伊爾伯德：鈍劍 MT 單體；獅鷹之爪 MT 大傷；獅鷹之喙全屏；閃光粉 → 必須背對 boss 解，否則 5s 眩暈 + 25s 命中率降低。",
+        "B3 嗜血刃 boss 高速位移到場邊 → 超大範圍大傷 + 擊退（背後為安全區）→ 看 boss 瞬移立即跟走 boss 背後。後半段 2 次瞬移後才釋放。",
+        "B3 獅子首 → 場地四周 + 中央釋放 9 把獅鷹之刃 → 多段全屏海鳥沖 + 最後獅子首全屏 + 每把刃讀條溶解自身圓爆。",
+        "B3 大靴重踹 隨機 1 人擊退；鎖鏈固定點治療束縛 → 絞殺秒殺治療 → DPS 必須打掉鎖鏈解救！"
+    ],
+    "notes": "HW 3.5 主線副本（Lv 60，sync 60，4 人 dungeon），位於黑衣森林東部林區巴埃薩長城。劇情上玩家對抗帝國叛軍與獅鷹之心 Ilberd 伊爾伯德。Boss 依序為 Magitek Predator 魔導獵手、Armored Weapon 武裝重甲、Ilberd 伊爾伯德。HW 3.5 主線結尾 boss 戰，引發後續 SB 紅蓮解放者主線。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Targeted attack on Tank.；依預兆走位處理。",
-              "name": "Magitek Claw 爪",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Linear high-damage attack.；看圖示提前走位避開預兆範圍。",
-              "name": "Magitek Ray 魔導光線",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Targeted high-damage explosion on marked players.；依預兆走位處理。",
-              "name": "Magitek Missile 魔導飛彈",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "帝國魔導獵獸",
-      "nameEn": "Magitek Predator",
-      "mnemonic": [
-        "Magitek Predator 帝國魔導獵獸 機制：Magitek Cannon 魔導加農 + 直線 AoE。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Group-wide AoE that reduces HP by 50% of current.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Launcher 發射器",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Damages the player for any actions they take while the debuff is active, including movement.；依預兆走位處理。",
-              "name": "Dynamic Sensory Jammer 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Summoned Bits around room create a checkerboard AoE before disappearing.；場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-              "name": "Magitek Bit 魔導零件",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "aoe"
-            },
-            {
-              "description": "Summons many low-HP adds. Tank damage is significant due to quantity of adds.；依預兆走位處理。",
-              "name": "Distress Beacon 招式",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
-        }
-      ],
-      "name": "帝國魔導死爪",
-      "nameEn": "Magitek Death Claw",
-      "mnemonic": [
-        "Magitek Death Claw 帝國魔導死爪 機制：點名圓 + 抓取。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    },
-    {
-      "phases": [
-        {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "description": "Room-wide AoE attack.；全員預備減傷與大團補。",
-              "name": "Beak of the Griffin 招式",
-              "tips": [
+            "name": "魔導獵手",
+            "nameEn": "Magitek Predator",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰（魔導兵器）",
+                    "mechanics": [
+                        {
+                            "name": "魔導爪 Magitek Claw",
+                            "type": "tankbuster",
+                            "description": "讀條對 MT 單體大傷害。大減傷。",
+                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "魔導浮空裝甲支援型 x2",
+                            "type": "add",
+                            "description": "無讀條召喚 2 隻 add 各連線 1 個 DPS → 不斷使用 Magitek Hook 魔導鉤單體攻擊連線 DPS。DPS 切目標清。",
+                            "tips": [{"text": "DPS 清連線 add", "role": "dps"}]
+                        },
+                        {
+                            "name": "魔導導彈 Magitek Missile（紅標 50% HP）",
+                            "type": "spread",
+                            "description": "點名 2 DPS 紅標 → 發射炮彈固定扣 50% HP。被點玩家拉開避開疊。",
+                            "tips": [
+                                {"text": "被點拉場邊", "role": "dps"},
+                                {"text": "治療大補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "魔導激光 Magitek Laser",
+                            "type": "aoe",
+                            "description": "讀條對隨機 1 人方向發射直線可見範圍 AoE。看朝向走縫。",
+                            "tips": [{"text": "看朝向走縫", "role": "dps"}]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Players should turn away from the boss; otherwise, this attack will stun the player and reduce accuracy.；依預兆走位處理。",
-              "name": "Flash Powder 閃光粉",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Leaps to one side of the room and cleaves the room in front of him for high damage.；依預兆走位處理。",
-              "name": "Sanguine Blade 刃",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Multiple swords rain down around the arena, damaging to nearby players. After finishing the cast, the boss does a room-wide AoE, and the swords become；全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-              "name": "Lionshead 頭",
-              "tips": [
+            ],
+            "mnemonic": [
+                "魔導爪 → MT 大減傷",
+                "支援型 2 連線 DPS → 切目標清",
+                "魔導導彈紅標 → 50% HP 扣血",
+                "魔導激光直線 → 走縫"
+            ]
+        },
+        {
+            "name": "武裝重甲",
+            "nameEn": "Armored Weapon",
+            "phases": [
                 {
-                  "text": "減傷 + 補滿",
-                  "role": "healer"
+                    "name": "主戰（慎行警告連動）",
+                    "mechanics": [
+                        {
+                            "name": "運動體探知干擾器（慎行警告 4s debuff）",
+                            "type": "mechanic",
+                            "description": "讀條技能，點名所有人上 Caution 慎行警告 4 秒 debuff。倒數結束時不能有任何動作（移動 / 施技）否則中等傷害 + 短暫昏迷。建議 1-2 秒時停下。",
+                            "tips": [
+                                {"text": "倒數 1-2 秒時完全停下", "role": "tank"},
+                                {"text": "不要施技 / 移動", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "魔導加農炮 Magitek Cannon",
+                            "type": "tankbuster",
+                            "description": "無讀條對 MT 單體傷害。MT 減傷。",
+                            "tips": [{"text": "MT 減傷", "role": "tank"}]
+                        },
+                        {
+                            "name": "火箭炮 Rocket Launcher",
+                            "type": "raidwide",
+                            "description": "讀條全屏 AoE。治療團補。",
+                            "tips": [{"text": "團補", "role": "healer"}]
+                        },
+                        {
+                            "name": "擴散射線 Diffractive Ray",
+                            "type": "aoe",
+                            "description": "讀條釋放可見範圍圓 AoE。走位避。",
+                            "tips": [{"text": "看圓走出", "role": "dps"}]
+                        },
+                        {
+                            "name": "請求支援 + 魔導螳螂 add",
+                            "type": "add",
+                            "description": "讀條召喚大量 Magitek Mantis 魔導螳螂 add（HP 低）。MT 拉好群打。",
+                            "tips": [
+                                {"text": "MT AoE 拉穩", "role": "tank"},
+                                {"text": "DPS AoE 速清", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "浮游炮射出（網格 AoE）",
+                            "type": "aoe",
+                            "description": "讀條釋放大量浮游炮 + 數秒後全場網格狀 AoE 預兆。看空隙站。",
+                            "tips": [{"text": "看網格空隙站", "role": "dps"}]
+                        },
+                        {
+                            "name": "慎行 + 擴散射線 + 網格組合",
+                            "type": "mechanic",
+                            "description": "三技組合：boss 點 1 人小範圍 AoE（擴散射線）+ 慎行警告 debuff + 浮游炮網格 AoE 同時發動。對策：有慎行警告時保持移動 + 倒數 2 秒停下 → 基本會處於 AoE 邊緣 → debuff 消失後快速跑開。看浮游炮位置提前避網格。不要同時吃 2 技。",
+                            "tips": [
+                                {"text": "移動到網格空隙 + 2s 停下", "role": "tank"},
+                                {"text": "debuff 消失立刻跑離", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ],
-              "type": "raidwide"
-            },
-            {
-              "description": "Marks a player and pushes them back after the cast.；依預兆走位處理。",
-              "name": "Big Foot 足",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "Places the party's healer in restraints, preventing all action. Kill restraints to release the healer.；依預兆走位處理。",
-              "name": "Restraint Collar 約束項圈",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            },
-            {
-              "description": "High-damage attack on tank.；依預兆走位處理。",
-              "name": "Claw of the Griffin 爪",
-              "tips": [
-                "看 telegraph 移動"
-              ],
-              "type": "other"
-            }
-          ]
+            ],
+            "mnemonic": [
+                "慎行警告 4s → 1-2s 時完全停動",
+                "魔導加農炮 MT 單體",
+                "火箭炮全屏 → 團補",
+                "請求支援 → 螳螂 add 速清",
+                "浮游炮網格 AoE → 看空隙",
+                "三技組合 → 移動 + 2s 停 + 看網格"
+            ]
+        },
+        {
+            "name": "伊爾伯德",
+            "nameEn": "Ilberd",
+            "phases": [
+                {
+                    "name": "主戰（獅鷹之心終戰）",
+                    "mechanics": [
+                        {
+                            "name": "鈍劍 Blunt Sword / 獅鷹之爪 Griffin Claw / 獅鷹之喙 Griffin Beak",
+                            "type": "mechanic",
+                            "description": "鈍劍：無讀條 MT 單體；獅鷹之爪：讀條 MT 大傷單體；獅鷹之喙：讀條全屏。MT 連發減傷 + 治療連團補。",
+                            "tips": [
+                                {"text": "MT 連發減傷", "role": "tank"},
+                                {"text": "團補連發", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "閃光粉 Flash（背對解）",
+                            "type": "gaze",
+                            "description": "讀條技能，需要背對 boss 回避處理。否則 5s 眩暈 + 25s 命中率降低 debuff。",
+                            "tips": [
+                                {"text": "讀條 → 全員背對", "role": "tank"},
+                                {"text": "中招 → Esuna", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "嗜血刃 Bloodthirst（瞬移大範圍）",
+                            "type": "mechanic",
+                            "description": "讀條技能，boss 高速位移到場邊 → 釋放超大範圍大傷 AoE + 擊退。boss 身後為安全區。看 boss 瞬移立即跟隨 boss 走位躲到背後。戰鬥後半段 boss 瞬移 2 次後才釋放 → 持續確認 boss 位置。",
+                            "tips": [
+                                {"text": "看 boss 瞬移 → 跟到 boss 背後", "role": "dps"},
+                                {"text": "後半段 2 次瞬移後才放", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "獅子首 Lion's Head（9 把劍 + 多重 AoE）",
+                            "type": "mechanic",
+                            "description": "讀條技能，boss 在場地四周與中間釋放 9 把 Griffin Sword 獅鷹之刃。期間獅鷹之刃造成多段全屏 AoE Seabird Charge 海鳥沖 + 最後 boss 釋放全屏 AoE 獅子首。每把刃在一段時間後讀條 Dissolve 溶解 → 自身為中心圓爆。",
+                            "tips": [
+                                {"text": "避刃落點 + 溶解圓爆", "role": "dps"},
+                                {"text": "團補多段海鳥沖", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "大靴重踹 / 鎖鏈 + 絞殺（治療必救）",
+                            "type": "mechanic",
+                            "description": "大靴重踹：讀條點名隨機 1 人單體擊退。鎖鏈：讀條固定點名治療職業 → 拘束無法行動。隨後 boss 讀條絞殺秒殺被綁治療！DPS 必須打掉鎖鏈解救治療！",
+                            "tips": [
+                                {"text": "DPS 必殺鎖鏈解救治療", "role": "dps"},
+                                {"text": "治療被綁 → 等隊友救", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "鈍劍/獅鷹之爪/喙 → MT 連減 + 團補",
+                "閃光粉 → 全員背對解",
+                "嗜血刃瞬移 → 跟 boss 背後躲",
+                "獅子首 9 把劍 → 避刃 + 溶解圓",
+                "鎖鏈點治療 + 絞殺秒殺 → DPS 必殺鎖鏈"
+            ]
         }
-      ],
-      "name": "帝國魔導巨人",
-      "nameEn": "Magitek Colossus",
-      "mnemonic": [
-        "Magitek Colossus 帝國魔導巨人 機制：直線+圓 + 召喚 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
