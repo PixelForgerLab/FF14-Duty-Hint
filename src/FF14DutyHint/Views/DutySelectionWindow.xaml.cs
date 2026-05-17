@@ -94,8 +94,8 @@ public partial class DutySelectionWindow : Window
             .OrderBy(d => d.Expansion ?? string.Empty, StringComparer.Ordinal)
             .ThenBy(d => GetTypeSortOrder(d.Type))
             .ThenBy(d => d.JobLevelSync ?? 0)
-            .ThenBy(d => GetBaseName(d.NameEn ?? d.Name ?? string.Empty), StringComparer.OrdinalIgnoreCase)
             .ThenBy(d => GetDifficultyOrder(d.NameEn ?? d.Name ?? string.Empty))
+            .ThenBy(d => GetBaseName(d.NameEn ?? d.Name ?? string.Empty), StringComparer.OrdinalIgnoreCase)
             .ThenBy(d => d.NameEn ?? d.Name ?? string.Empty, StringComparer.OrdinalIgnoreCase)
             .ToList();
         DutyListBox.ItemsSource = filtered;
