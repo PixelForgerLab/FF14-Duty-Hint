@@ -1,122 +1,187 @@
 {
-  "id": "cinder_drift_extreme",
-  "name": "紅寶石武器殲殛戰",
-  "nameEn": "Cinder Drift (Extreme) - The Ruby Weapon",
-  "expansion": "5.x 漆黑反叛者 (Shadowbringers)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 80,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Ruby Weapon 紅寶石武器：強化版 Magitek + Crimson Cyclone + Cataclysm 大災變。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "ShB 5.2 紅寶石武器殲殛戰（Lv 80）。Boss 依序為 Ruby Weapon 紅寶石武器。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "紅寶石武器",
-      "nameEn": "Ruby Weapon",
-      "phases": [
+    "id": "cinder_drift_extreme",
+    "name": "紅寶石武器殲殛戰",
+    "nameEn": "Cinder Drift (Extreme) - The Ruby Weapon",
+    "expansion": "5.x 漆黑的反叛者 (Shadowbringers)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 80,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1 Ruby Weapon：Optimized Ultima = 全屏 + 多次循環。Magitek Bits = 多飛行 add 射直線 → 走位避線。",
+        "P1 Helioclaw（Flexiclaw mini-phase）= 3 圓 + 三線扇 → 兩輪。同時 Magitek Bits 也射 → bait Bits 後找 small 安全位。",
+        "P1 Stamp = MT tankbuster + Blunt Vulnerability → 必須 tank swap。",
+        "P1 Ravensclaw = 8 裂縫 + boss 腳下 + 裂縫末端圓 AoE（無 telegraph）→ 站 boss hitbox 邊 + 長裂縫上。",
+        "P1 Liquefaction（裂縫上安全）/ Undermine（裂縫不安全）+ Ruby Sphere（所有人圓標 3 連點 mine + Magic Vuln 疊）→ 預先指定位置放 mines（cardinal/intercardinal）。",
+        "P1 Ravensflight + Liquefaction（中央安全）= boss 場邊衝鋒多次 → 站中央避；後續『claw』標 + 『quicksand』icon 反轉（中央變不安全）→ 移到外緣。",
+        "P1 Ruby Dynamics（無預警甜甜圈）+ Homing Laser stack 2 標 = 全員集 boss hitbox + 雙 stack 分兩半接。",
+        "P1 Homing Laser + Cut & Run = 全員散開 4x4 + boss 穿場切兩半 → 8 分外緣兩半接 + 不重疊。Magitek Charge = 場邊東西 proximity → 進 boss hitbox。",
+        "P1 第二輪 Ravensclaw + 另一個 Liquefaction/Undermine（與第一次相反）→ Ruby Sphere 再次 → 8 分散放 mines。",
+        "P2 Nael 階段 checkpoint：場邊死亡牆。Meteor Project 倒數 Dalamud。Negative Personae = 2 Raven's Image + Orange/Blue 屬性 → 必須打『對應顏色相反』的 add（自己 orange 打 blue add，反之）。",
+        "P2 Greater Memory = 雙 add 增傷 + 釋 Iron Chariot 點下 / Lunar Dynamo 甜甜圈（被擊中擊退到死亡牆）→ 兩 add 拉開分別避招。",
+        "P2 Negative Affect = 兩個 Nael 頭連線最遠玩家 → 玩家拉撞 add 上 → 撞 add = 消除 Greater Memory + 殺頭。",
+        "P2 Raven's Claw 雙 T 5 hit + Change of Heart 顏色反轉（強制 tank swap + DPS 換 target）+ Negative Aura gaze → 看別處。",
+        "P2 第二 Dalamud + Meteor Mine（1-8 玩家落 comet）+ Magitek Meteor 大流星 + Screech 擊退 + Meteor Burst（依序爆）→ 用第 8 comet 在 boss 旁 + 全員集 hitbox + 預判擊退方向。"
+    ],
+    "notes": "ShB 5.2 trial Ex（Lv 80，sync 80，ilvl 485，8 人 trial，時限 60 分），位於 Cinder Drift Ex。為紅寶石武器極限版。掉落 ilvl 500 武器 + Ruby Weapon Card。Ruby Sphere mine 放置 + Negative Personae 顏色配對 + Magitek Meteor 流星躲避為核心。",
+    "bosses": [
         {
-          "name": "Ruby Weapon EX 主戰",
-          "mechanics": [
-            {
-              "name": "Magitek Ray 魔導雷射 (3 連)",
-              "type": "aoe",
-              "description": "3 連直線 AoE；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "預判 3 連位置"
-              ]
-            },
-            {
-              "name": "Optimised Sagittarius Arrow 4 連箭",
-              "type": "aoe",
-              "description": "4 連點名直線 → 4 DPS 各引導；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
+            "name": "紅寶石武器",
+            "nameEn": "The Ruby Weapon",
+            "phases": [
                 {
-                  "text": "4 DPS 分四方向場邊",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Outburst 爆發",
-              "type": "raidwide",
-              "description": "全屏 + Vuln Up 1 層；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1 Ruby Weapon",
+                    "mechanics": [
+                        {
+                            "name": "Optimized Ultima 多次全屏",
+                            "type": "raidwide",
+                            "description": "全屏 + 多次循環 → 預備連續團補。",
+                            "tips": [
+                                {"text": "連續團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Magitek Bits 機械分身（直線）",
+                            "type": "aoe",
+                            "description": "多飛行 add 射直線 AoE → 走位避線。整場持續存在。",
+                            "tips": [
+                                {"text": "看 Bits 走位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Helioclaw 日爪（兩輪 + Bits 重疊）",
+                            "type": "aoe",
+                            "description": "3 圓 + 三線扇 兩輪 → 同時 Bits 射線 → bait Bits 後找 small 安全位。",
+                            "tips": [
+                                {"text": "bait Bits + 找小安全位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Stamp（必 tank swap）",
+                            "type": "tankbuster",
+                            "description": "MT tankbuster + Blunt Vulnerability → 必須 tank swap。",
+                            "tips": [
+                                {"text": "tank swap", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ravensclaw 鴉爪（8 裂縫）",
+                            "type": "aoe",
+                            "description": "8 裂縫 + boss 腳下 + 裂縫末端圓 AoE（無 telegraph）→ 站 boss hitbox 邊 + 長裂縫上。",
+                            "tips": [
+                                {"text": "站 boss hitbox 邊 + 長裂縫上", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Liquefaction / Undermine + Ruby Sphere（mine 放置）",
+                            "type": "mechanic",
+                            "description": "Liquefaction = 裂縫上安全；Undermine = 裂縫不安全。+ Ruby Sphere（所有人圓標 3 連點 mine + Magic Vuln 疊）→ 預先指定位置放 mines（cardinal/intercardinal）。",
+                            "tips": [
+                                {"text": "Liquefaction 站裂縫 / Undermine 站縫間", "role": "dps"},
+                                {"text": "8 點放 mines 不互疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ravensflight + Liquefaction（中央安全）",
+                            "type": "aoe",
+                            "description": "boss 場邊衝鋒多次 → 站中央避；後續『claw』+ 『quicksand』icon 反轉中央 → 移到外緣。",
+                            "tips": [
+                                {"text": "先中央 → 看 icon 移外緣", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ruby Dynamics + Homing Laser stack",
+                            "type": "stack",
+                            "description": "無預警甜甜圈 + 2 stack 標 → 全員集 boss hitbox + 雙 stack 分兩半接。",
+                            "tips": [
+                                {"text": "貼 boss + 雙 stack 分兩半", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Homing Laser + Cut & Run + Magitek Charge",
+                            "type": "mechanic",
+                            "description": "Cut & Run = boss 穿場切兩半。Homing Laser = 全員圓 AoE → 8 分外緣兩半接 + 不重疊。Magitek Charge = 場邊東西 proximity → 進 boss hitbox。",
+                            "tips": [
+                                {"text": "外緣 4x4 + 散位", "role": "dps"},
+                                {"text": "Charge 進 hitbox", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "第二輪 Ravensclaw + 反向 Liquefaction/Undermine",
+                            "type": "mechanic",
+                            "description": "第二輪 Ravensclaw 後接另一種 Liquefaction/Undermine + Ruby Sphere → 再次 8 點分散放 mines。",
+                            "tips": [
+                                {"text": "預判反向 + 8 點分散", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P2 Nael（checkpoint）",
+                    "mechanics": [
+                        {
+                            "name": "場邊死亡牆 + Meteor Project",
+                            "type": "mechanic",
+                            "description": "場邊牆即死 + Dalamud 倒數 → 多波 Dalamud 全屏。",
+                            "tips": [
+                                {"text": "勿觸場邊 + 大團補", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Negative Personae（Orange/Blue 顏色）",
+                            "type": "add",
+                            "description": "2 Raven's Image add + Orange/Blue 屬性 → 玩家也帶屬性 → 必須打『相反顏色』的 add。同色不可傷害。",
+                            "tips": [
+                                {"text": "看自身色 → 打相反色 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Greater Memory + Iron Chariot/Lunar Dynamo",
+                            "type": "mechanic",
+                            "description": "雙 add 增傷 + 釋 Iron Chariot 點下 / Lunar Dynamo 甜甜圈 → 兩 add 拉開分別避招（被擊中擊退到死亡牆）。",
+                            "tips": [
+                                {"text": "兩 add 拉開 + 看招避", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Negative Affect 浮頭連線",
+                            "type": "mechanic",
+                            "description": "兩 Nael 頭連線最遠玩家 → 撞 add 消除 Greater Memory 增傷 + 殺頭。",
+                            "tips": [
+                                {"text": "連線玩家撞 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Raven's Claw + Change of Heart + Negative Aura",
+                            "type": "tankbuster",
+                            "description": "雙 T 5 hit tankbuster + Change of Heart 顏色反轉（強制 tank swap + DPS 換 target）+ Negative Aura gaze → 看別處。",
+                            "tips": [
+                                {"text": "tank swap + 視線別處", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Mine + Magitek Meteor + Screech",
+                            "type": "mechanic",
+                            "description": "1-8 玩家依序落 comet → 第 1-7 站外緣放 + 第 8 站 boss 旁。Magitek Meteor 大流星落地 → Screech 擊退 → 用第 8 comet 在 boss 旁 + 全員集 hitbox + 預判擊退方向。Meteor Burst 依序爆。",
+                            "tips": [
+                                {"text": "1-7 外緣 / 8 boss 旁", "role": "tank"},
+                                {"text": "全員 hitbox + 預擊退", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Optimized Bladedance 劍舞",
-              "type": "tankbuster",
-              "description": "MT 死刑 + 後續扇形 cleave；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷 + 朝外",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Air Shot 環形擊退",
-              "type": "knockback",
-              "description": "環形擊退 AoE；提前Arm's Length或Surecast抗擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length"
-              ]
-            },
-            {
-              "name": "Big Boom 大爆炸",
-              "type": "aoe",
-              "description": "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈位置"
-              ]
-            },
-            {
-              "name": "Tactical Pods 4 connection adds 招式",
-              "type": "add",
-              "description": "4 連線 add → 連線打；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS 各打連線目標",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Magitek Spread 魔導散射",
-              "type": "spread",
-              "description": "全員分散 AoE；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "散開"
-              ]
-            },
-            {
-              "name": "Burning Battery enrage 招式",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Helioclaw bait Bits 後找小安全位",
+                "P1 Stamp 必 tank swap (Blunt Vuln)",
+                "P1 Liquefaction 站裂縫 / Undermine 站縫間 + Ruby Sphere 8 點分散",
+                "P1 Cut & Run 外緣 4x4 / Magitek Charge 進 hitbox",
+                "P2 Negative Personae 看自身色打相反色 add",
+                "P2 Negative Affect 連線玩家撞 add 消增傷",
+                "P2 Meteor Mine 1-7 外緣 + 8 boss 旁 + Screech 預擊退"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Ruby Weapon 紅寶石武器 機制：強化版 Magitek + Crimson Cyclone + Cataclysm 大災變。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
