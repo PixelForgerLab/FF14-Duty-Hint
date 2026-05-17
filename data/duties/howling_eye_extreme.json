@@ -1,195 +1,237 @@
 {
-    "id": "howling_eye_extreme",
-    "name": "風颶之眼 (殲殛戰) - 迦樓羅",
-    "nameEn": "The Howling Eye (Extreme) - Garuda",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）保留石柱：寒風之歌 / 大氣爆發 沒石柱 = 團滅。",
-        "2）第一次羽毛：1 柔羽 + 6 剛羽 → DPS 先速殺柔羽避免全員睡眠。",
-        "3）美翼 + 妙翅：彼此連線疊受傷減輕，分開放越遠層數越低；妙翅點名圓 AoE。",
-        "4）第二次羽毛：1 刺羽 + 6 剛羽 → 殺刺羽留高氣壓區域，站綠圈擋寒風之嘯。",
-        "5）颱風眼：5 個綠色提示，踩入會被擊退（注意不要被吹下場外）。",
-        "6）第三次循環：寒風之嘯 ↔ 大氣爆發 直到狂暴；保住高氣壓區域。",
-        "7）Enrage：大氣爆發強制秒殺，速殺 boss。"
-    ],
-    "notes": "ARR 2.0 蠻神 Extreme - 迦樓羅殲殛戰 (Lv 50, ilvl 90)。Garuda Extreme 為早期 ARR EX 之一；最關鍵為石柱保護 + 羽毛優先序 + 高氣壓區域。",
-    "bosses": [
-        {
-            "name": "迦樓羅",
-            "nameEn": "Garuda",
-            "mnemonic": [
-                "石柱不能全倒 = 一根剩 = enrage",
-                "羽毛分兩次：柔羽（避睡眠）/ 刺羽（留高氣壓）",
-                "美翼妙翅連線 → 拉開",
-                "颱風眼 5 圈 → 站圈外避擊退"
-            ],
-            "phases": [
-                {
-                    "name": "P1 - 主戰",
-                    "mechanics": [
-                        {
-                            "name": "Mistral Song 螺旋氣流",
-                            "type": "cone",
-                            "description": "對 1 仇正面扇形 AoE，讀條技能，無範圍提示，附眩暈；可被回避（看 boss 朝向走後方）。",
-                            "tips": [
-                                { "text": "MT 朝場邊 boss 不動 = 全員只需閃側", "role": "tank" },
-                                "近戰提前往側後移動"
-                            ]
-                        },
-                        {
-                            "name": "Downburst 下行突風",
-                            "type": "tankbuster",
-                            "description": "無讀條，對 1 仇方向扇形範圍攻擊，無法回避；MT 開減傷接 buster。",
-                            "tips": [
-                                { "text": "MT 自動開減傷", "role": "tank" },
-                                { "text": "面外避免噴隊伍", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Feather Rain 飛翎雨",
-                            "type": "aoe",
-                            "description": "地面隨機生成小型圓形 AoE，被擊中疊裂傷 debuff（持續傷害）。",
-                            "tips": [
-                                "看圈即時移動",
-                                { "text": "補裂傷掉血快需穩補", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Wicked Wheel 寒風之歌",
-                            "type": "raidwide",
-                            "description": "可被石柱阻擋的全屏 AoE；石柱數量決定可承受性。",
-                            "tips": [
-                                "保護所有 4 根石柱完整",
-                                { "text": "Reprisal / Feint / Addle 全開", "role": "tank" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 - 第 1 次羽毛 (柔羽 + 6 剛羽)",
-                    "mechanics": [
-                        {
-                            "name": "Razor Plume 柔羽 (sleep)",
-                            "type": "add",
-                            "description": "1 根柔羽；若未及時擊殺會發動熱流，為全員附加睡眠 → 等同團滅。",
-                            "tips": [
-                                { "text": "DPS 全員切柔羽優先秒殺", "role": "dps" },
-                                { "text": "補 Esuna 醒一人也救不了", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Spiny Plume 剛羽",
-                            "type": "aoe",
-                            "description": "6 根剛羽；存在一定時間後產生大範圍圓形 AoE「羽槍」；柔羽倒後再清剛羽。",
-                            "tips": [
-                                "柔羽倒 → 範圍打 6 剛羽",
-                                "閃 AoE 圈"
-                            ]
-                        },
-                        {
-                            "name": "Suparna + Chirada 美翼 + 妙翅",
-                            "type": "add",
-                            "description": "Boss 召喚美翼與妙翅；兩者彼此連線疊受傷減輕，距離越遠層數越低。妙翅會點名 1 人釋放需分攤的圓形 AoE「中高壓」。",
-                            "tips": [
-                                { "text": "兩個 T 各拉一邊拉開距離降層數", "role": "tank" },
-                                { "text": "中高壓被點 → 全員集合分攤", "role": "dps" },
-                                "美翼與 boss 同步釋放技能"
-                            ]
-                        },
-                        {
-                            "name": "Wicked Wheel 邪輪旋風",
-                            "type": "aoe",
-                            "description": "Boss 周身無讀條圓形 AoE；近戰要立刻拉開。",
-                            "tips": [
-                                "見 boss 動作立即拉開",
-                                "與 Slipstream 同時出現要走位"
-                            ]
-                        },
-                        {
-                            "name": "Slipstream 烈風刃",
-                            "type": "aoe",
-                            "description": "讀條技能，對除 1 仇外的目標釋放可回避的圓形 AoE。",
-                            "tips": [
-                                "看圈走出 → 不要黏",
-                                "與美翼同步技能要注意兩個方向"
-                            ]
-                        },
-                        {
-                            "name": "Aerial Blast 大氣爆發",
-                            "type": "raidwide",
-                            "description": "全體 AoE，傷害隨石柱數量減少而增加；剩 1 根或無石柱 → 強制團滅。",
-                            "tips": [
-                                "至少要留 2 根石柱才能活",
-                                { "text": "補大團補 + 大盾", "role": "healer" }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 - 第 2 次羽毛 (刺羽 + 6 剛羽)",
-                    "mechanics": [
-                        {
-                            "name": "Prickly Plume 刺羽",
-                            "type": "add",
-                            "description": "1 根刺羽；普通攻擊（氣旋）會為目標疊一層低氣壓 debuff；釋放無讀條圓形 AoE「烈風刃」。被擊殺後留下綠色高氣壓區域。",
-                            "tips": [
-                                { "text": "MT 拉刺羽到場邊", "role": "tank" },
-                                { "text": "DPS 殺刺羽 → 留高氣壓區域至重要", "role": "dps" }
-                            ]
-                        },
-                        {
-                            "name": "Updraft 高氣壓 (站位)",
-                            "type": "mechanic",
-                            "description": "刺羽死後留下綠色高氣壓區域；站在其中可大幅降低寒風之嘯傷害。",
-                            "tips": [
-                                "寒風之嘯前全員擠入高氣壓圈",
-                                { "text": "確認所有人都進入再讓 boss 放", "role": "tank" }
-                            ]
-                        },
-                        {
-                            "name": "Tropical Wind 寒風之嘯",
-                            "type": "raidwide",
-                            "description": "全體高傷害 AoE；在高氣壓區域內可極大降低傷害。",
-                            "tips": [
-                                "離開高氣壓 = 死",
-                                { "text": "全員減傷 + 補大盾", "role": "healer" }
-                            ]
-                        },
-                        {
-                            "name": "Eye of the Storm 颱風眼",
-                            "type": "aoe",
-                            "description": "場地出現 5 個綠色範圍提示，稍後造成傷害；踩入會受到傷害並被大幅度擊退（可能擊退至場外）。",
-                            "tips": [
-                                "看綠色預警立即移到非綠區",
-                                "擊退方向背場外的人立即抗擊退"
-                            ]
-                        },
-                        {
-                            "name": "Aerial Blast 大氣爆發 (循環)",
-                            "type": "raidwide",
-                            "description": "釋放完寒風之嘯後 boss 再次召喚美翼 + 妙翅 + 1 根刺羽；隨後在寒風之嘯 ↔ 大氣爆發 之間循環直到狂暴。",
-                            "tips": [
-                                "高氣壓區域要持續維持",
-                                "循環中保持輸出爆發"
-                            ]
-                        },
-                        {
-                            "name": "Aerial Blast enrage 大氣爆發 (狂暴)",
-                            "type": "raidwide",
-                            "description": "狂暴技能，強制秒殺所有玩家；P3 內必須擊殺。",
-                            "tips": [
-                                "DPS check：高氣壓 + 神祕陣推輸出"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "id":  "howling_eye_extreme",
+    "name":  "真 迦樓羅殲殛戰",
+    "nameEn":  "The Howling Eye (Extreme) - Garuda",
+    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type":  "trial",
+    "playerCount":  8,
+    "iLvlSync":  null,
+    "jobLevelSync":  50,
+    "highEnd":  true,
+    "quality":  "excellent",
+    "mnemonic":  [
+                     "1）保留石柱：寒風之歌 / 大氣爆發 沒石柱 = 團滅。",
+                     "2）第一次羽毛：1 柔羽 + 6 剛羽 → DPS 先速殺柔羽避免全員睡眠。",
+                     "3）美翼 + 妙翅：彼此連線疊受傷減輕，分開放越遠層數越低；妙翅點名圓 AoE。",
+                     "4）第二次羽毛：1 刺羽 + 6 剛羽 → 殺刺羽留高氣壓區域，站綠圈擋寒風之嘯。",
+                     "5）颱風眼：5 個綠色提示，踩入會被擊退（注意不要被吹下場外）。",
+                     "6）第三次循環：寒風之嘯 ↔ 大氣爆發 直到狂暴；保住高氣壓區域。",
+                     "7）Enrage：大氣爆發強制秒殺，速殺 boss。"
+                 ],
+    "notes":  "ARR 2.0 蠻神 Extreme - 迦樓羅殲殛戰 (Lv 50, ilvl 90)。Garuda Extreme 為早期 ARR EX 之一；最關鍵為石柱保護 + 羽毛優先序 + 高氣壓區域。",
+    "bosses":  [
+                   {
+                       "name":  "迦樓羅",
+                       "nameEn":  "Garuda",
+                       "mnemonic":  [
+                                        "石柱不能全倒 = 一根剩 = enrage",
+                                        "羽毛分兩次：柔羽（避睡眠）/ 刺羽（留高氣壓）",
+                                        "美翼妙翅連線 → 拉開",
+                                        "颱風眼 5 圈 → 站圈外避擊退"
+                                    ],
+                       "phases":  [
+                                      {
+                                          "name":  "P1 - 主戰",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Mistral Song 螺旋氣流",
+                                                                "type":  "cone",
+                                                                "description":  "對 1 仇正面扇形 AoE，讀條技能，無範圍提示，附眩暈；可被回避（看 boss 朝向走後方）。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 朝場邊 boss 不動 = 全員只需閃側",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             "近戰提前往側後移動"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Downburst 下行突風",
+                                                                "type":  "tankbuster",
+                                                                "description":  "無讀條，對 1 仇方向扇形範圍攻擊，無法回避；MT 開減傷接 buster。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 自動開減傷",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "面外避免噴隊伍",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Feather Rain 飛翎雨",
+                                                                "type":  "aoe",
+                                                                "description":  "地面隨機生成小型圓形 AoE，被擊中疊裂傷 debuff（持續傷害）。",
+                                                                "tips":  [
+                                                                             "看圈即時移動",
+                                                                             {
+                                                                                 "text":  "補裂傷掉血快需穩補",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wicked Wheel 寒風之歌",
+                                                                "type":  "raidwide",
+                                                                "description":  "可被石柱阻擋的全屏 AoE；石柱數量決定可承受性。",
+                                                                "tips":  [
+                                                                             "保護所有 4 根石柱完整",
+                                                                             {
+                                                                                 "text":  "Reprisal / Feint / Addle 全開",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P2 - 第 1 次羽毛 (柔羽 + 6 剛羽)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Razor Plume 柔羽 (sleep)",
+                                                                "type":  "add",
+                                                                "description":  "1 根柔羽；若未及時擊殺會發動熱流，為全員附加睡眠 → 等同團滅。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "DPS 全員切柔羽優先秒殺",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "補 Esuna 醒一人也救不了",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Spiny Plume 剛羽",
+                                                                "type":  "aoe",
+                                                                "description":  "6 根剛羽；存在一定時間後產生大範圍圓形 AoE「羽槍」；柔羽倒後再清剛羽。",
+                                                                "tips":  [
+                                                                             "柔羽倒 → 範圍打 6 剛羽",
+                                                                             "閃 AoE 圈"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Suparna + Chirada 美翼 + 妙翅",
+                                                                "type":  "add",
+                                                                "description":  "Boss 召喚美翼與妙翅；兩者彼此連線疊受傷減輕，距離越遠層數越低。妙翅會點名 1 人釋放需分攤的圓形 AoE「中高壓」。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "兩個 T 各拉一邊拉開距離降層數",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "中高壓被點 → 全員集合分攤",
+                                                                                 "role":  "dps"
+                                                                             },
+                                                                             "美翼與 boss 同步釋放技能"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Wicked Wheel 邪輪旋風",
+                                                                "type":  "aoe",
+                                                                "description":  "Boss 周身無讀條圓形 AoE；近戰要立刻拉開。",
+                                                                "tips":  [
+                                                                             "見 boss 動作立即拉開",
+                                                                             "與 Slipstream 同時出現要走位"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Slipstream 烈風刃",
+                                                                "type":  "aoe",
+                                                                "description":  "讀條技能，對除 1 仇外的目標釋放可回避的圓形 AoE。",
+                                                                "tips":  [
+                                                                             "看圈走出 → 不要黏",
+                                                                             "與美翼同步技能要注意兩個方向"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aerial Blast 大氣爆發",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體 AoE，傷害隨石柱數量減少而增加；剩 1 根或無石柱 → 強制團滅。",
+                                                                "tips":  [
+                                                                             "至少要留 2 根石柱才能活",
+                                                                             {
+                                                                                 "text":  "補大團補 + 大盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            }
+                                                        ]
+                                      },
+                                      {
+                                          "name":  "P3 - 第 2 次羽毛 (刺羽 + 6 剛羽)",
+                                          "mechanics":  [
+                                                            {
+                                                                "name":  "Prickly Plume 刺羽",
+                                                                "type":  "add",
+                                                                "description":  "1 根刺羽；普通攻擊（氣旋）會為目標疊一層低氣壓 debuff；釋放無讀條圓形 AoE「烈風刃」。被擊殺後留下綠色高氣壓區域。",
+                                                                "tips":  [
+                                                                             {
+                                                                                 "text":  "MT 拉刺羽到場邊",
+                                                                                 "role":  "tank"
+                                                                             },
+                                                                             {
+                                                                                 "text":  "DPS 殺刺羽 → 留高氣壓區域至重要",
+                                                                                 "role":  "dps"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Updraft 高氣壓 (站位)",
+                                                                "type":  "mechanic",
+                                                                "description":  "刺羽死後留下綠色高氣壓區域；站在其中可大幅降低寒風之嘯傷害。",
+                                                                "tips":  [
+                                                                             "寒風之嘯前全員擠入高氣壓圈",
+                                                                             {
+                                                                                 "text":  "確認所有人都進入再讓 boss 放",
+                                                                                 "role":  "tank"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Tropical Wind 寒風之嘯",
+                                                                "type":  "raidwide",
+                                                                "description":  "全體高傷害 AoE；在高氣壓區域內可極大降低傷害。",
+                                                                "tips":  [
+                                                                             "離開高氣壓 = 死",
+                                                                             {
+                                                                                 "text":  "全員減傷 + 補大盾",
+                                                                                 "role":  "healer"
+                                                                             }
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Eye of the Storm 颱風眼",
+                                                                "type":  "aoe",
+                                                                "description":  "場地出現 5 個綠色範圍提示，稍後造成傷害；踩入會受到傷害並被大幅度擊退（可能擊退至場外）。",
+                                                                "tips":  [
+                                                                             "看綠色預警立即移到非綠區",
+                                                                             "擊退方向背場外的人立即抗擊退"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aerial Blast 大氣爆發 (循環)",
+                                                                "type":  "raidwide",
+                                                                "description":  "釋放完寒風之嘯後 boss 再次召喚美翼 + 妙翅 + 1 根刺羽；隨後在寒風之嘯 ↔ 大氣爆發 之間循環直到狂暴。",
+                                                                "tips":  [
+                                                                             "高氣壓區域要持續維持",
+                                                                             "循環中保持輸出爆發"
+                                                                         ]
+                                                            },
+                                                            {
+                                                                "name":  "Aerial Blast enrage 大氣爆發 (狂暴)",
+                                                                "type":  "raidwide",
+                                                                "description":  "狂暴技能，強制秒殺所有玩家；P3 內必須擊殺。",
+                                                                "tips":  [
+                                                                             "DPS check：高氣壓 + 神祕陣推輸出"
+                                                                         ]
+                                                            }
+                                                        ]
+                                      }
+                                  ]
+                   }
+               ]
 }
