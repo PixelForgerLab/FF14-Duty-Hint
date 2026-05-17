@@ -1,127 +1,80 @@
 {
-  "id": "binding_coil_of_bahamut_-_turn_4",
-  "name": "巴哈姆特大迷宮 邂逅之章4",
-  "nameEn": "The Binding Coil of Bahamut - Turn 4",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "巴哈姆特大迷宮 邂逅之章4：純多波 add 戰，6 波 add 連續刷出。1 分鐘內未全清下波會強制刷新。",
-    "add 種類：Aragu Clockwork Worm 亞拉戈發條蟲（吸血普攻）；Aragu Clockwork Soldier 亞拉戈發條士兵（對物理障壁）；Aragu Clockwork Knight 亞拉戈發條騎士（對魔法障壁 + 對射 buff）；Fear Armor 恐慌裝甲（前扇 + 吸收蟲增傷）；Turnabout 轉盤堡（毒瘡 + 20% 百分比掉血）。",
-    "第一波：6 隻發條蟲；第二波：2 士兵 + 2 騎士；第三波：1 恐懼裝甲 + 4 蟲；第四波：2 轉盤堡 + 4 蟲；第五波：1 恐懼裝甲 + 1 士兵 + 1 騎士；第六波：1 恐懼裝甲 + 1 士兵 + 1 騎士 + 1 轉盤堡 + 2 蟲（最終）。",
-    "士兵帶『對物理障壁』buff（受一定物理傷後 buff 消失一段時間）→ 法系打；騎士帶『對魔法障壁』+『對射』→ 近戰打。",
-    "恐慌裝甲接觸發條蟲會吸收 + Damage Up → MT 拉裝甲遠離蟲。",
-    "轉盤堡 Gravity Crush 重力擊穿 20% 掉血 → 治療注意。Pus 毒瘡 → Esuna 清。",
-    "軟狂暴 Emergency Override 緊急超馳控制：進本後 6 分鐘開始全屏 AoE → 必須 6 分鐘內清完所有 6 波。"
-  ],
-  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰邂逅之章 4（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。本副本純粹是 6 波 add 連續刷出的戰鬥，沒有單一 boss。每波 add 機制不同，需要協同分坦與集火順序。6 分鐘軟狂暴。",
-  "bosses": [
-    {
-      "name": "六波 add 戰",
-      "nameEn": "Multi-wave Adds",
-      "phases": [
+    "id": "binding_coil_of_bahamut_-_turn_4",
+    "name": "巴哈姆特大迷宮 邂逅之章4",
+    "nameEn": "The Binding Coil of Bahamut - Turn 4",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Gauntlet 戰：6 階段 Clockwork Brigade，無 boss → 玩家觸發終端機開戰。",
+        "P1 Bugs（半圓刷）= 吸血 add → 開減傷 + 集合 AoE 速殺。",
+        "P2 雙 Knight + 雙 Soldier：Knight 反射魔法 → 只物理打；Soldier 有 stoneskin 抗物理 → 必須先打破 stoneskin。最佳配置 2 物 2 魔分拆 DPS。",
+        "P3 Dreadnought #1（PLD 主拉，最佳）：旁邊刷 bugs 被 Dreadnought 吃掉會增傷 4x → DPS+H 站對牆角不要被吃 → 治療滿補 + 速殺。",
+        "P4 Bugs + Rooks：Bard 拉 1 隻 Rook 風箏 + OT 接另 Rook + 其他 add。Rook 釋 POX 前扇無預警（最大 HP -1k）→ 朝牆避團。所有 add 必須清光。",
+        "P5 Dreadnought + Knight + Soldier：MT 北角 Dreadnought + OT 對側 Knight+Soldier → DPS 同 P2 分打 + 順便剃 Dreadnought。",
+        "P6（最難）：第二 Dreadnought + 2 bugs + Soldier + Knight + Rook。Bard 風箏 Rook（指向場外）+ MT 接 2 Dreadnought（invul + 多重減傷）+ OT 接其他 add。",
+        "P6 處理順序：Rook → 弱 Dreadnought（P5 殘血）→ Soldier 魔法 / Knight 物理 → 弱 Dreadnought 死後吃 bugs 餵滿血 Dreadnought（避免它吃增傷）→ 集火滿血 Dreadnought。",
+        "P6 後期：場地全屏每 4s 1200-1500 傷 → 連續治療。所有 add 清光後集火最終 Dreadnought 爆發。"
+    ],
+    "notes": "ARR 2.0 BCoB 第 4 章（Lv 50，sync 50，echo 30，時限 90 分），位於 Ragnarok 神艦深處。Gauntlet 戰 - 無 boss + 6 階段 Clockwork Brigade。MT 建議 PLD（防禦較好）。圓形場地常被用於練習其他高難副本機制（在 boss 啟動前）。掉落 Allagan Aetherstone + 90 IL 裝備箱。",
+    "bosses": [
         {
-          "name": "主戰（6 波 add 連續）",
-          "mechanics": [
-            {
-              "name": "波 1：6 隻 Aragu Clockwork Worm 亞拉戈發條蟲",
-              "type": "add",
-              "description": "6 隻發條蟲，普攻帶 Vampiric 吸血效果。全員 AoE 速清。",
-              "tips": [
+            "name": "時鐘軍團",
+            "nameEn": "Clockwork Brigade",
+            "phases": [
                 {
-                  "text": "全員 AoE 速清",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "波 2：2 士兵 + 2 騎士（屏障機制）",
-              "type": "add",
-              "description": "Aragu Clockwork Soldier 亞拉戈發條士兵：對物理障壁（受物理傷一定量後消失一段時間）→ 法系打。Aragu Clockwork Knight 亞拉戈發條騎士：對魔法障壁 + 對射 buff（防遠程） → 近戰打。電磁學擊退 + 旋轉揮打圓 AoE。",
-              "tips": [
-                {
-                  "text": "法系打士兵 / 近戰打騎士",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "波 3：1 恐慌裝甲 + 4 發條蟲",
-              "type": "add",
-              "description": "Fear Armor 恐慌裝甲：Sweep 猛掃前扇順劈。接觸發條蟲 → 吸收 + Self-Empowerment 自我強化獲 Damage Up。MT 拉裝甲遠離蟲。",
-              "tips": [
-                {
-                  "text": "MT 拉裝甲遠離蟲",
-                  "role": "tank"
+                    "name": "P1 Bugs",
+                    "mechanics": [
+                        {"name": "Bugs 吸血", "type": "add", "description": "半圓刷 + 吸血 → 開減傷 + 集合 AoE 速殺。", "tips": [{"text": "MT 集中拉 + AoE 秒", "role": "tank"}]}
+                    ]
                 },
                 {
-                  "text": "DPS 速清 4 蟲",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "波 4：2 轉盤堡 + 4 蟲",
-              "type": "add",
-              "description": "Turnabout 轉盤堡：Pus 毒瘡（隨機玩家 DoT）+ Gravity Crush 重力擊穿（20% 百分比掉血）。Esuna 清毒瘡。治療注意百分比掉血。",
-              "tips": [
-                {
-                  "text": "Esuna 清毒瘡",
-                  "role": "healer"
+                    "name": "P2 雙 Knight + Soldier",
+                    "mechanics": [
+                        {"name": "Knight 反射魔法", "type": "mechanic", "description": "Knight 反射魔法傷害 → 只物理 DPS 打。", "tips": [{"text": "物理 DPS 集火 Knight", "role": "dps"}]},
+                        {"name": "Soldier stoneskin", "type": "mechanic", "description": "Soldier 抗物理 → 必須打破 stoneskin。最佳 2 物 2 魔分打。", "tips": [{"text": "魔法 DPS 打破 Soldier", "role": "dps"}]}
+                    ]
                 },
                 {
-                  "text": "治療大補應對掉血",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "波 5：1 恐慌裝甲 + 1 士兵 + 1 騎士",
-              "type": "add",
-              "description": "三種 add 混合：MT 拉恐慌裝甲到角落，法系打士兵，近戰打騎士。",
-              "tips": [
+                    "name": "P3 Dreadnought #1",
+                    "mechanics": [
+                        {"name": "Dreadnought 吃 bugs（4x 增傷）", "type": "mechanic", "description": "旁邊刷 bugs 被 Dreadnought 吃會增傷 4x → DPS+H 站對牆角不被吃 + 治療滿補 + 速殺。", "tips": [{"text": "DPS+H 站對牆", "role": "dps"}, {"text": "治療全力補 PLD", "role": "healer"}]}
+                    ]
+                },
                 {
-                  "text": "分配目標",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "波 6：1 恐慌裝甲 + 1 士兵 + 1 騎士 + 1 轉盤堡 + 2 蟲（終局）",
-              "type": "add",
-              "description": "最終波：所有類型混合 + 蟲。MT 拉恐慌裝甲遠離蟲，分坦騎士；DPS 集火順序：蟲 → 騎士 → 士兵 → 轉盤堡 → 恐慌裝甲。",
-              "tips": [
+                    "name": "P4 Bugs + Rooks",
+                    "mechanics": [
+                        {"name": "Rook POX 前扇", "type": "cone", "description": "Rook 釋 POX 前扇無預警（最大 HP -1k）→ 朝牆避團 + Bard 風箏。", "tips": [{"text": "Bard 風箏 + 朝牆", "role": "dps"}]},
+                        {"name": "清光所有 add", "type": "add", "description": "全 add 必須清光才進下階段。", "tips": [{"text": "OT 集中接 + DPS 清", "role": "tank"}]}
+                    ]
+                },
                 {
-                  "text": "蟲 → 騎士 → 士兵 → 轉盤堡 → 裝甲",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Emergency Override 緊急超馳控制（6 分鐘軟狂暴）",
-              "type": "raidwide",
-              "description": "進本後 6 分鐘開始 → 全屏 AoE 持續直至團滅。必須 6 分鐘內清完所有 6 波。",
-              "tips": [
+                    "name": "P5 Dreadnought + Knight + Soldier",
+                    "mechanics": [
+                        {"name": "雙 T 分拉 + 順剃 Dreadnought", "type": "add", "description": "MT 北角 Dreadnought + OT 對側 Knight+Soldier → DPS 同 P2 分打 + 順剃 Dreadnought 血。", "tips": [{"text": "雙 T 分拉", "role": "tank"}]}
+                    ]
+                },
                 {
-                  "text": "6 分鐘內必清完",
-                  "role": "dps"
+                    "name": "P6（最難）",
+                    "mechanics": [
+                        {"name": "2 Dreadnought + bugs + Soldier + Knight + Rook", "type": "add", "description": "MT 接 2 Dreadnought + OT 接其他 + Bard 風箏 Rook 指場外。", "tips": [{"text": "MT invul + 多重減傷", "role": "tank"}, {"text": "Bard 風箏 Rook", "role": "dps"}]},
+                        {"name": "處理順序：Rook → 弱 D → Soldier/Knight → 餵 bugs → 滿血 D", "type": "mechanic", "description": "Rook 先（防 POX）→ 弱 Dreadnought（P5 殘血）→ Soldier 魔法 / Knight 物理 → 弱 D 死後 OT 帶 bugs 餵滿血 D（避吃增傷）→ 集火滿血 D。", "tips": [{"text": "依順序集火", "role": "dps"}]},
+                        {"name": "場地全屏（每 4s）", "type": "raidwide", "description": "後期場地全屏每 4s 1200-1500 傷 → 連續團補。", "tips": [{"text": "連續團補", "role": "healer"}]},
+                        {"name": "終結最終 Dreadnought", "type": "mechanic", "description": "所有 add 清光後集火 + 全員爆發 cooldown + 治療 AoE 持續 spam。", "tips": [{"text": "全爆發 + 連續 AoE 補", "role": "dps"}]}
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Gauntlet 6 階段 + MT 建議 PLD",
+                "Knight 反射魔法 = 物理打 / Soldier stoneskin = 魔法破",
+                "Dreadnought 吃 bugs 4x 增傷 → DPS+H 站對牆",
+                "Rook POX 前扇 → Bard 風箏朝牆",
+                "P6 順序：Rook → 弱 D → 雙 add → 餵 bugs → 滿血 D"
+            ]
         }
-      ],
-      "mnemonic": [
-        "6 波：1 蟲6 → 2 士兵+騎士 → 3 裝甲+蟲 → 4 轉盤+蟲 → 5 裝甲+士兵+騎士 → 6 終局",
-        "屏障：士兵物理 / 騎士魔法 → 對應職業打",
-        "裝甲接觸蟲 → 吸收增傷 → 拉開",
-        "轉盤毒瘡 + 重力擊穿 → 補位",
-        "6 分鐘軟狂暴"
-      ]
-    }
-  ]
+    ]
 }

@@ -1,160 +1,51 @@
 {
-  "id": "binding_coil_of_bahamut_-_turn_2",
-  "name": "巴哈姆特大迷宮 邂逅之章2",
-  "nameEn": "The Binding Coil of Bahamut - Turn 2",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "巴哈姆特大迷宮 邂逅之章2：核心戰 ADS Defense System 自衛系統。共 6 區小自衛系統 + boss 第六區。",
-    "所有系統共通：High-Voltage 高壓電流可打斷高傷 AoE + 麻痺；Repelling Cannon 排斥砲自身圓；普攻 + 上述會疊受傷加重。",
-    "第一區 監視系統：擊敗後給 boss + 其他 Damage Up；Vacuum Wave 真空波全屏 AoE。",
-    "第二區 淨化系統：擊敗後突刺耐性提升；Ballast Water 壓艙水前方 270° 扇形 3 連 + 擊退。",
-    "第三區 防衛系統：擊敗後斬擊耐性提升；Thunder Chain 雷光鏈隨機玩家紫線 + 傷害。",
-    "第四區 迎擊系統：擊敗後打擊耐性提升；Gravity Field 重力場 + Heavy 加重。",
-    "第五區 焚燒系統：擊敗後魔防提升；Fire Flow 火焰流 5 方向直線 + 火傷。",
-    "第七區 防疫系統：擊敗後加速；Aragu Virus 亞拉戈古病毒：給 1 玩家 15s 病毒 → 結束時全屏團滅級 AoE → 靠近他人傳遞重置時間（傳遞者獲抗體）。",
-    "第六區 Boss 自衛系統：Penetrating Ray 穿透射線隨機目標可見直線 + Decompose 分解吸收：boss HP 70/50/30% 各 1 次，未摧毀的系統會被吸收給 boss 該系統技能。",
-    "軟狂暴 Object 199：進本起 12 分鐘 → 充能完成後以 5s 一次釋放全場 AoE 直至團滅 → DPS race。"
-  ],
-  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰邂逅之章 2（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 ADS Defense System 自衛系統，內含 7 區 mini-bosses。本副本核心 puzzle：在 12 分鐘狂暴前殺光 6 個區的系統再殺 boss。每個區擊敗後給 boss/其他區永久 buff。",
-  "bosses": [
-    {
-      "name": "自衛系統",
-      "nameEn": "ADS Defense System",
-      "phases": [
+    "id": "binding_coil_of_bahamut_-_turn_2",
+    "name": "巴哈姆特大迷宮 邂逅之章2",
+    "nameEn": "The Binding Coil of Bahamut - Turn 2",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "場上 6 個 ADS Node（『Build Your Own Boss』機制）→ 必須先殺 3+ Node 才能殺中央 ADS。每殺 Node 給其他 boss 增益但移除 ADS 招式（Monitoring 除外）。",
+        "Monitoring Node = 計時開始 → 10 分鐘 enrage 倒數。",
+        "全 Node 通用：High Voltage 高壓（可打斷麻痺）/ Repelling Cannons 圓 AoE / Cleave 易傷。",
+        "Sanitary Node = Ballast 3 個 270° 錐連波 → 跟波後安全位。Defense Node = Chain Lightning 雷跳 → 散開拉開。",
+        "Attack Node = Gravity Field 點下毒池 + Heavy + Bleed → 拉場邊放。Disposal Node = Firestream 5 條直線 + Burns DoT → 找縫站。",
+        "Quarantine Node = Allagan Rot 15s debuff → 時間到 / 死亡 = 全屏大傷 → 傳給其他玩家共享。",
+        "策略：建議殺 Monitoring + Sanitary + Quarantine 3 個（避免 ADS 用 270° 錐 + 跳雷 + 油爆 3 招），然後中央集火 ADS 通常用 Gravity/Firestream（簡單）。",
+        "ADS 中央戰：被殺的 Node 招式被移除 → ADS 招式越少越好處理。enrage 前秒殺。"
+    ],
+    "notes": "ARR 2.0 BCoB 第 2 章（Lv 50，sync 50，echo 30，時限 90 分），位於拉諾西亞下層阿勒戈倫敵亞地。為『Build Your Own Boss』機制 - 6 Node 玩家選擇殺哪些以決定中央 ADS 的招式組合。Monitoring Node 觸發 10 分鐘 enrage。常見策略：先 Monitoring + Sanitary + Quarantine → 集火 ADS。",
+    "bosses": [
         {
-          "name": "主戰（7 區系統循環）",
-          "mechanics": [
-            {
-              "name": "共通技能（高壓電流 + 排斥砲）",
-              "type": "mechanic",
-              "description": "High-Voltage 高壓電流：可打斷的高傷 AoE + 麻痺（10s 可驅散）。Repelling Cannon 排斥砲：boss 周身圓 AoE。普攻 + 上述會疊 Damage Up 受傷加重。",
-              "tips": [
+            "name": "ADS 群組",
+            "nameEn": "Multiple ADS Nodes",
+            "phases": [
                 {
-                  "text": "DPS 打斷高壓電流",
-                  "role": "dps"
+                    "name": "P1 6 Node 選擇",
+                    "mechanics": [
+                        {"name": "全 Node 通用", "type": "mechanic", "description": "High Voltage 可打斷麻痺 + Repelling Cannons 圓 AoE + Cleave 易傷。", "tips": [{"text": "Interject 打斷 High Voltage", "role": "tank"}]},
+                        {"name": "Monitoring Node（計時）", "type": "mechanic", "description": "Vacuum Wave 全屏（不可移除）+ 觸發 10 分 enrage 倒數。", "tips": [{"text": "壓 enrage 前完", "role": "dps"}]},
+                        {"name": "Sanitary Node", "type": "cone", "description": "Ballast 3 個 270° 錐連波 → 跟波後安全位。", "tips": [{"text": "跟波後", "role": "dps"}]},
+                        {"name": "Defense Node", "type": "spread", "description": "Chain Lightning 雷跳 → 散開避相互傷害。", "tips": [{"text": "散開拉開", "role": "dps"}]},
+                        {"name": "Attack Node", "type": "aoe", "description": "Gravity Field 毒池 + Heavy + Bleed → 拉場邊放。", "tips": [{"text": "Esuna 解 Heavy", "role": "healer"}]},
+                        {"name": "Disposal Node", "type": "aoe", "description": "Firestream 5 條直線 + Burns → 找縫站。", "tips": [{"text": "看線縫站", "role": "dps"}]},
+                        {"name": "Quarantine Node（Allagan Rot）", "type": "mechanic", "description": "點 1 玩家 15s debuff → 時間到 / 死 = 全屏大傷 → 傳給其他玩家（站近接傳）。", "tips": [{"text": "Rot 玩家傳接力", "role": "dps"}]}
+                    ]
                 },
                 {
-                  "text": "近戰退離排斥砲",
-                  "role": "dps"
-                },
-                {
-                  "text": "Esuna 清麻痺",
-                  "role": "healer"
+                    "name": "P2 中央 ADS（殺 3+ Node 後）",
+                    "mechanics": [
+                        {"name": "ADS 中央戰", "type": "mechanic", "description": "ADS 使用未殺 Node 對應招式 → 越少越好處理。常見策略殺 Monitoring + Sanitary + Quarantine = ADS 只用 Gravity/Firestream。", "tips": [{"text": "依殺 Node 順序預判 ADS 招", "role": "dps"}]},
+                        {"name": "10 分鐘 Enrage", "type": "raidwide", "description": "ADS 釋全屏無法閃避 enrage → 必須在此前秒掉。", "tips": [{"text": "DPS 全力推 + LB3", "role": "dps"}]}
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "第一區 監視系統 + 真空波",
-              "type": "add",
-              "description": "Vacuum Wave 真空波全屏 AoE。擊敗後給 boss + 其他系統 Damage Up 傷害提高。",
-              "tips": [
-                {
-                  "text": "DPS 殺後團補",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "第二區 淨化系統 + 壓艙水",
-              "type": "knockback",
-              "description": "Ballast Water 壓艙水：對前方 270° 扇形 3 連 + 擊退（Surecast 可抗）。擊敗後給突刺耐性提升。",
-              "tips": [
-                {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                },
-                {
-                  "text": "Surecast 抗擊退",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "第三區 防衛系統 + 雷光鏈",
-              "type": "spread",
-              "description": "Thunder Chain 雷光鏈：隨機玩家紫線後造成傷害。擊敗後給斬擊耐性提升。",
-              "tips": [
-                {
-                  "text": "被連線拉開",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "第四區 迎擊系統 + 重力場",
-              "type": "aoe",
-              "description": "Gravity Field 重力場：地面生成重力場（踩入傷害 + 加重）。擊敗後給打擊耐性提升。",
-              "tips": [
-                {
-                  "text": "不要踩重力場",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "第五區 焚燒系統 + 火焰流",
-              "type": "aoe",
-              "description": "Fire Flow 火焰流：5 方向直線 AoE + 火傷。擊敗後給魔防提升。",
-              "tips": [
-                {
-                  "text": "看 5 直線縫站",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "第七區 防疫系統 + 亞拉戈古病毒",
-              "type": "mechanic",
-              "description": "Aragu Virus 亞拉戈古病毒：給隨機 1 玩家 15s 病毒 debuff。結束時全屏團滅級 AoE。可通過靠近他人傳遞病毒 → 重置 15s + 傳遞者獲 Antibody 抗體。擊敗後給 boss + 其他 加速。",
-              "tips": [
-                {
-                  "text": "被點玩家立刻傳遞",
-                  "role": "dps"
-                },
-                {
-                  "text": "傳遞鏈：1→2→3→...",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "第六區 Boss 自衛系統",
-              "type": "mechanic",
-              "description": "Penetrating Ray 穿透射線：隨機目標可見直線 AoE。Decompose 分解吸收：boss HP 70%/50%/30% 各 1 次，未摧毀的系統會被吸收 → boss 獲得該系統技能。",
-              "tips": [
-                {
-                  "text": "70%/50%/30% 前殺光該區",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Object 199 軟狂暴",
-              "type": "raidwide",
-              "description": "Object 199：進本起 12 分鐘 → 充能完成 → 以 5s 一次釋放全場 AoE 直至團滅 → DPS race，12 分鐘內必須擊敗 boss。",
-              "tips": [
-                {
-                  "text": "12 分鐘內擊敗",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": ["6 Node 選 3+ 殺 → 中央 ADS 用未殺 Node 招式", "建議：Monitoring + Sanitary + Quarantine = ADS 簡單", "10 分鐘 enrage 前秒"]
         }
-      ],
-      "mnemonic": [
-        "共通：高壓電流可打斷 + 排斥砲圓",
-        "7 區各機制：監視 / 淨化 / 防衛 / 迎擊 / 焚燒 / 防疫 + 第六區 boss",
-        "病毒傳遞：被點靠近隊友傳遞重置",
-        "Decompose 分解吸收 70/50/30% → 殺光該區",
-        "12 分鐘狂暴 → DPS race"
-      ]
-    }
-  ]
+    ]
 }

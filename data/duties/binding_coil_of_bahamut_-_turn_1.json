@@ -1,133 +1,60 @@
 {
-  "id": "binding_coil_of_bahamut_-_turn_1",
-  "name": "巴哈姆特大迷宮 邂逅之章1",
-  "nameEn": "The Binding Coil of Bahamut - Turn 1",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "巴哈姆特大迷宮 邂逅之章1：核心戰 Caduceus 神杖巨蛇（蛇王）+ 預備層 Defense System 自衛系統。",
-    "場地閃藍光時內部會 spawn Dark Matter Slime 暗物質粘液怪 + Defense Reaction 防衛反應傷害；黃色地板 → 出血。",
-    "神杖巨蛇技能：Head Swing 甩頭前扇（無讀條）；Tail Swing 甩尾扇形（讀條）；Spit Venom 噴毒點名圓 + 留下毒池（猛毒）；Iron Scale 鋼鱗自身疊 buff。",
-    "Devour 捕食：boss 與粘液怪接觸 → 吸收 + 減 1 層鋼鱗。粘液怪炸裂：距目標過遠自爆大 AoE。Goo 粘稠液：留下粘液區（boss 接觸獲鋼鱗）。",
-    "75% HP 分裂為兩隻 + 自帶 Damage Down → 雙 T 各拉 1 隻分坦。一段時間未擊破 / 距離過近 → 再融合 + 立刻 8 層鋼鱗（狂暴）。",
-    "一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破（DPS race）。",
-    "預備：Defense System 自衛系統（前置）：High-Voltage 高壓電流可打斷 + 麻痺；Repelling Cannon 排斥砲自身圓；Object 199 軟狂暴。6 add 連線 boss 吸收給 boss Damage Up → 必清。"
-  ],
-  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰首章（Lv 50，sync 50，ilvl 100，8 人 raid highEnd），於阿濟茲拉巴哈姆特大迷宮。Boss 為 Caduceus 神杖巨蛇（FF14 早期 8-man savage raid 風格）。本副本是 FFXIV 第一個高難度 8 人 raid，建立了後續 ARR 與 HW Coil 系列的傳統。同時也是『召喚對魔法障壁』機制首次出現。",
-  "bosses": [
-    {
-      "name": "神杖巨蛇",
-      "nameEn": "Caduceus",
-      "phases": [
+    "id": "binding_coil_of_bahamut_-_turn_1",
+    "name": "巴哈姆特大迷宮 邂逅之章1",
+    "nameEn": "The Binding Coil of Bahamut - Turn 1",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "B1 ADS（4 分鐘 enrage）：High Voltage 高壓 = 全員麻痺 → 2 玩家輪流 Interject 打斷（CD 不夠 1 人）。",
+        "B1 Repelling Cannons 反擊砲 = boss 圓 AoE / Piercing Laser 穿透雷射 = 直線。Node 機制（南邊 40s 刷 1 個）：Attack（Gravity Field 玩家腳下 Heavy）/ Defense（Chain Lightning 靠近增傷）/ Patrol（Dirty Cannons 短預警高傷）→ OT 拉 Node 遠離 ADS（25s 內被吸 = ADS 回血 + 增傷）。",
+        "B2 Caduceus 大蛇（時間越久越強）：Hood Swing 帽兜揮擊 = cleave / Whip Back 鞭尾 = 後扇（玩家在後才放）/ Regorge 反芻 = 玩家腳下毒池 → 拉場邊。",
+        "B2 Steel Scales 鐵鱗 = boss 自疊增傷（30s 後每 45s）→ 5s 後隨機平台發光 → 玩家站發光平台會生 Dark Matter Slime 跟著該玩家 → 拉到 boss 旁讓吃掉（消 1 層增傷但回血）。Slime 玩家太遠 = 自爆 10y 內死。",
+        "B2 Split 分裂（68%）= 分兩 boss 半血 → 雙 T 拉開（合併 = enrage）。"
+    ],
+    "notes": "ARR 2.0 第一個 8 人 raid（Lv 50，sync 50，echo 30，時限 90 分），位於拉諾西亞上層阿勒戈倫敵亞地。為巴哈姆特大迷宮的入口。Boss 為 ADS（Allagan Defense System）+ Caduceus（卡杜克斯大蛇）。BCoB 系列序章。",
+    "bosses": [
         {
-          "name": "P1 100%-75% HP（單體 + 粘液機制）",
-          "mechanics": [
-            {
-              "name": "Head Swing / Tail Swing 甩頭 / 甩尾扇形",
-              "type": "cone",
-              "description": "Head Swing 對一仇前方扇形（無讀條）；Tail Swing 後方可見範圍扇形（讀條）。MT 朝場邊面外，非 T 站側面。",
-              "tips": [
+            "name": "ADS",
+            "nameEn": "ADS",
+            "phases": [
                 {
-                  "text": "MT 朝外",
-                  "role": "tank"
-                },
-                {
-                  "text": "非 T 站側",
-                  "role": "dps"
+                    "name": "主戰（4 分鐘 enrage）",
+                    "mechanics": [
+                        {"name": "High Voltage 高壓（可打斷）", "type": "interrupt", "description": "全員麻痺 → 2 玩家輪流 Interject 打斷（單人 CD 不夠）。", "tips": [{"text": "雙 T 或 T+DPS 輪流打斷", "role": "tank"}, {"text": "Esuna 解麻痺", "role": "healer"}]},
+                        {"name": "Repelling Cannons 反擊砲", "type": "aoe", "description": "boss 圓 AoE → 拉開遠離。", "tips": [{"text": "遠程拉開", "role": "dps"}]},
+                        {"name": "Piercing Laser 穿透雷射", "type": "aoe", "description": "點名玩家直線 → 走出。", "tips": [{"text": "看點名走線", "role": "dps"}]},
+                        {"name": "Node 三種（40s/個）", "type": "add", "description": "Attack（Gravity Field 點 Heavy 池）/ Defense（Chain Lightning 集合增傷）/ Patrol（Dirty Cannons 短預警高傷 AoE）。OT 拉到場北遠離 ADS（25s 內被吸 = ADS 回血 + 增傷層）。", "tips": [{"text": "OT 拉 Node 場北", "role": "tank"}, {"text": "DPS 集火 ADS（Node 可忽略）", "role": "dps"}]}
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Spit Venom 噴毒（點名 + 毒池）",
-              "type": "spread",
-              "description": "隨機玩家點名圓 AoE 不可閃 + 原地產生毒池（猛毒 DoT）。被點玩家拉到場邊放置毒池避免影響戰場。",
-              "tips": [
-                {
-                  "text": "被點拉場邊放毒池",
-                  "role": "dps"
-                },
-                {
-                  "text": "Esuna 清猛毒",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Dark Matter Slime 暗物質粘液怪（藍光區）",
-              "type": "add",
-              "description": "場地閃藍光時內部會 spawn 暗物質粘液怪 + Defense Reaction 防衛反應傷害區內玩家。粘液怪：距當前目標過遠 → 自爆大 AoE。Goo 粘稠液：留下粘液區。MT 拉粘液怪到 boss 附近讓 boss 捕食。",
-              "tips": [
-                {
-                  "text": "OT 拉粘液到 boss",
-                  "role": "tank"
-                },
-                {
-                  "text": "boss 捕食減 1 層鋼鱗",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Iron Scale 鋼鱗（buff 控管）",
-              "type": "mechanic",
-              "description": "boss 為自身疊 Iron Scale 鋼鱗 buff（增傷或減傷）。boss 捕食粘液怪可減 1 層。控制 boss stack 在低位。",
-              "tips": [
-                {
-                  "text": "餵粘液減鋼鱗",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": ["High Voltage 雙人輪流打斷", "Node 三種 OT 拉場北 + DPS 集火 ADS"]
         },
         {
-          "name": "P2 < 75% HP（分裂雙坦）",
-          "mechanics": [
-            {
-              "name": "Split 分裂（雙 T 分坦）",
-              "type": "mechanic",
-              "description": "boss HP < 75% 後分裂成兩隻 + 自帶 Damage Down。MT/OT 各拉 1 隻分坦。一段時間未擊破 / 兩隻距離過近會再次融合 + 立刻 8 層鋼鱗（狂暴）。",
-              "tips": [
+            "name": "卡杜克斯",
+            "nameEn": "Caduceus",
+            "phases": [
                 {
-                  "text": "雙 T 各拉 1 隻拉遠",
-                  "role": "tank"
+                    "name": "P1（100%~68%）",
+                    "mechanics": [
+                        {"name": "Hood Swing 帽兜揮擊", "type": "cone", "description": "前 cleave → 繞背。", "tips": [{"text": "繞背躲", "role": "dps"}]},
+                        {"name": "Whip Back 鞭尾", "type": "cone", "description": "後扇 → 玩家不要站後（否則觸發）。", "tips": [{"text": "勿站 boss 後", "role": "dps"}]},
+                        {"name": "Regorge 反芻", "type": "aoe", "description": "玩家腳下毒池 + Pollen DoT → 拉場邊放。", "tips": [{"text": "拉場邊放池", "role": "dps"}]},
+                        {"name": "Steel Scales 鐵鱗（增傷堆叠）", "type": "mechanic", "description": "30s 後每 45s 自疊增傷 → 5s 後隨機平台發光 → 玩家站發光平台會生 Dark Matter Slime 跟玩家 → 拉 Slime 到 boss 吃（消 1 層增傷 + 回血）。太遠 = Slime 自爆 10y 內死。", "tips": [{"text": "站發光平台生 Slime", "role": "dps"}, {"text": "拉 Slime 到 boss 餵", "role": "tank"}]}
+                    ]
                 },
                 {
-                  "text": "避免兩隻接近融合",
-                  "role": "tank"
+                    "name": "P2 Split（68%）",
+                    "mechanics": [
+                        {"name": "Split 分裂", "type": "mechanic", "description": "boss 分兩半 → 雙 T 拉開（合併 = enrage 團滅）。同步處理上述機制。", "tips": [{"text": "雙 T 拉開兩半 boss", "role": "tank"}]}
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Twin Death DPS race",
-              "type": "mechanic",
-              "description": "一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破。狂暴狀態下即使捕食粘液也會迅速疊回 8 層。",
-              "tips": [
-                {
-                  "text": "兩隻同時打到死血",
-                  "role": "dps"
-                },
-                {
-                  "text": "幾乎同時擊破",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": ["Steel Scales 平台 → Slime 拉 boss 餵消增傷", "Split 68% 雙 T 拉開兩半"]
         }
-      ],
-      "mnemonic": [
-        "Head/Tail Swing 甩頭/甩尾 → MT 朝外站背",
-        "Spit Venom 噴毒 → 拉場邊放毒池",
-        "粘液怪 → 拉給 boss 吃減鋼鱗",
-        "75% 分裂 → 雙 T 分坦拉遠避融合",
-        "DPS race → 兩隻幾乎同時擊破"
-      ]
-    }
-  ]
+    ]
 }

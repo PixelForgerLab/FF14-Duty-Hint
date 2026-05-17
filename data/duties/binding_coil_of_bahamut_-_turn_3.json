@@ -1,95 +1,45 @@
 {
-  "id": "binding_coil_of_bahamut_-_turn_3",
-  "name": "巴哈姆特大迷宮 邂逅之章3",
-  "nameEn": "The Binding Coil of Bahamut - Turn 3",
-  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-  "type": "raid",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 50,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "巴哈姆特大迷宮 邂逅之章3：迷宫式戰鬥，多 3 個 boss + 機關。Allagan Guardian 阿拉戈守護者主戰。",
-    "Guardian 守護者：Auto Cannons 自動加農砲 → 直線 AoE 多方向；Heater Beam 加熱光束 → MT 死刑高傷單體；場上多個機關需玩家互動。",
-    "Allagan Junction 阿拉戈交叉口：場上多個能量節點互動 → 啟動防護避免 AoE。",
-    "Allagan Field 阿拉戈場：地面生成多個能量場 → 站到能量場上獲得 buff（可解某 boss 機制）或避免傷害。",
-    "狂暴：整體 12 分鐘軟狂暴。需 DPS race 結束。"
-  ],
-  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰邂逅之章 3（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Allagan Guardian 阿拉戈守護者。迷宫式 boss 戰鬥需要利用場上互動機關。本副本是 ARR Coil 中最依賴『場地互動』的副本，玩家需協同操作機關才能擊敗 boss。詳細機制請參考 CGW Console Games Wiki。",
-  "bosses": [
-    {
-      "name": "阿拉戈守護者",
-      "nameEn": "Allagan Guardian",
-      "phases": [
+    "id": "binding_coil_of_bahamut_-_turn_3",
+    "name": "巴哈姆特大迷宮 邂逅之章3",
+    "nameEn": "The Binding Coil of Bahamut - Turn 3",
+    "expansion": "2.x 重生的伊修加爾德 (A Realm Reborn)",
+    "type": "raid",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "獨特副本：跳板迷宮 → 無 boss + 無 echo。目標：沿藍環標示往下跳到底層。",
+        "跳板用法：站旁邊藍圓設定方向 → 再站中央跳。",
+        "策略：分配 1 人帶路（其他人跟著），避免走錯。",
+        "小怪：Dark Matter Mantis 螳螂、Dreadguard 守衛、Dark Matter Golem 石巨（弱職遠離）、Slug 蛞蝓、Aurelia 水母。",
+        "Treasure 寶箱：X-Potion / X-Ether / Hi-Elixir（額外消耗品）。",
+        "重點：保持團隊集合 + 指定領隊預設跳方向 + Golem 對脆皮職業特別危險。"
+    ],
+    "notes": "ARR 2.0 BCoB 第 3 章（Lv 50，sync 50，ilvl 70，時限 90 分），位於東拉諾西亞 Ragnarok 神艦。此副本獨特：無 boss 戰，是跳板迷宮 → 沿藍環向下跳到底。完成不獲『The Echo』buff（與其他 Coil 不同）。建議分配 1 人帶路使用跳板。",
+    "bosses": [
         {
-          "name": "主戰（機關 + 防護機制）",
-          "mechanics": [
-            {
-              "name": "Auto Cannons 自動加農砲（多方向直線）",
-              "type": "aoe",
-              "description": "boss 釋放多方向直線 AoE。看圖示走縫到無 AoE 區。",
-              "tips": [
+            "name": "跳板迷宮（無 boss）",
+            "nameEn": "Jumping Maze (No Boss)",
+            "phases": [
                 {
-                  "text": "看直線走縫",
-                  "role": "dps"
+                    "name": "下降迷宮",
+                    "mechanics": [
+                        {"name": "跳板使用方法", "type": "mechanic", "description": "藍環標示通路 → 站旁邊藍圓設定跳方向 → 再站中央跳。", "tips": [{"text": "看藍環判斷正確方向", "role": "tank"}]},
+                        {"name": "領隊策略", "type": "mechanic", "description": "1 人帶路設定跳板，其他人跟著。", "tips": [{"text": "1 人帶路其他跟著", "role": "tank"}]},
+                        {"name": "Dark Matter Mantis 螳螂", "type": "add", "description": "場上 add → 可避或速殺。", "tips": [{"text": "MT 拉穩 + AoE 速殺", "role": "tank"}]},
+                        {"name": "Dreadguard 守衛", "type": "add", "description": "守衛 add → MT 接 + 集火。", "tips": [{"text": "MT 接", "role": "tank"}]},
+                        {"name": "Dark Matter Golem 石巨人", "type": "add", "description": "石巨對脆皮職業危險 → 避免靠近 + DPS 集火。", "tips": [{"text": "脆皮遠離", "role": "dps"}]},
+                        {"name": "Dark Matter Slug 蛞蝓", "type": "add", "description": "小型 add → 可忽略或速秒。", "tips": [{"text": "AoE 順便清", "role": "dps"}]},
+                        {"name": "Dark Matter Aurelia 水母", "type": "add", "description": "水母 add → 注意攻擊範圍。", "tips": [{"text": "看 telegraph 走位", "role": "dps"}]},
+                        {"name": "Treasure 寶箱", "type": "mechanic", "description": "X-Potion / X-Ether / Hi-Elixir 消耗品額外掉落。", "tips": [{"text": "探索取得", "role": "dps"}]},
+                        {"name": "完成 = 無 echo", "type": "mechanic", "description": "本副本無 boss 戰 → 完成後不獲 echo buff（與其他 Coil 不同）。", "tips": [{"text": "下次仍從基礎難度", "role": "tank"}]},
+                        {"name": "終點目標", "type": "mechanic", "description": "沿藍環到達底層 → 副本結束 → 進 T4。", "tips": [{"text": "找最後跳板抵達", "role": "tank"}]}
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Heater Beam 加熱光束（MT 死刑）",
-              "type": "tankbuster",
-              "description": "對 MT 死刑高傷單體；MT 開大減傷 + 治療大補。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Allagan Junction 阿拉戈交叉口（互動機關）",
-              "type": "mechanic",
-              "description": "場上多個能量節點 → 玩家互動啟動防護避免 boss AoE。每個機關需指定玩家操作。",
-              "tips": [
-                {
-                  "text": "指定玩家操作機關",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Allagan Field 阿拉戈場（能量區）",
-              "type": "mechanic",
-              "description": "地面生成多個能量場 → 站到能量場上獲得 buff（可解 boss 機制）或避免傷害。",
-              "tips": [
-                {
-                  "text": "看場地能量區站位",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Object 199 軟狂暴（12 分鐘）",
-              "type": "raidwide",
-              "description": "整體 12 分鐘軟狂暴。需 DPS race 結束。",
-              "tips": [
-                {
-                  "text": "12 分鐘內擊敗",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": ["跳板：藍圓設方向 + 中央跳", "領隊 1 人帶路 + 其他跟著", "Golem 對脆皮危險 → 遠離", "無 boss + 無 echo + 抵達底層"]
         }
-      ],
-      "mnemonic": [
-        "Auto Cannons → 多直線走縫",
-        "Heater Beam → MT 大減傷",
-        "Junction 互動機關 → 啟動防護",
-        "Allagan Field → 站能量區",
-        "12 分鐘軟狂暴"
-      ]
-    }
-  ]
+    ]
 }
