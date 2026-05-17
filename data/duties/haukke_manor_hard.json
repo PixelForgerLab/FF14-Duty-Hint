@@ -1,166 +1,274 @@
 {
-    "id":  "haukke_manor_hard",
-    "name":  "惡靈府邸靜語莊園",
-    "nameEn":  "Haukke Manor (Hard)",
-    "expansion":  "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Manor Jester 管家：Frightful Roar 驚悚咆哮 + 召喚 add。",
-                     "2）B2 Manor Steward 魔伯爵：Concuss 衝擊 + 點名圓。",
-                     "3）B3 Lady Amandine 魔女：Void Fire III 虛無火 + 召喚僕從。"
-                 ],
-    "notes":  "HW 2.3 hard 版鬼魂入侵（Lv 50）。Boss 依序為 Manor Jester 管家、Manor Steward 魔伯爵、Lady Amandine 魔女。重點：注意各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "管家",
-                       "nameEn":  "Manor Jester",
-                       "phases":  [
-                                      {
-                                          "name":  "B1 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Double Blade 雙刃",
-                                                                "type":  "cone",
-                                                                "description":  "MT 雙扇形；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Circle AoE 圓圈",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多圓 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 單體；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Manor Jester 管家 機制：Frightful Roar 驚悚咆哮 + 召喚 add。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "魔伯爵",
-                       "nameEn":  "Manor Steward",
-                       "phases":  [
-                                      {
-                                          "name":  "B2 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Fire AoE 火焰",
-                                                                "type":  "aoe",
-                                                                "description":  "場上火 AoE + 燃燒 debuff；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Raid AoE 全屏",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏火屬性 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 單體；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Manor Steward 魔伯爵 機制：Concuss 衝擊 + 點名圓。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   },
-                   {
-                       "name":  "魔女",
-                       "nameEn":  "Lady Amandine",
-                       "phases":  [
-                                      {
-                                          "name":  "B3 主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Multi AoE 多 AoE",
-                                                                "type":  "aoe",
-                                                                "description":  "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "走縫"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bewitching 魅惑",
-                                                                "type":  "mechanic",
-                                                                "description":  "玩家被魅惑攻擊隊友；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-                                                                "tips":  [
-                                                                             "互相打回解除"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Big Boom 大爆炸",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tankbuster 死刑",
-                                                                "type":  "tankbuster",
-                                                                "description":  "MT 死刑；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "Lady Amandine 魔女 機制：Void Fire III 虛無火 + 召喚僕從。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ]
-                   }
-               ]
+    "id": "haukke_manor_hard",
+    "name": "惡靈府邸靜語莊園",
+    "nameEn": "Haukke Manor (Hard)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Manor Jester 莊園的小丑：所有讀條技能可打斷，MNK/NIN/BRD 等用 Interject。場邊燈籠亮 → spawn Manor Butler 莊園的管家 add → DPS 清掉。",
+        "2）B1 死者之舞：以隨機 Butler 屍體為中心圓形範圍，將範圍內 4 個 Butler 復活合體成 Manor Steward 莊園的總管 → 釋放幽冥爆發全屏。所以屍體不要堆在一起。",
+        "3）B2 Ash 灰燼：處刑判決召喚深淵鍘刀，地板 AoE 肢解（直線沉默）→ 看藍色光條位置走縫，HP 低時新增『井』字形需找空格。",
+        "4）B2 死鐮 點名圓 + 擊退 + 加重 → 被點拉開；深淵貫穿點名 + 麻痹 → Esuna；血量低時出現虛無裂縫 → 隨從牛頭魔 add 清掉裂縫才消失。",
+        "5）B3 Halicarnassus 哈利卡納蘇斯（核心 DPS race）：4 波 add 80%/60%/40%/15%。boss 會在 30 秒內吸食 add，按 add 剩餘 HP 決定 Blood Rain 血雨全屏傷害。每波必須把 add HP 砍到接近 0 再被吸。",
+        "6）B3 80% Manor Sentry 守衛：飛石 + 對 boss 用石膚 → 必須打斷石膚！否則 boss 變無敵；殺後 boss 變不可沉默/眩暈。",
+        "7）B3 60% 雙 Manor Maidservant 女僕：必須把其中一隻砍到 0 HP，否則 boss 吸滿血 Maidservant 後 Blood Rain 團滅。殺後 boss 加傷害提高 buff。",
+        "8）B3 40% Lady Amandine 阿芒迪娜女士（normal 版終 boss）：建議 DPS LB 速秒；如果 boss 過快會直接吸掉，最好控 boss HP 不下 30% 等先處理 Amandine。",
+        "9）B3 15% 後 Beguiling Mist 欺瞞霧：魅惑全員走向 boss，期間對 1 名玩家 Void Fire IV → 重複 3 次內擊敗，否則吸隊友 Blood Rain 團滅。",
+        "10）B3 6 分鐘狂暴 → 魔性誘惑秒殺玩家。"
+    ],
+    "notes": "ARR 2.1 副本 Hard 版（Lv 50，sync 50，ilvl 110），位於黑衣森林中央林區靜語莊園，劇情上 Dartancours 家族夫人與虛無界締約失去靈魂。Boss 依序為 Manor Jester 莊園的小丑、Ash 灰燼、Halicarnassus 哈利卡納蘇斯。本副本核心特色：B3 Halicarnassus 是 DPS check 系列，4 波 add 各有專屬機制（守衛、女僕、Amandine、Mist），每次 boss 吸食 add 都會 Blood Rain 全屏，傷害依 add 剩餘 HP。注意 6 分鐘狂暴。",
+    "bosses": [
+        {
+            "name": "莊園的小丑",
+            "nameEn": "Manor Jester",
+            "phases": [
+                {
+                    "name": "主戰（可打斷 + 死者之舞合體機制）",
+                    "mechanics": [
+                        {
+                            "name": "讀條技能（全部可打斷）",
+                            "type": "mechanic",
+                            "description": "Manor Jester 所有技能讀條都可被 Interject（盾兵）/Head Graze（弓）/Leg Sweep（武）等技能打斷。MNK/NIN/BRD/MCH 持續打斷 boss 讀條可讓戰鬥輕鬆很多。",
+                            "tips": [
+                                {"text": "DPS 輪流打斷讀條", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Blizzard 虛空冰結（單體 + 減速）",
+                            "type": "mechanic",
+                            "description": "對單體目標魔法傷害 + 可驅散的攻擊速度降低 debuff；治療 Esuna 清。",
+                            "tips": [
+                                {"text": "Esuna 清減速", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Void Blizzara 虛空冰封 / Frostbite 冰瀑",
+                            "type": "aoe",
+                            "description": "Void Blizzara 單體高傷魔法；Frostbite 對目標生成圓 AoE + Frostbite 冻伤 DoT 區域。被點玩家走出 DoT 區。",
+                            "tips": [
+                                {"text": "被點走出圓 DoT", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Manor Butler 莊園的管家（燈籠 add）",
+                            "type": "add",
+                            "description": "場邊燈籠亮起火焰時生成 1 隻 Manor Butler 管家 add。Butler 釋放地獄揮（單體小傷）。DPS 切目標清掉，但屍體位置要分散，不要堆在一起。",
+                            "tips": [
+                                {"text": "DPS 切 Butler 速秒", "role": "dps"},
+                                {"text": "屍體分散放置", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Dance of the Dead 死者之舞 + Manor Steward 莊園的總管",
+                            "type": "mechanic",
+                            "description": "Manor Jester 以隨機 1 個 Manor Butler 屍體為中心生成圓形區域，將範圍內所有 Butler 復活。如果該區域內有 4 個 Butler 屍體，復活時會合體成 Manor Steward 莊園的總管 → 釋放 Soul Burst 幽冥爆發全屏 AoE 高傷。必須避免 4 個屍體堆在同一範圍內。",
+                            "tips": [
+                                {"text": "屍體分散到場地四個角", "role": "tank"},
+                                {"text": "如果合體 → 治療連續團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Manor Jester 讀條全部可打斷 → MNK/NIN/BRD 輪流 Interject",
+                "Manor Butler 燈籠亮 spawn → 清掉但屍體分散",
+                "死者之舞 4 屍合體 → 屍體分散避免合體 Steward"
+            ]
+        },
+        {
+            "name": "灰燼",
+            "nameEn": "Ash",
+            "phases": [
+                {
+                    "name": "P1 100%-50% HP（深淵鍘刀 + 圓 + 槍）",
+                    "mechanics": [
+                        {
+                            "name": "Abyssal Rotation 深淵迴轉",
+                            "type": "cone",
+                            "description": "對一仇 MT 瞬發前方扇形 AoE；MT 朝場邊面外。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Grim Missile 陰森導彈",
+                            "type": "tankbuster",
+                            "description": "對目標單體高傷害；MT 開減傷。",
+                            "tips": [
+                                {"text": "MT 減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Execution 處刑判決 + Dismember 肢解",
+                            "type": "mechanic",
+                            "description": "boss 召喚多個 Abyssal Cleaver 深淵鍘刀 → 釋放超大範圍地板藍色 AoE 肢解（直線 AoE + 可驅散 Silence 沉默）。藍色 AoE 出現位置兩種：從場地最左或最右出現（占場地約 2/3）、從場地上下出現（兩條光條交錯 → 走縫到空格）。boss HP 低於一定後新增第三種『井字形』情況 → 找十字空格。",
+                            "tips": [
+                                {"text": "看藍色光條方向走縫", "role": "dps"},
+                                {"text": "Esuna 清沉默", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Death Scythe 死鐮",
+                            "type": "spread",
+                            "description": "boss 隨機點名玩家，丟出 Abyssal Scythe 深淵之鐮，腳下圓 AoE。被擊中後擊退一定距離 + 可驅散 Heavy 加重 debuff。被點玩家拉開避免疊隊友。",
+                            "tips": [
+                                {"text": "被點拉開避疊", "role": "dps"},
+                                {"text": "Esuna 清加重", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Abyssal Spike 深淵飛刺",
+                            "type": "aoe",
+                            "description": "boss 走到場中央後召喚多根 Abyssal Lance 深淵之槍環繞自身，然後射出去產生直線 AoE 傷害。看槍方向走縫到無槍區。",
+                            "tips": [
+                                {"text": "看槍朝向走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Abyssal Transfixion 深淵貫穿",
+                            "type": "spread",
+                            "description": "boss 隨機點名玩家造成單體傷害 + 可驅散 Paralysis 麻痹。治療 Esuna 清。",
+                            "tips": [
+                                {"text": "Esuna 清麻痹", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 50% HP（虛無裂縫 + 隨從牛頭魔）",
+                    "mechanics": [
+                        {
+                            "name": "Void Rift 虛無裂縫 + Taurus Minion 隨從牛頭魔",
+                            "type": "add",
+                            "description": "boss HP 低於一定後場上出現 Void Rift 虛無裂縫 → 召喚 Taurus Minion 隨從牛頭魔 add，並對玩家點名 Void Miasma 虛無瘴氣 圓 AoE。Taurus Minion 被擊殺後虛無裂縫消失。DPS 切目標清 add。",
+                            "tips": [
+                                {"text": "DPS 清 Taurus Minion 解裂縫", "role": "dps"},
+                                {"text": "看點名圓走出", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Execution 處刑判決（深淵鍘刀地板藍）→ 看光條走縫 + 井字找十字空格",
+                "Death Scythe 死鐮 → 被點拉開 + Esuna 加重",
+                "Abyssal Spike 深淵飛刺 → 看槍方向走縫",
+                "深淵貫穿 → Esuna 麻痹",
+                "< 50% 虛無裂縫 → 清 Taurus Minion"
+            ]
+        },
+        {
+            "name": "哈利卡納蘇斯",
+            "nameEn": "Halicarnassus",
+            "phases": [
+                {
+                    "name": "P1 100%-80% HP（基礎機制）",
+                    "mechanics": [
+                        {
+                            "name": "Void Fire III 虛空烈炎（可打斷）",
+                            "type": "aoe",
+                            "description": "小範圍 AoE 魔法傷害，讀條可打斷；DPS 持續打斷。殺掉 80% add 後變成 Void Fire IV 虛空熾炎（更大、更高傷）且不再可打斷。",
+                            "tips": [
+                                {"text": "DPS 打斷虛空烈炎", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Thunder 虛空暴雷（可打斷）",
+                            "type": "tankbuster",
+                            "description": "對單體小傷魔法，讀條可打斷。殺掉 60% add 後變成 Void Thunder II 虛空霹雷（高傷）。",
+                            "tips": [
+                                {"text": "DPS 打斷虛空暴雷", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dark Mist 暗黑霧",
+                            "type": "aoe",
+                            "description": "自身為圓心圓 AoE + 10 秒 Terror 恐怖 debuff（無法行動）。近戰退離。殺掉 40% add 後變成 Beguiling Mist 欺瞞霧（全屏 + 魅惑）。",
+                            "tips": [
+                                {"text": "近戰看圓退離", "role": "dps"},
+                                {"text": "Esuna 清恐怖", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 < 80% HP（Manor Sentry 守衛 add）",
+                    "mechanics": [
+                        {
+                            "name": "Manor Sentry 莊園的守衛（必須打斷 Stoneskin）",
+                            "type": "add",
+                            "description": "spawn Manor Sentry 守衛 add。守衛技能均可打斷：飛石（單體普通魔法）、Stoneskin 石膚（對 boss 附加 30 分鐘石膚 → boss 無敵），必須打斷石膚！殺掉守衛後 boss 30 秒內被 Soul Drink 嗜血劍 吸食 → Blood Rain 血雨全屏（傷害依守衛剩餘 HP），且 boss 變不可沉默/眩暈，Void Fire III → Void Fire IV。",
+                            "tips": [
+                                {"text": "DPS 必須打斷守衛石膚", "role": "dps"},
+                                {"text": "把守衛打到接近 0 HP 再被吸", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 < 60% HP（雙 Manor Maidservant 女僕）",
+                    "mechanics": [
+                        {
+                            "name": "Manor Maidservants 莊園的女僕 x2",
+                            "type": "add",
+                            "description": "spawn 2 隻 Manor Maidservant 女僕 add。女僕施放 Void Fira 虛空爆炎（目標為圓心圓 AoE）。boss 30 秒後吸食。必須先把其中一隻砍到 0 HP，再砍另一隻。boss 會優先吸 0 HP 的女僕（傷害最低）；如果兩隻都滿血，會隨機吸一隻，被吸滿血女僕 → Blood Rain 團滅。殺掉後 boss 獲得 Damage Up 傷害提高 buff，Void Thunder → Void Thunder II 虛空霹雷。",
+                            "tips": [
+                                {"text": "DPS 先集火 1 隻打到 0 HP", "role": "dps"},
+                                {"text": "另 1 隻先別動，等吸完再打", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P4 < 40% HP（Lady Amandine 終 add）",
+                    "mechanics": [
+                        {
+                            "name": "Lady Amandine 阿芒迪娜女士（normal Haukke Manor 終 boss）",
+                            "type": "add",
+                            "description": "spawn Lady Amandine（即 normal Haukke Manor 終 boss）。技能與 Halicarnassus 初始相同。建議 DPS LB 速秒。注意：如果 boss 過早爆掉（< 30%）會直接吸 Amandine 滿血 → Blood Rain 團滅，因此應控 boss HP 不下 30% 等 Amandine 死掉。殺掉後 boss 獲得 Haste 加速 buff，Dark Mist → Beguiling Mist 欺瞞霧。",
+                            "tips": [
+                                {"text": "DPS LB 速秒 Amandine", "role": "dps"},
+                                {"text": "控 boss HP 不下 30%", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P5 < 15% HP（Beguiling Mist 欺瞞霧）",
+                    "mechanics": [
+                        {
+                            "name": "Beguiling Mist 欺瞞霧（魅惑）",
+                            "type": "mechanic",
+                            "description": "boss < 15% HP 後開始施放，讀條期間魅惑全員自動走向 boss + 對 1 名玩家 Void Fire IV 圓 AoE 中傷。會重複 3 次。MT 拉 boss 到場中央。如果第三次後仍未殺死 boss，會吸隊友 → Blood Rain 團滅。",
+                            "tips": [
+                                {"text": "MT 拉 boss 到場中央", "role": "tank"},
+                                {"text": "DPS 全力爆發秒掉 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "6 分鐘狂暴",
+                            "type": "mechanic",
+                            "description": "戰鬥持續 6 分鐘後 boss 狂暴 → 對玩家發動 Bewitching Voice 魔性誘惑 + Soul Drink 嗜血劍秒殺。確保 DPS 不要拖戰。",
+                            "tips": [
+                                {"text": "DPS 不要拖時間", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "80% 守衛 → 必打斷石膚 + 砍 0 HP 再被吸",
+                "60% 雙女僕 → 集火 1 隻到 0 HP，另 1 滿血別碰",
+                "40% Amandine → DPS LB 速秒（控 boss HP > 30%）",
+                "15% Beguiling Mist 欺瞞霧 → 3 次內擊敗",
+                "6 分鐘狂暴 → DPS 別拖"
+            ]
+        }
+    ]
 }
