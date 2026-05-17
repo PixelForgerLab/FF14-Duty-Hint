@@ -1,165 +1,205 @@
 {
-    "id":  "sastasha_hard",
-    "name":  "逆轉要害沙斯塔夏溶洞",
-    "nameEn":  "Sastasha (Hard)",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）海盜團藏匿之地 Hard 版：boss 機制強化。",
-                     "2）場上海洋生物 add：DPS 速殺。",
-                     "3）終戰新 boss：依機制處理 + 救援機制。"
-                 ],
-    "notes":  "ARR 2.x 副本 Hard 版（Lv 50），沙斯塔夏溶洞『逆轉要害』，海盜團再次襲擊。Boss 強化版機制 + 新陷阱。",
-    "bosses":  [
-                   {
-                       "name":  "卡拉博斯",
-                       "nameEn":  "Karlabos",
-                       "mnemonic":  [
-                                        "Aqua Ball 留 Slime DoT",
-                                        "Prey 暈 + Tail Screw 打到 1HP",
-                                        "Prey 可傳遞給 DPS 後 stun Tail Screw"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Aqua Ball 水球",
-                                                                "type":  "other",
-                                                                "description":  "在玩家身上落水球，留下 Slime DoT debuff。圓會重疊，同一人可疊多層 Slime。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "healer 立刻 Esuna 解 Slime",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "玩家彼此拉開避免疊圓"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Prey 獵物",
-                                                                "type":  "other",
-                                                                "description":  "對主仇恨者上 Prey 標記，幾秒後暈該玩家。可衝撞另一玩家傳遞 Prey (改為他暈)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 可考慮在被暈前傳給近戰 DPS 以便接著 stun Tail Screw",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tail Screw 尾擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對非 tank 高傷攻擊把目標打到 1HP，不會直殺。但若該玩家有 Slime debuff = 死。可被 stun。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "healer 確認被瞄準者已解 Slime",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "近戰 DPS 接 Prey 暈後立刻起身 stun Tail Screw"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "馬迪森船長",
-                       "nameEn":  "Captain Madison",
-                       "mnemonic":  [
-                                        "衝擊 + 連續射擊",
-                                        "Captain\u0027s Guard 弱小先殺",
-                                        "末段 adds 中央 AoE，可用 caster LB"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Charge → 連續射擊",
-                                                                "type":  "other",
-                                                                "description":  "Boss 衝撞擊退玩家後對隨機玩家連續開槍，無法 stun，必須足夠傷害才停。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 全力打 burst 中斷連射",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Captain\u0027s Guard 召喚衛兵",
-                                                                "type":  "other",
-                                                                "description":  "場上召喚衛兵 adds (弱)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "AoE 速殺",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "adds 低血召喚多波",
-                                                                "type":  "other",
-                                                                "description":  "Boss 逃跑前召大量 adds，集中在中央 AoE 收。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "第 3/4 波可開 caster LB",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "大魷魚",
-                       "nameEn":  "Kraken",
-                       "mnemonic":  [
-                                        "優先順序：只有 Tentacles → 打 Kraken / 有 Arms → 打 Arms / 6 Arms 都活 → 求生",
-                                        "Ink Jet 不值得閃，解 Blind 即可"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B3",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Tentacles 觸手",
-                                                                "type":  "other",
-                                                                "description":  "場上召觸手 adds，可忽略 (除非有 Arms)。",
-                                                                "tips":  [
-                                                                             "看狀況決定打 Kraken 還是 Arms"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Kraken\u0027s Arms 主臂",
-                                                                "type":  "other",
-                                                                "description":  "六隻可選中的主臂分布場上。優先打 Arms (有 Arms 時)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 集火 Arms",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ink Jet 噴墨",
-                                                                "type":  "aoe",
-                                                                "description":  "場上 AoE 給 Blind debuff。不值得花心思閃。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "healer Esuna 解 Blind 後繼續補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "sastasha_hard",
+    "name": "逆轉要害沙斯塔夏溶洞",
+    "nameEn": "Sastasha (Hard)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "dungeon",
+    "playerCount": 4,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "mainScenario": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）B1 Karlabos 卡拉波斯（龍蝦）：Prey 獵物連線 T → MT 主動撞 DPS 把 buff 傳出去，被傳者吃眩暈，T 反而能打斷下一招 Tail Screw 螺旋尾。",
+        "2）B1 Tail Screw 螺旋尾：點名非 T 玩家造成 99% HP 傷害；如有 Slime 黏液 debuff 會直接秒 → 治療必須在螺旋尾前 Esuna 清 Slime（只有 10 秒）。",
+        "3）B1 Aqua Ball 水球 + Slime 黏液：點名圓 AoE 重疊會疊多層 Slime → 玩家平時保持散開站位。",
+        "4）B2 Captain Madison 麥迪森船長：衝撞 + 嚴懲擊退；標記玩家持續射擊（每射 1 次 boss 自己疊傷害提高）→ DPS 必須及時打傷讓 boss 停射，否則團 wipe。",
+        "5）B2 < 15% Madison 逃走召喚一堆 add，其中 Captain's Slave 船長奴隸會困住玩家 → 優先擊殺解除。",
+        "6）B2.5 First Mate Haerstymm 副官 接續登場 + 多輪 add（第 3 第 4 輪到場中央 AoE + 法系 LB）。",
+        "7）B3 Kraken 克拉肯：場上克拉肯的觸手 + 腕足。觸手會抓玩家丟到 boss 的喷墨 AoE 區。腕足必須及時清掉，否則 Tidal Wave 驚濤怪浪 全屏傷依存活腕足。",
+        "8）B3 攻擊優先級：只有 Kraken + Tentacles → 打 Kraken；有 Arms 出現 → 切 Arms；6 Arms 同時出現 → 求生為主。",
+        "9）B3 Ink Jet 噴墨 AoE 不值得閃（範圍大），治療專心 Esuna 清 Blind 失明。"
+    ],
+    "notes": "ARR 2.4 主線副本 Hard 版（Lv 50，sync 50，ilvl 110），位於西拉諾西亞沙斯塔夏溶洞，海盜傳說中的密港。劇情上原 Yellowjackets 巡邏隊被 Captain Madison 海蛇黨海盜+ Leviathan 利維坦狂信徒占領。Boss 依序為 Karlabos 卡拉波斯（龍蝦）、Captain Madison 麥迪森船長（含後段 First Mate Haerstymm 副官接續）、Kraken 克拉肯。注意：與 normal 版『天然要害沙斯塔夏溶洞』不同副本。",
+    "bosses": [
+        {
+            "name": "卡拉波斯",
+            "nameEn": "Karlabos",
+            "phases": [
+                {
+                    "name": "主戰（Prey + Tail Screw + Slime 連動）",
+                    "mechanics": [
+                        {
+                            "name": "Pierce 穿刺",
+                            "type": "tankbuster",
+                            "description": "boss 普通攻擊 3 次後使用 Pierce 穿刺，對 MT 高傷單體；MT 開減傷。",
+                            "tips": [
+                                {"text": "看 3 連普攻 → 預備減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Prey 獵物 + Tail Screw 螺旋尾（核心機制）",
+                            "type": "mechanic",
+                            "description": "boss 連線 MT 並施加 Prey 獵物 buff。Prey 可通過模型接觸傳給其他玩家，原持有者獲得 Vaccine 疫苗抗性（無法再次被點）。數秒後 boss 面向 Prey 玩家施放扇形 Capture Claw 捕獵爪 → 吸引 + 數秒眩暈。緊接著 Tail Screw 螺旋尾點名非 T 玩家造成 99% HP 傷害。建議：MT 主動將 Prey 傳給 DPS，讓 DPS 吃眩暈，MT 自由打斷 Tail Screw 讀條（用 Low Blow / Leg Sweep 下踢）。",
+                            "tips": [
+                                {"text": "MT 撞 DPS 傳 Prey", "role": "tank"},
+                                {"text": "MT 打斷 Tail Screw", "role": "tank"},
+                                {"text": "DPS 接 Prey 吃眩暈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Slime 黏液（疊 stack）",
+                            "type": "spread",
+                            "description": "boss 對隨機非 T 玩家施放 Aqua Ball 黏液點名圓 AoE，命中玩家獲得可疊 Slime DoT + 減速 debuff。圓重疊時會多次疊。Slime 可 Esuna 驅散。重點：玩家『散開站位』避免重疊疊多層；治療在 Tail Screw 前『10 秒內』把所有玩家的 Slime 全部 Esuna 掉，否則中 Tail Screw 直接秒（99% HP + DoT = 死）。",
+                            "tips": [
+                                {"text": "全員散開不要疊", "role": "dps"},
+                                {"text": "治療 Tail Screw 前 10s 清光 Slime", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Enrage（戰鬥拖戰懲罰）",
+                            "type": "mechanic",
+                            "description": "戰鬥進行到一段時間後 boss 獲得 Damage Up 傷害提高 + Haste 加速 buff（軟狂暴），DPS 必須在此之前秒掉。",
+                            "tips": [
+                                {"text": "DPS 別拖時間", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Prey 獵物 → MT 撞 DPS 傳出去，T 自由打斷 Tail Screw",
+                "Tail Screw 螺旋尾（99% HP）→ 治療 10s 前 Esuna 清 Slime",
+                "Slime 黏液 → 散開站避免疊層",
+                "Pierce 穿刺 → 普攻 3 次後 → MT 減傷"
+            ]
+        },
+        {
+            "name": "麥迪森船長",
+            "nameEn": "Captain Madison",
+            "phases": [
+                {
+                    "name": "P1 麥迪森船長（射擊 + add）",
+                    "mechanics": [
+                        {
+                            "name": "Charge + Punishment 衝撞 + 嚴懲",
+                            "type": "mechanic",
+                            "description": "開戰不久 boss 隨機衝撞非 T 玩家，並對另一名隨機玩家使用大範圍帶擊退的 Punishment 嚴懲。被點玩家注意 Surecast 抗擊退。",
+                            "tips": [
+                                {"text": "Surecast 抗擊退", "role": "tank"},
+                                {"text": "被衝者準備閃避", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Gun Fire 持續射擊（重要 DPS check）",
+                            "type": "mechanic",
+                            "description": "boss 標記 1 名玩家不斷射擊，每射 1 次自己疊 1 層 Damage Up 傷害提高 buff。需要 DPS 在 boss 達到 enough damage 內打傷他讓他停止射擊。否則他會持續疊傷害並持續秒玩家 → 團 wipe。",
+                            "tips": [
+                                {"text": "全 DPS 集中爆發傷害打斷", "role": "dps"},
+                                {"text": "boss 射擊期間不能被 stun", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Captain's Guard 隊長之衛（add 連環）",
+                            "type": "add",
+                            "description": "戰鬥中持續召喚 Captain's Guard add（很弱）。DPS 用 AoE 速秒。整場會重複『衝撞 → 嚴懲 → 射擊 → add』的流程。",
+                            "tips": [
+                                {"text": "DPS AoE 速清 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "< 15% HP 逃走 + Captain's Slave 困人 add",
+                            "type": "mechanic",
+                            "description": "boss HP < 15% 時逃走，並召喚一堆 add；其中 Captain's Slave 船長奴隸會 Bind 困住玩家。必須優先擊殺 Slave 解除困住。",
+                            "tips": [
+                                {"text": "看到困人 add → 優先秒", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 First Mate Haerstymm 副官（接續登場）",
+                    "mechanics": [
+                        {
+                            "name": "Mass Adds 多輪 add",
+                            "type": "add",
+                            "description": "Captain Madison 逃走後 First Mate Haerstymm 副官登場，繼續召喚多輪 add（共 4 輪）。第 3、第 4 輪 add 數量多，玩家全員聚到場中央 AoE 速清；可考慮第 3 輪用 Caster Limit Break 法系極限技。",
+                            "tips": [
+                                {"text": "第 3、4 輪 → 場中央 AoE 集火", "role": "tank"},
+                                {"text": "Caster LB 可用於第 3 輪", "role": "dps"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "衝撞 + 嚴懲擊退 → Surecast",
+                "持續射擊 → DPS 全力打傷讓 boss 停止",
+                "< 15% 逃走 → Captain's Slave 困人 → 優先秒",
+                "Haerstymm 第 3、4 輪 add → 場中央 AoE + LB"
+            ]
+        },
+        {
+            "name": "克拉肯",
+            "nameEn": "Kraken",
+            "phases": [
+                {
+                    "name": "主戰（觸手 + 腕足 + 噴墨）",
+                    "mechanics": [
+                        {
+                            "name": "Kraken 本體 + 攻擊優先級",
+                            "type": "mechanic",
+                            "description": "Kraken 戰場上有 Kraken's Tentacle 觸手 + Kraken's Arms 腕足。攻擊優先級：只有 Kraken + 觸手時 → 打 Kraken；Kraken + 觸手 + 腕足時 → 切腕足；Kraken + 6 腕足同時 → 求生為主。觸手永遠不用打。",
+                            "tips": [
+                                {"text": "看場上 add 數量決定打哪", "role": "tank"},
+                                {"text": "永遠不打觸手", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Kraken's Tentacle 克拉肯的觸手（抓人扔人）",
+                            "type": "mechanic",
+                            "description": "觸手會把玩家抓起來丟到 boss 的 Ink Jet 噴墨 AoE 區域內，使被抓玩家吃額外傷害。被抓玩家無法行動。治療注意補位。",
+                            "tips": [
+                                {"text": "被抓玩家無法動 → 治療補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Kraken's Arm 克拉肯的腕足（必須及時擊殺）",
+                            "type": "mechanic",
+                            "description": "腕足必須及時擊殺，否則 boss 會使用全屏技能 Tidal Wave 驚濤怪浪，傷害依場上存活腕足數量計算（越多越高）。DPS 切目標清腕足。Range DPS 推薦：腕足在角落 → 殺一隻腕足後躲到該洞躲其他腕足 + 打 Kraken 頭。",
+                            "tips": [
+                                {"text": "DPS 切腕足速秒", "role": "dps"},
+                                {"text": "腕足角落躲法可用於 Range", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ink Jet 噴墨（Blind 失明）",
+                            "type": "aoe",
+                            "description": "Kraken 對隨機區域釋放噴墨 AoE，命中玩家獲得 Blind 失明 debuff。範圍大不值得閃避；治療專心 Esuna 清 Blind 後繼續團補。",
+                            "tips": [
+                                {"text": "不用閃 → 直接吃", "role": "tank"},
+                                {"text": "Esuna 清 Blind", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Tidal Wave 驚濤怪浪（依腕足數）",
+                            "type": "raidwide",
+                            "description": "若腕足未及時清除，boss 釋放 Tidal Wave 全屏 AoE 高傷，傷害依場上存活腕足數量計算。0 隻腕足 → 低傷；6 隻腕足 → 直接團滅。",
+                            "tips": [
+                                {"text": "看到讀條 Tidal Wave → 確認腕足數", "role": "tank"},
+                                {"text": "全員減傷 + 團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "攻擊優先：Kraken / Arm 切目標；觸手永不打",
+                "觸手抓人丟到 Ink Jet 區 → 治療補位",
+                "腕足必須清 → 否則 Tidal Wave 驚濤怪浪依存活數",
+                "Ink Jet 噴墨 → 直接吃 + Esuna 清 Blind"
+            ]
+        }
+    ]
 }
