@@ -22,7 +22,7 @@ public class MechanicTypeToBrushConverter : IValueConverter
                 "tankbuster" or "tank-buster" => "MechTankbuster",
                 "stack" or "share" => "MechStack",
                 "spread" => "MechSpread",
-                "aoe" => "MechAoe",
+                "aoe" or "cone" or "knockback" or "gaze" => "MechAoe",
                 _ => "MechOther"
             },
             _ => "MechOther"
@@ -54,7 +54,15 @@ public class MechanicTypeToLabelConverter : IValueConverter
                 "tankbuster" or "tank-buster" => "坦克",
                 "stack" or "share" => "集合",
                 "spread" => "散開",
-                "aoe" => "AoE",
+                "aoe" => "範圍",
+                "cone" => "圓錐",
+                "knockback" => "擊退",
+                "gaze" => "視線",
+                "add" => "增援",
+                "interrupt" => "打斷",
+                "dispel" => "驅散",
+                "mechanic" => "機制",
+                "other" => "其他",
                 _ => s
             },
             _ => "機制"

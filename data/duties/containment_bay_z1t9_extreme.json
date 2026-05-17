@@ -1,235 +1,235 @@
 {
-    "id":  "containment_bay_z1t9_extreme",
-    "name":  "真 索菲婭殲殛戰",
-    "nameEn":  "Containment Bay Z1T9 (Extreme) - Sophia",
-    "expansion":  "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  60,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）P1 三神兵之一 索菲婭（智神）- Warring Triad #2。",
-                     "2）震雷扇形 + 灵知擊退 + 暴雷環形 / 暴風圓形（看 boss 連線分身判定）。",
-                     "3）睿智之秤 = MT 死刑 + 短擊退 + 雷耐降低。",
-                     "4）P2 阴雲天堂 80s 死靈宣告 → 必須擊殺三個信徒 (騎士/白魔/龍騎) 才解除。",
-                     "5）信徒一 (騎士) 前後/側面坚守 → 反方向攻擊；信徒二 (白魔) 灼熱視線 → 背對；信徒三 (龍騎) 魔槍亂舞 + 魔槍突刺 + 冰圈。",
-                     "6）睿智之天平 = 全員雙向擊退 → 全屏 AoE → 進 P3。",
-                     "7）P3 類星體 = 天平機制：藍隕石=3 紅隕石；重端會擊退 (差 1=3/4 場, 差 2=全場)。",
-                     "8）罪與罰：2T2N 黑圈 + 4DPS 白圈，黑白必須重合避免不平衡之罰全屏。",
-                     "9）9 次類星體循環推進；若未壓掉機制 → 99999 special damage 團滅。"
-                 ],
-    "notes":  "HW 3.x Warring Triad #2 Extreme - 索菲婭殲殛戰 (Lv 60, ilvl 235)。Sophia EX 是 HW 後期高難 EX，3 階段 + 9 次類星體循環，機制複雜度極高。",
-    "bosses":  [
-                   {
-                       "name":  "索菲婭",
-                       "nameEn":  "Sophia",
-                       "mnemonic":  [
-                                        "P1 暴雷環形 vs 暴風圓形 → 看連線數判斷",
-                                        "P2 三信徒：騎士反方向 / 白魔背對 / 龍騎遠離",
-                                        "P3 類星體 = 天平 → 站輕端避擊退",
-                                        "罪與罰：黑白圈必須重合"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 (100–65%)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Thunder III 震雷",
-                                                                "type":  "cone",
-                                                                "description":  "對前方釋放扇形 AoE，命中疊受傷加重。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝場邊",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "近戰站側後"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Gnosis 靈知",
-                                                                "type":  "knockback",
-                                                                "description":  "以芭碧蘿為中心的全屏 AoE，附帶擊退（防擊退有效）。",
-                                                                "tips":  [
-                                                                             "Arm\u0027s Length / Surecast 可免位移"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aeon Adds 移涌 + 暴雷/暴風組合",
-                                                                "type":  "mechanic",
-                                                                "description":  "場上生成 4 個移涌；boss 與 2 個分身連線釋放暴雷 (環形 AoE) + 另 2 個釋放暴風 (圓形 AoE + 擊退)；或連線 1 個釋放震雷 + 另 3 個釋放暴風。",
-                                                                "tips":  [
-                                                                             "看 boss 連線數判定機制",
-                                                                             "1 連線 → 暴雷環形：站 boss 身邊",
-                                                                             "2 連線 → 暴風圓形：站場邊外圈"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Execution 處決",
-                                                                "type":  "raidwide",
-                                                                "description":  "移涌使用連線技能時 boss 同步釋放的技能，全屏 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補大團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aiotokei 睿智之秤",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 MT 單體大傷害 + 短距離擊退 + 雷屬性耐性大幅降低；T swap 並注意後續傷害。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開大減傷 → ST swap",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補 Esuna 解雷耐降低",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 - 信徒階段 (65–50%)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Cloudy Heaven 陰雲天堂 (Doom)",
-                                                                "type":  "mechanic",
-                                                                "description":  "賦予全體玩家 80s 的死靈宣告 (Doom)，三隻信徒全擊破後解除；未解除或中途倒下 → 變僵屍。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 全速擊破三信徒",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "補不要讓任何人倒下",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "信徒其一 - 騎士 (前後/側面坚守)",
-                                                                "type":  "add",
-                                                                "description":  "招架技能：對前後/側面攻擊發動「反意」物理 + 擊退。讀條切換方向。",
-                                                                "tips":  [
-                                                                             "看讀條方向 → 反方向攻擊",
-                                                                             {
-                                                                                 "text":  "MT 站騎士側邊或正面打",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Onslaught 猛突進 (騎士)",
-                                                                "type":  "stack",
-                                                                "description":  "對隨機玩家直線可分攤 AoE。",
-                                                                "tips":  [
-                                                                             "全員集合分攤"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "信徒其二 - 白魔 灼熱視線",
-                                                                "type":  "gaze",
-                                                                "description":  "對正對著的人附加混亂 debuff (失控)；同時放救療為己方回血。",
-                                                                "tips":  [
-                                                                             "全員背對白魔",
-                                                                             {
-                                                                                 "text":  "DPS 集中秒殺白魔避免救療",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "信徒其三 - 龍騎 魔槍亂舞",
-                                                                "type":  "cone",
-                                                                "description":  "300° 前方 AoE；同時魔槍突刺對隨機玩家直線 AoE + 痛苦環刺圓形 AoE 留下冰圈 (踩入凍傷)。",
-                                                                "tips":  [
-                                                                             "站龍騎正後方避 300° 扇形",
-                                                                             "看冰圈位置避免重複踩"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aiotokei 睿智之天平",
-                                                                "type":  "knockback",
-                                                                "description":  "先將所有玩家向西擊退約 3/4 場 → 再向東擊退 → 全屏 AoE → 進入 P3。",
-                                                                "tips":  [
-                                                                             "Arm\u0027s Length 可免位移",
-                                                                             {
-                                                                                 "text":  "補大團補 + 大盾",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P3 - 類星體循環 (50–0%)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Quasar 類星體 (天平機制)",
-                                                                "type":  "mechanic",
-                                                                "description":  "P3 共會用 9 次。第 1 次一端 1 藍 + 另一端 3 紅 → 天平平衡 (1 藍=3 紅)；之後天平不平衡會向重端傾斜並擊退；重量差 1=3/4 場，差 2=全場。第 7 次砸在玩家位置，第 8-9 次同 2-6 次。",
-                                                                "tips":  [
-                                                                             "比較兩端隕石重量 → 站輕端避擊退",
-                                                                             "Arm\u0027s Length 可免位移"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tetraktys 如意寶珠",
-                                                                "type":  "raidwide",
-                                                                "description":  "無讀條但有施法動作；65% 前 = 二連全屏 AoE，65% 後升為三連。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補連續補療準備",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "全員大減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Sin and Punishment 罪與罰",
-                                                                "type":  "mechanic",
-                                                                "description":  "點名 2T2N 腳下黑圈 (魔法治療力降低) + 4 DPS 腳下白圈 (出血)；黑白圈未重合 → 全屏 AoE 不平衡之罰 + 虛弱。",
-                                                                "tips":  [
-                                                                             "2T2N 站場中央",
-                                                                             "4 DPS 對應重合在 2T2N 上方",
-                                                                             "或分組：MT+ST+H1+H2 與 D1+D2+D3+D4 站同點"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Dive 俯衝",
-                                                                "type":  "aoe",
-                                                                "description":  "類星體釋放後 boss 消失，突進造成南或北半場物理傷害。",
-                                                                "tips":  [
-                                                                             "看 boss 出現方向 → 站另一半場"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Light Dew 光露",
-                                                                "type":  "aoe",
-                                                                "description":  "場外芭碧蘿釋放南北方向直線 AoE。",
-                                                                "tips":  [
-                                                                             "看芭碧蘿出現位置 → 站側邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Enrage - 第 9 次類星體後",
-                                                                "type":  "raidwide",
-                                                                "description":  "若未在 9 次類星體內擊殺，boss 釋放罪與罰 + 如意寶珠連續造成 99999 特殊傷害直至團滅。",
-                                                                "tips":  [
-                                                                             "DPS check：50% 後盡量壓血讓 4-5 次類星體跳過"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "containment_bay_z1t9_extreme",
+  "name": "真 索菲婭殲殛戰",
+  "nameEn": "Containment Bay Z1T9 (Extreme) - Sophia",
+  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 60,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "P1 三神兵之一 索菲婭（智神）- Warring Triad #2。",
+    "震雷扇形 + 灵知擊退 + 暴雷環形 / 暴風圓形（看 boss 連線分身判定）。",
+    "睿智之秤 = MT 死刑 + 短擊退 + 雷耐降低。",
+    "P2 阴雲天堂 80s 死靈宣告 → 必須擊殺三個信徒 (騎士/白魔/龍騎) 才解除。",
+    "信徒一 (騎士) 前後/側面坚守 → 反方向攻擊；信徒二 (白魔) 灼熱視線 → 背對；信徒三 (龍騎) 魔槍亂舞 + 魔槍突刺 + 冰圈。",
+    "睿智之天平 = 全員雙向擊退 → 全屏 AoE → 進 P3。",
+    "P3 類星體 = 天平機制：藍隕石=3 紅隕石；重端會擊退 (差 1=3/4 場, 差 2=全場)。",
+    "罪與罰：2T2N 黑圈 + 4DPS 白圈，黑白必須重合避免不平衡之罰全屏。",
+    "9 次類星體循環推進；若未壓掉機制 → 99999 special damage 團滅。"
+  ],
+  "notes": "HW 3.x Warring Triad #2 Extreme - 索菲婭殲殛戰 (Lv 60, ilvl 235)。Sophia EX 是 HW 後期高難 EX，3 階段 + 9 次類星體循環，機制複雜度極高。",
+  "bosses": [
+    {
+      "name": "索菲婭",
+      "nameEn": "Sophia",
+      "mnemonic": [
+        "P1 暴雷環形 vs 暴風圓形 → 看連線數判斷",
+        "P2 三信徒：騎士反方向 / 白魔背對 / 龍騎遠離",
+        "P3 類星體 = 天平 → 站輕端避擊退",
+        "罪與罰：黑白圈必須重合"
+      ],
+      "phases": [
+        {
+          "name": "P1 (100–65%)",
+          "mechanics": [
+            {
+              "name": "Thunder III 震雷",
+              "type": "cone",
+              "description": "對前方釋放扇形 AoE，命中疊受傷加重。",
+              "tips": [
+                {
+                  "text": "MT 朝場邊",
+                  "role": "tank"
+                },
+                "近戰站側後"
+              ]
+            },
+            {
+              "name": "Gnosis 靈知",
+              "type": "knockback",
+              "description": "以芭碧蘿為中心的全屏 AoE，附帶擊退（防擊退有效）。",
+              "tips": [
+                "Arm's Length / Surecast 可免位移"
+              ]
+            },
+            {
+              "name": "Aeon Adds 移涌 + 暴雷/暴風組合",
+              "type": "mechanic",
+              "description": "場上生成 4 個移涌；boss 與 2 個分身連線釋放暴雷 (環形 AoE) + 另 2 個釋放暴風 (圓形 AoE + 擊退)；或連線 1 個釋放震雷 + 另 3 個釋放暴風。",
+              "tips": [
+                "看 boss 連線數判定機制",
+                "1 連線 → 暴雷環形：站 boss 身邊",
+                "2 連線 → 暴風圓形：站場邊外圈"
+              ]
+            },
+            {
+              "name": "Execution 處決",
+              "type": "raidwide",
+              "description": "移涌使用連線技能時 boss 同步釋放的技能，全屏 AoE。",
+              "tips": [
+                {
+                  "text": "補大團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Aiotokei 睿智之秤",
+              "type": "tankbuster",
+              "description": "對 MT 單體大傷害 + 短距離擊退 + 雷屬性耐性大幅降低；T swap 並注意後續傷害。",
+              "tips": [
+                {
+                  "text": "MT 開大減傷 → ST swap",
+                  "role": "tank"
+                },
+                {
+                  "text": "補 Esuna 解雷耐降低",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 - 信徒階段 (65–50%)",
+          "mechanics": [
+            {
+              "name": "Cloudy Heaven 陰雲天堂 (Doom)",
+              "type": "mechanic",
+              "description": "賦予全體玩家 80s 的死靈宣告 (Doom)，三隻信徒全擊破後解除；未解除或中途倒下 → 變僵屍。",
+              "tips": [
+                {
+                  "text": "DPS 全速擊破三信徒",
+                  "role": "dps"
+                },
+                {
+                  "text": "補不要讓任何人倒下",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "信徒其一 - 騎士 (前後/側面坚守)",
+              "type": "add",
+              "description": "招架技能：對前後/側面攻擊發動「反意」物理 + 擊退。讀條切換方向。",
+              "tips": [
+                "看讀條方向 → 反方向攻擊",
+                {
+                  "text": "MT 站騎士側邊或正面打",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Onslaught 猛突進 (騎士)",
+              "type": "stack",
+              "description": "對隨機玩家直線可分攤 AoE。",
+              "tips": [
+                "全員集合分攤"
+              ]
+            },
+            {
+              "name": "信徒其二 - 白魔 灼熱視線",
+              "type": "gaze",
+              "description": "對正對著的人附加混亂 debuff (失控)；同時放救療為己方回血。",
+              "tips": [
+                "全員背對白魔",
+                {
+                  "text": "DPS 集中秒殺白魔避免救療",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "信徒其三 - 龍騎 魔槍亂舞",
+              "type": "cone",
+              "description": "300° 前方 AoE；同時魔槍突刺對隨機玩家直線 AoE + 痛苦環刺圓形 AoE 留下冰圈 (踩入凍傷)。",
+              "tips": [
+                "站龍騎正後方避 300° 扇形",
+                "看冰圈位置避免重複踩"
+              ]
+            },
+            {
+              "name": "Aiotokei 睿智之天平",
+              "type": "knockback",
+              "description": "先將所有玩家向西擊退約 3/4 場 → 再向東擊退 → 全屏 AoE → 進入 P3。",
+              "tips": [
+                "Arm's Length 可免位移",
+                {
+                  "text": "補大團補 + 大盾",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 - 類星體循環 (50–0%)",
+          "mechanics": [
+            {
+              "name": "Quasar 類星體 (天平機制)",
+              "type": "mechanic",
+              "description": "P3 共會用 9 次。第 1 次一端 1 藍 + 另一端 3 紅 → 天平平衡 (1 藍=3 紅)；之後天平不平衡會向重端傾斜並擊退；重量差 1=3/4 場，差 2=全場。第 7 次砸在玩家位置，第 8-9 次同 2-6 次。",
+              "tips": [
+                "比較兩端隕石重量 → 站輕端避擊退",
+                "Arm's Length 可免位移"
+              ]
+            },
+            {
+              "name": "Tetraktys 如意寶珠",
+              "type": "raidwide",
+              "description": "無讀條但有施法動作；65% 前 = 二連全屏 AoE，65% 後升為三連。",
+              "tips": [
+                {
+                  "text": "補連續補療準備",
+                  "role": "healer"
+                },
+                {
+                  "text": "全員大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Sin and Punishment 罪與罰",
+              "type": "mechanic",
+              "description": "點名 2T2N 腳下黑圈 (魔法治療力降低) + 4 DPS 腳下白圈 (出血)；黑白圈未重合 → 全屏 AoE 不平衡之罰 + 虛弱。",
+              "tips": [
+                "2T2N 站場中央",
+                "4 DPS 對應重合在 2T2N 上方",
+                "或分組：MT+ST+H1+H2 與 D1+D2+D3+D4 站同點"
+              ]
+            },
+            {
+              "name": "Dive 俯衝",
+              "type": "aoe",
+              "description": "類星體釋放後 boss 消失，突進造成南或北半場物理傷害。",
+              "tips": [
+                "看 boss 出現方向 → 站另一半場"
+              ]
+            },
+            {
+              "name": "Light Dew 光露",
+              "type": "aoe",
+              "description": "場外芭碧蘿釋放南北方向直線 AoE。",
+              "tips": [
+                "看芭碧蘿出現位置 → 站側邊"
+              ]
+            },
+            {
+              "name": "Enrage - 第 9 次類星體後",
+              "type": "raidwide",
+              "description": "若未在 9 次類星體內擊殺，boss 釋放罪與罰 + 如意寶珠連續造成 99999 特殊傷害直至團滅。",
+              "tips": [
+                "DPS check：50% 後盡量壓血讓 4-5 次類星體跳過"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

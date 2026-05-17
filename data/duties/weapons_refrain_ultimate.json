@@ -1,473 +1,473 @@
 {
-    "id":  "weapons_refrain_ultimate",
-    "name":  "究極武器絕境戰",
-    "nameEn":  "The Weapon\u0027s Refrain (Ultimate)",
-    "expansion":  "4.x 紅蓮解放者 (Stormblood)",
-    "type":  "ultimate",
-    "playerCount":  8,
-    "iLvlSync":  375,
-    "jobLevelSync":  70,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）三蠻神 (Garuda → Ifrit → Titan) 各自累積以太供應 → 覺醒 → 強化機制。",
-                     "2）擊殺覺醒蠻神 → 留下以太 → 玩家拾取拿 Limit Break Surge (LB3 後 LB 回滿)。",
-                     "3）Phase 4 究極神兵：保留三蠻神技能 + Aetheroplasm 死爆印 + Citadel Buster。",
-                     "4）Phase 5 拉哈布雷亞：Annihilation 8 連光點順序 + Magic Vulnerability 排列。",
-                     "5）末段 Ultima 9999 倒數：必須 5 LB3 + 全員技能催爆。"
-                 ],
-    "notes":  "UWU（簡稱「絕神兵」），FFXIV 第二個絕境戰，5.05 開放。共 5 個階段：P1 迦樓羅、P2 伊弗利特、P3 泰坦、P4 究極神兵、P5 拉哈布雷亞 + Ultima 倒數。三蠻神「覺醒」系統是核心：需依序拿 3 層以太供應 (Aether Supply) → 覺醒 (Awakening) → 強化機制 → 撿地上以太 → Limit Break Surge buff（用 LB3 後 LB 回滿，整場可放 5+ 次 LB3）。",
-    "bosses":  [
-                   {
-                       "name":  "迦樓羅",
-                       "nameEn":  "Garuda",
-                       "mnemonic":  [
-                                        "Razor Plume 刺羽：給玩家 Low Pressure 層數，吃 High Pressure 觸發 Super Cyclone。",
-                                        "3 stack Low Pressure 觸發團滅級 Super Cyclone。",
-                                        "Friend Plume 柔羽連 DPS：DPS 引開不要進 boss，否則 Sleep 全員 30s。",
-                                        "覺醒後 4 角 Razor Plume + 邪氣龍捲 donut 追加。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 迦樓羅",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "寒風之歌 / Mistral Song",
-                                                                "type":  "aoe",
-                                                                "description":  "點名隨機補職，直線 AoE 約 9000 傷，首擊玩家受 3 萬+ 並原地留下大龍捲，踩入受高傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補職被點要走場邊放龍捲",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "其他人散開避免被線掃到"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "下行突風 / Downburst",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇方向扇形高傷約 15000。覺醒後變成可分擔扇形巨額傷害。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "覺醒前 MT 自己擋；覺醒後全員前方分擔",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "螺旋氣流 / Spiral",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss 當前面向扇形 + Stun debuff。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 拉 boss 面向場外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "飛翎雨 / Featherain",
-                                                                "type":  "spread",
-                                                                "description":  "隨機 5 人延遲圓 AoE，被擊中 15s 裂傷 DoT。",
-                                                                "tips":  [
-                                                                             "8 人散外圍 clock 位",
-                                                                             {
-                                                                                 "text":  "解裂傷 dispel",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "刺羽 / Spiny Plume",
-                                                                "type":  "other",
-                                                                "description":  "場西出現刺羽，鎖定首位對它造成仇恨的玩家（不會因治療而連線），每 8 秒對該玩家造成氣旋約 15000 + 1 層 Low Pressure。擊殺後留下 High Pressure 區域。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 接 (DPS 對它打能控線)",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "Low Pressure 層數疊到 3 = 團滅級 Super Cyclone"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "中高壓 / Mistbreaker",
-                                                                "type":  "other",
-                                                                "description":  "美翼/妙翅連線隨機玩家，連線可截，產生小 AoE + 3s High Pressure。有 Low Pressure 才能安全吃；沒有則極高傷。",
-                                                                "tips":  [
-                                                                             "刺羽接的人吃 → 抵消 1 層 Low Pressure",
-                                                                             "沒有 Low Pressure 的人禁止吃"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "柔羽 / Friend Plume",
-                                                                "type":  "other",
-                                                                "description":  "連線 DPS 並靠近，到位後對全員附加 Sleep 30s。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 被連線立刻離場邊跑遠",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "其他人也別貼近"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "邪輪旋風 + 邪氣龍捲 / Wicked Wheel + Tornado",
-                                                                "type":  "aoe",
-                                                                "description":  "以 boss 為中心的圓形 AoE；覺醒後追加 donut AoE。",
-                                                                "tips":  [
-                                                                             "覺醒前貼 boss 也死、遠離也死 → 中距離",
-                                                                             "覺醒後第一段貼 boss（圓 AoE 剛結束）再外移閃 donut"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "大氣爆發 / Greater Tempest",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體傷害約 17500；覺醒後變狂暴技。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員大減傷 + AOE 回血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "伊弗利特",
-                       "nameEn":  "Ifrit",
-                       "mnemonic":  [
-                                        "Eruption 地火噴發：點最遠 2 名玩家 4 連圓 AoE。",
-                                        "Hellfire 火獄之楔：4 根楔子（梯形排列）DPS check，破壞順序影響覺醒。",
-                                        "Inferno Howl 灼熱：補職 dot + 周身 15m 圓 AoE 三段擊退。",
-                                        "Searing Wind 火獄之鎖：連線 OT 與隨機 DPS，距離影響層數。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P2 伊弗利特",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "深紅旋風 / Crimson Cyclone",
-                                                                "type":  "aoe",
-                                                                "description":  "伊弗利特出現在隨機正點直線俯衝，約 24000 傷。覺醒後 3 個分身 + 本體同時俯衝。",
-                                                                "tips":  [
-                                                                             "看出現位置預判路徑",
-                                                                             "覺醒後本體會在 X 字或十字方向追加冲鋒，必須再閃"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "光輝炎柱 / Radiant Plume",
-                                                                "type":  "aoe",
-                                                                "description":  "全場多個圓 AoE，4 正點必有 2 點安全。",
-                                                                "tips":  [
-                                                                             "找正點安全格站"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "地獄之火炎 / Hellfire",
-                                                                "type":  "raidwide",
-                                                                "description":  "全員約 16500 傷。火獄之楔未在時限內全破則變成強制團滅 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 把 4 個楔子破光",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "烈焰焚燒 / Flaming Crush",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇無讀條扇形 + 火屬性耐性大幅降低，重複 3 次間隔 3-4 秒。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 換手吃 (4 段 debuff 重疊會秒)",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "灼熱咆哮 / Inferno Howl",
-                                                                "type":  "other",
-                                                                "description":  "點隨機補職，附加 18s 灼熱 dot（每 3s 受傷），且每 6s 對該補職 15m 圓內其他人造成極高熱風傷 + 擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點補職走場邊隔離",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "其他人遠離該補職 15m+"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火獄之鎖 / Searing Wind",
-                                                                "type":  "other",
-                                                                "description":  "連線 OT 與隨機 DPS 附加 21s debuff。距離越遠層數越高 = 傷害降低 + 持續傷害增加。同伴死亡會重連到隨機玩家。",
-                                                                "tips":  [
-                                                                             "2 人保持遠距離維持高層數",
-                                                                             {
-                                                                                 "text":  "或近距離降層數但 dot 高需補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "地火噴發 / Eruption",
-                                                                "type":  "aoe",
-                                                                "description":  "對距離 boss 最遠 + 不持有灼熱 的 2 名玩家施放 4 連圓 AoE。可以用來打破火獄之楔。",
-                                                                "tips":  [
-                                                                             "被點玩家把 AoE 帶到楔子上，每楔吃 2 發變最大、被破時迦樓羅以太供應 +1",
-                                                                             "中途死亡會轉給隨機其他玩家"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火獄之楔 / Hellfire Wedges",
-                                                                "type":  "other",
-                                                                "description":  "場上出現 4 根 Wedges 呈梯形（12/3/9/6 中選 2，2/4/8/10 中選 2）。破壞時對全員約 5000 + 1 層受傷加重 1s。被 Eruption 打 2 次變最大，破壞時迦樓羅以太供應 +1。",
-                                                                "tips":  [
-                                                                             "正常順序破完即可，全破前無覺醒",
-                                                                             "覺醒目標：所有楔子都吃 2 次 Eruption"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "烈焰碎擊 / Inferno Howl (分擔)",
-                                                                "type":  "stack",
-                                                                "description":  "點 DPS 圓形可分擔；覺醒後依分擔人數決定詛咒之炎 dot 秒數（1 人 96s ~ 6 人 3s）。",
-                                                                "tips":  [
-                                                                             "全員疊一起接，dot 越短越好"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "泰坦",
-                       "nameEn":  "Titan",
-                       "mnemonic":  [
-                                        "Landslide 山崩：當前一仇方向直線高傷。",
-                                        "Granite Gaol 花崗岩牢獄：3 人被綁，需打石頭救出。",
-                                        "Geocrush 大地粉碎：場地外側即死區漸縮。",
-                                        "Earthen Fury 大地之怒：超血量上限團滅 AoE。",
-                                        "Plates 大地之重：點名腳下 2-3 輪圓 AoE。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P3 泰坦",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "大地粉碎 / Geocrush",
-                                                                "type":  "aoe",
-                                                                "description":  "泰坦跳到正點降落，距離衰減傷害 + 場地外側即死區擴散。",
-                                                                "tips":  [
-                                                                             "預判跳點，盡量站場中保持距離",
-                                                                             "外側即死區越來越大，活動範圍變小"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "山崩 / Landslide",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇方向無讀條巨額扇形攻擊。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 把 boss 拉場邊面外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "碎岩 / Rock Buster",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇無讀條高傷扇形。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "大地之怒 / Earthen Fury",
-                                                                "type":  "raidwide",
-                                                                "description":  "超血量上限團滅級 AoE，必須有所有花崗岩牢獄都被破壞或安全處理才能存活。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + LB3",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "花崗岩牢獄 / Granite Gaol",
-                                                                "type":  "other",
-                                                                "description":  "點名 3 名（非 1 仇）玩家腳下標記，附加拘束，產生 Granite Gaol 監牢。Boss 同時 cast Granite Sepulchre 全屏高傷 AoE，未破壞牢獄則團滅。",
-                                                                "tips":  [
-                                                                             "其他 5 人立刻 burst 打破 3 個牢獄",
-                                                                             {
-                                                                                 "text":  "T 拉好 boss 別撞牢獄",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "塌方 + 爆破岩石 / Bomb Boulders",
-                                                                "type":  "other",
-                                                                "description":  "爆破岩石落地產生 AoE，會破壞 Granite Gaol → 觸發追蹤爆炸 + 污泥區域。泰坦進污泥獲得以太供應 +1。",
-                                                                "tips":  [
-                                                                             "覺醒目標：讓泰坦走過污泥",
-                                                                             "未覺醒：避免泰坦進污泥"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "地裂 / Tumult",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機（非 1 仇）玩家位置為中心，正面 + 4 斜角 5 路直線擊退；覺醒後追加無預兆六字形地裂。",
-                                                                "tips":  [
-                                                                             "閃 5 路間隔位置",
-                                                                             "覺醒後第二段地裂無預警，記住爆發位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "大地之重 / Weight of the Land",
-                                                                "type":  "spread",
-                                                                "description":  "點名隨機玩家連續 2 輪腳下圓 AoE（覺醒後 3 輪）。",
-                                                                "tips":  [
-                                                                             "被點者連續移動",
-                                                                             "其他人不要靠太近"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "怒震 / Upheaval",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體 AoE 連發；覺醒後傷害提高。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "預判補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "究極神兵",
-                       "nameEn":  "The Ultima Weapon",
-                       "mnemonic":  [
-                                        "保留三蠻神技能 + 新增 Aetheroplasm + Citadel Buster + Magic Vulnerability。",
-                                        "Aetheroplasm 死爆印：被點玩家死後爆炸傷全員。",
-                                        "Magic Vulnerability 排列：依數字順序站位。",
-                                        "Citadel Buster 雷射：T 雙 T 分擔 + 散開避免 splash。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P4 究極神兵",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "三蠻神技能繼承",
-                                                                "type":  "other",
-                                                                "description":  "P1-P3 的核心技能會持續出現（飛翎雨、深紅旋風、大地之重、地裂等），需熟記前 3 階段機制。",
-                                                                "tips":  [
-                                                                             "三蠻神機制都會輪流出"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aetheroplasm 死爆印",
-                                                                "type":  "other",
-                                                                "description":  "點名玩家附加倒數 debuff，到時被選中者爆炸對全員造成傷害。",
-                                                                "tips":  [
-                                                                             "被點者跑外圍",
-                                                                             {
-                                                                                 "text":  "預判補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Citadel Buster 堡壘擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇直線雷射 + 周圍可分擔傷害。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT + OT 一起站接",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "其他人遠離 splash 範圍"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magic Vulnerability 排列",
-                                                                "type":  "other",
-                                                                "description":  "點名 8 名玩家頭頂出現數字標記，依序站位避免重疊。",
-                                                                "tips":  [
-                                                                             "依指派數字 → clock 位",
-                                                                             "看頭頂數字確認自己位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Eye of the Tyrant 暴君之眼",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "拉哈布雷亞 + Ultima",
-                       "nameEn":  "Lahabrea + Ultima",
-                       "mnemonic":  [
-                                        "Annihilation 8 連光點：依編號順序爆，每個光點之間移動。",
-                                        "Light of Order 秩序之光：場地中心 + 周圍 8 點，找安全格。",
-                                        "Ultima 9999 倒數：必須在剩 1 秒前推爆，否則團滅。",
-                                        "末段 DPS check 約 16 分鐘，必須全員技能催爆。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P5 拉哈布雷亞 + Ultima",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Annihilation 8 連光點",
-                                                                "type":  "aoe",
-                                                                "description":  "場上出現 8 個光點，編號 1-8 依序爆發。",
-                                                                "tips":  [
-                                                                             "看光點數字判斷爆發順序",
-                                                                             "每個光點之間移動到下一個安全位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Light of Order 秩序之光",
-                                                                "type":  "aoe",
-                                                                "description":  "場地中央放大 AoE + 周圍 8 點放小 AoE，安全區為交錯點。",
-                                                                "tips":  [
-                                                                             "找正點 / 斜點交替的安全格"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ultima 倒數",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 進入 cast Ultima 9999 倒數團滅。必須在計時結束前推爆 boss。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員 LB3 + 全 burst",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "可用之前累積的 Limit Break Surge 額外 LB"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "weapons_refrain_ultimate",
+  "name": "究極武器絕境戰",
+  "nameEn": "The Weapon's Refrain (Ultimate)",
+  "expansion": "4.x 紅蓮解放者 (Stormblood)",
+  "type": "ultimate",
+  "playerCount": 8,
+  "iLvlSync": 375,
+  "jobLevelSync": 70,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "三蠻神 (Garuda → Ifrit → Titan) 各自累積以太供應 → 覺醒 → 強化機制。",
+    "擊殺覺醒蠻神 → 留下以太 → 玩家拾取拿 Limit Break Surge (LB3 後 LB 回滿)。",
+    "Phase 4 究極神兵：保留三蠻神技能 + Aetheroplasm 死爆印 + Citadel Buster。",
+    "Phase 5 拉哈布雷亞：Annihilation 8 連光點順序 + Magic Vulnerability 排列。",
+    "末段 Ultima 9999 倒數：必須 5 LB3 + 全員技能催爆。"
+  ],
+  "notes": "UWU（簡稱「絕神兵」），FFXIV 第二個絕境戰，5.05 開放。共 5 個階段：P1 迦樓羅、P2 伊弗利特、P3 泰坦、P4 究極神兵、P5 拉哈布雷亞 + Ultima 倒數。三蠻神「覺醒」系統是核心：需依序拿 3 層以太供應 (Aether Supply) → 覺醒 (Awakening) → 強化機制 → 撿地上以太 → Limit Break Surge buff（用 LB3 後 LB 回滿，整場可放 5+ 次 LB3）。",
+  "bosses": [
+    {
+      "name": "迦樓羅",
+      "nameEn": "Garuda",
+      "mnemonic": [
+        "Razor Plume 刺羽：給玩家 Low Pressure 層數，吃 High Pressure 觸發 Super Cyclone。",
+        "3 stack Low Pressure 觸發團滅級 Super Cyclone。",
+        "Friend Plume 柔羽連 DPS：DPS 引開不要進 boss，否則 Sleep 全員 30s。",
+        "覺醒後 4 角 Razor Plume + 邪氣龍捲 donut 追加。"
+      ],
+      "phases": [
+        {
+          "name": "P1 迦樓羅",
+          "mechanics": [
+            {
+              "name": "寒風之歌 / Mistral Song",
+              "type": "aoe",
+              "description": "點名隨機補職，直線 AoE 約 9000 傷，首擊玩家受 3 萬+ 並原地留下大龍捲，踩入受高傷。",
+              "tips": [
+                {
+                  "text": "補職被點要走場邊放龍捲",
+                  "role": "healer"
+                },
+                "其他人散開避免被線掃到"
+              ]
+            },
+            {
+              "name": "下行突風 / Downburst",
+              "type": "tankbuster",
+              "description": "對 1 仇方向扇形高傷約 15000。覺醒後變成可分擔扇形巨額傷害。",
+              "tips": [
+                {
+                  "text": "覺醒前 MT 自己擋；覺醒後全員前方分擔",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "螺旋氣流 / Spiral",
+              "type": "aoe",
+              "description": "Boss 當前面向扇形 + Stun debuff。",
+              "tips": [
+                {
+                  "text": "MT 拉 boss 面向場外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "飛翎雨 / Featherain",
+              "type": "spread",
+              "description": "隨機 5 人延遲圓 AoE，被擊中 15s 裂傷 DoT。",
+              "tips": [
+                "8 人散外圍 clock 位",
+                {
+                  "text": "解裂傷 dispel",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "刺羽 / Spiny Plume",
+              "type": "other",
+              "description": "場西出現刺羽，鎖定首位對它造成仇恨的玩家（不會因治療而連線），每 8 秒對該玩家造成氣旋約 15000 + 1 層 Low Pressure。擊殺後留下 High Pressure 區域。",
+              "tips": [
+                {
+                  "text": "T 接 (DPS 對它打能控線)",
+                  "role": "tank"
+                },
+                "Low Pressure 層數疊到 3 = 團滅級 Super Cyclone"
+              ]
+            },
+            {
+              "name": "中高壓 / Mistbreaker",
+              "type": "other",
+              "description": "美翼/妙翅連線隨機玩家，連線可截，產生小 AoE + 3s High Pressure。有 Low Pressure 才能安全吃；沒有則極高傷。",
+              "tips": [
+                "刺羽接的人吃 → 抵消 1 層 Low Pressure",
+                "沒有 Low Pressure 的人禁止吃"
+              ]
+            },
+            {
+              "name": "柔羽 / Friend Plume",
+              "type": "other",
+              "description": "連線 DPS 並靠近，到位後對全員附加 Sleep 30s。",
+              "tips": [
+                {
+                  "text": "DPS 被連線立刻離場邊跑遠",
+                  "role": "dps"
+                },
+                "其他人也別貼近"
+              ]
+            },
+            {
+              "name": "邪輪旋風 + 邪氣龍捲 / Wicked Wheel + Tornado",
+              "type": "aoe",
+              "description": "以 boss 為中心的圓形 AoE；覺醒後追加 donut AoE。",
+              "tips": [
+                "覺醒前貼 boss 也死、遠離也死 → 中距離",
+                "覺醒後第一段貼 boss（圓 AoE 剛結束）再外移閃 donut"
+              ]
+            },
+            {
+              "name": "大氣爆發 / Greater Tempest",
+              "type": "raidwide",
+              "description": "全體傷害約 17500；覺醒後變狂暴技。",
+              "tips": [
+                {
+                  "text": "全員大減傷 + AOE 回血",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "伊弗利特",
+      "nameEn": "Ifrit",
+      "mnemonic": [
+        "Eruption 地火噴發：點最遠 2 名玩家 4 連圓 AoE。",
+        "Hellfire 火獄之楔：4 根楔子（梯形排列）DPS check，破壞順序影響覺醒。",
+        "Inferno Howl 灼熱：補職 dot + 周身 15m 圓 AoE 三段擊退。",
+        "Searing Wind 火獄之鎖：連線 OT 與隨機 DPS，距離影響層數。"
+      ],
+      "phases": [
+        {
+          "name": "P2 伊弗利特",
+          "mechanics": [
+            {
+              "name": "深紅旋風 / Crimson Cyclone",
+              "type": "aoe",
+              "description": "伊弗利特出現在隨機正點直線俯衝，約 24000 傷。覺醒後 3 個分身 + 本體同時俯衝。",
+              "tips": [
+                "看出現位置預判路徑",
+                "覺醒後本體會在 X 字或十字方向追加冲鋒，必須再閃"
+              ]
+            },
+            {
+              "name": "光輝炎柱 / Radiant Plume",
+              "type": "aoe",
+              "description": "全場多個圓 AoE，4 正點必有 2 點安全。",
+              "tips": [
+                "找正點安全格站"
+              ]
+            },
+            {
+              "name": "地獄之火炎 / Hellfire",
+              "type": "raidwide",
+              "description": "全員約 16500 傷。火獄之楔未在時限內全破則變成強制團滅 AoE。",
+              "tips": [
+                {
+                  "text": "DPS 把 4 個楔子破光",
+                  "role": "dps"
+                },
+                {
+                  "text": "減傷 + 補滿",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "烈焰焚燒 / Flaming Crush",
+              "type": "tankbuster",
+              "description": "對 1 仇無讀條扇形 + 火屬性耐性大幅降低，重複 3 次間隔 3-4 秒。",
+              "tips": [
+                {
+                  "text": "兩 T 換手吃 (4 段 debuff 重疊會秒)",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "灼熱咆哮 / Inferno Howl",
+              "type": "other",
+              "description": "點隨機補職，附加 18s 灼熱 dot（每 3s 受傷），且每 6s 對該補職 15m 圓內其他人造成極高熱風傷 + 擊退。",
+              "tips": [
+                {
+                  "text": "被點補職走場邊隔離",
+                  "role": "healer"
+                },
+                "其他人遠離該補職 15m+"
+              ]
+            },
+            {
+              "name": "火獄之鎖 / Searing Wind",
+              "type": "other",
+              "description": "連線 OT 與隨機 DPS 附加 21s debuff。距離越遠層數越高 = 傷害降低 + 持續傷害增加。同伴死亡會重連到隨機玩家。",
+              "tips": [
+                "2 人保持遠距離維持高層數",
+                {
+                  "text": "或近距離降層數但 dot 高需補血",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "地火噴發 / Eruption",
+              "type": "aoe",
+              "description": "對距離 boss 最遠 + 不持有灼熱 的 2 名玩家施放 4 連圓 AoE。可以用來打破火獄之楔。",
+              "tips": [
+                "被點玩家把 AoE 帶到楔子上，每楔吃 2 發變最大、被破時迦樓羅以太供應 +1",
+                "中途死亡會轉給隨機其他玩家"
+              ]
+            },
+            {
+              "name": "火獄之楔 / Hellfire Wedges",
+              "type": "other",
+              "description": "場上出現 4 根 Wedges 呈梯形（12/3/9/6 中選 2，2/4/8/10 中選 2）。破壞時對全員約 5000 + 1 層受傷加重 1s。被 Eruption 打 2 次變最大，破壞時迦樓羅以太供應 +1。",
+              "tips": [
+                "正常順序破完即可，全破前無覺醒",
+                "覺醒目標：所有楔子都吃 2 次 Eruption"
+              ]
+            },
+            {
+              "name": "烈焰碎擊 / Inferno Howl (分擔)",
+              "type": "stack",
+              "description": "點 DPS 圓形可分擔；覺醒後依分擔人數決定詛咒之炎 dot 秒數（1 人 96s ~ 6 人 3s）。",
+              "tips": [
+                "全員疊一起接，dot 越短越好"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "泰坦",
+      "nameEn": "Titan",
+      "mnemonic": [
+        "Landslide 山崩：當前一仇方向直線高傷。",
+        "Granite Gaol 花崗岩牢獄：3 人被綁，需打石頭救出。",
+        "Geocrush 大地粉碎：場地外側即死區漸縮。",
+        "Earthen Fury 大地之怒：超血量上限團滅 AoE。",
+        "Plates 大地之重：點名腳下 2-3 輪圓 AoE。"
+      ],
+      "phases": [
+        {
+          "name": "P3 泰坦",
+          "mechanics": [
+            {
+              "name": "大地粉碎 / Geocrush",
+              "type": "aoe",
+              "description": "泰坦跳到正點降落，距離衰減傷害 + 場地外側即死區擴散。",
+              "tips": [
+                "預判跳點，盡量站場中保持距離",
+                "外側即死區越來越大，活動範圍變小"
+              ]
+            },
+            {
+              "name": "山崩 / Landslide",
+              "type": "tankbuster",
+              "description": "對 1 仇方向無讀條巨額扇形攻擊。",
+              "tips": [
+                {
+                  "text": "T 把 boss 拉場邊面外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "碎岩 / Rock Buster",
+              "type": "tankbuster",
+              "description": "對 1 仇無讀條高傷扇形。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "大地之怒 / Earthen Fury",
+              "type": "raidwide",
+              "description": "超血量上限團滅級 AoE，必須有所有花崗岩牢獄都被破壞或安全處理才能存活。",
+              "tips": [
+                {
+                  "text": "全員減傷 + LB3",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "花崗岩牢獄 / Granite Gaol",
+              "type": "other",
+              "description": "點名 3 名（非 1 仇）玩家腳下標記，附加拘束，產生 Granite Gaol 監牢。Boss 同時 cast Granite Sepulchre 全屏高傷 AoE，未破壞牢獄則團滅。",
+              "tips": [
+                "其他 5 人立刻 burst 打破 3 個牢獄",
+                {
+                  "text": "T 拉好 boss 別撞牢獄",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "塌方 + 爆破岩石 / Bomb Boulders",
+              "type": "other",
+              "description": "爆破岩石落地產生 AoE，會破壞 Granite Gaol → 觸發追蹤爆炸 + 污泥區域。泰坦進污泥獲得以太供應 +1。",
+              "tips": [
+                "覺醒目標：讓泰坦走過污泥",
+                "未覺醒：避免泰坦進污泥"
+              ]
+            },
+            {
+              "name": "地裂 / Tumult",
+              "type": "aoe",
+              "description": "對隨機（非 1 仇）玩家位置為中心，正面 + 4 斜角 5 路直線擊退；覺醒後追加無預兆六字形地裂。",
+              "tips": [
+                "閃 5 路間隔位置",
+                "覺醒後第二段地裂無預警，記住爆發位置"
+              ]
+            },
+            {
+              "name": "大地之重 / Weight of the Land",
+              "type": "spread",
+              "description": "點名隨機玩家連續 2 輪腳下圓 AoE（覺醒後 3 輪）。",
+              "tips": [
+                "被點者連續移動",
+                "其他人不要靠太近"
+              ]
+            },
+            {
+              "name": "怒震 / Upheaval",
+              "type": "raidwide",
+              "description": "全體 AoE 連發；覺醒後傷害提高。",
+              "tips": [
+                {
+                  "text": "預判補血",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "究極神兵",
+      "nameEn": "The Ultima Weapon",
+      "mnemonic": [
+        "保留三蠻神技能 + 新增 Aetheroplasm + Citadel Buster + Magic Vulnerability。",
+        "Aetheroplasm 死爆印：被點玩家死後爆炸傷全員。",
+        "Magic Vulnerability 排列：依數字順序站位。",
+        "Citadel Buster 雷射：T 雙 T 分擔 + 散開避免 splash。"
+      ],
+      "phases": [
+        {
+          "name": "P4 究極神兵",
+          "mechanics": [
+            {
+              "name": "三蠻神技能繼承",
+              "type": "other",
+              "description": "P1-P3 的核心技能會持續出現（飛翎雨、深紅旋風、大地之重、地裂等），需熟記前 3 階段機制。",
+              "tips": [
+                "三蠻神機制都會輪流出"
+              ]
+            },
+            {
+              "name": "Aetheroplasm 死爆印",
+              "type": "other",
+              "description": "點名玩家附加倒數 debuff，到時被選中者爆炸對全員造成傷害。",
+              "tips": [
+                "被點者跑外圍",
+                {
+                  "text": "預判補血",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Citadel Buster 堡壘擊",
+              "type": "tankbuster",
+              "description": "對 1 仇直線雷射 + 周圍可分擔傷害。",
+              "tips": [
+                {
+                  "text": "MT + OT 一起站接",
+                  "role": "tank"
+                },
+                "其他人遠離 splash 範圍"
+              ]
+            },
+            {
+              "name": "Magic Vulnerability 排列",
+              "type": "other",
+              "description": "點名 8 名玩家頭頂出現數字標記，依序站位避免重疊。",
+              "tips": [
+                "依指派數字 → clock 位",
+                "看頭頂數字確認自己位置"
+              ]
+            },
+            {
+              "name": "Eye of the Tyrant 暴君之眼",
+              "type": "raidwide",
+              "description": "全屏範圍 AoE 攻擊，全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "全員減傷",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "拉哈布雷亞 + Ultima",
+      "nameEn": "Lahabrea + Ultima",
+      "mnemonic": [
+        "Annihilation 8 連光點：依編號順序爆，每個光點之間移動。",
+        "Light of Order 秩序之光：場地中心 + 周圍 8 點，找安全格。",
+        "Ultima 9999 倒數：必須在剩 1 秒前推爆，否則團滅。",
+        "末段 DPS check 約 16 分鐘，必須全員技能催爆。"
+      ],
+      "phases": [
+        {
+          "name": "P5 拉哈布雷亞 + Ultima",
+          "mechanics": [
+            {
+              "name": "Annihilation 8 連光點",
+              "type": "aoe",
+              "description": "場上出現 8 個光點，編號 1-8 依序爆發。",
+              "tips": [
+                "看光點數字判斷爆發順序",
+                "每個光點之間移動到下一個安全位置"
+              ]
+            },
+            {
+              "name": "Light of Order 秩序之光",
+              "type": "aoe",
+              "description": "場地中央放大 AoE + 周圍 8 點放小 AoE，安全區為交錯點。",
+              "tips": [
+                "找正點 / 斜點交替的安全格"
+              ]
+            },
+            {
+              "name": "Ultima 倒數",
+              "type": "raidwide",
+              "description": "Boss 進入 cast Ultima 9999 倒數團滅。必須在計時結束前推爆 boss。",
+              "tips": [
+                {
+                  "text": "全員 LB3 + 全 burst",
+                  "role": "dps"
+                },
+                "可用之前累積的 Limit Break Surge 額外 LB"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

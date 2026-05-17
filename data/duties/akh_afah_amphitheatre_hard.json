@@ -1,138 +1,189 @@
 {
-    "id": "akh_afah_amphitheatre_hard",
-    "name": "真 希瓦殲滅戰",
-    "nameEn": "The Akh Afah Amphitheatre (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）真 希瓦殲滅戰：HP 軸戰鬥（非時間軸）。boss 依血量切換姿態：杖姿態（冰霜之杖）/ 劍姿態（冰霜之劍）。",
-        "2）95%-80% HP P1-1 杖姿態：Hailstones 冰雹點名 5 名玩家頭頂冰圈 → 5 秒後 AoE → 分散不要炸 MT；Absolute Zero 絕對零度全屏 22 秒一次。",
-        "3）80%-50% HP P1-2 Weapon Melt 武器融化（收回武器）：固定使用 Glacial Imagery 寒冰的幻想（疊增傷）+ 五連環冰柱（中央 + 4 點/4 斜點 → 走 4 安全格之一）+ Glacial Imagery 再疊。",
-        "4）P1-3 劍姿態：Icebrand 冰印劍 MT 朝外大減傷單吃前扇（極希瓦時為分攤）；Heavenly Strike 天降一擊全屏小擊退；Glass Dance 冰河怒擊 120° 高傷扇 + 眩暈 → MT 先把 boss 背對人群，自己穿過 boss 躲避。",
-        "5）< 50% P2：場上 4 斜點召喚 Frigid Soldiers 寒冰士兵 add → ST 拉中間 + AoE 清；MT 拉 boss 到場中偏北。boss 固定釋放 Glacial Imagery，必須在 60s 內清光 add。",
-        "6）P2 Diamond Dust 鑽石星塵：60s 後或 add 全清後 boss 收回武器 + 不可選 + 11s 後凍結全員 + 7s 後全屏。如場上還存在 add → 強制團滅（無敵無效）。",
-        "7）P3：場地最外圈成陷阱區（踩入冰塊 20s 損 HP，可被打碎，無無敵）；MT 拉 boss 到場中。Nine-Frost Crash 九連環冰柱 → 全員中央集合 → 第 1 根落下後到第 1 根位置。",
-        "8）P3 Permafrost 永久凍土：場地短暫結冰 + 50s 凍傷 DoT + 冰面 debuff → 任何行走會不受控制滑動一個場地半徑距離 + 滑動期間無法施技。",
-        "9）P3 循環：四連環/九連環冰柱（隨機）+ 劍姿態（冰印劍 → 天降一擊 → 冰河怒擊）+ 杖姿態（冰雹 → 絕對零度 x2）+ 永久凍土。",
-        "10）狂暴：伤害增加 stack 過高 → 治療資源耗盡 / 治療效率不足 → 軟狂暴。"
-    ],
-    "notes": "ARR 2.4 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』希瓦蠻神 Hard 版，於庫爾札斯西部高地阿巴拉提亞古戰場。Boss 為 Shiva 真希瓦『冰結蠻神』。本戰首次引入『姿態切換』系統：boss 在劍姿態（前扇 + 擊退 + 高傷扇）與杖姿態（點名圓 + 全屏）之間切換，每個姿態有不同技能組合。Hard 比起 EX 沒有 Avalanche 雪崩、Whiteout 白化視界、Akh Morn 死亡輪迴等機制。",
-    "bosses": [
+  "id": "akh_afah_amphitheatre_hard",
+  "name": "真 希瓦殲滅戰",
+  "nameEn": "The Akh Afah Amphitheatre (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "真 希瓦殲滅戰：HP 軸戰鬥（非時間軸）。boss 依血量切換姿態：杖姿態（冰霜之杖）/ 劍姿態（冰霜之劍）。",
+    "95%-80% HP P1-1 杖姿態：Hailstones 冰雹點名 5 名玩家頭頂冰圈 → 5 秒後 AoE → 分散不要炸 MT；Absolute Zero 絕對零度全屏 22 秒一次。",
+    "80%-50% HP P1-2 Weapon Melt 武器融化（收回武器）：固定使用 Glacial Imagery 寒冰的幻想（疊增傷）+ 五連環冰柱（中央 + 4 點/4 斜點 → 走 4 安全格之一）+ Glacial Imagery 再疊。",
+    "P1-3 劍姿態：Icebrand 冰印劍 MT 朝外大減傷單吃前扇（極希瓦時為分攤）；Heavenly Strike 天降一擊全屏小擊退；Glass Dance 冰河怒擊 120° 高傷扇 + 眩暈 → MT 先把 boss 背對人群，自己穿過 boss 躲避。",
+    "< 50% P2：場上 4 斜點召喚 Frigid Soldiers 寒冰士兵 add → ST 拉中間 + AoE 清；MT 拉 boss 到場中偏北。boss 固定釋放 Glacial Imagery，必須在 60s 內清光 add。",
+    "P2 Diamond Dust 鑽石星塵：60s 後或 add 全清後 boss 收回武器 + 不可選 + 11s 後凍結全員 + 7s 後全屏。如場上還存在 add → 強制團滅（無敵無效）。",
+    "P3：場地最外圈成陷阱區（踩入冰塊 20s 損 HP，可被打碎，無無敵）；MT 拉 boss 到場中。Nine-Frost Crash 九連環冰柱 → 全員中央集合 → 第 1 根落下後到第 1 根位置。",
+    "P3 Permafrost 永久凍土：場地短暫結冰 + 50s 凍傷 DoT + 冰面 debuff → 任何行走會不受控制滑動一個場地半徑距離 + 滑動期間無法施技。",
+    "P3 循環：四連環/九連環冰柱（隨機）+ 劍姿態（冰印劍 → 天降一擊 → 冰河怒擊）+ 杖姿態（冰雹 → 絕對零度 x2）+ 永久凍土。",
+    "狂暴：伤害增加 stack 過高 → 治療資源耗盡 / 治療效率不足 → 軟狂暴。"
+  ],
+  "notes": "ARR 2.4 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』希瓦蠻神 Hard 版，於庫爾札斯西部高地阿巴拉提亞古戰場。Boss 為 Shiva 真希瓦『冰結蠻神』。本戰首次引入『姿態切換』系統：boss 在劍姿態（前扇 + 擊退 + 高傷扇）與杖姿態（點名圓 + 全屏）之間切換，每個姿態有不同技能組合。Hard 比起 EX 沒有 Avalanche 雪崩、Whiteout 白化視界、Akh Morn 死亡輪迴等機制。",
+  "bosses": [
+    {
+      "name": "真 希瓦",
+      "nameEn": "Shiva",
+      "phases": [
         {
-            "name": "真 希瓦",
-            "nameEn": "Shiva",
-            "phases": [
+          "name": "P1 100%-50% HP（姿態切換）",
+          "mechanics": [
+            {
+              "name": "杖姿態 Frostsword of Light（冰霜之杖）",
+              "type": "mechanic",
+              "description": "boss 隨機切換到杖姿態。每次切換後固定點名除 MT 外多名玩家頭頂出現 Hailstones 冰雹冰圈 → 5 秒後 AoE。被點玩家互相散開不要炸到 MT。Absolute Zero 絕對零度每 22 秒全屏 AoE。",
+              "tips": [
                 {
-                    "name": "P1 100%-50% HP（姿態切換）",
-                    "mechanics": [
-                        {
-                            "name": "杖姿態 Frostsword of Light（冰霜之杖）",
-                            "type": "mechanic",
-                            "description": "boss 隨機切換到杖姿態。每次切換後固定點名除 MT 外多名玩家頭頂出現 Hailstones 冰雹冰圈 → 5 秒後 AoE。被點玩家互相散開不要炸到 MT。Absolute Zero 絕對零度每 22 秒全屏 AoE。",
-                            "tips": [
-                                {"text": "被點冰圈散開", "role": "dps"},
-                                {"text": "團補絕對零度", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "P1-2 收回武器 + 五連環冰柱",
-                            "type": "mechanic",
-                            "description": "HP 80% 後使用 Weapon Melt 武器融化收回武器 → 固定釋放 Glacial Imagery 寒冰的幻想自身 1 層『傷害增加』buff（軟狂暴）。然後在場中心 + 4 個正點或 4 斜點召喚 5 根冰柱 → 留 4 個安全區。約 5s 後 Icicle Impact 冰柱衝擊中等傷害 + 1 分鐘 受傷加重。站到 4 個安全區之一躲冰柱。然後再 Glacial Imagery 再疊。",
-                            "tips": [
-                                {"text": "看 5 冰柱 → 站安全區", "role": "dps"},
-                                {"text": "Esuna 清受傷加重", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "劍姿態 Frostsword（冰霜之劍）",
-                            "type": "mechanic",
-                            "description": "boss 切換到劍姿態 → Icebrand 冰印劍對 MT 方向大傷扇形 AoE → MT 開減傷在 boss 正面單吃。Heavenly Strike 天降一擊：無讀條全屏小傷 + 短距離擊退。Glass Dance 冰河怒擊：讀條前方 120° 中等扇形 + 眩暈高傷 → 低裝下中招接近團滅。",
-                            "tips": [
-                                {"text": "MT 朝外開減傷單吃冰印劍", "role": "tank"},
-                                {"text": "冰河怒擊 → MT 把 boss 背對人群 → 自己穿過 boss 躲", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "被點冰圈散開",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 < 50% HP（小怪 + 鑽石星塵）",
-                    "mechanics": [
-                        {
-                            "name": "Frigid Soldiers 寒冰士兵（4 隻 add）",
-                            "type": "add",
-                            "description": "boss HP < 50% 後收回武器 + 在場地 4 個斜點召喚 Frigid Soldiers 寒冰士兵 4 隻 add。只普攻。ST 在中間拉住 add，全員 AoE 清；MT 拉 boss 到場中偏北。",
-                            "tips": [
-                                {"text": "ST 拉 4 add 中間", "role": "tank"},
-                                {"text": "MT 拉 boss 偏北", "role": "tank"},
-                                {"text": "全員 AoE 清 add", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Diamond Dust 鑽石星塵（轉場 = 60s 內必清 add）",
-                            "type": "raidwide",
-                            "description": "召喚 add 後 boss 釋放 Glacial Imagery → 進行多次普通攻擊後隨機切換姿態。從召喚 add 動畫開始 60 秒後 / add 全部消滅 → boss 收回武器 + 不可選 + 約 11s 後凍結全員 + 凍結 7s 後釋放 Diamond Dust 鑽石星塵全屏 AoE。如果 add 還存在時 Diamond Dust 生效 → 強制團滅（無敵無效、減傷無效）。",
-                            "tips": [
-                                {"text": "60s 內必清 add", "role": "dps"},
-                                {"text": "未清 → 強制團滅", "role": "tank"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 鑽石星塵後（陷阱區 + 循環）",
-                    "mechanics": [
-                        {
-                            "name": "陷阱區（場外冰塊 20s）",
-                            "type": "mechanic",
-                            "description": "場地最外圈花紋以外的區域變為陷阱區。誤入會被凍成冰塊 → 完全不可行動 + 持續損失 HP 20 秒。冰塊可被其他成員打碎解救。注意：冰塊內玩家『不會有無敵效果』。避免誤入。",
-                            "tips": [
-                                {"text": "全員避場外", "role": "tank"},
-                                {"text": "被凍 → DPS 切目標打冰塊", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "P3-1 Nine-Frost Crash 九連環冰柱",
-                            "type": "mechanic",
-                            "description": "boss 開場 Glacial Imagery → 在場地外圈按順時針或逆時針召喚 8 根冰柱 + 場中央 1 根 → 全員中央集合 → 第 1 根落下後到第 1 根位置（熟練者第 5 根開始就算安全）。被擊中加 1 層 1 分鐘受傷加重。然後杖姿態冰雹 + 絕對零度。",
-                            "tips": [
-                                {"text": "中央集合 → 跑第 1 根位置", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Permafrost 永久凍土",
-                            "type": "mechanic",
-                            "description": "boss 讀條 Permafrost 永久凍土 → 場地短暫結冰 + 全員 50s 凍傷 dot + 冰面 debuff。冰面狀態下任何行走會使玩家向輸入方向不受控制滑動一個場地半徑距離 + 滑動期間不可釋放技能。請注意走位時機。",
-                            "tips": [
-                                {"text": "看冰面 → 小心移動", "role": "dps"},
-                                {"text": "Esuna 清凍傷", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "P3 循環",
-                            "type": "mechanic",
-                            "description": "收回武器 → 寒冰的幻想 → 隨機四連環 / 九連環冰柱 → 切換姿態。劍姿態：冰印劍 → 天降一擊 → 冰河怒擊 → 永久凍土。杖姿態：冰雹 → 絕對零度 x 2 → 永久凍土。然後回到循環開頭。",
-                            "tips": [
-                                {"text": "持續走位 + 治療 stack 管理", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "團補絕對零度",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "P1 杖：冰雹散開 + 絕對零度團補",
-                "P1 80% → 五連環冰柱 → 站安全區",
-                "P1 劍：冰印劍 MT 單吃 + 冰河怒擊穿背躲",
-                "P2 50% → 4 寒冰士兵 → 60s 內清光",
-                "鑽石星塵：未清 add = 強制團滅",
-                "P3 陷阱區（場外冰塊 20s）",
-                "九連環冰柱 → 中央集合 → 第 1 根位置",
-                "永久凍土 → 冰面滑動小心移動"
-            ]
+              ]
+            },
+            {
+              "name": "P1-2 收回武器 + 五連環冰柱",
+              "type": "mechanic",
+              "description": "HP 80% 後使用 Weapon Melt 武器融化收回武器 → 固定釋放 Glacial Imagery 寒冰的幻想自身 1 層『傷害增加』buff（軟狂暴）。然後在場中心 + 4 個正點或 4 斜點召喚 5 根冰柱 → 留 4 個安全區。約 5s 後 Icicle Impact 冰柱衝擊中等傷害 + 1 分鐘 受傷加重。站到 4 個安全區之一躲冰柱。然後再 Glacial Imagery 再疊。",
+              "tips": [
+                {
+                  "text": "看 5 冰柱 → 站安全區",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清受傷加重",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "劍姿態 Frostsword（冰霜之劍）",
+              "type": "mechanic",
+              "description": "boss 切換到劍姿態 → Icebrand 冰印劍對 MT 方向大傷扇形 AoE → MT 開減傷在 boss 正面單吃。Heavenly Strike 天降一擊：無讀條全屏小傷 + 短距離擊退。Glass Dance 冰河怒擊：讀條前方 120° 中等扇形 + 眩暈高傷 → 低裝下中招接近團滅。",
+              "tips": [
+                {
+                  "text": "MT 朝外開減傷單吃冰印劍",
+                  "role": "tank"
+                },
+                {
+                  "text": "冰河怒擊 → MT 把 boss 背對人群 → 自己穿過 boss 躲",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 50% HP（小怪 + 鑽石星塵）",
+          "mechanics": [
+            {
+              "name": "Frigid Soldiers 寒冰士兵（4 隻 add）",
+              "type": "add",
+              "description": "boss HP < 50% 後收回武器 + 在場地 4 個斜點召喚 Frigid Soldiers 寒冰士兵 4 隻 add。只普攻。ST 在中間拉住 add，全員 AoE 清；MT 拉 boss 到場中偏北。",
+              "tips": [
+                {
+                  "text": "ST 拉 4 add 中間",
+                  "role": "tank"
+                },
+                {
+                  "text": "MT 拉 boss 偏北",
+                  "role": "tank"
+                },
+                {
+                  "text": "全員 AoE 清 add",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Diamond Dust 鑽石星塵（轉場 = 60s 內必清 add）",
+              "type": "raidwide",
+              "description": "召喚 add 後 boss 釋放 Glacial Imagery → 進行多次普通攻擊後隨機切換姿態。從召喚 add 動畫開始 60 秒後 / add 全部消滅 → boss 收回武器 + 不可選 + 約 11s 後凍結全員 + 凍結 7s 後釋放 Diamond Dust 鑽石星塵全屏 AoE。如果 add 還存在時 Diamond Dust 生效 → 強制團滅（無敵無效、減傷無效）。",
+              "tips": [
+                {
+                  "text": "60s 內必清 add",
+                  "role": "dps"
+                },
+                {
+                  "text": "未清 → 強制團滅",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 鑽石星塵後（陷阱區 + 循環）",
+          "mechanics": [
+            {
+              "name": "陷阱區（場外冰塊 20s）",
+              "type": "mechanic",
+              "description": "場地最外圈花紋以外的區域變為陷阱區。誤入會被凍成冰塊 → 完全不可行動 + 持續損失 HP 20 秒。冰塊可被其他成員打碎解救。注意：冰塊內玩家『不會有無敵效果』。避免誤入。",
+              "tips": [
+                {
+                  "text": "全員避場外",
+                  "role": "tank"
+                },
+                {
+                  "text": "被凍 → DPS 切目標打冰塊",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "P3-1 Nine-Frost Crash 九連環冰柱",
+              "type": "mechanic",
+              "description": "boss 開場 Glacial Imagery → 在場地外圈按順時針或逆時針召喚 8 根冰柱 + 場中央 1 根 → 全員中央集合 → 第 1 根落下後到第 1 根位置（熟練者第 5 根開始就算安全）。被擊中加 1 層 1 分鐘受傷加重。然後杖姿態冰雹 + 絕對零度。",
+              "tips": [
+                {
+                  "text": "中央集合 → 跑第 1 根位置",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Permafrost 永久凍土",
+              "type": "mechanic",
+              "description": "boss 讀條 Permafrost 永久凍土 → 場地短暫結冰 + 全員 50s 凍傷 dot + 冰面 debuff。冰面狀態下任何行走會使玩家向輸入方向不受控制滑動一個場地半徑距離 + 滑動期間不可釋放技能。請注意走位時機。",
+              "tips": [
+                {
+                  "text": "看冰面 → 小心移動",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清凍傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "P3 循環",
+              "type": "mechanic",
+              "description": "收回武器 → 寒冰的幻想 → 隨機四連環 / 九連環冰柱 → 切換姿態。劍姿態：冰印劍 → 天降一擊 → 冰河怒擊 → 永久凍土。杖姿態：冰雹 → 絕對零度 x 2 → 永久凍土。然後回到循環開頭。",
+              "tips": [
+                {
+                  "text": "持續走位 + 治療 stack 管理",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "P1 杖：冰雹散開 + 絕對零度團補",
+        "P1 80% → 五連環冰柱 → 站安全區",
+        "P1 劍：冰印劍 MT 單吃 + 冰河怒擊穿背躲",
+        "P2 50% → 4 寒冰士兵 → 60s 內清光",
+        "鑽石星塵：未清 add = 強制團滅",
+        "P3 陷阱區（場外冰塊 20s）",
+        "九連環冰柱 → 中央集合 → 第 1 根位置",
+        "永久凍土 → 冰面滑動小心移動"
+      ]
+    }
+  ]
 }

@@ -1,361 +1,496 @@
 {
-    "id": "world_of_darkness",
-    "name": "水晶塔 暗之世界",
-    "nameEn": "The World of Darkness",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "alliance",
-    "playerCount": 24,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）水晶塔 暗之世界：水晶塔 alliance 系列第 3 部（4 boss）。ABC 三隊 24 人，FF3 致敬。",
-        "2）B1 Angra Mainyu 安格拉·曼紐：Twin Gaze 雙重視線分場紅白 → 每次必須吃『相反顏色』AoE 才能重置 debuff，疊高會大傷。",
-        "3）B1 Death Gaze 死亡視線 → 背對 boss 否則 Doom 死亡宣告 → 踩發光地板解除。100 級核爆 → 圈內人數 2 倍數大傷；150 級即死 → 圈內人數 3 倍數秒殺 → 看圈內人數調整。",
-        "4）B1 小眼球 add 釋放凶眼注目全屏 → 集火清。死亡輪盤賭：4 沙漏 + 中央手指光標旋轉 → 必清 4 沙漏才能阻止選定區即死。",
-        "5）B2 Cerberus 刻耳柏洛斯（五頭犬）：Hunting Claw 獵食爪前扇 + 斬擊耐降；Tail Sweep 擺尾後扇 + 打擊耐降。",
-        "6）B2 Gastric Juice 胃液 + Salivary Spray 唾液飛濺：胃液球縮小玩家；唾液池玩家定身 + boss 跳過去咬 → 縮小玩家會被吃進肚 → 攻擊胃壁；無縮小者直接死亡。狼毒乌头小怪會秒縮小者。",
-        "7）B2 16 層加速＋：胃壁清完後 boss 倒地讀條 Recover 復原 → 場北 2 鎖鏈拉到 boss 兩側打斷讀條，否則 boss 16 層加速。",
-        "8）B2 Hellfire Rush 地獄衝直線；Sulfur Breath 硫磺吐息 3 條直線；Bark 狂吠：黑球附加 Loneliness 孤獨感 → 結束時未與他人重疊 = Fear 恐慌 → 黑球玩家集合疊在一起。",
-        "9）B3 Pentadragon 五頭巨龍：Pale Breath 蒼白吐息 MT 朝外（治療量下降）+ 五色吐息每色機制：火（火飛蜥連線 → 互傳）/雷（4 大箭頭分攤）/毒（毒池 + 小粘液 → 近戰殺 + 站毒疊耐性）/光（日珥球必殺）/冰（冰圈擴散遠離 / 或踩冰解 Sustain 延音飛天）。",
-        "10）B3 Heat Wave 熱浪 + 3s 熱病 debuff → debuff 期間禁止任何動作避免大傷。70% Quintet Roar 咆哮五重奏 → 5 龍頭同時可選 → 全打掉削弱大招。",
-        "11）B4 Cloud of Darkness 暗黑之雲（FF3 致敬最終 boss）：Subterranean Wave Cannon 潛地式波動砲 點名追蹤 AoE；零式波動砲全屏直線無預兆。",
-        "12）B4 Wave Explosion 波動爆炸：場上多個魔法陣 + 陨石緩降 → 玩家必須站到魔法陣內（看周圍發光圈）攔截，否則全屏爆炸。",
-        "13）B4 Dark Flood 黑暗泛濫：boss 自身上石膚 + 召喚暗雲 → 不斷吸收（吸越多後續傷越高）→ 玩家站雲前方使其 Heavy 沉重減速吸收。",
-        "14）B4 邪靈 add：必清，否則臭氣 debuff 影響擊殺波動雲。Wave Burst 波動放射：boss 消失 + 3 波動雲 + 六邊形罩 → 罩外攻不到雲 + 雲讀全屏 → 必殺。"
-    ],
-    "notes": "ARR 2.5 alliance raid（Lv 50，sync 50，ilvl 90，24 人 alliance），水晶塔系列第 3 部終局，於摩杜納暗之世界。Boss 依序為 Angra Mainyu 安格拉·曼紐、Pentadragon 五頭巨龍、Cerberus 刻耳柏洛斯（五頭犬）、Cloud of Darkness 暗黑之雲（FF3 致敬最終 boss）。本副本是 FF3 致敬作品，劇情上水晶塔內部最深處的虛無之神。整體機制複雜度高於前兩部。",
-    "bosses": [
+  "id": "world_of_darkness",
+  "name": "水晶塔 暗之世界",
+  "nameEn": "The World of Darkness",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "alliance",
+  "playerCount": 24,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "水晶塔 暗之世界：水晶塔 alliance 系列第 3 部（4 boss）。ABC 三隊 24 人，FF3 致敬。",
+    "B1 Angra Mainyu 安格拉·曼紐：Twin Gaze 雙重視線分場紅白 → 每次必須吃『相反顏色』AoE 才能重置 debuff，疊高會大傷。",
+    "B1 Death Gaze 死亡視線 → 背對 boss 否則 Doom 死亡宣告 → 踩發光地板解除。100 級核爆 → 圈內人數 2 倍數大傷；150 級即死 → 圈內人數 3 倍數秒殺 → 看圈內人數調整。",
+    "B1 小眼球 add 釋放凶眼注目全屏 → 集火清。死亡輪盤賭：4 沙漏 + 中央手指光標旋轉 → 必清 4 沙漏才能阻止選定區即死。",
+    "B2 Cerberus 刻耳柏洛斯（五頭犬）：Hunting Claw 獵食爪前扇 + 斬擊耐降；Tail Sweep 擺尾後扇 + 打擊耐降。",
+    "B2 Gastric Juice 胃液 + Salivary Spray 唾液飛濺：胃液球縮小玩家；唾液池玩家定身 + boss 跳過去咬 → 縮小玩家會被吃進肚 → 攻擊胃壁；無縮小者直接死亡。狼毒乌头小怪會秒縮小者。",
+    "B2 16 層加速＋：胃壁清完後 boss 倒地讀條 Recover 復原 → 場北 2 鎖鏈拉到 boss 兩側打斷讀條，否則 boss 16 層加速。",
+    "B2 Hellfire Rush 地獄衝直線；Sulfur Breath 硫磺吐息 3 條直線；Bark 狂吠：黑球附加 Loneliness 孤獨感 → 結束時未與他人重疊 = Fear 恐慌 → 黑球玩家集合疊在一起。",
+    "B3 Pentadragon 五頭巨龍：Pale Breath 蒼白吐息 MT 朝外（治療量下降）+ 五色吐息每色機制：火（火飛蜥連線 → 互傳）/雷（4 大箭頭分攤）/毒（毒池 + 小粘液 → 近戰殺 + 站毒疊耐性）/光（日珥球必殺）/冰（冰圈擴散遠離 / 或踩冰解 Sustain 延音飛天）。",
+    "B3 Heat Wave 熱浪 + 3s 熱病 debuff → debuff 期間禁止任何動作避免大傷。70% Quintet Roar 咆哮五重奏 → 5 龍頭同時可選 → 全打掉削弱大招。",
+    "B4 Cloud of Darkness 暗黑之雲（FF3 致敬最終 boss）：Subterranean Wave Cannon 潛地式波動砲 點名追蹤 AoE；零式波動砲全屏直線無預兆。",
+    "B4 Wave Explosion 波動爆炸：場上多個魔法陣 + 陨石緩降 → 玩家必須站到魔法陣內（看周圍發光圈）攔截，否則全屏爆炸。",
+    "B4 Dark Flood 黑暗泛濫：boss 自身上石膚 + 召喚暗雲 → 不斷吸收（吸越多後續傷越高）→ 玩家站雲前方使其 Heavy 沉重減速吸收。",
+    "B4 邪靈 add：必清，否則臭氣 debuff 影響擊殺波動雲。Wave Burst 波動放射：boss 消失 + 3 波動雲 + 六邊形罩 → 罩外攻不到雲 + 雲讀全屏 → 必殺。"
+  ],
+  "notes": "ARR 2.5 alliance raid（Lv 50，sync 50，ilvl 90，24 人 alliance），水晶塔系列第 3 部終局，於摩杜納暗之世界。Boss 依序為 Angra Mainyu 安格拉·曼紐、Pentadragon 五頭巨龍、Cerberus 刻耳柏洛斯（五頭犬）、Cloud of Darkness 暗黑之雲（FF3 致敬最終 boss）。本副本是 FF3 致敬作品，劇情上水晶塔內部最深處的虛無之神。整體機制複雜度高於前兩部。",
+  "bosses": [
+    {
+      "name": "安格拉·曼紐",
+      "nameEn": "Angra Mainyu",
+      "phases": [
         {
-            "name": "安格拉·曼紐",
-            "nameEn": "Angra Mainyu",
-            "phases": [
+          "name": "主戰（雙重視線 + 數字核爆）",
+          "mechanics": [
+            {
+              "name": "Twin Gaze 雙重視線（紅白半場）",
+              "type": "mechanic",
+              "description": "boss 釋放分場為紅白兩色的 AoE → 全員獲 1 層 Brand of Lament 悲嘆烙印 / Brand of Wrath 憤怒烙印 debuff（依吃到的色）。下次雙重視線時必須吃『相反顏色』的另一面 → 重置 debuff。同色 2 次 → debuff 層數提高 + 大量傷害。例：本次吃紅，下次站白。",
+              "tips": [
                 {
-                    "name": "主戰（雙重視線 + 數字核爆）",
-                    "mechanics": [
-                        {
-                            "name": "Twin Gaze 雙重視線（紅白半場）",
-                            "type": "mechanic",
-                            "description": "boss 釋放分場為紅白兩色的 AoE → 全員獲 1 層 Brand of Lament 悲嘆烙印 / Brand of Wrath 憤怒烙印 debuff（依吃到的色）。下次雙重視線時必須吃『相反顏色』的另一面 → 重置 debuff。同色 2 次 → debuff 層數提高 + 大量傷害。例：本次吃紅，下次站白。",
-                            "tips": [
-                                {"text": "本次紅 → 下次跑白", "role": "tank"},
-                                {"text": "記住自己 debuff 顏色", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Death Gaze 死亡視線（背對 + 發光地板）",
-                            "type": "mechanic",
-                            "description": "讀條技能，背對 boss 處理否則施加 Doom 死亡宣告 debuff。Doom 需踩場地輪番點亮的發光地板來解除。",
-                            "tips": [
-                                {"text": "讀條 → 背對 boss", "role": "tank"},
-                                {"text": "中招 → 踩發光地板", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Level 100 Flare / Level 150 Death（圈內人數）",
-                            "type": "mechanic",
-                            "description": "Level 100 Flare 100 級核爆：點名 1 人 AoE 圈 + 止步 → 圈內人數為 2 的倍數 → 大量傷 + Burns 灼燒。Level 150 Death 150 級即死：圈內人數為 3 的倍數 → 圈內所有玩家秒殺。除被點名者外圈內玩家離開。",
-                            "tips": [
-                                {"text": "100/150 → 圈內人數調整避 2/3 倍數", "role": "tank"},
-                                {"text": "被點名者不能動", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Small Eyeball 小眼球 add + 凶眼注目",
-                            "type": "add",
-                            "description": "場地 spawn 多隻小眼球 add → 讀條 Evil Eye 凶眼注目全屏 AoE。集火清掉。",
-                            "tips": [
-                                {"text": "DPS AoE 速清", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Death Roulette 死亡輪盤賭（4 沙漏 + 手指光標）",
-                            "type": "mechanic",
-                            "description": "場地 spawn 4 個 Hourglass 沙漏 + 場中央 Hand Cursor 手指光標。手指順時針旋轉 → 最終隨機選定 1/4 扇形區域 → 該區域內玩家被定身 + 即死 AoE。對策：必須在手指停下前擊破 4 沙漏 → 玩家不被定身 → 即死前遠離該區域。",
-                            "tips": [
-                                {"text": "全員集火 4 沙漏", "role": "dps"},
-                                {"text": "手指停下後遠離選定區", "role": "tank"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "Twin Gaze 雙重視線 → 吃相反色重置 debuff",
-                "Death Gaze 死亡視線 → 背對；中招踩發光地板",
-                "100 級 / 150 級 → 圈內人數避 2/3 倍數",
-                "4 沙漏 + 手指光標 → 必殺 4 沙漏阻定身"
-            ]
-        },
-        {
-            "name": "五頭巨龍",
-            "nameEn": "Pentadragon",
-            "phases": [
-                {
-                    "name": "主戰（五色吐息 + 咆哮五重奏）",
-                    "mechanics": [
-                        {
-                            "name": "Pale Breath 蒼白吐息（MT 治療量下降）",
-                            "type": "cone",
-                            "description": "讀條對 MT 方向扇形 AoE + 治療量下降 debuff。MT 朝場邊面外。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "Esuna 清治療量下降", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Fire Breath 火之吐息 + Pyrohydra Whelp 龍火飛蜥",
-                            "type": "add",
-                            "description": "點名玩家圓 AoE → 區域 spawn Pyrohydra Whelp 龍火飛蜥（不可選）。飛蜥連線玩家 → Prey 獵物 + 連續火球單體 + 火耐性降低。被連線者立刻碰觸他人傳線 → 互傳直到飛蜥消失。",
-                            "tips": [
-                                {"text": "互相傳線", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Thunder Breath 雷之吐息（分攤）",
-                            "type": "stack",
-                            "description": "隨機點名 1 人 4 個黃色大箭頭朝內標記 → 對該玩家釋放需分攤傷害。被點名者迅速靠近他人分攤。",
-                            "tips": [
-                                {"text": "被點靠近隊友分攤", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Poison Breath 毒之吐息（毒沼 + 粘液）",
-                            "type": "add",
-                            "description": "boss 對地面圓 AoE → 生成毒沼 + 小粘液怪。12 秒後若無人站毒沼 → 生成大粘液怪 + 全屏 Last Song 沉默 AoE。對策：近戰站毒沼殺小粘液 → 獲毒耐性提升 buff → 一直站毒沼直到毒沼消失。",
-                            "tips": [
-                                {"text": "近戰殺小粘液", "role": "dps"},
-                                {"text": "有 buff 持續站毒沼", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Light Breath 光之吐息（日珥球）",
-                            "type": "add",
-                            "description": "boss 對地面幾個圓 AoE → 生成 Solar Flare 日珥光球 → 讀條全屏 AoE。迅速秒掉日珥。",
-                            "tips": [
-                                {"text": "DPS 速殺日珥", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Ice Breath 冰之吐息（冰圈擴散）",
-                            "type": "aoe",
-                            "description": "boss 對地面幾個圓 AoE → 生成冰圈 → 兩段擴散 → 遠離不然被凍住。",
-                            "tips": [
-                                {"text": "看冰圈擴散遠離", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Sustain 延音（點名飛天）",
-                            "type": "mechanic",
-                            "description": "點名 1 玩家黃色標記 → 大範圍 AoE → 範圍內玩家被吹上天。對策：踩冰圈被凍可避免；或被點玩家遠離人群自己飛。其他玩家看到點名直接孤立他。",
-                            "tips": [
-                                {"text": "點名玩家遠離 / 踩冰", "role": "dps"},
-                                {"text": "隊友孤立點名玩家", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Heat Wave 熱浪（3s 禁動）",
-                            "type": "raidwide",
-                            "description": "讀條全屏 AoE + 3 秒 Heat Fever 熱病 debuff。熱病期間做任何動作 → 大量傷害。中招立刻停手直到 debuff 消失。",
-                            "tips": [
-                                {"text": "熱病期間禁動", "role": "tank"},
-                                {"text": "停止 GCD", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Quintet Roar 咆哮五重奏（70% HP）",
-                            "type": "raidwide",
-                            "description": "boss HP 70% 釋放全屏大招 → 5 個龍頭同時讀條 + 變為可選目標。每打掉 1 個龍頭 boss 重新讀條 → 5 頭全部被打掉 → boss 釋放被削弱的咆哮五重奏。治療注意團補。",
-                            "tips": [
-                                {"text": "DPS 集火所有 5 龍頭", "role": "dps"},
-                                {"text": "治療大團補", "role": "healer"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "Pale Breath 蒼白 → MT 朝外 + Esuna",
-                "5 色吐息：火飛蜥傳線 / 雷分攤 / 毒站毒沼 / 光殺日珥 / 冰擴散遠離",
-                "Sustain 延音 → 踩冰避；或遠離",
-                "Heat Wave 熱浪（3s 熱病）→ 禁動",
-                "70% 咆哮五重奏 → 5 龍頭必殺"
-            ]
-        },
-        {
-            "name": "刻耳柏洛斯",
-            "nameEn": "Cerberus",
-            "phases": [
-                {
-                    "name": "P1 100%-? HP（基礎 + 縮小機制）",
-                    "mechanics": [
-                        {
-                            "name": "Hunting Claw 獵食爪 / Tail Sweep 擺尾",
-                            "type": "cone",
-                            "description": "Hunting Claw 對 MT 方向前扇 + Slashing Resistance Down 斬擊耐性降低；Tail Sweep 後方 90° 扇形 + Blunt Resistance Down 打擊耐性降低。MT 朝外、非 T 不站屁股。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "近戰站側", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Chain Off 鎖鏈解開 + Haste+ 累積",
-                            "type": "mechanic",
-                            "description": "一段時間後文字提示『刻耳柏洛斯掙脫鎖鏈束縛』+ 持續疊 Haste+ 加速＋ buff（攻擊速度提高）。",
-                            "tips": [
-                                {"text": "看 buff stack 預期 DPS race", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Gastric Juice 胃液（縮小球）",
-                            "type": "spread",
-                            "description": "點名玩家位置釋放紫色 Gastric Acid 胃液球。胃液球每隔一段時間對周圍玩家釋放 Mini 縮小 → 玩家靠近獲 Mini debuff（縮小狀態，可進 boss 體內）。",
-                            "tips": [
-                                {"text": "看胃液位置 → 玩家靠近獲 Mini", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Salivary Spray 唾液飛濺 + Aconite 狼毒烏頭",
-                            "type": "mechanic",
-                            "description": "讀條技能，點名玩家位置生成紫色唾液池 + Aconite 狼毒烏頭 add。玩家進入唾液被定身 → 一段時間後 boss 跳過去啃咬。有 Mini 玩家 → 被傳送進 boss 體內。無 Mini 玩家 → 直接死亡。狼毒烏頭會秒殺 Mini 玩家。",
-                            "tips": [
-                                {"text": "需縮小玩家進唾液", "role": "dps"},
-                                {"text": "Mini 玩家避狼毒", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Eat the Stomach 喂狗（攻擊胃壁）",
-                            "type": "mechanic",
-                            "description": "縮小並進入 boss 體內的玩家攻擊 4 個 Stomach Wall 胃壁。消滅全部 4 塊胃壁後玩家被排出。同時 boss 肚子裡會出現 Unknown Object 不明物體。",
-                            "tips": [
-                                {"text": "縮小玩家入肚殺 4 胃壁", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "本次紅 → 下次跑白",
+                  "role": "tank"
                 },
                 {
-                    "name": "P2 Recover 復原（拉鎖鏈打斷）",
-                    "mechanics": [
-                        {
-                            "name": "Recover 復原（鎖鏈打斷）",
-                            "type": "mechanic",
-                            "description": "胃壁全清後 boss 倒地不動 + 清空 Haste+ + 讀條 Recover 復原。讀條完獲 16 層 Haste+ + Damage Up（極狂暴）。對策：場地北側 spawn 2 個 Chain 鎖鏈 → 玩家調查鎖鏈牽引至 boss 兩側 → 栓上 2 個鎖鏈打斷讀條。有時限。",
-                            "tips": [
-                                {"text": "玩家拉 2 鎖鏈打斷", "role": "tank"},
-                                {"text": "時限內必須完成", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "記住自己 debuff 顏色",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Death Gaze 死亡視線（背對 + 發光地板）",
+              "type": "mechanic",
+              "description": "讀條技能，背對 boss 處理否則施加 Doom 死亡宣告 debuff。Doom 需踩場地輪番點亮的發光地板來解除。",
+              "tips": [
+                {
+                  "text": "讀條 → 背對 boss",
+                  "role": "tank"
                 },
                 {
-                    "name": "P3 復原後（後期機制）",
-                    "mechanics": [
-                        {
-                            "name": "Lightning 閃電球 + 摆尾連動",
-                            "type": "aoe",
-                            "description": "boss 釋放 Lightning Ball 閃電球 → 直線攻擊 + 30s Electrocution 感電 DoT。同時 Tail Sweep 擺尾發生。",
-                            "tips": [
-                                {"text": "看閃電球直線走縫", "role": "dps"},
-                                {"text": "Esuna 清感電", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Hellfire Rush 地獄衝 / Sulfur Breath 硫磺吐息",
-                            "type": "aoe",
-                            "description": "Hellfire Rush 直線衝刺 + 打擊耐性降低；Sulfur Breath 對隨機方向 3 條直線 AoE。",
-                            "tips": [
-                                {"text": "看直線走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Bark 狂吠（黑球 + Loneliness 孤獨）",
-                            "type": "mechanic",
-                            "description": "讀條技能，先全屏小傷 AoE → 給若干玩家附加 Loneliness 孤獨感黑球。狀態結束時若未與其他玩家重疊 → Fear 恐慌。對策：黑球玩家集合疊在一起。",
-                            "tips": [
-                                {"text": "黑球玩家集合疊", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "中招 → 踩發光地板",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Claw 前扇 / Tail 後扇 → MT 朝外",
-                "Gastric Juice 胃液 → 縮小玩家",
-                "Salivary 唾液 → 縮小玩家入肚殺胃壁",
-                "Recover 復原 → 2 鎖鏈拉打斷",
-                "Bark 狂吠（黑球）→ 集合疊"
-            ]
-        },
-        {
-            "name": "暗黑之雲",
-            "nameEn": "Cloud of Darkness",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Level 100 Flare / Level 150 Death（圈內人數）",
+              "type": "mechanic",
+              "description": "Level 100 Flare 100 級核爆：點名 1 人 AoE 圈 + 止步 → 圈內人數為 2 的倍數 → 大量傷 + Burns 灼燒。Level 150 Death 150 級即死：圈內人數為 3 的倍數 → 圈內所有玩家秒殺。除被點名者外圈內玩家離開。",
+              "tips": [
                 {
-                    "name": "主戰（FF3 致敬）",
-                    "mechanics": [
-                        {
-                            "name": "Subterranean Wave Cannon 潛地式波動砲",
-                            "type": "aoe",
-                            "description": "讀條技能，boss 點名 1 角色釋放多段連續跟踪 AoE。被點玩家持續移動遛跑。",
-                            "tips": [
-                                {"text": "被點玩家遛跑", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Zero Form Wave Cannon 零式波動砲",
-                            "type": "aoe",
-                            "description": "讀條技能，boss 每隔一段時間移動到別處讀條 → 大範圍直線 AoE 無範圍提示。觀察 boss 朝向走縫。",
-                            "tips": [
-                                {"text": "看 boss 朝向走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Wave Explosion 波動爆炸（魔法陣 + 隕石）",
-                            "type": "mechanic",
-                            "description": "boss 召喚若干圓形魔法陣，上方緩慢下降隕石。隕石落地時若魔法陣內無玩家（看周圍發光圈）→ 全屏爆炸團滅。每個魔法陣指派 1 玩家站。",
-                            "tips": [
-                                {"text": "每個魔法陣站 1 人", "role": "tank"},
-                                {"text": "看發光圈確認站位", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Dark Flood 黑暗泛濫（暗雲吸收）",
-                            "type": "mechanic",
-                            "description": "boss 張嘴 + 自身上 Stoneskin 石膚 + 召喚 Dark Cloud 暗雲與 Big Dark Cloud 大暗雲 + 不斷吸收。吸收的暗雲越多後續全屏傷越高。玩家站雲前方使其 Heavy 沉重減速吸收。",
-                            "tips": [
-                                {"text": "玩家站雲前方減速", "role": "tank"},
-                                {"text": "減少 boss 吸雲量", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Evil Spirit 邪靈（必清）",
-                            "type": "add",
-                            "description": "場地 spawn 多個 Evil Spirit 邪靈。不及時消滅 → 範圍 debuff 攻擊（效果類魔界花臭氣）→ 影響後續擊殺波動雲。",
-                            "tips": [
-                                {"text": "DPS 速清邪靈", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Wave Burst 波動放射（3 波動雲 + 六邊形罩）",
-                            "type": "mechanic",
-                            "description": "boss 消失 → 場地 spawn 3 個 Wave Cloud 波動雲。波動雲出現後不久產生六邊形防護罩 → 罩外的人無法攻擊波動雲 → 罩內人員必殺。波動雲讀條全屏技能（不殺 → 大傷）。",
-                            "tips": [
-                                {"text": "罩內人員必殺波動雲", "role": "dps"},
-                                {"text": "三隊各殺 1 雲", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "100/150 → 圈內人數調整避 2/3 倍數",
+                  "role": "tank"
+                },
+                {
+                  "text": "被點名者不能動",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "Subterranean 潛地式 → 遛跑",
-                "Zero Form 零式波動砲 → 看朝向走縫",
-                "Wave Explosion → 每魔法陣站 1 人",
-                "Dark Flood → 站雲前減速吸收",
-                "邪靈 → 速清",
-                "Wave Burst → 三隊各殺 1 雲"
-            ]
+              ]
+            },
+            {
+              "name": "Small Eyeball 小眼球 add + 凶眼注目",
+              "type": "add",
+              "description": "場地 spawn 多隻小眼球 add → 讀條 Evil Eye 凶眼注目全屏 AoE。集火清掉。",
+              "tips": [
+                {
+                  "text": "DPS AoE 速清",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Death Roulette 死亡輪盤賭（4 沙漏 + 手指光標）",
+              "type": "mechanic",
+              "description": "場地 spawn 4 個 Hourglass 沙漏 + 場中央 Hand Cursor 手指光標。手指順時針旋轉 → 最終隨機選定 1/4 扇形區域 → 該區域內玩家被定身 + 即死 AoE。對策：必須在手指停下前擊破 4 沙漏 → 玩家不被定身 → 即死前遠離該區域。",
+              "tips": [
+                {
+                  "text": "全員集火 4 沙漏",
+                  "role": "dps"
+                },
+                {
+                  "text": "手指停下後遠離選定區",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Twin Gaze 雙重視線 → 吃相反色重置 debuff",
+        "Death Gaze 死亡視線 → 背對；中招踩發光地板",
+        "100 級 / 150 級 → 圈內人數避 2/3 倍數",
+        "4 沙漏 + 手指光標 → 必殺 4 沙漏阻定身"
+      ]
+    },
+    {
+      "name": "五頭巨龍",
+      "nameEn": "Pentadragon",
+      "phases": [
+        {
+          "name": "主戰（五色吐息 + 咆哮五重奏）",
+          "mechanics": [
+            {
+              "name": "Pale Breath 蒼白吐息（MT 治療量下降）",
+              "type": "cone",
+              "description": "讀條對 MT 方向扇形 AoE + 治療量下降 debuff。MT 朝場邊面外。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "Esuna 清治療量下降",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Fire Breath 火之吐息 + Pyrohydra Whelp 龍火飛蜥",
+              "type": "add",
+              "description": "點名玩家圓 AoE → 區域 spawn Pyrohydra Whelp 龍火飛蜥（不可選）。飛蜥連線玩家 → Prey 獵物 + 連續火球單體 + 火耐性降低。被連線者立刻碰觸他人傳線 → 互傳直到飛蜥消失。",
+              "tips": [
+                {
+                  "text": "互相傳線",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Thunder Breath 雷之吐息（分攤）",
+              "type": "stack",
+              "description": "隨機點名 1 人 4 個黃色大箭頭朝內標記 → 對該玩家釋放需分攤傷害。被點名者迅速靠近他人分攤。",
+              "tips": [
+                {
+                  "text": "被點靠近隊友分攤",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Poison Breath 毒之吐息（毒沼 + 粘液）",
+              "type": "add",
+              "description": "boss 對地面圓 AoE → 生成毒沼 + 小粘液怪。12 秒後若無人站毒沼 → 生成大粘液怪 + 全屏 Last Song 沉默 AoE。對策：近戰站毒沼殺小粘液 → 獲毒耐性提升 buff → 一直站毒沼直到毒沼消失。",
+              "tips": [
+                {
+                  "text": "近戰殺小粘液",
+                  "role": "dps"
+                },
+                {
+                  "text": "有 buff 持續站毒沼",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Light Breath 光之吐息（日珥球）",
+              "type": "add",
+              "description": "boss 對地面幾個圓 AoE → 生成 Solar Flare 日珥光球 → 讀條全屏 AoE。迅速秒掉日珥。",
+              "tips": [
+                {
+                  "text": "DPS 速殺日珥",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Ice Breath 冰之吐息（冰圈擴散）",
+              "type": "aoe",
+              "description": "boss 對地面幾個圓 AoE → 生成冰圈 → 兩段擴散 → 遠離不然被凍住。",
+              "tips": [
+                {
+                  "text": "看冰圈擴散遠離",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Sustain 延音（點名飛天）",
+              "type": "mechanic",
+              "description": "點名 1 玩家黃色標記 → 大範圍 AoE → 範圍內玩家被吹上天。對策：踩冰圈被凍可避免；或被點玩家遠離人群自己飛。其他玩家看到點名直接孤立他。",
+              "tips": [
+                {
+                  "text": "點名玩家遠離 / 踩冰",
+                  "role": "dps"
+                },
+                {
+                  "text": "隊友孤立點名玩家",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Heat Wave 熱浪（3s 禁動）",
+              "type": "raidwide",
+              "description": "讀條全屏 AoE + 3 秒 Heat Fever 熱病 debuff。熱病期間做任何動作 → 大量傷害。中招立刻停手直到 debuff 消失。",
+              "tips": [
+                {
+                  "text": "熱病期間禁動",
+                  "role": "tank"
+                },
+                {
+                  "text": "停止 GCD",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Quintet Roar 咆哮五重奏（70% HP）",
+              "type": "raidwide",
+              "description": "boss HP 70% 釋放全屏大招 → 5 個龍頭同時讀條 + 變為可選目標。每打掉 1 個龍頭 boss 重新讀條 → 5 頭全部被打掉 → boss 釋放被削弱的咆哮五重奏。治療注意團補。",
+              "tips": [
+                {
+                  "text": "DPS 集火所有 5 龍頭",
+                  "role": "dps"
+                },
+                {
+                  "text": "治療大團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Pale Breath 蒼白 → MT 朝外 + Esuna",
+        "5 色吐息：火飛蜥傳線 / 雷分攤 / 毒站毒沼 / 光殺日珥 / 冰擴散遠離",
+        "Sustain 延音 → 踩冰避；或遠離",
+        "Heat Wave 熱浪（3s 熱病）→ 禁動",
+        "70% 咆哮五重奏 → 5 龍頭必殺"
+      ]
+    },
+    {
+      "name": "刻耳柏洛斯",
+      "nameEn": "Cerberus",
+      "phases": [
+        {
+          "name": "P1 100%-? HP（基礎 + 縮小機制）",
+          "mechanics": [
+            {
+              "name": "Hunting Claw 獵食爪 / Tail Sweep 擺尾",
+              "type": "cone",
+              "description": "Hunting Claw 對 MT 方向前扇 + Slashing Resistance Down 斬擊耐性降低；Tail Sweep 後方 90° 扇形 + Blunt Resistance Down 打擊耐性降低。MT 朝外、非 T 不站屁股。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "近戰站側",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Chain Off 鎖鏈解開 + Haste+ 累積",
+              "type": "mechanic",
+              "description": "一段時間後文字提示『刻耳柏洛斯掙脫鎖鏈束縛』+ 持續疊 Haste+ 加速＋ buff（攻擊速度提高）。",
+              "tips": [
+                {
+                  "text": "看 buff stack 預期 DPS race",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Gastric Juice 胃液（縮小球）",
+              "type": "spread",
+              "description": "點名玩家位置釋放紫色 Gastric Acid 胃液球。胃液球每隔一段時間對周圍玩家釋放 Mini 縮小 → 玩家靠近獲 Mini debuff（縮小狀態，可進 boss 體內）。",
+              "tips": [
+                {
+                  "text": "看胃液位置 → 玩家靠近獲 Mini",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Salivary Spray 唾液飛濺 + Aconite 狼毒烏頭",
+              "type": "mechanic",
+              "description": "讀條技能，點名玩家位置生成紫色唾液池 + Aconite 狼毒烏頭 add。玩家進入唾液被定身 → 一段時間後 boss 跳過去啃咬。有 Mini 玩家 → 被傳送進 boss 體內。無 Mini 玩家 → 直接死亡。狼毒烏頭會秒殺 Mini 玩家。",
+              "tips": [
+                {
+                  "text": "需縮小玩家進唾液",
+                  "role": "dps"
+                },
+                {
+                  "text": "Mini 玩家避狼毒",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Eat the Stomach 喂狗（攻擊胃壁）",
+              "type": "mechanic",
+              "description": "縮小並進入 boss 體內的玩家攻擊 4 個 Stomach Wall 胃壁。消滅全部 4 塊胃壁後玩家被排出。同時 boss 肚子裡會出現 Unknown Object 不明物體。",
+              "tips": [
+                {
+                  "text": "縮小玩家入肚殺 4 胃壁",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 Recover 復原（拉鎖鏈打斷）",
+          "mechanics": [
+            {
+              "name": "Recover 復原（鎖鏈打斷）",
+              "type": "mechanic",
+              "description": "胃壁全清後 boss 倒地不動 + 清空 Haste+ + 讀條 Recover 復原。讀條完獲 16 層 Haste+ + Damage Up（極狂暴）。對策：場地北側 spawn 2 個 Chain 鎖鏈 → 玩家調查鎖鏈牽引至 boss 兩側 → 栓上 2 個鎖鏈打斷讀條。有時限。",
+              "tips": [
+                {
+                  "text": "玩家拉 2 鎖鏈打斷",
+                  "role": "tank"
+                },
+                {
+                  "text": "時限內必須完成",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 復原後（後期機制）",
+          "mechanics": [
+            {
+              "name": "Lightning 閃電球 + 摆尾連動",
+              "type": "aoe",
+              "description": "boss 釋放 Lightning Ball 閃電球 → 直線攻擊 + 30s Electrocution 感電 DoT。同時 Tail Sweep 擺尾發生。",
+              "tips": [
+                {
+                  "text": "看閃電球直線走縫",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清感電",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Hellfire Rush 地獄衝 / Sulfur Breath 硫磺吐息",
+              "type": "aoe",
+              "description": "Hellfire Rush 直線衝刺 + 打擊耐性降低；Sulfur Breath 對隨機方向 3 條直線 AoE。",
+              "tips": [
+                {
+                  "text": "看直線走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Bark 狂吠（黑球 + Loneliness 孤獨）",
+              "type": "mechanic",
+              "description": "讀條技能，先全屏小傷 AoE → 給若干玩家附加 Loneliness 孤獨感黑球。狀態結束時若未與其他玩家重疊 → Fear 恐慌。對策：黑球玩家集合疊在一起。",
+              "tips": [
+                {
+                  "text": "黑球玩家集合疊",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Claw 前扇 / Tail 後扇 → MT 朝外",
+        "Gastric Juice 胃液 → 縮小玩家",
+        "Salivary 唾液 → 縮小玩家入肚殺胃壁",
+        "Recover 復原 → 2 鎖鏈拉打斷",
+        "Bark 狂吠（黑球）→ 集合疊"
+      ]
+    },
+    {
+      "name": "暗黑之雲",
+      "nameEn": "Cloud of Darkness",
+      "phases": [
+        {
+          "name": "主戰（FF3 致敬）",
+          "mechanics": [
+            {
+              "name": "Subterranean Wave Cannon 潛地式波動砲",
+              "type": "aoe",
+              "description": "讀條技能，boss 點名 1 角色釋放多段連續跟踪 AoE。被點玩家持續移動遛跑。",
+              "tips": [
+                {
+                  "text": "被點玩家遛跑",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Zero Form Wave Cannon 零式波動砲",
+              "type": "aoe",
+              "description": "讀條技能，boss 每隔一段時間移動到別處讀條 → 大範圍直線 AoE 無範圍提示。觀察 boss 朝向走縫。",
+              "tips": [
+                {
+                  "text": "看 boss 朝向走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Wave Explosion 波動爆炸（魔法陣 + 隕石）",
+              "type": "mechanic",
+              "description": "boss 召喚若干圓形魔法陣，上方緩慢下降隕石。隕石落地時若魔法陣內無玩家（看周圍發光圈）→ 全屏爆炸團滅。每個魔法陣指派 1 玩家站。",
+              "tips": [
+                {
+                  "text": "每個魔法陣站 1 人",
+                  "role": "tank"
+                },
+                {
+                  "text": "看發光圈確認站位",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Dark Flood 黑暗泛濫（暗雲吸收）",
+              "type": "mechanic",
+              "description": "boss 張嘴 + 自身上 Stoneskin 石膚 + 召喚 Dark Cloud 暗雲與 Big Dark Cloud 大暗雲 + 不斷吸收。吸收的暗雲越多後續全屏傷越高。玩家站雲前方使其 Heavy 沉重減速吸收。",
+              "tips": [
+                {
+                  "text": "玩家站雲前方減速",
+                  "role": "tank"
+                },
+                {
+                  "text": "減少 boss 吸雲量",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Evil Spirit 邪靈（必清）",
+              "type": "add",
+              "description": "場地 spawn 多個 Evil Spirit 邪靈。不及時消滅 → 範圍 debuff 攻擊（效果類魔界花臭氣）→ 影響後續擊殺波動雲。",
+              "tips": [
+                {
+                  "text": "DPS 速清邪靈",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Wave Burst 波動放射（3 波動雲 + 六邊形罩）",
+              "type": "mechanic",
+              "description": "boss 消失 → 場地 spawn 3 個 Wave Cloud 波動雲。波動雲出現後不久產生六邊形防護罩 → 罩外的人無法攻擊波動雲 → 罩內人員必殺。波動雲讀條全屏技能（不殺 → 大傷）。",
+              "tips": [
+                {
+                  "text": "罩內人員必殺波動雲",
+                  "role": "dps"
+                },
+                {
+                  "text": "三隊各殺 1 雲",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Subterranean 潛地式 → 遛跑",
+        "Zero Form 零式波動砲 → 看朝向走縫",
+        "Wave Explosion → 每魔法陣站 1 人",
+        "Dark Flood → 站雲前減速吸收",
+        "邪靈 → 速清",
+        "Wave Burst → 三隊各殺 1 雲"
+      ]
+    }
+  ]
 }

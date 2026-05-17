@@ -1,265 +1,265 @@
 {
-    "id":  "bardams_mettle",
-    "name":  "試煉行路巴兒達木霸道",
-    "nameEn":  "Bardam\u0027s Mettle",
-    "expansion":  "4.x 紅蓮解放者 (Stormblood)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  65,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Yol 妖風：Wing Beat 翅膀 + 圓 AoE。",
-                     "2）B2 Tcokak 昭卡克：Punch 拳擊 + 場上陷阱。",
-                     "3）B3 Bardam 巴兒達木：Bardam Mettle 霸道 + 圓 AoE。"
-                 ],
-    "notes":  "SB 4.0 SB 試煉行路巴兒達木（Lv 65）。Boss 依序為 Yol 妖風、Tcokak 昭卡克、Bardam 巴兒達木。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "妖風",
-                       "nameEn":  "Yol",
-                       "mnemonic":  [
-                                        "Yol 妖風 機制：Wing Beat 翅膀 + 圓 AoE。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Heave 推擠",
-                                                                "type":  "aoe",
-                                                                "description":  "前方錐 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 朝外",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Crumbling Crust 崩裂",
-                                                                "type":  "aoe",
-                                                                "description":  "boss 周圍 4 個快速 AoE，可重疊。",
-                                                                "tips":  [
-                                                                             "近戰閃外"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Rush 衝鋒",
-                                                                "type":  "knockback",
-                                                                "description":  "拉繩 (粉紅 → 紫色) 非主仇恨者衝鋒。標記者拉遠減傷。",
-                                                                "tips":  [
-                                                                             "被標者拉遠到場邊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "War Cry → Earthquake + 動物號角",
-                                                                "type":  "other",
-                                                                "description":  "Rush 後 War Cry 全屏 + Earthquake 暈全隊 + 場上動物號角預告下次 AoE：Ram (直線, 3 階段) / Coeurl (大錐, Rush ×2 後) / Kukurul (小圓, Rush ×3 後)。",
-                                                                "tips":  [
-                                                                             "看動物 ! 預警走位"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "昭卡克",
-                       "nameEn":  "Tcokak",
-                       "mnemonic":  [
-                                        "Tcokak 昭卡克 機制：Punch 拳擊 + 場上陷阱。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 Hunter of Bardam",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Magnetism + Travail (shockwave) 衝擊波",
-                                                                "type":  "other",
-                                                                "description":  "Hunter 拉所有人到中央 → 內圈 AoE → 外圈 AoE。**站內外圈邊緣，等內圈爆完後退**。",
-                                                                "tips":  [
-                                                                             "站邊緣後退 (使用 ASD 或 ←→↓ 同時)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Charge 投擲",
-                                                                "type":  "aoe",
-                                                                "description":  "場邊 spear 放交叉直線 AoE。",
-                                                                "tips":  [
-                                                                             "閃交叉"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Empty Gaze 空虛凝視",
-                                                                "type":  "other",
-                                                                "description":  "Travail 期間視線攻擊。",
-                                                                "tips":  [
-                                                                             "背對 Hunter"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 Golem",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Travail (lightning) 雷塔",
-                                                                "type":  "other",
-                                                                "description":  "三 tower 120° 各一個必須站。",
-                                                                "tips":  [
-                                                                             "全員分配 tower"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Travail (firestorm) 火環",
-                                                                "type":  "aoe",
-                                                                "description":  "場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "順時針散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Heavy Strike 重擊",
-                                                                "type":  "aoe",
-                                                                "description":  "270° 前錐，**安全區 golem 後**。",
-                                                                "tips":  [
-                                                                             "站背後"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Starfall 星墜",
-                                                                "type":  "aoe",
-                                                                "description":  "4 大圓 AoE 落地，留 Star Shard 給 P3。安全區中央或外邊緣。",
-                                                                "tips":  [
-                                                                             "閃 AoE"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P3 Looming Shadow",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Looming Shadow 隕石",
-                                                                "type":  "other",
-                                                                "description":  "Looming Circle 隕石長時間後落下。",
-                                                                "tips":  [
-                                                                             "躲在最後一塊 Star Shard 後"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Magnetism + Tremblor + Heavy Strike + Shockwave 組合",
-                                                                "type":  "aoe",
-                                                                "description":  "AoE 組合 → 站兩紅 telegraph 交集三角區 → 解後跳進甜甜圈內。會破壞一塊 Star Shard。",
-                                                                "tips":  [
-                                                                             "看 telegraph 交集走位"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "巴兒達木",
-                       "nameEn":  "Bardam",
-                       "mnemonic":  [
-                                        "Bardam 巴兒達木 機制：Bardam Mettle 霸道 + 圓 AoE。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Feathercut 羽切",
-                                                                "type":  "tankbuster",
-                                                                "description":  "前方錐 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Wind Unbound 風縛解放",
-                                                                "type":  "other",
-                                                                "description":  "全屏 + 場邊召球，定時放直線 AoE。",
-                                                                "tips":  [
-                                                                             "閃直線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Flutterfall 羽落",
-                                                                "type":  "spread",
-                                                                "description":  "全員橙色標記 → 散開避重疊。",
-                                                                "tips":  [
-                                                                             "全員散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Eye of the Fierce 凶眼",
-                                                                "type":  "other",
-                                                                "description":  "視線攻擊給 Confusion。",
-                                                                "tips":  [
-                                                                             "背對 Yol"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Corpsecleaner Eagle add 階段",
-                                                                "type":  "other",
-                                                                "description":  "boss 飛走召 Eagle add，殺後再召 1 隻，期間 boss 從邊緣放無 telegraph 直線。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 速殺 eagle",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "離 boss 出現方向"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 雙翼",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Wings 雙翼可選",
-                                                                "type":  "other",
-                                                                "description":  "雙翼出，boss 無敵，必殺翼才能繼續。三個圓 AoE 順時針繞外邊。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 集中打翼",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "靠近中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Wingbeat 翼擊",
-                                                                "type":  "knockback",
-                                                                "description":  "綠色標記玩家被擊退到場邊。",
-                                                                "tips":  [
-                                                                             "跑回中央避外圈 AoE"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "LB 可跳 P2",
-                                                                "type":  "other",
-                                                                "description":  "P2 進入前一個 Wind Unbound 之前用 Limit Break 可直接過。",
-                                                                "tips":  [
-                                                                             "看時機開 LB"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "bardams_mettle",
+  "name": "試煉行路巴兒達木霸道",
+  "nameEn": "Bardam's Mettle",
+  "expansion": "4.x 紅蓮解放者 (Stormblood)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 65,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Yol 妖風：Wing Beat 翅膀 + 圓 AoE。",
+    "B2 Tcokak 昭卡克：Punch 拳擊 + 場上陷阱。",
+    "B3 Bardam 巴兒達木：Bardam Mettle 霸道 + 圓 AoE。"
+  ],
+  "notes": "SB 4.0 SB 試煉行路巴兒達木（Lv 65）。Boss 依序為 Yol 妖風、Tcokak 昭卡克、Bardam 巴兒達木。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
+  "bosses": [
+    {
+      "name": "妖風",
+      "nameEn": "Yol",
+      "mnemonic": [
+        "Yol 妖風 機制：Wing Beat 翅膀 + 圓 AoE。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "B1",
+          "mechanics": [
+            {
+              "name": "Heave 推擠",
+              "type": "aoe",
+              "description": "前方錐 AoE。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Crumbling Crust 崩裂",
+              "type": "aoe",
+              "description": "boss 周圍 4 個快速 AoE，可重疊。",
+              "tips": [
+                "近戰閃外"
+              ]
+            },
+            {
+              "name": "Rush 衝鋒",
+              "type": "knockback",
+              "description": "拉繩 (粉紅 → 紫色) 非主仇恨者衝鋒。標記者拉遠減傷。",
+              "tips": [
+                "被標者拉遠到場邊"
+              ]
+            },
+            {
+              "name": "War Cry → Earthquake + 動物號角",
+              "type": "other",
+              "description": "Rush 後 War Cry 全屏 + Earthquake 暈全隊 + 場上動物號角預告下次 AoE：Ram (直線, 3 階段) / Coeurl (大錐, Rush ×2 後) / Kukurul (小圓, Rush ×3 後)。",
+              "tips": [
+                "看動物 ! 預警走位"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "昭卡克",
+      "nameEn": "Tcokak",
+      "mnemonic": [
+        "Tcokak 昭卡克 機制：Punch 拳擊 + 場上陷阱。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "P1 Hunter of Bardam",
+          "mechanics": [
+            {
+              "name": "Magnetism + Travail (shockwave) 衝擊波",
+              "type": "other",
+              "description": "Hunter 拉所有人到中央 → 內圈 AoE → 外圈 AoE。**站內外圈邊緣，等內圈爆完後退**。",
+              "tips": [
+                "站邊緣後退 (使用 ASD 或 ←→↓ 同時)"
+              ]
+            },
+            {
+              "name": "Charge 投擲",
+              "type": "aoe",
+              "description": "場邊 spear 放交叉直線 AoE。",
+              "tips": [
+                "閃交叉"
+              ]
+            },
+            {
+              "name": "Empty Gaze 空虛凝視",
+              "type": "other",
+              "description": "Travail 期間視線攻擊。",
+              "tips": [
+                "背對 Hunter"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 Golem",
+          "mechanics": [
+            {
+              "name": "Travail (lightning) 雷塔",
+              "type": "other",
+              "description": "三 tower 120° 各一個必須站。",
+              "tips": [
+                "全員分配 tower"
+              ]
+            },
+            {
+              "name": "Travail (firestorm) 火環",
+              "type": "aoe",
+              "description": "場上範圍 AoE 預警，看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "順時針散開"
+              ]
+            },
+            {
+              "name": "Heavy Strike 重擊",
+              "type": "aoe",
+              "description": "270° 前錐，**安全區 golem 後**。",
+              "tips": [
+                "站背後"
+              ]
+            },
+            {
+              "name": "Starfall 星墜",
+              "type": "aoe",
+              "description": "4 大圓 AoE 落地，留 Star Shard 給 P3。安全區中央或外邊緣。",
+              "tips": [
+                "閃 AoE"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 Looming Shadow",
+          "mechanics": [
+            {
+              "name": "Looming Shadow 隕石",
+              "type": "other",
+              "description": "Looming Circle 隕石長時間後落下。",
+              "tips": [
+                "躲在最後一塊 Star Shard 後"
+              ]
+            },
+            {
+              "name": "Magnetism + Tremblor + Heavy Strike + Shockwave 組合",
+              "type": "aoe",
+              "description": "AoE 組合 → 站兩紅 telegraph 交集三角區 → 解後跳進甜甜圈內。會破壞一塊 Star Shard。",
+              "tips": [
+                "看 telegraph 交集走位"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巴兒達木",
+      "nameEn": "Bardam",
+      "mnemonic": [
+        "Bardam 巴兒達木 機制：Bardam Mettle 霸道 + 圓 AoE。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "P1",
+          "mechanics": [
+            {
+              "name": "Feathercut 羽切",
+              "type": "tankbuster",
+              "description": "前方錐 tankbuster。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Wind Unbound 風縛解放",
+              "type": "other",
+              "description": "全屏 + 場邊召球，定時放直線 AoE。",
+              "tips": [
+                "閃直線"
+              ]
+            },
+            {
+              "name": "Flutterfall 羽落",
+              "type": "spread",
+              "description": "全員橙色標記 → 散開避重疊。",
+              "tips": [
+                "全員散開"
+              ]
+            },
+            {
+              "name": "Eye of the Fierce 凶眼",
+              "type": "other",
+              "description": "視線攻擊給 Confusion。",
+              "tips": [
+                "背對 Yol"
+              ]
+            },
+            {
+              "name": "Corpsecleaner Eagle add 階段",
+              "type": "other",
+              "description": "boss 飛走召 Eagle add，殺後再召 1 隻，期間 boss 從邊緣放無 telegraph 直線。",
+              "tips": [
+                {
+                  "text": "DPS 速殺 eagle",
+                  "role": "dps"
+                },
+                "離 boss 出現方向"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 雙翼",
+          "mechanics": [
+            {
+              "name": "Wings 雙翼可選",
+              "type": "other",
+              "description": "雙翼出，boss 無敵，必殺翼才能繼續。三個圓 AoE 順時針繞外邊。",
+              "tips": [
+                {
+                  "text": "DPS 集中打翼",
+                  "role": "dps"
+                },
+                "靠近中央"
+              ]
+            },
+            {
+              "name": "Wingbeat 翼擊",
+              "type": "knockback",
+              "description": "綠色標記玩家被擊退到場邊。",
+              "tips": [
+                "跑回中央避外圈 AoE"
+              ]
+            },
+            {
+              "name": "LB 可跳 P2",
+              "type": "other",
+              "description": "P2 進入前一個 Wind Unbound 之前用 Limit Break 可直接過。",
+              "tips": [
+                "看時機開 LB"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

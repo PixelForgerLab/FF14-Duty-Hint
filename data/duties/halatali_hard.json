@@ -1,257 +1,359 @@
 {
-    "id": "halatali_hard",
-    "name": "劍鬥領域日影地修練所",
-    "nameEn": "Halatali (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Pyracmon 皮拉刻蒙（巨型獨眼）：場上 1 隻 Mammet 022 圍場邊移動 + 連線至 Mammet Lever 啟動裝置。Mammet 帶 Stoneskin 石膚抵消所有 boss 傷害。",
-        "2）B1 1000-Tonze Swing 千噸回轉是團滅技 → 看 boss 6 秒讀條（雙手握武器紫色全屏預兆）就一名玩家互動 Lever 讓 Mammet 給全員 Manawall 30 秒護盾。",
-        "3）B1 100/100-Tonze：單手 → 前方扇形 + 擊退；雙手 → 自身圓 + 擊退；MT 維持仇恨並用 Surecast 抗擊退。",
-        "4）B2 Catoblepas 卡托布萊帕斯：場上 4 根柱子有 Shadowy Orb 幽暗珠 → 玩家互動消耗珠子並獲得 Gloam 朦朧 buff。Demon Eye 惡魔之瞳 8 秒讀條完，所有未持有朦朧的玩家會被釘上『惡魔之瞳』debuff → 隨後吃 Magic Eye 魔眼致命。",
-        "5）B2 看到 boss 眼睛變黃 → 全員撿珠子吃朦朧；眼睛變紅就晚了。",
-        "6）B3 P1 四劍鬥士：Silent Moss 賽倫特·莫斯（healer 優先秒 → 死前留下 Goddess's Garden 增傷圓避開）、Franz the Fair 美貌劍（可打斷 Encouragement 激勵）、Langloisiert 朗格盧瓦西耶（鎖定非 T）、U'linbho 烏·琳波。",
-        "7）B3 P2 Mumuepo 穆穆埃珀（必先秒）+ Narasimha 那羅希摩：Mumuepo 對 2 名玩家施 Stop 完全束縛 + 12 秒讀條 Thal's Wrath 來生神之怒大圓 → 未被束縛玩家互動 Thal's Scepter 札爾神咒具解放隊友。",
-        "8）B3 P2 Narasimha：尾部碎擊（後方 90° 扇形）+ 灼熱吐息（前方扇形）+ 狂野衝鋒（隨機衝刺）。"
-    ],
-    "notes": "ARR 2.2 副本 Hard 版（Lv 50，sync 50，ilvl 110），東部薩納蘭日影地修練所，鬥技場恢復運作後的訓練場。Boss 依序為 Pyracmon 皮拉刻蒙（巨型獨眼）、Catoblepas 卡托布萊帕斯（魔眼怪）、終戰 6 名鬥士（4 劍鬥士 → Mumuepo + Narasimha）。本副本特色：每個 boss 都有獨特『場上互動裝置』機制——B1 Mammet Lever 給 Manawall 解 1000-Tonze、B2 Shadowy Orb 給 Gloam 防 Demon Eye、B3 Thal's Scepter 解 Stop 防 Thal's Wrath。",
-    "bosses": [
+  "id": "halatali_hard",
+  "name": "劍鬥領域日影地修練所",
+  "nameEn": "Halatali (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Pyracmon 皮拉刻蒙（巨型獨眼）：場上 1 隻 Mammet 022 圍場邊移動 + 連線至 Mammet Lever 啟動裝置。Mammet 帶 Stoneskin 石膚抵消所有 boss 傷害。",
+    "B1 1000-Tonze Swing 千噸回轉是團滅技 → 看 boss 6 秒讀條（雙手握武器紫色全屏預兆）就一名玩家互動 Lever 讓 Mammet 給全員 Manawall 30 秒護盾。",
+    "B1 100/100-Tonze：單手 → 前方扇形 + 擊退；雙手 → 自身圓 + 擊退；MT 維持仇恨並用 Surecast 抗擊退。",
+    "B2 Catoblepas 卡托布萊帕斯：場上 4 根柱子有 Shadowy Orb 幽暗珠 → 玩家互動消耗珠子並獲得 Gloam 朦朧 buff。Demon Eye 惡魔之瞳 8 秒讀條完，所有未持有朦朧的玩家會被釘上『惡魔之瞳』debuff → 隨後吃 Magic Eye 魔眼致命。",
+    "B2 看到 boss 眼睛變黃 → 全員撿珠子吃朦朧；眼睛變紅就晚了。",
+    "B3 P1 四劍鬥士：Silent Moss 賽倫特·莫斯（healer 優先秒 → 死前留下 Goddess's Garden 增傷圓避開）、Franz the Fair 美貌劍（可打斷 Encouragement 激勵）、Langloisiert 朗格盧瓦西耶（鎖定非 T）、U'linbho 烏·琳波。",
+    "B3 P2 Mumuepo 穆穆埃珀（必先秒）+ Narasimha 那羅希摩：Mumuepo 對 2 名玩家施 Stop 完全束縛 + 12 秒讀條 Thal's Wrath 來生神之怒大圓 → 未被束縛玩家互動 Thal's Scepter 札爾神咒具解放隊友。",
+    "B3 P2 Narasimha：尾部碎擊（後方 90° 扇形）+ 灼熱吐息（前方扇形）+ 狂野衝鋒（隨機衝刺）。"
+  ],
+  "notes": "ARR 2.2 副本 Hard 版（Lv 50，sync 50，ilvl 110），東部薩納蘭日影地修練所，鬥技場恢復運作後的訓練場。Boss 依序為 Pyracmon 皮拉刻蒙（巨型獨眼）、Catoblepas 卡托布萊帕斯（魔眼怪）、終戰 6 名鬥士（4 劍鬥士 → Mumuepo + Narasimha）。本副本特色：每個 boss 都有獨特『場上互動裝置』機制——B1 Mammet Lever 給 Manawall 解 1000-Tonze、B2 Shadowy Orb 給 Gloam 防 Demon Eye、B3 Thal's Scepter 解 Stop 防 Thal's Wrath。",
+  "bosses": [
+    {
+      "name": "皮拉刻蒙",
+      "nameEn": "Pyracmon",
+      "phases": [
         {
-            "name": "皮拉刻蒙",
-            "nameEn": "Pyracmon",
-            "phases": [
+          "name": "主戰（Manawall Mammet 機制）",
+          "mechanics": [
+            {
+              "name": "Mammet #022 + Mammet Lever（核心防團滅機制）",
+              "type": "mechanic",
+              "description": "場上有 1 隻 Mammet 022 圍繞場邊移動，與場地上方的 Mammet Lever 魔法人偶啟動裝置相連。Mammet 帶 Stoneskin 石膚（物理+魔法），可以抵消所有 Pyracmon 攻擊（但玩家無法直接從它身上受益）。玩家互動 Lever → 連線消失，Mammet 停止移動並讀條 Manawall 堅壁，咏唱結束後對自身與範圍內所有玩家賦予 30 秒 Manawall 堅壁護盾 buff。隨後 Mammet 進入魔力填充狀態（『魔法人偶正在填充魔力……』），一段時間後重新連線移動（『魔法人偶已經充滿了魔力！』）。",
+              "tips": [
                 {
-                    "name": "主戰（Manawall Mammet 機制）",
-                    "mechanics": [
-                        {
-                            "name": "Mammet #022 + Mammet Lever（核心防團滅機制）",
-                            "type": "mechanic",
-                            "description": "場上有 1 隻 Mammet 022 圍繞場邊移動，與場地上方的 Mammet Lever 魔法人偶啟動裝置相連。Mammet 帶 Stoneskin 石膚（物理+魔法），可以抵消所有 Pyracmon 攻擊（但玩家無法直接從它身上受益）。玩家互動 Lever → 連線消失，Mammet 停止移動並讀條 Manawall 堅壁，咏唱結束後對自身與範圍內所有玩家賦予 30 秒 Manawall 堅壁護盾 buff。隨後 Mammet 進入魔力填充狀態（『魔法人偶正在填充魔力……』），一段時間後重新連線移動（『魔法人偶已經充滿了魔力！』）。",
-                            "tips": [
-                                {"text": "1 名玩家專責互動 Lever", "role": "dps"},
-                                {"text": "看 1000-Tonze 預兆才啟動", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "1000-Tonze Swing 千噸回轉（必須 Manawall 接）",
-                            "type": "raidwide",
-                            "description": "Pyracmon 雙手握武器讀條 6 秒，生成紫色全場範圍攻擊預兆，咏唱完造成極高傷害 + 擊退。沒有 Manawall 堅壁 buff 直接團滅。看到 6 秒紫色全屏預兆 → 1 名玩家立刻啟動 Lever，全員擠到 Mammet 範圍內接 Manawall。",
-                            "tips": [
-                                {"text": "看 6s 紫色預兆 → 啟動 Lever", "role": "dps"},
-                                {"text": "全員擠 Mammet 周圍接 Manawall", "role": "tank"},
-                                {"text": "Surecast 抗擊退", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "100-Tonze Swipe 百噸橫掃（單手）",
-                            "type": "cone",
-                            "description": "Pyracmon 舉起右手武器讀條 3 秒，對 MT 前方扇形不可見預兆，咏唱完造成打擊傷害 + 擊退。MT 朝場邊面外，DPS 站背後。",
-                            "tips": [
-                                {"text": "單手 → 前扇 → MT 朝外", "role": "tank"},
-                                {"text": "非 T 站背", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "100-Tonze Swing 百噸回轉（雙手）",
-                            "type": "aoe",
-                            "description": "Pyracmon 雙手握武器讀條 4 秒，自身為中心圓 AoE 不可見預兆，咏唱完打擊傷害 + 擊退。看到雙手姿勢 → 近戰立刻退離。",
-                            "tips": [
-                                {"text": "雙手 → 自身圓 → 退離", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Glare 獰視",
-                            "type": "aoe",
-                            "description": "以隨機玩家為目標，生成直線不可見預兆，咏唱完雷屬性魔法傷害。看自己位置走縫。",
-                            "tips": [
-                                {"text": "看自己方向避直線", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Hungry Eye 掠奪本能 + 眼魔之眼",
-                            "type": "mechanic",
-                            "description": "boss 將玩家向自身吸引一段距離 → 立刻讀條 100-Tonze Swing 百噸回轉（自身圓） → 完成後 180° 轉身讀條 Eye of the Beholder 眼魔之眼（前方 210° 扇形雷屬性 + 15 秒感電）。連招：先躲圓再繞到背後。",
-                            "tips": [
-                                {"text": "被拉 → 退離躲圓 → 繞到背後躲扇", "role": "dps"},
-                                {"text": "Esuna 清感電", "role": "healer"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "1000-Tonze Swing 6s 紫色全屏 → 啟動 Lever 接 Manawall",
-                "單手 → 前扇 / 雙手 → 自身圓 / 看姿勢判斷",
-                "Glare 獰視 → 看自己方向避直線",
-                "Hungry Eye → 躲圓 → 繞背躲扇"
-            ]
-        },
-        {
-            "name": "卡托布萊帕斯",
-            "nameEn": "Catoblepas",
-            "phases": [
-                {
-                    "name": "主戰（Shadowy Orb Gloam 機制）",
-                    "mechanics": [
-                        {
-                            "name": "Shadowy Orb 幽暗珠 + Gloam 朦朧",
-                            "type": "mechanic",
-                            "description": "場上 4 根柱子上戰鬥開始後出現 Shadowy Orb 幽暗珠。玩家互動消耗 1 顆珠子 → 獲得 Gloam 朦朧 buff（可防 Demonic Eye 惡魔之瞳）。一段時間後珠子重新生成。每人分配 1 根柱子。",
-                            "tips": [
-                                {"text": "每人分配 1 根柱子", "role": "tank"},
-                                {"text": "看 Demonic Eye 預兆 → 互動撿珠", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Demonic Eye 惡魔之瞳（8 秒讀條）",
-                            "type": "mechanic",
-                            "description": "boss 的魔眼變成黃色（『卡托布萊帕斯的眼睛發出了黃色的光輝！』）開始 8 秒讀條。咏唱即將結束時眼睛變紅（『紅色的光輝！』）。讀條結束時對所有非『Gloam 朦朧』狀態的玩家賦予 Demonic Eye 惡魔之瞳 debuff，隨後 boss 對所有持有此 debuff 的玩家施放 Magic Eye 魔眼致命傷害。所有玩家在眼睛變黃就要撿 Shadowy Orb。",
-                            "tips": [
-                                {"text": "眼睛變黃 → 全員撿珠", "role": "dps"},
-                                {"text": "眼睛變紅就晚了", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Magic Eye 魔眼",
-                            "type": "spread",
-                            "description": "對隨機目標腳下圓 AoE，3 秒讀條後無屬性魔法傷害。boss HP 降低後會對全部玩家施放。被點玩家走出 + 散開。",
-                            "tips": [
-                                {"text": "看腳下圓走出", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "White Eye 白眼",
-                            "type": "cone",
-                            "description": "轉向隨機玩家，前方 90° 扇形 3 秒預兆，咏唱完無屬性魔法傷害 + 15 秒麻痹。看 boss 朝向走離扇形。",
-                            "tips": [
-                                {"text": "看 boss 朝向 → 走出扇形", "role": "dps"},
-                                {"text": "Esuna 清麻痹", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Bull Rush 猛牛衝鋒",
-                            "type": "aoe",
-                            "description": "隨機衝向 1 名玩家，無屬性打擊傷害。被鎖玩家準備閃。",
-                            "tips": [
-                                {"text": "被鎖閃避", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Unholy Eye + Roar 不淨的魔眼 + 魔獸咆哮（失敗懲罰）",
-                            "type": "mechanic",
-                            "description": "如果 Demonic Eye 沒有正確應對（玩家未在眼睛變紅前撿到 Gloam），boss 會生成 Unholy Eye 不淨的魔眼 add，並重複施放 Roar 魔獸咆哮（全場無屬性魔法傷害 + 累積『受傷加重』10 秒 stack）。受傷加重越疊越高 → 團滅。",
-                            "tips": [
-                                {"text": "出現魔獸咆哮就是 fail", "role": "tank"},
-                                {"text": "重來時務必撿珠", "role": "dps"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "黃眼 → 全員撿 Shadowy Orb 朦朧",
-                "紅眼 → 太晚 → Magic Eye 全員魔眼致命",
-                "White Eye 白眼前扇 → 走離 + Esuna 麻痹",
-                "fail → 不淨的魔眼 + 魔獸咆哮無限循環"
-            ]
-        },
-        {
-            "name": "穆穆埃珀 與 那羅希摩",
-            "nameEn": "Mumuepo the Beholden & Narasimha",
-            "phases": [
-                {
-                    "name": "P1 四劍鬥士（Silent Moss / Franz / Langloisiert / U'linbho）",
-                    "mechanics": [
-                        {
-                            "name": "Silent Moss the Solemn 女帝 賽倫特·莫斯（healer，優先秒）",
-                            "type": "add",
-                            "description": "對玩家施加 Bind 止步 + HP Regen 體力持續恢復。退場前以自身為中心留下黃色圓形 Goddess's Garden 女神的庭園 → 在內的敵方獲得『傷害提高』。優先秒掉，秒掉後拉 boss 離開圓避免增傷。",
-                            "tips": [
-                                {"text": "優先秒掉 Silent Moss", "role": "dps"},
-                                {"text": "MT 把後續 boss 拉離黃圓", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Franz the Fair 美貌劍 弗朗茨",
-                            "type": "add",
-                            "description": "Otherworldly 天外之靈短直線預兆（仇恨單體斬擊）。Encouragement 激勵讀條 4 秒可打斷（給自己技速 + 咏唱速）→ MNK/NIN/BRD 用 Interject 等技能打斷。",
-                            "tips": [
-                                {"text": "Encouragement 激勵 → 打斷", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Langloisiert the Lionheart 無雙槍 朗格盧瓦西耶",
-                            "type": "add",
-                            "description": "鎖定隨機非 T 玩家為仇恨目標，T 拉不過去。十字槍對當前仇恨目標出現十字形直線預兆。被鎖玩家繞遛或拉開。",
-                            "tips": [
-                                {"text": "被鎖玩家繞遛", "role": "dps"},
-                                {"text": "DPS 切目標秒掉", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "U'linbho the Sand Devil 沙漠獵人 烏·琳波",
-                            "type": "add",
-                            "description": "毒咬箭 → 仇恨單體斬擊 + 45 秒 Poison 毒咬箭 DoT。MT 接 + 治療 Esuna 清毒。",
-                            "tips": [
-                                {"text": "Esuna 清毒", "role": "healer"}
-                            ]
-                        }
-                    ]
+                  "text": "1 名玩家專責互動 Lever",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 穆穆埃珀（必先秒）+ 那羅希摩",
-                    "mechanics": [
-                        {
-                            "name": "Mumuepo + Narasimha 雙 boss 登場",
-                            "type": "mechanic",
-                            "description": "P1 四劍鬥士全部擊退或經過一段時間後，Mumuepo the Beholden 退位主教 穆穆埃珀 + Narasimha 那羅希摩 參戰。MT 拉穩雙 boss 在一起，DPS 優先秒 Mumuepo（小 Lalafell），因為他有 Thal's Wrath 來生神之怒團滅技。",
-                            "tips": [
-                                {"text": "MT 拉雙 boss", "role": "tank"},
-                                {"text": "DPS 優先 Mumuepo", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Stop + Thal's Wrath 完全束縛 + 來生神之怒（Mumuepo 核心招）",
-                            "type": "mechanic",
-                            "description": "Mumuepo 讀條 4 秒『Stop 停滯』對隨機 2 名玩家賦予 Stop 完全束縛無法行動。隨後 Mumuepo 繼續讀條 12 秒 Thal's Wrath 來生神之怒（盡可能覆蓋被束縛玩家的大圓 AoE 高傷火屬性）。場地邊緣出現 Thal's Scepter 札爾神的咒具。其他未被束縛玩家必須跑去互動咒具 → 解除隊友束縛（『完全束縛解除了！』），或在 12 秒讀條快結束前自動解除。被束縛玩家無法移動只能等。",
-                            "tips": [
-                                {"text": "未被束縛玩家立刻跑互動 Scepter", "role": "dps"},
-                                {"text": "Thal's Wrath 沒解 → 重傷可能 wipe", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Blaze 烈炎",
-                            "type": "spread",
-                            "description": "Mumuepo 對隨機目標腳下圓小範圍 3 秒讀條，火屬性傷害。被點走出。",
-                            "tips": [
-                                {"text": "看腳下走出", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Narasimha 那羅希摩 機制",
-                            "type": "mechanic",
-                            "description": "Narasimha 那羅希摩：Tail Smash 尾部碎擊（後方 90° 扇形 2 秒預兆）、Searing Breath 灼熱吐息（前方 90° 扇形 2 秒預兆火屬性）、Fireball 火球（隨機腳下圓 3 秒 火屬性）、Wild Charge 狂野衝鋒（隨機衝刺）、Lethal Embrace 致命擁抱（仇恨單體）。Mumuepo 秒掉後 Narasimha 機制相對簡單，MT 朝場邊面外，DPS 注意走縫。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "近戰避開 boss 屁股（尾擊）+ 前方（吐息）", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "看 1000-Tonze 預兆才啟動",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "P1 四劍鬥士 → 先秒 Silent Moss healer（拉離黃圓）",
-                "P1 Franz Encouragement 激勵 → 打斷",
-                "P1 Langloisiert 鎖定非 T → 被鎖繞遛",
-                "P2 必先秒 Mumuepo（Lalafell）",
-                "Stop 完全束縛 → Thal's Wrath 12s 大圓 → 互動 Scepter 解放隊友",
-                "Narasimha → MT 朝外，閃前扇+後扇"
-            ]
+              ]
+            },
+            {
+              "name": "1000-Tonze Swing 千噸回轉（必須 Manawall 接）",
+              "type": "raidwide",
+              "description": "Pyracmon 雙手握武器讀條 6 秒，生成紫色全場範圍攻擊預兆，咏唱完造成極高傷害 + 擊退。沒有 Manawall 堅壁 buff 直接團滅。看到 6 秒紫色全屏預兆 → 1 名玩家立刻啟動 Lever，全員擠到 Mammet 範圍內接 Manawall。",
+              "tips": [
+                {
+                  "text": "看 6s 紫色預兆 → 啟動 Lever",
+                  "role": "dps"
+                },
+                {
+                  "text": "全員擠 Mammet 周圍接 Manawall",
+                  "role": "tank"
+                },
+                {
+                  "text": "Surecast 抗擊退",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "100-Tonze Swipe 百噸橫掃（單手）",
+              "type": "cone",
+              "description": "Pyracmon 舉起右手武器讀條 3 秒，對 MT 前方扇形不可見預兆，咏唱完造成打擊傷害 + 擊退。MT 朝場邊面外，DPS 站背後。",
+              "tips": [
+                {
+                  "text": "單手 → 前扇 → MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "非 T 站背",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "100-Tonze Swing 百噸回轉（雙手）",
+              "type": "aoe",
+              "description": "Pyracmon 雙手握武器讀條 4 秒，自身為中心圓 AoE 不可見預兆，咏唱完打擊傷害 + 擊退。看到雙手姿勢 → 近戰立刻退離。",
+              "tips": [
+                {
+                  "text": "雙手 → 自身圓 → 退離",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Glare 獰視",
+              "type": "aoe",
+              "description": "以隨機玩家為目標，生成直線不可見預兆，咏唱完雷屬性魔法傷害。看自己位置走縫。",
+              "tips": [
+                {
+                  "text": "看自己方向避直線",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Hungry Eye 掠奪本能 + 眼魔之眼",
+              "type": "mechanic",
+              "description": "boss 將玩家向自身吸引一段距離 → 立刻讀條 100-Tonze Swing 百噸回轉（自身圓） → 完成後 180° 轉身讀條 Eye of the Beholder 眼魔之眼（前方 210° 扇形雷屬性 + 15 秒感電）。連招：先躲圓再繞到背後。",
+              "tips": [
+                {
+                  "text": "被拉 → 退離躲圓 → 繞到背後躲扇",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清感電",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "1000-Tonze Swing 6s 紫色全屏 → 啟動 Lever 接 Manawall",
+        "單手 → 前扇 / 雙手 → 自身圓 / 看姿勢判斷",
+        "Glare 獰視 → 看自己方向避直線",
+        "Hungry Eye → 躲圓 → 繞背躲扇"
+      ]
+    },
+    {
+      "name": "卡托布萊帕斯",
+      "nameEn": "Catoblepas",
+      "phases": [
+        {
+          "name": "主戰（Shadowy Orb Gloam 機制）",
+          "mechanics": [
+            {
+              "name": "Shadowy Orb 幽暗珠 + Gloam 朦朧",
+              "type": "mechanic",
+              "description": "場上 4 根柱子上戰鬥開始後出現 Shadowy Orb 幽暗珠。玩家互動消耗 1 顆珠子 → 獲得 Gloam 朦朧 buff（可防 Demonic Eye 惡魔之瞳）。一段時間後珠子重新生成。每人分配 1 根柱子。",
+              "tips": [
+                {
+                  "text": "每人分配 1 根柱子",
+                  "role": "tank"
+                },
+                {
+                  "text": "看 Demonic Eye 預兆 → 互動撿珠",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Demonic Eye 惡魔之瞳（8 秒讀條）",
+              "type": "mechanic",
+              "description": "boss 的魔眼變成黃色（『卡托布萊帕斯的眼睛發出了黃色的光輝！』）開始 8 秒讀條。咏唱即將結束時眼睛變紅（『紅色的光輝！』）。讀條結束時對所有非『Gloam 朦朧』狀態的玩家賦予 Demonic Eye 惡魔之瞳 debuff，隨後 boss 對所有持有此 debuff 的玩家施放 Magic Eye 魔眼致命傷害。所有玩家在眼睛變黃就要撿 Shadowy Orb。",
+              "tips": [
+                {
+                  "text": "眼睛變黃 → 全員撿珠",
+                  "role": "dps"
+                },
+                {
+                  "text": "眼睛變紅就晚了",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Magic Eye 魔眼",
+              "type": "spread",
+              "description": "對隨機目標腳下圓 AoE，3 秒讀條後無屬性魔法傷害。boss HP 降低後會對全部玩家施放。被點玩家走出 + 散開。",
+              "tips": [
+                {
+                  "text": "看腳下圓走出",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "White Eye 白眼",
+              "type": "cone",
+              "description": "轉向隨機玩家，前方 90° 扇形 3 秒預兆，咏唱完無屬性魔法傷害 + 15 秒麻痹。看 boss 朝向走離扇形。",
+              "tips": [
+                {
+                  "text": "看 boss 朝向 → 走出扇形",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清麻痹",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Bull Rush 猛牛衝鋒",
+              "type": "aoe",
+              "description": "隨機衝向 1 名玩家，無屬性打擊傷害。被鎖玩家準備閃。",
+              "tips": [
+                {
+                  "text": "被鎖閃避",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Unholy Eye + Roar 不淨的魔眼 + 魔獸咆哮（失敗懲罰）",
+              "type": "mechanic",
+              "description": "如果 Demonic Eye 沒有正確應對（玩家未在眼睛變紅前撿到 Gloam），boss 會生成 Unholy Eye 不淨的魔眼 add，並重複施放 Roar 魔獸咆哮（全場無屬性魔法傷害 + 累積『受傷加重』10 秒 stack）。受傷加重越疊越高 → 團滅。",
+              "tips": [
+                {
+                  "text": "出現魔獸咆哮就是 fail",
+                  "role": "tank"
+                },
+                {
+                  "text": "重來時務必撿珠",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "黃眼 → 全員撿 Shadowy Orb 朦朧",
+        "紅眼 → 太晚 → Magic Eye 全員魔眼致命",
+        "White Eye 白眼前扇 → 走離 + Esuna 麻痹",
+        "fail → 不淨的魔眼 + 魔獸咆哮無限循環"
+      ]
+    },
+    {
+      "name": "穆穆埃珀 與 那羅希摩",
+      "nameEn": "Mumuepo the Beholden & Narasimha",
+      "phases": [
+        {
+          "name": "P1 四劍鬥士（Silent Moss / Franz / Langloisiert / U'linbho）",
+          "mechanics": [
+            {
+              "name": "Silent Moss the Solemn 女帝 賽倫特·莫斯（healer，優先秒）",
+              "type": "add",
+              "description": "對玩家施加 Bind 止步 + HP Regen 體力持續恢復。退場前以自身為中心留下黃色圓形 Goddess's Garden 女神的庭園 → 在內的敵方獲得『傷害提高』。優先秒掉，秒掉後拉 boss 離開圓避免增傷。",
+              "tips": [
+                {
+                  "text": "優先秒掉 Silent Moss",
+                  "role": "dps"
+                },
+                {
+                  "text": "MT 把後續 boss 拉離黃圓",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Franz the Fair 美貌劍 弗朗茨",
+              "type": "add",
+              "description": "Otherworldly 天外之靈短直線預兆（仇恨單體斬擊）。Encouragement 激勵讀條 4 秒可打斷（給自己技速 + 咏唱速）→ MNK/NIN/BRD 用 Interject 等技能打斷。",
+              "tips": [
+                {
+                  "text": "Encouragement 激勵 → 打斷",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Langloisiert the Lionheart 無雙槍 朗格盧瓦西耶",
+              "type": "add",
+              "description": "鎖定隨機非 T 玩家為仇恨目標，T 拉不過去。十字槍對當前仇恨目標出現十字形直線預兆。被鎖玩家繞遛或拉開。",
+              "tips": [
+                {
+                  "text": "被鎖玩家繞遛",
+                  "role": "dps"
+                },
+                {
+                  "text": "DPS 切目標秒掉",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "U'linbho the Sand Devil 沙漠獵人 烏·琳波",
+              "type": "add",
+              "description": "毒咬箭 → 仇恨單體斬擊 + 45 秒 Poison 毒咬箭 DoT。MT 接 + 治療 Esuna 清毒。",
+              "tips": [
+                {
+                  "text": "Esuna 清毒",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 穆穆埃珀（必先秒）+ 那羅希摩",
+          "mechanics": [
+            {
+              "name": "Mumuepo + Narasimha 雙 boss 登場",
+              "type": "mechanic",
+              "description": "P1 四劍鬥士全部擊退或經過一段時間後，Mumuepo the Beholden 退位主教 穆穆埃珀 + Narasimha 那羅希摩 參戰。MT 拉穩雙 boss 在一起，DPS 優先秒 Mumuepo（小 Lalafell），因為他有 Thal's Wrath 來生神之怒團滅技。",
+              "tips": [
+                {
+                  "text": "MT 拉雙 boss",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 優先 Mumuepo",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Stop + Thal's Wrath 完全束縛 + 來生神之怒（Mumuepo 核心招）",
+              "type": "mechanic",
+              "description": "Mumuepo 讀條 4 秒『Stop 停滯』對隨機 2 名玩家賦予 Stop 完全束縛無法行動。隨後 Mumuepo 繼續讀條 12 秒 Thal's Wrath 來生神之怒（盡可能覆蓋被束縛玩家的大圓 AoE 高傷火屬性）。場地邊緣出現 Thal's Scepter 札爾神的咒具。其他未被束縛玩家必須跑去互動咒具 → 解除隊友束縛（『完全束縛解除了！』），或在 12 秒讀條快結束前自動解除。被束縛玩家無法移動只能等。",
+              "tips": [
+                {
+                  "text": "未被束縛玩家立刻跑互動 Scepter",
+                  "role": "dps"
+                },
+                {
+                  "text": "Thal's Wrath 沒解 → 重傷可能 wipe",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Blaze 烈炎",
+              "type": "spread",
+              "description": "Mumuepo 對隨機目標腳下圓小範圍 3 秒讀條，火屬性傷害。被點走出。",
+              "tips": [
+                {
+                  "text": "看腳下走出",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Narasimha 那羅希摩 機制",
+              "type": "mechanic",
+              "description": "Narasimha 那羅希摩：Tail Smash 尾部碎擊（後方 90° 扇形 2 秒預兆）、Searing Breath 灼熱吐息（前方 90° 扇形 2 秒預兆火屬性）、Fireball 火球（隨機腳下圓 3 秒 火屬性）、Wild Charge 狂野衝鋒（隨機衝刺）、Lethal Embrace 致命擁抱（仇恨單體）。Mumuepo 秒掉後 Narasimha 機制相對簡單，MT 朝場邊面外，DPS 注意走縫。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "近戰避開 boss 屁股（尾擊）+ 前方（吐息）",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "P1 四劍鬥士 → 先秒 Silent Moss healer（拉離黃圓）",
+        "P1 Franz Encouragement 激勵 → 打斷",
+        "P1 Langloisiert 鎖定非 T → 被鎖繞遛",
+        "P2 必先秒 Mumuepo（Lalafell）",
+        "Stop 完全束縛 → Thal's Wrath 12s 大圓 → 互動 Scepter 解放隊友",
+        "Narasimha → MT 朝外，閃前扇+後扇"
+      ]
+    }
+  ]
 }

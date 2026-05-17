@@ -1,115 +1,148 @@
 {
-    "id": "dragons_neck",
-    "name": "龍頸鬥技場",
-    "nameEn": "The Dragon's Neck",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）龍頸鬥技場：金碟遊樂場 Manderville Gold Saucer 內的特殊 trial，劇情 NPC Hildibrand 希爾迪布蘭特任務系列。",
-        "2）Boss 為 Ultros 烏爾特羅斯（章魚）與 Typhon 提豐（怪物）雙 boss 連戰。",
-        "3）P1 Ultros 烏爾特羅斯：Tentacles 觸手攻擊（仇恨單體 + 圓 AoE）；Ink Jet 噴墨點名圓 + Blind 失明。",
-        "4）P1 Strangle 絞殺：對隨機玩家連線 → 拉開斷開連線。",
-        "5）P2 Typhon 提豐（章魚被擊敗後）：Snort 噴氣 → 將玩家從場邊吹出場外或推離 boss → Surecast 抗或預判位置。",
-        "6）P2 Tail Slap 尾擊：後方扇形 → 站側面。",
-        "7）P2 Twister 龍捲風：點名玩家圓 AoE → 拉開避免疊。",
-        "8）P2 < 50% HP：Aerial Blast 大氣爆發全屏 → 治療團補。",
-        "9）戰鬥結束有 Hildibrand 劇情演出。"
-    ],
-    "notes": "ARR 2.51 trial（Lv 50，sync 50，8 人 trial），位於金碟遊樂場 Manderville Gold Saucer 龍頸鬥技場。Hildibrand 希爾迪布蘭特任務系列副本，劇情上 Hildibrand 一行人潛入金碟發現 Ultros 與 Typhon 進行戰鬥表演。Boss 為 Ultros（章魚）與 Typhon（FF VI 系列出現的角色），與 FFVI 致敬。難度較低，主要是劇情演出。",
-    "bosses": [
+  "id": "dragons_neck",
+  "name": "龍頸鬥技場",
+  "nameEn": "The Dragon's Neck",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "龍頸鬥技場：金碟遊樂場 Manderville Gold Saucer 內的特殊 trial，劇情 NPC Hildibrand 希爾迪布蘭特任務系列。",
+    "Boss 為 Ultros 烏爾特羅斯（章魚）與 Typhon 提豐（怪物）雙 boss 連戰。",
+    "P1 Ultros 烏爾特羅斯：Tentacles 觸手攻擊（仇恨單體 + 圓 AoE）；Ink Jet 噴墨點名圓 + Blind 失明。",
+    "P1 Strangle 絞殺：對隨機玩家連線 → 拉開斷開連線。",
+    "P2 Typhon 提豐（章魚被擊敗後）：Snort 噴氣 → 將玩家從場邊吹出場外或推離 boss → Surecast 抗或預判位置。",
+    "P2 Tail Slap 尾擊：後方扇形 → 站側面。",
+    "P2 Twister 龍捲風：點名玩家圓 AoE → 拉開避免疊。",
+    "P2 < 50% HP：Aerial Blast 大氣爆發全屏 → 治療團補。",
+    "戰鬥結束有 Hildibrand 劇情演出。"
+  ],
+  "notes": "ARR 2.51 trial（Lv 50，sync 50，8 人 trial），位於金碟遊樂場 Manderville Gold Saucer 龍頸鬥技場。Hildibrand 希爾迪布蘭特任務系列副本，劇情上 Hildibrand 一行人潛入金碟發現 Ultros 與 Typhon 進行戰鬥表演。Boss 為 Ultros（章魚）與 Typhon（FF VI 系列出現的角色），與 FFVI 致敬。難度較低，主要是劇情演出。",
+  "bosses": [
+    {
+      "name": "烏爾特羅斯 與 提豐",
+      "nameEn": "Ultros & Typhon",
+      "phases": [
         {
-            "name": "烏爾特羅斯 與 提豐",
-            "nameEn": "Ultros & Typhon",
-            "phases": [
+          "name": "P1 Ultros 烏爾特羅斯（章魚）",
+          "mechanics": [
+            {
+              "name": "Tentacle 觸手攻擊",
+              "type": "tankbuster",
+              "description": "對一仇 MT 單體 + 周身圓 AoE；MT 減傷 + 近戰退離。",
+              "tips": [
                 {
-                    "name": "P1 Ultros 烏爾特羅斯（章魚）",
-                    "mechanics": [
-                        {
-                            "name": "Tentacle 觸手攻擊",
-                            "type": "tankbuster",
-                            "description": "對一仇 MT 單體 + 周身圓 AoE；MT 減傷 + 近戰退離。",
-                            "tips": [
-                                {"text": "MT 減傷", "role": "tank"},
-                                {"text": "近戰退離 boss", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Ink Jet 噴墨",
-                            "type": "spread",
-                            "description": "點名玩家圓 AoE + Blind 失明 debuff；被點走出 + Esuna 清失明。",
-                            "tips": [
-                                {"text": "看腳下圓走出", "role": "dps"},
-                                {"text": "Esuna 清失明", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Strangle 絞殺",
-                            "type": "mechanic",
-                            "description": "對隨機玩家連線 → 連續傷害。被連線者拉開 boss 距離斷開連線。",
-                            "tips": [
-                                {"text": "被連線拉開斷線", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Cleave 前扇普攻",
-                            "type": "cone",
-                            "description": "boss 前方扇形 AoE；MT 朝外。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "MT 減傷",
+                  "role": "tank"
                 },
                 {
-                    "name": "P2 Typhon 提豐",
-                    "mechanics": [
-                        {
-                            "name": "Snort 噴氣（擊退場外）",
-                            "type": "knockback",
-                            "description": "對玩家方向噴氣 → 將玩家從場邊吹出場外（fall off）或推離 boss。Surecast 抗擊退或預判位置（站場中央）。注意：場外可能等於死亡。",
-                            "tips": [
-                                {"text": "Surecast 抗擊退", "role": "tank"},
-                                {"text": "預判位置站場中", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Tail Slap 尾擊",
-                            "type": "cone",
-                            "description": "boss 後方扇形 AoE；近戰站側面避開。",
-                            "tips": [
-                                {"text": "近戰站側", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Twister 龍捲風",
-                            "type": "spread",
-                            "description": "點名玩家圓 AoE；被點拉開避免疊。",
-                            "tips": [
-                                {"text": "被點拉開", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Aerial Blast 大氣爆發（< 50% HP）",
-                            "type": "raidwide",
-                            "description": "boss HP < 50% 後施放全屏 AoE；治療團補 + 全員減傷。",
-                            "tips": [
-                                {"text": "團補 + 減傷", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "近戰退離 boss",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "P1 Ultros 章魚 → 觸手 / 噴墨 / 絞殺",
-                "P2 Typhon → Snort 擊退（Surecast 防掉場外）",
-                "Twister 龍捲風 → 點名拉開",
-                "Aerial Blast < 50% → 團補"
-            ]
+              ]
+            },
+            {
+              "name": "Ink Jet 噴墨",
+              "type": "spread",
+              "description": "點名玩家圓 AoE + Blind 失明 debuff；被點走出 + Esuna 清失明。",
+              "tips": [
+                {
+                  "text": "看腳下圓走出",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清失明",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Strangle 絞殺",
+              "type": "mechanic",
+              "description": "對隨機玩家連線 → 連續傷害。被連線者拉開 boss 距離斷開連線。",
+              "tips": [
+                {
+                  "text": "被連線拉開斷線",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Cleave 前扇普攻",
+              "type": "cone",
+              "description": "boss 前方扇形 AoE；MT 朝外。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 Typhon 提豐",
+          "mechanics": [
+            {
+              "name": "Snort 噴氣（擊退場外）",
+              "type": "knockback",
+              "description": "對玩家方向噴氣 → 將玩家從場邊吹出場外（fall off）或推離 boss。Surecast 抗擊退或預判位置（站場中央）。注意：場外可能等於死亡。",
+              "tips": [
+                {
+                  "text": "Surecast 抗擊退",
+                  "role": "tank"
+                },
+                {
+                  "text": "預判位置站場中",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Tail Slap 尾擊",
+              "type": "cone",
+              "description": "boss 後方扇形 AoE；近戰站側面避開。",
+              "tips": [
+                {
+                  "text": "近戰站側",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Twister 龍捲風",
+              "type": "spread",
+              "description": "點名玩家圓 AoE；被點拉開避免疊。",
+              "tips": [
+                {
+                  "text": "被點拉開",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Aerial Blast 大氣爆發（< 50% HP）",
+              "type": "raidwide",
+              "description": "boss HP < 50% 後施放全屏 AoE；治療團補 + 全員減傷。",
+              "tips": [
+                {
+                  "text": "團補 + 減傷",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "P1 Ultros 章魚 → 觸手 / 噴墨 / 絞殺",
+        "P2 Typhon → Snort 擊退（Surecast 防掉場外）",
+        "Twister 龍捲風 → 點名拉開",
+        "Aerial Blast < 50% → 團補"
+      ]
+    }
+  ]
 }

@@ -1,289 +1,394 @@
 {
-    "id": "tamtara_deepcroft_hard",
-    "name": "慘劇靈殿塔姆‧塔拉墓園",
-    "nameEn": "The Tam-Tara Deepcroft (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 The Wedding Planner Liavinne 證婚人 莉亞維娜：Inhuman Brutality 非人暴行 點名 3 名玩家紅球 → 召喚 4 隻 Groomsmen 伴郎無視仇恨追被點玩家。",
-        "2）B1 伴郎/伴娘受非秒殺傷害會 Despair 自暴自棄 → 自爆全場 + 60s 受傷加重；爬行版伴郎/伴娘接觸到被點玩家 → 賦予 Death Reaching 死亡引領 → 必須擊殺爬行 add 解除。",
-        "3）B1 Decay Arrow 腐化箭：紅標點名 + 圓 AoE → 秒殺攻擊範圍內的伴郎/伴娘 → 可用來清 add。",
-        "4）B1 Burning Anger 怒火中燒：全場 AoE 對所有非 boss 角色（含 add）→ 治療團補。",
-        "5）B2 The Empty Vessel 備用的軀體：場上的 Paiyo Reiyo 帕伊尤·雷伊尤 NPC 必須保護！boss 的所有非普攻都會傷害 NPC，NPC 死 → boss 4 檔『傷害提高』+ 變大。",
-        "6）B2 < 90% 4 隻 Nameless Spirit 無名的精神 出現 + 移動向場內，接觸隊員自爆；如果碰到 Paiyo Reiyo 會幫 boss 充 1 檔『傷害提高』→ 玩家要主動撞掉自爆精神 + 保持 Paiyo Reiyo 安全。",
-        "7）B2 < 60% 6 隻精神；< 30% 出現 2 隻更大的 Nameless Soul 無名的靈魂 → 更大範圍自爆。",
-        "8）B2 boss 滿 4 檔傷害提高 → 重複施放 Dark Nebula 暗黑星雲 30,000 固定傷團滅（治療大補也救不了）→ 必須避免 Paiyo Reiyo 死/被精神碰到。",
-        "9）B3 Avere the Manful 雄壯的阿維爾 + Ida the Pure 純潔的艾達 雙 boss：阿維爾是仇恨 boss；艾達在場中央 + 紫色出血圈（不要進）。",
-        "10）B3 艾達定期召喚伴郎石像鬼（直線預兆）+ 伴郎石像魔（圓預兆）add；< 50% 召喚數量增加。",
-        "11）B3 < 90% 艾達召喚 8 隻 Suitors 未婚夫向她爬行 → 進入她周圍紫圈 → 為艾達充能 → Red Wedding 紅色婚禮全場雷屬性 AoE（場地充能越多傷越高）→ 必須擊殺未婚夫阻止充能。"
-    ],
-    "notes": "ARR 2.2 副本 Hard 版（Lv 50，sync 50，ilvl 110），位於黑衣森林中央塔姆‧塔拉墓園。劇情上是著名的『紅色婚禮慘劇』後續：原本愛人 Paiyo Reiyo（小希）的姊姊 Edda 因婚禮被冒險者引導打逃時未婚夫死亡而精神崩潰，化為 Liavinne / 純潔的艾達進行『血色婚禮』儀式。Boss 依序為 Liavinne 證婚人 莉亞維娜、Husk 備用的軀體（內含小希需保護）、Avere the Manful & Ida the Pure 雄壯的阿維爾與純潔的艾達雙人。本副本是 FFXIV 玩家公認最令人不寒而慄的恐怖副本，劇情之黑暗在 ARR 中無出其右。",
-    "bosses": [
+  "id": "tamtara_deepcroft_hard",
+  "name": "慘劇靈殿塔姆‧塔拉墓園",
+  "nameEn": "The Tam-Tara Deepcroft (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 The Wedding Planner Liavinne 證婚人 莉亞維娜：Inhuman Brutality 非人暴行 點名 3 名玩家紅球 → 召喚 4 隻 Groomsmen 伴郎無視仇恨追被點玩家。",
+    "B1 伴郎/伴娘受非秒殺傷害會 Despair 自暴自棄 → 自爆全場 + 60s 受傷加重；爬行版伴郎/伴娘接觸到被點玩家 → 賦予 Death Reaching 死亡引領 → 必須擊殺爬行 add 解除。",
+    "B1 Decay Arrow 腐化箭：紅標點名 + 圓 AoE → 秒殺攻擊範圍內的伴郎/伴娘 → 可用來清 add。",
+    "B1 Burning Anger 怒火中燒：全場 AoE 對所有非 boss 角色（含 add）→ 治療團補。",
+    "B2 The Empty Vessel 備用的軀體：場上的 Paiyo Reiyo 帕伊尤·雷伊尤 NPC 必須保護！boss 的所有非普攻都會傷害 NPC，NPC 死 → boss 4 檔『傷害提高』+ 變大。",
+    "B2 < 90% 4 隻 Nameless Spirit 無名的精神 出現 + 移動向場內，接觸隊員自爆；如果碰到 Paiyo Reiyo 會幫 boss 充 1 檔『傷害提高』→ 玩家要主動撞掉自爆精神 + 保持 Paiyo Reiyo 安全。",
+    "B2 < 60% 6 隻精神；< 30% 出現 2 隻更大的 Nameless Soul 無名的靈魂 → 更大範圍自爆。",
+    "B2 boss 滿 4 檔傷害提高 → 重複施放 Dark Nebula 暗黑星雲 30,000 固定傷團滅（治療大補也救不了）→ 必須避免 Paiyo Reiyo 死/被精神碰到。",
+    "B3 Avere the Manful 雄壯的阿維爾 + Ida the Pure 純潔的艾達 雙 boss：阿維爾是仇恨 boss；艾達在場中央 + 紫色出血圈（不要進）。",
+    "B3 艾達定期召喚伴郎石像鬼（直線預兆）+ 伴郎石像魔（圓預兆）add；< 50% 召喚數量增加。",
+    "B3 < 90% 艾達召喚 8 隻 Suitors 未婚夫向她爬行 → 進入她周圍紫圈 → 為艾達充能 → Red Wedding 紅色婚禮全場雷屬性 AoE（場地充能越多傷越高）→ 必須擊殺未婚夫阻止充能。"
+  ],
+  "notes": "ARR 2.2 副本 Hard 版（Lv 50，sync 50，ilvl 110），位於黑衣森林中央塔姆‧塔拉墓園。劇情上是著名的『紅色婚禮慘劇』後續：原本愛人 Paiyo Reiyo（小希）的姊姊 Edda 因婚禮被冒險者引導打逃時未婚夫死亡而精神崩潰，化為 Liavinne / 純潔的艾達進行『血色婚禮』儀式。Boss 依序為 Liavinne 證婚人 莉亞維娜、Husk 備用的軀體（內含小希需保護）、Avere the Manful & Ida the Pure 雄壯的阿維爾與純潔的艾達雙人。本副本是 FFXIV 玩家公認最令人不寒而慄的恐怖副本，劇情之黑暗在 ARR 中無出其右。",
+  "bosses": [
+    {
+      "name": "證婚人 莉亞維娜",
+      "nameEn": "Liavinne the Conjoiner",
+      "phases": [
         {
-            "name": "證婚人 莉亞維娜",
-            "nameEn": "Liavinne the Conjoiner",
-            "phases": [
+          "name": "主戰（伴郎伴娘 add 機制）",
+          "mechanics": [
+            {
+              "name": "Volley 連珠箭",
+              "type": "cone",
+              "description": "對一仇 MT 方向釋放 90° 扇形 AoE，無屬性突刺。MT 朝場邊面外，DPS 站背 / 側。",
+              "tips": [
                 {
-                    "name": "主戰（伴郎伴娘 add 機制）",
-                    "mechanics": [
-                        {
-                            "name": "Volley 連珠箭",
-                            "type": "cone",
-                            "description": "對一仇 MT 方向釋放 90° 扇形 AoE，無屬性突刺。MT 朝場邊面外，DPS 站背 / 側。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "DPS 站側 / 背", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Inhuman Brutality 非人暴行（3 名玩家點名 + 4 伴郎追擊）",
-                            "type": "mechanic",
-                            "description": "點名 3 名隨機玩家紅球標記造成突刺傷害。稍後召喚 4 隻 Groomsmen 伴郎無視仇恨追逐被點玩家。隨著 boss HP 降低，會再召喚 Bridesmaid 伴娘、爬行版伴郎、爬行版伴娘，數量逐漸增加。",
-                            "tips": [
-                                {"text": "被點玩家繞圈遛 add", "role": "dps"},
-                                {"text": "其他 DPS 切目標清 add", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Despair 自暴自棄（add 受傷自爆）",
-                            "type": "mechanic",
-                            "description": "伴郎/伴娘 add 在受到非秒殺級傷害後進入不可選中狀態 → 立刻自爆全場無屬性魔法傷害 + 60 秒受傷加重 stack。對策：使用 Decay Arrow 腐化箭直接秒殺（避免自爆），或拉到角落控制 add 數量。",
-                            "tips": [
-                                {"text": "受傷=會自爆 → 用 Decay Arrow 秒殺", "role": "dps"},
-                                {"text": "Esuna 不能清受傷加重", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Death Reaching 死亡引領（爬行 add）",
-                            "type": "mechanic",
-                            "description": "在地上爬行的 Groomsman 伴郎或 Bridesmaid 伴娘接觸到被『非人暴行』點名者後會附加 Death Reaching 死亡引領 debuff。debuff 在該 add 死亡後解除。必須擊殺接觸的爬行 add 解除被點玩家身上的 debuff。",
-                            "tips": [
-                                {"text": "看被點玩家身上 → 切爬行 add 殺", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Decay Arrow 腐化箭（清 add 機制）",
-                            "type": "mechanic",
-                            "description": "點名隨機玩家紅色標記（不會重複點名被非人暴行點名的角色），紅色圓 AoE 預兆。對該角色 + 周圍圓範圍突刺傷害，秒殺攻擊範圍內的 Groomsmen 與 Bridesmaid 全部 add。利用此招把所有 add 帶到圓內一起秒殺。",
-                            "tips": [
-                                {"text": "被點玩家 → 把所有 add 拉到圓內", "role": "dps"},
-                                {"text": "拉好等圓炸 → 秒殺全部 add", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Burning Anger 怒火中燒",
-                            "type": "raidwide",
-                            "description": "讀條 2.5 秒後對全場範圍除 boss 外所有角色（含 add）造成無屬性突刺傷害。對 add 無法秒殺。治療團補。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        }
-                    ]
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 站側 / 背",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Volley 連珠箭（前 90°）→ MT 朝外站背",
-                "非人暴行 → 點 3 人 + 4 伴郎追 → 繞圈遛 / 清 add",
-                "伴郎/伴娘受傷自爆 → 用 Decay Arrow 秒殺",
-                "爬行 add 碰 → Death Reaching → 殺該 add 解除",
-                "Decay Arrow → 把 add 拉到圓內全部秒"
-            ]
-        },
-        {
-            "name": "備用的軀體（保護小希）",
-            "nameEn": "The Empty Vessel",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Inhuman Brutality 非人暴行（3 名玩家點名 + 4 伴郎追擊）",
+              "type": "mechanic",
+              "description": "點名 3 名隨機玩家紅球標記造成突刺傷害。稍後召喚 4 隻 Groomsmen 伴郎無視仇恨追逐被點玩家。隨著 boss HP 降低，會再召喚 Bridesmaid 伴娘、爬行版伴郎、爬行版伴娘，數量逐漸增加。",
+              "tips": [
                 {
-                    "name": "P1 100%-90% HP（基礎機制）",
-                    "mechanics": [
-                        {
-                            "name": "Paiyo Reiyo 帕伊尤·雷伊尤 NPC（必須保護）",
-                            "type": "mechanic",
-                            "description": "場上初始存在 Paiyo Reiyo NPC（劇情人物），永久被施加 Bind 止步無法移動。boss 的所有非普攻技能都會傷害 Paiyo Reiyo，玩家必須保護她不死。如果 Paiyo Reiyo 死亡 → boss 直接獲得 4 檔 Damage Up 傷害提高 + 大幅變大 → 觸發 Dark Nebula 暗黑星雲全屏 30,000 固定傷團滅。",
-                            "tips": [
-                                {"text": "MT 拉 boss 遠離 Paiyo Reiyo", "role": "tank"},
-                                {"text": "全員注意保持 Paiyo Reiyo 安全", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Steel Justice 鋼鐵正義",
-                            "type": "cone",
-                            "description": "對一仇 MT 方向釋放 180° 扇形 AoE 斬擊；MT 朝場邊面外（遠離 Paiyo Reiyo 方向）。",
-                            "tips": [
-                                {"text": "MT 朝外 + 遠離 NPC", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Thick Cloud 濃雲密布",
-                            "type": "spread",
-                            "description": "點名隨機玩家位置讀條 3 秒，黃色圓 AoE 預兆。咏唱完無屬性魔法傷害 + 生成紫色出血區域（角色進入會 Bleed 出血 DoT）。被點玩家走到無人區，注意紫圈位置避開後續移動。",
-                            "tips": [
-                                {"text": "被點走出 → 紫圈不要踩", "role": "dps"},
-                                {"text": "Paiyo Reiyo 周圍要無紫圈", "role": "healer"}
-                            ]
-                        }
-                    ]
+                  "text": "被點玩家繞圈遛 add",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 90%-60% HP（4 精神自爆）",
-                    "mechanics": [
-                        {
-                            "name": "Nameless Spirit 無名的精神（4 隻自爆 add）",
-                            "type": "add",
-                            "description": "boss HP < 90% 隨機傳送門中出現共 4 隻 Nameless Spirit 無名的精神 → 向場內移動。接觸除 boss 外任意角色時自爆 Spirit Burst 精神爆發圓形小範圍 AoE。重要：如果 Paiyo Reiyo 被精神自爆波及 → Spirit 還會 Soul Charge 靈魂充能對 boss 累積 1 檔傷害提高。對策：玩家主動撞掉精神（提前自爆遠離 NPC 與隊友）。",
-                            "tips": [
-                                {"text": "玩家主動撞掉精神", "role": "tank"},
-                                {"text": "千萬不要讓精神靠近 Paiyo Reiyo", "role": "dps"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 60%-30% HP（6 精神）",
-                    "mechanics": [
-                        {
-                            "name": "Nameless Spirit 6 隻精神",
-                            "type": "add",
-                            "description": "boss HP < 60% 隨機傳送門中再次出現共 6 隻 Nameless Spirit 並向場內移動。同 P2 機制但數量更多，需要分工撞掉。",
-                            "tips": [
-                                {"text": "分工撞掉精神", "role": "tank"},
-                                {"text": "T/治療配合分擔", "role": "healer"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P4 < 30% HP（2 無名靈魂 大型 add）",
-                    "mechanics": [
-                        {
-                            "name": "Nameless Soul 無名的靈魂（2 隻更大的 add）",
-                            "type": "add",
-                            "description": "boss HP < 30% 隨機傳送門中出現共 2 隻 Nameless Soul 無名的靈魂（比精神更大）。接觸自爆 Soul Burst 靈魂爆發更大範圍。如果碰到 Paiyo Reiyo 也會給 boss 充 1 檔『傷害提高』。",
-                            "tips": [
-                                {"text": "主動撞掉靈魂（大範圍）", "role": "tank"},
-                                {"text": "全力保護 Paiyo Reiyo", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Dark Nebula 暗黑星雲（4 檔懲罰）",
-                            "type": "raidwide",
-                            "description": "如果 boss 累積 4 檔 Damage Up 傷害提高（通常因 Paiyo Reiyo 多次被波及），會重複釋放 Dark Nebula 暗黑星雲對全場 30,000 點固定傷團滅（治療大補也救不了）。必須避免 Paiyo Reiyo 受傷。",
-                            "tips": [
-                                {"text": "保護 NPC = 避免團滅", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "其他 DPS 切目標清 add",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Paiyo Reiyo 必須保護 → 死 = 4 檔充能 + Dark Nebula 30K 固傷",
-                "Steel Justice（180° 前扇）→ MT 朝外遠離 NPC",
-                "Thick Cloud → 走出圓 + 避紫圈",
-                "Spirit / Soul add → 主動撞掉 + 遠離 NPC"
-            ]
-        },
-        {
-            "name": "雄壯的阿維爾 與 純潔的艾達",
-            "nameEn": "Avere the Manful & Ida the Pure",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Despair 自暴自棄（add 受傷自爆）",
+              "type": "mechanic",
+              "description": "伴郎/伴娘 add 在受到非秒殺級傷害後進入不可選中狀態 → 立刻自爆全場無屬性魔法傷害 + 60 秒受傷加重 stack。對策：使用 Decay Arrow 腐化箭直接秒殺（避免自爆），或拉到角落控制 add 數量。",
+              "tips": [
                 {
-                    "name": "P1 100%-50% HP（基礎機制）",
-                    "mechanics": [
-                        {
-                            "name": "雙 boss + 場地佈局",
-                            "type": "mechanic",
-                            "description": "場上初始存在 Avere the Manful 雄壯的阿維爾（仇恨 boss）與 Ida the Pure 純潔的艾達（場中央，固定不動 + 紫色圓形出血區域）。戰鬥開始後場地 6 個石柱處出現紫色傳送門（add 出現點）。攻擊 Avere；不要進艾達周圍紫圈。",
-                            "tips": [
-                                {"text": "DPS 集火 Avere", "role": "dps"},
-                                {"text": "不要進艾達周圍紫圈", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Sultry Glance 熱情視線（Avere）",
-                            "type": "cone",
-                            "description": "Avere 對一仇 MT 方向釋放約 180° 扇形 AoE 魔法傷害；MT 朝場邊面外（且避免朝向 Paiyo Reiyo 的方向，這裡她不在場但保持安全朝向）。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Mind Blowing 神魂顛倒（Avere 吸血）",
-                            "type": "tankbuster",
-                            "description": "Avere 對一仇 MT 造成特殊傷害 + 回復自身一定 HP（吸血）→ Avere 越攻擊越久越難打。DPS 加速秒掉。",
-                            "tips": [
-                                {"text": "MT 減傷 + 治療大補", "role": "tank"},
-                                {"text": "DPS 加快爆發", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Ruinous Omen 荒蕪新星（艾達 石像鬼 add 直線）",
-                            "type": "aoe",
-                            "description": "Ida 定期在隨機傳送門召喚 Groomsman Gargoyle 伴郎石像鬼 add → add 對隨機角色方向 2.5 秒讀條直線 AoE。看直線方向走縫。初始召喚 3 隻。",
-                            "tips": [
-                                {"text": "看直線方向走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Eye of Terror 恐怖眼（艾達 石像魔 add 圓）",
-                            "type": "aoe",
-                            "description": "Ida 召喚 Groomsman Imp 伴郎石像魔 add（與石像鬼交替）→ add 對隨機角色位置 2.5 秒讀條圓 AoE。被點走出。初始召喚 3 隻。",
-                            "tips": [
-                                {"text": "看自己腳下圓走出", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "受傷=會自爆 → 用 Decay Arrow 秒殺",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 < 90% Avere HP（未婚夫充能 + Red Wedding）",
-                    "mechanics": [
-                        {
-                            "name": "Suitor 未婚夫（8 隻爬行 add → Red Wedding 充能）",
-                            "type": "mechanic",
-                            "description": "Avere HP < 90% 後 Ida 召喚共 8 隻 Suitors 未婚夫從隨機傳送門爬向 Ida。未婚夫進入 Ida 周圍紫圈 → 被獻祭充能 → 場中央『AVERE』名字逐步亮起。Ida 稍後釋放 Red Wedding 紅色婚禮全場雷屬性魔法傷害，傷害依充能程度。必須在未婚夫進圈前擊殺。Avere < 50% 後 Ida 更頻繁施放此招。",
-                            "tips": [
-                                {"text": "DPS 切目標秒未婚夫", "role": "dps"},
-                                {"text": "不能讓未婚夫進紫圈", "role": "tank"},
-                                {"text": "AVERE 亮起多 → Red Wedding 越高傷", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Red Wedding 紅色婚禮",
-                            "type": "raidwide",
-                            "description": "Ida 對全場範圍造成雷屬性魔法傷害，場地充能越多傷害越高。完全沒充能傷害較低；多名未婚夫進圈後 → 直接團滅。治療看充能程度準備團補。",
-                            "tips": [
-                                {"text": "團補連發 + 全員減傷", "role": "healer"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 < 50% Avere HP（爆發階段）",
-                    "mechanics": [
-                        {
-                            "name": "Add 數量增加",
-                            "type": "add",
-                            "description": "Avere HP < 50% 後 Ida 召喚石像鬼 6 隻 + 石像魔 4 隻（交替），數量大幅增加，且 Red Wedding 更頻繁。DPS 全力秒 Avere 結束戰鬥。",
-                            "tips": [
-                                {"text": "DPS 全力爆 Avere", "role": "dps"},
-                                {"text": "T 持續清 add", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "Esuna 不能清受傷加重",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "Avere（仇恨 boss）+ Ida（場中央紫圈）",
-                "Sultry Glance（180° 前扇）→ MT 朝外",
-                "Mind Blowing 吸血 → DPS 加速",
-                "石像鬼 add → 直線 AoE；石像魔 add → 圓 AoE",
-                "< 90% 未婚夫 8 隻爬向艾達 → DPS 秒掉避免 Red Wedding 高傷",
-                "< 50% add 數量增加 → DPS 全力爆 Avere"
-            ]
+              ]
+            },
+            {
+              "name": "Death Reaching 死亡引領（爬行 add）",
+              "type": "mechanic",
+              "description": "在地上爬行的 Groomsman 伴郎或 Bridesmaid 伴娘接觸到被『非人暴行』點名者後會附加 Death Reaching 死亡引領 debuff。debuff 在該 add 死亡後解除。必須擊殺接觸的爬行 add 解除被點玩家身上的 debuff。",
+              "tips": [
+                {
+                  "text": "看被點玩家身上 → 切爬行 add 殺",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Decay Arrow 腐化箭（清 add 機制）",
+              "type": "mechanic",
+              "description": "點名隨機玩家紅色標記（不會重複點名被非人暴行點名的角色），紅色圓 AoE 預兆。對該角色 + 周圍圓範圍突刺傷害，秒殺攻擊範圍內的 Groomsmen 與 Bridesmaid 全部 add。利用此招把所有 add 帶到圓內一起秒殺。",
+              "tips": [
+                {
+                  "text": "被點玩家 → 把所有 add 拉到圓內",
+                  "role": "dps"
+                },
+                {
+                  "text": "拉好等圓炸 → 秒殺全部 add",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Burning Anger 怒火中燒",
+              "type": "raidwide",
+              "description": "讀條 2.5 秒後對全場範圍除 boss 外所有角色（含 add）造成無屬性突刺傷害。對 add 無法秒殺。治療團補。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Volley 連珠箭（前 90°）→ MT 朝外站背",
+        "非人暴行 → 點 3 人 + 4 伴郎追 → 繞圈遛 / 清 add",
+        "伴郎/伴娘受傷自爆 → 用 Decay Arrow 秒殺",
+        "爬行 add 碰 → Death Reaching → 殺該 add 解除",
+        "Decay Arrow → 把 add 拉到圓內全部秒"
+      ]
+    },
+    {
+      "name": "備用的軀體（保護小希）",
+      "nameEn": "The Empty Vessel",
+      "phases": [
+        {
+          "name": "P1 100%-90% HP（基礎機制）",
+          "mechanics": [
+            {
+              "name": "Paiyo Reiyo 帕伊尤·雷伊尤 NPC（必須保護）",
+              "type": "mechanic",
+              "description": "場上初始存在 Paiyo Reiyo NPC（劇情人物），永久被施加 Bind 止步無法移動。boss 的所有非普攻技能都會傷害 Paiyo Reiyo，玩家必須保護她不死。如果 Paiyo Reiyo 死亡 → boss 直接獲得 4 檔 Damage Up 傷害提高 + 大幅變大 → 觸發 Dark Nebula 暗黑星雲全屏 30,000 固定傷團滅。",
+              "tips": [
+                {
+                  "text": "MT 拉 boss 遠離 Paiyo Reiyo",
+                  "role": "tank"
+                },
+                {
+                  "text": "全員注意保持 Paiyo Reiyo 安全",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Steel Justice 鋼鐵正義",
+              "type": "cone",
+              "description": "對一仇 MT 方向釋放 180° 扇形 AoE 斬擊；MT 朝場邊面外（遠離 Paiyo Reiyo 方向）。",
+              "tips": [
+                {
+                  "text": "MT 朝外 + 遠離 NPC",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Thick Cloud 濃雲密布",
+              "type": "spread",
+              "description": "點名隨機玩家位置讀條 3 秒，黃色圓 AoE 預兆。咏唱完無屬性魔法傷害 + 生成紫色出血區域（角色進入會 Bleed 出血 DoT）。被點玩家走到無人區，注意紫圈位置避開後續移動。",
+              "tips": [
+                {
+                  "text": "被點走出 → 紫圈不要踩",
+                  "role": "dps"
+                },
+                {
+                  "text": "Paiyo Reiyo 周圍要無紫圈",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 90%-60% HP（4 精神自爆）",
+          "mechanics": [
+            {
+              "name": "Nameless Spirit 無名的精神（4 隻自爆 add）",
+              "type": "add",
+              "description": "boss HP < 90% 隨機傳送門中出現共 4 隻 Nameless Spirit 無名的精神 → 向場內移動。接觸除 boss 外任意角色時自爆 Spirit Burst 精神爆發圓形小範圍 AoE。重要：如果 Paiyo Reiyo 被精神自爆波及 → Spirit 還會 Soul Charge 靈魂充能對 boss 累積 1 檔傷害提高。對策：玩家主動撞掉精神（提前自爆遠離 NPC 與隊友）。",
+              "tips": [
+                {
+                  "text": "玩家主動撞掉精神",
+                  "role": "tank"
+                },
+                {
+                  "text": "千萬不要讓精神靠近 Paiyo Reiyo",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 60%-30% HP（6 精神）",
+          "mechanics": [
+            {
+              "name": "Nameless Spirit 6 隻精神",
+              "type": "add",
+              "description": "boss HP < 60% 隨機傳送門中再次出現共 6 隻 Nameless Spirit 並向場內移動。同 P2 機制但數量更多，需要分工撞掉。",
+              "tips": [
+                {
+                  "text": "分工撞掉精神",
+                  "role": "tank"
+                },
+                {
+                  "text": "T/治療配合分擔",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P4 < 30% HP（2 無名靈魂 大型 add）",
+          "mechanics": [
+            {
+              "name": "Nameless Soul 無名的靈魂（2 隻更大的 add）",
+              "type": "add",
+              "description": "boss HP < 30% 隨機傳送門中出現共 2 隻 Nameless Soul 無名的靈魂（比精神更大）。接觸自爆 Soul Burst 靈魂爆發更大範圍。如果碰到 Paiyo Reiyo 也會給 boss 充 1 檔『傷害提高』。",
+              "tips": [
+                {
+                  "text": "主動撞掉靈魂（大範圍）",
+                  "role": "tank"
+                },
+                {
+                  "text": "全力保護 Paiyo Reiyo",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Dark Nebula 暗黑星雲（4 檔懲罰）",
+              "type": "raidwide",
+              "description": "如果 boss 累積 4 檔 Damage Up 傷害提高（通常因 Paiyo Reiyo 多次被波及），會重複釋放 Dark Nebula 暗黑星雲對全場 30,000 點固定傷團滅（治療大補也救不了）。必須避免 Paiyo Reiyo 受傷。",
+              "tips": [
+                {
+                  "text": "保護 NPC = 避免團滅",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Paiyo Reiyo 必須保護 → 死 = 4 檔充能 + Dark Nebula 30K 固傷",
+        "Steel Justice（180° 前扇）→ MT 朝外遠離 NPC",
+        "Thick Cloud → 走出圓 + 避紫圈",
+        "Spirit / Soul add → 主動撞掉 + 遠離 NPC"
+      ]
+    },
+    {
+      "name": "雄壯的阿維爾 與 純潔的艾達",
+      "nameEn": "Avere the Manful & Ida the Pure",
+      "phases": [
+        {
+          "name": "P1 100%-50% HP（基礎機制）",
+          "mechanics": [
+            {
+              "name": "雙 boss + 場地佈局",
+              "type": "mechanic",
+              "description": "場上初始存在 Avere the Manful 雄壯的阿維爾（仇恨 boss）與 Ida the Pure 純潔的艾達（場中央，固定不動 + 紫色圓形出血區域）。戰鬥開始後場地 6 個石柱處出現紫色傳送門（add 出現點）。攻擊 Avere；不要進艾達周圍紫圈。",
+              "tips": [
+                {
+                  "text": "DPS 集火 Avere",
+                  "role": "dps"
+                },
+                {
+                  "text": "不要進艾達周圍紫圈",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Sultry Glance 熱情視線（Avere）",
+              "type": "cone",
+              "description": "Avere 對一仇 MT 方向釋放約 180° 扇形 AoE 魔法傷害；MT 朝場邊面外（且避免朝向 Paiyo Reiyo 的方向，這裡她不在場但保持安全朝向）。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Mind Blowing 神魂顛倒（Avere 吸血）",
+              "type": "tankbuster",
+              "description": "Avere 對一仇 MT 造成特殊傷害 + 回復自身一定 HP（吸血）→ Avere 越攻擊越久越難打。DPS 加速秒掉。",
+              "tips": [
+                {
+                  "text": "MT 減傷 + 治療大補",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 加快爆發",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Ruinous Omen 荒蕪新星（艾達 石像鬼 add 直線）",
+              "type": "aoe",
+              "description": "Ida 定期在隨機傳送門召喚 Groomsman Gargoyle 伴郎石像鬼 add → add 對隨機角色方向 2.5 秒讀條直線 AoE。看直線方向走縫。初始召喚 3 隻。",
+              "tips": [
+                {
+                  "text": "看直線方向走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Eye of Terror 恐怖眼（艾達 石像魔 add 圓）",
+              "type": "aoe",
+              "description": "Ida 召喚 Groomsman Imp 伴郎石像魔 add（與石像鬼交替）→ add 對隨機角色位置 2.5 秒讀條圓 AoE。被點走出。初始召喚 3 隻。",
+              "tips": [
+                {
+                  "text": "看自己腳下圓走出",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 90% Avere HP（未婚夫充能 + Red Wedding）",
+          "mechanics": [
+            {
+              "name": "Suitor 未婚夫（8 隻爬行 add → Red Wedding 充能）",
+              "type": "mechanic",
+              "description": "Avere HP < 90% 後 Ida 召喚共 8 隻 Suitors 未婚夫從隨機傳送門爬向 Ida。未婚夫進入 Ida 周圍紫圈 → 被獻祭充能 → 場中央『AVERE』名字逐步亮起。Ida 稍後釋放 Red Wedding 紅色婚禮全場雷屬性魔法傷害，傷害依充能程度。必須在未婚夫進圈前擊殺。Avere < 50% 後 Ida 更頻繁施放此招。",
+              "tips": [
+                {
+                  "text": "DPS 切目標秒未婚夫",
+                  "role": "dps"
+                },
+                {
+                  "text": "不能讓未婚夫進紫圈",
+                  "role": "tank"
+                },
+                {
+                  "text": "AVERE 亮起多 → Red Wedding 越高傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Red Wedding 紅色婚禮",
+              "type": "raidwide",
+              "description": "Ida 對全場範圍造成雷屬性魔法傷害，場地充能越多傷害越高。完全沒充能傷害較低；多名未婚夫進圈後 → 直接團滅。治療看充能程度準備團補。",
+              "tips": [
+                {
+                  "text": "團補連發 + 全員減傷",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 < 50% Avere HP（爆發階段）",
+          "mechanics": [
+            {
+              "name": "Add 數量增加",
+              "type": "add",
+              "description": "Avere HP < 50% 後 Ida 召喚石像鬼 6 隻 + 石像魔 4 隻（交替），數量大幅增加，且 Red Wedding 更頻繁。DPS 全力秒 Avere 結束戰鬥。",
+              "tips": [
+                {
+                  "text": "DPS 全力爆 Avere",
+                  "role": "dps"
+                },
+                {
+                  "text": "T 持續清 add",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Avere（仇恨 boss）+ Ida（場中央紫圈）",
+        "Sultry Glance（180° 前扇）→ MT 朝外",
+        "Mind Blowing 吸血 → DPS 加速",
+        "石像鬼 add → 直線 AoE；石像魔 add → 圓 AoE",
+        "< 90% 未婚夫 8 隻爬向艾達 → DPS 秒掉避免 Red Wedding 高傷",
+        "< 50% add 數量增加 → DPS 全力爆 Avere"
+      ]
+    }
+  ]
 }

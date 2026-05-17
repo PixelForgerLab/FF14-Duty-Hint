@@ -1,541 +1,541 @@
 {
-    "id":  "futures_rewritten_ultimate",
-    "name":  "光暗未來絕境戰",
-    "nameEn":  "Futures Rewritten (Ultimate)",
-    "expansion":  "7.x 黃金遺產 (Dawntrail)",
-    "type":  "ultimate",
-    "playerCount":  8,
-    "iLvlSync":  735,
-    "jobLevelSync":  100,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）P1 絕命戰士 (Fatebreaker)：火/雷以太屬性決定機制變體 + 連鎖爆印鬼+ 樂園絕技分身組合。",
-                     "2）P2 希瓦·米特隆 (Usurper of Frost)：鑽石星塵 + 鏡中顯影 + 闊斧/鐮形回旋踢 + 強放逐 + 無盡光之鎖六邊形。",
-                     "3）P3 永久冰晶 (Permafrost)：四光水晶 + 四暗水晶 + 蓋娅碎冰擊。",
-                     "4）P4 暗之巫女 (Oracle of Darkness)：時間壓縮·絕 + 啟示 + 死亡輪迴。",
-                     "5）P5 雙形態 (Mitron + 暗巫女)：龍詩 + 失樂園 + 死亡輪迴。",
-                     "6）P6 潘多拉·米特隆 (Pandora)：潘多拉魔盒 + 復樂園 + 失樂園終曲。",
-                     "失誤 = 50% 傷害降低 180s 巨額懲罰；2 層 = 死亡刻印立即陣亡。"
-                 ],
-    "notes":  "FRU（簡稱「絕光暗」），FFXIV 第六個絕境戰，7.11 開放（DT 當前 Ultimate）。基於 5.x ShB Eden 改編。共 6 個階段：P1 絕命戰士、P2 希瓦·米特隆、P3 永久冰晶過場、P4 暗之巫女、P5 希瓦·米特隆 + 暗之巫女雙形態、P6 潘多拉·米特隆。Lv 100，ilvl 735 鎖點。解鎖：完成 AAC LHW M4 Savage + 找 Wandering Minstrel。",
-    "bosses":  [
-                   {
-                       "name":  "絕命戰士",
-                       "nameEn":  "Fatebreaker",
-                       "mnemonic":  [
-                                        "火/雷以太屬性決定每招變體：火 = 分擔；雷 = 散開。",
-                                        "暴風破：30° 不可閃扇形 4 次（旋轉 22.5°）。",
-                                        "連鎖爆印：1 仇 16s debuff，倒數後對自己 + 最近玩家爆。",
-                                        "樂園絕技：8 方位幻影 + 3 個放爆破領域線 AoE。",
-                                        "罪壤刺 (火) 連線：4 人分擔扇形；罪壤斷 (雷)：弓形衝波 3 人扇形。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 絕命戰士",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "暴風破 / Burnt Strike",
-                                                                "type":  "aoe",
-                                                                "description":  "絕命戰士填裝火或雷以太，對每人 30° 不可閃扇形 + 物理受傷加重 2s。2 秒後不可見扇形再發，再加 2 秒順時針轉 22.5° 連續 4 次。",
-                                                                "tips":  [
-                                                                             "看槍刃顏色：紅 = 火、紫 = 雷",
-                                                                             "每段預測下一段順時針 22.5° 位置移動"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "燃燒擊 / Burnished Glory (Fire)",
-                                                                "type":  "aoe",
-                                                                "description":  "火屬性燃燒擊：直線 AoE + 火燃爆橫向大幅擊退（**防擊退無效**）。",
-                                                                "tips":  [
-                                                                             "預判擊退方向，避免掉場外",
-                                                                             "可以利用擊退到指定位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "燃燒擊 / Burnt Strike (Lightning)",
-                                                                "type":  "aoe",
-                                                                "description":  "雷屬性燃燒擊：直線 AoE + 雷燃爆變寬直線 (寬 = 場地中心深色地板直徑)。",
-                                                                "tips":  [
-                                                                             "閃寬版本直線",
-                                                                             "中央深色地板區也不安全"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "罪壤斷 / Sinsmite (Lightning)",
-                                                                "type":  "aoe",
-                                                                "description":  "雷屬性罪壤斷：對連線玩家單體雷傷 + 對最近 3 名玩家 120° 扇形 (弓形衝波)。",
-                                                                "tips":  [
-                                                                             "被連線者拉外圍",
-                                                                             "其他人保持距離避免吃扇形"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "罪壤斷 / Sinsmite (Fire)",
-                                                                "type":  "stack",
-                                                                "description":  "火屬性罪壤斷：對連線玩家最近者放需 4 人分擔扇形 (罪烈焰)。人數不足全員疊死亡刻印。",
-                                                                "tips":  [
-                                                                             "被連線者帶 3 個隊友疊接",
-                                                                             "確保 4 人疊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "連鎖爆印銘刻 / Powder Mark Trail",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇造成單體傷害 + 16s 連鎖爆印 debuff + 14s 物理受傷加重。倒數結束或玩家死亡時對攜帶者 + 最近 1 名玩家圓形高傷 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "主 T 帶 debuff 拉外圍，副 T 注意保持距離",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "其他人遠離主 T 16 秒"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "樂園絕技 / Utopian Sky",
-                                                                "type":  "other",
-                                                                "description":  "8 方位幻影 (3 個舉手放爆破領域大範圍直線 AoE)，未舉手 5 個消失。火 = 2 人分擔圓 (罪爆炎)；雷 = 8 人各自圓 (罪暴雷)。3 個釋放幻影必不相對。",
-                                                                "tips":  [
-                                                                             "看 3 個舉手幻影位置 → 找對面安全",
-                                                                             "火/雷判定後立刻分擔或散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "罪壤刺 / Death Mark (場外幻影)",
-                                                                "type":  "other",
-                                                                "description":  "西南/東南角 2 個火幻影各連線 1 玩家附加 15s 死爆印 + 浮游拘束（無法移動）→ 急衝刺 4 人分擔圓 AoE 罪炎。死爆印玩家死亡 = 全屏火傷 + 180s 傷害降低。",
-                                                                "tips":  [
-                                                                             "被連線者保持滿血",
-                                                                             "4 人疊上去分擔",
-                                                                             {
-                                                                                 "text":  "預先準備補血 + 盾",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "光焰圓光 / Burnished Halo",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE + 15s 出血 DoT；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解出血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "燃燒擊 + 西側/東側 6 人塔",
-                                                                "type":  "other",
-                                                                "description":  "場西東各出現 3 塔，6 人踩塔，少人 = 大爆炸全屏巨傷 + 180s 傷害降低。",
-                                                                "tips":  [
-                                                                             "分配 6 人各踩 1 塔 (2 人作為直線 AoE 誘導)",
-                                                                             "閃直線 AoE 同時踩好塔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "光焰圓光 / Burnished Halo (Enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "P1 enrage 強制團滅；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS check",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "希瓦·米特隆",
-                       "nameEn":  "Usurper of Frost (Shiva-Mitron)",
-                       "mnemonic":  [
-                                        "鑽石星塵：全屏冰傷 + 鏡中顯影召喚海德林形態巫女鏡像。",
-                                        "闊斧回旋踢「掃清」= 貼身圓；鐮形回旋踢「斬斷」= donut 環形。",
-                                        "強放逐：球數 1 = 4 人分擔；球數 4 = 全員各自圓 (分裂強放逐)。",
-                                        "無盡光之鎖：6 人六邊形連線 → 無盡光之束縛 → 4 人分擔 + 距離判定。",
-                                        "過量光：5 層 = 秒殺自己 + 全屏 AoE。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P2 希瓦·米特隆",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "四劍斬 / Quadruple Slap",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1 仇單體高傷 + 15s 物理受傷加重 (可解)，隨後再 1 次。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 換手或無敵",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "解物理受傷加重",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "鑽石星塵 / Diamond Dust",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏冰屬性 AoE，隨後 boss 不可選中；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "鏡中顯影 / Mirror, Mirror",
-                                                                "type":  "other",
-                                                                "description":  "生成鏡子召喚海德林形態的巫女鏡像；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "注意鏡子位置與鏡像朝向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "闊斧回旋踢 / Axe Kick",
-                                                                "type":  "aoe",
-                                                                "description":  "以自身為圓心大範圍圓 AoE（貼身範圍），台詞「掃清！」；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "跑出圓外",
-                                                                             "聽台詞「掃清！」識別"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "鐮形回旋踢 / Scythe Kick",
-                                                                "type":  "aoe",
-                                                                "description":  "以自身為圓心大範圍環形 (donut) AoE，台詞「斬斷！」；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "貼 boss 站",
-                                                                             "聽台詞「斬斷！」識別"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰石 + 冰針 / Icicle Impact",
-                                                                "type":  "aoe",
-                                                                "description":  "點 4 名 DPS 或 4 名支援職小圓 + 魔法受傷加重，較短後在判定中心放 8 向直線 (冰針)。",
-                                                                "tips":  [
-                                                                             "被點者按 clock 位散開",
-                                                                             "冰針判定後立刻移動避免重疊"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰柱衝擊 / Icicle Impact 連發",
-                                                                "type":  "aoe",
-                                                                "description":  "場地對稱正點圓 → 相鄰斜點圓 → 安全正點圓，三輪；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "按順序預判安全位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "光之海嘯 / Light Rampant",
-                                                                "type":  "stack",
-                                                                "description":  "點最近 4 名玩家小範圍扇形 + 魔法受傷加重 2s；全員集合分攤傷害 缺人會爆血。",
-                                                                "tips":  [
-                                                                             "4 人疊接 / clock 站位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "罪神聖 / Twin Stillness",
-                                                                "type":  "stack",
-                                                                "description":  "點 2 名補職連續 4 次可分擔圓 + 圓形傷害區（踩入出血 DoT，離開附加 30s 出血）。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩補帶 3-4 人各自分擔 4 次",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             "處理完移出傷害區"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "閃光護甲 / Frigid Stone",
-                                                                "type":  "other",
-                                                                "description":  "希瓦變海德林形態，面向她的玩家附加 10s 眩暈 + 180s 傷害降低。",
-                                                                "tips":  [
-                                                                             "**背對 boss**！"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰霜護甲 / Frigid Needle",
-                                                                "type":  "other",
-                                                                "description":  "巫女的鏡像變希瓦形態，地面結冰，附加冰面 buff (移動強制滑行場地直徑)。隨後鏡像放靜寂的雙劍技或閒寂的雙劍技。",
-                                                                "tips":  [
-                                                                             "預判滑行終點",
-                                                                             "靜寂 = 前 270° → 後 90°；閒寂 = 後 90° → 前 270°"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "強放逐 / Hallowed Wings",
-                                                                "type":  "stack",
-                                                                "description":  "對 4 DPS 或 4 支援職小範圍分擔圓 + 魔法受傷加重 2s。Boss 頭頂球數 = 1 個 → 強放逐；4 個 → 分裂強放逐 (各自圓)。",
-                                                                "tips":  [
-                                                                             "看球數預判分擔/散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "無盡光之鎖 / Twin Silence",
-                                                                "type":  "other",
-                                                                "description":  "8 人位置按環序連 6 人六邊形 + 10s 無盡光之鎖 → 9s 無盡光之束縛。相鄰 2 人 16s 強光之兆 (光爆 4 人分擔)。距離過近過遠或同伴死亡 = 全屏巨傷。",
-                                                                "tips":  [
-                                                                             "保持中等距離（不貼近也不拉遠）",
-                                                                             "強光之兆 4 人分擔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "過量光 / Light\u0027s Course",
-                                                                "type":  "other",
-                                                                "description":  "6 層過量光分配到玩家身上。5 層 = 秒殺自己 + 全屏 AoE；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "管理過量光層數",
-                                                                             "5 層前處理掉"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "侵蝕光 / Holy Light + 塔",
-                                                                "type":  "other",
-                                                                "description":  "六邊形 6 個單人塔，踩塔附加 1 層過量光，無人踩 = 全屏巨傷。爆炸後場地中心出現 4 人塔。",
-                                                                "tips":  [
-                                                                             "6 人各踩 1 塔",
-                                                                             "4 人補進中央塔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "絕對零度 / Absolute Zero",
-                                                                "type":  "raidwide",
-                                                                "description":  "讀條結束時 boss \u003e 20% 血量 = 強制團滅；\u003c 20% = 全屏 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 必須推到 20% 以下",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "永久冰晶 (過場)",
-                       "nameEn":  "Permafrost (Intermission)",
-                       "mnemonic":  [
-                                        "希瓦·米特隆被永久冰晶凍結，需打破光暗水晶釋放她。",
-                                        "4 光水晶 (正點) + 4 暗水晶 (斜點)。",
-                                        "暗水晶罪冰封：扇形冰傷，命中其他水晶會給 90% 受傷減輕。",
-                                        "光水晶嚴冬風暴：圓 AoE 冰傷。",
-                                        "DPS check：未及時破壞 4 暗水晶 → 蓋娅碎冰擊 125 萬血量秒殺永久冰晶。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P3 永久冰晶過場",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "寒波 / Hibernal Wing",
-                                                                "type":  "other",
-                                                                "description":  "希瓦·米特隆擊退並凍結所有玩家，直到蓋娅擊碎冰晶；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "等待蓋娅釋放"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "罪冰封 / Sinbound Holy",
-                                                                "type":  "aoe",
-                                                                "description":  "暗水晶不斷對最近玩家放可閃 15° 扇形冰傷 + 180s 傷害降低。命中其他水晶會給 90% 受傷減輕。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 集火暗水晶",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "避免扇形互相打到水晶"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "嚴冬風暴 / Hiemal Storm",
-                                                                "type":  "aoe",
-                                                                "description":  "光水晶對最近玩家放可閃圓 AoE 冰傷 + 180s 傷害降低；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "閃圓 AoE"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "嚴冬射線 / Hiemal Ray",
-                                                                "type":  "other",
-                                                                "description":  "光水晶與最近玩家連線釋放不可閃圓 AoE，留下出血區；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "可被截斷",
-                                                                             "閃出血區或踩入後快速離開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "光之泛濫 / Lightsteeped",
-                                                                "type":  "raidwide",
-                                                                "description":  "永久冰晶讀條的團滅技；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 趕在讀條前破壞 4 暗水晶",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "碎冰擊 / Shatter",
-                                                                "type":  "other",
-                                                                "description":  "光之泛濫讀條結束前 3 秒，若 4 暗水晶未全破，蓋娅對永久冰晶造成其 50% 生命上限的固定 1256902 傷害 (不受減傷影響)。",
-                                                                "tips":  [
-                                                                             "DPS 提早處理 4 暗水晶"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "暗之巫女",
-                       "nameEn":  "Oracle of Darkness",
-                       "mnemonic":  [
-                                        "時間壓縮·絕 (Crystallize Time)：複雜時鐘時停整合機制。",
-                                        "啟示 (Apocalypse)：時鐘指針依序爆。",
-                                        "Akh Morn 死亡輪迴：T 連續分擔。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P4 暗之巫女",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "啟示 / Apocalypse",
-                                                                "type":  "aoe",
-                                                                "description":  "場上 8 個時鐘指針，依序指向不同方位爆發 cleave；看圖示提前走位避開預兆範圍。",
-                                                                "tips":  [
-                                                                             "看指針順序",
-                                                                             "解 cleave 並躲指向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Akh Morn 死亡輪迴",
-                                                                "type":  "stack",
-                                                                "description":  "對 1 仇連續可分擔圓 AoE；全員集合分攤傷害 缺人會爆血。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 連 H 分擔",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "時間壓縮·絕 / Crystallize Time",
-                                                                "type":  "other",
-                                                                "description":  "複雜時鐘時停機制，整合多種技能；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "依指派順序就位",
-                                                                             "團隊事前完整對齊路徑"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "希瓦·米特隆 + 暗之巫女 (雙形態)",
-                       "nameEn":  "Shiva-Mitron + Oracle of Darkness",
-                       "mnemonic":  [
-                                        "光與暗的龍詩 (Wings of Light and Dark)：雙形態合作機制。",
-                                        "死亡輪迴：T 連續分擔。",
-                                        "失樂園：場地縮減 + 即死區域 + 時間結晶。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P5 雙形態",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "光與暗的龍詩 / Wings of Light and Dark",
-                                                                "type":  "raidwide",
-                                                                "description":  "雙形態合作放團體 AoE + 配對機制；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷 + LB3",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "死亡輪迴 / Akh Morn",
-                                                                "type":  "stack",
-                                                                "description":  "T 連續可分擔圓 AoE，遞增段數；全員集合分攤傷害 缺人會爆血。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 換手或無敵",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "失樂園 / Paradise Lost",
-                                                                "type":  "other",
-                                                                "description":  "場地縮減 + 即死區域 + 時間結晶機制；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "看安全區站位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "時間結晶 / Crystallize Time (再次)",
-                                                                "type":  "other",
-                                                                "description":  "暗之巫女再次放時間結晶機制；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "回想 P4 走位流程"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "潘多拉·米特隆",
-                       "nameEn":  "Pandora-Mitron",
-                       "mnemonic":  [
-                                        "潘多拉魔盒 (Pandora\u0027s Box)：分配多種顏色 debuff 整合處理。",
-                                        "復樂園 (Paradise Regained)：場地復原 + 強化機制。",
-                                        "失樂園終曲 (Paradise Lost Finale)：enrage 級全屏 AoE。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P6 潘多拉·米特隆",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "潘多拉魔盒 / Pandora\u0027s Box",
-                                                                "type":  "other",
-                                                                "description":  "分配多種顏色 debuff，需按顏色處理；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "依顏色找對應走位"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "復樂園 / Paradise Regained",
-                                                                "type":  "raidwide",
-                                                                "description":  "場地復原 + 強化機制 + 全屏 AoE；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全體減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "失樂園終曲 / Paradise Lost (Enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "潘多拉讀條的強制團滅；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段 DPS check + 全員 LB3",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "futures_rewritten_ultimate",
+  "name": "光暗未來絕境戰",
+  "nameEn": "Futures Rewritten (Ultimate)",
+  "expansion": "7.x 黃金遺產 (Dawntrail)",
+  "type": "ultimate",
+  "playerCount": 8,
+  "iLvlSync": 735,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "P1 絕命戰士 (Fatebreaker)：火/雷以太屬性決定機制變體 + 連鎖爆印鬼+ 樂園絕技分身組合。",
+    "P2 希瓦·米特隆 (Usurper of Frost)：鑽石星塵 + 鏡中顯影 + 闊斧/鐮形回旋踢 + 強放逐 + 無盡光之鎖六邊形。",
+    "P3 永久冰晶 (Permafrost)：四光水晶 + 四暗水晶 + 蓋娅碎冰擊。",
+    "P4 暗之巫女 (Oracle of Darkness)：時間壓縮·絕 + 啟示 + 死亡輪迴。",
+    "P5 雙形態 (Mitron + 暗巫女)：龍詩 + 失樂園 + 死亡輪迴。",
+    "P6 潘多拉·米特隆 (Pandora)：潘多拉魔盒 + 復樂園 + 失樂園終曲。",
+    "失誤 = 50% 傷害降低 180s 巨額懲罰；2 層 = 死亡刻印立即陣亡。"
+  ],
+  "notes": "FRU（簡稱「絕光暗」），FFXIV 第六個絕境戰，7.11 開放（DT 當前 Ultimate）。基於 5.x ShB Eden 改編。共 6 個階段：P1 絕命戰士、P2 希瓦·米特隆、P3 永久冰晶過場、P4 暗之巫女、P5 希瓦·米特隆 + 暗之巫女雙形態、P6 潘多拉·米特隆。Lv 100，ilvl 735 鎖點。解鎖：完成 AAC LHW M4 Savage + 找 Wandering Minstrel。",
+  "bosses": [
+    {
+      "name": "絕命戰士",
+      "nameEn": "Fatebreaker",
+      "mnemonic": [
+        "火/雷以太屬性決定每招變體：火 = 分擔；雷 = 散開。",
+        "暴風破：30° 不可閃扇形 4 次（旋轉 22.5°）。",
+        "連鎖爆印：1 仇 16s debuff，倒數後對自己 + 最近玩家爆。",
+        "樂園絕技：8 方位幻影 + 3 個放爆破領域線 AoE。",
+        "罪壤刺 (火) 連線：4 人分擔扇形；罪壤斷 (雷)：弓形衝波 3 人扇形。"
+      ],
+      "phases": [
+        {
+          "name": "P1 絕命戰士",
+          "mechanics": [
+            {
+              "name": "暴風破 / Burnt Strike",
+              "type": "aoe",
+              "description": "絕命戰士填裝火或雷以太，對每人 30° 不可閃扇形 + 物理受傷加重 2s。2 秒後不可見扇形再發，再加 2 秒順時針轉 22.5° 連續 4 次。",
+              "tips": [
+                "看槍刃顏色：紅 = 火、紫 = 雷",
+                "每段預測下一段順時針 22.5° 位置移動"
+              ]
+            },
+            {
+              "name": "燃燒擊 / Burnished Glory (Fire)",
+              "type": "aoe",
+              "description": "火屬性燃燒擊：直線 AoE + 火燃爆橫向大幅擊退（**防擊退無效**）。",
+              "tips": [
+                "預判擊退方向，避免掉場外",
+                "可以利用擊退到指定位置"
+              ]
+            },
+            {
+              "name": "燃燒擊 / Burnt Strike (Lightning)",
+              "type": "aoe",
+              "description": "雷屬性燃燒擊：直線 AoE + 雷燃爆變寬直線 (寬 = 場地中心深色地板直徑)。",
+              "tips": [
+                "閃寬版本直線",
+                "中央深色地板區也不安全"
+              ]
+            },
+            {
+              "name": "罪壤斷 / Sinsmite (Lightning)",
+              "type": "aoe",
+              "description": "雷屬性罪壤斷：對連線玩家單體雷傷 + 對最近 3 名玩家 120° 扇形 (弓形衝波)。",
+              "tips": [
+                "被連線者拉外圍",
+                "其他人保持距離避免吃扇形"
+              ]
+            },
+            {
+              "name": "罪壤斷 / Sinsmite (Fire)",
+              "type": "stack",
+              "description": "火屬性罪壤斷：對連線玩家最近者放需 4 人分擔扇形 (罪烈焰)。人數不足全員疊死亡刻印。",
+              "tips": [
+                "被連線者帶 3 個隊友疊接",
+                "確保 4 人疊"
+              ]
+            },
+            {
+              "name": "連鎖爆印銘刻 / Powder Mark Trail",
+              "type": "tankbuster",
+              "description": "對 1 仇造成單體傷害 + 16s 連鎖爆印 debuff + 14s 物理受傷加重。倒數結束或玩家死亡時對攜帶者 + 最近 1 名玩家圓形高傷 AoE。",
+              "tips": [
+                {
+                  "text": "主 T 帶 debuff 拉外圍，副 T 注意保持距離",
+                  "role": "tank"
+                },
+                "其他人遠離主 T 16 秒"
+              ]
+            },
+            {
+              "name": "樂園絕技 / Utopian Sky",
+              "type": "other",
+              "description": "8 方位幻影 (3 個舉手放爆破領域大範圍直線 AoE)，未舉手 5 個消失。火 = 2 人分擔圓 (罪爆炎)；雷 = 8 人各自圓 (罪暴雷)。3 個釋放幻影必不相對。",
+              "tips": [
+                "看 3 個舉手幻影位置 → 找對面安全",
+                "火/雷判定後立刻分擔或散開"
+              ]
+            },
+            {
+              "name": "罪壤刺 / Death Mark (場外幻影)",
+              "type": "other",
+              "description": "西南/東南角 2 個火幻影各連線 1 玩家附加 15s 死爆印 + 浮游拘束（無法移動）→ 急衝刺 4 人分擔圓 AoE 罪炎。死爆印玩家死亡 = 全屏火傷 + 180s 傷害降低。",
+              "tips": [
+                "被連線者保持滿血",
+                "4 人疊上去分擔",
+                {
+                  "text": "預先準備補血 + 盾",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "光焰圓光 / Burnished Halo",
+              "type": "raidwide",
+              "description": "全屏 AoE + 15s 出血 DoT；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "減傷 + 解出血",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "燃燒擊 + 西側/東側 6 人塔",
+              "type": "other",
+              "description": "場西東各出現 3 塔，6 人踩塔，少人 = 大爆炸全屏巨傷 + 180s 傷害降低。",
+              "tips": [
+                "分配 6 人各踩 1 塔 (2 人作為直線 AoE 誘導)",
+                "閃直線 AoE 同時踩好塔"
+              ]
+            },
+            {
+              "name": "光焰圓光 / Burnished Halo (Enrage)",
+              "type": "raidwide",
+              "description": "P1 enrage 強制團滅；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "DPS check",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "希瓦·米特隆",
+      "nameEn": "Usurper of Frost (Shiva-Mitron)",
+      "mnemonic": [
+        "鑽石星塵：全屏冰傷 + 鏡中顯影召喚海德林形態巫女鏡像。",
+        "闊斧回旋踢「掃清」= 貼身圓；鐮形回旋踢「斬斷」= donut 環形。",
+        "強放逐：球數 1 = 4 人分擔；球數 4 = 全員各自圓 (分裂強放逐)。",
+        "無盡光之鎖：6 人六邊形連線 → 無盡光之束縛 → 4 人分擔 + 距離判定。",
+        "過量光：5 層 = 秒殺自己 + 全屏 AoE。"
+      ],
+      "phases": [
+        {
+          "name": "P2 希瓦·米特隆",
+          "mechanics": [
+            {
+              "name": "四劍斬 / Quadruple Slap",
+              "type": "tankbuster",
+              "description": "對 1 仇單體高傷 + 15s 物理受傷加重 (可解)，隨後再 1 次。",
+              "tips": [
+                {
+                  "text": "兩 T 換手或無敵",
+                  "role": "tank"
+                },
+                {
+                  "text": "解物理受傷加重",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "鑽石星塵 / Diamond Dust",
+              "type": "raidwide",
+              "description": "全屏冰屬性 AoE，隨後 boss 不可選中；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "全員減傷 + 補滿",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "鏡中顯影 / Mirror, Mirror",
+              "type": "other",
+              "description": "生成鏡子召喚海德林形態的巫女鏡像；依預兆走位處理。",
+              "tips": [
+                "注意鏡子位置與鏡像朝向"
+              ]
+            },
+            {
+              "name": "闊斧回旋踢 / Axe Kick",
+              "type": "aoe",
+              "description": "以自身為圓心大範圍圓 AoE（貼身範圍），台詞「掃清！」；看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "跑出圓外",
+                "聽台詞「掃清！」識別"
+              ]
+            },
+            {
+              "name": "鐮形回旋踢 / Scythe Kick",
+              "type": "aoe",
+              "description": "以自身為圓心大範圍環形 (donut) AoE，台詞「斬斷！」；看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "貼 boss 站",
+                "聽台詞「斬斷！」識別"
+              ]
+            },
+            {
+              "name": "冰石 + 冰針 / Icicle Impact",
+              "type": "aoe",
+              "description": "點 4 名 DPS 或 4 名支援職小圓 + 魔法受傷加重，較短後在判定中心放 8 向直線 (冰針)。",
+              "tips": [
+                "被點者按 clock 位散開",
+                "冰針判定後立刻移動避免重疊"
+              ]
+            },
+            {
+              "name": "冰柱衝擊 / Icicle Impact 連發",
+              "type": "aoe",
+              "description": "場地對稱正點圓 → 相鄰斜點圓 → 安全正點圓，三輪；看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "按順序預判安全位置"
+              ]
+            },
+            {
+              "name": "光之海嘯 / Light Rampant",
+              "type": "stack",
+              "description": "點最近 4 名玩家小範圍扇形 + 魔法受傷加重 2s；全員集合分攤傷害 缺人會爆血。",
+              "tips": [
+                "4 人疊接 / clock 站位"
+              ]
+            },
+            {
+              "name": "罪神聖 / Twin Stillness",
+              "type": "stack",
+              "description": "點 2 名補職連續 4 次可分擔圓 + 圓形傷害區（踩入出血 DoT，離開附加 30s 出血）。",
+              "tips": [
+                {
+                  "text": "兩補帶 3-4 人各自分擔 4 次",
+                  "role": "healer"
+                },
+                "處理完移出傷害區"
+              ]
+            },
+            {
+              "name": "閃光護甲 / Frigid Stone",
+              "type": "other",
+              "description": "希瓦變海德林形態，面向她的玩家附加 10s 眩暈 + 180s 傷害降低。",
+              "tips": [
+                "**背對 boss**！"
+              ]
+            },
+            {
+              "name": "冰霜護甲 / Frigid Needle",
+              "type": "other",
+              "description": "巫女的鏡像變希瓦形態，地面結冰，附加冰面 buff (移動強制滑行場地直徑)。隨後鏡像放靜寂的雙劍技或閒寂的雙劍技。",
+              "tips": [
+                "預判滑行終點",
+                "靜寂 = 前 270° → 後 90°；閒寂 = 後 90° → 前 270°"
+              ]
+            },
+            {
+              "name": "強放逐 / Hallowed Wings",
+              "type": "stack",
+              "description": "對 4 DPS 或 4 支援職小範圍分擔圓 + 魔法受傷加重 2s。Boss 頭頂球數 = 1 個 → 強放逐；4 個 → 分裂強放逐 (各自圓)。",
+              "tips": [
+                "看球數預判分擔/散開"
+              ]
+            },
+            {
+              "name": "無盡光之鎖 / Twin Silence",
+              "type": "other",
+              "description": "8 人位置按環序連 6 人六邊形 + 10s 無盡光之鎖 → 9s 無盡光之束縛。相鄰 2 人 16s 強光之兆 (光爆 4 人分擔)。距離過近過遠或同伴死亡 = 全屏巨傷。",
+              "tips": [
+                "保持中等距離（不貼近也不拉遠）",
+                "強光之兆 4 人分擔"
+              ]
+            },
+            {
+              "name": "過量光 / Light's Course",
+              "type": "other",
+              "description": "6 層過量光分配到玩家身上。5 層 = 秒殺自己 + 全屏 AoE；依預兆走位處理。",
+              "tips": [
+                "管理過量光層數",
+                "5 層前處理掉"
+              ]
+            },
+            {
+              "name": "侵蝕光 / Holy Light + 塔",
+              "type": "other",
+              "description": "六邊形 6 個單人塔，踩塔附加 1 層過量光，無人踩 = 全屏巨傷。爆炸後場地中心出現 4 人塔。",
+              "tips": [
+                "6 人各踩 1 塔",
+                "4 人補進中央塔"
+              ]
+            },
+            {
+              "name": "絕對零度 / Absolute Zero",
+              "type": "raidwide",
+              "description": "讀條結束時 boss > 20% 血量 = 強制團滅；< 20% = 全屏 AoE。",
+              "tips": [
+                {
+                  "text": "DPS 必須推到 20% 以下",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "永久冰晶 (過場)",
+      "nameEn": "Permafrost (Intermission)",
+      "mnemonic": [
+        "希瓦·米特隆被永久冰晶凍結，需打破光暗水晶釋放她。",
+        "4 光水晶 (正點) + 4 暗水晶 (斜點)。",
+        "暗水晶罪冰封：扇形冰傷，命中其他水晶會給 90% 受傷減輕。",
+        "光水晶嚴冬風暴：圓 AoE 冰傷。",
+        "DPS check：未及時破壞 4 暗水晶 → 蓋娅碎冰擊 125 萬血量秒殺永久冰晶。"
+      ],
+      "phases": [
+        {
+          "name": "P3 永久冰晶過場",
+          "mechanics": [
+            {
+              "name": "寒波 / Hibernal Wing",
+              "type": "other",
+              "description": "希瓦·米特隆擊退並凍結所有玩家，直到蓋娅擊碎冰晶；依預兆走位處理。",
+              "tips": [
+                "等待蓋娅釋放"
+              ]
+            },
+            {
+              "name": "罪冰封 / Sinbound Holy",
+              "type": "aoe",
+              "description": "暗水晶不斷對最近玩家放可閃 15° 扇形冰傷 + 180s 傷害降低。命中其他水晶會給 90% 受傷減輕。",
+              "tips": [
+                {
+                  "text": "DPS 集火暗水晶",
+                  "role": "dps"
+                },
+                "避免扇形互相打到水晶"
+              ]
+            },
+            {
+              "name": "嚴冬風暴 / Hiemal Storm",
+              "type": "aoe",
+              "description": "光水晶對最近玩家放可閃圓 AoE 冰傷 + 180s 傷害降低；看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "閃圓 AoE"
+              ]
+            },
+            {
+              "name": "嚴冬射線 / Hiemal Ray",
+              "type": "other",
+              "description": "光水晶與最近玩家連線釋放不可閃圓 AoE，留下出血區；依預兆走位處理。",
+              "tips": [
+                "可被截斷",
+                "閃出血區或踩入後快速離開"
+              ]
+            },
+            {
+              "name": "光之泛濫 / Lightsteeped",
+              "type": "raidwide",
+              "description": "永久冰晶讀條的團滅技；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "DPS 趕在讀條前破壞 4 暗水晶",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "碎冰擊 / Shatter",
+              "type": "other",
+              "description": "光之泛濫讀條結束前 3 秒，若 4 暗水晶未全破，蓋娅對永久冰晶造成其 50% 生命上限的固定 1256902 傷害 (不受減傷影響)。",
+              "tips": [
+                "DPS 提早處理 4 暗水晶"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "暗之巫女",
+      "nameEn": "Oracle of Darkness",
+      "mnemonic": [
+        "時間壓縮·絕 (Crystallize Time)：複雜時鐘時停整合機制。",
+        "啟示 (Apocalypse)：時鐘指針依序爆。",
+        "Akh Morn 死亡輪迴：T 連續分擔。"
+      ],
+      "phases": [
+        {
+          "name": "P4 暗之巫女",
+          "mechanics": [
+            {
+              "name": "啟示 / Apocalypse",
+              "type": "aoe",
+              "description": "場上 8 個時鐘指針，依序指向不同方位爆發 cleave；看圖示提前走位避開預兆範圍。",
+              "tips": [
+                "看指針順序",
+                "解 cleave 並躲指向"
+              ]
+            },
+            {
+              "name": "Akh Morn 死亡輪迴",
+              "type": "stack",
+              "description": "對 1 仇連續可分擔圓 AoE；全員集合分攤傷害 缺人會爆血。",
+              "tips": [
+                {
+                  "text": "兩 T 連 H 分擔",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "時間壓縮·絕 / Crystallize Time",
+              "type": "other",
+              "description": "複雜時鐘時停機制，整合多種技能；依預兆走位處理。",
+              "tips": [
+                "依指派順序就位",
+                "團隊事前完整對齊路徑"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "希瓦·米特隆 + 暗之巫女 (雙形態)",
+      "nameEn": "Shiva-Mitron + Oracle of Darkness",
+      "mnemonic": [
+        "光與暗的龍詩 (Wings of Light and Dark)：雙形態合作機制。",
+        "死亡輪迴：T 連續分擔。",
+        "失樂園：場地縮減 + 即死區域 + 時間結晶。"
+      ],
+      "phases": [
+        {
+          "name": "P5 雙形態",
+          "mechanics": [
+            {
+              "name": "光與暗的龍詩 / Wings of Light and Dark",
+              "type": "raidwide",
+              "description": "雙形態合作放團體 AoE + 配對機制；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "全員減傷 + LB3",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "死亡輪迴 / Akh Morn",
+              "type": "stack",
+              "description": "T 連續可分擔圓 AoE，遞增段數；全員集合分攤傷害 缺人會爆血。",
+              "tips": [
+                {
+                  "text": "兩 T 換手或無敵",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "失樂園 / Paradise Lost",
+              "type": "other",
+              "description": "場地縮減 + 即死區域 + 時間結晶機制；依預兆走位處理。",
+              "tips": [
+                "看安全區站位"
+              ]
+            },
+            {
+              "name": "時間結晶 / Crystallize Time (再次)",
+              "type": "other",
+              "description": "暗之巫女再次放時間結晶機制；依預兆走位處理。",
+              "tips": [
+                "回想 P4 走位流程"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "潘多拉·米特隆",
+      "nameEn": "Pandora-Mitron",
+      "mnemonic": [
+        "潘多拉魔盒 (Pandora's Box)：分配多種顏色 debuff 整合處理。",
+        "復樂園 (Paradise Regained)：場地復原 + 強化機制。",
+        "失樂園終曲 (Paradise Lost Finale)：enrage 級全屏 AoE。"
+      ],
+      "phases": [
+        {
+          "name": "P6 潘多拉·米特隆",
+          "mechanics": [
+            {
+              "name": "潘多拉魔盒 / Pandora's Box",
+              "type": "other",
+              "description": "分配多種顏色 debuff，需按顏色處理；依預兆走位處理。",
+              "tips": [
+                "依顏色找對應走位"
+              ]
+            },
+            {
+              "name": "復樂園 / Paradise Regained",
+              "type": "raidwide",
+              "description": "場地復原 + 強化機制 + 全屏 AoE；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "全體減傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "失樂園終曲 / Paradise Lost (Enrage)",
+              "type": "raidwide",
+              "description": "潘多拉讀條的強制團滅；全員預備減傷與大團補。",
+              "tips": [
+                {
+                  "text": "末段 DPS check + 全員 LB3",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

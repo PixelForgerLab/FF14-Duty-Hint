@@ -1,80 +1,95 @@
 {
-    "id": "binding_coil_of_bahamut_-_turn_3",
-    "name": "巴哈姆特大迷宮 邂逅之章3",
-    "nameEn": "The Binding Coil of Bahamut - Turn 3",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）巴哈姆特大迷宮 邂逅之章3：迷宫式戰鬥，多 3 個 boss + 機關。Allagan Guardian 阿拉戈守護者主戰。",
-        "2）Guardian 守護者：Auto Cannons 自動加農砲 → 直線 AoE 多方向；Heater Beam 加熱光束 → MT 死刑高傷單體；場上多個機關需玩家互動。",
-        "3）Allagan Junction 阿拉戈交叉口：場上多個能量節點互動 → 啟動防護避免 AoE。",
-        "4）Allagan Field 阿拉戈場：地面生成多個能量場 → 站到能量場上獲得 buff（可解某 boss 機制）或避免傷害。",
-        "5）狂暴：整體 12 分鐘軟狂暴。需 DPS race 結束。"
-    ],
-    "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰邂逅之章 3（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Allagan Guardian 阿拉戈守護者。迷宫式 boss 戰鬥需要利用場上互動機關。本副本是 ARR Coil 中最依賴『場地互動』的副本，玩家需協同操作機關才能擊敗 boss。詳細機制請參考 CGW Console Games Wiki。",
-    "bosses": [
+  "id": "binding_coil_of_bahamut_-_turn_3",
+  "name": "巴哈姆特大迷宮 邂逅之章3",
+  "nameEn": "The Binding Coil of Bahamut - Turn 3",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "巴哈姆特大迷宮 邂逅之章3：迷宫式戰鬥，多 3 個 boss + 機關。Allagan Guardian 阿拉戈守護者主戰。",
+    "Guardian 守護者：Auto Cannons 自動加農砲 → 直線 AoE 多方向；Heater Beam 加熱光束 → MT 死刑高傷單體；場上多個機關需玩家互動。",
+    "Allagan Junction 阿拉戈交叉口：場上多個能量節點互動 → 啟動防護避免 AoE。",
+    "Allagan Field 阿拉戈場：地面生成多個能量場 → 站到能量場上獲得 buff（可解某 boss 機制）或避免傷害。",
+    "狂暴：整體 12 分鐘軟狂暴。需 DPS race 結束。"
+  ],
+  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰邂逅之章 3（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Allagan Guardian 阿拉戈守護者。迷宫式 boss 戰鬥需要利用場上互動機關。本副本是 ARR Coil 中最依賴『場地互動』的副本，玩家需協同操作機關才能擊敗 boss。詳細機制請參考 CGW Console Games Wiki。",
+  "bosses": [
+    {
+      "name": "阿拉戈守護者",
+      "nameEn": "Allagan Guardian",
+      "phases": [
         {
-            "name": "阿拉戈守護者",
-            "nameEn": "Allagan Guardian",
-            "phases": [
+          "name": "主戰（機關 + 防護機制）",
+          "mechanics": [
+            {
+              "name": "Auto Cannons 自動加農砲（多方向直線）",
+              "type": "aoe",
+              "description": "boss 釋放多方向直線 AoE。看圖示走縫到無 AoE 區。",
+              "tips": [
                 {
-                    "name": "主戰（機關 + 防護機制）",
-                    "mechanics": [
-                        {
-                            "name": "Auto Cannons 自動加農砲（多方向直線）",
-                            "type": "aoe",
-                            "description": "boss 釋放多方向直線 AoE。看圖示走縫到無 AoE 區。",
-                            "tips": [
-                                {"text": "看直線走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Heater Beam 加熱光束（MT 死刑）",
-                            "type": "tankbuster",
-                            "description": "對 MT 死刑高傷單體；MT 開大減傷 + 治療大補。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Allagan Junction 阿拉戈交叉口（互動機關）",
-                            "type": "mechanic",
-                            "description": "場上多個能量節點 → 玩家互動啟動防護避免 boss AoE。每個機關需指定玩家操作。",
-                            "tips": [
-                                {"text": "指定玩家操作機關", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Allagan Field 阿拉戈場（能量區）",
-                            "type": "mechanic",
-                            "description": "地面生成多個能量場 → 站到能量場上獲得 buff（可解 boss 機制）或避免傷害。",
-                            "tips": [
-                                {"text": "看場地能量區站位", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Object 199 軟狂暴（12 分鐘）",
-                            "type": "raidwide",
-                            "description": "整體 12 分鐘軟狂暴。需 DPS race 結束。",
-                            "tips": [
-                                {"text": "12 分鐘內擊敗", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "看直線走縫",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Auto Cannons → 多直線走縫",
-                "Heater Beam → MT 大減傷",
-                "Junction 互動機關 → 啟動防護",
-                "Allagan Field → 站能量區",
-                "12 分鐘軟狂暴"
-            ]
+              ]
+            },
+            {
+              "name": "Heater Beam 加熱光束（MT 死刑）",
+              "type": "tankbuster",
+              "description": "對 MT 死刑高傷單體；MT 開大減傷 + 治療大補。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Allagan Junction 阿拉戈交叉口（互動機關）",
+              "type": "mechanic",
+              "description": "場上多個能量節點 → 玩家互動啟動防護避免 boss AoE。每個機關需指定玩家操作。",
+              "tips": [
+                {
+                  "text": "指定玩家操作機關",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Allagan Field 阿拉戈場（能量區）",
+              "type": "mechanic",
+              "description": "地面生成多個能量場 → 站到能量場上獲得 buff（可解 boss 機制）或避免傷害。",
+              "tips": [
+                {
+                  "text": "看場地能量區站位",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Object 199 軟狂暴（12 分鐘）",
+              "type": "raidwide",
+              "description": "整體 12 分鐘軟狂暴。需 DPS race 結束。",
+              "tips": [
+                {
+                  "text": "12 分鐘內擊敗",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Auto Cannons → 多直線走縫",
+        "Heater Beam → MT 大減傷",
+        "Junction 互動機關 → 啟動防護",
+        "Allagan Field → 站能量區",
+        "12 分鐘軟狂暴"
+      ]
+    }
+  ]
 }

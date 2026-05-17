@@ -1,222 +1,222 @@
 {
-    "id":  "fractal_continuum_hard",
-    "name":  "瘋狂戰艦無限迴廊",
-    "nameEn":  "The Fractal Continuum (Hard)",
-    "expansion":  "4.x 紅蓮解放者 (Stormblood)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  70,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Mecanopendragon 機械龍：強化機械龍 + 點名圓。",
-                     "2）B2 Pandemonium Warden 守望者：機械人偶 add + 直線。",
-                     "3）B3 Mech-Mecanovogue 機械摩格：機甲 boss + add。"
-                 ],
-    "notes":  "SB 4.3 hard 版瘋狂戰艦（Lv 70）。Boss 依序為 Mecanopendragon 機械龍、Pandemonium Warden 守望者、Mech-Mecanovogue 機械摩格。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "機械龍",
-                       "nameEn":  "Mecanopendragon",
-                       "mnemonic":  [
-                                        "Mecanopendragon 機械龍 機制：強化機械龍 + 點名圓。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B1",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Electrochemical Transfer adds 切換",
-                                                                "type":  "other",
-                                                                "description":  "adds 不可選，奇數模式 = 對玩家直線 + 對 tank 多次/雙數模式 = 排成水平或垂直線。",
-                                                                "tips":  [
-                                                                             "看模式預判 Citadel Buster"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Citadel Buster 城寨破壞",
-                                                                "type":  "aoe",
-                                                                "description":  "雙數模式後 boss 與 adds 連橘線朝向 → 半場大 AoE。",
-                                                                "tips":  [
-                                                                             "雙模式 → 中央等 → 看 adds 朝向走對側",
-                                                                             "別碰中途出現的棕線 (擊退 + vuln + Damage Down 20s)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Allagan Gravity 亞拉戈重力",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機玩家大圓 AoE，留黑水窪。踩 = 高傷 + Heavy 40s。",
-                                                                "tips":  [
-                                                                             "跑開引導黑水窪到場邊",
-                                                                             {
-                                                                                 "text":  "healer 解 Heavy debuff",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "守望者",
-                       "nameEn":  "Pandemonium Warden",
-                       "mnemonic":  [
-                                        "Pandemonium Warden 守望者 機制：機械人偶 add + 直線。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B2",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Aetheroplasm 以太質",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 tank 的 AoE tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "非 tank 不站 tank 附近"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Citadel Buster (B2) 堡壘擊",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機玩家無預警直線 → vuln 60s。看 boss 朝向跑側。",
-                                                                "tips":  [
-                                                                             "看 boss 朝向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Ceruleum Vent 蒼空之氣",
-                                                                "type":  "knockback",
-                                                                "description":  "全屏 + 大擊退。",
-                                                                "tips":  [
-                                                                             "靠中央 / Arm\u0027s Length"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Primordial Aether 原始以太 (Sephirot)",
-                                                                "type":  "spread",
-                                                                "description":  "全員上 Ratzon 綠 AoE 標記 → 留下擴大綠球，踩會反覆扣血 + vuln。",
-                                                                "tips":  [
-                                                                             "全員場邊散開放球，留中央安全區"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Primordial Aether (Sophia) 原始以太",
-                                                                "type":  "stack",
-                                                                "description":  "兩玩家分上黑/白縮圈標記 → 兩人必須疊接讓圈消失抵消 (顯示 Equilibrium maintained)。失敗 → Reduced Immunity + Bleeding。",
-                                                                "tips":  [
-                                                                             "黑白標記者立刻互相找疊接"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Primordial Aether (Zurvan) 原始以太",
-                                                                "type":  "other",
-                                                                "description":  "兩玩家 Infinite Fire / 兩玩家 Infinite Ice → 南/北 兩個對應屬性隕石下降 → **全員站對應屬性隕石下吸收**否則 Infinite Anguish + 隕石爆 vuln。",
-                                                                "tips":  [
-                                                                             "火去火、冰去冰，全員去吸"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "機械摩格",
-                       "nameEn":  "Mech-Mecanovogue",
-                       "mnemonic":  [
-                                        "Mech-Mecanovogue 機械摩格 機制：機甲 boss + add。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "B3",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Death Spin 死亡旋擊",
-                                                                "type":  "aoe",
-                                                                "description":  "近圓 AoE，無 telegraph (動作 = 舉右爪)。",
-                                                                "tips":  [
-                                                                             "看到舉右爪 → 跑開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aether Bend 以太彎曲",
-                                                                "type":  "aoe",
-                                                                "description":  "甜甜圈 AoE，無 telegraph (動作 = 後立)。",
-                                                                "tips":  [
-                                                                             "看到後立 → 貼緊 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Flare Star 閃焰之星",
-                                                                "type":  "other",
-                                                                "description":  "場邊出火球 → 留岩漿池 (Burns)。",
-                                                                "tips":  [
-                                                                             "遠離"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Allagan Gravity (B3) 阿拉葛重力",
-                                                                "type":  "aoe",
-                                                                "description":  "全員黑 AoE 高傷。",
-                                                                "tips":  [
-                                                                             "散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Light Pillar 光柱",
-                                                                "type":  "aoe",
-                                                                "description":  "對隨機玩家小圓 + 8 條外擴 AoE。",
-                                                                "tips":  [
-                                                                             "離開圓 → 站線之間"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Forborn Beast 永恆獸 (永久 Damage Up)",
-                                                                "type":  "other",
-                                                                "description":  "Boss 永久增傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 加快擊殺",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Demi Ultima 究極之力",
-                                                                "type":  "raidwide",
-                                                                "description":  "高傷全屏，10% 後讀條 = 全屏 wipe (enrage)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段全力 burst",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Allagan Flare 亞拉戈閃焰",
-                                                                "type":  "raidwide",
-                                                                "description":  "對 tank 的 proximity 全屏 marker。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 拉外讓近距 ranged 跑開",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "fractal_continuum_hard",
+  "name": "瘋狂戰艦無限迴廊",
+  "nameEn": "The Fractal Continuum (Hard)",
+  "expansion": "4.x 紅蓮解放者 (Stormblood)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 70,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Mecanopendragon 機械龍：強化機械龍 + 點名圓。",
+    "B2 Pandemonium Warden 守望者：機械人偶 add + 直線。",
+    "B3 Mech-Mecanovogue 機械摩格：機甲 boss + add。"
+  ],
+  "notes": "SB 4.3 hard 版瘋狂戰艦（Lv 70）。Boss 依序為 Mecanopendragon 機械龍、Pandemonium Warden 守望者、Mech-Mecanovogue 機械摩格。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
+  "bosses": [
+    {
+      "name": "機械龍",
+      "nameEn": "Mecanopendragon",
+      "mnemonic": [
+        "Mecanopendragon 機械龍 機制：強化機械龍 + 點名圓。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "B1",
+          "mechanics": [
+            {
+              "name": "Electrochemical Transfer adds 切換",
+              "type": "other",
+              "description": "adds 不可選，奇數模式 = 對玩家直線 + 對 tank 多次/雙數模式 = 排成水平或垂直線。",
+              "tips": [
+                "看模式預判 Citadel Buster"
+              ]
+            },
+            {
+              "name": "Citadel Buster 城寨破壞",
+              "type": "aoe",
+              "description": "雙數模式後 boss 與 adds 連橘線朝向 → 半場大 AoE。",
+              "tips": [
+                "雙模式 → 中央等 → 看 adds 朝向走對側",
+                "別碰中途出現的棕線 (擊退 + vuln + Damage Down 20s)"
+              ]
+            },
+            {
+              "name": "Allagan Gravity 亞拉戈重力",
+              "type": "aoe",
+              "description": "對隨機玩家大圓 AoE，留黑水窪。踩 = 高傷 + Heavy 40s。",
+              "tips": [
+                "跑開引導黑水窪到場邊",
+                {
+                  "text": "healer 解 Heavy debuff",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "守望者",
+      "nameEn": "Pandemonium Warden",
+      "mnemonic": [
+        "Pandemonium Warden 守望者 機制：機械人偶 add + 直線。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "B2",
+          "mechanics": [
+            {
+              "name": "Aetheroplasm 以太質",
+              "type": "tankbuster",
+              "description": "對 tank 的 AoE tankbuster。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                },
+                "非 tank 不站 tank 附近"
+              ]
+            },
+            {
+              "name": "Citadel Buster (B2) 堡壘擊",
+              "type": "aoe",
+              "description": "對隨機玩家無預警直線 → vuln 60s。看 boss 朝向跑側。",
+              "tips": [
+                "看 boss 朝向"
+              ]
+            },
+            {
+              "name": "Ceruleum Vent 蒼空之氣",
+              "type": "knockback",
+              "description": "全屏 + 大擊退。",
+              "tips": [
+                "靠中央 / Arm's Length"
+              ]
+            },
+            {
+              "name": "Primordial Aether 原始以太 (Sephirot)",
+              "type": "spread",
+              "description": "全員上 Ratzon 綠 AoE 標記 → 留下擴大綠球，踩會反覆扣血 + vuln。",
+              "tips": [
+                "全員場邊散開放球，留中央安全區"
+              ]
+            },
+            {
+              "name": "Primordial Aether (Sophia) 原始以太",
+              "type": "stack",
+              "description": "兩玩家分上黑/白縮圈標記 → 兩人必須疊接讓圈消失抵消 (顯示 Equilibrium maintained)。失敗 → Reduced Immunity + Bleeding。",
+              "tips": [
+                "黑白標記者立刻互相找疊接"
+              ]
+            },
+            {
+              "name": "Primordial Aether (Zurvan) 原始以太",
+              "type": "other",
+              "description": "兩玩家 Infinite Fire / 兩玩家 Infinite Ice → 南/北 兩個對應屬性隕石下降 → **全員站對應屬性隕石下吸收**否則 Infinite Anguish + 隕石爆 vuln。",
+              "tips": [
+                "火去火、冰去冰，全員去吸"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "機械摩格",
+      "nameEn": "Mech-Mecanovogue",
+      "mnemonic": [
+        "Mech-Mecanovogue 機械摩格 機制：機甲 boss + add。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "B3",
+          "mechanics": [
+            {
+              "name": "Death Spin 死亡旋擊",
+              "type": "aoe",
+              "description": "近圓 AoE，無 telegraph (動作 = 舉右爪)。",
+              "tips": [
+                "看到舉右爪 → 跑開"
+              ]
+            },
+            {
+              "name": "Aether Bend 以太彎曲",
+              "type": "aoe",
+              "description": "甜甜圈 AoE，無 telegraph (動作 = 後立)。",
+              "tips": [
+                "看到後立 → 貼緊 boss"
+              ]
+            },
+            {
+              "name": "Flare Star 閃焰之星",
+              "type": "other",
+              "description": "場邊出火球 → 留岩漿池 (Burns)。",
+              "tips": [
+                "遠離"
+              ]
+            },
+            {
+              "name": "Allagan Gravity (B3) 阿拉葛重力",
+              "type": "aoe",
+              "description": "全員黑 AoE 高傷。",
+              "tips": [
+                "散開"
+              ]
+            },
+            {
+              "name": "Light Pillar 光柱",
+              "type": "aoe",
+              "description": "對隨機玩家小圓 + 8 條外擴 AoE。",
+              "tips": [
+                "離開圓 → 站線之間"
+              ]
+            },
+            {
+              "name": "Forborn Beast 永恆獸 (永久 Damage Up)",
+              "type": "other",
+              "description": "Boss 永久增傷。",
+              "tips": [
+                {
+                  "text": "DPS 加快擊殺",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Demi Ultima 究極之力",
+              "type": "raidwide",
+              "description": "高傷全屏，10% 後讀條 = 全屏 wipe (enrage)。",
+              "tips": [
+                {
+                  "text": "末段全力 burst",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Allagan Flare 亞拉戈閃焰",
+              "type": "raidwide",
+              "description": "對 tank 的 proximity 全屏 marker。",
+              "tips": [
+                {
+                  "text": "MT 拉外讓近距 ranged 跑開",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

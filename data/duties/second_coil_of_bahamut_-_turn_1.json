@@ -1,90 +1,127 @@
 {
-    "id": "second_coil_of_bahamut_-_turn_1",
-    "name": "巴哈姆特大迷宮 侵略之章1",
-    "nameEn": "The Second Coil of Bahamut - Turn 1",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）巴哈姆特大迷宮 侵略之章1（Coil 2 T1）：Rafflesia 拉芙萊西亞食人花核心戰。場上多種有毒花藤 add 機制。",
-        "2）Toxic Bloom 毒花綻放：boss 釋放點名玩家圓 AoE + 毒池留下。被點玩家拉到場邊。",
-        "3）Briar 荊棘：場上多個荊棘 add，被攻擊 → 自身為中心圓 AoE 自爆 + 留下毒區。MT 拉住但不要打死。",
-        "4）Bad Breath 惡息：前扇 + 多重 debuff（中毒/沉默/麻痺）→ MT 朝外，治療 Esuna 清各種 debuff。",
-        "5）Allergen 過敏原：點名玩家受到持續傷害 + 隨機方向噴射毒霧。",
-        "6）Blighted Bouquet 枯萎花束：全屏 AoE + 病弱 → 治療團補。",
-        "7）軟狂暴：~10 分鐘後強制狂暴 → DPS race。"
-    ],
-    "notes": "ARR 2.2 蠻神戰 - 巴哈姆特絕境戰侵略之章 1（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Rafflesia 拉芙萊西亞食人花。本副本是 ARR Coil 第二輪的開局，多 add 環境下需要分坦 + 集火 + 場地走位協調。",
-    "bosses": [
+  "id": "second_coil_of_bahamut_-_turn_1",
+  "name": "巴哈姆特大迷宮 侵略之章1",
+  "nameEn": "The Second Coil of Bahamut - Turn 1",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "巴哈姆特大迷宮 侵略之章1（Coil 2 T1）：Rafflesia 拉芙萊西亞食人花核心戰。場上多種有毒花藤 add 機制。",
+    "Toxic Bloom 毒花綻放：boss 釋放點名玩家圓 AoE + 毒池留下。被點玩家拉到場邊。",
+    "Briar 荊棘：場上多個荊棘 add，被攻擊 → 自身為中心圓 AoE 自爆 + 留下毒區。MT 拉住但不要打死。",
+    "Bad Breath 惡息：前扇 + 多重 debuff（中毒/沉默/麻痺）→ MT 朝外，治療 Esuna 清各種 debuff。",
+    "Allergen 過敏原：點名玩家受到持續傷害 + 隨機方向噴射毒霧。",
+    "Blighted Bouquet 枯萎花束：全屏 AoE + 病弱 → 治療團補。",
+    "軟狂暴：~10 分鐘後強制狂暴 → DPS race。"
+  ],
+  "notes": "ARR 2.2 蠻神戰 - 巴哈姆特絕境戰侵略之章 1（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Rafflesia 拉芙萊西亞食人花。本副本是 ARR Coil 第二輪的開局，多 add 環境下需要分坦 + 集火 + 場地走位協調。",
+  "bosses": [
+    {
+      "name": "拉芙萊西亞",
+      "nameEn": "Rafflesia",
+      "phases": [
         {
-            "name": "拉芙萊西亞",
-            "nameEn": "Rafflesia",
-            "phases": [
+          "name": "主戰（多 add 食人花）",
+          "mechanics": [
+            {
+              "name": "Toxic Bloom 毒花綻放（點名 + 毒池）",
+              "type": "spread",
+              "description": "點名隨機玩家圓 AoE + 毒池留下。被點走出 + 拉場邊。",
+              "tips": [
                 {
-                    "name": "主戰（多 add 食人花）",
-                    "mechanics": [
-                        {
-                            "name": "Toxic Bloom 毒花綻放（點名 + 毒池）",
-                            "type": "spread",
-                            "description": "點名隨機玩家圓 AoE + 毒池留下。被點走出 + 拉場邊。",
-                            "tips": [{"text": "被點拉場邊", "role": "dps"}]
-                        },
-                        {
-                            "name": "Briar 荊棘（自爆 add）",
-                            "type": "add",
-                            "description": "場上多個 Briar 荊棘 add，受攻擊 → 自身圓 AoE 自爆 + 毒區。MT 拉住但不打死避免自爆。",
-                            "tips": [{"text": "MT 拉但不打死", "role": "tank"}]
-                        },
-                        {
-                            "name": "Bad Breath 惡息（多 debuff 前扇）",
-                            "type": "cone",
-                            "description": "前扇 + 多重 debuff（中毒/沉默/麻痺）→ MT 朝外，治療 Esuna 清。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "Esuna 清多 debuff", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Allergen 過敏原",
-                            "type": "spread",
-                            "description": "點名玩家持續傷害 + 隨機方向噴射毒霧。被點玩家避免噴射方向有隊友。",
-                            "tips": [{"text": "被點朝場邊", "role": "dps"}]
-                        },
-                        {
-                            "name": "Blighted Bouquet 枯萎花束",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 病弱 debuff。治療團補 + Esuna 清病弱。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"},
-                                {"text": "Esuna 清病弱", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Vines 藤蔓（add）",
-                            "type": "add",
-                            "description": "boss 召喚藤蔓 add → 限制玩家移動。DPS 切目標清。",
-                            "tips": [{"text": "DPS 清藤蔓", "role": "dps"}]
-                        },
-                        {
-                            "name": "軟狂暴",
-                            "type": "raidwide",
-                            "description": "戰鬥約 10 分鐘後強制狂暴 → DPS race。",
-                            "tips": [{"text": "10 分鐘內擊敗", "role": "dps"}]
-                        }
-                    ]
+                  "text": "被點拉場邊",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Toxic Bloom 毒花綻放 → 拉場邊",
-                "Briar 荊棘 → MT 拉但不打死",
-                "Bad Breath 惡息（前扇 + 多 debuff）→ MT 朝外",
-                "Blighted Bouquet 枯萎花束 → 團補 + Esuna",
-                "藤蔓 add → DPS 清"
-            ]
+              ]
+            },
+            {
+              "name": "Briar 荊棘（自爆 add）",
+              "type": "add",
+              "description": "場上多個 Briar 荊棘 add，受攻擊 → 自身圓 AoE 自爆 + 毒區。MT 拉住但不打死避免自爆。",
+              "tips": [
+                {
+                  "text": "MT 拉但不打死",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Bad Breath 惡息（多 debuff 前扇）",
+              "type": "cone",
+              "description": "前扇 + 多重 debuff（中毒/沉默/麻痺）→ MT 朝外，治療 Esuna 清。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "Esuna 清多 debuff",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Allergen 過敏原",
+              "type": "spread",
+              "description": "點名玩家持續傷害 + 隨機方向噴射毒霧。被點玩家避免噴射方向有隊友。",
+              "tips": [
+                {
+                  "text": "被點朝場邊",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Blighted Bouquet 枯萎花束",
+              "type": "raidwide",
+              "description": "全屏 AoE + 病弱 debuff。治療團補 + Esuna 清病弱。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                },
+                {
+                  "text": "Esuna 清病弱",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Vines 藤蔓（add）",
+              "type": "add",
+              "description": "boss 召喚藤蔓 add → 限制玩家移動。DPS 切目標清。",
+              "tips": [
+                {
+                  "text": "DPS 清藤蔓",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "軟狂暴",
+              "type": "raidwide",
+              "description": "戰鬥約 10 分鐘後強制狂暴 → DPS race。",
+              "tips": [
+                {
+                  "text": "10 分鐘內擊敗",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Toxic Bloom 毒花綻放 → 拉場邊",
+        "Briar 荊棘 → MT 拉但不打死",
+        "Bad Breath 惡息（前扇 + 多 debuff）→ MT 朝外",
+        "Blighted Bouquet 枯萎花束 → 團補 + Esuna",
+        "藤蔓 add → DPS 清"
+      ]
+    }
+  ]
 }

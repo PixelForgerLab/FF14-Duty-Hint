@@ -1,249 +1,342 @@
 {
-    "id": "keeper_of_the_lake",
-    "name": "幻龍殘骸密約之塔",
-    "nameEn": "The Keeper of the Lake",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "mainScenario": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Einhander 雙頭飛龍：Aero Blast 疾風爆發全屏 → 團補；Resounding Screech 呼喚之聲召喚小龍丟 6 個青磷水罐（六邊形），boss 飛場邊讀條直線 AoE → Mark XLT 41 式聯炮引爆對距最遠的兩罐 → 連鎖爆炸 → 看罐子發紅光提前遠離。",
-        "2）B1 加重擊 Heavy Swing → 對 MT 死刑 → MT 大減傷 + 治療大補。第二次 Resounding Screech 5 罐 + 場邊衰減 AoE → 退到無罐角落。",
-        "3）B2 Magitek Gunship 飛艇：衝鋒沿途丟下火圈 + Burns 燒傷 DoT；地毯式轟炸黃圓點名；火炎放射 扇形多段 → 散開避火圈。",
-        "4）B3 ??? Midgardsormr 塵世幻龍：核心機制學習 trial-like。Admonishment 訓誡前方寬直線、Inner Turmoil 內部騷動近身半圓、Outer Turmoil 外部騷動半環（靠近 boss 安全）。",
-        "5）B3 Phantom Kin 召喚幻影：場地左右各出現 1 隻龍之幻象 → 三變體：幻影訓誡（3 條直線）/ 幻影內部騷動（boss 半圓 + 幻象直線）/ 幻影外部騷動（boss 半環 + 幻象直線）。",
-        "6）B3 < 60% HP Animadversion 衰減：boss 不可選 + 召喚 2 隻龍之幻象（可選） + 累積『塵世幻龍的以太』進度條 → 必須在 100% 前清掉 2 隻幻象，否則團滅（DPS check）。",
-        "7）B3 Akh Morn 死亡輪迴：點名玩家 4 連分攤 → 集合分攤 + 治療大補連發。Antipathy 反感 同心圓擴散 → 站第二環 → 待中央熄滅進中央 → 第二環炸完進第二環。",
-        "8）B3 Condescension 居高臨下 → MT 死刑減傷；β射線 全屏 → 團補。"
-    ],
-    "notes": "ARR 2.5 主線副本（Lv 50，sync 50，ilvl 90），位於摩杜納銀淚湖密約之塔（Keeper of the Lake），15 年前 Midgardsormr 與帝國旗艦 Agrius 同歸於盡的墜落點。蒼天伊修加爾德主線必經副本，主線 quest『The Rising Chorus』後解鎖。6.2 加入 Duty Support 並進行更新。Boss 依序為 Einhander 雙頭飛龍、Magitek Gunship 帝國魔導飛艇、??? Midgardsormr 塵世幻龍（劇情防雷顯示 ???）。塵世幻龍是 HW 序章核心人物，玩家在此處與龍王相遇引發龍詩戰爭的真相揭曉。",
-    "bosses": [
+  "id": "keeper_of_the_lake",
+  "name": "幻龍殘骸密約之塔",
+  "nameEn": "The Keeper of the Lake",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "mainScenario": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Einhander 雙頭飛龍：Aero Blast 疾風爆發全屏 → 團補；Resounding Screech 呼喚之聲召喚小龍丟 6 個青磷水罐（六邊形），boss 飛場邊讀條直線 AoE → Mark XLT 41 式聯炮引爆對距最遠的兩罐 → 連鎖爆炸 → 看罐子發紅光提前遠離。",
+    "B1 加重擊 Heavy Swing → 對 MT 死刑 → MT 大減傷 + 治療大補。第二次 Resounding Screech 5 罐 + 場邊衰減 AoE → 退到無罐角落。",
+    "B2 Magitek Gunship 飛艇：衝鋒沿途丟下火圈 + Burns 燒傷 DoT；地毯式轟炸黃圓點名；火炎放射 扇形多段 → 散開避火圈。",
+    "B3 ??? Midgardsormr 塵世幻龍：核心機制學習 trial-like。Admonishment 訓誡前方寬直線、Inner Turmoil 內部騷動近身半圓、Outer Turmoil 外部騷動半環（靠近 boss 安全）。",
+    "B3 Phantom Kin 召喚幻影：場地左右各出現 1 隻龍之幻象 → 三變體：幻影訓誡（3 條直線）/ 幻影內部騷動（boss 半圓 + 幻象直線）/ 幻影外部騷動（boss 半環 + 幻象直線）。",
+    "B3 < 60% HP Animadversion 衰減：boss 不可選 + 召喚 2 隻龍之幻象（可選） + 累積『塵世幻龍的以太』進度條 → 必須在 100% 前清掉 2 隻幻象，否則團滅（DPS check）。",
+    "B3 Akh Morn 死亡輪迴：點名玩家 4 連分攤 → 集合分攤 + 治療大補連發。Antipathy 反感 同心圓擴散 → 站第二環 → 待中央熄滅進中央 → 第二環炸完進第二環。",
+    "B3 Condescension 居高臨下 → MT 死刑減傷；β射線 全屏 → 團補。"
+  ],
+  "notes": "ARR 2.5 主線副本（Lv 50，sync 50，ilvl 90），位於摩杜納銀淚湖密約之塔（Keeper of the Lake），15 年前 Midgardsormr 與帝國旗艦 Agrius 同歸於盡的墜落點。蒼天伊修加爾德主線必經副本，主線 quest『The Rising Chorus』後解鎖。6.2 加入 Duty Support 並進行更新。Boss 依序為 Einhander 雙頭飛龍、Magitek Gunship 帝國魔導飛艇、??? Midgardsormr 塵世幻龍（劇情防雷顯示 ???）。塵世幻龍是 HW 序章核心人物，玩家在此處與龍王相遇引發龍詩戰爭的真相揭曉。",
+  "bosses": [
+    {
+      "name": "雙頭飛龍",
+      "nameEn": "Einhander",
+      "phases": [
         {
-            "name": "雙頭飛龍",
-            "nameEn": "Einhander",
-            "phases": [
+          "name": "主戰（青磷水罐連鎖爆炸）",
+          "mechanics": [
+            {
+              "name": "Aero Blast 疾風爆發",
+              "type": "raidwide",
+              "description": "全屏 AoE 必中，中傷害；治療團補 + 全員注意減傷。",
+              "tips": [
                 {
-                    "name": "主戰（青磷水罐連鎖爆炸）",
-                    "mechanics": [
-                        {
-                            "name": "Aero Blast 疾風爆發",
-                            "type": "raidwide",
-                            "description": "全屏 AoE 必中，中傷害；治療團補 + 全員注意減傷。",
-                            "tips": [
-                                {"text": "團補連發", "role": "healer"},
-                                {"text": "全員可開減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Heavy Swing 加重擊",
-                            "type": "tankbuster",
-                            "description": "對 MT 死刑單體；MT 必須開大減傷 + 治療大補。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"},
-                                {"text": "治療大補 + 護盾", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Resounding Screech 呼喚之聲（第一次：6 罐）+ Mark XLT 41 式聯炮",
-                            "type": "mechanic",
-                            "description": "boss 召喚小龍在場上丟下 6 個 Ceruleum Tank 青磷水罐，呈等邊六邊形分布。Einhander 飛到場邊讀條直線 AoE Mark XLT 41 式聯炮 → 引爆相距最遠的兩個水罐（紅光警示）。爆炸後依序引爆旁邊的水罐（連鎖反應）。玩家須在水罐發紅光前移動到無紅光的安全位置。",
-                            "tips": [
-                                {"text": "看紅光提前遠離", "role": "dps"},
-                                {"text": "連鎖會延燒 → 持續觀察", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Resounding Screech 呼喚之聲（第二次：5 罐 + 衰減 AoE）",
-                            "type": "mechanic",
-                            "description": "第二次呼喚之聲只丟 5 個水罐（六邊形缺一角）。隨後 boss 飛到場邊讀條衰減 AoE（越靠場中傷越高）→ 退到場邊無水罐的那一角，遠離場中以減少受傷。AoE 後 5 個水罐同時爆炸 → 提前移動到無水罐的一角。",
-                            "tips": [
-                                {"text": "退到缺角位置（無水罐 + 遠場中）", "role": "tank"},
-                                {"text": "預備走位避同時爆炸", "role": "dps"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "Aero Blast 疾風爆發 → 團補",
-                "Heavy Swing 加重擊 → MT 大減傷",
-                "第 1 次呼喚之聲 6 罐 → 看紅光提前遠離 → 連鎖避開",
-                "第 2 次呼喚之聲 5 罐 → 退缺角 + 同時爆炸前到無罐位"
-            ]
-        },
-        {
-            "name": "帝國魔導飛艇",
-            "nameEn": "Magitek Gunship",
-            "phases": [
-                {
-                    "name": "主戰（衝鋒火圈 + 點名圓）",
-                    "mechanics": [
-                        {
-                            "name": "Flame Charge 衝鋒（沿途火圈）",
-                            "type": "mechanic",
-                            "description": "boss 移動到場邊向前方衝鋒，沿途丟下火圈造成傷害。玩家被火圈命中會吃傷 + Burns 燒傷 DoT。玩家必須遠離 boss 正面 + 不要踩火圈。",
-                            "tips": [
-                                {"text": "遠離 boss 衝鋒路徑", "role": "dps"},
-                                {"text": "不要踩留下的火圈", "role": "tank"},
-                                {"text": "Esuna 清燒傷或團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Carpet Bomb 地毯式轟炸",
-                            "type": "spread",
-                            "description": "對隨機 1 名玩家釋放可避免的黃色圓 AoE 預兆；被點玩家走出。",
-                            "tips": [
-                                {"text": "看黃圓走出", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Flame Thrower 火炎放射",
-                            "type": "cone",
-                            "description": "對玩家釋放扇形多段 AoE，持續數秒。非 T 不要待在 boss 前方。",
-                            "tips": [
-                                {"text": "走出扇形預兆", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Magitek Adds 帝國 add",
-                            "type": "add",
-                            "description": "boss 定期召喚小型 add；DPS 切目標清掉以免拖戰。",
-                            "tips": [
-                                {"text": "DPS 速秒 add", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Lightning Flash 閃擊（超時懲罰）",
-                            "type": "tankbuster",
-                            "description": "戰鬥時間過長 boss 會使用 Lightning Flash 閃擊對一仇造成較高傷害；MT 開減傷。DPS 控制時間不要拖。",
-                            "tips": [
-                                {"text": "MT 減傷 + DPS 別拖", "role": "tank"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "衝鋒 → 遠離正面 + 不踩火圈",
-                "地毯式轟炸 → 看黃圓走出",
-                "Flame Thrower 火炎放射 → 走出扇形",
-                "add → DPS 速秒",
-                "閃擊（拖戰懲罰）→ MT 減傷"
-            ]
-        },
-        {
-            "name": "塵世幻龍",
-            "nameEn": "??? (Midgardsormr)",
-            "phases": [
-                {
-                    "name": "P1 100%-60% HP（基礎機制）",
-                    "mechanics": [
-                        {
-                            "name": "Admonishment 訓誡",
-                            "type": "aoe",
-                            "description": "對 boss 正前方施放可見的直線（超寬）魔法傷害 + 1 檔 Damage Up 受傷加重 stack。MT 朝場邊面外，非 T 站背。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "非 T 站背", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Inner Turmoil 內部騷動",
-                            "type": "aoe",
-                            "description": "以 boss 為中心，施放半圓形範圍魔法傷害 + 受傷加重 stack；近戰看預兆退離。",
-                            "tips": [
-                                {"text": "近戰退離半圓", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Outer Turmoil 外部騷動",
-                            "type": "aoe",
-                            "description": "以 boss 為中心，施放半『環』形範圍魔法傷害（boss 旁邊是安全區）+ 受傷加重 stack。看到外部騷動 → 全員靠近 boss 站中央。",
-                            "tips": [
-                                {"text": "外部 → 靠近 boss", "role": "dps"},
-                                {"text": "看半圓 vs 半環判斷站位", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Disgust 厭惡",
-                            "type": "raidwide",
-                            "description": "全屏範圍魔法傷害 + 受傷加重 stack；治療團補。",
-                            "tips": [
-                                {"text": "團補連發", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Phantom Kin 召喚幻影（3 變體）",
-                            "type": "mechanic",
-                            "description": "場地左右兩側各出現 1 隻 Mirage Dragon 龍之幻象（不可選）。三種變體：① Phantom Admonishment 幻影訓誡 → boss 與 2 隻幻象同時對前方施放橫穿全場的直線 AoE（3 條直線同時）；② Phantom Inner Turmoil 幻影內部騷動 → boss 半圓 + 幻象 2 條直線；③ Phantom Outer Turmoil 幻影外部騷動 → boss 半環 + 幻象 2 條直線。先看幻象朝向找直線縫，再看 boss 是半圓 / 半環決定遠近。",
-                            "tips": [
-                                {"text": "先看幻象方向避直線縫", "role": "dps"},
-                                {"text": "再看 boss 半圓 / 半環", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Condescension 居高臨下",
-                            "type": "tankbuster",
-                            "description": "對 MT 高傷魔法單體；MT 開減傷。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "團補連發",
+                  "role": "healer"
                 },
                 {
-                    "name": "P2 < 60% HP（Animadversion 衰減 DPS check）",
-                    "mechanics": [
-                        {
-                            "name": "Animadversion 衰減",
-                            "type": "mechanic",
-                            "description": "boss HP < 60% 後讀條 Animadversion 衰減，自身不可選並再次召喚 2 隻 Mirage Dragon 龍之幻象（這次可選）。同時累積『Midgardsormr's Aether 塵世幻龍的以太』進度條。必須在進度條到 100% 前擊殺 2 隻龍之幻象，否則 Animadversion 全屏團滅。DPS 全力切目標分配。",
-                            "tips": [
-                                {"text": "DPS 立刻切龍之幻象", "role": "dps"},
-                                {"text": "建議分組各打一隻", "role": "tank"},
-                                {"text": "進度條 100% → 團滅", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Akh Morn 死亡輪迴（4 連分攤）",
-                            "type": "stack",
-                            "description": "讀條技能，點名隨機 1 名玩家釋放需要分攤的傷害，4 連擊。全員集合站到被點玩家位置分攤傷害。治療準備連發團補（4 連擊間有間隔）。FFXIV 多次連擊標記首次出現的場合。",
-                            "tips": [
-                                {"text": "全員集合分攤", "role": "tank"},
-                                {"text": "治療連發團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Antipathy 反感（擴散同心圓）",
-                            "type": "aoe",
-                            "description": "擴張式範圍：先從中央生成圓 → 圓外環 → 更外環。閃法：先站在第二環位置；中央炸完後跑進中央；接著第二環炸完再退第二環外位置。三段持續移動。",
-                            "tips": [
-                                {"text": "站第二環 → 中央熄滅進中央 → 第二環炸完退外", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "β-ray β射線",
-                            "type": "raidwide",
-                            "description": "全屏範圍魔法傷害；治療團補。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        }
-                    ]
+                  "text": "全員可開減傷",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "Admonishment 訓誡 → MT 朝外站背",
-                "Inner 內部 → 近戰退離；Outer 外部 → 靠近 boss",
-                "Phantom Kin 幻影 → 先看幻象方向避直線縫 + 看 boss 半圓 / 半環",
-                "60% Animadversion 衰減 → 速殺 2 龍之幻象（DPS check）",
-                "Akh Morn 死亡輪迴 → 全員集合分攤 4 連擊",
-                "Antipathy 反感 → 站第二環 → 中央 → 第二環外"
-            ]
+              ]
+            },
+            {
+              "name": "Heavy Swing 加重擊",
+              "type": "tankbuster",
+              "description": "對 MT 死刑單體；MT 必須開大減傷 + 治療大補。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                },
+                {
+                  "text": "治療大補 + 護盾",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Resounding Screech 呼喚之聲（第一次：6 罐）+ Mark XLT 41 式聯炮",
+              "type": "mechanic",
+              "description": "boss 召喚小龍在場上丟下 6 個 Ceruleum Tank 青磷水罐，呈等邊六邊形分布。Einhander 飛到場邊讀條直線 AoE Mark XLT 41 式聯炮 → 引爆相距最遠的兩個水罐（紅光警示）。爆炸後依序引爆旁邊的水罐（連鎖反應）。玩家須在水罐發紅光前移動到無紅光的安全位置。",
+              "tips": [
+                {
+                  "text": "看紅光提前遠離",
+                  "role": "dps"
+                },
+                {
+                  "text": "連鎖會延燒 → 持續觀察",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Resounding Screech 呼喚之聲（第二次：5 罐 + 衰減 AoE）",
+              "type": "mechanic",
+              "description": "第二次呼喚之聲只丟 5 個水罐（六邊形缺一角）。隨後 boss 飛到場邊讀條衰減 AoE（越靠場中傷越高）→ 退到場邊無水罐的那一角，遠離場中以減少受傷。AoE 後 5 個水罐同時爆炸 → 提前移動到無水罐的一角。",
+              "tips": [
+                {
+                  "text": "退到缺角位置（無水罐 + 遠場中）",
+                  "role": "tank"
+                },
+                {
+                  "text": "預備走位避同時爆炸",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Aero Blast 疾風爆發 → 團補",
+        "Heavy Swing 加重擊 → MT 大減傷",
+        "第 1 次呼喚之聲 6 罐 → 看紅光提前遠離 → 連鎖避開",
+        "第 2 次呼喚之聲 5 罐 → 退缺角 + 同時爆炸前到無罐位"
+      ]
+    },
+    {
+      "name": "帝國魔導飛艇",
+      "nameEn": "Magitek Gunship",
+      "phases": [
+        {
+          "name": "主戰（衝鋒火圈 + 點名圓）",
+          "mechanics": [
+            {
+              "name": "Flame Charge 衝鋒（沿途火圈）",
+              "type": "mechanic",
+              "description": "boss 移動到場邊向前方衝鋒，沿途丟下火圈造成傷害。玩家被火圈命中會吃傷 + Burns 燒傷 DoT。玩家必須遠離 boss 正面 + 不要踩火圈。",
+              "tips": [
+                {
+                  "text": "遠離 boss 衝鋒路徑",
+                  "role": "dps"
+                },
+                {
+                  "text": "不要踩留下的火圈",
+                  "role": "tank"
+                },
+                {
+                  "text": "Esuna 清燒傷或團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Carpet Bomb 地毯式轟炸",
+              "type": "spread",
+              "description": "對隨機 1 名玩家釋放可避免的黃色圓 AoE 預兆；被點玩家走出。",
+              "tips": [
+                {
+                  "text": "看黃圓走出",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Flame Thrower 火炎放射",
+              "type": "cone",
+              "description": "對玩家釋放扇形多段 AoE，持續數秒。非 T 不要待在 boss 前方。",
+              "tips": [
+                {
+                  "text": "走出扇形預兆",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Magitek Adds 帝國 add",
+              "type": "add",
+              "description": "boss 定期召喚小型 add；DPS 切目標清掉以免拖戰。",
+              "tips": [
+                {
+                  "text": "DPS 速秒 add",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Lightning Flash 閃擊（超時懲罰）",
+              "type": "tankbuster",
+              "description": "戰鬥時間過長 boss 會使用 Lightning Flash 閃擊對一仇造成較高傷害；MT 開減傷。DPS 控制時間不要拖。",
+              "tips": [
+                {
+                  "text": "MT 減傷 + DPS 別拖",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "衝鋒 → 遠離正面 + 不踩火圈",
+        "地毯式轟炸 → 看黃圓走出",
+        "Flame Thrower 火炎放射 → 走出扇形",
+        "add → DPS 速秒",
+        "閃擊（拖戰懲罰）→ MT 減傷"
+      ]
+    },
+    {
+      "name": "塵世幻龍",
+      "nameEn": "??? (Midgardsormr)",
+      "phases": [
+        {
+          "name": "P1 100%-60% HP（基礎機制）",
+          "mechanics": [
+            {
+              "name": "Admonishment 訓誡",
+              "type": "aoe",
+              "description": "對 boss 正前方施放可見的直線（超寬）魔法傷害 + 1 檔 Damage Up 受傷加重 stack。MT 朝場邊面外，非 T 站背。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "非 T 站背",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Inner Turmoil 內部騷動",
+              "type": "aoe",
+              "description": "以 boss 為中心，施放半圓形範圍魔法傷害 + 受傷加重 stack；近戰看預兆退離。",
+              "tips": [
+                {
+                  "text": "近戰退離半圓",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Outer Turmoil 外部騷動",
+              "type": "aoe",
+              "description": "以 boss 為中心，施放半『環』形範圍魔法傷害（boss 旁邊是安全區）+ 受傷加重 stack。看到外部騷動 → 全員靠近 boss 站中央。",
+              "tips": [
+                {
+                  "text": "外部 → 靠近 boss",
+                  "role": "dps"
+                },
+                {
+                  "text": "看半圓 vs 半環判斷站位",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Disgust 厭惡",
+              "type": "raidwide",
+              "description": "全屏範圍魔法傷害 + 受傷加重 stack；治療團補。",
+              "tips": [
+                {
+                  "text": "團補連發",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Phantom Kin 召喚幻影（3 變體）",
+              "type": "mechanic",
+              "description": "場地左右兩側各出現 1 隻 Mirage Dragon 龍之幻象（不可選）。三種變體：① Phantom Admonishment 幻影訓誡 → boss 與 2 隻幻象同時對前方施放橫穿全場的直線 AoE（3 條直線同時）；② Phantom Inner Turmoil 幻影內部騷動 → boss 半圓 + 幻象 2 條直線；③ Phantom Outer Turmoil 幻影外部騷動 → boss 半環 + 幻象 2 條直線。先看幻象朝向找直線縫，再看 boss 是半圓 / 半環決定遠近。",
+              "tips": [
+                {
+                  "text": "先看幻象方向避直線縫",
+                  "role": "dps"
+                },
+                {
+                  "text": "再看 boss 半圓 / 半環",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Condescension 居高臨下",
+              "type": "tankbuster",
+              "description": "對 MT 高傷魔法單體；MT 開減傷。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 60% HP（Animadversion 衰減 DPS check）",
+          "mechanics": [
+            {
+              "name": "Animadversion 衰減",
+              "type": "mechanic",
+              "description": "boss HP < 60% 後讀條 Animadversion 衰減，自身不可選並再次召喚 2 隻 Mirage Dragon 龍之幻象（這次可選）。同時累積『Midgardsormr's Aether 塵世幻龍的以太』進度條。必須在進度條到 100% 前擊殺 2 隻龍之幻象，否則 Animadversion 全屏團滅。DPS 全力切目標分配。",
+              "tips": [
+                {
+                  "text": "DPS 立刻切龍之幻象",
+                  "role": "dps"
+                },
+                {
+                  "text": "建議分組各打一隻",
+                  "role": "tank"
+                },
+                {
+                  "text": "進度條 100% → 團滅",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Akh Morn 死亡輪迴（4 連分攤）",
+              "type": "stack",
+              "description": "讀條技能，點名隨機 1 名玩家釋放需要分攤的傷害，4 連擊。全員集合站到被點玩家位置分攤傷害。治療準備連發團補（4 連擊間有間隔）。FFXIV 多次連擊標記首次出現的場合。",
+              "tips": [
+                {
+                  "text": "全員集合分攤",
+                  "role": "tank"
+                },
+                {
+                  "text": "治療連發團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Antipathy 反感（擴散同心圓）",
+              "type": "aoe",
+              "description": "擴張式範圍：先從中央生成圓 → 圓外環 → 更外環。閃法：先站在第二環位置；中央炸完後跑進中央；接著第二環炸完再退第二環外位置。三段持續移動。",
+              "tips": [
+                {
+                  "text": "站第二環 → 中央熄滅進中央 → 第二環炸完退外",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "β-ray β射線",
+              "type": "raidwide",
+              "description": "全屏範圍魔法傷害；治療團補。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Admonishment 訓誡 → MT 朝外站背",
+        "Inner 內部 → 近戰退離；Outer 外部 → 靠近 boss",
+        "Phantom Kin 幻影 → 先看幻象方向避直線縫 + 看 boss 半圓 / 半環",
+        "60% Animadversion 衰減 → 速殺 2 龍之幻象（DPS check）",
+        "Akh Morn 死亡輪迴 → 全員集合分攤 4 連擊",
+        "Antipathy 反感 → 站第二環 → 中央 → 第二環外"
+      ]
+    }
+  ]
 }

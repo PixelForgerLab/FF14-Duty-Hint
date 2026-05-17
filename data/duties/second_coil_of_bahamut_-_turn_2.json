@@ -1,87 +1,123 @@
 {
-    "id": "second_coil_of_bahamut_-_turn_2",
-    "name": "巴哈姆特大迷宮 侵略之章2",
-    "nameEn": "The Second Coil of Bahamut - Turn 2",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）巴哈姆特大迷宮 侵略之章2（Coil 2 T2）：Melusine 美露莘（蛇女）核心戰。場地分為前後兩半。",
-        "2）Petrifying Eye 石化視線：boss 釋放凝視 AoE → 全員背對 boss 否則被 Stone 石化（無法行動 + 持續扣血）。",
-        "3）Renewal 復原：召喚 Gorgon 戈耳工小蛇 → 護衛 Melusine + 石化 buff 給 boss。Gorgon 必殺。",
-        "4）Storm Vortex 風暴漩渦：場上多個漩渦 AoE → 持續傷害 + 加重。看圓走縫。",
-        "5）Beguiling Vortex 蠱惑漩渦：點名玩家魅惑 → 自動走向 boss → 治療補。",
-        "6）Mistress Stunna 美露薩之擊：MT 死刑 → MT 大減傷。",
-        "7）軟狂暴：~10 分鐘後 → DPS race。"
-    ],
-    "notes": "ARR 2.2 蠻神戰 - 巴哈姆特絕境戰侵略之章 2（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Melusine 美露莘（蛇女）。本副本是 ARR Coil 中『石化視線』機制的代表作。",
-    "bosses": [
+  "id": "second_coil_of_bahamut_-_turn_2",
+  "name": "巴哈姆特大迷宮 侵略之章2",
+  "nameEn": "The Second Coil of Bahamut - Turn 2",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "巴哈姆特大迷宮 侵略之章2（Coil 2 T2）：Melusine 美露莘（蛇女）核心戰。場地分為前後兩半。",
+    "Petrifying Eye 石化視線：boss 釋放凝視 AoE → 全員背對 boss 否則被 Stone 石化（無法行動 + 持續扣血）。",
+    "Renewal 復原：召喚 Gorgon 戈耳工小蛇 → 護衛 Melusine + 石化 buff 給 boss。Gorgon 必殺。",
+    "Storm Vortex 風暴漩渦：場上多個漩渦 AoE → 持續傷害 + 加重。看圓走縫。",
+    "Beguiling Vortex 蠱惑漩渦：點名玩家魅惑 → 自動走向 boss → 治療補。",
+    "Mistress Stunna 美露薩之擊：MT 死刑 → MT 大減傷。",
+    "軟狂暴：~10 分鐘後 → DPS race。"
+  ],
+  "notes": "ARR 2.2 蠻神戰 - 巴哈姆特絕境戰侵略之章 2（Lv 50，sync 50，ilvl 100，8 人 raid highEnd）。Boss 為 Melusine 美露莘（蛇女）。本副本是 ARR Coil 中『石化視線』機制的代表作。",
+  "bosses": [
+    {
+      "name": "美露莘",
+      "nameEn": "Melusine",
+      "phases": [
         {
-            "name": "美露莘",
-            "nameEn": "Melusine",
-            "phases": [
+          "name": "主戰（石化視線 + 戈耳工 add）",
+          "mechanics": [
+            {
+              "name": "Petrifying Eye 石化視線",
+              "type": "mechanic",
+              "description": "boss 釋放凝視 AoE → 全員背對 boss 否則 Stone 石化（無法行動 + 持續扣血）。看 boss 預兆背對。",
+              "tips": [
                 {
-                    "name": "主戰（石化視線 + 戈耳工 add）",
-                    "mechanics": [
-                        {
-                            "name": "Petrifying Eye 石化視線",
-                            "type": "mechanic",
-                            "description": "boss 釋放凝視 AoE → 全員背對 boss 否則 Stone 石化（無法行動 + 持續扣血）。看 boss 預兆背對。",
-                            "tips": [{"text": "全員背對 boss", "role": "tank"}]
-                        },
-                        {
-                            "name": "Renewal 復原 + Gorgon 戈耳工 add",
-                            "type": "add",
-                            "description": "boss 召喚 Gorgon 小蛇 add → 護衛 Melusine + 給 boss 石化抗性 buff。Gorgon 必殺。",
-                            "tips": [{"text": "DPS 速殺 Gorgon", "role": "dps"}]
-                        },
-                        {
-                            "name": "Storm Vortex 風暴漩渦",
-                            "type": "aoe",
-                            "description": "場上多個漩渦 AoE → 持續傷害 + 加重 debuff。看圓走縫。",
-                            "tips": [
-                                {"text": "看漩渦走縫", "role": "dps"},
-                                {"text": "Esuna 清加重", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Beguiling Vortex 蠱惑漩渦",
-                            "type": "mechanic",
-                            "description": "點名玩家魅惑 → 自動走向 boss。治療奶滿可解除。",
-                            "tips": [{"text": "治療奶滿被點玩家", "role": "healer"}]
-                        },
-                        {
-                            "name": "Mistress Stunna 美露薩之擊",
-                            "type": "tankbuster",
-                            "description": "對 MT 死刑單體 → MT 大減傷 + 治療大補。",
-                            "tips": [{"text": "MT 大減傷", "role": "tank"}]
-                        },
-                        {
-                            "name": "Tail Slap 尾擊",
-                            "type": "cone",
-                            "description": "boss 後方扇形 AoE → 不要站 boss 屁股。",
-                            "tips": [{"text": "近戰站側", "role": "dps"}]
-                        },
-                        {
-                            "name": "軟狂暴",
-                            "type": "raidwide",
-                            "description": "戰鬥 ~10 分鐘狂暴 → DPS race。",
-                            "tips": [{"text": "10 分鐘內擊敗", "role": "dps"}]
-                        }
-                    ]
+                  "text": "全員背對 boss",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "Petrifying Eye 石化視線 → 全員背對",
-                "Gorgon 戈耳工 add → 速殺",
-                "Storm Vortex 漩渦 → 走縫",
-                "Beguiling Vortex 魅惑 → 治療奶滿",
-                "Mistress Stunna 死刑 → MT 大減傷"
-            ]
+              ]
+            },
+            {
+              "name": "Renewal 復原 + Gorgon 戈耳工 add",
+              "type": "add",
+              "description": "boss 召喚 Gorgon 小蛇 add → 護衛 Melusine + 給 boss 石化抗性 buff。Gorgon 必殺。",
+              "tips": [
+                {
+                  "text": "DPS 速殺 Gorgon",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Storm Vortex 風暴漩渦",
+              "type": "aoe",
+              "description": "場上多個漩渦 AoE → 持續傷害 + 加重 debuff。看圓走縫。",
+              "tips": [
+                {
+                  "text": "看漩渦走縫",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清加重",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Beguiling Vortex 蠱惑漩渦",
+              "type": "mechanic",
+              "description": "點名玩家魅惑 → 自動走向 boss。治療奶滿可解除。",
+              "tips": [
+                {
+                  "text": "治療奶滿被點玩家",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Mistress Stunna 美露薩之擊",
+              "type": "tankbuster",
+              "description": "對 MT 死刑單體 → MT 大減傷 + 治療大補。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Tail Slap 尾擊",
+              "type": "cone",
+              "description": "boss 後方扇形 AoE → 不要站 boss 屁股。",
+              "tips": [
+                {
+                  "text": "近戰站側",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "軟狂暴",
+              "type": "raidwide",
+              "description": "戰鬥 ~10 分鐘狂暴 → DPS race。",
+              "tips": [
+                {
+                  "text": "10 分鐘內擊敗",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Petrifying Eye 石化視線 → 全員背對",
+        "Gorgon 戈耳工 add → 速殺",
+        "Storm Vortex 漩渦 → 走縫",
+        "Beguiling Vortex 魅惑 → 治療奶滿",
+        "Mistress Stunna 死刑 → MT 大減傷"
+      ]
+    }
+  ]
 }

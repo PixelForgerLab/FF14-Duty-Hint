@@ -1,233 +1,233 @@
 {
-    "id":  "tender_valley",
-    "name":  "豔翼之野",
-    "nameEn":  "Tender Valley",
-    "expansion":  "7.x 黃金遺產 (Dawntrail)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  100,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 Avian Roc 大鳥：空中機制 + 直線。",
-                     "2）B2 Galvanic Beast 電擊獸：雷屬性 + 召喚雷靈。",
-                     "3）B3 Valigarmanda 瓦利加曼達：龍息 + 場上機制。"
-                 ],
-    "notes":  "DT 7.2 DT 7.2 副本豔翼之野（Lv 100）。Boss 依序為 Avian Roc 大鳥、Galvanic Beast 電擊獸、Valigarmanda 瓦利加曼達。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-    "bosses":  [
-                   {
-                       "name":  "大鳥",
-                       "nameEn":  "Avian Roc",
-                       "mnemonic":  [
-                                        "Avian Roc 大鳥 機制：空中機制 + 直線。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Barbed Bellow 刺嚎",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體魔法 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Heavyweight Needles 重針",
-                                                                "type":  "aoe",
-                                                                "description":  "多扇形 AoE + 空隙不同大小 → 擴張覆蓋小空隙。場邊出針 (踩入出血)。",
-                                                                "tips":  [
-                                                                             "站最大空隙中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tender Drop + Barrel Breaker 仙人掌 + 擊退",
-                                                                "type":  "other",
-                                                                "description":  "場上多個仙人掌 (有花/裸 2 個) + 中央擊退。仙人掌會放 Needle Storm/Superstorm 貼身圓 AoE，裸版較小。",
-                                                                "tips":  [
-                                                                             "預判擊退方向到**裸仙人掌**附近",
-                                                                             "或開抗擊退"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Succulent Stomp 多肉踏",
-                                                                "type":  "stack",
-                                                                "description":  "隨機玩家 stack 標記 + 跳踩物理傷。",
-                                                                "tips":  [
-                                                                             "全員疊接"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Prickly Left/Right 左/右刺",
-                                                                "type":  "aoe",
-                                                                "description":  "半場 cleave 預兆 → 擴張覆蓋大半場 + 對側留窄錐安全。",
-                                                                "tips":  [
-                                                                             "跑對側窄錐安全區"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Tender Fury 嫩怒",
-                                                                "type":  "tankbuster",
-                                                                "description":  "物理 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "電擊獸",
-                       "nameEn":  "Galvanic Beast",
-                       "mnemonic":  [
-                                        "Galvanic Beast 電擊獸 機制：雷屬性 + 召喚雷靈。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Anthrabomb 黑炸彈",
-                                                                "type":  "aoe",
-                                                                "description":  "3 個黑色圓符號 + 箭頭 → 落下炸彈 → 大圓 AoE 預兆 → 爆。",
-                                                                "tips":  [
-                                                                             "閃 3 個圓 AoE"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Anthrabomb 黃箭頭 (牆洞)",
-                                                                "type":  "aoe",
-                                                                "description":  "黃箭頭指向圓/方形井 → 投彈 → 對應形狀牆洞發直線 AoE。",
-                                                                "tips":  [
-                                                                             "看牆洞形狀預判直線方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Anthrabomb 組合 (黑+黃)",
-                                                                "type":  "aoe",
-                                                                "description":  "2 黑 + 1 黃，同時閃地面圓 + 牆 AoE 直線。",
-                                                                "tips":  [
-                                                                             "找黑+黃雙重安全交點"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Carbonaceous Combustion 碳燃燒",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體魔法 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Carniflagration 火葬連發",
-                                                                "type":  "spread",
-                                                                "description":  "Anthrabomb 黑+黃連 3 次組合 + 第三組散開標記 (Anthrabomb)。下組預兆在前組爆前出現。",
-                                                                "tips":  [
-                                                                             "預判 3 組順序逐步移動",
-                                                                             "第三組散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Burning Coals 炭火",
-                                                                "type":  "stack",
-                                                                "description":  "Stack 標記隨機玩家。",
-                                                                "tips":  [
-                                                                             "全員疊接"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Chimney Smack 煙囪一擊",
-                                                                "type":  "tankbuster",
-                                                                "description":  "魔法 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   },
-                   {
-                       "name":  "瓦利加曼達",
-                       "nameEn":  "Valigarmanda",
-                       "mnemonic":  [
-                                        "Valigarmanda 瓦利加曼達 機制：龍息 + 場上機制。",
-                                        "tankbuster → MT 大減傷",
-                                        "raidwide → 預備團補與減傷"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "主戰",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Dubious Tulidisaster 可疑災難",
-                                                                "type":  "raidwide",
-                                                                "description":  "全體魔法 + 場邊刺 (踩入出血)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 遠離邊",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bouncy Council 跳躍議會 (線)",
-                                                                "type":  "aoe",
-                                                                "description":  "4 分身藍箭頭 → 水平/垂直/對角線 AoE (Misplaced Mystery)。",
-                                                                "tips":  [
-                                                                             "看箭頭預判直線方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Bouncy Council (圓)",
-                                                                "type":  "aoe",
-                                                                "description":  "4 分身旋轉藍箭頭 → 貼身圓 AoE。",
-                                                                "tips":  [
-                                                                             "跑到無分身角落"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Screes of Fury 怒嘯",
-                                                                "type":  "tankbuster",
-                                                                "description":  "魔法 tankbuster。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 開減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Greatest Labyrinth 大迷宮",
-                                                                "type":  "other",
-                                                                "description":  "拉所有玩家至中央 + 場地綠箭頭 (移動方向) + 3 紫 X 角 + 1 藍 O 角。每玩家獲標記 → 依標記走指定方向。",
-                                                                "tips":  [
-                                                                             "依綠箭頭移動到藍 O 角",
-                                                                             "避免紫 X 角"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "tender_valley",
+  "name": "豔翼之野",
+  "nameEn": "Tender Valley",
+  "expansion": "7.x 黃金遺產 (Dawntrail)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Avian Roc 大鳥：空中機制 + 直線。",
+    "B2 Galvanic Beast 電擊獸：雷屬性 + 召喚雷靈。",
+    "B3 Valigarmanda 瓦利加曼達：龍息 + 場上機制。"
+  ],
+  "notes": "DT 7.2 DT 7.2 副本豔翼之野（Lv 100）。Boss 依序為 Avian Roc 大鳥、Galvanic Beast 電擊獸、Valigarmanda 瓦利加曼達。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
+  "bosses": [
+    {
+      "name": "大鳥",
+      "nameEn": "Avian Roc",
+      "mnemonic": [
+        "Avian Roc 大鳥 機制：空中機制 + 直線。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Barbed Bellow 刺嚎",
+              "type": "raidwide",
+              "description": "全體魔法 AoE。",
+              "tips": [
+                {
+                  "text": "減傷 + 補滿",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Heavyweight Needles 重針",
+              "type": "aoe",
+              "description": "多扇形 AoE + 空隙不同大小 → 擴張覆蓋小空隙。場邊出針 (踩入出血)。",
+              "tips": [
+                "站最大空隙中央"
+              ]
+            },
+            {
+              "name": "Tender Drop + Barrel Breaker 仙人掌 + 擊退",
+              "type": "other",
+              "description": "場上多個仙人掌 (有花/裸 2 個) + 中央擊退。仙人掌會放 Needle Storm/Superstorm 貼身圓 AoE，裸版較小。",
+              "tips": [
+                "預判擊退方向到**裸仙人掌**附近",
+                "或開抗擊退"
+              ]
+            },
+            {
+              "name": "Succulent Stomp 多肉踏",
+              "type": "stack",
+              "description": "隨機玩家 stack 標記 + 跳踩物理傷。",
+              "tips": [
+                "全員疊接"
+              ]
+            },
+            {
+              "name": "Prickly Left/Right 左/右刺",
+              "type": "aoe",
+              "description": "半場 cleave 預兆 → 擴張覆蓋大半場 + 對側留窄錐安全。",
+              "tips": [
+                "跑對側窄錐安全區"
+              ]
+            },
+            {
+              "name": "Tender Fury 嫩怒",
+              "type": "tankbuster",
+              "description": "物理 tankbuster。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "電擊獸",
+      "nameEn": "Galvanic Beast",
+      "mnemonic": [
+        "Galvanic Beast 電擊獸 機制：雷屬性 + 召喚雷靈。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Anthrabomb 黑炸彈",
+              "type": "aoe",
+              "description": "3 個黑色圓符號 + 箭頭 → 落下炸彈 → 大圓 AoE 預兆 → 爆。",
+              "tips": [
+                "閃 3 個圓 AoE"
+              ]
+            },
+            {
+              "name": "Anthrabomb 黃箭頭 (牆洞)",
+              "type": "aoe",
+              "description": "黃箭頭指向圓/方形井 → 投彈 → 對應形狀牆洞發直線 AoE。",
+              "tips": [
+                "看牆洞形狀預判直線方向"
+              ]
+            },
+            {
+              "name": "Anthrabomb 組合 (黑+黃)",
+              "type": "aoe",
+              "description": "2 黑 + 1 黃，同時閃地面圓 + 牆 AoE 直線。",
+              "tips": [
+                "找黑+黃雙重安全交點"
+              ]
+            },
+            {
+              "name": "Carbonaceous Combustion 碳燃燒",
+              "type": "raidwide",
+              "description": "全體魔法 AoE。",
+              "tips": [
+                {
+                  "text": "減傷 + 補滿",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Carniflagration 火葬連發",
+              "type": "spread",
+              "description": "Anthrabomb 黑+黃連 3 次組合 + 第三組散開標記 (Anthrabomb)。下組預兆在前組爆前出現。",
+              "tips": [
+                "預判 3 組順序逐步移動",
+                "第三組散開"
+              ]
+            },
+            {
+              "name": "Burning Coals 炭火",
+              "type": "stack",
+              "description": "Stack 標記隨機玩家。",
+              "tips": [
+                "全員疊接"
+              ]
+            },
+            {
+              "name": "Chimney Smack 煙囪一擊",
+              "type": "tankbuster",
+              "description": "魔法 tankbuster。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "瓦利加曼達",
+      "nameEn": "Valigarmanda",
+      "mnemonic": [
+        "Valigarmanda 瓦利加曼達 機制：龍息 + 場上機制。",
+        "tankbuster → MT 大減傷",
+        "raidwide → 預備團補與減傷"
+      ],
+      "phases": [
+        {
+          "name": "主戰",
+          "mechanics": [
+            {
+              "name": "Dubious Tulidisaster 可疑災難",
+              "type": "raidwide",
+              "description": "全體魔法 + 場邊刺 (踩入出血)。",
+              "tips": [
+                {
+                  "text": "減傷 + 遠離邊",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Bouncy Council 跳躍議會 (線)",
+              "type": "aoe",
+              "description": "4 分身藍箭頭 → 水平/垂直/對角線 AoE (Misplaced Mystery)。",
+              "tips": [
+                "看箭頭預判直線方向"
+              ]
+            },
+            {
+              "name": "Bouncy Council (圓)",
+              "type": "aoe",
+              "description": "4 分身旋轉藍箭頭 → 貼身圓 AoE。",
+              "tips": [
+                "跑到無分身角落"
+              ]
+            },
+            {
+              "name": "Screes of Fury 怒嘯",
+              "type": "tankbuster",
+              "description": "魔法 tankbuster。",
+              "tips": [
+                {
+                  "text": "MT 開減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Greatest Labyrinth 大迷宮",
+              "type": "other",
+              "description": "拉所有玩家至中央 + 場地綠箭頭 (移動方向) + 3 紫 X 角 + 1 藍 O 角。每玩家獲標記 → 依標記走指定方向。",
+              "tips": [
+                "依綠箭頭移動到藍 O 角",
+                "避免紫 X 角"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,188 +1,263 @@
 {
-    "id": "sunken_temple_of_qarn_hard",
-    "name": "甦醒遺跡喀恩埋沒聖堂",
-    "nameEn": "The Sunken Temple of Qarn (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Damaged Adjudicator 破損石化魔像：boss 隨機部位（頭/手/尾）亮起紅光含『核心』→ DPS 必須切目標破壞該部位（不要打 boss 本體）→ boss 解體扣 30% HP + 召喚盲頭蟹 add（如果先打過 boss 本體，扣血量減少）。",
-        "2）B1 點名球 → boss 對隨機玩家放球，球周圍大範圍無提示 AoE → 被點玩家拉到角落放置。",
-        "3）B1 第一次解體後地面定期出現流沙 → 在流沙內超過 10 秒會被秒殺 → 必須立刻遠離流沙。",
-        "4）B1 重複 3 次解體流程後 boss 剩 10% HP → 正常擊殺。",
-        "5）B2 Sabotender Emperatriz 女王仙人掌：3,000 Needles 三千針刺與 add 5,000 Needles 五千針刺都是『固定傷害』→ 絕對不要開減傷硬抗（減傷無效，反而浪費 CD）。",
-        "6）B2 100,000 Needles 十萬針刺：讀條完對全屏 10 萬點固定傷害（必死）→ 必須對 boss 造成『一定傷害』讓女王忘記清算數量打斷讀條。",
-        "7）B2 add 順序：『仙人掌勇士 Soldado』與『仙人掌守衛 Guardia』優先擊殺！Guardia 會給 boss 上 Cactguard 仙人掌之護（boss 無敵）→ 必須先秒 Guardia 才能繼續攻擊 boss 打斷十萬針刺。",
-        "8）B3 Vicegerent to the Warden 太陽神門守護者代理人：場上召喚棺材 + 木乃伊向正前方行走，踩棺材或被木乃伊撞到 → 疊 1 層 Curse of the Mummy 太陽神的詛咒 DoT。",
-        "9）B3 詛咒疊到 4 層 → 玩家變成 Mummification 木乃伊化 → 失去控制走到場地角落進入棺材 → 變木乃伊沿對角行走 → 碰到隊友會疊詛咒給隊友 → 連鎖團滅。",
-        "10）B3 Hateful Strike 怨恨的斬擊：讀條完對正前方長方形無預兆 AoE + 1 層詛咒。武器有紫光晕。",
-        "11）B3 連線機制：boss 紅標連線一名玩家持續疊詛咒 → 玩家盡量遠離 boss 拉斷連線。期間 T 或 stun 職業可暈眩 boss 拖延時間。"
-    ],
-    "notes": "ARR 2.4 副本 Hard 版（Lv 50，sync 50，ilvl 110），位於南部薩納蘭喀恩埋沒聖堂。劇情上 Nald'thal 教團與 Amajina 礦業公司聯合考古調查再次踏入古代石化文明遺跡。Boss 依序為 Damaged Adjudicator 破損石化魔像、Sabotender Emperatriz 女王仙人掌、Vicegerent to the Warden 太陽神門守護者代理人。本副本特色：B2 全是固定傷害（減傷無效）、B3 詛咒 4 層木乃伊化的連鎖機制。",
-    "bosses": [
+  "id": "sunken_temple_of_qarn_hard",
+  "name": "甦醒遺跡喀恩埋沒聖堂",
+  "nameEn": "The Sunken Temple of Qarn (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Damaged Adjudicator 破損石化魔像：boss 隨機部位（頭/手/尾）亮起紅光含『核心』→ DPS 必須切目標破壞該部位（不要打 boss 本體）→ boss 解體扣 30% HP + 召喚盲頭蟹 add（如果先打過 boss 本體，扣血量減少）。",
+    "B1 點名球 → boss 對隨機玩家放球，球周圍大範圍無提示 AoE → 被點玩家拉到角落放置。",
+    "B1 第一次解體後地面定期出現流沙 → 在流沙內超過 10 秒會被秒殺 → 必須立刻遠離流沙。",
+    "B1 重複 3 次解體流程後 boss 剩 10% HP → 正常擊殺。",
+    "B2 Sabotender Emperatriz 女王仙人掌：3,000 Needles 三千針刺與 add 5,000 Needles 五千針刺都是『固定傷害』→ 絕對不要開減傷硬抗（減傷無效，反而浪費 CD）。",
+    "B2 100,000 Needles 十萬針刺：讀條完對全屏 10 萬點固定傷害（必死）→ 必須對 boss 造成『一定傷害』讓女王忘記清算數量打斷讀條。",
+    "B2 add 順序：『仙人掌勇士 Soldado』與『仙人掌守衛 Guardia』優先擊殺！Guardia 會給 boss 上 Cactguard 仙人掌之護（boss 無敵）→ 必須先秒 Guardia 才能繼續攻擊 boss 打斷十萬針刺。",
+    "B3 Vicegerent to the Warden 太陽神門守護者代理人：場上召喚棺材 + 木乃伊向正前方行走，踩棺材或被木乃伊撞到 → 疊 1 層 Curse of the Mummy 太陽神的詛咒 DoT。",
+    "B3 詛咒疊到 4 層 → 玩家變成 Mummification 木乃伊化 → 失去控制走到場地角落進入棺材 → 變木乃伊沿對角行走 → 碰到隊友會疊詛咒給隊友 → 連鎖團滅。",
+    "B3 Hateful Strike 怨恨的斬擊：讀條完對正前方長方形無預兆 AoE + 1 層詛咒。武器有紫光晕。",
+    "B3 連線機制：boss 紅標連線一名玩家持續疊詛咒 → 玩家盡量遠離 boss 拉斷連線。期間 T 或 stun 職業可暈眩 boss 拖延時間。"
+  ],
+  "notes": "ARR 2.4 副本 Hard 版（Lv 50，sync 50，ilvl 110），位於南部薩納蘭喀恩埋沒聖堂。劇情上 Nald'thal 教團與 Amajina 礦業公司聯合考古調查再次踏入古代石化文明遺跡。Boss 依序為 Damaged Adjudicator 破損石化魔像、Sabotender Emperatriz 女王仙人掌、Vicegerent to the Warden 太陽神門守護者代理人。本副本特色：B2 全是固定傷害（減傷無效）、B3 詛咒 4 層木乃伊化的連鎖機制。",
+  "bosses": [
+    {
+      "name": "破損石化魔像",
+      "nameEn": "Damaged Adjudicator",
+      "phases": [
         {
-            "name": "破損石化魔像",
-            "nameEn": "Damaged Adjudicator",
-            "phases": [
+          "name": "主戰（核心破壞 + 流沙）",
+          "mechanics": [
+            {
+              "name": "Core 核心機制（不打本體打部位）",
+              "type": "mechanic",
+              "description": "boss 身上的隨機 1 個部位（Head 頭、Arm 手、Tail 尾）會亮起紅光含『核心』。DPS 必須切目標破壞該部位（不要打 boss 本體）。破壞後 boss 解體扣 30% HP + 召喚 Cracked Qarn Facer 盲頭蟹 add。如果之前對 boss 本體有造成傷害，扣減的血量會相應減少（最少 0%）→ 浪費。",
+              "tips": [
                 {
-                    "name": "主戰（核心破壞 + 流沙）",
-                    "mechanics": [
-                        {
-                            "name": "Core 核心機制（不打本體打部位）",
-                            "type": "mechanic",
-                            "description": "boss 身上的隨機 1 個部位（Head 頭、Arm 手、Tail 尾）會亮起紅光含『核心』。DPS 必須切目標破壞該部位（不要打 boss 本體）。破壞後 boss 解體扣 30% HP + 召喚 Cracked Qarn Facer 盲頭蟹 add。如果之前對 boss 本體有造成傷害，扣減的血量會相應減少（最少 0%）→ 浪費。",
-                            "tips": [
-                                {"text": "DPS 看紅光部位 → 切目標", "role": "dps"},
-                                {"text": "不要打 boss 本體浪費 DPS", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Sand Sphere 沙球（隨機點名）",
-                            "type": "mechanic",
-                            "description": "boss 每隔一段時間對隨機玩家點名 → 生成沙球，球周圍大範圍無提示 AoE。被點玩家立刻把球帶到場地角落放置，避免影響隊友。",
-                            "tips": [
-                                {"text": "被點 → 帶到角落", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Quicksand 流沙（10 秒秒殺）",
-                            "type": "aoe",
-                            "description": "boss 第一次解體後地面定期出現流沙區域。玩家在流沙內停留超過 10 秒會被秒殺。看到流沙立刻遠離。",
-                            "tips": [
-                                {"text": "看流沙 → 立刻遠離", "role": "dps"},
-                                {"text": "10 秒內無法待", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Cracked Qarn Facer 盲頭蟹（add）",
-                            "type": "add",
-                            "description": "boss 解體後召喚盲頭蟹 add。DPS 清掉 add 後 boss 重組繼續戰鬥。重複 3 次（破壞 3 個部位）後 boss 剩 10% HP，可正常擊殺。",
-                            "tips": [
-                                {"text": "DPS 清 add", "role": "dps"},
-                                {"text": "重複 3 次循環", "role": "tank"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "切紅光部位 → 不打本體（會浪費扣血）",
-                "Sand Sphere 沙球 → 被點帶角落",
-                "Quicksand 流沙 → 10s 秒殺 → 立刻離開",
-                "解體 3 次 → boss 10% → 正常秒"
-            ]
-        },
-        {
-            "name": "女王仙人掌",
-            "nameEn": "Sabotender Emperatriz",
-            "phases": [
+                  "text": "DPS 看紅光部位 → 切目標",
+                  "role": "dps"
+                },
                 {
-                    "name": "主戰（固定傷害 + 100,000 Needles 打斷）",
-                    "mechanics": [
-                        {
-                            "name": "3,000 Needles 三千針刺 / 5,000 Needles 五千針刺",
-                            "type": "mechanic",
-                            "description": "boss 的 3,000 Needles 三千針刺與 add 的 5,000 Needles 五千針刺都是『固定傷害』（不受減傷影響）。看圓 AoE 預兆走出即可，但絕對不要開減傷硬抗（無效且浪費 CD）。治療準備團補。",
-                            "tips": [
-                                {"text": "不要開減傷硬抗", "role": "tank"},
-                                {"text": "看圓走出", "role": "dps"},
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "100,000 Needles 十萬針刺（核心 DPS check）",
-                            "type": "raidwide",
-                            "description": "boss 戰鬥途中讀條 100,000 Needles 十萬針刺：讀條完對全屏 10 萬點固定傷害（必死）。必須對 boss 造成一定傷害讓女王『忘記清算數量』從而打斷讀條。",
-                            "tips": [
-                                {"text": "看讀條 → 全 DPS 集火 boss", "role": "dps"},
-                                {"text": "打到一定傷害自動打斷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Add 召喚：Soldado 勇士 / Guardia 守衛（優先處理）",
-                            "type": "add",
-                            "description": "boss 戰鬥途中召喚 add，包括 Sabotender Soldado 仙人掌勇士、Campeador 鬥士、Guardia 守衛。優先擊殺 Soldado 與 Guardia（Guardia 在第三次也是最後一次十萬針刺前 spawn）。Guardia 會對 boss 施放 Cactguard 仙人掌之護使 boss 無敵 → 必須先秒掉 Guardia 才能繼續攻擊 boss 打斷讀條。",
-                            "tips": [
-                                {"text": "優先 Soldado / Guardia", "role": "dps"},
-                                {"text": "Guardia 在第 3 次十萬針刺前 spawn → 必秒", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "不要打 boss 本體浪費 DPS",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "3K / 5K Needles 都是固定傷 → 不開減傷",
-                "100K Needles 十萬針刺 → 全 DPS 集火打斷",
-                "Soldado / Guardia add 優先秒（Guardia 給 boss 無敵）"
-            ]
-        },
-        {
-            "name": "太陽神門守護者代理人",
-            "nameEn": "Vicegerent to the Warden",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Sand Sphere 沙球（隨機點名）",
+              "type": "mechanic",
+              "description": "boss 每隔一段時間對隨機玩家點名 → 生成沙球，球周圍大範圍無提示 AoE。被點玩家立刻把球帶到場地角落放置，避免影響隊友。",
+              "tips": [
                 {
-                    "name": "主戰（棺材木乃伊 + 詛咒疊層）",
-                    "mechanics": [
-                        {
-                            "name": "Coffin + Temple Mummy 棺材與木乃伊（連鎖詛咒）",
-                            "type": "mechanic",
-                            "description": "boss 在地圖四周召喚棺材並召喚 Temple Mummy 木乃伊向正前方行走。玩家踩到棺材或被木乃伊撞到 → 疊 1 層 Curse of the Mummy 太陽神的詛咒 DoT 持續掉血。看棺材刷新位置 + 注意木乃伊行走方向避開。",
-                            "tips": [
-                                {"text": "看棺材位置與木乃伊方向走位", "role": "dps"},
-                                {"text": "Esuna 不能清詛咒", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Mummification 木乃伊化（4 層詛咒）",
-                            "type": "mechanic",
-                            "description": "詛咒疊到 4 層後玩家獲得 Devotee of the Sun God 太陽神的信徒 → 失去控制走到場地右下角或左上角進入棺材 → 變成木乃伊沿對角線方向行走 → 碰到隊友會給隊友疊詛咒（連鎖團滅風險）。整場戰鬥都要注意棺材刷新位置並躲避。",
-                            "tips": [
-                                {"text": "詛咒滿 4 → 變木乃伊", "role": "tank"},
-                                {"text": "看到隊友木乃伊 → 遠離不要碰", "role": "dps"},
-                                {"text": "治療補位被詛咒玩家", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Hateful Strike 怨恨的斬擊",
-                            "type": "aoe",
-                            "description": "boss 讀條後對正前方釋放長方形無範圍提示 AoE，被擊中疊 1 層詛咒。看到 boss 武器有紫色光暈 + 面向自己 → 左右閃避或繞到 boss 背後。",
-                            "tips": [
-                                {"text": "看紫光晕 → boss 面向自己 → 左右閃", "role": "dps"},
-                                {"text": "MT 朝場邊面外", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Tether 連線詛咒",
-                            "type": "mechanic",
-                            "description": "boss 隨機紅標鎖定一名玩家進行連線，持續疊詛咒。被連線者盡量遠離 boss 使連線解除。期間 T 或擁有 Stun 眩暈技能的職業可眩暈 boss 拖延時間。",
-                            "tips": [
-                                {"text": "被連線 → 遠離 boss", "role": "dps"},
-                                {"text": "T 用 Low Blow 暈眩 boss", "role": "tank"},
-                                {"text": "MNK Six-Sided Star / NIN 等也可暈", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Sword Strike 劍擊（隨機非 T 玩家）",
-                            "type": "aoe",
-                            "description": "戰鬥拖長時 boss 會點名非 T 玩家劍擊。被點玩家在 boss 讀條期間繞到 boss 背後即可閃避。",
-                            "tips": [
-                                {"text": "被點繞到 boss 背後", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "被點 → 帶到角落",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "棺材 + 木乃伊 → 疊詛咒 → 避開",
-                "詛咒 4 層 → 木乃伊化 → 隊友遠離避免疊鎖",
-                "怨恨的斬擊（紫光暈長方）→ 左右閃 / 繞背",
-                "連線 → 遠離 boss + Stun 暈拖延",
-                "Sword Strike → 繞背閃避"
-            ]
+              ]
+            },
+            {
+              "name": "Quicksand 流沙（10 秒秒殺）",
+              "type": "aoe",
+              "description": "boss 第一次解體後地面定期出現流沙區域。玩家在流沙內停留超過 10 秒會被秒殺。看到流沙立刻遠離。",
+              "tips": [
+                {
+                  "text": "看流沙 → 立刻遠離",
+                  "role": "dps"
+                },
+                {
+                  "text": "10 秒內無法待",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Cracked Qarn Facer 盲頭蟹（add）",
+              "type": "add",
+              "description": "boss 解體後召喚盲頭蟹 add。DPS 清掉 add 後 boss 重組繼續戰鬥。重複 3 次（破壞 3 個部位）後 boss 剩 10% HP，可正常擊殺。",
+              "tips": [
+                {
+                  "text": "DPS 清 add",
+                  "role": "dps"
+                },
+                {
+                  "text": "重複 3 次循環",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "切紅光部位 → 不打本體（會浪費扣血）",
+        "Sand Sphere 沙球 → 被點帶角落",
+        "Quicksand 流沙 → 10s 秒殺 → 立刻離開",
+        "解體 3 次 → boss 10% → 正常秒"
+      ]
+    },
+    {
+      "name": "女王仙人掌",
+      "nameEn": "Sabotender Emperatriz",
+      "phases": [
+        {
+          "name": "主戰（固定傷害 + 100,000 Needles 打斷）",
+          "mechanics": [
+            {
+              "name": "3,000 Needles 三千針刺 / 5,000 Needles 五千針刺",
+              "type": "mechanic",
+              "description": "boss 的 3,000 Needles 三千針刺與 add 的 5,000 Needles 五千針刺都是『固定傷害』（不受減傷影響）。看圓 AoE 預兆走出即可，但絕對不要開減傷硬抗（無效且浪費 CD）。治療準備團補。",
+              "tips": [
+                {
+                  "text": "不要開減傷硬抗",
+                  "role": "tank"
+                },
+                {
+                  "text": "看圓走出",
+                  "role": "dps"
+                },
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "100,000 Needles 十萬針刺（核心 DPS check）",
+              "type": "raidwide",
+              "description": "boss 戰鬥途中讀條 100,000 Needles 十萬針刺：讀條完對全屏 10 萬點固定傷害（必死）。必須對 boss 造成一定傷害讓女王『忘記清算數量』從而打斷讀條。",
+              "tips": [
+                {
+                  "text": "看讀條 → 全 DPS 集火 boss",
+                  "role": "dps"
+                },
+                {
+                  "text": "打到一定傷害自動打斷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Add 召喚：Soldado 勇士 / Guardia 守衛（優先處理）",
+              "type": "add",
+              "description": "boss 戰鬥途中召喚 add，包括 Sabotender Soldado 仙人掌勇士、Campeador 鬥士、Guardia 守衛。優先擊殺 Soldado 與 Guardia（Guardia 在第三次也是最後一次十萬針刺前 spawn）。Guardia 會對 boss 施放 Cactguard 仙人掌之護使 boss 無敵 → 必須先秒掉 Guardia 才能繼續攻擊 boss 打斷讀條。",
+              "tips": [
+                {
+                  "text": "優先 Soldado / Guardia",
+                  "role": "dps"
+                },
+                {
+                  "text": "Guardia 在第 3 次十萬針刺前 spawn → 必秒",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "3K / 5K Needles 都是固定傷 → 不開減傷",
+        "100K Needles 十萬針刺 → 全 DPS 集火打斷",
+        "Soldado / Guardia add 優先秒（Guardia 給 boss 無敵）"
+      ]
+    },
+    {
+      "name": "太陽神門守護者代理人",
+      "nameEn": "Vicegerent to the Warden",
+      "phases": [
+        {
+          "name": "主戰（棺材木乃伊 + 詛咒疊層）",
+          "mechanics": [
+            {
+              "name": "Coffin + Temple Mummy 棺材與木乃伊（連鎖詛咒）",
+              "type": "mechanic",
+              "description": "boss 在地圖四周召喚棺材並召喚 Temple Mummy 木乃伊向正前方行走。玩家踩到棺材或被木乃伊撞到 → 疊 1 層 Curse of the Mummy 太陽神的詛咒 DoT 持續掉血。看棺材刷新位置 + 注意木乃伊行走方向避開。",
+              "tips": [
+                {
+                  "text": "看棺材位置與木乃伊方向走位",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 不能清詛咒",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Mummification 木乃伊化（4 層詛咒）",
+              "type": "mechanic",
+              "description": "詛咒疊到 4 層後玩家獲得 Devotee of the Sun God 太陽神的信徒 → 失去控制走到場地右下角或左上角進入棺材 → 變成木乃伊沿對角線方向行走 → 碰到隊友會給隊友疊詛咒（連鎖團滅風險）。整場戰鬥都要注意棺材刷新位置並躲避。",
+              "tips": [
+                {
+                  "text": "詛咒滿 4 → 變木乃伊",
+                  "role": "tank"
+                },
+                {
+                  "text": "看到隊友木乃伊 → 遠離不要碰",
+                  "role": "dps"
+                },
+                {
+                  "text": "治療補位被詛咒玩家",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Hateful Strike 怨恨的斬擊",
+              "type": "aoe",
+              "description": "boss 讀條後對正前方釋放長方形無範圍提示 AoE，被擊中疊 1 層詛咒。看到 boss 武器有紫色光暈 + 面向自己 → 左右閃避或繞到 boss 背後。",
+              "tips": [
+                {
+                  "text": "看紫光晕 → boss 面向自己 → 左右閃",
+                  "role": "dps"
+                },
+                {
+                  "text": "MT 朝場邊面外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Tether 連線詛咒",
+              "type": "mechanic",
+              "description": "boss 隨機紅標鎖定一名玩家進行連線，持續疊詛咒。被連線者盡量遠離 boss 使連線解除。期間 T 或擁有 Stun 眩暈技能的職業可眩暈 boss 拖延時間。",
+              "tips": [
+                {
+                  "text": "被連線 → 遠離 boss",
+                  "role": "dps"
+                },
+                {
+                  "text": "T 用 Low Blow 暈眩 boss",
+                  "role": "tank"
+                },
+                {
+                  "text": "MNK Six-Sided Star / NIN 等也可暈",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Sword Strike 劍擊（隨機非 T 玩家）",
+              "type": "aoe",
+              "description": "戰鬥拖長時 boss 會點名非 T 玩家劍擊。被點玩家在 boss 讀條期間繞到 boss 背後即可閃避。",
+              "tips": [
+                {
+                  "text": "被點繞到 boss 背後",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "棺材 + 木乃伊 → 疊詛咒 → 避開",
+        "詛咒 4 層 → 木乃伊化 → 隊友遠離避免疊鎖",
+        "怨恨的斬擊（紫光暈長方）→ 左右閃 / 繞背",
+        "連線 → 遠離 boss + Stun 暈拖延",
+        "Sword Strike → 繞背閃避"
+      ]
+    }
+  ]
 }

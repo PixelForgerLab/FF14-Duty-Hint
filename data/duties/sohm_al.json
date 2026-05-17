@@ -1,182 +1,249 @@
 {
-    "id": "sohm_al",
-    "name": "天山絕頂索姆阿爾靈峰",
-    "nameEn": "Sohm Al",
-    "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 53,
-    "highEnd": false,
-    "mainScenario": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）天山絕頂索姆阿爾靈峰（HW Lv 53 MSQ）：3 boss。B1 Raskovnik 破鎖花王、B2 Myrmecoleon 三足魔獸、B3 Sohm Al Bloodsucker 不死鳥之祖。",
-        "2）B1 香氣 → 場邊出蜜蜂 80%/40% HP 各一次。鮮花陷阱：30° 方向吸引並眩暈。狼吞虎咽圓 AoE：吃下所有人 + 疊增傷 buff（每層 +20%，最高 9 層）→ 吐出全屏。",
-        "3）B1 Bloody Caress 血腥的愛撫 順劈 + Acid Rain 酸雨點名圓 + Plant Beam 植物射線點名直線。",
-        "4）B2 三足腳前掃 對 T 順劈（T 別與隊友站）+ Bite 咬合 MT 死刑 + Scale Saw 鱗刀前方扇形。",
-        "5）B2 80%/40% Primal Howl 原始嚎叫全屏 + spawn 2 粘液怪（橙=分攤 + 藍=圓 AoE）。第二次嚎叫加一隻聖山之糜讀條最後的歌曲全屏超大 → 必殺。",
-        "6）B3 混沌爆破：場上隨機圓 AoE + 八方直線 + 命中後在玩家腳下再圓。深淵破壞 對 T 大範圍無讀條 → T 離人群。彗星 點名 2 人陨石。",
-        "7）B3 50% 進入無敵階段：暗星全屏 → 必須打掉左右兩翼（翅膀）解開。期間隨機玩家小陨石標記 + 周圍 4 圓 → 走縫。"
-    ],
-    "notes": "HW 3.0 主線副本（Lv 53，sync 53-55，4 人 dungeon），位於龍堡參天高地索姆阿爾靈峰。Boss 依序為 Raskovnik 破鎖花王、Myrmecoleon 三足魔獸、Sohm Al Bloodsucker。本副本是 HW 主線進入德拉瓦尼亞之心的關鍵。",
-    "bosses": [
+  "id": "sohm_al",
+  "name": "天山絕頂索姆阿爾靈峰",
+  "nameEn": "Sohm Al",
+  "expansion": "3.x 蒼天伊修加爾德 (Heavensward)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 53,
+  "highEnd": false,
+  "mainScenario": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "天山絕頂索姆阿爾靈峰（HW Lv 53 MSQ）：3 boss。B1 Raskovnik 破鎖花王、B2 Myrmecoleon 三足魔獸、B3 Sohm Al Bloodsucker 不死鳥之祖。",
+    "B1 香氣 → 場邊出蜜蜂 80%/40% HP 各一次。鮮花陷阱：30° 方向吸引並眩暈。狼吞虎咽圓 AoE：吃下所有人 + 疊增傷 buff（每層 +20%，最高 9 層）→ 吐出全屏。",
+    "B1 Bloody Caress 血腥的愛撫 順劈 + Acid Rain 酸雨點名圓 + Plant Beam 植物射線點名直線。",
+    "B2 三足腳前掃 對 T 順劈（T 別與隊友站）+ Bite 咬合 MT 死刑 + Scale Saw 鱗刀前方扇形。",
+    "B2 80%/40% Primal Howl 原始嚎叫全屏 + spawn 2 粘液怪（橙=分攤 + 藍=圓 AoE）。第二次嚎叫加一隻聖山之糜讀條最後的歌曲全屏超大 → 必殺。",
+    "B3 混沌爆破：場上隨機圓 AoE + 八方直線 + 命中後在玩家腳下再圓。深淵破壞 對 T 大範圍無讀條 → T 離人群。彗星 點名 2 人陨石。",
+    "B3 50% 進入無敵階段：暗星全屏 → 必須打掉左右兩翼（翅膀）解開。期間隨機玩家小陨石標記 + 周圍 4 圓 → 走縫。"
+  ],
+  "notes": "HW 3.0 主線副本（Lv 53，sync 53-55，4 人 dungeon），位於龍堡參天高地索姆阿爾靈峰。Boss 依序為 Raskovnik 破鎖花王、Myrmecoleon 三足魔獸、Sohm Al Bloodsucker。本副本是 HW 主線進入德拉瓦尼亞之心的關鍵。",
+  "bosses": [
+    {
+      "name": "破鎖花王",
+      "nameEn": "Raskovnik",
+      "phases": [
         {
-            "name": "破鎖花王",
-            "nameEn": "Raskovnik",
-            "phases": [
+          "name": "主戰（蜜蜂 + 吞食）",
+          "mechanics": [
+            {
+              "name": "Aromatherapy 香氣（80%/40% 召蜜蜂）",
+              "type": "mechanic",
+              "description": "boss 讀條香氣 → 場邊出蜜蜂飛向 boss（黃色點名）。80% 與 40% HP 各 1 次。",
+              "tips": [
                 {
-                    "name": "主戰（蜜蜂 + 吞食）",
-                    "mechanics": [
-                        {
-                            "name": "Aromatherapy 香氣（80%/40% 召蜜蜂）",
-                            "type": "mechanic",
-                            "description": "boss 讀條香氣 → 場邊出蜜蜂飛向 boss（黃色點名）。80% 與 40% HP 各 1 次。",
-                            "tips": [{"text": "DPS 速殺蜜蜂", "role": "dps"}]
-                        },
-                        {
-                            "name": "Flower Trap 鮮花陷阱 + Devour 狼吞虎咽 + 吐出",
-                            "type": "mechanic",
-                            "description": "Flower Trap：點名 1 玩家 → 30° 方向吸引所有角色至身前 + 眩暈。Devour 狼吞虎咽：圓形 AoE → 吃下所有 AoE 內角色 + 每吃 1 人疊 1 層攻擊力提高 buff（每層 +20%，最高 9 層）。Vomit 吐出：吐出我方角色 + 全屏 AoE（依吃數疊高傷）。沒吃 → 不使用。",
-                            "tips": [
-                                {"text": "別站陷阱範圍", "role": "dps"},
-                                {"text": "避免被狼吞", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Leafstorm 綠葉風暴",
-                            "type": "raidwide",
-                            "description": "全屏 AoE。治療團補。",
-                            "tips": [{"text": "團補", "role": "healer"}]
-                        },
-                        {
-                            "name": "Bloody Caress 血腥的愛撫 / Acid Rain / Plant Beam",
-                            "type": "mechanic",
-                            "description": "血腥的愛撫：MT 順劈；Acid Rain 酸雨：點名圓 AoE；Plant Beam 植物射線：點名直線。看圖示走位。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "被點走位", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "DPS 速殺蜜蜂",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "香氣 → 殺蜜蜂",
-                "Flower Trap → 別站 30° 範圍",
-                "Devour 狼吞 → 別被吃（疊 buff）",
-                "Bloody Caress / Acid Rain / Plant Beam → 看圖示"
-            ]
-        },
-        {
-            "name": "三足魔獸",
-            "nameEn": "Myrmecoleon",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Flower Trap 鮮花陷阱 + Devour 狼吞虎咽 + 吐出",
+              "type": "mechanic",
+              "description": "Flower Trap：點名 1 玩家 → 30° 方向吸引所有角色至身前 + 眩暈。Devour 狼吞虎咽：圓形 AoE → 吃下所有 AoE 內角色 + 每吃 1 人疊 1 層攻擊力提高 buff（每層 +20%，最高 9 層）。Vomit 吐出：吐出我方角色 + 全屏 AoE（依吃數疊高傷）。沒吃 → 不使用。",
+              "tips": [
                 {
-                    "name": "主戰（粘液怪雙形態）",
-                    "mechanics": [
-                        {
-                            "name": "Third Leg / Bite / Scale Saw",
-                            "type": "cone",
-                            "description": "Third Leg 第三腿前掃：對 T 順劈（T 別與隊友站）；Bite 咬合：MT 死刑（大減傷）；Scale Saw 鱗刀：對 T 方向扇形（可見預兆）。",
-                            "tips": [
-                                {"text": "MT 朝外 + 大減傷接 Bite", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Primal Howl 原始嚎叫（80%/40% spawn 粘液怪）",
-                            "type": "raidwide",
-                            "description": "boss 80%/40% HP 釋放全屏 AoE + 場上 spawn 2 個不可選粘液怪（橙=聖山之血/藍=聖山之液）。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Lure & Mad Splash 誘捕 & 瘋狂潑濺",
-                            "type": "mechanic",
-                            "description": "boss 跳向隨機粘液怪 + 點名玩家。藍粘液怪 → 對點名玩家圓 AoE（別站人群）；橙粘液怪 → 對點名玩家可分攤大傷害（集合分攤）。",
-                            "tips": [
-                                {"text": "藍 → 散開；橙 → 集合分攤", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Sacred Mountain Mucus + Last Song 聖山之糜 + 最後的歌曲",
-                            "type": "add",
-                            "description": "第二次 Primal Howl 額外生成 1 個聖山之糜（讀條最後的歌曲全屏超大 AoE）→ 必殺 add 防團滅。",
-                            "tips": [{"text": "速殺聖山之糜", "role": "dps"}]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "T 別站人群（Third Leg 順劈）",
-                "Bite 死刑 → MT 大減傷",
-                "Primal Howl → spawn 藍/橙粘液",
-                "藍散開 / 橙集合分攤",
-                "聖山之糜 → 速殺"
-            ]
-        },
-        {
-            "name": "不死鳥之祖",
-            "nameEn": "Sohm Al Bloodsucker",
-            "phases": [
-                {
-                    "name": "P1 100%-50% HP（基礎）",
-                    "mechanics": [
-                        {
-                            "name": "Chaos Bomb 混沌爆破",
-                            "type": "mechanic",
-                            "description": "場上隨機圓 AoE + 八方直線 AoE → 命中判定後在所有玩家腳下再圓 AoE。優先走位避主圓。",
-                            "tips": [{"text": "走位避主圓 → 看腳下", "role": "dps"}]
-                        },
-                        {
-                            "name": "Abyssal Destroyer 深淵破壞",
-                            "type": "cone",
-                            "description": "對 T 方向大範圍無讀條 AoE。MT 永遠不與隊友站一起。",
-                            "tips": [{"text": "MT 朝外 + 離隊", "role": "tank"}]
-                        },
-                        {
-                            "name": "Comet 彗星（點名 2 / 3 玩家）",
-                            "type": "spread",
-                            "description": "點名 2 玩家頭上綠色陨石（翅膀破壞後 3 名）→ 陨石掉落造成距離衰減大傷。被點玩家在遠離 T 一側集合放置後散開。",
-                            "tips": [{"text": "被點集合放置後散開", "role": "dps"}]
-                        }
-                    ]
+                  "text": "別站陷阱範圍",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 < 50% HP（轉換 + 翅膀）",
-                    "mechanics": [
-                        {
-                            "name": "無敵階段 + 暗星（必打翅膀）",
-                            "type": "mechanic",
-                            "description": "boss HP 50% 進入無敵 → 每隔一段時間讀條 Dark Star 暗星全屏。必須打掉左右兩翼（翅膀）→ 解開無敵繼續戰鬥。",
-                            "tips": [
-                                {"text": "DPS 集火兩翼", "role": "dps"},
-                                {"text": "MT 拉穩 boss", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "小陨石標記 + 4 圓 AoE",
-                            "type": "spread",
-                            "description": "P2 期間隨機玩家被點名小型陨石標記 → 少量傷後周圍隨機生成 4 個圓 AoE。注意走位避開。",
-                            "tips": [{"text": "看圓走縫", "role": "dps"}]
-                        },
-                        {
-                            "name": "Dark Star 暗星（轉階段後）",
-                            "type": "raidwide",
-                            "description": "轉階段後 boss 讀條暗星全屏 AoE（比轉階段時低）。治療團補。",
-                            "tips": [{"text": "團補", "role": "healer"}]
-                        }
-                    ]
+                  "text": "避免被狼吞",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "Chaos Bomb 混沌爆破 → 圓 + 八方 → 看腳下",
-                "Abyssal Destroyer → T 別站人群",
-                "Comet 彗星 → 集合放置散開",
-                "50% 無敵 → 必打兩翼解",
-                "暗星全屏 → 團補"
-            ]
+              ]
+            },
+            {
+              "name": "Leafstorm 綠葉風暴",
+              "type": "raidwide",
+              "description": "全屏 AoE。治療團補。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Bloody Caress 血腥的愛撫 / Acid Rain / Plant Beam",
+              "type": "mechanic",
+              "description": "血腥的愛撫：MT 順劈；Acid Rain 酸雨：點名圓 AoE；Plant Beam 植物射線：點名直線。看圖示走位。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "被點走位",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "香氣 → 殺蜜蜂",
+        "Flower Trap → 別站 30° 範圍",
+        "Devour 狼吞 → 別被吃（疊 buff）",
+        "Bloody Caress / Acid Rain / Plant Beam → 看圖示"
+      ]
+    },
+    {
+      "name": "三足魔獸",
+      "nameEn": "Myrmecoleon",
+      "phases": [
+        {
+          "name": "主戰（粘液怪雙形態）",
+          "mechanics": [
+            {
+              "name": "Third Leg / Bite / Scale Saw",
+              "type": "cone",
+              "description": "Third Leg 第三腿前掃：對 T 順劈（T 別與隊友站）；Bite 咬合：MT 死刑（大減傷）；Scale Saw 鱗刀：對 T 方向扇形（可見預兆）。",
+              "tips": [
+                {
+                  "text": "MT 朝外 + 大減傷接 Bite",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Primal Howl 原始嚎叫（80%/40% spawn 粘液怪）",
+              "type": "raidwide",
+              "description": "boss 80%/40% HP 釋放全屏 AoE + 場上 spawn 2 個不可選粘液怪（橙=聖山之血/藍=聖山之液）。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Lure & Mad Splash 誘捕 & 瘋狂潑濺",
+              "type": "mechanic",
+              "description": "boss 跳向隨機粘液怪 + 點名玩家。藍粘液怪 → 對點名玩家圓 AoE（別站人群）；橙粘液怪 → 對點名玩家可分攤大傷害（集合分攤）。",
+              "tips": [
+                {
+                  "text": "藍 → 散開；橙 → 集合分攤",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Sacred Mountain Mucus + Last Song 聖山之糜 + 最後的歌曲",
+              "type": "add",
+              "description": "第二次 Primal Howl 額外生成 1 個聖山之糜（讀條最後的歌曲全屏超大 AoE）→ 必殺 add 防團滅。",
+              "tips": [
+                {
+                  "text": "速殺聖山之糜",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "T 別站人群（Third Leg 順劈）",
+        "Bite 死刑 → MT 大減傷",
+        "Primal Howl → spawn 藍/橙粘液",
+        "藍散開 / 橙集合分攤",
+        "聖山之糜 → 速殺"
+      ]
+    },
+    {
+      "name": "不死鳥之祖",
+      "nameEn": "Sohm Al Bloodsucker",
+      "phases": [
+        {
+          "name": "P1 100%-50% HP（基礎）",
+          "mechanics": [
+            {
+              "name": "Chaos Bomb 混沌爆破",
+              "type": "mechanic",
+              "description": "場上隨機圓 AoE + 八方直線 AoE → 命中判定後在所有玩家腳下再圓 AoE。優先走位避主圓。",
+              "tips": [
+                {
+                  "text": "走位避主圓 → 看腳下",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Abyssal Destroyer 深淵破壞",
+              "type": "cone",
+              "description": "對 T 方向大範圍無讀條 AoE。MT 永遠不與隊友站一起。",
+              "tips": [
+                {
+                  "text": "MT 朝外 + 離隊",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Comet 彗星（點名 2 / 3 玩家）",
+              "type": "spread",
+              "description": "點名 2 玩家頭上綠色陨石（翅膀破壞後 3 名）→ 陨石掉落造成距離衰減大傷。被點玩家在遠離 T 一側集合放置後散開。",
+              "tips": [
+                {
+                  "text": "被點集合放置後散開",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 50% HP（轉換 + 翅膀）",
+          "mechanics": [
+            {
+              "name": "無敵階段 + 暗星（必打翅膀）",
+              "type": "mechanic",
+              "description": "boss HP 50% 進入無敵 → 每隔一段時間讀條 Dark Star 暗星全屏。必須打掉左右兩翼（翅膀）→ 解開無敵繼續戰鬥。",
+              "tips": [
+                {
+                  "text": "DPS 集火兩翼",
+                  "role": "dps"
+                },
+                {
+                  "text": "MT 拉穩 boss",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "小陨石標記 + 4 圓 AoE",
+              "type": "spread",
+              "description": "P2 期間隨機玩家被點名小型陨石標記 → 少量傷後周圍隨機生成 4 個圓 AoE。注意走位避開。",
+              "tips": [
+                {
+                  "text": "看圓走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Dark Star 暗星（轉階段後）",
+              "type": "raidwide",
+              "description": "轉階段後 boss 讀條暗星全屏 AoE（比轉階段時低）。治療團補。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Chaos Bomb 混沌爆破 → 圓 + 八方 → 看腳下",
+        "Abyssal Destroyer → T 別站人群",
+        "Comet 彗星 → 集合放置散開",
+        "50% 無敵 → 必打兩翼解",
+        "暗星全屏 → 團補"
+      ]
+    }
+  ]
 }

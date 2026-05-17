@@ -1,147 +1,198 @@
 {
-    "id": "thornmarch_hard",
-    "name": "善王莫古爾·莫古XII世殲滅戰",
-    "nameEn": "Thornmarch (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）善王莫古爾·莫古 XII 世 Hard：7 位莫古力家臣 + 國王。每位家臣有獨特技能（壁/斧/弓/愈/音/力/障）。",
-        "2）P1 家臣群戰：壁 Mogshield 回轉莫古盾自身圓；斧 Cumulative Sweep 百庫啵橫掃前扇；弓 Mog Death Rain 莫古死亡雨點名分散；愈 Pom Heal 絨絨治療回血（優先擊殺）；音 Mog Nocturne 莫古狂夜曲前 120° 扇形 + 12s 狂歡（原地跳莫古舞無法行動）。",
-        "3）P1 力 Pom Meteor 絨絨隕石：場上 4 座塔需要踩 → 每漏踩一個全屏 AoE + 1 層受傷加重；障 Mogspine 莫古刺 → MT 死刑。",
-        "4）P2 善王登場（家臣不可選）：Death Mog Warning 死亡莫古警告 boss 出場全屏 → 全員減傷。",
-        "5）P2 三次 King's Command 賢王號令：① 弓 + 障（毒池 + 點名分散 + 集合分攤 → 先集合後分散 + 全屏）；② 壁 + 斧 + 音（依次莫古飛天亂大圓 → 三穿一回避 + 雙坦分攤 + 全屏）；③ 力 + 愈（踩塔 + 環圓 AoE + 三連黃圈 + 集合分攤 + 矩形 AoE + 全屏 + MT 死刑）。"
-    ],
-    "notes": "ARR 2.1 主線蠻神戰（Lv 50，sync 50，8 人 trial），『善王莫古爾·莫古十二世』莫古力族召喚的蠻神 Hard 版。Boss 為 7 位莫古力家臣 + 國王。劇情上莫古力族為了保護家園召喚『賢王』。Hard 版機制較簡單，EX 版升級為更複雜的聯合攻擊與聯合招式。",
-    "bosses": [
+  "id": "thornmarch_hard",
+  "name": "善王莫古爾·莫古XII世殲滅戰",
+  "nameEn": "Thornmarch (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "善王莫古爾·莫古 XII 世 Hard：7 位莫古力家臣 + 國王。每位家臣有獨特技能（壁/斧/弓/愈/音/力/障）。",
+    "P1 家臣群戰：壁 Mogshield 回轉莫古盾自身圓；斧 Cumulative Sweep 百庫啵橫掃前扇；弓 Mog Death Rain 莫古死亡雨點名分散；愈 Pom Heal 絨絨治療回血（優先擊殺）；音 Mog Nocturne 莫古狂夜曲前 120° 扇形 + 12s 狂歡（原地跳莫古舞無法行動）。",
+    "P1 力 Pom Meteor 絨絨隕石：場上 4 座塔需要踩 → 每漏踩一個全屏 AoE + 1 層受傷加重；障 Mogspine 莫古刺 → MT 死刑。",
+    "P2 善王登場（家臣不可選）：Death Mog Warning 死亡莫古警告 boss 出場全屏 → 全員減傷。",
+    "P2 三次 King's Command 賢王號令：① 弓 + 障（毒池 + 點名分散 + 集合分攤 → 先集合後分散 + 全屏）；② 壁 + 斧 + 音（依次莫古飛天亂大圓 → 三穿一回避 + 雙坦分攤 + 全屏）；③ 力 + 愈（踩塔 + 環圓 AoE + 三連黃圈 + 集合分攤 + 矩形 AoE + 全屏 + MT 死刑）。"
+  ],
+  "notes": "ARR 2.1 主線蠻神戰（Lv 50，sync 50，8 人 trial），『善王莫古爾·莫古十二世』莫古力族召喚的蠻神 Hard 版。Boss 為 7 位莫古力家臣 + 國王。劇情上莫古力族為了保護家園召喚『賢王』。Hard 版機制較簡單，EX 版升級為更複雜的聯合攻擊與聯合招式。",
+  "bosses": [
+    {
+      "name": "善王莫古爾·莫古十二世",
+      "nameEn": "Good King Moggle Mog XII",
+      "phases": [
         {
-            "name": "善王莫古爾·莫古十二世",
-            "nameEn": "Good King Moggle Mog XII",
-            "phases": [
+          "name": "P1 七莫古力家臣群戰",
+          "mechanics": [
+            {
+              "name": "壁 Wall 回轉莫古盾",
+              "type": "aoe",
+              "description": "Kupdi Koop 庫普迪·庫普（壁）自身為圓心小範圍 AoE，命中附加 1 層受傷加重。近戰退離。",
+              "tips": [
                 {
-                    "name": "P1 七莫古力家臣群戰",
-                    "mechanics": [
-                        {
-                            "name": "壁 Wall 回轉莫古盾",
-                            "type": "aoe",
-                            "description": "Kupdi Koop 庫普迪·庫普（壁）自身為圓心小範圍 AoE，命中附加 1 層受傷加重。近戰退離。",
-                            "tips": [
-                                {"text": "近戰退離壁", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "斧 Axe 百庫啵橫掃",
-                            "type": "cone",
-                            "description": "Kupta Kapa 庫普塔·咔帕（斧）面前小範圍扇形 AoE + 受傷加重。MT 朝外。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "弓 Bow 莫古死亡雨",
-                            "type": "spread",
-                            "description": "Kupukak Kogi 庫普括·叩吉（弓）全體點名 AoE。散開站位避免重疊。",
-                            "tips": [
-                                {"text": "散開", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "愈 Heal（必須優先殺）",
-                            "type": "add",
-                            "description": "Kupuro Chip 庫普洛·奇普（愈）使用 ① Pom Holy 絨絨神聖全屏 AoE；② Pom Heal 絨絨治療回血給隊友。必須優先擊殺以防其他 add 一直被治療回來。",
-                            "tips": [
-                                {"text": "DPS 優先殺愈", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "音 Music 莫古狂夜曲",
-                            "type": "cone",
-                            "description": "Pukushi Piko 普庫嘻·皮叩（音）面前 120° 大範圍扇形 AoE + 12 秒 Carnival 狂歡 debuff → 原地跳莫古舞無法移動使用技能 + 體力逐漸減少。MT 朝外，被中招者撐過 12 秒。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "中招撐 12s", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "力 Power 絨絨隕石（4 塔踩位）",
-                            "type": "mechanic",
-                            "description": "Pukula Puchi 普庫啦·普奇（力）召喚 4 座 Pom Meteor 絨絨隕石塔，玩家必須踩塔。每漏踩 1 個 → 全屏 AoE + 全員 1 層受傷加重。指定 4 人各踩 1 塔。",
-                            "tips": [
-                                {"text": "指定 4 人各踩 1 塔", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "障 Defense 莫古刺",
-                            "type": "tankbuster",
-                            "description": "Pukuna Pako 普庫呐·帕叩（障）對 MT 死刑單體；MT 大減傷。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "近戰退離壁",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "斧 Axe 百庫啵橫掃",
+              "type": "cone",
+              "description": "Kupta Kapa 庫普塔·咔帕（斧）面前小範圍扇形 AoE + 受傷加重。MT 朝外。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "弓 Bow 莫古死亡雨",
+              "type": "spread",
+              "description": "Kupukak Kogi 庫普括·叩吉（弓）全體點名 AoE。散開站位避免重疊。",
+              "tips": [
+                {
+                  "text": "散開",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "愈 Heal（必須優先殺）",
+              "type": "add",
+              "description": "Kupuro Chip 庫普洛·奇普（愈）使用 ① Pom Holy 絨絨神聖全屏 AoE；② Pom Heal 絨絨治療回血給隊友。必須優先擊殺以防其他 add 一直被治療回來。",
+              "tips": [
+                {
+                  "text": "DPS 優先殺愈",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "音 Music 莫古狂夜曲",
+              "type": "cone",
+              "description": "Pukushi Piko 普庫嘻·皮叩（音）面前 120° 大範圍扇形 AoE + 12 秒 Carnival 狂歡 debuff → 原地跳莫古舞無法移動使用技能 + 體力逐漸減少。MT 朝外，被中招者撐過 12 秒。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
                 },
                 {
-                    "name": "P2 善王號令（三輪聯合）",
-                    "mechanics": [
-                        {
-                            "name": "Death Mog Warning 死亡莫古警告（boss 登場）",
-                            "type": "raidwide",
-                            "description": "boss 出場讀條全屏 AoE → 全員減傷 + 治療大團補。此階段小怪均不可選中。",
-                            "tips": [
-                                {"text": "全員減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "第一次 King's Command 賢王號令（弓 + 障）",
-                            "type": "mechanic",
-                            "description": "召喚弓 + 障。障 Pom Mire 絨絨沼澤毒圈（踩入 Bind + Poison 猛毒 15s）；弓 Mog Death Rain 莫古死亡雨分散；Mog Crash 莫古崩石集合分攤（崩石優先判定，先集合後分散）；最後 Pom Holy 絨絨神聖全屏。",
-                            "tips": [
-                                {"text": "毒圈不要踩", "role": "dps"},
-                                {"text": "先集合分攤再分散躲死亡雨", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "第二次 King's Command（壁 + 斧 + 音）",
-                            "type": "mechanic",
-                            "description": "壁 + 斧 + 賢王隨機順序依次讀條 Mog Fly Wild 莫古飛天亂大範圍 AoE + 1 層受傷加重 → 看後讀條者沒重合處，等最先判定後走到空地『三穿一』回避。音 Mog Nocturne 莫古狂夜曲（同 P1）。Pom Double Meteor 絨絨雙重隕石點名雙坦分攤 → 雙 T 出人群開減傷分攤。最後 Pom Holy 全屏。",
-                            "tips": [
-                                {"text": "三穿一走位（依讀條順序）", "role": "dps"},
-                                {"text": "雙 T 分攤雙重隕石", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "第三次 King's Command（力 + 愈）",
-                            "type": "mechanic",
-                            "description": "力 Pom Meteor 4 塔（同 P1）；愈 Pom Stack 絨絨壘石環形/圓形 AoE 隨機順序依次 + 受傷加重；Mog Comet 莫古彗星三連黃圈 + 受傷加重（彗星優先絨絨隕石判定，先躲黃圈再踩塔）；Mog Crash 莫古崩石集合分攤（崩石優先絨絨壘石，先集合分攤再躲環）；Senra Kentish 森羅賢王面前矩形 AoE + 受傷加重；Pom Holy 全屏；千庫啵衝鋒 MT 死刑。",
-                            "tips": [
-                                {"text": "先躲黃圈再踩塔", "role": "dps"},
-                                {"text": "先集合分攤再躲環", "role": "tank"},
-                                {"text": "Esuna 清受傷加重 stack", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "循環",
-                            "type": "mechanic",
-                            "description": "此後為以上三次賢王號令的依次循環直到擊敗 boss。",
-                            "tips": [
-                                {"text": "持續復讀走位", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "中招撐 12s",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "P1 七家臣 → 優先殺愈，壁/斧/弓/音/力/障各機制",
-                "莫古狂夜曲（前 120°）→ 12s 狂歡無法動",
-                "P2 出場死亡莫古警告 → 減傷",
-                "1 號令（弓障）→ 先集合再分散",
-                "2 號令（壁斧音）→ 三穿一走位",
-                "3 號令（力愈）→ 先躲黃圈再踩塔；先分攤再躲環"
-            ]
+              ]
+            },
+            {
+              "name": "力 Power 絨絨隕石（4 塔踩位）",
+              "type": "mechanic",
+              "description": "Pukula Puchi 普庫啦·普奇（力）召喚 4 座 Pom Meteor 絨絨隕石塔，玩家必須踩塔。每漏踩 1 個 → 全屏 AoE + 全員 1 層受傷加重。指定 4 人各踩 1 塔。",
+              "tips": [
+                {
+                  "text": "指定 4 人各踩 1 塔",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "障 Defense 莫古刺",
+              "type": "tankbuster",
+              "description": "Pukuna Pako 普庫呐·帕叩（障）對 MT 死刑單體；MT 大減傷。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 善王號令（三輪聯合）",
+          "mechanics": [
+            {
+              "name": "Death Mog Warning 死亡莫古警告（boss 登場）",
+              "type": "raidwide",
+              "description": "boss 出場讀條全屏 AoE → 全員減傷 + 治療大團補。此階段小怪均不可選中。",
+              "tips": [
+                {
+                  "text": "全員減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "第一次 King's Command 賢王號令（弓 + 障）",
+              "type": "mechanic",
+              "description": "召喚弓 + 障。障 Pom Mire 絨絨沼澤毒圈（踩入 Bind + Poison 猛毒 15s）；弓 Mog Death Rain 莫古死亡雨分散；Mog Crash 莫古崩石集合分攤（崩石優先判定，先集合後分散）；最後 Pom Holy 絨絨神聖全屏。",
+              "tips": [
+                {
+                  "text": "毒圈不要踩",
+                  "role": "dps"
+                },
+                {
+                  "text": "先集合分攤再分散躲死亡雨",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "第二次 King's Command（壁 + 斧 + 音）",
+              "type": "mechanic",
+              "description": "壁 + 斧 + 賢王隨機順序依次讀條 Mog Fly Wild 莫古飛天亂大範圍 AoE + 1 層受傷加重 → 看後讀條者沒重合處，等最先判定後走到空地『三穿一』回避。音 Mog Nocturne 莫古狂夜曲（同 P1）。Pom Double Meteor 絨絨雙重隕石點名雙坦分攤 → 雙 T 出人群開減傷分攤。最後 Pom Holy 全屏。",
+              "tips": [
+                {
+                  "text": "三穿一走位（依讀條順序）",
+                  "role": "dps"
+                },
+                {
+                  "text": "雙 T 分攤雙重隕石",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "第三次 King's Command（力 + 愈）",
+              "type": "mechanic",
+              "description": "力 Pom Meteor 4 塔（同 P1）；愈 Pom Stack 絨絨壘石環形/圓形 AoE 隨機順序依次 + 受傷加重；Mog Comet 莫古彗星三連黃圈 + 受傷加重（彗星優先絨絨隕石判定，先躲黃圈再踩塔）；Mog Crash 莫古崩石集合分攤（崩石優先絨絨壘石，先集合分攤再躲環）；Senra Kentish 森羅賢王面前矩形 AoE + 受傷加重；Pom Holy 全屏；千庫啵衝鋒 MT 死刑。",
+              "tips": [
+                {
+                  "text": "先躲黃圈再踩塔",
+                  "role": "dps"
+                },
+                {
+                  "text": "先集合分攤再躲環",
+                  "role": "tank"
+                },
+                {
+                  "text": "Esuna 清受傷加重 stack",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "循環",
+              "type": "mechanic",
+              "description": "此後為以上三次賢王號令的依次循環直到擊敗 boss。",
+              "tips": [
+                {
+                  "text": "持續復讀走位",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "P1 七家臣 → 優先殺愈，壁/斧/弓/音/力/障各機制",
+        "莫古狂夜曲（前 120°）→ 12s 狂歡無法動",
+        "P2 出場死亡莫古警告 → 減傷",
+        "1 號令（弓障）→ 先集合再分散",
+        "2 號令（壁斧音）→ 三穿一走位",
+        "3 號令（力愈）→ 先躲黃圈再踩塔；先分攤再躲環"
+      ]
+    }
+  ]
 }

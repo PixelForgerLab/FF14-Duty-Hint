@@ -1,100 +1,133 @@
 {
-    "id": "binding_coil_of_bahamut_-_turn_1",
-    "name": "巴哈姆特大迷宮 邂逅之章1",
-    "nameEn": "The Binding Coil of Bahamut - Turn 1",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "raid",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）巴哈姆特大迷宮 邂逅之章1：核心戰 Caduceus 神杖巨蛇（蛇王）+ 預備層 Defense System 自衛系統。",
-        "2）場地閃藍光時內部會 spawn Dark Matter Slime 暗物質粘液怪 + Defense Reaction 防衛反應傷害；黃色地板 → 出血。",
-        "3）神杖巨蛇技能：Head Swing 甩頭前扇（無讀條）；Tail Swing 甩尾扇形（讀條）；Spit Venom 噴毒點名圓 + 留下毒池（猛毒）；Iron Scale 鋼鱗自身疊 buff。",
-        "4）Devour 捕食：boss 與粘液怪接觸 → 吸收 + 減 1 層鋼鱗。粘液怪炸裂：距目標過遠自爆大 AoE。Goo 粘稠液：留下粘液區（boss 接觸獲鋼鱗）。",
-        "5）75% HP 分裂為兩隻 + 自帶 Damage Down → 雙 T 各拉 1 隻分坦。一段時間未擊破 / 距離過近 → 再融合 + 立刻 8 層鋼鱗（狂暴）。",
-        "6）一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破（DPS race）。",
-        "7）預備：Defense System 自衛系統（前置）：High-Voltage 高壓電流可打斷 + 麻痺；Repelling Cannon 排斥砲自身圓；Object 199 軟狂暴。6 add 連線 boss 吸收給 boss Damage Up → 必清。"
-    ],
-    "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰首章（Lv 50，sync 50，ilvl 100，8 人 raid highEnd），於阿濟茲拉巴哈姆特大迷宮。Boss 為 Caduceus 神杖巨蛇（FF14 早期 8-man savage raid 風格）。本副本是 FFXIV 第一個高難度 8 人 raid，建立了後續 ARR 與 HW Coil 系列的傳統。同時也是『召喚對魔法障壁』機制首次出現。",
-    "bosses": [
+  "id": "binding_coil_of_bahamut_-_turn_1",
+  "name": "巴哈姆特大迷宮 邂逅之章1",
+  "nameEn": "The Binding Coil of Bahamut - Turn 1",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "raid",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "巴哈姆特大迷宮 邂逅之章1：核心戰 Caduceus 神杖巨蛇（蛇王）+ 預備層 Defense System 自衛系統。",
+    "場地閃藍光時內部會 spawn Dark Matter Slime 暗物質粘液怪 + Defense Reaction 防衛反應傷害；黃色地板 → 出血。",
+    "神杖巨蛇技能：Head Swing 甩頭前扇（無讀條）；Tail Swing 甩尾扇形（讀條）；Spit Venom 噴毒點名圓 + 留下毒池（猛毒）；Iron Scale 鋼鱗自身疊 buff。",
+    "Devour 捕食：boss 與粘液怪接觸 → 吸收 + 減 1 層鋼鱗。粘液怪炸裂：距目標過遠自爆大 AoE。Goo 粘稠液：留下粘液區（boss 接觸獲鋼鱗）。",
+    "75% HP 分裂為兩隻 + 自帶 Damage Down → 雙 T 各拉 1 隻分坦。一段時間未擊破 / 距離過近 → 再融合 + 立刻 8 層鋼鱗（狂暴）。",
+    "一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破（DPS race）。",
+    "預備：Defense System 自衛系統（前置）：High-Voltage 高壓電流可打斷 + 麻痺；Repelling Cannon 排斥砲自身圓；Object 199 軟狂暴。6 add 連線 boss 吸收給 boss Damage Up → 必清。"
+  ],
+  "notes": "ARR 2.0 蠻神戰 - 巴哈姆特絕境戰首章（Lv 50，sync 50，ilvl 100，8 人 raid highEnd），於阿濟茲拉巴哈姆特大迷宮。Boss 為 Caduceus 神杖巨蛇（FF14 早期 8-man savage raid 風格）。本副本是 FFXIV 第一個高難度 8 人 raid，建立了後續 ARR 與 HW Coil 系列的傳統。同時也是『召喚對魔法障壁』機制首次出現。",
+  "bosses": [
+    {
+      "name": "神杖巨蛇",
+      "nameEn": "Caduceus",
+      "phases": [
         {
-            "name": "神杖巨蛇",
-            "nameEn": "Caduceus",
-            "phases": [
+          "name": "P1 100%-75% HP（單體 + 粘液機制）",
+          "mechanics": [
+            {
+              "name": "Head Swing / Tail Swing 甩頭 / 甩尾扇形",
+              "type": "cone",
+              "description": "Head Swing 對一仇前方扇形（無讀條）；Tail Swing 後方可見範圍扇形（讀條）。MT 朝場邊面外，非 T 站側面。",
+              "tips": [
                 {
-                    "name": "P1 100%-75% HP（單體 + 粘液機制）",
-                    "mechanics": [
-                        {
-                            "name": "Head Swing / Tail Swing 甩頭 / 甩尾扇形",
-                            "type": "cone",
-                            "description": "Head Swing 對一仇前方扇形（無讀條）；Tail Swing 後方可見範圍扇形（讀條）。MT 朝場邊面外，非 T 站側面。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "非 T 站側", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Spit Venom 噴毒（點名 + 毒池）",
-                            "type": "spread",
-                            "description": "隨機玩家點名圓 AoE 不可閃 + 原地產生毒池（猛毒 DoT）。被點玩家拉到場邊放置毒池避免影響戰場。",
-                            "tips": [
-                                {"text": "被點拉場邊放毒池", "role": "dps"},
-                                {"text": "Esuna 清猛毒", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Dark Matter Slime 暗物質粘液怪（藍光區）",
-                            "type": "add",
-                            "description": "場地閃藍光時內部會 spawn 暗物質粘液怪 + Defense Reaction 防衛反應傷害區內玩家。粘液怪：距當前目標過遠 → 自爆大 AoE。Goo 粘稠液：留下粘液區。MT 拉粘液怪到 boss 附近讓 boss 捕食。",
-                            "tips": [
-                                {"text": "OT 拉粘液到 boss", "role": "tank"},
-                                {"text": "boss 捕食減 1 層鋼鱗", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Iron Scale 鋼鱗（buff 控管）",
-                            "type": "mechanic",
-                            "description": "boss 為自身疊 Iron Scale 鋼鱗 buff（增傷或減傷）。boss 捕食粘液怪可減 1 層。控制 boss stack 在低位。",
-                            "tips": [
-                                {"text": "餵粘液減鋼鱗", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "MT 朝外",
+                  "role": "tank"
                 },
                 {
-                    "name": "P2 < 75% HP（分裂雙坦）",
-                    "mechanics": [
-                        {
-                            "name": "Split 分裂（雙 T 分坦）",
-                            "type": "mechanic",
-                            "description": "boss HP < 75% 後分裂成兩隻 + 自帶 Damage Down。MT/OT 各拉 1 隻分坦。一段時間未擊破 / 兩隻距離過近會再次融合 + 立刻 8 層鋼鱗（狂暴）。",
-                            "tips": [
-                                {"text": "雙 T 各拉 1 隻拉遠", "role": "tank"},
-                                {"text": "避免兩隻接近融合", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Twin Death DPS race",
-                            "type": "mechanic",
-                            "description": "一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破。狂暴狀態下即使捕食粘液也會迅速疊回 8 層。",
-                            "tips": [
-                                {"text": "兩隻同時打到死血", "role": "dps"},
-                                {"text": "幾乎同時擊破", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "非 T 站側",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Head/Tail Swing 甩頭/甩尾 → MT 朝外站背",
-                "Spit Venom 噴毒 → 拉場邊放毒池",
-                "粘液怪 → 拉給 boss 吃減鋼鱗",
-                "75% 分裂 → 雙 T 分坦拉遠避融合",
-                "DPS race → 兩隻幾乎同時擊破"
-            ]
+              ]
+            },
+            {
+              "name": "Spit Venom 噴毒（點名 + 毒池）",
+              "type": "spread",
+              "description": "隨機玩家點名圓 AoE 不可閃 + 原地產生毒池（猛毒 DoT）。被點玩家拉到場邊放置毒池避免影響戰場。",
+              "tips": [
+                {
+                  "text": "被點拉場邊放毒池",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清猛毒",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Dark Matter Slime 暗物質粘液怪（藍光區）",
+              "type": "add",
+              "description": "場地閃藍光時內部會 spawn 暗物質粘液怪 + Defense Reaction 防衛反應傷害區內玩家。粘液怪：距當前目標過遠 → 自爆大 AoE。Goo 粘稠液：留下粘液區。MT 拉粘液怪到 boss 附近讓 boss 捕食。",
+              "tips": [
+                {
+                  "text": "OT 拉粘液到 boss",
+                  "role": "tank"
+                },
+                {
+                  "text": "boss 捕食減 1 層鋼鱗",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Iron Scale 鋼鱗（buff 控管）",
+              "type": "mechanic",
+              "description": "boss 為自身疊 Iron Scale 鋼鱗 buff（增傷或減傷）。boss 捕食粘液怪可減 1 層。控制 boss stack 在低位。",
+              "tips": [
+                {
+                  "text": "餵粘液減鋼鱗",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 75% HP（分裂雙坦）",
+          "mechanics": [
+            {
+              "name": "Split 分裂（雙 T 分坦）",
+              "type": "mechanic",
+              "description": "boss HP < 75% 後分裂成兩隻 + 自帶 Damage Down。MT/OT 各拉 1 隻分坦。一段時間未擊破 / 兩隻距離過近會再次融合 + 立刻 8 層鋼鱗（狂暴）。",
+              "tips": [
+                {
+                  "text": "雙 T 各拉 1 隻拉遠",
+                  "role": "tank"
+                },
+                {
+                  "text": "避免兩隻接近融合",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Twin Death DPS race",
+              "type": "mechanic",
+              "description": "一隻擊破後另一隻也會迅速疊 8 層鋼鱗 → 必須兩隻幾乎同時擊破。狂暴狀態下即使捕食粘液也會迅速疊回 8 層。",
+              "tips": [
+                {
+                  "text": "兩隻同時打到死血",
+                  "role": "dps"
+                },
+                {
+                  "text": "幾乎同時擊破",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Head/Tail Swing 甩頭/甩尾 → MT 朝外站背",
+        "Spit Venom 噴毒 → 拉場邊放毒池",
+        "粘液怪 → 拉給 boss 吃減鋼鱗",
+        "75% 分裂 → 雙 T 分坦拉遠避融合",
+        "DPS race → 兩隻幾乎同時擊破"
+      ]
+    }
+  ]
 }

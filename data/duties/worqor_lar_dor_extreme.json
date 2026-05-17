@@ -1,360 +1,360 @@
 {
-    "id":  "worqor_lar_dor_extreme",
-    "name":  "豔翼蛇鳥殲殛戰",
-    "nameEn":  "Worqor Lar Dor (Extreme) - Valigarmanda",
-    "expansion":  "7.x 黃金遺產 (Dawntrail)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  700,
-    "jobLevelSync":  100,
-    "highEnd":  true,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）三元素天災輪換：火 → 冰 → 雷 (場景變火山/雪山/雷雲)。",
-                     "2）三重災變：分配火/冰/雷 debuff 不同秒數，倒數結束放對應 AoE。",
-                     "3）蛇行盤繞/強襲/吐息：環形 / 圓 / 扇形，看 boss 文字提示。",
-                     "4）山火 6 連：場北圓 AoE 必須有人吃；無人 → 大爆炸。",
-                     "5）雷之天災：場地 6 區青綠浮空 buff，依賴浮空調整雷/冰 debuff 處理。",
-                     "6）狂暴：圖拉爾災祸 3 連 (冰 → 雷 → 火即死)，天災槽 100 = 強制秒殺。"
-                 ],
-    "notes":  "DT 7.0 EX 第一隻 (Lv 100, ilvl 700)。Valigarmanda (豔翼蛇鳥) EX，三元素天災蛇鳥。核心：三元素場景輪換 + 多種 debuff 配對處理 (火之灾厄/冰之灾害/雷之灾变) + 圖拉爾災祸三連即死狂暴。",
-    "bosses":  [
-                   {
-                       "name":  "豔翼蛇鳥",
-                       "nameEn":  "Valigarmanda",
-                       "mnemonic":  [
-                                        "蛇行盤繞 (環形 donut) / 強襲 (貼身圓) / 吐息 (扇形)，看文字提示。",
-                                        "火/冰/雷 debuff 7 秒前出標記，倒數爆對應 AoE。",
-                                        "山火：圓 AoE 必須有人吃，否則大爆炸。",
-                                        "雷之天災：浮空 6 區 + 雷之災厄要浮空、冰之災變要不浮空。",
-                                        "天災槽 100 = 圖拉爾災祸即死秒殺團滅。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Phase 1 - 火之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 / Avalanche / Mountain Fire",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前生火山小型模型 → 全體火屬性 AoE + 12s 火傷 DoT，場地變火山。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解火傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "三重災變 / Calamity",
-                                                                "type":  "other",
-                                                                "description":  "全體 AoE + 分配 debuff：所有人 122s 雷之災變 + 雙補 76s 火之災厄 + 4 人 29s 冰之災害 + 4 人 91s 冰之災害。",
-                                                                "tips":  [
-                                                                             "看 debuff 圖示判定處理順序"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火山彈 / Volcanic Bombs",
-                                                                "type":  "aoe",
-                                                                "description":  "西/東火山連 4 次圓 AoE + 點隨機 3 人腳下圓 3 次。",
-                                                                "tips":  [
-                                                                             "閃火山方向 + 隨機點名散開"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蛇行盤繞/強襲/吐息 / Slither",
-                                                                "type":  "aoe",
-                                                                "description":  "看文字提示判定：盤繞 = 環形 donut；強襲 = 貼身圓；吐息 = 扇形。",
-                                                                "tips":  [
-                                                                             "聚風 = 盤繞 (donut)",
-                                                                             "積蓄力量 = 強襲 (圓 AoE)",
-                                                                             "嘴中匯聚魔力 = 吐息 (扇形)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火之災祸 / Fiery Calamity",
-                                                                "type":  "stack",
-                                                                "description":  "Boss 放完蛇行系列後對 4 DPS 或 4 支援職分擔圓 + 火耐降低。",
-                                                                "tips":  [
-                                                                             "4 人配對分擔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "山火 / Wildfire (6 連)",
-                                                                "type":  "other",
-                                                                "description":  "場北圓 AoE 預兆 → 必須有人吃。若有人吃 = 圓 + 330° 扇形對 boss 方向；無人 = 大爆炸全屏。連發 6 次 boss 位置切換 (NW/N/NE)。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 輪流吃圓避免火耐疊",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "閃 330° 扇形 (站圓心對 boss 方向)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "火之災變 / Disastrous Burn",
-                                                                "type":  "stack",
-                                                                "description":  "火之災厄 7s 前出標記 → 連發 3 次分擔圓 + 留下火傷區域。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "補職帶 3-4 人分擔",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷之災變 / Skyruin",
-                                                                "type":  "aoe",
-                                                                "description":  "雷之災變 7s 前出標記 → 以該玩家為心圓 AoE + 雷耐降低。",
-                                                                "tips":  [
-                                                                             "被點者拉外圍散開"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 2 - 災祸預兆",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "災祸預兆 / Doomsday",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏 AoE + 場上生火/雷/冰之征兆 + 天災征兆積蓄槽。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 必須擊殺 3 征兆",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "積蓄槽 100 = 圖拉爾災祸即死"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸之鳴 / Calamity\u0027s Cry",
-                                                                "type":  "stack",
-                                                                "description":  "點 2 T/H 直線分擔 + 6s 獵物 → Boss 直線分擔 AoE (近 boss 較高傷)。Boss +8s 傷害提高 buff。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 站直線分擔",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸之聲 / Calamity\u0027s Voice",
-                                                                "type":  "aoe",
-                                                                "description":  "每 36° 一個 36° 扇形預兆 → 連發互補扇形。",
-                                                                "tips":  [
-                                                                             "跟著扇形旋轉移動"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "圖拉爾災祸 / Tural Calamity",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏冰 → 8s 後雷 → 8s 後火，附加災祸之炎永久 dot。積蓄槽 100 = 強制秒殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員大減傷 + LB3",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 3 - 冰之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 (冰) / Avalanche",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前雪山模型 → 冰屬性全屏 + 12s 凍傷 DoT，場地變雪山。東/南場邊阻擋，西/北可摔下。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解凍傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "三重災變 (冰版) / Calamity",
-                                                                "type":  "other",
-                                                                "description":  "雙補 11s 火之災害 + 雙 T 11s 冰之災厄 + 4 人 43s 雷之災變 + 4 人 120s 雷之災變。",
-                                                                "tips":  [
-                                                                             "看時間先後順序處理"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "北十字星 / North Star",
-                                                                "type":  "aoe",
-                                                                "description":  "場南雪山箭頭 + 雪崩特效 → 直線 AoE + 擊退。",
-                                                                "tips":  [
-                                                                             "看箭頭預判方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰之災祸 + 立體魔法陣 / Iceglyph",
-                                                                "type":  "aoe",
-                                                                "description":  "蛇行系列後場上 5 立體魔法陣 → 八方直線 AoE + 18s 凍結。冰塊被破壞會解凍結。",
-                                                                "tips":  [
-                                                                             "走魔法陣間隙"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "結冰塵 / Snowflakes",
-                                                                "type":  "other",
-                                                                "description":  "全員 2s 冷卻 → 不移動會獲 18s 凍結。",
-                                                                "tips":  [
-                                                                             "**持續移動**"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰爪 / Icebreaker",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 1+2 仇高傷圓 AoE + 15s 凍傷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 拉開站位",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰柱突刺 / Spikecicle",
-                                                                "type":  "aoe",
-                                                                "description":  "10 連曲線預兆 + 曲線 AoE + 固定位置生冰塊 → 1.2s 後爆。",
-                                                                "tips":  [
-                                                                             "跟著曲線預兆移動"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 4 - 雷之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 (雷) / Avalanche",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前雷雲模型 → 雷屬性全屏 + 12s 感電 DoT，場地變雷雲。場地 3×4 格，4 角 + 中間 6 塊青綠色區踩到獲浮空 buff。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解感電",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "三重災變 (雷版) / Calamity",
-                                                                "type":  "other",
-                                                                "description":  "雙補 11s 火之災變 + 4 人 59s 雷之災厄 + 4 人 99s 冰之災變 / 反組。",
-                                                                "tips":  [
-                                                                             "看 debuff 處理組別"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "驟羽 / Sudden Downpour",
-                                                                "type":  "aoe",
-                                                                "description":  "6 暗色方塊區從 NW 或 NE 順/逆時針距離衰減預兆 → 艷羽落下發動。",
-                                                                "tips":  [
-                                                                             "離開預兆中心"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災厄落雷 / Ruinous Bolt",
-                                                                "type":  "aoe",
-                                                                "description":  "艷羽位置圓 AoE 極高雷 + 對所有浮空玩家 圓 AoE 極高雷。",
-                                                                "tips":  [
-                                                                             "雷之災厄玩家**浮空** (升 buff)",
-                                                                             "其他人**不浮空** (避開青綠區)"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷之災變 (雷雲版)",
-                                                                "type":  "other",
-                                                                "description":  "雷之災厄 7s 前標記。不浮空 = 圓 AoE + 雷耐降低；浮空 = 高傷圓 + 受傷加重 + 12s 麻痺。",
-                                                                "tips":  [
-                                                                             "雷之災厄者**站浮空區**",
-                                                                             "其他人**遠離 + 不浮空**"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰之災變 (雷雲版)",
-                                                                "type":  "other",
-                                                                "description":  "冰之災變 7s 前標記。浮空 = 玩家位置生冰塊 (太近自爆全屏)；不浮空 = 18s 凍結。",
-                                                                "tips":  [
-                                                                             "冰之災變者**站浮空區**生冰塊在外圍",
-                                                                             "冰塊保持距離避免互爆"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷之災祸 / Stormgloom",
-                                                                "type":  "spread",
-                                                                "description":  "蛇行系列後記錄所有玩家位置 → 圓 AoE + 60s 受傷加重 + 12s 麻痺。",
-                                                                "tips":  [
-                                                                             "蛇行後立刻散開到不同位置"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷鳴吐息 / Stormcall",
-                                                                "type":  "aoe",
-                                                                "description":  "覆蓋全部場地的扇形 + 60s 受傷加重 + 12s 麻痺。**浮空可閃**。",
-                                                                "tips":  [
-                                                                             "全員踩青綠浮空區規避"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "奧秘閃電 / Arcane Bolt",
-                                                                "type":  "aoe",
-                                                                "description":  "場西/東共 5 立體魔法陣 → 直線 AoE。同一橫行不會 2 個。",
-                                                                "tips":  [
-                                                                             "找無魔法陣的行站"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸衝 / Calamity Surge",
-                                                                "type":  "stack",
-                                                                "description":  "場中央 2 人分擔高傷圓 → 場南 3 圓預兆 + 擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 站中央分擔",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 5 - 怒不可遏 (Enrage)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "怒不可遏 / Wrath Unfurled",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 全屏 AoE + 狂怒 buff 提高傷害。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "山火 (Enrage 版) × 6",
-                                                                "type":  "aoe",
-                                                                "description":  "效果同火之天災階段，連發 6 次。",
-                                                                "tips":  [
-                                                                             "輪流吃圓 AoE"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "圖拉爾災祸 (Enrage)",
-                                                                "type":  "raidwide",
-                                                                "description":  "冰 → 雷 → 火 (即死) 強制結束戰鬥。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "末段 DPS check",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "worqor_lar_dor_extreme",
+  "name": "豔翼蛇鳥殲殛戰",
+  "nameEn": "Worqor Lar Dor (Extreme) - Valigarmanda",
+  "expansion": "7.x 黃金遺產 (Dawntrail)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": 700,
+  "jobLevelSync": 100,
+  "highEnd": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "三元素天災輪換：火 → 冰 → 雷 (場景變火山/雪山/雷雲)。",
+    "三重災變：分配火/冰/雷 debuff 不同秒數，倒數結束放對應 AoE。",
+    "蛇行盤繞/強襲/吐息：環形 / 圓 / 扇形，看 boss 文字提示。",
+    "山火 6 連：場北圓 AoE 必須有人吃；無人 → 大爆炸。",
+    "雷之天災：場地 6 區青綠浮空 buff，依賴浮空調整雷/冰 debuff 處理。",
+    "狂暴：圖拉爾災祸 3 連 (冰 → 雷 → 火即死)，天災槽 100 = 強制秒殺。"
+  ],
+  "notes": "DT 7.0 EX 第一隻 (Lv 100, ilvl 700)。Valigarmanda (豔翼蛇鳥) EX，三元素天災蛇鳥。核心：三元素場景輪換 + 多種 debuff 配對處理 (火之灾厄/冰之灾害/雷之灾变) + 圖拉爾災祸三連即死狂暴。",
+  "bosses": [
+    {
+      "name": "豔翼蛇鳥",
+      "nameEn": "Valigarmanda",
+      "mnemonic": [
+        "蛇行盤繞 (環形 donut) / 強襲 (貼身圓) / 吐息 (扇形)，看文字提示。",
+        "火/冰/雷 debuff 7 秒前出標記，倒數爆對應 AoE。",
+        "山火：圓 AoE 必須有人吃，否則大爆炸。",
+        "雷之天災：浮空 6 區 + 雷之災厄要浮空、冰之災變要不浮空。",
+        "天災槽 100 = 圖拉爾災祸即死秒殺團滅。"
+      ],
+      "phases": [
+        {
+          "name": "Phase 1 - 火之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 / Avalanche / Mountain Fire",
+              "type": "raidwide",
+              "description": "Boss 面前生火山小型模型 → 全體火屬性 AoE + 12s 火傷 DoT，場地變火山。",
+              "tips": [
+                {
+                  "text": "減傷 + 解火傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "三重災變 / Calamity",
+              "type": "other",
+              "description": "全體 AoE + 分配 debuff：所有人 122s 雷之災變 + 雙補 76s 火之災厄 + 4 人 29s 冰之災害 + 4 人 91s 冰之災害。",
+              "tips": [
+                "看 debuff 圖示判定處理順序"
+              ]
+            },
+            {
+              "name": "火山彈 / Volcanic Bombs",
+              "type": "aoe",
+              "description": "西/東火山連 4 次圓 AoE + 點隨機 3 人腳下圓 3 次。",
+              "tips": [
+                "閃火山方向 + 隨機點名散開"
+              ]
+            },
+            {
+              "name": "蛇行盤繞/強襲/吐息 / Slither",
+              "type": "aoe",
+              "description": "看文字提示判定：盤繞 = 環形 donut；強襲 = 貼身圓；吐息 = 扇形。",
+              "tips": [
+                "聚風 = 盤繞 (donut)",
+                "積蓄力量 = 強襲 (圓 AoE)",
+                "嘴中匯聚魔力 = 吐息 (扇形)"
+              ]
+            },
+            {
+              "name": "火之災祸 / Fiery Calamity",
+              "type": "stack",
+              "description": "Boss 放完蛇行系列後對 4 DPS 或 4 支援職分擔圓 + 火耐降低。",
+              "tips": [
+                "4 人配對分擔"
+              ]
+            },
+            {
+              "name": "山火 / Wildfire (6 連)",
+              "type": "other",
+              "description": "場北圓 AoE 預兆 → 必須有人吃。若有人吃 = 圓 + 330° 扇形對 boss 方向；無人 = 大爆炸全屏。連發 6 次 boss 位置切換 (NW/N/NE)。",
+              "tips": [
+                {
+                  "text": "T 輪流吃圓避免火耐疊",
+                  "role": "tank"
+                },
+                "閃 330° 扇形 (站圓心對 boss 方向)"
+              ]
+            },
+            {
+              "name": "火之災變 / Disastrous Burn",
+              "type": "stack",
+              "description": "火之災厄 7s 前出標記 → 連發 3 次分擔圓 + 留下火傷區域。",
+              "tips": [
+                {
+                  "text": "補職帶 3-4 人分擔",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "雷之災變 / Skyruin",
+              "type": "aoe",
+              "description": "雷之災變 7s 前出標記 → 以該玩家為心圓 AoE + 雷耐降低。",
+              "tips": [
+                "被點者拉外圍散開"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 2 - 災祸預兆",
+          "mechanics": [
+            {
+              "name": "災祸預兆 / Doomsday",
+              "type": "raidwide",
+              "description": "全屏 AoE + 場上生火/雷/冰之征兆 + 天災征兆積蓄槽。",
+              "tips": [
+                {
+                  "text": "DPS 必須擊殺 3 征兆",
+                  "role": "dps"
+                },
+                "積蓄槽 100 = 圖拉爾災祸即死"
+              ]
+            },
+            {
+              "name": "災祸之鳴 / Calamity's Cry",
+              "type": "stack",
+              "description": "點 2 T/H 直線分擔 + 6s 獵物 → Boss 直線分擔 AoE (近 boss 較高傷)。Boss +8s 傷害提高 buff。",
+              "tips": [
+                {
+                  "text": "兩 T 站直線分擔",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "災祸之聲 / Calamity's Voice",
+              "type": "aoe",
+              "description": "每 36° 一個 36° 扇形預兆 → 連發互補扇形。",
+              "tips": [
+                "跟著扇形旋轉移動"
+              ]
+            },
+            {
+              "name": "圖拉爾災祸 / Tural Calamity",
+              "type": "raidwide",
+              "description": "全屏冰 → 8s 後雷 → 8s 後火，附加災祸之炎永久 dot。積蓄槽 100 = 強制秒殺。",
+              "tips": [
+                {
+                  "text": "全員大減傷 + LB3",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 3 - 冰之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 (冰) / Avalanche",
+              "type": "raidwide",
+              "description": "Boss 面前雪山模型 → 冰屬性全屏 + 12s 凍傷 DoT，場地變雪山。東/南場邊阻擋，西/北可摔下。",
+              "tips": [
+                {
+                  "text": "減傷 + 解凍傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "三重災變 (冰版) / Calamity",
+              "type": "other",
+              "description": "雙補 11s 火之災害 + 雙 T 11s 冰之災厄 + 4 人 43s 雷之災變 + 4 人 120s 雷之災變。",
+              "tips": [
+                "看時間先後順序處理"
+              ]
+            },
+            {
+              "name": "北十字星 / North Star",
+              "type": "aoe",
+              "description": "場南雪山箭頭 + 雪崩特效 → 直線 AoE + 擊退。",
+              "tips": [
+                "看箭頭預判方向"
+              ]
+            },
+            {
+              "name": "冰之災祸 + 立體魔法陣 / Iceglyph",
+              "type": "aoe",
+              "description": "蛇行系列後場上 5 立體魔法陣 → 八方直線 AoE + 18s 凍結。冰塊被破壞會解凍結。",
+              "tips": [
+                "走魔法陣間隙"
+              ]
+            },
+            {
+              "name": "結冰塵 / Snowflakes",
+              "type": "other",
+              "description": "全員 2s 冷卻 → 不移動會獲 18s 凍結。",
+              "tips": [
+                "**持續移動**"
+              ]
+            },
+            {
+              "name": "冰爪 / Icebreaker",
+              "type": "tankbuster",
+              "description": "對 1+2 仇高傷圓 AoE + 15s 凍傷。",
+              "tips": [
+                {
+                  "text": "兩 T 拉開站位",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "冰柱突刺 / Spikecicle",
+              "type": "aoe",
+              "description": "10 連曲線預兆 + 曲線 AoE + 固定位置生冰塊 → 1.2s 後爆。",
+              "tips": [
+                "跟著曲線預兆移動"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 4 - 雷之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 (雷) / Avalanche",
+              "type": "raidwide",
+              "description": "Boss 面前雷雲模型 → 雷屬性全屏 + 12s 感電 DoT，場地變雷雲。場地 3×4 格，4 角 + 中間 6 塊青綠色區踩到獲浮空 buff。",
+              "tips": [
+                {
+                  "text": "減傷 + 解感電",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "三重災變 (雷版) / Calamity",
+              "type": "other",
+              "description": "雙補 11s 火之災變 + 4 人 59s 雷之災厄 + 4 人 99s 冰之災變 / 反組。",
+              "tips": [
+                "看 debuff 處理組別"
+              ]
+            },
+            {
+              "name": "驟羽 / Sudden Downpour",
+              "type": "aoe",
+              "description": "6 暗色方塊區從 NW 或 NE 順/逆時針距離衰減預兆 → 艷羽落下發動。",
+              "tips": [
+                "離開預兆中心"
+              ]
+            },
+            {
+              "name": "災厄落雷 / Ruinous Bolt",
+              "type": "aoe",
+              "description": "艷羽位置圓 AoE 極高雷 + 對所有浮空玩家 圓 AoE 極高雷。",
+              "tips": [
+                "雷之災厄玩家**浮空** (升 buff)",
+                "其他人**不浮空** (避開青綠區)"
+              ]
+            },
+            {
+              "name": "雷之災變 (雷雲版)",
+              "type": "other",
+              "description": "雷之災厄 7s 前標記。不浮空 = 圓 AoE + 雷耐降低；浮空 = 高傷圓 + 受傷加重 + 12s 麻痺。",
+              "tips": [
+                "雷之災厄者**站浮空區**",
+                "其他人**遠離 + 不浮空**"
+              ]
+            },
+            {
+              "name": "冰之災變 (雷雲版)",
+              "type": "other",
+              "description": "冰之災變 7s 前標記。浮空 = 玩家位置生冰塊 (太近自爆全屏)；不浮空 = 18s 凍結。",
+              "tips": [
+                "冰之災變者**站浮空區**生冰塊在外圍",
+                "冰塊保持距離避免互爆"
+              ]
+            },
+            {
+              "name": "雷之災祸 / Stormgloom",
+              "type": "spread",
+              "description": "蛇行系列後記錄所有玩家位置 → 圓 AoE + 60s 受傷加重 + 12s 麻痺。",
+              "tips": [
+                "蛇行後立刻散開到不同位置"
+              ]
+            },
+            {
+              "name": "雷鳴吐息 / Stormcall",
+              "type": "aoe",
+              "description": "覆蓋全部場地的扇形 + 60s 受傷加重 + 12s 麻痺。**浮空可閃**。",
+              "tips": [
+                "全員踩青綠浮空區規避"
+              ]
+            },
+            {
+              "name": "奧秘閃電 / Arcane Bolt",
+              "type": "aoe",
+              "description": "場西/東共 5 立體魔法陣 → 直線 AoE。同一橫行不會 2 個。",
+              "tips": [
+                "找無魔法陣的行站"
+              ]
+            },
+            {
+              "name": "災祸衝 / Calamity Surge",
+              "type": "stack",
+              "description": "場中央 2 人分擔高傷圓 → 場南 3 圓預兆 + 擊退。",
+              "tips": [
+                {
+                  "text": "兩 T 站中央分擔",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 5 - 怒不可遏 (Enrage)",
+          "mechanics": [
+            {
+              "name": "怒不可遏 / Wrath Unfurled",
+              "type": "raidwide",
+              "description": "Boss 全屏 AoE + 狂怒 buff 提高傷害。",
+              "tips": [
+                {
+                  "text": "全員減傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "山火 (Enrage 版) × 6",
+              "type": "aoe",
+              "description": "效果同火之天災階段，連發 6 次。",
+              "tips": [
+                "輪流吃圓 AoE"
+              ]
+            },
+            {
+              "name": "圖拉爾災祸 (Enrage)",
+              "type": "raidwide",
+              "description": "冰 → 雷 → 火 (即死) 強制結束戰鬥。",
+              "tips": [
+                {
+                  "text": "末段 DPS check",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

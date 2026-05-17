@@ -1,243 +1,243 @@
 {
-    "id":  "worqor_lar_dor",
-    "name":  "豔翼蛇鳥殲滅戰",
-    "nameEn":  "Worqor Lar Dor - Valigarmanda",
-    "expansion":  "7.x 黃金遺產 (Dawntrail)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  690,
-    "jobLevelSync":  100,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）蛇行盤繞/強襲/吐息：環形 / 圓 / 扇形，看 boss 文字提示判定。",
-                     "2）冰爪：對 2T 高傷圓 AoE + 凍傷 dot。",
-                     "3）災祸衝：場中央 2 人分擔圓 → 對南側 3 圓 AoE + 擊退。",
-                     "4）三元素場景輪換：火 → 冰 → 雷。",
-                     "5）災祸預兆：3 元素征兆 + 蓄積槽，槽 100 = 圖拉爾災祸即死秒殺。"
-                 ],
-    "notes":  "DT 7.0 MSQ Trial (Lv 100, ilvl 690)。Valigarmanda (豔翼蛇鳥) Normal。DT 第一個 MSQ trial。三元素天災蛇鳥，場景輪換火/冰/雷。Normal 版去除大部分 EX 的複雜 debuff 處理。",
-    "bosses":  [
-                   {
-                       "name":  "豔翼蛇鳥",
-                       "nameEn":  "Valigarmanda",
-                       "mnemonic":  [
-                                        "聚風 = 盤繞 (donut)；積蓄力量 = 強襲 (圓 AoE)；嘴中匯聚魔力 = 吐息 (扇形)。",
-                                        "雷之天災：場地 6 區青綠浮空 buff，可閃雷鳴吐息。",
-                                        "災祸預兆：3 征兆都打到 1 HP 才能阻止圖拉爾災祸即死。"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "Phase 1 - 火之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 (火) / Avalanche / Mountain Fire",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前火山小型模型 → 火屬性全屏 + 12s 火傷 DoT，場地變火山。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解火傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蛇行盤繞 / Slithering Slither",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss「聚風...」→ 環繞場地旋轉 → 環形 donut AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
-                                                                "tips":  [
-                                                                             "貼近 boss 站"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蛇行強襲 / Slithering Strike",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss「積蓄力量...」→ 抬爪 → 貼身圓 AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
-                                                                "tips":  [
-                                                                             "跑遠離 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "蛇行吐息 / Slithering Breath",
-                                                                "type":  "aoe",
-                                                                "description":  "Boss「嘴中匯聚魔力...」→ 張嘴 → 扇形 AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
-                                                                "tips":  [
-                                                                             "繞 boss 側面"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰爪 / Ice Talon",
-                                                                "type":  "tankbuster",
-                                                                "description":  "對 2 T 高傷圓 AoE + 15s 凍傷 DoT。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 拉開站位",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "解凍傷 + 補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸衝 / Calamity Charge",
-                                                                "type":  "stack",
-                                                                "description":  "場中央 2 人分擔高傷圓 → 對南側 3 圓 AoE + 擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "兩 T 站中央分擔",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "其他人預判擊退方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "地火噴發 / Eruption",
-                                                                "type":  "spread",
-                                                                "description":  "隨機 3 人為心圓 AoE 預兆 → 圓 AoE × 3 連發。",
-                                                                "tips":  [
-                                                                             "散開到不同位置"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 2 - 冰之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 (冰) / Avalanche",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前雪山模型 → 冰屬性全屏 + 12s 凍傷 DoT，場地變雪山。東/南邊阻擋，西/北可摔下。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解凍傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "結冰塵 / Snowflakes",
-                                                                "type":  "other",
-                                                                "description":  "全員 2s 冷卻，不移動 = 12s 凍結。",
-                                                                "tips":  [
-                                                                             "**持續移動**"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "北十字星 / North Star",
-                                                                "type":  "aoe",
-                                                                "description":  "場南雪山箭頭 → 直線 AoE + 擊退 + 受傷加重。",
-                                                                "tips":  [
-                                                                             "看箭頭預判方向"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "冰之災祸 + 立體魔法陣 / Iceglyph",
-                                                                "type":  "aoe",
-                                                                "description":  "蛇行系列後 2 立體魔法陣 → 八方直線 AoE + 12s 凍結。",
-                                                                "tips":  [
-                                                                             "走魔法陣間隙"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 3 - 雷之天災",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "擁有生命的天災 (雷) / Avalanche",
-                                                                "type":  "raidwide",
-                                                                "description":  "Boss 面前雷雲模型 → 雷屬性全屏 + 12s 感電 DoT，場地變雷雲。場地 3×4 格，6 塊青綠色區踩到獲浮空 buff。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "減傷 + 解感電",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "雷鳴吐息 / Stormcall",
-                                                                "type":  "aoe",
-                                                                "description":  "覆蓋全部場地的扇形 AoE + 受傷加重 + 麻痺。**浮空可閃**。",
-                                                                "tips":  [
-                                                                             "全員踩青綠浮空區規避"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "驟羽 / Sudden Downpour",
-                                                                "type":  "raidwide",
-                                                                "description":  "落下 4 次艷羽 → 全場 AoE。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災厄落雷 / Ruinous Bolt",
-                                                                "type":  "aoe",
-                                                                "description":  "對所有艷羽位置圓 AoE + 浮空玩家頭頂雷雲 → 對浮空者圓 AoE + 受傷加重。",
-                                                                "tips":  [
-                                                                             "**不浮空玩家**站艷羽位置外",
-                                                                             "浮空玩家拉外圍接雷"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "奧秘閃電 / Arcane Bolt",
-                                                                "type":  "aoe",
-                                                                "description":  "場西或東 5 立體魔法陣 → 直線 AoE + 麻痺。同一橫行不會 2 個。",
-                                                                "tips":  [
-                                                                             "找無魔法陣的行站"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 4 - 災祸預兆 (Enrage)",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "災祸預兆 / Doomsday",
-                                                                "type":  "other",
-                                                                "description":  "全屏 AoE + 場上生火/雷/冰之征兆 + 天災征兆積蓄槽。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 必須擊殺 3 征兆",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸之鳴 / Calamity\u0027s Cry",
-                                                                "type":  "stack",
-                                                                "description":  "點隨機玩家直線分擔。Boss +8s 傷害提高 buff。",
-                                                                "tips":  [
-                                                                             "全員疊接分擔"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "災祸之聲 / Calamity\u0027s Voice",
-                                                                "type":  "aoe",
-                                                                "description":  "出 4 或 3 扇形預兆 → 連發扇形。",
-                                                                "tips":  [
-                                                                             "閃扇形數量交替"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "圖拉爾災祸 / Tural Calamity",
-                                                                "type":  "raidwide",
-                                                                "description":  "全屏冰 → 8s 後雷 → 8s 後火，附加災祸之炎永久 DoT。積蓄槽 100 = 強制秒殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 推 3 征兆 + 全員減傷",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+  "id": "worqor_lar_dor",
+  "name": "豔翼蛇鳥殲滅戰",
+  "nameEn": "Worqor Lar Dor - Valigarmanda",
+  "expansion": "7.x 黃金遺產 (Dawntrail)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": 690,
+  "jobLevelSync": 100,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "蛇行盤繞/強襲/吐息：環形 / 圓 / 扇形，看 boss 文字提示判定。",
+    "冰爪：對 2T 高傷圓 AoE + 凍傷 dot。",
+    "災祸衝：場中央 2 人分擔圓 → 對南側 3 圓 AoE + 擊退。",
+    "三元素場景輪換：火 → 冰 → 雷。",
+    "災祸預兆：3 元素征兆 + 蓄積槽，槽 100 = 圖拉爾災祸即死秒殺。"
+  ],
+  "notes": "DT 7.0 MSQ Trial (Lv 100, ilvl 690)。Valigarmanda (豔翼蛇鳥) Normal。DT 第一個 MSQ trial。三元素天災蛇鳥，場景輪換火/冰/雷。Normal 版去除大部分 EX 的複雜 debuff 處理。",
+  "bosses": [
+    {
+      "name": "豔翼蛇鳥",
+      "nameEn": "Valigarmanda",
+      "mnemonic": [
+        "聚風 = 盤繞 (donut)；積蓄力量 = 強襲 (圓 AoE)；嘴中匯聚魔力 = 吐息 (扇形)。",
+        "雷之天災：場地 6 區青綠浮空 buff，可閃雷鳴吐息。",
+        "災祸預兆：3 征兆都打到 1 HP 才能阻止圖拉爾災祸即死。"
+      ],
+      "phases": [
+        {
+          "name": "Phase 1 - 火之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 (火) / Avalanche / Mountain Fire",
+              "type": "raidwide",
+              "description": "Boss 面前火山小型模型 → 火屬性全屏 + 12s 火傷 DoT，場地變火山。",
+              "tips": [
+                {
+                  "text": "減傷 + 解火傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "蛇行盤繞 / Slithering Slither",
+              "type": "aoe",
+              "description": "Boss「聚風...」→ 環繞場地旋轉 → 環形 donut AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
+              "tips": [
+                "貼近 boss 站"
+              ]
+            },
+            {
+              "name": "蛇行強襲 / Slithering Strike",
+              "type": "aoe",
+              "description": "Boss「積蓄力量...」→ 抬爪 → 貼身圓 AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
+              "tips": [
+                "跑遠離 boss"
+              ]
+            },
+            {
+              "name": "蛇行吐息 / Slithering Breath",
+              "type": "aoe",
+              "description": "Boss「嘴中匯聚魔力...」→ 張嘴 → 扇形 AoE + 15s 持續傷害 + 45s 輕度腦震盪。",
+              "tips": [
+                "繞 boss 側面"
+              ]
+            },
+            {
+              "name": "冰爪 / Ice Talon",
+              "type": "tankbuster",
+              "description": "對 2 T 高傷圓 AoE + 15s 凍傷 DoT。",
+              "tips": [
+                {
+                  "text": "兩 T 拉開站位",
+                  "role": "tank"
+                },
+                {
+                  "text": "解凍傷 + 補滿",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "災祸衝 / Calamity Charge",
+              "type": "stack",
+              "description": "場中央 2 人分擔高傷圓 → 對南側 3 圓 AoE + 擊退。",
+              "tips": [
+                {
+                  "text": "兩 T 站中央分擔",
+                  "role": "tank"
+                },
+                "其他人預判擊退方向"
+              ]
+            },
+            {
+              "name": "地火噴發 / Eruption",
+              "type": "spread",
+              "description": "隨機 3 人為心圓 AoE 預兆 → 圓 AoE × 3 連發。",
+              "tips": [
+                "散開到不同位置"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 2 - 冰之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 (冰) / Avalanche",
+              "type": "raidwide",
+              "description": "Boss 面前雪山模型 → 冰屬性全屏 + 12s 凍傷 DoT，場地變雪山。東/南邊阻擋，西/北可摔下。",
+              "tips": [
+                {
+                  "text": "減傷 + 解凍傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "結冰塵 / Snowflakes",
+              "type": "other",
+              "description": "全員 2s 冷卻，不移動 = 12s 凍結。",
+              "tips": [
+                "**持續移動**"
+              ]
+            },
+            {
+              "name": "北十字星 / North Star",
+              "type": "aoe",
+              "description": "場南雪山箭頭 → 直線 AoE + 擊退 + 受傷加重。",
+              "tips": [
+                "看箭頭預判方向"
+              ]
+            },
+            {
+              "name": "冰之災祸 + 立體魔法陣 / Iceglyph",
+              "type": "aoe",
+              "description": "蛇行系列後 2 立體魔法陣 → 八方直線 AoE + 12s 凍結。",
+              "tips": [
+                "走魔法陣間隙"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 3 - 雷之天災",
+          "mechanics": [
+            {
+              "name": "擁有生命的天災 (雷) / Avalanche",
+              "type": "raidwide",
+              "description": "Boss 面前雷雲模型 → 雷屬性全屏 + 12s 感電 DoT，場地變雷雲。場地 3×4 格，6 塊青綠色區踩到獲浮空 buff。",
+              "tips": [
+                {
+                  "text": "減傷 + 解感電",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "雷鳴吐息 / Stormcall",
+              "type": "aoe",
+              "description": "覆蓋全部場地的扇形 AoE + 受傷加重 + 麻痺。**浮空可閃**。",
+              "tips": [
+                "全員踩青綠浮空區規避"
+              ]
+            },
+            {
+              "name": "驟羽 / Sudden Downpour",
+              "type": "raidwide",
+              "description": "落下 4 次艷羽 → 全場 AoE。",
+              "tips": [
+                {
+                  "text": "全員減傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "災厄落雷 / Ruinous Bolt",
+              "type": "aoe",
+              "description": "對所有艷羽位置圓 AoE + 浮空玩家頭頂雷雲 → 對浮空者圓 AoE + 受傷加重。",
+              "tips": [
+                "**不浮空玩家**站艷羽位置外",
+                "浮空玩家拉外圍接雷"
+              ]
+            },
+            {
+              "name": "奧秘閃電 / Arcane Bolt",
+              "type": "aoe",
+              "description": "場西或東 5 立體魔法陣 → 直線 AoE + 麻痺。同一橫行不會 2 個。",
+              "tips": [
+                "找無魔法陣的行站"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 4 - 災祸預兆 (Enrage)",
+          "mechanics": [
+            {
+              "name": "災祸預兆 / Doomsday",
+              "type": "other",
+              "description": "全屏 AoE + 場上生火/雷/冰之征兆 + 天災征兆積蓄槽。",
+              "tips": [
+                {
+                  "text": "DPS 必須擊殺 3 征兆",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "災祸之鳴 / Calamity's Cry",
+              "type": "stack",
+              "description": "點隨機玩家直線分擔。Boss +8s 傷害提高 buff。",
+              "tips": [
+                "全員疊接分擔"
+              ]
+            },
+            {
+              "name": "災祸之聲 / Calamity's Voice",
+              "type": "aoe",
+              "description": "出 4 或 3 扇形預兆 → 連發扇形。",
+              "tips": [
+                "閃扇形數量交替"
+              ]
+            },
+            {
+              "name": "圖拉爾災祸 / Tural Calamity",
+              "type": "raidwide",
+              "description": "全屏冰 → 8s 後雷 → 8s 後火，附加災祸之炎永久 DoT。積蓄槽 100 = 強制秒殺。",
+              "tips": [
+                {
+                  "text": "DPS 推 3 征兆 + 全員減傷",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

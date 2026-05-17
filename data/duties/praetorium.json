@@ -1,246 +1,321 @@
 {
-    "id": "praetorium",
-    "name": "最終決戰天幕魔導城",
-    "nameEn": "The Praetorium",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "mainScenario": true,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Mark II Magitek Colossus 馬克 II 魔導機甲：青磷放射全屏 → 團補；試作魔導激光 α 四方向二連黃圓 → 走縫；試作魔導激光 β 點名 4 人圓 AoE → 散開；巨劍前 90° 順劈 → MT 朝外。",
-        "2）B2 Nero tol Scaeva 尼祿·托爾·斯卡艾瓦：神錘震碎 → MT 大傷；過載震碎 → 分攤 → 全員集合；神錘衝天 → 前方 120° AoE。",
-        "3）B2 啟動 → 啟動魔導兵器 Death Claw 死亡爪 → 隨機連線玩家，碰觸大範圍擊退 → 拉斷連線 / Surecast 抗。",
-        "4）B2 過載衝天 → boss 移到場邊發動 90° 超大範圍 AoE → 全員退到 boss 對側；過載迴環 → boss 移到中心 + 大範圍擊退 → 站場邊角避擊飛。",
-        "5）B3 Gaius van Baelsar 蓋烏斯·范·巴埃薩：恐怖戰爭全屏；恩惠終結場邊出現多個藍色劍氣 → 對前方直線 → 看劍氣方向走縫。",
-        "6）B3 無罪斬 → MT 死刑；從容不迫 → 分攤 → 全員集合；指引橫向三連步進圓 AoE → 跟著走縫；帝國之手 → 點名 4 人圓 → 散開。",
-        "7）B3 凝練劍氣（核心 DPS check）：boss 分身成 4 個蓋烏斯的幻影，本體不可選 + 場中央凝練劍氣。4 個幻影各釋放單體技能遺禍；同時場外藍色劍氣『恩惠終結』 + 步進圓 AoE『指引』連發。必須在 100 槽前秒掉 4 個幻影。",
-        "8）B3 我來，我見，我征服（VENI VIDI VICI）：clean phase 後 boss 全屏 AoE，傷害依『盖乌斯的剑气』累積（100 = 999999 團滅）→ 4 幻影秒掉控制累積。"
-    ],
-    "notes": "ARR 2.0 主線最終決戰副本（Lv 50，sync 50，patch 6.1 重做為 4 人 dungeon），位於北部薩納蘭天幕魔導城 The Praetorium。劇情上原 8 人副本，6.1 拆分為 4 人 dungeon（前段）+ Porta Decumana trial（後段 Ultima Weapon 戰）。Boss 依序為 Mark II Magitek Colossus 馬克 II 魔導機甲、Nero tol Scaeva 尼祿·托爾·斯卡艾瓦（Gaius 親信，技術派）、Gaius van Baelsar 蓋烏斯·范·巴埃薩（『黑狼』, Garlemald 帝國第十四軍團將軍）。",
-    "bosses": [
+  "id": "praetorium",
+  "name": "最終決戰天幕魔導城",
+  "nameEn": "The Praetorium",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "mainScenario": true,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Mark II Magitek Colossus 馬克 II 魔導機甲：青磷放射全屏 → 團補；試作魔導激光 α 四方向二連黃圓 → 走縫；試作魔導激光 β 點名 4 人圓 AoE → 散開；巨劍前 90° 順劈 → MT 朝外。",
+    "B2 Nero tol Scaeva 尼祿·托爾·斯卡艾瓦：神錘震碎 → MT 大傷；過載震碎 → 分攤 → 全員集合；神錘衝天 → 前方 120° AoE。",
+    "B2 啟動 → 啟動魔導兵器 Death Claw 死亡爪 → 隨機連線玩家，碰觸大範圍擊退 → 拉斷連線 / Surecast 抗。",
+    "B2 過載衝天 → boss 移到場邊發動 90° 超大範圍 AoE → 全員退到 boss 對側；過載迴環 → boss 移到中心 + 大範圍擊退 → 站場邊角避擊飛。",
+    "B3 Gaius van Baelsar 蓋烏斯·范·巴埃薩：恐怖戰爭全屏；恩惠終結場邊出現多個藍色劍氣 → 對前方直線 → 看劍氣方向走縫。",
+    "B3 無罪斬 → MT 死刑；從容不迫 → 分攤 → 全員集合；指引橫向三連步進圓 AoE → 跟著走縫；帝國之手 → 點名 4 人圓 → 散開。",
+    "B3 凝練劍氣（核心 DPS check）：boss 分身成 4 個蓋烏斯的幻影，本體不可選 + 場中央凝練劍氣。4 個幻影各釋放單體技能遺禍；同時場外藍色劍氣『恩惠終結』 + 步進圓 AoE『指引』連發。必須在 100 槽前秒掉 4 個幻影。",
+    "B3 我來，我見，我征服（VENI VIDI VICI）：clean phase 後 boss 全屏 AoE，傷害依『盖乌斯的剑气』累積（100 = 999999 團滅）→ 4 幻影秒掉控制累積。"
+  ],
+  "notes": "ARR 2.0 主線最終決戰副本（Lv 50，sync 50，patch 6.1 重做為 4 人 dungeon），位於北部薩納蘭天幕魔導城 The Praetorium。劇情上原 8 人副本，6.1 拆分為 4 人 dungeon（前段）+ Porta Decumana trial（後段 Ultima Weapon 戰）。Boss 依序為 Mark II Magitek Colossus 馬克 II 魔導機甲、Nero tol Scaeva 尼祿·托爾·斯卡艾瓦（Gaius 親信，技術派）、Gaius van Baelsar 蓋烏斯·范·巴埃薩（『黑狼』, Garlemald 帝國第十四軍團將軍）。",
+  "bosses": [
+    {
+      "name": "馬克 II 魔導機甲",
+      "nameEn": "Mark II Magitek Colossus",
+      "phases": [
         {
-            "name": "馬克 II 魔導機甲",
-            "nameEn": "Mark II Magitek Colossus",
-            "phases": [
+          "name": "主戰（試作魔導激光）",
+          "mechanics": [
+            {
+              "name": "Ceruleum Vent 青磷放射",
+              "type": "raidwide",
+              "description": "全屏 AoE；治療團補。",
+              "tips": [
                 {
-                    "name": "主戰（試作魔導激光）",
-                    "mechanics": [
-                        {
-                            "name": "Ceruleum Vent 青磷放射",
-                            "type": "raidwide",
-                            "description": "全屏 AoE；治療團補。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Prototype Magitek Laser α 試作魔導激光 α",
-                            "type": "aoe",
-                            "description": "以 boss 為中心向 4 個正方向釋放二連黃圓 AoE。看 boss 朝向 → 站對角位置走縫。",
-                            "tips": [
-                                {"text": "站對角縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Prototype Magitek Laser β 試作魔導激光 β",
-                            "type": "spread",
-                            "description": "點名 4 個玩家腳下圓 AoE。全員散開（不疊）。",
-                            "tips": [
-                                {"text": "全員散開", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Giant Sword 巨劍",
-                            "type": "cone",
-                            "description": "對 boss 面前 90° 順劈扇形 AoE；MT 朝場邊面外，非 T 站背 / 側。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "非 T 站背", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "團補",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "青磷放射 → 團補",
-                "試作魔導激光 α（四方二連黃圓）→ 站對角縫",
-                "試作魔導激光 β（4 人點名圓）→ 散開",
-                "巨劍（前 90°）→ MT 朝外"
-            ]
-        },
-        {
-            "name": "尼祿·托爾·斯卡艾瓦",
-            "nameEn": "Nero tol Scaeva",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Prototype Magitek Laser α 試作魔導激光 α",
+              "type": "aoe",
+              "description": "以 boss 為中心向 4 個正方向釋放二連黃圓 AoE。看 boss 朝向 → 站對角位置走縫。",
+              "tips": [
                 {
-                    "name": "主戰（神錘 + 死亡爪）",
-                    "mechanics": [
-                        {
-                            "name": "Hammer Crush 神錘震碎",
-                            "type": "tankbuster",
-                            "description": "對一仇玩家大傷害單體；MT 開減傷。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Overload Crush 過載震碎",
-                            "type": "stack",
-                            "description": "分攤型範圍傷害；全員集合到點名玩家位置分攤。",
-                            "tips": [
-                                {"text": "全員集合分攤", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Hammer Hike 神錘衝天",
-                            "type": "cone",
-                            "description": "正面 120° 範圍 AoE；MT 朝場邊面外，DPS 站側 / 背。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Activate 啟動 + Death Claw 死亡爪",
-                            "type": "mechanic",
-                            "description": "boss 讀條 Activate 啟動 → 啟動魔導兵器 Death Claw 死亡爪 add。爪子會隨機連線一名玩家，碰觸到玩家時將其大範圍擊退（飛出場外死亡）。被連線玩家立刻遠離爪子拉斷連線，或 Surecast 抗擊退。",
-                            "tips": [
-                                {"text": "被連線 → 立刻遠離爪", "role": "dps"},
-                                {"text": "Surecast 抗擊退", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Overload Hike 過載衝天",
-                            "type": "aoe",
-                            "description": "boss 移到場邊發動 90° 超大範圍 AoE。全員退到 boss 對側場邊。",
-                            "tips": [
-                                {"text": "全員退到對側", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Overload Carom 過載迴環",
-                            "type": "knockback",
-                            "description": "boss 移到場地中心 + 大範圍擊退；站場邊角不要被擊飛，或 Surecast 抗。",
-                            "tips": [
-                                {"text": "站場邊角", "role": "tank"},
-                                {"text": "Surecast 抗擊退", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "站對角縫",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "神錘震碎 → MT 大減傷",
-                "過載震碎（分攤）→ 全員集合",
-                "神錘衝天（前 120°）→ MT 朝外",
-                "啟動 + 死亡爪連線 → 拉斷 / Surecast",
-                "過載衝天（場邊 90°）→ 退對側",
-                "過載迴環（中心擊退）→ 站邊角 / Surecast"
-            ]
-        },
-        {
-            "name": "蓋烏斯·范·巴埃薩",
-            "nameEn": "Gaius van Baelsar",
-            "phases": [
+              ]
+            },
+            {
+              "name": "Prototype Magitek Laser β 試作魔導激光 β",
+              "type": "spread",
+              "description": "點名 4 個玩家腳下圓 AoE。全員散開（不疊）。",
+              "tips": [
                 {
-                    "name": "P1 100%-50% HP（基礎機制）",
-                    "mechanics": [
-                        {
-                            "name": "Terror Eye 恐怖戰爭",
-                            "type": "raidwide",
-                            "description": "全屏 AoE；治療團補。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Terminus Est 恩惠終結（劍氣 add）",
-                            "type": "aoe",
-                            "description": "場邊出現多個 Terminus Est 恩惠終結藍色劍氣 add → 對前方直線 AoE。看劍氣朝向走縫到場上無直線區。",
-                            "tips": [
-                                {"text": "看劍氣方向走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Innocence 無罪斬",
-                            "type": "tankbuster",
-                            "description": "對一仇 MT 大傷害；MT 開大減傷。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Composure 從容不迫",
-                            "type": "stack",
-                            "description": "分攤型範圍傷害；全員集合到點名玩家位置分攤。",
-                            "tips": [
-                                {"text": "全員集合分攤", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Phantom Order 幻象（蓋烏斯的幻影 add）",
-                            "type": "add",
-                            "description": "boss 在場邊召喚數個 Gaius's Phantom 蓋烏斯的幻影 add。普通階段為輔助 add，DPS 切目標清掉。",
-                            "tips": [
-                                {"text": "DPS 切目標清幻影", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Guidance 指引",
-                            "type": "aoe",
-                            "description": "橫向三連步進式圓形 AoE Guidance 指引。看第一個圓位置 → 站對側 → 圓炸後跟著走縫到後續位置。",
-                            "tips": [
-                                {"text": "跟著步進走縫", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Imperial Touch 帝國之手",
-                            "type": "spread",
-                            "description": "點名 4 個玩家圓 AoE；全員散開不疊。",
-                            "tips": [
-                                {"text": "全員散開", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "全員散開",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Giant Sword 巨劍",
+              "type": "cone",
+              "description": "對 boss 面前 90° 順劈扇形 AoE；MT 朝場邊面外，非 T 站背 / 側。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
                 },
                 {
-                    "name": "P2 < 50% HP（凝練劍氣 DPS check）",
-                    "mechanics": [
-                        {
-                            "name": "Sword Concentrate 凝練劍氣（核心 DPS check）",
-                            "type": "mechanic",
-                            "description": "boss 分身成 4 個 Gaius's Phantom 蓋烏斯的幻影。本體變為不可選中並在場中央『凝練劍氣』累積『蓋烏斯的劍氣』槽。4 個幻影各釋放單體技能 Aftermath 遺禍。同時場外出現藍色劍氣 Terminus Est 恩惠終結 + 步進式圓 AoE Guidance 指引。",
-                            "tips": [
-                                {"text": "DPS 立刻分頭秒 4 幻影", "role": "dps"},
-                                {"text": "T 用 AoE 拉穩幻影", "role": "tank"},
-                                {"text": "同時注意劍氣直線 + Guidance 圓位", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Veni Vidi Vici 我來，我見，我征服（依累積 dmg）",
-                            "type": "raidwide",
-                            "description": "4 幻影擊殺後 boss 在場中釋放全屏 AoE Veni Vidi Vici 我來，我見，我征服（拉丁語：來、見、征服）。傷害值視『蓋烏斯的劍氣』累積程度而定 → 劍氣達到 100 → 傷害 999,999（直接團滅）。必須在累積 100 前秒掉幻影中斷凝練。",
-                            "tips": [
-                                {"text": "秒掉 4 幻影越快 → 累積越少 → 傷害越低", "role": "dps"},
-                                {"text": "100 槽 → 團滅", "role": "healer"}
-                            ]
-                        }
-                    ]
+                  "text": "非 T 站背",
+                  "role": "dps"
                 }
-            ],
-            "mnemonic": [
-                "Terror Eye 恐怖戰爭 → 團補",
-                "Terminus Est 恩惠終結（場邊劍氣直線）→ 看朝向走縫",
-                "Innocence 無罪斬 → MT 大減傷",
-                "Composure 從容不迫（分攤）→ 全員集合",
-                "Guidance 指引（橫向 3 連步進圓）→ 跟著走縫",
-                "Imperial Touch 帝國之手 → 散開",
-                "凝練劍氣 → 4 幻影秒掉控制槽",
-                "Veni Vidi Vici → 槽滿 100 = 團滅 999K"
-            ]
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "青磷放射 → 團補",
+        "試作魔導激光 α（四方二連黃圓）→ 站對角縫",
+        "試作魔導激光 β（4 人點名圓）→ 散開",
+        "巨劍（前 90°）→ MT 朝外"
+      ]
+    },
+    {
+      "name": "尼祿·托爾·斯卡艾瓦",
+      "nameEn": "Nero tol Scaeva",
+      "phases": [
+        {
+          "name": "主戰（神錘 + 死亡爪）",
+          "mechanics": [
+            {
+              "name": "Hammer Crush 神錘震碎",
+              "type": "tankbuster",
+              "description": "對一仇玩家大傷害單體；MT 開減傷。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Overload Crush 過載震碎",
+              "type": "stack",
+              "description": "分攤型範圍傷害；全員集合到點名玩家位置分攤。",
+              "tips": [
+                {
+                  "text": "全員集合分攤",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Hammer Hike 神錘衝天",
+              "type": "cone",
+              "description": "正面 120° 範圍 AoE；MT 朝場邊面外，DPS 站側 / 背。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Activate 啟動 + Death Claw 死亡爪",
+              "type": "mechanic",
+              "description": "boss 讀條 Activate 啟動 → 啟動魔導兵器 Death Claw 死亡爪 add。爪子會隨機連線一名玩家，碰觸到玩家時將其大範圍擊退（飛出場外死亡）。被連線玩家立刻遠離爪子拉斷連線，或 Surecast 抗擊退。",
+              "tips": [
+                {
+                  "text": "被連線 → 立刻遠離爪",
+                  "role": "dps"
+                },
+                {
+                  "text": "Surecast 抗擊退",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Overload Hike 過載衝天",
+              "type": "aoe",
+              "description": "boss 移到場邊發動 90° 超大範圍 AoE。全員退到 boss 對側場邊。",
+              "tips": [
+                {
+                  "text": "全員退到對側",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Overload Carom 過載迴環",
+              "type": "knockback",
+              "description": "boss 移到場地中心 + 大範圍擊退；站場邊角不要被擊飛，或 Surecast 抗。",
+              "tips": [
+                {
+                  "text": "站場邊角",
+                  "role": "tank"
+                },
+                {
+                  "text": "Surecast 抗擊退",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "神錘震碎 → MT 大減傷",
+        "過載震碎（分攤）→ 全員集合",
+        "神錘衝天（前 120°）→ MT 朝外",
+        "啟動 + 死亡爪連線 → 拉斷 / Surecast",
+        "過載衝天（場邊 90°）→ 退對側",
+        "過載迴環（中心擊退）→ 站邊角 / Surecast"
+      ]
+    },
+    {
+      "name": "蓋烏斯·范·巴埃薩",
+      "nameEn": "Gaius van Baelsar",
+      "phases": [
+        {
+          "name": "P1 100%-50% HP（基礎機制）",
+          "mechanics": [
+            {
+              "name": "Terror Eye 恐怖戰爭",
+              "type": "raidwide",
+              "description": "全屏 AoE；治療團補。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Terminus Est 恩惠終結（劍氣 add）",
+              "type": "aoe",
+              "description": "場邊出現多個 Terminus Est 恩惠終結藍色劍氣 add → 對前方直線 AoE。看劍氣朝向走縫到場上無直線區。",
+              "tips": [
+                {
+                  "text": "看劍氣方向走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Innocence 無罪斬",
+              "type": "tankbuster",
+              "description": "對一仇 MT 大傷害；MT 開大減傷。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Composure 從容不迫",
+              "type": "stack",
+              "description": "分攤型範圍傷害；全員集合到點名玩家位置分攤。",
+              "tips": [
+                {
+                  "text": "全員集合分攤",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Phantom Order 幻象（蓋烏斯的幻影 add）",
+              "type": "add",
+              "description": "boss 在場邊召喚數個 Gaius's Phantom 蓋烏斯的幻影 add。普通階段為輔助 add，DPS 切目標清掉。",
+              "tips": [
+                {
+                  "text": "DPS 切目標清幻影",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Guidance 指引",
+              "type": "aoe",
+              "description": "橫向三連步進式圓形 AoE Guidance 指引。看第一個圓位置 → 站對側 → 圓炸後跟著走縫到後續位置。",
+              "tips": [
+                {
+                  "text": "跟著步進走縫",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Imperial Touch 帝國之手",
+              "type": "spread",
+              "description": "點名 4 個玩家圓 AoE；全員散開不疊。",
+              "tips": [
+                {
+                  "text": "全員散開",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 < 50% HP（凝練劍氣 DPS check）",
+          "mechanics": [
+            {
+              "name": "Sword Concentrate 凝練劍氣（核心 DPS check）",
+              "type": "mechanic",
+              "description": "boss 分身成 4 個 Gaius's Phantom 蓋烏斯的幻影。本體變為不可選中並在場中央『凝練劍氣』累積『蓋烏斯的劍氣』槽。4 個幻影各釋放單體技能 Aftermath 遺禍。同時場外出現藍色劍氣 Terminus Est 恩惠終結 + 步進式圓 AoE Guidance 指引。",
+              "tips": [
+                {
+                  "text": "DPS 立刻分頭秒 4 幻影",
+                  "role": "dps"
+                },
+                {
+                  "text": "T 用 AoE 拉穩幻影",
+                  "role": "tank"
+                },
+                {
+                  "text": "同時注意劍氣直線 + Guidance 圓位",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Veni Vidi Vici 我來，我見，我征服（依累積 dmg）",
+              "type": "raidwide",
+              "description": "4 幻影擊殺後 boss 在場中釋放全屏 AoE Veni Vidi Vici 我來，我見，我征服（拉丁語：來、見、征服）。傷害值視『蓋烏斯的劍氣』累積程度而定 → 劍氣達到 100 → 傷害 999,999（直接團滅）。必須在累積 100 前秒掉幻影中斷凝練。",
+              "tips": [
+                {
+                  "text": "秒掉 4 幻影越快 → 累積越少 → 傷害越低",
+                  "role": "dps"
+                },
+                {
+                  "text": "100 槽 → 團滅",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "Terror Eye 恐怖戰爭 → 團補",
+        "Terminus Est 恩惠終結（場邊劍氣直線）→ 看朝向走縫",
+        "Innocence 無罪斬 → MT 大減傷",
+        "Composure 從容不迫（分攤）→ 全員集合",
+        "Guidance 指引（橫向 3 連步進圓）→ 跟著走縫",
+        "Imperial Touch 帝國之手 → 散開",
+        "凝練劍氣 → 4 幻影秒掉控制槽",
+        "Veni Vidi Vici → 槽滿 100 = 團滅 999K"
+      ]
+    }
+  ]
 }

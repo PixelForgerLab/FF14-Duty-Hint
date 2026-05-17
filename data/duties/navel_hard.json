@@ -1,163 +1,220 @@
 {
-    "id": "navel_hard",
-    "name": "真 泰坦殲滅戰",
-    "nameEn": "The Navel (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）真 泰坦殲滅戰 5 階段：依血量切換機制循環，每階段加入新招。",
-        "2）Landslide 地裂前方直線 + 擊退 → 看 boss 朝向側身閃；被擊退飛出場邊『瞬死』！絕對優先閃避。",
-        "3）Geocrush 大地粉碎 boss 跳起後落場中 + 場邊紅圈 → 場地外環崩塌。對策：留紅圈內、貼紅線位 站好（吃低傷且不掉場外）。",
-        "4）Weight of the Land 大地之重 4 名玩家腳下圓 AoE → 散開避免重疊。",
-        "5）Tumult 怒震連續 7 次全屏 AoE → 治療連續團補。Rock Buster 岩石打擊單體 → MT 減傷。",
-        "6）Bomb Boulders 爆破岩石（P3）：場地多個炸彈依序爆炸 → 看出現順序走縫。",
-        "7）Rock Throw 岩石擲（P3-P4）：玩家腳下時鐘符號 → 數秒後被 Granite Gaol 花崗石牢困住無法動 → 其他玩家攻擊石牢解救（出來會有 Damage Down debuff 可 Esuna）。",
-        "8）Earthen Fury 大地之怒（P4 結束）：如果 Titan's Heart 泰坦之心未在 phase 結束前擊破 → 全員瞬死。心被擊破 → 中傷可接。",
-        "9）Mountain Buster 山岳擊（P5 心被擊破後）：前方扇形高傷 → MT 朝外大減傷。"
-    ],
-    "notes": "ARR 2.0 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』泰坦蠻神 Hard 版，於外拉諾西亞泰坦肚臍（Navel）。Boss 為 Titan 真泰坦『岩塊之父』。劇情上 Kobold 信徒在 Ultima Weapon 戰結束後召喚 Titan。本戰首次引入 Granite Gaol 花崗石牢『破籠救人』機制（後續 EX、Ultimate 都會延續），與 Geocrush 大地粉碎場地縮小機制。Mountain Buster 山岳擊為 BLU 藍法可學技能。",
-    "bosses": [
+  "id": "navel_hard",
+  "name": "真 泰坦殲滅戰",
+  "nameEn": "The Navel (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "真 泰坦殲滅戰 5 階段：依血量切換機制循環，每階段加入新招。",
+    "Landslide 地裂前方直線 + 擊退 → 看 boss 朝向側身閃；被擊退飛出場邊『瞬死』！絕對優先閃避。",
+    "Geocrush 大地粉碎 boss 跳起後落場中 + 場邊紅圈 → 場地外環崩塌。對策：留紅圈內、貼紅線位 站好（吃低傷且不掉場外）。",
+    "Weight of the Land 大地之重 4 名玩家腳下圓 AoE → 散開避免重疊。",
+    "Tumult 怒震連續 7 次全屏 AoE → 治療連續團補。Rock Buster 岩石打擊單體 → MT 減傷。",
+    "Bomb Boulders 爆破岩石（P3）：場地多個炸彈依序爆炸 → 看出現順序走縫。",
+    "Rock Throw 岩石擲（P3-P4）：玩家腳下時鐘符號 → 數秒後被 Granite Gaol 花崗石牢困住無法動 → 其他玩家攻擊石牢解救（出來會有 Damage Down debuff 可 Esuna）。",
+    "Earthen Fury 大地之怒（P4 結束）：如果 Titan's Heart 泰坦之心未在 phase 結束前擊破 → 全員瞬死。心被擊破 → 中傷可接。",
+    "Mountain Buster 山岳擊（P5 心被擊破後）：前方扇形高傷 → MT 朝外大減傷。"
+  ],
+  "notes": "ARR 2.0 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』泰坦蠻神 Hard 版，於外拉諾西亞泰坦肚臍（Navel）。Boss 為 Titan 真泰坦『岩塊之父』。劇情上 Kobold 信徒在 Ultima Weapon 戰結束後召喚 Titan。本戰首次引入 Granite Gaol 花崗石牢『破籠救人』機制（後續 EX、Ultimate 都會延續），與 Geocrush 大地粉碎場地縮小機制。Mountain Buster 山岳擊為 BLU 藍法可學技能。",
+  "bosses": [
+    {
+      "name": "真 泰坦",
+      "nameEn": "Titan",
+      "phases": [
         {
-            "name": "真 泰坦",
-            "nameEn": "Titan",
-            "phases": [
+          "name": "P1 100%-80% HP（基礎）",
+          "mechanics": [
+            {
+              "name": "Rock Buster 岩石打擊",
+              "type": "tankbuster",
+              "description": "對一仇 MT 中傷單體攻擊；MT 開減傷。",
+              "tips": [
                 {
-                    "name": "P1 100%-80% HP（基礎）",
-                    "mechanics": [
-                        {
-                            "name": "Rock Buster 岩石打擊",
-                            "type": "tankbuster",
-                            "description": "對一仇 MT 中傷單體攻擊；MT 開減傷。",
-                            "tips": [
-                                {"text": "MT 減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Landslide 地裂（致命直線 + 擊退）",
-                            "type": "aoe",
-                            "description": "對一仇 MT 方向前方直線 AoE 中傷 + 擊退所有命中目標。重點：被擊退飛出場邊『瞬死』！MT 把 boss 朝場邊面外（場外方向）讓擊退方向不會把人推下；其他玩家絕對閃避優先於接傷。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "全員預判閃避（被推下=死）", "role": "dps"},
-                                {"text": "Surecast 抗擊退（無法救場可考慮）", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Tumult 怒震（7 連發全屏）",
-                            "type": "raidwide",
-                            "description": "踏腳全屏 AoE，依 boss HP 連續使用最多 7 次。治療連續團補。",
-                            "tips": [
-                                {"text": "團補 7 連發", "role": "healer"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P2 80%-60% HP（加入大地之重）",
-                    "mechanics": [
-                        {
-                            "name": "Weight of the Land 大地之重",
-                            "type": "spread",
-                            "description": "4 名隨機玩家腳下出現圓形沙池預兆，數秒後爆炸高傷。被點玩家立刻散開避免疊。",
-                            "tips": [
-                                {"text": "看自己圓走出", "role": "dps"},
-                                {"text": "散開不疊", "role": "tank"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 60%-40% HP（爆破岩石 + 石牢）",
-                    "mechanics": [
-                        {
-                            "name": "Geocrush 大地粉碎",
-                            "type": "aoe",
-                            "description": "Titan 跳起到空中 → 場地外圈出現紅色巨大圓形預兆 → 數秒後 Titan 砸下場地中央，傷害依玩家位置（越近中央越高）。同時場邊外環會崩塌！對策：站紅圈內、但貼紅線邊（吃低傷且不掉場外）。掉出場外舊版瞬死，新版可 Raise 復活但時間損失。",
-                            "tips": [
-                                {"text": "貼紅線站（最低傷 + 安全）", "role": "tank"},
-                                {"text": "MT 看走位提前移動", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Bomb Boulders 爆破岩石",
-                            "type": "aoe",
-                            "description": "場地中央與 8 角依次落下多個 Bomb Boulder 爆破岩石。落地後可被選中但 ilvl sync 下無法打掉。看出現順序 → 依序爆炸 Cascade 塌方傷害 + Explosion 爆炸傷害。看出現順序走縫避免被連鎖炸到。",
-                            "tips": [
-                                {"text": "看炸彈出現順序走縫", "role": "dps"},
-                                {"text": "ilvl 同步下打不掉", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Rock Throw 岩石擲 + Granite Gaol 花崗石牢",
-                            "type": "mechanic",
-                            "description": "隨機玩家腳下出現時鐘符號 → 數秒後被 Granite Gaol 花崗石牢困住無法行動/攻擊。其他玩家必須攻擊石牢打破解救隊友。如果石牢不被擊破，被困玩家無法閃避其他機制可能死。出來後玩家獲得可清除的 Damage Down 受傷增加 debuff。",
-                            "tips": [
-                                {"text": "DPS 立刻切目標破石牢", "role": "dps"},
-                                {"text": "Esuna 清 Damage Down", "role": "healer"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P4 40%-30% HP（泰坦之心 DPS check）",
-                    "mechanics": [
-                        {
-                            "name": "Titan's Heart 泰坦之心（DPS check）",
-                            "type": "add",
-                            "description": "Titan 顯現出『心』可被攻擊（HP 條獨立）。必須在 P4 結束前打掉 Heart，否則 P4 末 Earthen Fury 大地之怒會強制全員瞬死。組合機制：Rock Throw → Landslide → Weight of the Land → Tumult → Rock Throw → Landslide → Weight of the Land → Earthen Fury。",
-                            "tips": [
-                                {"text": "DPS 全力集火 Heart", "role": "dps"},
-                                {"text": "T/治療輔助 + 維持機制走位", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Earthen Fury 大地之怒（P4 結束依 Heart）",
-                            "type": "raidwide",
-                            "description": "P4 結束時觸發。Heart 未擊破 → 全員瞬死團滅。Heart 擊破 → 中傷可接（治療大團補）+ 進入 P5。",
-                            "tips": [
-                                {"text": "心擊破 → 全員減傷 + 大團補", "role": "healer"},
-                                {"text": "心未擊破 → 全員瞬死", "role": "tank"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P5 < 30% HP（爆發 + Mountain Buster）",
-                    "mechanics": [
-                        {
-                            "name": "Mountain Buster 山岳擊",
-                            "type": "tankbuster",
-                            "description": "對一仇 MT 前方扇形高傷攻擊（BLU 藍法可學）；MT 朝外開大減傷 + 治療大補。",
-                            "tips": [
-                                {"text": "MT 朝外大減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "P5 機制循環",
-                            "type": "mechanic",
-                            "description": "Mountain Buster → Tumult → Weight of the Land → Bomb Boulders + Landslide → Mountain Buster → Weight of the Land → Rock Throw → Landslide → 循環。機制密集需注意走位。",
-                            "tips": [
-                                {"text": "持續閃避 + DPS 爆發", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "MT 減傷",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "Landslide 地裂（致命直線 + 擊退）→ 場外瞬死，閃避優先",
-                "Tumult 怒震 7 連 → 團補",
-                "Weight of the Land 大地之重 4 圓 → 散開",
-                "Geocrush 大地粉碎 → 貼紅線站",
-                "Bomb Boulders 爆破岩石 → 看順序走縫",
-                "Rock Throw + Granite Gaol 石牢 → 破籠救人",
-                "P4 Titan's Heart → DPS check（未破 = 全員瞬死）",
-                "P5 Mountain Buster 山岳擊（前扇）→ MT 大減傷"
-            ]
+              ]
+            },
+            {
+              "name": "Landslide 地裂（致命直線 + 擊退）",
+              "type": "aoe",
+              "description": "對一仇 MT 方向前方直線 AoE 中傷 + 擊退所有命中目標。重點：被擊退飛出場邊『瞬死』！MT 把 boss 朝場邊面外（場外方向）讓擊退方向不會把人推下；其他玩家絕對閃避優先於接傷。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "全員預判閃避（被推下=死）",
+                  "role": "dps"
+                },
+                {
+                  "text": "Surecast 抗擊退（無法救場可考慮）",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Tumult 怒震（7 連發全屏）",
+              "type": "raidwide",
+              "description": "踏腳全屏 AoE，依 boss HP 連續使用最多 7 次。治療連續團補。",
+              "tips": [
+                {
+                  "text": "團補 7 連發",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 80%-60% HP（加入大地之重）",
+          "mechanics": [
+            {
+              "name": "Weight of the Land 大地之重",
+              "type": "spread",
+              "description": "4 名隨機玩家腳下出現圓形沙池預兆，數秒後爆炸高傷。被點玩家立刻散開避免疊。",
+              "tips": [
+                {
+                  "text": "看自己圓走出",
+                  "role": "dps"
+                },
+                {
+                  "text": "散開不疊",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 60%-40% HP（爆破岩石 + 石牢）",
+          "mechanics": [
+            {
+              "name": "Geocrush 大地粉碎",
+              "type": "aoe",
+              "description": "Titan 跳起到空中 → 場地外圈出現紅色巨大圓形預兆 → 數秒後 Titan 砸下場地中央，傷害依玩家位置（越近中央越高）。同時場邊外環會崩塌！對策：站紅圈內、但貼紅線邊（吃低傷且不掉場外）。掉出場外舊版瞬死，新版可 Raise 復活但時間損失。",
+              "tips": [
+                {
+                  "text": "貼紅線站（最低傷 + 安全）",
+                  "role": "tank"
+                },
+                {
+                  "text": "MT 看走位提前移動",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Bomb Boulders 爆破岩石",
+              "type": "aoe",
+              "description": "場地中央與 8 角依次落下多個 Bomb Boulder 爆破岩石。落地後可被選中但 ilvl sync 下無法打掉。看出現順序 → 依序爆炸 Cascade 塌方傷害 + Explosion 爆炸傷害。看出現順序走縫避免被連鎖炸到。",
+              "tips": [
+                {
+                  "text": "看炸彈出現順序走縫",
+                  "role": "dps"
+                },
+                {
+                  "text": "ilvl 同步下打不掉",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Rock Throw 岩石擲 + Granite Gaol 花崗石牢",
+              "type": "mechanic",
+              "description": "隨機玩家腳下出現時鐘符號 → 數秒後被 Granite Gaol 花崗石牢困住無法行動/攻擊。其他玩家必須攻擊石牢打破解救隊友。如果石牢不被擊破，被困玩家無法閃避其他機制可能死。出來後玩家獲得可清除的 Damage Down 受傷增加 debuff。",
+              "tips": [
+                {
+                  "text": "DPS 立刻切目標破石牢",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清 Damage Down",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P4 40%-30% HP（泰坦之心 DPS check）",
+          "mechanics": [
+            {
+              "name": "Titan's Heart 泰坦之心（DPS check）",
+              "type": "add",
+              "description": "Titan 顯現出『心』可被攻擊（HP 條獨立）。必須在 P4 結束前打掉 Heart，否則 P4 末 Earthen Fury 大地之怒會強制全員瞬死。組合機制：Rock Throw → Landslide → Weight of the Land → Tumult → Rock Throw → Landslide → Weight of the Land → Earthen Fury。",
+              "tips": [
+                {
+                  "text": "DPS 全力集火 Heart",
+                  "role": "dps"
+                },
+                {
+                  "text": "T/治療輔助 + 維持機制走位",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Earthen Fury 大地之怒（P4 結束依 Heart）",
+              "type": "raidwide",
+              "description": "P4 結束時觸發。Heart 未擊破 → 全員瞬死團滅。Heart 擊破 → 中傷可接（治療大團補）+ 進入 P5。",
+              "tips": [
+                {
+                  "text": "心擊破 → 全員減傷 + 大團補",
+                  "role": "healer"
+                },
+                {
+                  "text": "心未擊破 → 全員瞬死",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P5 < 30% HP（爆發 + Mountain Buster）",
+          "mechanics": [
+            {
+              "name": "Mountain Buster 山岳擊",
+              "type": "tankbuster",
+              "description": "對一仇 MT 前方扇形高傷攻擊（BLU 藍法可學）；MT 朝外開大減傷 + 治療大補。",
+              "tips": [
+                {
+                  "text": "MT 朝外大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "P5 機制循環",
+              "type": "mechanic",
+              "description": "Mountain Buster → Tumult → Weight of the Land → Bomb Boulders + Landslide → Mountain Buster → Weight of the Land → Rock Throw → Landslide → 循環。機制密集需注意走位。",
+              "tips": [
+                {
+                  "text": "持續閃避 + DPS 爆發",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Landslide 地裂（致命直線 + 擊退）→ 場外瞬死，閃避優先",
+        "Tumult 怒震 7 連 → 團補",
+        "Weight of the Land 大地之重 4 圓 → 散開",
+        "Geocrush 大地粉碎 → 貼紅線站",
+        "Bomb Boulders 爆破岩石 → 看順序走縫",
+        "Rock Throw + Granite Gaol 石牢 → 破籠救人",
+        "P4 Titan's Heart → DPS check（未破 = 全員瞬死）",
+        "P5 Mountain Buster 山岳擊（前扇）→ MT 大減傷"
+      ]
+    }
+  ]
 }

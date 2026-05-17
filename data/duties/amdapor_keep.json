@@ -1,371 +1,371 @@
 {
-    "id":  "amdapor_keep",
-    "name":  "邪教駐地無限城古堡",
-    "nameEn":  "Amdapor Keep",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "dungeon",
-    "playerCount":  4,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）B1 奪神魔 Psycheflayer：先打迷狂祭司至 65%（鎖 1 血）→ 召喚奪神魔 → 主戰；流水/虛空暴雷/精神瓦解/潰瘍 全部打斷。",
-                     "2）B2 惡魔牆 Demon Wall：液化（中⇄側）反向走 → 擊退時站中央；牆會前進，DPS 競賽。",
-                     "3）B3 阿難塔波嘉 Anantaboga：前扇/後扇別站；天災降臨躲 4 座石像背後；黑暗農奴速殺。"
-                 ],
-    "notes":  "ARR 2.0 副本（Lv 50），高階迷宮輪盤。場地內有 4 座黑暗農奴石像，Boss 依序為 Psycheflayer 奪神魔、Demon Wall 惡魔牆、Anantaboga 阿難塔波嘉。B3 戰需用石像背後躲視線。",
-    "bosses":  [
-                   {
-                       "name":  "奪神魔",
-                       "nameEn":  "Psycheflayer",
-                       "phases":  [
-                                      {
-                                          "name":  "Phase 1：迷狂祭司 Lunatic Priest（鎖 1 血召喚）",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "閃雷 Lightning",
-                                                                "type":  "tankbuster",
-                                                                "description":  "迷狂祭司對第一仇恨目標（坦克）使用單體傷害攻擊；T 維持仇恨並用一般減傷補刀治療。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 維持仇恨並開小減傷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "虛空爆炎 Void Fire",
-                                                                "type":  "aoe",
-                                                                "description":  "迷狂祭司對隨機目標釋放圓形 AoE，沒有範圍提示。被點名者主動拉開隊友避免疊傷，治療注意團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點名遠離隊友",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "預備團補",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "召喚妖異 Summon Voidsent",
-                                                                "type":  "mechanic",
-                                                                "description":  "迷狂祭司血量 65% 後走回場中吟唱「沉眠於黑暗中的傀儡之王，響應我的呼喚吧！」召喚出真正的 BOSS 奪神魔。祭司會鎖 1 血不會被擊倒，無法跳過 phase。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 停手等待吟唱完成 → 切換到奪神魔",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "Phase 2：奪神魔本體（打斷大會 + 石偶處理）",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "流水 Water",
-                                                                "type":  "interrupt",
-                                                                "description":  "奪神魔對第一仇恨吟唱單體傷害；可打斷類技能。任何眩暈、Interject、Head Graze 都能打斷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "看到 cast bar 立刻打斷",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "虛空暴雷 Void Thunder",
-                                                                "type":  "interrupt",
-                                                                "description":  "奪神魔對第一仇恨吟唱圓形 AoE；可打斷類技能。沒打斷 T 會受到大傷害，且附近隊友被波及。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 不可離開以便輸出打斷",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "精神瓦解 Mind Melt",
-                                                                "type":  "interrupt",
-                                                                "description":  "奪神魔對全場吟唱大範圍 AoE；可打斷類技能。沒打斷會造成 raid-wide 大傷害。優先級最高，看到吟唱條全員嘗試打斷。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員預備打斷技；沒打斷需團補 + 減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "潰瘍 Canker",
-                                                                "type":  "dispel",
-                                                                "description":  "奪神魔對隨機目標吟唱，附加「病弱 Disease」debuff（治療減半）；可打斷。沒打斷則用 Esuna／淨化 清除 Debuff。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "打斷失敗則 Esuna 清病弱",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "石偶復活機制（Stone Marionette adds）",
-                                                                "type":  "add",
-                                                                "description":  "場上若沒有石偶，奪神魔會連線死亡石偶碎片並復活它們，附帶台詞「起舞吧，我的傀儡⋯⋯永遠地跳下去！」。左側石偶使用『岩石崩潰』（前方直線 AoE），右側石偶使用『破魔震』（全場 AoE）。需在它們動作前優先擊殺。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 拉穩雙石偶，留意位置",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "DPS 切目標：石偶 → 奪神魔",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "岩石崩潰 Rockslide",
-                                                                "type":  "aoe",
-                                                                "description":  "場地『左側』石偶對第一仇恨前方釋放直線範圍 AoE；T 將石偶面向場邊或無人方向。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 把左側石偶面向場邊",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "破魔震 Obliterate",
-                                                                "type":  "raidwide",
-                                                                "description":  "場地『右側』石偶對全場釋放 AoE；可視為 add 必殺技，優先在右側石偶吟唱前擊殺它，或用團補/減傷扛過。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 集火右側石偶速殺",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "團補 + 全員小減傷",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "史前石偶 Megalith Marionette / 平原震裂 Plaincracker",
-                                                                "type":  "aoe",
-                                                                "description":  "奪神魔血量低於 55% 時連線場地前方大碎石復活『史前石偶』，台詞「我可愛的傀儡啊⋯⋯死亡之舞！」。史前石偶受傷會快速回血（無法擊殺），沿固定路徑行進並週期性釋放『平原震裂』周身大圓 AoE。要點：忽略史前石偶不打它，將奪神魔拉到右側遠離行進路徑，看到周身圓圈擴張就拉開距離。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 把奪神魔拉到房間右側燈籠旁、貼牆",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "看到史前石偶周圍圓圈 → 立刻拉開距離",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "P1：先打迷狂祭司至 65%（鎖 1 血）→ 召喚奪神魔",
-                                        "P2 打斷四連：流水 / 虛空暴雷 / 精神瓦解 / 潰瘍",
-                                        "石偶（左線右場）→ 立刻處理",
-                                        "55% 史前石偶 → 不打，把 boss 拉場邊",
-                                        "看到史前石偶周身圓圈 → 拉開距離"
-                                    ]
-                   },
-                   {
-                       "name":  "惡魔牆",
-                       "nameEn":  "Demon Wall",
-                       "phases":  [
-                                      {
-                                          "name":  "DPS 競賽（牆會前進，第二輪後場後有虛空淤泥）",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "謀殺洞 Murder Hole",
-                                                                "type":  "raidwide",
-                                                                "description":  "對隨機目標使用單體傷害遠程攻擊；保持治療即可，無需特別走位。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "持續 GCD 治療",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "液化（中間）Liquefy (Middle)",
-                                                                "type":  "aoe",
-                                                                "description":  "BOSS 對前方中間直線範圍釋放 AoE，地面有黑色特效提示。附加『加重 Heavy』Debuff（移動減速）。看到中央黑色條紋立即走到兩側避開。",
-                                                                "tips":  [
-                                                                             "看到中央黑色條 → 立刻走兩側"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "液化（兩側）Liquefy (Sides)",
-                                                                "type":  "aoe",
-                                                                "description":  "BOSS 對前方兩側直線範圍釋放 AoE，地面有黑色特效提示。附加『減速 Slow』Debuff。看到兩側黑色條紋立即跑到中央。",
-                                                                "tips":  [
-                                                                             "看到兩側黑色條 → 立刻走中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "擊退 Repel",
-                                                                "type":  "knockback",
-                                                                "description":  "BOSS 擊退所有玩家並向前移動一段距離；被推下場邊即死。固定順序：液化 → 液化 → 擊退 循環。可用 Surecast/Arm\u0027s Length 抗擊退。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "Repel 前站中央；開 Surecast 抗擊退",
-                                                                                 "role":  "healer"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "T 用 Arm\u0027s Length",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "虛空淤泥 Void Mire（場後地形）",
-                                                                "type":  "mechanic",
-                                                                "description":  "第二次循環後場地後方會出現『虛空淤泥』，玩家進入會附加『猛毒』DoT。當 BOSS 前進到虛空淤泥前則停止前進——這是策略性救命機制，可用來爭取輸出時間。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員避免踩到後方淤泥",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "BOSS 到淤泥前會停 → 此時集中爆發",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "DPS 競賽（時間限制）",
-                                                                "type":  "mechanic",
-                                                                "description":  "Demon Wall 持續前進，若 DPS 不足會被牆推下平台團滅。需保持高輸出，必要時藥水 + 爆發。場地左右兩側也可跌落，注意走位避免被擊退推出。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 維持仇恨並輸出",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "DPS 全程開爆發/藥水",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "中央條 → 走兩側（加重）",
-                                        "兩側條 → 走中央（減速）",
-                                        "順序：液化 → 液化 → 擊退",
-                                        "擊退前站中央 + Surecast",
-                                        "第二循環後場後淤泥可擋 BOSS"
-                                    ]
-                   },
-                   {
-                       "name":  "阿難塔波嘉",
-                       "nameEn":  "Anantaboga",
-                       "phases":  [
-                                      {
-                                          "name":  "主戰（場地 4 座石像）",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "詭異視線 The Look",
-                                                                "type":  "cone",
-                                                                "description":  "對第一仇恨前方扇形 AoE，沒有範圍提示。T 將 boss 面向場邊或無人方向，其他人站側後。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "T 把 boss 面對牆",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "尾部打擊 Tail Drive",
-                                                                "type":  "cone",
-                                                                "description":  "對背後扇形 AoE，並附加『打傷 Concussion』DoT。所有人都不能站 boss 屁股，包括近戰；站側面為安全位。",
-                                                                "tips":  [
-                                                                             "近戰站 boss 兩側（flank）"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "腐爛吐息 Rotten Breath",
-                                                                "type":  "cone",
-                                                                "description":  "對第一仇恨前方扇形 AoE，附加『病弱 Disease』Debuff（治療減半）。T 朝外承接，治療用 Esuna 清病弱。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "中標者用 Esuna 清病弱",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "天災降臨 Imminent Catastrophe",
-                                                                "type":  "raidwide",
-                                                                "description":  "場中央出現巨大紫紅球體，對除了石像背後外的全場釋放大傷害 AoE。必須躲到 4 座石像中任意一座背後切斷視線。同時會喚醒一座石像變成『黑暗農奴』add。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "全員衝到任一石像背後（包含 T）",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "躲後立即補血",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "黑暗農奴 Dark Helot / 恐怖眼 Terror Eye",
-                                                                "type":  "add",
-                                                                "description":  "被喚醒的石像化為『黑暗農奴』add，對隨機玩家使用『恐怖眼』圓形 AoE。一段時間後會自加『傷害提高』buff，需儘速擊殺。被擊敗後不會再變回石像。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 立即切目標秒殺黑暗農奴",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "中『恐怖眼』者拉到空地",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "黑暗新星 Dark Nova / 疫病雲 Plaguecloud",
-                                                                "type":  "spread",
-                                                                "description":  "阿難塔波嘉血量低於 80% 後，定期連線一名玩家並在該玩家位置召喚『黑暗新星』。黑暗新星會持續釋放『疫病雲』周身大範圍 AoE 且沒有預兆。被點名者必須走到場邊角落以免阻擋走位。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "被點名 → 立刻走場角放置",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "全員遠離黑暗新星 ≥ 10y",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "疫病雲 Plaguecloud",
-                                                                "type":  "aoe",
-                                                                "description":  "黑暗新星對自身周圍釋放圓形大範圍 AoE，沒有範圍提示。場上有黑暗新星時所有人需主動拉開距離。",
-                                                                "tips":  [
-                                                                             "看到黑暗新星 → 主動避開"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ],
-                       "mnemonic":  [
-                                        "詭異視線/腐爛吐息（前扇）→ T 面外",
-                                        "尾部打擊（後扇）→ 全員站側",
-                                        "天災降臨 → 全員躲石像背後",
-                                        "黑暗農奴 → 速秒、避免吃 buff",
-                                        "黑暗新星（80%↓）→ 被點走場角"
-                                    ]
-                   }
-               ]
+  "id": "amdapor_keep",
+  "name": "邪教駐地無限城古堡",
+  "nameEn": "Amdapor Keep",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 奪神魔 Psycheflayer：先打迷狂祭司至 65%（鎖 1 血）→ 召喚奪神魔 → 主戰；流水/虛空暴雷/精神瓦解/潰瘍 全部打斷。",
+    "B2 惡魔牆 Demon Wall：液化（中⇄側）反向走 → 擊退時站中央；牆會前進，DPS 競賽。",
+    "B3 阿難塔波嘉 Anantaboga：前扇/後扇別站；天災降臨躲 4 座石像背後；黑暗農奴速殺。"
+  ],
+  "notes": "ARR 2.0 副本（Lv 50），高階迷宮輪盤。場地內有 4 座黑暗農奴石像，Boss 依序為 Psycheflayer 奪神魔、Demon Wall 惡魔牆、Anantaboga 阿難塔波嘉。B3 戰需用石像背後躲視線。",
+  "bosses": [
+    {
+      "name": "奪神魔",
+      "nameEn": "Psycheflayer",
+      "phases": [
+        {
+          "name": "Phase 1：迷狂祭司 Lunatic Priest（鎖 1 血召喚）",
+          "mechanics": [
+            {
+              "name": "閃雷 Lightning",
+              "type": "tankbuster",
+              "description": "迷狂祭司對第一仇恨目標（坦克）使用單體傷害攻擊；T 維持仇恨並用一般減傷補刀治療。",
+              "tips": [
+                {
+                  "text": "T 維持仇恨並開小減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "虛空爆炎 Void Fire",
+              "type": "aoe",
+              "description": "迷狂祭司對隨機目標釋放圓形 AoE，沒有範圍提示。被點名者主動拉開隊友避免疊傷，治療注意團補。",
+              "tips": [
+                {
+                  "text": "被點名遠離隊友",
+                  "role": "dps"
+                },
+                {
+                  "text": "預備團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "召喚妖異 Summon Voidsent",
+              "type": "mechanic",
+              "description": "迷狂祭司血量 65% 後走回場中吟唱「沉眠於黑暗中的傀儡之王，響應我的呼喚吧！」召喚出真正的 BOSS 奪神魔。祭司會鎖 1 血不會被擊倒，無法跳過 phase。",
+              "tips": [
+                {
+                  "text": "DPS 停手等待吟唱完成 → 切換到奪神魔",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phase 2：奪神魔本體（打斷大會 + 石偶處理）",
+          "mechanics": [
+            {
+              "name": "流水 Water",
+              "type": "interrupt",
+              "description": "奪神魔對第一仇恨吟唱單體傷害；可打斷類技能。任何眩暈、Interject、Head Graze 都能打斷。",
+              "tips": [
+                {
+                  "text": "看到 cast bar 立刻打斷",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "虛空暴雷 Void Thunder",
+              "type": "interrupt",
+              "description": "奪神魔對第一仇恨吟唱圓形 AoE；可打斷類技能。沒打斷 T 會受到大傷害，且附近隊友被波及。",
+              "tips": [
+                {
+                  "text": "T 不可離開以便輸出打斷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "精神瓦解 Mind Melt",
+              "type": "interrupt",
+              "description": "奪神魔對全場吟唱大範圍 AoE；可打斷類技能。沒打斷會造成 raid-wide 大傷害。優先級最高，看到吟唱條全員嘗試打斷。",
+              "tips": [
+                {
+                  "text": "全員預備打斷技；沒打斷需團補 + 減傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "潰瘍 Canker",
+              "type": "dispel",
+              "description": "奪神魔對隨機目標吟唱，附加「病弱 Disease」debuff（治療減半）；可打斷。沒打斷則用 Esuna／淨化 清除 Debuff。",
+              "tips": [
+                {
+                  "text": "打斷失敗則 Esuna 清病弱",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "石偶復活機制（Stone Marionette adds）",
+              "type": "add",
+              "description": "場上若沒有石偶，奪神魔會連線死亡石偶碎片並復活它們，附帶台詞「起舞吧，我的傀儡⋯⋯永遠地跳下去！」。左側石偶使用『岩石崩潰』（前方直線 AoE），右側石偶使用『破魔震』（全場 AoE）。需在它們動作前優先擊殺。",
+              "tips": [
+                {
+                  "text": "T 拉穩雙石偶，留意位置",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 切目標：石偶 → 奪神魔",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "岩石崩潰 Rockslide",
+              "type": "aoe",
+              "description": "場地『左側』石偶對第一仇恨前方釋放直線範圍 AoE；T 將石偶面向場邊或無人方向。",
+              "tips": [
+                {
+                  "text": "T 把左側石偶面向場邊",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "破魔震 Obliterate",
+              "type": "raidwide",
+              "description": "場地『右側』石偶對全場釋放 AoE；可視為 add 必殺技，優先在右側石偶吟唱前擊殺它，或用團補/減傷扛過。",
+              "tips": [
+                {
+                  "text": "DPS 集火右側石偶速殺",
+                  "role": "dps"
+                },
+                {
+                  "text": "團補 + 全員小減傷",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "史前石偶 Megalith Marionette / 平原震裂 Plaincracker",
+              "type": "aoe",
+              "description": "奪神魔血量低於 55% 時連線場地前方大碎石復活『史前石偶』，台詞「我可愛的傀儡啊⋯⋯死亡之舞！」。史前石偶受傷會快速回血（無法擊殺），沿固定路徑行進並週期性釋放『平原震裂』周身大圓 AoE。要點：忽略史前石偶不打它，將奪神魔拉到右側遠離行進路徑，看到周身圓圈擴張就拉開距離。",
+              "tips": [
+                {
+                  "text": "T 把奪神魔拉到房間右側燈籠旁、貼牆",
+                  "role": "tank"
+                },
+                {
+                  "text": "看到史前石偶周圍圓圈 → 立刻拉開距離",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "P1：先打迷狂祭司至 65%（鎖 1 血）→ 召喚奪神魔",
+        "P2 打斷四連：流水 / 虛空暴雷 / 精神瓦解 / 潰瘍",
+        "石偶（左線右場）→ 立刻處理",
+        "55% 史前石偶 → 不打，把 boss 拉場邊",
+        "看到史前石偶周身圓圈 → 拉開距離"
+      ]
+    },
+    {
+      "name": "惡魔牆",
+      "nameEn": "Demon Wall",
+      "phases": [
+        {
+          "name": "DPS 競賽（牆會前進，第二輪後場後有虛空淤泥）",
+          "mechanics": [
+            {
+              "name": "謀殺洞 Murder Hole",
+              "type": "raidwide",
+              "description": "對隨機目標使用單體傷害遠程攻擊；保持治療即可，無需特別走位。",
+              "tips": [
+                {
+                  "text": "持續 GCD 治療",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "液化（中間）Liquefy (Middle)",
+              "type": "aoe",
+              "description": "BOSS 對前方中間直線範圍釋放 AoE，地面有黑色特效提示。附加『加重 Heavy』Debuff（移動減速）。看到中央黑色條紋立即走到兩側避開。",
+              "tips": [
+                "看到中央黑色條 → 立刻走兩側"
+              ]
+            },
+            {
+              "name": "液化（兩側）Liquefy (Sides)",
+              "type": "aoe",
+              "description": "BOSS 對前方兩側直線範圍釋放 AoE，地面有黑色特效提示。附加『減速 Slow』Debuff。看到兩側黑色條紋立即跑到中央。",
+              "tips": [
+                "看到兩側黑色條 → 立刻走中央"
+              ]
+            },
+            {
+              "name": "擊退 Repel",
+              "type": "knockback",
+              "description": "BOSS 擊退所有玩家並向前移動一段距離；被推下場邊即死。固定順序：液化 → 液化 → 擊退 循環。可用 Surecast/Arm's Length 抗擊退。",
+              "tips": [
+                {
+                  "text": "Repel 前站中央；開 Surecast 抗擊退",
+                  "role": "healer"
+                },
+                {
+                  "text": "T 用 Arm's Length",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "虛空淤泥 Void Mire（場後地形）",
+              "type": "mechanic",
+              "description": "第二次循環後場地後方會出現『虛空淤泥』，玩家進入會附加『猛毒』DoT。當 BOSS 前進到虛空淤泥前則停止前進——這是策略性救命機制，可用來爭取輸出時間。",
+              "tips": [
+                {
+                  "text": "全員避免踩到後方淤泥",
+                  "role": "dps"
+                },
+                {
+                  "text": "BOSS 到淤泥前會停 → 此時集中爆發",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "DPS 競賽（時間限制）",
+              "type": "mechanic",
+              "description": "Demon Wall 持續前進，若 DPS 不足會被牆推下平台團滅。需保持高輸出，必要時藥水 + 爆發。場地左右兩側也可跌落，注意走位避免被擊退推出。",
+              "tips": [
+                {
+                  "text": "T 維持仇恨並輸出",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 全程開爆發/藥水",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "中央條 → 走兩側（加重）",
+        "兩側條 → 走中央（減速）",
+        "順序：液化 → 液化 → 擊退",
+        "擊退前站中央 + Surecast",
+        "第二循環後場後淤泥可擋 BOSS"
+      ]
+    },
+    {
+      "name": "阿難塔波嘉",
+      "nameEn": "Anantaboga",
+      "phases": [
+        {
+          "name": "主戰（場地 4 座石像）",
+          "mechanics": [
+            {
+              "name": "詭異視線 The Look",
+              "type": "cone",
+              "description": "對第一仇恨前方扇形 AoE，沒有範圍提示。T 將 boss 面向場邊或無人方向，其他人站側後。",
+              "tips": [
+                {
+                  "text": "T 把 boss 面對牆",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "尾部打擊 Tail Drive",
+              "type": "cone",
+              "description": "對背後扇形 AoE，並附加『打傷 Concussion』DoT。所有人都不能站 boss 屁股，包括近戰；站側面為安全位。",
+              "tips": [
+                "近戰站 boss 兩側（flank）"
+              ]
+            },
+            {
+              "name": "腐爛吐息 Rotten Breath",
+              "type": "cone",
+              "description": "對第一仇恨前方扇形 AoE，附加『病弱 Disease』Debuff（治療減半）。T 朝外承接，治療用 Esuna 清病弱。",
+              "tips": [
+                {
+                  "text": "中標者用 Esuna 清病弱",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "天災降臨 Imminent Catastrophe",
+              "type": "raidwide",
+              "description": "場中央出現巨大紫紅球體，對除了石像背後外的全場釋放大傷害 AoE。必須躲到 4 座石像中任意一座背後切斷視線。同時會喚醒一座石像變成『黑暗農奴』add。",
+              "tips": [
+                {
+                  "text": "全員衝到任一石像背後（包含 T）",
+                  "role": "tank"
+                },
+                {
+                  "text": "躲後立即補血",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "黑暗農奴 Dark Helot / 恐怖眼 Terror Eye",
+              "type": "add",
+              "description": "被喚醒的石像化為『黑暗農奴』add，對隨機玩家使用『恐怖眼』圓形 AoE。一段時間後會自加『傷害提高』buff，需儘速擊殺。被擊敗後不會再變回石像。",
+              "tips": [
+                {
+                  "text": "DPS 立即切目標秒殺黑暗農奴",
+                  "role": "dps"
+                },
+                {
+                  "text": "中『恐怖眼』者拉到空地",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "黑暗新星 Dark Nova / 疫病雲 Plaguecloud",
+              "type": "spread",
+              "description": "阿難塔波嘉血量低於 80% 後，定期連線一名玩家並在該玩家位置召喚『黑暗新星』。黑暗新星會持續釋放『疫病雲』周身大範圍 AoE 且沒有預兆。被點名者必須走到場邊角落以免阻擋走位。",
+              "tips": [
+                {
+                  "text": "被點名 → 立刻走場角放置",
+                  "role": "dps"
+                },
+                {
+                  "text": "全員遠離黑暗新星 ≥ 10y",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "疫病雲 Plaguecloud",
+              "type": "aoe",
+              "description": "黑暗新星對自身周圍釋放圓形大範圍 AoE，沒有範圍提示。場上有黑暗新星時所有人需主動拉開距離。",
+              "tips": [
+                "看到黑暗新星 → 主動避開"
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "詭異視線/腐爛吐息（前扇）→ T 面外",
+        "尾部打擊（後扇）→ 全員站側",
+        "天災降臨 → 全員躲石像背後",
+        "黑暗農奴 → 速秒、避免吃 buff",
+        "黑暗新星（80%↓）→ 被點走場角"
+      ]
+    }
+  ]
 }

@@ -1,130 +1,172 @@
 {
-    "id": "whorleater_hard",
-    "name": "真 利維坦殲滅戰",
-    "nameEn": "The Whorleater (Hard)",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "trial",
-    "playerCount": 8,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）真 利維坦殲滅戰：戰場為雙體船平台，boss 從水中出沒攻擊。P1 短暫頭部 10% HP 後下水。",
-        "2）P2 boss 頭尾都露出（共 HP）：頭部 Veil of the Whorl 水神的面紗反射遠程物理；尾巴 Mantle of the Whorl 水神的披風反射魔法 → DRK 暗黑鋒會被反彈！",
-        "3）Body Slam 猛撞：boss 用上半身撞擊平台一端 → 全員向被撞方向滑行平台 1/2 長度。Spinning Dive 旋轉下潛：boss 從一端縱向掠過 + 直線傷 + 擊退。下潛後常接猛撞。",
-        "4）50% HP Maelstrom Bubble 游渦泡沫：場上 4 角出現 4 個泡沫 → 不打會吸收平台元素能量。打破時造成全場傷害 → 集火優先。",
-        "5）40% HP 大海嘯：boss 下水施放全屏極高傷 → 立刻去開啟平台南端的開關（多人前去點防手滑），隨後 boss 猛撞或下潛繼續。",
-        "6）P3 boss 再次露出 + 形態技能同 P2 + Wavetooth Sahagin 波齒魚人 add 釋放讀條很快的恐懼圈與全屏恐懼。"
-    ],
-    "notes": "ARR 2.2 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』利維坦蠻神 Hard 版，於利維亞桑海域『弒鯨號』雙體船平台。Boss 為 Leviathan 利維坦『海神蠻神』。本戰特色：① 戰場為兩段細長平台（被擊退易掉海）；② 頭尾共血但各自反射不同攻擊（頭反遠程物理、尾反魔法）；③ 40% 大海嘯全屏需要開啟平台開關防團滅。",
-    "bosses": [
+  "id": "whorleater_hard",
+  "name": "真 利維坦殲滅戰",
+  "nameEn": "The Whorleater (Hard)",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "trial",
+  "playerCount": 8,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "真 利維坦殲滅戰：戰場為雙體船平台，boss 從水中出沒攻擊。P1 短暫頭部 10% HP 後下水。",
+    "P2 boss 頭尾都露出（共 HP）：頭部 Veil of the Whorl 水神的面紗反射遠程物理；尾巴 Mantle of the Whorl 水神的披風反射魔法 → DRK 暗黑鋒會被反彈！",
+    "Body Slam 猛撞：boss 用上半身撞擊平台一端 → 全員向被撞方向滑行平台 1/2 長度。Spinning Dive 旋轉下潛：boss 從一端縱向掠過 + 直線傷 + 擊退。下潛後常接猛撞。",
+    "50% HP Maelstrom Bubble 游渦泡沫：場上 4 角出現 4 個泡沫 → 不打會吸收平台元素能量。打破時造成全場傷害 → 集火優先。",
+    "40% HP 大海嘯：boss 下水施放全屏極高傷 → 立刻去開啟平台南端的開關（多人前去點防手滑），隨後 boss 猛撞或下潛繼續。",
+    "P3 boss 再次露出 + 形態技能同 P2 + Wavetooth Sahagin 波齒魚人 add 釋放讀條很快的恐懼圈與全屏恐懼。"
+  ],
+  "notes": "ARR 2.2 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』利維坦蠻神 Hard 版，於利維亞桑海域『弒鯨號』雙體船平台。Boss 為 Leviathan 利維坦『海神蠻神』。本戰特色：① 戰場為兩段細長平台（被擊退易掉海）；② 頭尾共血但各自反射不同攻擊（頭反遠程物理、尾反魔法）；③ 40% 大海嘯全屏需要開啟平台開關防團滅。",
+  "bosses": [
+    {
+      "name": "真 利維坦",
+      "nameEn": "Leviathan",
+      "phases": [
         {
-            "name": "真 利維坦",
-            "nameEn": "Leviathan",
-            "phases": [
+          "name": "P1 100%-90% HP（短暫，只有頭部）",
+          "mechanics": [
+            {
+              "name": "Attack 普攻（短暫階段）",
+              "type": "mechanic",
+              "description": "boss 只有上半身從北端露出水面，僅普通攻擊 MT。打掉約 10% HP 後 boss 下水進入 P2。",
+              "tips": [
                 {
-                    "name": "P1 100%-90% HP（短暫，只有頭部）",
-                    "mechanics": [
-                        {
-                            "name": "Attack 普攻（短暫階段）",
-                            "type": "mechanic",
-                            "description": "boss 只有上半身從北端露出水面，僅普通攻擊 MT。打掉約 10% HP 後 boss 下水進入 P2。",
-                            "tips": [
-                                {"text": "DPS 集火打到 90%", "role": "dps"},
-                                {"text": "MT 接攻擊", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "DPS 集火打到 90%",
+                  "role": "dps"
                 },
                 {
-                    "name": "P2 90%-40% HP（頭尾分坦 + 反射）",
-                    "mechanics": [
-                        {
-                            "name": "Veil of the Whorl 水神的面紗（頭反射遠程物理）",
-                            "type": "mechanic",
-                            "description": "Leviathan 頭部自帶 Veil of the Whorl 水神的面紗 buff，反射遠程物理攻擊造成的傷害。BRD/MCH/DNC 等遠程物理職業避免直接攻擊頭部 → 攻擊尾巴。",
-                            "tips": [
-                                {"text": "BRD/MCH/DNC 攻擊尾巴", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Mantle of the Whorl 水神的披風（尾反射魔法）",
-                            "type": "mechanic",
-                            "description": "Leviathan 尾巴自帶 Mantle of the Whorl 水神的披風 buff，反射魔法攻擊造成的傷害。重要：DRK 暗黑騎士的 Dark Edge 暗黑鋒會被反彈！法系與 DRK 攻擊頭部。",
-                            "tips": [
-                                {"text": "法系與 DRK 攻擊頭部", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Body Slam 猛撞",
-                            "type": "knockback",
-                            "description": "boss 用上半身撞擊平台一端（南或北）→ 所有玩家向被撞擊的一端滑行很長距離（約平台長度 1/2）。可能將玩家擠到平台邊緣。看 boss 朝向 + Surecast 抗。",
-                            "tips": [
-                                {"text": "Surecast 抗滑行", "role": "tank"},
-                                {"text": "事先站到對端", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Spinning Dive 旋轉下潛",
-                            "type": "aoe",
-                            "description": "boss 從平台一端（南或北）出現並縱向掠過平台 → 直線範圍內所有目標造成傷害 + 擊退。下潛後往往會馬上接一次猛撞。",
-                            "tips": [
-                                {"text": "看 boss 入水位 → 站側面", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Maelstrom Bubble 游渦泡沫（50% HP 4 角）",
-                            "type": "add",
-                            "description": "boss HP ~50% 時台詞『讓你們嚐嚐大海的苦澀』→ 場上 4 角出現 4 個 Maelstrom Bubble 游渦泡沫。每隔一段時間泡沫會吸收元素轉換裝置的能量（不打掉 = 平台動力流失）。被打破時造成全場傷害。集火優先處理。",
-                            "tips": [
-                                {"text": "DPS 集火 4 泡沫", "role": "dps"},
-                                {"text": "破時治療團補", "role": "healer"}
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "P3 < 40% HP（大海嘯 + P3 機制）",
-                    "mechanics": [
-                        {
-                            "name": "Tidal Wave 大海嘯（40% HP 轉場）",
-                            "type": "raidwide",
-                            "description": "boss HP 約 40% 時下水施放 Tidal Wave 大海嘯全屏極高傷害技能。對策：迅速去開啟平台南端的開關（多名隊員前去點防手滑等意外）→ 護盾啟動可大幅降低傷害。隨後 boss 還會施放猛撞或旋轉下潛，看水柱躲好。",
-                            "tips": [
-                                {"text": "全員去點南端開關", "role": "dps"},
-                                {"text": "T/healer 隊伍同步去點", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Wavetooth Sahagin 波齒魚人（add）",
-                            "type": "add",
-                            "description": "P3 會 spawn 單獨的法系 add Wavetooth Sahagin 波齒魚人。釋放讀條很快的恐懼圈與全屏恐懼。DPS 切目標秒掉或打斷讀條。",
-                            "tips": [
-                                {"text": "DPS 速秒波齒魚人", "role": "dps"},
-                                {"text": "可打斷恐懼讀條", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "P3 重複 P2 機制",
-                            "type": "mechanic",
-                            "description": "P3 利維坦形態與技能和 P2 相同（猛撞 / 旋轉下潛 / 反射 buff）。",
-                            "tips": [
-                                {"text": "持續分頭尾", "role": "tank"}
-                            ]
-                        }
-                    ]
+                  "text": "MT 接攻擊",
+                  "role": "tank"
                 }
-            ],
-            "mnemonic": [
-                "P1 短：頭打到 90% → P2",
-                "P2 頭尾共血 → 遠程物理打尾、法系/DRK 打頭",
-                "猛撞 → 滑行 1/2 平台 → Surecast",
-                "旋轉下潛 → 縱向直線 + 擊退 → 站側",
-                "50% 4 角游渦泡沫 → 集火",
-                "40% 大海嘯 → 全員去南端開關防團滅",
-                "P3 + 波齒魚人 → 速秒避恐懼"
-            ]
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P2 90%-40% HP（頭尾分坦 + 反射）",
+          "mechanics": [
+            {
+              "name": "Veil of the Whorl 水神的面紗（頭反射遠程物理）",
+              "type": "mechanic",
+              "description": "Leviathan 頭部自帶 Veil of the Whorl 水神的面紗 buff，反射遠程物理攻擊造成的傷害。BRD/MCH/DNC 等遠程物理職業避免直接攻擊頭部 → 攻擊尾巴。",
+              "tips": [
+                {
+                  "text": "BRD/MCH/DNC 攻擊尾巴",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Mantle of the Whorl 水神的披風（尾反射魔法）",
+              "type": "mechanic",
+              "description": "Leviathan 尾巴自帶 Mantle of the Whorl 水神的披風 buff，反射魔法攻擊造成的傷害。重要：DRK 暗黑騎士的 Dark Edge 暗黑鋒會被反彈！法系與 DRK 攻擊頭部。",
+              "tips": [
+                {
+                  "text": "法系與 DRK 攻擊頭部",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Body Slam 猛撞",
+              "type": "knockback",
+              "description": "boss 用上半身撞擊平台一端（南或北）→ 所有玩家向被撞擊的一端滑行很長距離（約平台長度 1/2）。可能將玩家擠到平台邊緣。看 boss 朝向 + Surecast 抗。",
+              "tips": [
+                {
+                  "text": "Surecast 抗滑行",
+                  "role": "tank"
+                },
+                {
+                  "text": "事先站到對端",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Spinning Dive 旋轉下潛",
+              "type": "aoe",
+              "description": "boss 從平台一端（南或北）出現並縱向掠過平台 → 直線範圍內所有目標造成傷害 + 擊退。下潛後往往會馬上接一次猛撞。",
+              "tips": [
+                {
+                  "text": "看 boss 入水位 → 站側面",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Maelstrom Bubble 游渦泡沫（50% HP 4 角）",
+              "type": "add",
+              "description": "boss HP ~50% 時台詞『讓你們嚐嚐大海的苦澀』→ 場上 4 角出現 4 個 Maelstrom Bubble 游渦泡沫。每隔一段時間泡沫會吸收元素轉換裝置的能量（不打掉 = 平台動力流失）。被打破時造成全場傷害。集火優先處理。",
+              "tips": [
+                {
+                  "text": "DPS 集火 4 泡沫",
+                  "role": "dps"
+                },
+                {
+                  "text": "破時治療團補",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "P3 < 40% HP（大海嘯 + P3 機制）",
+          "mechanics": [
+            {
+              "name": "Tidal Wave 大海嘯（40% HP 轉場）",
+              "type": "raidwide",
+              "description": "boss HP 約 40% 時下水施放 Tidal Wave 大海嘯全屏極高傷害技能。對策：迅速去開啟平台南端的開關（多名隊員前去點防手滑等意外）→ 護盾啟動可大幅降低傷害。隨後 boss 還會施放猛撞或旋轉下潛，看水柱躲好。",
+              "tips": [
+                {
+                  "text": "全員去點南端開關",
+                  "role": "dps"
+                },
+                {
+                  "text": "T/healer 隊伍同步去點",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Wavetooth Sahagin 波齒魚人（add）",
+              "type": "add",
+              "description": "P3 會 spawn 單獨的法系 add Wavetooth Sahagin 波齒魚人。釋放讀條很快的恐懼圈與全屏恐懼。DPS 切目標秒掉或打斷讀條。",
+              "tips": [
+                {
+                  "text": "DPS 速秒波齒魚人",
+                  "role": "dps"
+                },
+                {
+                  "text": "可打斷恐懼讀條",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "P3 重複 P2 機制",
+              "type": "mechanic",
+              "description": "P3 利維坦形態與技能和 P2 相同（猛撞 / 旋轉下潛 / 反射 buff）。",
+              "tips": [
+                {
+                  "text": "持續分頭尾",
+                  "role": "tank"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "P1 短：頭打到 90% → P2",
+        "P2 頭尾共血 → 遠程物理打尾、法系/DRK 打頭",
+        "猛撞 → 滑行 1/2 平台 → Surecast",
+        "旋轉下潛 → 縱向直線 + 擊退 → 站側",
+        "50% 4 角游渦泡沫 → 集火",
+        "40% 大海嘯 → 全員去南端開關防團滅",
+        "P3 + 波齒魚人 → 速秒避恐懼"
+      ]
+    }
+  ]
 }

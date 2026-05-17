@@ -1,231 +1,330 @@
 {
-    "id": "lost_city_of_amdapor",
-    "name": "腐壞遺跡無限城市街古跡",
-    "nameEn": "The Lost City of Amdapor",
-    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type": "dungeon",
-    "playerCount": 4,
-    "iLvlSync": null,
-    "jobLevelSync": 50,
-    "highEnd": false,
-    "quality": "excellent",
-    "mnemonic": [
-        "1）B1 Decaying Gourmand 腐壞貪吃鬼：Devour 貪婪大口連線 + 眩暈 + 拉到身前 + 捕食 → spawn Voracious Maw 貪婪大口 add → 必須在 add 內擊敗解放隊友，否則 Vomit 嘔吐強制擊殺被吞玩家。",
-        "2）B1 Moldy Phlegm 霉痰：對目標區域 AoE + 持續傷害毒池（猛毒 + 免疫低下 debuff），避免踩入毒池；Spore Cloud 孢子雲全屏 + 中毒 → 治療團補 + Esuna 中毒。",
-        "3）B2 Arioch 阿里奧克：boss 滯空不可選 + 場上 Ranch Wamoura 馴養瓦魔蛾 → 擊敗時對前方釋放 Scale Flakes 妖鱗粉 → 玩家身上有妖鱗粉時 Arioch 才會俯衝可被攻擊。",
-        "4）B2 蛾子需要分批擊殺（每次留一隻供 boss 上線）；妖鱗粉 stack 高者會被優先攻擊，T 主動疊 stack 拉仇恨。",
-        "5）B2 Plague Strike 病疫打擊：後方 90° 扇形 + 自身擴大毒池（站場邊避毒池）；Corrupted Cloudburst 腐蝕突風 正面直線 + 免疫低下；Eerie Soundwave 怪音波全屏 → Sounwave 風暴扇形（無預兆）。",
-        "6）B3 Diabolos 迪亞波羅斯：場上 4 對共 8 扇異界門扉（4 種圖案，順序隨機）；Ruinous Omen 破滅預兆 12 秒讀條全屏 + 3 層虛無詛咒。",
-        "7）B3 Ruinous Omen 應對：在讀條結束前打開圖案相同的兩扇門 → 進入虛無界通路（避傷害 + 只獲 1 層詛咒）。打開錯圖門 → 1 層詛咒。非讀條時打開門 → 4 層詛咒。",
-        "8）B3 Graviball 重力球：點名隨機玩家 + 在該位置生成重力球 → 重力球每隔一段時間以自身為中心圓 AoE + 加重 → 把球放遠離隊伍與門扉。",
-        "9）B3 Ultimate Terror 究極恐懼 自身環形 → 進 boss 近圈；Nightmare 噩夢全屏 + Sleep 睡眠 debuff → 受到任何傷害就解除。"
-    ],
-    "notes": "ARR 2.2 副本（Lv 50，sync 50，ilvl 110），位於黑衣森林南部林區無限城市街古跡（Amdapor）。劇情上五紀元時期魔法之國亞瑪烏羅提因虛無界惡魔 Diabolos 而毀滅，第六靈災後封印鬆動 boss 復甦。Boss 依序為 Decaying Gourmand 腐壞貪吃鬼、Arioch 阿里奧克、Diabolos 迪亞波羅斯（虛無界主）。Diabolos 後來會在 The Void Ark 副本中再次出現。",
-    "bosses": [
+  "id": "lost_city_of_amdapor",
+  "name": "腐壞遺跡無限城市街古跡",
+  "nameEn": "The Lost City of Amdapor",
+  "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+  "type": "dungeon",
+  "playerCount": 4,
+  "iLvlSync": null,
+  "jobLevelSync": 50,
+  "highEnd": false,
+  "quality": "excellent",
+  "mnemonic": [
+    "B1 Decaying Gourmand 腐壞貪吃鬼：Devour 貪婪大口連線 + 眩暈 + 拉到身前 + 捕食 → spawn Voracious Maw 貪婪大口 add → 必須在 add 內擊敗解放隊友，否則 Vomit 嘔吐強制擊殺被吞玩家。",
+    "B1 Moldy Phlegm 霉痰：對目標區域 AoE + 持續傷害毒池（猛毒 + 免疫低下 debuff），避免踩入毒池；Spore Cloud 孢子雲全屏 + 中毒 → 治療團補 + Esuna 中毒。",
+    "B2 Arioch 阿里奧克：boss 滯空不可選 + 場上 Ranch Wamoura 馴養瓦魔蛾 → 擊敗時對前方釋放 Scale Flakes 妖鱗粉 → 玩家身上有妖鱗粉時 Arioch 才會俯衝可被攻擊。",
+    "B2 蛾子需要分批擊殺（每次留一隻供 boss 上線）；妖鱗粉 stack 高者會被優先攻擊，T 主動疊 stack 拉仇恨。",
+    "B2 Plague Strike 病疫打擊：後方 90° 扇形 + 自身擴大毒池（站場邊避毒池）；Corrupted Cloudburst 腐蝕突風 正面直線 + 免疫低下；Eerie Soundwave 怪音波全屏 → Sounwave 風暴扇形（無預兆）。",
+    "B3 Diabolos 迪亞波羅斯：場上 4 對共 8 扇異界門扉（4 種圖案，順序隨機）；Ruinous Omen 破滅預兆 12 秒讀條全屏 + 3 層虛無詛咒。",
+    "B3 Ruinous Omen 應對：在讀條結束前打開圖案相同的兩扇門 → 進入虛無界通路（避傷害 + 只獲 1 層詛咒）。打開錯圖門 → 1 層詛咒。非讀條時打開門 → 4 層詛咒。",
+    "B3 Graviball 重力球：點名隨機玩家 + 在該位置生成重力球 → 重力球每隔一段時間以自身為中心圓 AoE + 加重 → 把球放遠離隊伍與門扉。",
+    "B3 Ultimate Terror 究極恐懼 自身環形 → 進 boss 近圈；Nightmare 噩夢全屏 + Sleep 睡眠 debuff → 受到任何傷害就解除。"
+  ],
+  "notes": "ARR 2.2 副本（Lv 50，sync 50，ilvl 110），位於黑衣森林南部林區無限城市街古跡（Amdapor）。劇情上五紀元時期魔法之國亞瑪烏羅提因虛無界惡魔 Diabolos 而毀滅，第六靈災後封印鬆動 boss 復甦。Boss 依序為 Decaying Gourmand 腐壞貪吃鬼、Arioch 阿里奧克、Diabolos 迪亞波羅斯（虛無界主）。Diabolos 後來會在 The Void Ark 副本中再次出現。",
+  "bosses": [
+    {
+      "name": "腐壞貪吃鬼",
+      "nameEn": "Decaying Gourmand",
+      "phases": [
         {
-            "name": "腐壞貪吃鬼",
-            "nameEn": "Decaying Gourmand",
-            "phases": [
+          "name": "主戰（貪婪大口 + 毒池）",
+          "mechanics": [
+            {
+              "name": "Devour 貪婪大口（吞噬機制）",
+              "type": "mechanic",
+              "description": "boss 選擇隨機目標連線並施加 Prey 獵物 debuff → 將目標 Stun 眩暈 + 拉到身前 + 施加 Devoured 捕食。然後 boss 自身上 Heavy 沉重，並在身上 spawn Voracious Maw 貪婪大口 add。一段時間後若 add 未被擊破 → 強制使用 Vomit 嘔吐擊殺被捕食玩家。",
+              "tips": [
                 {
-                    "name": "主戰（貪婪大口 + 毒池）",
-                    "mechanics": [
-                        {
-                            "name": "Devour 貪婪大口（吞噬機制）",
-                            "type": "mechanic",
-                            "description": "boss 選擇隨機目標連線並施加 Prey 獵物 debuff → 將目標 Stun 眩暈 + 拉到身前 + 施加 Devoured 捕食。然後 boss 自身上 Heavy 沉重，並在身上 spawn Voracious Maw 貪婪大口 add。一段時間後若 add 未被擊破 → 強制使用 Vomit 嘔吐擊殺被捕食玩家。",
-                            "tips": [
-                                {"text": "看到連線 → 立刻切目標", "role": "dps"},
-                                {"text": "Voracious Maw add 必須及時擊敗", "role": "dps"},
-                                {"text": "治療補被吞玩家", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Knockdown 擊倒",
-                            "type": "cone",
-                            "description": "讀條後對 boss 正面扇形造成傷害 + 小幅度擊退。MT 朝場邊面外，DPS 站背。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "DPS 站背", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Moldy Phlegm 霉痰",
-                            "type": "aoe",
-                            "description": "讀條後對目標區域 AoE + 留下持續傷害區域。踩入毒池會被附加 Pollen 猛毒（DoT）與 Reduced Immunity 免疫低下。被點走出 + 全員避開毒池。",
-                            "tips": [
-                                {"text": "看圓走出", "role": "dps"},
-                                {"text": "全員避開毒池", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Spore Cloud 孢子雲",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 可清除的 Poison 中毒 stack；治療團補 + Esuna 清中毒。",
-                            "tips": [
-                                {"text": "團補", "role": "healer"},
-                                {"text": "Esuna 清中毒", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Decaying Sneeze 腐壞噴嚏",
-                            "type": "tankbuster",
-                            "description": "對隨機目標單體高傷攻擊；MT 開減傷或治療大補。",
-                            "tips": [
-                                {"text": "看單體傷害補位", "role": "healer"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "Devour 貪婪大口 → 切目標秒 Voracious Maw add 解救隊友",
-                "Knockdown 擊倒 → MT 朝外站背",
-                "Moldy Phlegm 霉痰 → 走出 + 全員避毒池",
-                "Spore Cloud 孢子雲 → 團補 + Esuna 中毒"
-            ]
-        },
-        {
-            "name": "阿里奧克",
-            "nameEn": "Arioch",
-            "phases": [
+                  "text": "看到連線 → 立刻切目標",
+                  "role": "dps"
+                },
                 {
-                    "name": "主戰（妖鱗粉機制）",
-                    "mechanics": [
-                        {
-                            "name": "Arioch 滯空 + 妖鱗粉機制（核心）",
-                            "type": "mechanic",
-                            "description": "Arioch 處於不可選中『滯空 + 再生』狀態。場上會 spawn Ranch Wamoura 馴養瓦魔蛾 add，被擊敗時對自身正面釋放 Scale Flakes 妖鱗粉 → 對命中玩家附加 43 秒 1 檔 Scale Flakes debuff（可疊層）。當任意玩家身上有妖鱗粉時，Arioch 對該玩家施放 Plunge 俯衝並進入可選中狀態；無人有 stack 時 Arioch 重新滯空。",
-                            "tips": [
-                                {"text": "T 站到蛾子前方接妖鱗粉拉仇恨", "role": "tank"},
-                                {"text": "DPS 留一隻蛾子備用，分批殺", "role": "dps"},
-                                {"text": "高 stack 者會被攻擊優先 → T 主動疊", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Eerie Soundwave 怪音波 + Storm 風暴",
-                            "type": "mechanic",
-                            "description": "Eerie Soundwave 全屏 AoE → 隨後對一仇目標釋放無讀條扇形 AoE Storm 風暴。看到怪音波後 MT 立刻朝場邊面外接 Storm，DPS 站背。",
-                            "tips": [
-                                {"text": "MT 朝外接 Storm", "role": "tank"},
-                                {"text": "DPS 站背", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Plague Strike 病疫打擊",
-                            "type": "aoe",
-                            "description": "對後方 90° 釋放扇形 AoE，同時以自身為中心生成逐漸擴大的持續傷害區域，踩入會附加 Pollen 猛毒 DoT。MT 朝外 + 全員拉開遠離毒池中心。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "全員拉開避開逐漸擴大毒池", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Corrupted Cloudburst 腐蝕突風",
-                            "type": "aoe",
-                            "description": "正面直線 AoE，命中目標附加 Reduced Immunity 免疫低下 debuff。MT 朝場邊面外，DPS 站側 / 背。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "DPS 不要繞前", "role": "dps"}
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "mnemonic": [
-                "boss 滯空 → 殺蛾子吃妖鱗粉 → boss 才可被攻擊",
-                "T 主動疊高 stack 拉仇恨；DPS 留一隻蛾子備用",
-                "怪音波 → 接 Storm 扇形 → MT 朝外",
-                "病疫打擊（後扇 + 毒池）→ 全員拉開"
-            ]
-        },
-        {
-            "name": "迪亞波羅斯",
-            "nameEn": "Diabolos",
-            "phases": [
+                  "text": "Voracious Maw add 必須及時擊敗",
+                  "role": "dps"
+                },
                 {
-                    "name": "主戰（8 異界門扉 + Ruinous Omen 破滅預兆）",
-                    "mechanics": [
-                        {
-                            "name": "Voidsent Door 異界門扉（核心機制）",
-                            "type": "mechanic",
-                            "description": "戰鬥開始後場地四周出現 8 扇 Voidsent Door 異界門扉，門扉上共有 4 種圖案組成 4 對相同圖案。順序隨機，並在一定時間後消失（戰鬥開始時可記下配對）。在 Ruinous Omen 讀條期間，打開兩扇相同圖案的門 → 進入虛無界通路，傳送到另一扇相同圖案的門 + 1 層 Voidbound 詛咒 + 避免讀條傷害。打開錯圖門 → 仍獲 1 層詛咒。非讀條期間打開門 → 4 層詛咒。配對門用後消失。",
-                            "tips": [
-                                {"text": "戰鬥一開始 → 全員記下圖案配對", "role": "tank"},
-                                {"text": "用標記點記住配對的位置", "role": "tank"},
-                                {"text": "Ruinous Omen 讀條 → 才開門", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Ruinous Omen 破滅預兆（12 秒讀條）",
-                            "type": "raidwide",
-                            "description": "boss 為自身附加 40 秒 Noctoshield 夜障 → 隨後 12 秒讀條 Ruinous Omen，咏唱結束時全屏高傷 AoE + 3 層 Diabolic Curse 虛無詛咒。脆皮玩家若不躲門中招容易秒。讀條期間 boss 不可眩暈。最佳對策：全員衝去打開相同圖案的門對 → 進入虛無界避傷。",
-                            "tips": [
-                                {"text": "讀條開始 → 全員找配對門開", "role": "dps"},
-                                {"text": "成功進虛無界 → 只獲 1 層詛咒", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Graviball 重力球",
-                            "type": "mechanic",
-                            "description": "對隨機目標單體傷害並在該位置生成 Graviball 重力球 add。重力球每隔一段時間以自身為中心釋放 Critical Gravity 臨界重力圓 AoE + Heavy 加重 debuff。被點玩家把球放到遠離隊伍與門扉的位置（保留門扉以備 Ruinous Omen 應對）。",
-                            "tips": [
-                                {"text": "被點到 → 球放遠離隊友與門", "role": "dps"},
-                                {"text": "Esuna 清加重", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Ultimate Terror 究極恐懼",
-                            "type": "aoe",
-                            "description": "以自身為中心的環形 AoE（boss 近身安全）；遠距玩家立刻靠近 boss 站近圈。",
-                            "tips": [
-                                {"text": "全員靠近 boss", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Nightmare 噩夢",
-                            "type": "raidwide",
-                            "description": "全屏 AoE + 可清除短時間 Sleep 睡眠。受到任何傷害就解除睡眠。治療團補 + 玩家可移動或受小傷自解。",
-                            "tips": [
-                                {"text": "受傷自解或 Esuna", "role": "healer"},
-                                {"text": "輕度團補", "role": "healer"}
-                            ]
-                        },
-                        {
-                            "name": "Night Terror 暗影恐懼",
-                            "type": "spread",
-                            "description": "選擇隨機目標釋放中等大小圓 AoE。被點玩家走出 + 散開。",
-                            "tips": [
-                                {"text": "看自己圓走出", "role": "dps"}
-                            ]
-                        },
-                        {
-                            "name": "Camisado 夜襲",
-                            "type": "tankbuster",
-                            "description": "對一仇 MT 單體高傷魔法；MT 開減傷。",
-                            "tips": [
-                                {"text": "MT 大減傷", "role": "tank"}
-                            ]
-                        },
-                        {
-                            "name": "Cleave 攻擊（正面扇形）",
-                            "type": "cone",
-                            "description": "boss 普通攻擊為正面方向扇形 AoE 中傷；MT 朝場邊面外，DPS 站背。",
-                            "tips": [
-                                {"text": "MT 朝外", "role": "tank"},
-                                {"text": "DPS 站背", "role": "dps"}
-                            ]
-                        }
-                    ]
+                  "text": "治療補被吞玩家",
+                  "role": "healer"
                 }
-            ],
-            "mnemonic": [
-                "戰鬥開始 → 立刻記下 8 扇門 4 種圖案配對（標記點）",
-                "Ruinous Omen 破滅預兆 12s 讀條 → 開配對門進虛無界（避傷 + 只 1 層詛咒）",
-                "Graviball 重力球 → 被點放遠離隊伍與門扉",
-                "Ultimate Terror 究極恐懼（環形）→ 全員靠近 boss",
-                "Nightmare 噩夢（Sleep）→ 受傷自解",
-                "Camisado 夜襲 → MT 大減傷"
-            ]
+              ]
+            },
+            {
+              "name": "Knockdown 擊倒",
+              "type": "cone",
+              "description": "讀條後對 boss 正面扇形造成傷害 + 小幅度擊退。MT 朝場邊面外，DPS 站背。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 站背",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Moldy Phlegm 霉痰",
+              "type": "aoe",
+              "description": "讀條後對目標區域 AoE + 留下持續傷害區域。踩入毒池會被附加 Pollen 猛毒（DoT）與 Reduced Immunity 免疫低下。被點走出 + 全員避開毒池。",
+              "tips": [
+                {
+                  "text": "看圓走出",
+                  "role": "dps"
+                },
+                {
+                  "text": "全員避開毒池",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Spore Cloud 孢子雲",
+              "type": "raidwide",
+              "description": "全屏 AoE + 可清除的 Poison 中毒 stack；治療團補 + Esuna 清中毒。",
+              "tips": [
+                {
+                  "text": "團補",
+                  "role": "healer"
+                },
+                {
+                  "text": "Esuna 清中毒",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Decaying Sneeze 腐壞噴嚏",
+              "type": "tankbuster",
+              "description": "對隨機目標單體高傷攻擊；MT 開減傷或治療大補。",
+              "tips": [
+                {
+                  "text": "看單體傷害補位",
+                  "role": "healer"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "mnemonic": [
+        "Devour 貪婪大口 → 切目標秒 Voracious Maw add 解救隊友",
+        "Knockdown 擊倒 → MT 朝外站背",
+        "Moldy Phlegm 霉痰 → 走出 + 全員避毒池",
+        "Spore Cloud 孢子雲 → 團補 + Esuna 中毒"
+      ]
+    },
+    {
+      "name": "阿里奧克",
+      "nameEn": "Arioch",
+      "phases": [
+        {
+          "name": "主戰（妖鱗粉機制）",
+          "mechanics": [
+            {
+              "name": "Arioch 滯空 + 妖鱗粉機制（核心）",
+              "type": "mechanic",
+              "description": "Arioch 處於不可選中『滯空 + 再生』狀態。場上會 spawn Ranch Wamoura 馴養瓦魔蛾 add，被擊敗時對自身正面釋放 Scale Flakes 妖鱗粉 → 對命中玩家附加 43 秒 1 檔 Scale Flakes debuff（可疊層）。當任意玩家身上有妖鱗粉時，Arioch 對該玩家施放 Plunge 俯衝並進入可選中狀態；無人有 stack 時 Arioch 重新滯空。",
+              "tips": [
+                {
+                  "text": "T 站到蛾子前方接妖鱗粉拉仇恨",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 留一隻蛾子備用，分批殺",
+                  "role": "dps"
+                },
+                {
+                  "text": "高 stack 者會被攻擊優先 → T 主動疊",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Eerie Soundwave 怪音波 + Storm 風暴",
+              "type": "mechanic",
+              "description": "Eerie Soundwave 全屏 AoE → 隨後對一仇目標釋放無讀條扇形 AoE Storm 風暴。看到怪音波後 MT 立刻朝場邊面外接 Storm，DPS 站背。",
+              "tips": [
+                {
+                  "text": "MT 朝外接 Storm",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 站背",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Plague Strike 病疫打擊",
+              "type": "aoe",
+              "description": "對後方 90° 釋放扇形 AoE，同時以自身為中心生成逐漸擴大的持續傷害區域，踩入會附加 Pollen 猛毒 DoT。MT 朝外 + 全員拉開遠離毒池中心。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "全員拉開避開逐漸擴大毒池",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Corrupted Cloudburst 腐蝕突風",
+              "type": "aoe",
+              "description": "正面直線 AoE，命中目標附加 Reduced Immunity 免疫低下 debuff。MT 朝場邊面外，DPS 站側 / 背。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 不要繞前",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "boss 滯空 → 殺蛾子吃妖鱗粉 → boss 才可被攻擊",
+        "T 主動疊高 stack 拉仇恨；DPS 留一隻蛾子備用",
+        "怪音波 → 接 Storm 扇形 → MT 朝外",
+        "病疫打擊（後扇 + 毒池）→ 全員拉開"
+      ]
+    },
+    {
+      "name": "迪亞波羅斯",
+      "nameEn": "Diabolos",
+      "phases": [
+        {
+          "name": "主戰（8 異界門扉 + Ruinous Omen 破滅預兆）",
+          "mechanics": [
+            {
+              "name": "Voidsent Door 異界門扉（核心機制）",
+              "type": "mechanic",
+              "description": "戰鬥開始後場地四周出現 8 扇 Voidsent Door 異界門扉，門扉上共有 4 種圖案組成 4 對相同圖案。順序隨機，並在一定時間後消失（戰鬥開始時可記下配對）。在 Ruinous Omen 讀條期間，打開兩扇相同圖案的門 → 進入虛無界通路，傳送到另一扇相同圖案的門 + 1 層 Voidbound 詛咒 + 避免讀條傷害。打開錯圖門 → 仍獲 1 層詛咒。非讀條期間打開門 → 4 層詛咒。配對門用後消失。",
+              "tips": [
+                {
+                  "text": "戰鬥一開始 → 全員記下圖案配對",
+                  "role": "tank"
+                },
+                {
+                  "text": "用標記點記住配對的位置",
+                  "role": "tank"
+                },
+                {
+                  "text": "Ruinous Omen 讀條 → 才開門",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Ruinous Omen 破滅預兆（12 秒讀條）",
+              "type": "raidwide",
+              "description": "boss 為自身附加 40 秒 Noctoshield 夜障 → 隨後 12 秒讀條 Ruinous Omen，咏唱結束時全屏高傷 AoE + 3 層 Diabolic Curse 虛無詛咒。脆皮玩家若不躲門中招容易秒。讀條期間 boss 不可眩暈。最佳對策：全員衝去打開相同圖案的門對 → 進入虛無界避傷。",
+              "tips": [
+                {
+                  "text": "讀條開始 → 全員找配對門開",
+                  "role": "dps"
+                },
+                {
+                  "text": "成功進虛無界 → 只獲 1 層詛咒",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Graviball 重力球",
+              "type": "mechanic",
+              "description": "對隨機目標單體傷害並在該位置生成 Graviball 重力球 add。重力球每隔一段時間以自身為中心釋放 Critical Gravity 臨界重力圓 AoE + Heavy 加重 debuff。被點玩家把球放到遠離隊伍與門扉的位置（保留門扉以備 Ruinous Omen 應對）。",
+              "tips": [
+                {
+                  "text": "被點到 → 球放遠離隊友與門",
+                  "role": "dps"
+                },
+                {
+                  "text": "Esuna 清加重",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Ultimate Terror 究極恐懼",
+              "type": "aoe",
+              "description": "以自身為中心的環形 AoE（boss 近身安全）；遠距玩家立刻靠近 boss 站近圈。",
+              "tips": [
+                {
+                  "text": "全員靠近 boss",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Nightmare 噩夢",
+              "type": "raidwide",
+              "description": "全屏 AoE + 可清除短時間 Sleep 睡眠。受到任何傷害就解除睡眠。治療團補 + 玩家可移動或受小傷自解。",
+              "tips": [
+                {
+                  "text": "受傷自解或 Esuna",
+                  "role": "healer"
+                },
+                {
+                  "text": "輕度團補",
+                  "role": "healer"
+                }
+              ]
+            },
+            {
+              "name": "Night Terror 暗影恐懼",
+              "type": "spread",
+              "description": "選擇隨機目標釋放中等大小圓 AoE。被點玩家走出 + 散開。",
+              "tips": [
+                {
+                  "text": "看自己圓走出",
+                  "role": "dps"
+                }
+              ]
+            },
+            {
+              "name": "Camisado 夜襲",
+              "type": "tankbuster",
+              "description": "對一仇 MT 單體高傷魔法；MT 開減傷。",
+              "tips": [
+                {
+                  "text": "MT 大減傷",
+                  "role": "tank"
+                }
+              ]
+            },
+            {
+              "name": "Cleave 攻擊（正面扇形）",
+              "type": "cone",
+              "description": "boss 普通攻擊為正面方向扇形 AoE 中傷；MT 朝場邊面外，DPS 站背。",
+              "tips": [
+                {
+                  "text": "MT 朝外",
+                  "role": "tank"
+                },
+                {
+                  "text": "DPS 站背",
+                  "role": "dps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mnemonic": [
+        "戰鬥開始 → 立刻記下 8 扇門 4 種圖案配對（標記點）",
+        "Ruinous Omen 破滅預兆 12s 讀條 → 開配對門進虛無界（避傷 + 只 1 層詛咒）",
+        "Graviball 重力球 → 被點放遠離隊伍與門扉",
+        "Ultimate Terror 究極恐懼（環形）→ 全員靠近 boss",
+        "Nightmare 噩夢（Sleep）→ 受傷自解",
+        "Camisado 夜襲 → MT 大減傷"
+      ]
+    }
+  ]
 }
