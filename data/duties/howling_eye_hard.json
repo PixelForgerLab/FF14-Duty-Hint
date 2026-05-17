@@ -1,140 +1,117 @@
 {
-    "id":  "howling_eye_hard",
-    "name":  "真 迦樓羅殲滅戰",
-    "nameEn":  "The Howling Eye (Hard) - Garuda",
-    "expansion":  "2.x 新生艾奧傑亞 (A Realm Reborn)",
-    "type":  "trial",
-    "playerCount":  8,
-    "iLvlSync":  null,
-    "jobLevelSync":  50,
-    "highEnd":  false,
-    "quality":  "excellent",
-    "mnemonic":  [
-                     "1）Friction 摩擦：點名圓 AoE，被點離隊。",
-                     "2）Slipstream 滑流：場上龍捲風移動，看預兆閃。",
-                     "3）Wicked Wheel 邪輪：周身大圓，全員離 boss。",
-                     "4）Mistral Song 北風之歌：全屏 AoE，預備團補。"
-                 ],
-    "notes":  "ARR 2.x 蛮神迦樓羅 Hard 版（Lv 50），『真』迦樓羅殲滅戰於風颶之眼。Boss 為 Garuda 迦樓羅，新增更複雜的 Slipstream 與 Mistral Song 機制。",
-    "bosses":  [
-                   {
-                       "name":  "迦樓羅",
-                       "nameEn":  "Garuda",
-                       "mnemonic":  [
-                                        "Friction 摩擦 → 點名圓 AoE 拉開",
-                                        "Slipstream 滑流 → 場上龍捲風避位",
-                                        "Wicked Wheel 邪輪 → 周身大圓離 boss",
-                                        "Mistral Song 北風之歌 → 全屏 AoE 預備團補"
-                                    ],
-                       "phases":  [
-                                      {
-                                          "name":  "P1 100%-50%",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Downburst / Friction / Wicked Wheel / Slipstream 下擊",
-                                                                "type":  "aoe",
-                                                                "description":  "前方錐 / 隨機 AoE / 周圍 AoE / 直線。Friction + Wicked Wheel 會打石柱。Slipstream 暈。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "MT 把 boss 拉北邊遠離石柱",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             "散開避免 Friction 包柱"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Mistral Song / Mistral Shriek 密斯特拉之歌",
-                                                                "type":  "raidwide",
-                                                                "description":  "Song 在邊緣、Shriek 在中央，都對視線造成高傷；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             "每 60 秒一次，躲石柱後破視線"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Razor Plume adds 剃刀羽",
-                                                                "type":  "other",
-                                                                "description":  "Mistral 後召，會打石柱；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 立刻 AoE adds",
-                                                                                 "role":  "dps"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Aerial Blast 終末嵐 (50%)",
-                                                                "type":  "raidwide",
-                                                                "description":  "詠唱必中，傷害看石柱剩多少；全員預備減傷與大團補。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "Tank 開 LB 額外減傷",
-                                                                                 "role":  "tank"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "healer 確認補滿",
-                                                                                 "role":  "healer"
-                                                                             }
-                                                                         ]
-                                                            }
-                                                        ]
-                                      },
-                                      {
-                                          "name":  "P2 50%-0%",
-                                          "mechanics":  [
-                                                            {
-                                                                "name":  "Eye of the Storm 風暴之眼",
-                                                                "type":  "other",
-                                                                "description":  "場邊環形龍捲；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "保持中央"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Great Whirlwind 大龍捲 ×3",
-                                                                "type":  "other",
-                                                                "description":  "場上三個大龍捲，碰到極高傷；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "tank 站 NW，ranged 擠西牆讓龍捲在隊伍周圍空隙"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Suparna + Chirada adds 連光 boss",
-                                                                "type":  "other",
-                                                                "description":  "南邊召兩 adds 連光 Garuda：**綠光 = 治癒 boss 必先殺**、紅光 = 增傷 boss 第二殺。Suparna/Chirada 也會 Mistral Shriek 若放任太久。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 先綠光 → 紅光",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             {
-                                                                                 "text":  "OT 拉紅光 add 朝外避免 Slipstream",
-                                                                                 "role":  "tank"
-                                                                             }
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "Satin Plume + Razor Plume 第二波",
-                                                                "type":  "other",
-                                                                "description":  "龍捲消退後 boss 召 Razor Plume + 1 Satin Plume。**Satin Plume 給全隊 Sleep**。",
-                                                                "tips":  [
-                                                                             {
-                                                                                 "text":  "DPS 先 Satin Plume",
-                                                                                 "role":  "dps"
-                                                                             },
-                                                                             "Razor Plume 可忽略快攻 boss"
-                                                                         ]
-                                                            },
-                                                            {
-                                                                "name":  "P2 後段重複機制",
-                                                                "type":  "other",
-                                                                "description":  "東/西兩側出 adds、boss 在南，反覆三次；依預兆走位處理。",
-                                                                "tips":  [
-                                                                             "維持位置"
-                                                                         ]
-                                                            }
-                                                        ]
-                                      }
-                                  ]
-                   }
-               ]
+    "id": "howling_eye_hard",
+    "name": "真 迦樓羅殲滅戰",
+    "nameEn": "The Howling Eye (Hard)",
+    "expansion": "2.x 新生艾奧傑亞 (A Realm Reborn)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 50,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "1）真 迦樓羅殲滅戰：場上石柱保護 + 剛羽羽柱 + 終局 Aerial Blast 大氣爆發依存活石柱計算傷害。",
+        "2）Wicked Wheel 邪輪旋風（boss 自身圓）/ Friction 摩擦力（隨機點名圓）/ Downburst 下行突風（前扇）/ Slipstream 螺旋氣流（直線 + 眩暈）→ 不要讓 boss 攻擊石柱。",
+        "3）Mistral Song 寒風之歌（HP ~75%）：迦樓羅出現在場地北側讀條全屏 AoE → 全員躲到石柱後擋視線。",
+        "4）剛羽（Spiny Plume）add：boss 召喚剛羽 → 自爆破壞石柱。DPS 立即切目標 AoE 集火清光。",
+        "5）大龍卷風 Great Whirlwind（後期）：迦樓羅在地面召喚大型龍卷風圈 → 不要踩。",
+        "6）美翼 Suparna & 妙翅 Chirada：出現後與 boss 連線 → 給 boss 受傷減輕 buff。DPS 切目標清。",
+        "7）Aerial Blast 大氣爆發（簽名絕招 ~50% / 終局）：全屏 AoE，傷害依場上殘存石柱數抵擋（石柱越多傷越低）→ 全員大減傷 + 治療大團補。"
+    ],
+    "notes": "ARR 2.0 主線蠻神戰（Lv 50，sync 50，8 人 trial），『真』迦樓羅蠻神 Hard 版，於阿巴拉提亞雲海颶風眼。Boss 為 Garuda 真迦樓羅『擒風蠻神』。從 normal 4 人版升級為 8 人版，引入 8 根石柱保護機制（normal 版只有 4 根）+ 大龍卷風地面圈 + 兩隻雙翅 add（美翼妙翅）。Aerial Blast 大氣爆發是核心 DPS check 機制。",
+    "bosses": [
+        {
+            "name": "真 迦樓羅",
+            "nameEn": "Garuda",
+            "phases": [
+                {
+                    "name": "P1 100%-50% HP（石柱階段）",
+                    "mechanics": [
+                        {
+                            "name": "Downburst 下行突風 + Slipstream 螺旋氣流",
+                            "type": "cone",
+                            "description": "Downburst 下行突風 對 MT 方向前扇形（無預兆）；Slipstream 螺旋氣流 讀條直線 AoE + Stun 眩暈。兩個 MT 機制都會破壞石柱，MT 朝場邊面外。",
+                            "tips": [
+                                {"text": "MT 朝外", "role": "tank"},
+                                {"text": "DPS 看 Slipstream 走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Friction 摩擦力",
+                            "type": "spread",
+                            "description": "隨機玩家為圓心圓 AoE 無預兆，會破壞石柱。散開站位避免重疊。",
+                            "tips": [
+                                {"text": "散開不疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Wicked Wheel 邪輪旋風",
+                            "type": "aoe",
+                            "description": "boss 自身為圓心圓 AoE 無預兆 + 破壞石柱。近戰看 boss 動作退離。MT 把 boss 拉到場中遠離石柱。",
+                            "tips": [
+                                {"text": "近戰退離 boss", "role": "dps"},
+                                {"text": "MT 拉 boss 離石柱", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Spiny Plume 剛羽（add 必須清）",
+                            "type": "add",
+                            "description": "boss 召喚 Spiny Plume 剛羽 add，自爆會破壞石柱。DPS 立即切目標 AoE 集火清光。",
+                            "tips": [
+                                {"text": "DPS 全力 AoE 清剛羽", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mistral Song 寒風之歌（HP ~75%）",
+                            "type": "mechanic",
+                            "description": "boss 在場地北側讀條全屏 AoE，傷害可被場上石柱阻擋。全員必須躲到石柱後（北側看 boss 過來的方向）擋視線。",
+                            "tips": [
+                                {"text": "全員躲石柱後擋視線", "role": "tank"},
+                                {"text": "未躲 → 高傷可能秒", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 50%-0% HP（雙翅 + 大龍捲風）",
+                    "mechanics": [
+                        {
+                            "name": "Suparna 美翼 & Chirada 妙翅（雙翅連線 add）",
+                            "type": "add",
+                            "description": "boss 召喚 Suparna 美翼 + Chirada 妙翅 add。出現後與 boss 連線，給予 boss 受傷減輕 buff（離 boss 越遠 buff 越低）。DPS 切目標清掉。",
+                            "tips": [
+                                {"text": "DPS 切目標清雙翅", "role": "dps"},
+                                {"text": "T 用 AoE 拉穩", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Great Whirlwind 大龍捲風",
+                            "type": "aoe",
+                            "description": "迦樓羅在地面召喚多個大型龍捲風圈。看圈位置避開（不要踩到）。",
+                            "tips": [
+                                {"text": "看圈避開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Aerial Blast 大氣爆發（簽名絕招）",
+                            "type": "raidwide",
+                            "description": "boss 上天讀條全屏 AoE，傷害依場上殘存石柱數計算（石柱可抵擋）。全石柱存活 → 中傷可接；無石柱 → 直接團滅。全員減傷 + 治療大團補。",
+                            "tips": [
+                                {"text": "全員減傷", "role": "tank"},
+                                {"text": "治療大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "mnemonic": [
+                "Downburst / Slipstream / Friction / Wicked Wheel → 不破石柱",
+                "剛羽 → DPS 全力 AoE 清",
+                "Mistral Song 寒風之歌 → 躲石柱後擋視線",
+                "美翼 + 妙翅 add → 切目標清",
+                "Great Whirlwind 大龍捲風 → 避圈",
+                "Aerial Blast 大氣爆發 → 全員減傷 + 大團補"
+            ]
+        }
+    ]
 }
