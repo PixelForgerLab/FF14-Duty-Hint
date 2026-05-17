@@ -1,103 +1,170 @@
 {
-  "id": "ageless_necropolis",
-  "name": "永遠之暗殲滅戰",
-  "nameEn": "The Ageless Necropolis - Necron",
-  "expansion": "7.x 黃金遺產 (Dawntrail)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 100,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "永遠之暗殲滅戰 - Necron 永遠之暗。",
-    "核心機制：死亡之鐮 + 終焉之星 + 召喚亡靈。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "DT 7.3 DT 7.3 蛮神永遠之暗（Lv 100）。Boss 為 Necron 永遠之暗。重點：死亡之鐮 + 終焉之星 + 召喚亡靈。",
-  "bosses": [
-    {
-      "name": "永遠之暗",
-      "nameEn": "Necron",
-      "phases": [
+    "id": "ageless_necropolis",
+    "name": "永遠之暗殲滅戰",
+    "nameEn": "The Ageless Necropolis - Necron",
+    "expansion": "7.x 黃金的遺產 (Dawntrail)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 100,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Fear of Death 死亡恐懼 = 全屏魔法 AoE + 8 個 Icy Hands add 出現於紫圓位（站紫圓上會受傷）→ 每 add 釋直線 AoE Choking Grasp 隨機方向 → 走線縫。",
+        "P1 Cold Grip 寒冷之握 = 直線 AoE 覆蓋場邊（中央 1/3 安全）+ 看 boss 哪邊發光 → 左 / 右 2/3 接後 Existential Dread 延後直線 → 切換站位。",
+        "P1 Memento Mori 死亡警示 = 中央直線 AoE + 留下 bleed 持續傷害區 → 5 個 Icy Hands 出現該區面向東 / 西 → 延後直線 AoE。",
+        "P1 Blue Shockwave 藍色震波 = 90° cleave 魔法 tankbuster 從 boss 中央。預警有範圍。Soul Reaping 死神鎌 = 環顯示『甜甜圈』或『實心圓』儲存攻擊 → 圈中藍鑽石。",
+        "P1 Aetherblight 以太枯萎 = 釋儲存攻擊：甜甜圈 → 站 boss hitbox 內安全；實心圓 → 站 hitbox 外安全。讀條時間長有預警。",
+        "P1 Grand Cross 大十字 = 全屏 + 場地縮小圓 + 4 Azure Aether 球場外旋轉 + 多個小圓 AoE 同時出 → 球停 4 方位釋『+』形距離 AoE → 站任一對角方位避傷。Neutron Ring 中子環 = 全屏 + 場地恢復。",
+        "Adds 階段：boss 不可選 + Rising Fear of Death 條累積。多 Icy Hand 成對出現釋 Choking Grasp → 必須在 100 條前殺光 → Darkness of Eternity 全屏 → 每人單獨被傳送到平台。",
+        "單人階段：40s Doom debuff + 必須單獨擊殺 3 個 Icy Hand → 用傳送圈跳 3 個平台返回主場 → 解 Doom。失敗 = 死。",
+        "P2 Specter of Death 死之幽靈 = 東西 2 處連線指示 2 個大手 Looming Specters → 各釋延後橫直線 AoE Invitation → 安全 1/3 場 → 被擊中拖入深淵需重做單人 add。",
+        "P2 Relentless Reaping 無情收割 = boss 環依序顯 4 AoE（圓 → 甜 → 圓 → 甜 或 甜 → 圓 → 甜 → 圓）儲存於 1-4 鑽石 → Crop Rotation 旋轉環新方向 + 從南順時針釋。首鑽奇數 = 同順序，偶數 = 反順序。",
+        "P2 Mass Macabre 死亡大會 = 4 個 4 人塔 → 每塔需 4 人踩 → 未踩塔召 add 自爆全屏 Spreading Fear。",
+        "後期：boss Soul Reaping 儲一招 → 連發 Memento Mori + Specter of Death + Blue Shockwave → 解放儲存招式 → 循環直到擊殺。"
+    ],
+    "notes": "DT 7.0 MSQ trial（Lv 100，sync 100，ilvl 705，8 人 trial / 也可 Duty Support，時限 60 分），位於 The Ageless Necropolis 永遠之暗墳場。為 DT MSQ 7.0 結尾大 boss - Necron 尼克倫（極限數據儲存系統 SOUL of FFXIV）。劇情：DT 7.0『黃金的遺產』終戰，玩家面對守護無盡靈魂的死神化身。掉落 Necron Card。是 DT 主線劇情大結局。",
+    "bosses": [
         {
-          "name": "主戰",
-          "mechanics": [
-            {
-              "name": "死亡之鐮 Death Scythe",
-              "type": "tankbuster",
-              "description": "對一仇單體死刑；MT 大減傷 + 治療大補。",
-              "tips": [
+            "name": "尼克倫",
+            "nameEn": "Necron",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "終焉之星 End Star",
-              "type": "raidwide",
-              "description": "全屏 AoE 大傷害；團補連發 + 減傷。",
-              "tips": [
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Fear of Death 死亡恐懼",
+                            "type": "raidwide",
+                            "description": "全屏魔法 AoE + 8 個 Icy Hands add 出現於紫圓位（站紫圓上會受傷）→ 每 add 釋直線 AoE Choking Grasp 隨機方向。",
+                            "tips": [
+                                {"text": "不站紫圓位", "role": "dps"},
+                                {"text": "看 add 方向避線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Cold Grip + Existential Dread 寒冷之握",
+                            "type": "aoe",
+                            "description": "直線 AoE 覆蓋場邊（中央 1/3 安全）+ 看 boss 哪邊發光 → 左 / 右 2/3 接後 Existential Dread 延後直線 → 解第 1 招後切換到另 1/3。",
+                            "tips": [
+                                {"text": "先站中央 1/3 → 看光側換對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Memento Mori 死亡警示",
+                            "type": "aoe",
+                            "description": "中央直線 AoE + 留下 bleed 持續傷害區 → 5 個 Icy Hands 出現該區面向東 / 西 → 延後直線 AoE。一段時間後 bleed 區消失。",
+                            "tips": [
+                                {"text": "離開中央 bleed 區", "role": "dps"},
+                                {"text": "看 hand 面向走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Blue Shockwave 藍色震波",
+                            "type": "tankbuster",
+                            "description": "90° cleave 魔法 tankbuster 從 boss 中央射 → MT 拉背對團 + 大減傷。",
+                            "tips": [
+                                {"text": "MT 拉背對團", "role": "tank"},
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Soul Reaping + Aetherblight（環機制）",
+                            "type": "mechanic",
+                            "description": "Soul Reaping：boss 環顯示『甜甜圈』或『實心圓』儲存攻擊 → 鑽石記號。後續 Aetherblight 釋：甜甜圈 → 站 boss hitbox 內安全；實心圓 → 站 hitbox 外安全。",
+                            "tips": [
+                                {"text": "甜甜圈 = 貼 boss / 實圓 = 拉遠", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Grand Cross 大十字（縮場 + 4 球）",
+                            "type": "mechanic",
+                            "description": "全屏 + 場地縮小圓 + 4 Azure Aether 球場外旋轉 + 多個小圓 AoE → 球停 4 方位釋『+』形距離 AoE → 站任一對角方位避傷。",
+                            "tips": [
+                                {"text": "站對角方位", "role": "dps"},
+                                {"text": "看球停位選對應對角", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Neutron Ring 中子環",
+                            "type": "raidwide",
+                            "description": "全屏 + 場地恢復。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "團補 + 減傷",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "召喚亡靈 Summon Spirits",
-              "type": "add",
-              "description": "boss 召喚亡靈 add；DPS 切目標速秒。",
-              "tips": [
+                    "name": "Adds 階段（Rising Fear + 單人傳送）",
+                    "mechanics": [
+                        {
+                            "name": "Rising Fear of Death 條 + Icy Hand add",
+                            "type": "add",
+                            "description": "boss 不可選 + 條累積。多 Icy Hand 成對出 + Choking Grasp 直線 → 必須在 100 條前全殺否則團滅。",
+                            "tips": [
+                                {"text": "DPS 速殺所有 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Darkness of Eternity + 單人平台",
+                            "type": "mechanic",
+                            "description": "全屏 → 每人單獨傳送至個人平台 + 40s Doom debuff → 各自殺 3 個 Icy Hand → 用傳送圈跳 3 個平台返回主場 → 解 Doom。",
+                            "tips": [
+                                {"text": "各人速殺自己的 add", "role": "dps"},
+                                {"text": "走傳送圈 → 跳 3 平台", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "速秒 add",
-                  "role": "dps"
+                    "name": "P2",
+                    "mechanics": [
+                        {
+                            "name": "Specter of Death 死之幽靈（雙手）",
+                            "type": "aoe",
+                            "description": "東西 2 處連線指示 2 個大手 Looming Specters → 各釋延後橫直線 AoE Invitation → 安全 1/3 場。被擊中 = 拖入深淵需重做單人 add。",
+                            "tips": [
+                                {"text": "看連線判斷安全 1/3", "role": "dps"},
+                                {"text": "勿被拖入深淵", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Relentless Reaping + Crop Rotation",
+                            "type": "mechanic",
+                            "description": "Relentless Reaping：boss 環依序顯 4 AoE（圓 → 甜 → 圓 → 甜 或 甜 → 圓 → 甜 → 圓）儲存於 1-4 鑽石。Crop Rotation：boss 旋轉環 + 從南順時針釋。首鑽奇數 = 同順序；偶數 = 反順序。",
+                            "tips": [
+                                {"text": "記順序 + 看首鑽奇偶判向", "role": "dps"},
+                                {"text": "依序貼 / 拉 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mass Macabre 死亡大會（4 塔）",
+                            "type": "stack",
+                            "description": "4 個 4 人塔 → 每塔需 4 人踩 → 未踩塔召 add 自爆全屏 Spreading Fear。雙 T+ 雙奶各帶 1 組 DPS 接 1 塔。",
+                            "tips": [
+                                {"text": "T+H+2DPS / T+H+2DPS 分塔", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "後期儲存招 + 連發",
+                            "type": "mechanic",
+                            "description": "boss Soul Reaping 儲 1 招 → 連發 Memento Mori + Specter of Death + Blue Shockwave → 解放儲存招 → 循環直到擊殺。",
+                            "tips": [
+                                {"text": "記儲存 + 連續解開", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "死亡迴響 Death Echo",
-              "type": "spread",
-              "description": "點名所有玩家圓形 AoE；散開。",
-              "tips": [
-                {
-                  "text": "散開",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "絕死意志 Pure Will",
-              "type": "mechanic",
-              "description": "全員血量減半 + 持續 DoT；治療大補保持血量。",
-              "tips": [
-                {
-                  "text": "團補保 HP",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "黑暗洪流 Dark Flood",
-              "type": "aoe",
-              "description": "場上黑暗洪流 AoE 預兆；閃避。",
-              "tips": [
-                {
-                  "text": "看預兆閃",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Fear of Death 不站紫圓 + 看 add 方向",
+                "P1 Cold Grip → 中央 1/3 → 換對側",
+                "P1 Aetherblight：甜甜圈 = 貼 boss / 實圓 = 拉遠",
+                "P1 Grand Cross → 站對角方位避『+』形 AoE",
+                "Add 階段：100 條前殺 → 單人平台 3 add + 跳 3 平台返回",
+                "P2 Specter 看連線安全 1/3 / Relentless 看首鑽奇偶判向",
+                "P2 Mass Macabre 4 人 / 塔 → 後期連發儲存招"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Necron 永遠之暗 機制：死亡之鐮 + 終焉之星 + 召喚亡靈。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
