@@ -1,105 +1,199 @@
 {
-  "id": "storms_crown",
-  "name": "真 芭芭莉西亞殲滅戰",
-  "nameEn": "Storm's Crown - Barbariccia",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 芭芭莉西亞殲滅戰 - Barbariccia 芭芭莉西亞。",
-    "核心機制：Wind Wall 風牆 + Iron Bristles 鐵刺 + 召喚分身。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.1 EW 6.1 蛮神芭芭莉西亞（Lv 90）。Boss 為 Barbariccia 芭芭莉西亞。重點：Wind Wall 風牆 + Iron Bristles 鐵刺 + 召喚分身。",
-  "bosses": [
-    {
-      "name": "芭芭莉西亞",
-      "nameEn": "Barbariccia",
-      "phases": [
+    "id": "storms_crown",
+    "name": "真 芭芭莉西亞殲滅戰",
+    "nameEn": "Storm's Crown - Barbariccia",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1（100%~70%）：Void Aero IV 無法閃避全屏 → 預備團補。Savage Barbery 看劍紋判斷：頭頂弧 = 直線 AoE 對面；環繞 = 甜甜圈 → 站近 boss。隨後劍丟向紅箭方位。",
+        "P1 Hair Raid 髮襲 = boss 連線劍 → 跳到劍位 + 對劍朝中心釋寬扇形 → 站劍後方安全。Void Aero III = 雙 T tankbuster（分攤）→ MT/OT 站一起接 + 大減傷。其他玩家被擊中 = 死。",
+        "P1 Teasing Tangles 髮絲挑釁 = 4 大圓 AoE 出現 → 解算後玩家連線中央髮絲被拉入圈內 + Tangled debuff（移動減速 + 越界拉回 + Sustaining Damage）。期間 Secret Breeze 兩組重疊錐 AoE → 站第 1 組縫 → 第 1 組爆後跑進已爆區。",
+        "P1 70% 循環：Hair Raid 期間 4 玩家被點圓 AoE → 拉開不重疊。Curling Iron 捲髮棒 = 擊退（無視防擊退）+ 暈眩全員 → 進 P2。",
+        "P2 場邊出風牆 → 觸到 12s Windburn dot（高傷）。所有失誤累 Vulnerability Up。Catabasis 下降 = boss 跳入後高傷 → 治療準備。",
+        "P2 直線 + 中央 6 弧線 AoE → 避線 + 站弧之間。Clones 分身衝 → 兩次直線連衝 → 跳安全縫。",
+        "P2 Deadly Twist + Boulder = 集合 stack 標 + 落石大圓標同 1 玩家 → 全員 stack 解 Deadly Twist → 散開避 Boulder。Boulder Break 雙 T 大 tankbuster（AoE 致死）→ 雙 T 分開 + 大減傷。Knuckle Drum = 連續多 hit 增傷。",
+        "P2 Tornado Chain 龍卷鏈 = 中央大圓 + 邊緣甜甜圈 → 先站場外避大圓 → 大圓爆後跑入避甜甜圈。同時 Hair Spray 點 T+H+2DPS 散開。Tousle 凌亂 = 中央往外擴散小 AoE 慢移 → 被擊中擊飛 + Vuln Up。",
+        "P2 後續 Teasing Tangles + Tornado Chain + 擊退標：站圓邊緣不出圈 → 避被擊退到場邊 Windburn。Tornado Chain + Tousle 同時 → 走位密度極高。"
+    ],
+    "notes": "EW 6.1 trial（Lv 90，sync 90，ilvl 570，8 人 trial，時限 60 分），位於 Storm's Crown 風暴之冠（風之神殿）。為 EW MSQ 6.1『新生』四闇王第一戰 - 風之闇王 芭芭莉西亞 Barbariccia（FF4 經典反派『四混沌』之一）。劇情：四闇王（Four Lords/Fiends）首戰，玩家必須阻止索德雷恩殘黨復活四王。掉落 Barbariccia Card。",
+    "bosses": [
         {
-          "name": "Barbariccia 主戰",
-          "mechanics": [
-            {
-              "name": "Knuckle Down 拳擊",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "芭芭莉西亞",
+            "nameEn": "Barbariccia",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Wind Form 風形",
-              "type": "aoe",
-              "description": "場上多 AoE 圓 + 直線組合；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圖示走縫"
-              ]
-            },
-            {
-              "name": "Maelstrom 風暴",
-              "type": "knockback",
-              "description": "場中央旋風 + 全員擊退；提前Arm's Length或Surecast抗擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length"
-              ]
-            },
-            {
-              "name": "Hair-end 髮端",
-              "type": "aoe",
-              "description": "點名玩家直線 → 引導場邊；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Triple Slap 三連掌",
-              "type": "cone",
-              "description": "MT 連 3 段扇形 cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+                    "name": "P1（100%~70%）",
+                    "mechanics": [
+                        {
+                            "name": "Void Aero IV 虛空風暴 4",
+                            "type": "raidwide",
+                            "description": "無法閃避全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Savage Barbery 凶蠻挑髮（看劍紋）",
+                            "type": "mechanic",
+                            "description": "boss 預警劍紋：紅劍弧過頭 = 直線 AoE 對面；紅劍環繞 = 甜甜圈 AoE → 站近 boss。隨後劍丟向紅箭方位（劍位）。",
+                            "tips": [
+                                {"text": "弧 = 走兩側 / 環 = 貼 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hair Raid 髮襲",
+                            "type": "cone",
+                            "description": "boss 連線劍 → 跳到劍位 + 對劍朝中心釋寬扇形 → 站劍後方安全。後續 4 玩家被點圓 AoE → 拉開不重疊。",
+                            "tips": [
+                                {"text": "站劍後方躲扇", "role": "dps"},
+                                {"text": "4 點 AoE 拉開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Aero III 虛空風暴 3",
+                            "type": "tankbuster",
+                            "description": "雙 T 分攤 tankbuster（小 AoE）→ MT/OT 站一起接 + 大減傷。其他玩家被擊中極可能死。",
+                            "tips": [
+                                {"text": "雙 T 集合分", "role": "tank"},
+                                {"text": "其他人遠離", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Teasing Tangles 髮絲挑釁",
+                            "type": "mechanic",
+                            "description": "4 大圓 AoE 在 4 方位 → 解算後玩家連線中央髮絲 → 被拉入圈 + Tangled debuff（移動減速 + 越界拉回 + Sustaining Damage）。每圈 2 人。",
+                            "tips": [
+                                {"text": "每圈 2 人接", "role": "tank"},
+                                {"text": "圈內不亂走", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Secret Breeze 秘風（兩組錐）",
+                            "type": "aoe",
+                            "description": "Tangles 連線期間釋兩組重疊扇 AoE → 站第 1 組縫 → 第 1 組爆後跑進已爆區。",
+                            "tips": [
+                                {"text": "站第 1 組縫 → 跑第 2 組爆位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Deadly Twist + Hair Spray",
+                            "type": "stack",
+                            "description": "boss 點 1 玩家 stack 標 → 全員集合分攤。Hair Spray = T+H+2DPS 頭頂 AoE → 拉開避重疊。",
+                            "tips": [
+                                {"text": "stack 集合分", "role": "dps"},
+                                {"text": "4 點 AoE 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Curling Iron + P2 轉場",
+                            "type": "knockback",
+                            "description": "boss 中央 → 擊退（無視防擊退）+ 全員 Down for the Count 暈眩 → 短 cinematic 進 P2。",
+                            "tips": [
+                                {"text": "預備擊退落點", "role": "tank"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 連續減傷",
-                  "role": "tank"
+                    "name": "P2（70%~）風牆 + 高密度",
+                    "mechanics": [
+                        {
+                            "name": "風牆 Windburn 場邊",
+                            "type": "mechanic",
+                            "description": "P2 場邊出風牆 → 觸到 12s Windburn dot（高傷）。所有失誤累 Vulnerability Up。",
+                            "tips": [
+                                {"text": "勿觸場邊", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Catabasis 下降",
+                            "type": "raidwide",
+                            "description": "boss 跳起變身落入場上高傷全屏 → 治療準備。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "直線 + 6 弧線 AoE",
+                            "type": "aoe",
+                            "description": "boss 中央放直線 + 中央 6 弧線 AoE → 避直線 + 站弧間安全區。",
+                            "tips": [
+                                {"text": "避直線 + 站弧間", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Brutal Rush 殘忍衝鋒（Clones）",
+                            "type": "aoe",
+                            "description": "場邊出現 clones → 兩次直線衝過場 → 跑安全縫。",
+                            "tips": [
+                                {"text": "看 clone 排列跑縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Deadly Twist + Boulder（同 1 玩家）",
+                            "type": "stack",
+                            "description": "boss 點 1 玩家 stack + 落石大圓標於同人 → 全員 stack 解 Deadly Twist → 隨即散開避 Boulder。",
+                            "tips": [
+                                {"text": "先 stack 後散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Boulder Break 巨岩擊（雙 T）",
+                            "type": "tankbuster",
+                            "description": "雙 T 大 AoE tankbuster（致死級）→ 雙 T 分開 + 大減傷。其他人被打 = 死。",
+                            "tips": [
+                                {"text": "雙 T 分開拉遠", "role": "tank"},
+                                {"text": "DPS 遠離 T", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Knuckle Drum 拳擂",
+                            "type": "raidwide",
+                            "description": "boss 連續擊地 → 累積增傷 → 大團補。",
+                            "tips": [
+                                {"text": "連續團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Tornado Chain 龍卷鏈",
+                            "type": "aoe",
+                            "description": "中央大圓 + 邊緣甜甜圈 → 先站場外避大圓 → 大圓爆後跑入避甜甜圈。同時 Hair Spray 散開。",
+                            "tips": [
+                                {"text": "場外 → 中央切換", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Tousle 凌亂",
+                            "type": "aoe",
+                            "description": "boss 中央往外擴散慢移小 AoE → 被擊中擊飛 + Vuln Up。",
+                            "tips": [
+                                {"text": "看慢 AoE 路徑站", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Touchdown + 圈邊擊退",
+                            "type": "knockback",
+                            "description": "boss 跳到場上 + 擊退標 → 玩家站圓邊不出圈避被擊退到風牆。",
+                            "tips": [
+                                {"text": "站圓邊內接擊退", "role": "tank"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Bahmut Strike 巴哈姆特擊",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Tornado 龍捲 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Savage Barbery 看劍紋（弧 = 直線 / 環 = donut）",
+                "P1 Hair Raid 站劍後 + Void Aero III 雙 T 分攤",
+                "P1 Teasing Tangles 4 圓 + Secret Breeze 兩組錐錯位",
+                "P2 風牆 12s Windburn 勿觸 + Catabasis 大團補",
+                "P2 Boulder Break 雙 T 拉遠 / Knuckle Drum 連續團補",
+                "P2 Tornado Chain 場外 → 中央 / Tousle 看慢 AoE 路徑"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Barbariccia 芭芭莉西亞 機制：Wind Wall 風牆 + Iron Bristles 鐵刺 + 召喚分身。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

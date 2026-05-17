@@ -1,129 +1,186 @@
 {
-  "id": "abyssal_fracture",
-  "name": "澤羅姆斯殲滅戰",
-  "nameEn": "The Abyssal Fracture - Zeromus",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": 645,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "澤羅姆斯殲滅戰 - Zeromus 澤羅姆斯。",
-    "核心機制：深淵之夜 + 深淵回聲 + 漆黑射線 + 暗物質。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.55 EW 6.55 蛮神澤羅姆斯（Lv 90）。Boss 為 Zeromus 澤羅姆斯。重點：深淵之夜 + 深淵回聲 + 漆黑射線 + 暗物質。",
-  "bosses": [
-    {
-      "name": "澤羅姆斯",
-      "nameEn": "Zeromus",
-      "phases": [
+    "id": "abyssal_fracture",
+    "name": "澤羅姆斯殲滅戰",
+    "nameEn": "The Abyssal Fracture - Zeromus",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "P1：Abyssal Nox 深淵之夜 = 全員血量 1 + 10s Doom debuff（補滿可解）+ 場上多條光線指向方位 → 站無光線方位避大圓 AoE。",
+        "P1 Sable Thread 黑線 = 6 hit 直線 stack AoE → 全員集合分攤（離 boss 最近 2 人受增傷）。",
+        "P1 Visceral Whirl 臟腑漩 = boss 爪在場上 → 兩組垂直直線 AoE → 留下兩個三角安全區。",
+        "P1 Dark Matter 暗物質 = 多 hit AoE tankbuster → MT 連續大減傷。",
+        "P1 Flare 閃焰 = 場上塔 + stack 標 → 全員集合進塔接 → 塔位置留下大火球 + 4 條火線直線 AoE。",
+        "P1 Nox 夜 = 2 玩家被追蹤 AoE 標（移動短距）→ 引導離團。Void Bio 虛空毒 = 場北一排毒泡（Toxic Bubbles）以不同速度南行 → 找縫穿過避中毒（Pollen + 高 DoT）。",
+        "P1 Big Bang 大爆炸 = 多重 AoE + 全員 debuff：Big Bounce dot / Acceleration Bomb（時間到不動）/ Divisive Dark（散開標）/ Beckoning Dark（集合標 1 人）/ HP Penalty（最大 HP -25%）→ 隨後 Visceral Whirl 時 Acceleration Bomb 過期 = 停手停動 → 然後解 stack → 散開 → 處理 Visceral Whirl。",
+        "P1 Meteor Impact 流星撞擊 = 中央流星 + 全員連線藍光 → 拉線伸直（線變直）+ 不重疊 → 線太短會死。Black Hole 黑洞 = 角落擴大黑洞 + boss 嘴直線 AoE 旋轉 → 站線後 + 避黑洞（被吸即死）。",
+        "P1 Void Meteor 虛空流星 = 4 角距離 AoE → 各留下隕石 → 再次 Meteor Impact 連線時不能與隕石重疊（變紅 = 爆炸）→ 4 隕石點下爆。Big Crunch 大擠縮 = 同 Big Bang 但解 HP Penalty + 加 Big Bounce dot。",
+        "P2（~25%）：Rend the Rift 撕裂裂縫 = 全屏 + 場地音樂變。Nostalgia 懷念 = 4 hit 物理 Bury + 2 hit 魔法 Roar + 1 hit 大魔法 Primal Roar → 連續團補 + 大減傷。",
+        "P2 Flow of the Abyss 深淵之流 = 背景白色裂縫連線 → 1/3 場直線 AoE → 站對側。Akh Rhai 不滅之雷（同時） = 每人橘標 → 腳下持續多 hit AoE → 拉開 + 不踩。",
+        "P2 Chasmic Nails 深淵爪 = 5 連扇 AoE 依序爆 → 跑進已爆的 AoE 位置（已爆 = 安全）。被擊中 Flesh Wound debuff → Esuna 解。"
+    ],
+    "notes": "EW 6.5 trial（Lv 90，sync 90，ilvl 615，8 人 trial，時限 60 分），位於 The Abyssal Fracture 深淵裂縫。為 EW MSQ 6.5『另一個未來』結尾大 boss - 澤羅姆斯 Zeromus（FF4 最終 BOSS，黑暗的化身）。劇情：戈爾貝薩吞食阿茲達加靈魂後召喚出真正的澤羅姆斯 → 玩家進入深淵裂縫展開決戰。掉落 Zeromus Card。是 EW 大結局之一。",
+    "bosses": [
         {
-          "name": "P1：深淵之夜 + 基礎機制",
-          "mechanics": [
-            {
-              "name": "深淵之夜 Abyssal Echoes",
-              "type": "raidwide",
-              "description": "全員血量變 1 + 20 秒『死亡宣告』Debuff；血量回滿可解除，否則到期即死。需治療立即大爆補。",
-              "tips": [
+            "name": "澤羅姆斯",
+            "nameEn": "Zeromus",
+            "phases": [
                 {
-                  "text": "立即大團補滿血",
-                  "role": "healer"
+                    "name": "P1（100%~25%）",
+                    "mechanics": [
+                        {
+                            "name": "Abyssal Nox 深淵之夜",
+                            "type": "raidwide",
+                            "description": "全員血量降 1 + 10s Doom debuff（補滿可解）+ 場上多條光線指向方位 → 站無光線方位避大圓 AoE。",
+                            "tips": [
+                                {"text": "治療立即補滿解 Doom", "role": "healer"},
+                                {"text": "站無光線方位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sable Thread 黑線",
+                            "type": "stack",
+                            "description": "6 hit 直線 stack AoE → 全員集合分攤（離 boss 最近 2 人受增傷）。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"},
+                                {"text": "T 站最前接增傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Visceral Whirl 臟腑漩",
+                            "type": "aoe",
+                            "description": "boss 爪覆蓋場上 → 兩組垂直直線 AoE → 留下兩個三角安全區。",
+                            "tips": [
+                                {"text": "看 telegraph 站三角安全區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dark Matter 暗物質",
+                            "type": "tankbuster",
+                            "description": "多 hit AoE tankbuster → MT 連續大減傷。",
+                            "tips": [
+                                {"text": "MT 連續大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Flare 閃焰 + 火球",
+                            "type": "stack",
+                            "description": "場上塔 + stack 標 → 全員集合進塔接 → 塔位置留下大火球 + 4 條火線直線 AoE → 避火線。",
+                            "tips": [
+                                {"text": "全員集合進塔", "role": "dps"},
+                                {"text": "後續避火線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Nox 夜（2 人追蹤 AoE）",
+                            "type": "mechanic",
+                            "description": "2 玩家被追蹤 AoE 標（移動短距，3 hit）→ 引導離團 + 不要走太遠。",
+                            "tips": [
+                                {"text": "被點玩家拉場邊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Bio 虛空毒（毒泡）",
+                            "type": "aoe",
+                            "description": "場北一排 Toxic Bubbles 毒泡以不同速度南行 → 找縫穿過避中毒（Pollen + 高 DoT）。同時 boss 釋 Visceral Whirl → 找三角安全區同時穿毒泡縫。",
+                            "tips": [
+                                {"text": "找毒泡縫 + 三角區", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Big Bang 大爆炸（多 debuff）",
+                            "type": "mechanic",
+                            "description": "多重 AoE + 全員 debuff：Big Bounce dot / Acceleration Bomb（時間到不動）/ Divisive Dark（散開標）/ Beckoning Dark（集合標 1 人）/ HP Penalty（最大 HP -25%）→ 隨後 Visceral Whirl 時 Acceleration Bomb 過期 = 停手停動 → 解 stack → 散開 → 處理 Visceral Whirl。",
+                            "tips": [
+                                {"text": "Acceleration Bomb → 停手", "role": "dps"},
+                                {"text": "依序解：stack → 散開 → Whirl", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Impact 流星撞擊（連線）",
+                            "type": "mechanic",
+                            "description": "中央流星 + 全員連線藍光 → 拉線伸直（變直）+ 不重疊 → 線太短會死。",
+                            "tips": [
+                                {"text": "拉線到底 + 不重疊", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Black Hole 黑洞",
+                            "type": "mechanic",
+                            "description": "角落擴大黑洞（被吸即死）+ boss 嘴直線 AoE 旋轉 → 站線後（已爆位置）避黑洞。",
+                            "tips": [
+                                {"text": "站線後避黑洞", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Meteor 虛空流星（4 角隕石）",
+                            "type": "mechanic",
+                            "description": "4 角距離 AoE → 各留下隕石 → 再次 Meteor Impact 連線時不能與隕石重疊（變紅 = 爆炸全屏）→ 4 隕石點下爆。",
+                            "tips": [
+                                {"text": "拉線避隕石", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Big Crunch 大擠縮",
+                            "type": "mechanic",
+                            "description": "同 Big Bang 機制 + 解 HP Penalty + 加 Big Bounce dot → 大團補 + 大減傷。",
+                            "tips": [
+                                {"text": "大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "防護開減傷協助治療",
-                  "role": "tank"
+                    "name": "P2（~25%）終局",
+                    "mechanics": [
+                        {
+                            "name": "Rend the Rift 撕裂裂縫",
+                            "type": "raidwide",
+                            "description": "全屏 AoE + 場地音樂變化（FF4 最終戰 BGM）→ 預備大團補。",
+                            "tips": [
+                                {"text": "預備大團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Nostalgia 懷念（多段）",
+                            "type": "raidwide",
+                            "description": "4 hit 物理 Bury + 2 hit 魔法 Roar + 1 hit 大魔法 Primal Roar → 連續團補 + 大減傷。",
+                            "tips": [
+                                {"text": "連續團補 + 兼物理/魔法減傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Flow of the Abyss + Akh Rhai",
+                            "type": "mechanic",
+                            "description": "Flow = 背景白色裂縫連線指示 1/3 場直線 AoE → 站對側；同時 Akh Rhai = 每人橘標 → 腳下持續多 hit AoE → 拉開 + 不踩自己的也不踩別人的。",
+                            "tips": [
+                                {"text": "站 Flow 對側", "role": "dps"},
+                                {"text": "Akh Rhai 拉開 + 不踩", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Chasmic Nails 深淵爪",
+                            "type": "cone",
+                            "description": "5 連扇 AoE 依序爆 → 跑進已爆的 AoE 位置（已爆 = 安全）。被擊中加 Flesh Wound debuff → Esuna 解。",
+                            "tips": [
+                                {"text": "看順序跑爆位", "role": "dps"},
+                                {"text": "Esuna 解 Flesh Wound", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "深淵回聲 Visceral Whirlwind",
-              "type": "aoe",
-              "description": "場中心向正/斜點擴散光球，光球位置發大圓 AoE。看光球軌跡避開。",
-              "tips": [
-                {
-                  "text": "看光球 → 跑非光球位置",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "漆黑射線 Dark Beam",
-              "type": "stack",
-              "description": "點名一名治療職能玩家，5 次連續多段直線 AoE。其他玩家集合到該治療身上分攤。",
-              "tips": [
-                {
-                  "text": "全員集合到被點治療",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "暗物質 Dark Matter",
-              "type": "tankbuster",
-              "description": "對一仇連 3 次高傷圓形 AoE；MT 開大減傷接 3 連。",
-              "tips": [
-                {
-                  "text": "MT 大減傷 3 連",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "旋骨利爪 Bone Shaker",
-              "type": "aoe",
-              "description": "兩組同時發動的直線 AoE：一組覆蓋斜半場；另一組垂直，從場中到場外。寬度為對角線一半。",
-              "tips": [
-                {
-                  "text": "找垂直縫站",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "核爆 Big Bang + 日珥焰棘",
-              "type": "stack",
-              "description": "火球落地，下方分攤圓 AoE 預兆。火球落地後出現 4 根指向不同的火焰預兆（直線 AoE）。先分攤核爆，再閃日珥焰棘。",
-              "tips": [
-                {
-                  "text": "先集合分攤 → 看 4 方躲",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "夜 Black Hole",
-              "type": "spread",
-              "description": "點名隨機 2 人發動 3 次超大圓形追蹤型 AoE。被點者持續往場邊角落移動。",
-              "tips": [
-                {
-                  "text": "被點往場邊",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "虛空毒菌 Void Bubbles",
-              "type": "mechanic",
-              "description": "場北側生成 10 個有毒氣泡，隨機順序向南移動。接觸 → 爆炸 + 15 秒劇毒（高傷 DoT）。需找縫穿過去。",
-              "tips": [
-                {
-                  "text": "看氣泡軌跡找縫",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Abyssal Nox → 1HP 補滿解 Doom + 站無光線方位",
+                "P1 Sable Thread → 全員 stack（T 站前）/ Visceral Whirl → 三角安全區",
+                "P1 Big Bang → Accel Bomb 時間到停手 + 依序解 stack/散開/Whirl",
+                "P1 Meteor Impact → 拉線伸直不重疊 / Black Hole → 站線後",
+                "P2 Nostalgia 4+2+1 hit 連續團補 / Chasmic Nails 5 連扇跑爆位"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Zeromus 澤羅姆斯 機制：深淵之夜 + 深淵回聲 + 漆黑射線 + 暗物質。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

@@ -1,105 +1,177 @@
 {
-  "id": "voidcast_dais",
-  "name": "戈爾貝薩殲滅戰",
-  "nameEn": "The Voidcast Dais - Golbez",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "戈爾貝薩殲滅戰 - Golbez 戈爾貝薩。",
-    "核心機制：Void Aero 虛無風 + 召喚四天王 + Pure Ascendency 純粹昇格。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.4 EW 6.4 蛮神戈爾貝薩（Lv 90）。Boss 為 Golbez 戈爾貝薩。重點：Void Aero 虛無風 + 召喚四天王 + Pure Ascendency 純粹昇格。",
-  "bosses": [
-    {
-      "name": "戈爾貝薩",
-      "nameEn": "Golbez",
-      "phases": [
+    "id": "voidcast_dais",
+    "name": "戈爾貝薩殲滅戰",
+    "nameEn": "The Voidcast Dais - Golbez",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "可掉場邊 → 注意位置。P1：Terrastorm 地震 = 隨機角生岩 → 預警圓 AoE → 走開。Crescent Blade 月牙劍 = 隨機點名 180° 前扇 → 繞背躲。",
+        "P1 Arctic Assault 極寒突擊 = 目標對邊兩個象限 → 站對角安全象限（看箭頭方向）。Void Meteor 虛空流星 = 雙 T 多 hit tankbuster（不分仇恨）→ 雙 T 分開接 + 大減傷。",
+        "P1 Lingering Spark 殘留火花 = 多個玩家腳下圓 AoE → 移動避開。Binding Cold 束縛之寒 = 全屏 + Frostbite DoT → 治療團補。",
+        "P2：Azdaja's Shadow 阿茲達加之影 = 階段轉場 + 後續加強劍招。Black Fang 黑牙 = 全屏 raidwide。",
+        "P2 Azdaja's Shadow（強化）= 下次 Crescent Blade 變 Shadow Crescent + 立即接點下 AoE（極短預警）→ 繞背躲扇 + 預判腳下 AoE 走位。",
+        "P2 Burning Shade 燃燒影 = 全員散開標 → 拉開不重疊。Meteor Phase 流星階段 = 東西兩塔需踩（可多人）+ 一個治療被擊退標。被點奶站場中央以南不動 + 其他人被擊退入塔接 + 治療被擊退後連線龍 → 直線 AoE 拉開避免打到團。",
+        "P2 Double Meteor 雙流星 = 南北角兩個距離衰減 AoE → 站對側遠離。Gale Sphere 強風球 = 4 clone 順 / 逆時針生成 → 依生成順序釋直線 AoE → 找前 2 clone 與後 2 clone 的安全縫。",
+        "P2 Void Stardust 虛空星塵 = 對角 2 圓預警 → 沿邊緣走 → 從中央返回。Eventide Fall 日暮 = 雙奶直線分攤 → 分兩隊（光小隊）。Immolating Shade 燃燒影分攤 = stack 集合分攤。"
+    ],
+    "notes": "EW 6.3 trial（Lv 90，sync 90，ilvl 595，8 人 trial，時限 60 分），位於 The Voidcast Dais 虛無界召喚台。為 EW MSQ 6.3『未知的水晶之力』BOSS - 黑騎士 Golbez 戈爾貝薩（FF4 主角的兄弟 / 反派）。劇情：黑騎士為救妹妹 Cecil 及光戰士一行 → 召喚虛無界龍 Azdaja → 在虛無界決戰。掉落 Golbez Card。",
+    "bosses": [
         {
-          "name": "Golbez 主戰",
-          "mechanics": [
-            {
-              "name": "Black Fang 黑牙",
-              "type": "cone",
-              "description": "MT 扇形 cleave；MT朝場邊面外 近戰站側後；MT朝場邊面外 近戰站側後。",
-              "tips": [
+            "name": "戈爾貝薩",
+            "nameEn": "Golbez",
+            "phases": [
                 {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Cloak of Shadow 影披風",
-              "type": "raidwide",
-              "description": "全屏 + 場上分身；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "P1（~50%）",
+                    "mechanics": [
+                        {
+                            "name": "Terrastorm 地震",
+                            "type": "aoe",
+                            "description": "隨機角生岩 → 短預警圓 AoE → 走開避免被擊中。",
+                            "tips": [
+                                {"text": "看圓預警走開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Crescent Blade 月牙劍",
+                            "type": "cone",
+                            "description": "boss 面向隨機玩家 → 180° 前扇 cleave → 繞背躲。",
+                            "tips": [
+                                {"text": "繞 boss 背躲扇", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Arctic Assault 極寒突擊",
+                            "type": "aoe",
+                            "description": "對邊兩個象限 → 站對角安全象限（看箭頭方向）。",
+                            "tips": [
+                                {"text": "看箭頭站對角", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Meteor 虛空流星",
+                            "type": "tankbuster",
+                            "description": "雙 T 多 hit AoE tankbuster（不分仇恨）→ 雙 T 分開接 + 大減傷。",
+                            "tips": [
+                                {"text": "雙 T 拉遠分接", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Lingering Spark 殘留火花",
+                            "type": "aoe",
+                            "description": "多個玩家腳下圓 AoE → 移動避開。",
+                            "tips": [
+                                {"text": "持續移動避圓", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Binding Cold 束縛之寒",
+                            "type": "raidwide",
+                            "description": "全屏 + Frostbite DoT → 治療連續團補。",
+                            "tips": [
+                                {"text": "預備團補 + 連 Esuna", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P2（Azdaja's Shadow 變身）",
+                    "mechanics": [
+                        {
+                            "name": "Azdaja's Shadow 阿茲達加之影",
+                            "type": "mechanic",
+                            "description": "階段轉場 + 後續強化劍招。",
+                            "tips": [
+                                {"text": "預備新機制", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Black Fang 黑牙",
+                            "type": "raidwide",
+                            "description": "全屏 AoE。預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Shadow Crescent 影月牙",
+                            "type": "cone",
+                            "description": "Azdaja's Shadow 強化下次 Crescent Blade 變 Shadow Crescent + 立即接點下 AoE（極短預警）→ 繞背躲扇 + 預判腳下走位。",
+                            "tips": [
+                                {"text": "繞背 + 預判腳下", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Burning Shade 燃燒影",
+                            "type": "spread",
+                            "description": "全員頭頂散開標 → 拉開不重疊。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Phase 流星階段（雙塔 + 擊退）",
+                            "type": "mechanic",
+                            "description": "東西兩塔需踩（可多人接）+ 1 名治療被擊退標。被點奶站場中央以南不動；其他人被擊退入塔接（或預先站位 + 防擊退技能）。被點奶被擊退後連線龍 → 直線 AoE → 拉開避免打到團。",
+                            "tips": [
+                                {"text": "被點奶站場中南", "role": "healer"},
+                                {"text": "其他人吃擊退入塔", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Double Meteor 雙流星",
+                            "type": "knockback",
+                            "description": "南北角兩個距離衰減 AoE → 站對側遠離降低傷害。",
+                            "tips": [
+                                {"text": "站對角遠離兩落點", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Gale Sphere 強風球（4 clone）",
+                            "type": "aoe",
+                            "description": "4 clone 順 / 逆時針生成 → 依生成順序釋直線 AoE 過場 → 找前 2 clone 與後 2 clone 的安全縫（先站第 1+2 安全位 → 移到第 3+4 安全位）。",
+                            "tips": [
+                                {"text": "看 clone 順序 → 兩段安全縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Stardust 虛空星塵",
+                            "type": "aoe",
+                            "description": "對角 2 圓預警 → 玩家沿場邊緣走 → 從中央返回。",
+                            "tips": [
+                                {"text": "沿邊緣走 + 中央返", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Eventide Fall 日暮（雙奶分攤）",
+                            "type": "stack",
+                            "description": "雙奶各被點直線分攤 AoE → 分兩光小隊（4-4）各跟一奶分攤。",
+                            "tips": [
+                                {"text": "分兩光隊跟奶", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Immolating Shade 燃燒影分攤",
+                            "type": "stack",
+                            "description": "1 玩家 stack 集合分攤標 → 全員集合。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Phases of the Shadow 影之相 (4 分身)",
-              "type": "mechanic",
-              "description": "4 個分身依序攻擊 → 看順序走位；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "預判每分身方向"
-              ]
-            },
-            {
-              "name": "Void Aero 虛空風",
-              "type": "knockback",
-              "description": "場邊風 → 擊退；提前Arm's Length或Surecast抗擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length"
-              ]
-            },
-            {
-              "name": "Terrastorm 大地暴",
-              "type": "aoe",
-              "description": "場上多 AoE 圓 → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Void Geryon adds",
-              "type": "add",
-              "description": "虛空 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS AoE 殲滅",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Cosmic Memory 宇宙記憶 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Terrastorm 走開 / Crescent Blade 繞背 / Arctic Assault 站對角",
+                "P1 Void Meteor 雙 T 拉遠分接 / Binding Cold 全屏 + Frostbite",
+                "P2 Shadow Crescent 繞背 + 預判腳下短預警",
+                "P2 Meteor 雙塔 + 被點奶站中南 / Gale Sphere 4 clone 兩段縫",
+                "P2 Eventide Fall 分兩光隊跟奶 / Immolating Shade stack"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Golbez 戈爾貝薩 機制：Void Aero 虛無風 + 召喚四天王 + Pure Ascendency 純粹昇格。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

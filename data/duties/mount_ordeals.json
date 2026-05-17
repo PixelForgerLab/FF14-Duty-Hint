@@ -1,102 +1,190 @@
 {
-  "id": "mount_ordeals",
-  "name": "真 魯比坎特殲滅戰",
-  "nameEn": "Mount Ordeals - Rubicante",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 魯比坎特殲滅戰 - Rubicante 魯比坎特。",
-    "核心機制：Fire 火屬性 + Flamerule 火裁 + 場上火環機制。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.3 EW 6.3 蛮神魯比坎特（Lv 90）。Boss 為 Rubicante 魯比坎特。重點：Fire 火屬性 + Flamerule 火裁 + 場上火環機制。",
-  "bosses": [
-    {
-      "name": "魯比坎特",
-      "nameEn": "Rubicante",
-      "phases": [
+    "id": "mount_ordeals",
+    "name": "真 魯比坎特殲滅戰",
+    "nameEn": "Mount Ordeals - Rubicante",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "可掉場邊（無擊退機制但要小心位置）。P1：Inferno 火獄 = 無法閃避全屏。",
+        "P1 Ordeal of Purgation 苦行考驗（核心機制）：3 同心圓（紅內 / 紫中 / 紅外）+ 各區藍色引信 + 4 個方位 + 4 個對角 = 8 個藍色三角面板。boss 從紅內某面板開始射火球沿引信跑到外面板 → 被擊中面板釋大錐 AoE 過場中。",
+        "P1 Ordeal 引信細節：紅區（內外）引信永遠直線；紫區（中）引信可直 / 斜（指向相鄰扇）。後期使用：紫區可旋轉（看箭頭）→ 火球終點改變。技巧：站在『boss 初始指向面板』附近最安全。",
+        "P1 Ordeal Penance debuff：讀條期間全員獲 Penance → 時間到變 Penitent's Shackles 拘束玩家 → 必須提前找好安全區再被拘束。",
+        "P1 Shattering Heat 碎裂高溫 = AoE tankbuster。Arch Inferno 大火獄 = 場中央常駐 AoE + 兩組旋轉 AoE 場外 → 走縫繞行。",
+        "P1 Arch Inferno 配對招：Conflagration 中央直線 + Radial Flagration 大錐覆蓋場大半 → 看 telegraph 配合站位。",
+        "Add 階段：召 3 Flamesent + 1 Greater Flamesent。Greater 連續釋 Ghastly Torch 全屏 + Burns dot → 建議優先擊殺 Greater 防 dot 疊太久。Rubicante's Power 條 100 = 團滅。",
+        "Add 階段招：Flamesent 釋 Ghastly Flame（多 AoE）+ Ghastly Wind（點名錐）；Shattering Heat 仍會出（不分仇恨）。",
+        "Add 結束 Blazing Rapture 燃燒狂喜 = 無法閃避全屏 + 二次 Burns → 大團補 + 大減傷。",
+        "P2 變身：Inferno 變點名圓 + Bleeding → 散開不重疊。Flamerake 火耙 = boss 兩個旋轉箭停止 → 指示直線 AoE → AoE 快速向外擴展 → 跑到原本不安全的位置（已爆 = 安全）。",
+        "P2 Soulscald 灼魂 = Scalding Fleet 各玩家直線 AoE → 散開 → 接著藍色 telegraph 延長線 AoE 蓋全場前一招位置 → 走原 AoE 位置避新藍線。",
+        "P2 Dualfire 雙火 = 雙 T 大 tankbuster 扇形（AoE 大小看 telegraph）→ 雙 T 分開接 + 大減傷。Sweeping Immolation 掃焚 = 半場 cleave + 點名圓 → 站非 cleave 半 + 拉開散。",
+        "P2 boss 還會切回 P1 形態循環 P1 機制 → 再變身回 P2 → 反覆直到擊敗。"
+    ],
+    "notes": "EW 6.4 trial（Lv 90，sync 90，ilvl 600，8 人 trial，時限 60 分），位於苦行山 Mount Ordeals。為 EW MSQ 6.4『邪靈的回響』四闇王第二戰 - 火之闇王 魯比坎特 Rubicante（FF4 經典反派『四混沌』）。劇情：四闇王第二戰，玩家挑戰具有騎士精神的火之王。掉落 Rubicante Card。Rubicante 雙形態切換是本戰最大特色。",
+    "bosses": [
         {
-          "name": "Rubicante 主戰",
-          "mechanics": [
-            {
-              "name": "Inferno Devil 地獄惡魔",
-              "type": "raidwide",
-              "description": "全屏 AoE；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "魯比坎特",
+            "nameEn": "Rubicante",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Flames of Hell 地獄烈焰",
-              "type": "aoe",
-              "description": "場上直線 + 圓形組合；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圖示走縫"
-              ]
-            },
-            {
-              "name": "Burnished Glory 燒灼榮光",
-              "type": "knockback",
-              "description": "場邊圓形擊退；提前Arm's Length或Surecast抗擊退；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "Arm's Length"
-              ]
-            },
-            {
-              "name": "Pillars of Fire 火柱",
-              "type": "spread",
-              "description": "點名玩家圓形 AoE → 散開；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "分散"
-              ]
-            },
-            {
-              "name": "Twisting Flames 扭曲烈焰",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+                    "name": "P1（無斗篷形態）",
+                    "mechanics": [
+                        {
+                            "name": "Inferno 火獄",
+                            "type": "raidwide",
+                            "description": "無法閃避全屏 AoE → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Ordeal of Purgation 苦行考驗（火球引信）",
+                            "type": "mechanic",
+                            "description": "場上 3 同心圓（紅內 / 紫中 / 紅外）+ 4 方位 + 4 對角 8 個藍色三角面板。boss 從某面板射火球沿引信跑到外面板 → 被擊中面板釋大錐 AoE 過場中。紅區引信永遠直線；紫區可直 / 斜（指相鄰扇）；後期紫區可旋轉（看箭頭）。技巧：站在『boss 初始指向面板』附近最安全（旋轉版會到相鄰）。",
+                            "tips": [
+                                {"text": "看初始指向 + 站附近", "role": "dps"},
+                                {"text": "看箭頭判斷紫區旋轉", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Penance + Penitent's Shackles",
+                            "type": "mechanic",
+                            "description": "Ordeal 期間全員獲 Penance → 時間到變 Penitent's Shackles 拘束 → 必須提前找好安全區再被拘束。",
+                            "tips": [
+                                {"text": "讀條期間預先就位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Shattering Heat 碎裂高溫",
+                            "type": "tankbuster",
+                            "description": "AoE tankbuster → MT 開大減傷。Add 階段也會出（不分仇恨）。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Arch Inferno 大火獄",
+                            "type": "aoe",
+                            "description": "場中央常駐小 AoE + 兩組旋轉 AoE 場外 → 走縫繞行。",
+                            "tips": [
+                                {"text": "看旋轉方向走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Conflagration + Radial Flagration",
+                            "type": "aoe",
+                            "description": "Conflagration = 中央直線 AoE；Radial Flagration = 大錐覆蓋場大半 → 配合 Arch Inferno 看 telegraph 站安全縫。",
+                            "tips": [
+                                {"text": "看 telegraph 找安全縫", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Inferno Howl 地獄咆哮",
-              "type": "aoe",
-              "description": "分組多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看分組站位"
-              ]
-            },
-            {
-              "name": "Conflagration 大火 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+                    "name": "Add 階段（Rubicante's Power 條）",
+                    "mechanics": [
+                        {
+                            "name": "Flamesent × 3 + Greater Flamesent × 1",
+                            "type": "add",
+                            "description": "boss 召 3 Flamesent + 1 Greater Flamesent。Rubicante's Power 條 100 = 團滅 → 必須速殺。建議優先擊殺 Greater（防 Burns dot 疊太久）。",
+                            "tips": [
+                                {"text": "DPS 優先 Greater", "role": "dps"},
+                                {"text": "MT 撿 add", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ghastly Torch 鬼焰炬",
+                            "type": "raidwide",
+                            "description": "Greater Flamesent 連續釋全屏 + Burns dot → 治療 + 大減傷 + 大團補。",
+                            "tips": [
+                                {"text": "連續團補 + 大減傷", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Ghastly Flame + Ghastly Wind",
+                            "type": "mechanic",
+                            "description": "Flamesent 釋 Ghastly Flame（多腳下 AoE）+ Ghastly Wind（點名扇）→ 看 telegraph 走位。",
+                            "tips": [
+                                {"text": "看 telegraph 走縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Blazing Rapture 燃燒狂喜",
+                            "type": "raidwide",
+                            "description": "Add 結束釋無法閃避全屏 + 二次 Burns dot → 大團補 + 大減傷。",
+                            "tips": [
+                                {"text": "大團補 + 大減傷", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "全員減傷",
-                  "role": "tank"
+                    "name": "P2 變身形態",
+                    "mechanics": [
+                        {
+                            "name": "Inferno（P2 點名圓 + Bleed）",
+                            "type": "spread",
+                            "description": "P2 變身後 Inferno 改為點名玩家腳下圓 AoE + Bleeding dot → 8 方位散開不重疊。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"},
+                                {"text": "Esuna 解 Bleed", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Flamerake 火耙",
+                            "type": "mechanic",
+                            "description": "boss 周圍兩個旋轉箭停止 → 指示直線 AoE → AoE 快速向外擴展 → 跑到原本『不安全』的位置（已爆位置安全）。",
+                            "tips": [
+                                {"text": "AoE 爆後跑到安全縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Soulscald 灼魂（兩段）",
+                            "type": "aoe",
+                            "description": "Scalding Fleet = 各玩家直線 AoE → 散開 → 接著藍色 telegraph 延長線 AoE 蓋全場前一招位置 → 走『原 AoE 位置』避新藍線。",
+                            "tips": [
+                                {"text": "第 1 段散 → 第 2 段走原位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dualfire 雙火（雙 T）",
+                            "type": "tankbuster",
+                            "description": "雙 T 大 tankbuster 扇形（AoE 大小看 telegraph）→ 雙 T 分開接 + 大減傷。",
+                            "tips": [
+                                {"text": "雙 T 拉遠分接", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Sweeping Immolation 掃焚",
+                            "type": "mechanic",
+                            "description": "半場 cleave + 點名圓 → 站非 cleave 半 + 拉開散開避免圓重疊。",
+                            "tips": [
+                                {"text": "站安全半 + 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "形態循環",
+                            "type": "mechanic",
+                            "description": "boss 還會切回 P1 形態循環 P1 機制 → 再變身回 P2 → 反覆直到擊敗。",
+                            "tips": [
+                                {"text": "預期形態循環", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Ordeal of Purgation → 看 boss 初始指向面板站附近 + 紫區看旋轉箭",
+                "P1 Penance → 預先就位（拘束前找好安全區）",
+                "P1 Arch Inferno + Conflagration / Radial Flagration → 看 telegraph 找縫",
+                "Add 階段 → 優先 Greater Flamesent 防 Burns 疊",
+                "P2 Flamerake → 看箭停指向跑爆位 / Soulscald → 散 → 跑原位",
+                "P2 Dualfire 雙 T 分接 / Sweeping Immolation 安全半 + 散"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Rubicante 魯比坎特 機制：Fire 火屬性 + Flamerule 火裁 + 場上火環機制。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
