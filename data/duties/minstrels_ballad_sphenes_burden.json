@@ -1,112 +1,234 @@
 {
-  "id": "minstrels_ballad_sphenes_burden",
-  "name": "斯費納絕境戰",
-  "nameEn": "The Minstrel's Ballad: Sphene's Burden - Queen Eternal (Sphene)",
-  "expansion": "7.x 黃金遺產 (Dawntrail)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 100,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "斯費納絕境戰 - Sphene 永恆女王斯費納。",
-    "核心機制：強化版 Aether Cycle + Crystal Slash。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "DT 7.0 DT 斯費納絕境戰（Lv 100）。Boss 為 Sphene 永恆女王斯費納。重點：強化版 Aether Cycle + Crystal Slash。",
-  "bosses": [
-    {
-      "name": "永恆女王斯費納",
-      "nameEn": "Sphene",
-      "phases": [
+    "id": "minstrels_ballad_sphenes_burden",
+    "name": "斯費納絕境戰",
+    "nameEn": "The Minstrel's Ballad: Sphene's Burden - Queen Eternal",
+    "expansion": "7.x 黃金的遺產 (Dawntrail)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 100,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "場邊可掉落。boss 雙仇 auto attack。Aethertithe = 持續全屏 raidwide → 連續團補。",
+        "Retribute 報應 = 錐 AoE + 後接雙奶直線分攤 → 散開拉錐後集合奶分攤。Virtual Shift / World Shatter = 中傷全屏 + 場地變形（多個版本）。",
+        "Laws of Wind 風之律 = 雙奶 Aeroquell 分攤 + 留 twister AoE → West/East Wind 擊退方向 buff → 提前站對應方位接擊退。",
+        "Missing Link 失聯 = 兩玩家 tether + DoT → 拉開破鏈解 debuff。Legitimate Force 合法武力 = 半場 cleave（一邊 → 另邊）→ 預判方向跑對側。",
+        "Prosecution of War 戰爭起訴 = 單體 tankbuster 雙 hit + Blunt Resistance Down → tank swap 或 invul。Divide and Conquer 分而治之 = 每人直線 AoE 連續兩次同位置 → 散開放線 + 移開接第二次。",
+        "Royal Domain 王之領域 = 輕 raidwide。Laws of Earth 地之律 = 8 塔需踩接（要 grounded）→ 8 人各 1 塔。",
+        "Gravitational Empire 重力帝國 = 兩塔 / 平台 + 1 玩家 Gravity Pillar 大圓 + 1 玩家 Gravity Ray 錐 → 站對應位接。Meteor Impact 流星撞 = 玩家位置生流星。",
+        "Weighty Blow 重擊 = 點 1 玩家單體（擊中即死）→ 用 line-of-sight 躲在流星後。Coronation 加冕 = 4 雷射 + 玩家連線雷射一側 → 站位決定雷射位置。",
+        "Atomic Ray 原子光線 = 全員大點下 AoE → 散開。Ruthless Regalia 殘酷王權 = 三角發出大直線 AoE → 看三角方向跑縫。",
+        "Absolute Authority 絕對權威 = 多種 AoE 連續：bait / proximity / stack / 紅 dorito 標 → 看順序處理。",
+        "Laws of Ice 冰之律 = 4 冰橋 + Freezing Up（不動變 Deep Freeze）→ 持續移動 + 1 人 / 橋。Rush 衝鋒 = 連線直線 AoE（不拉到底致死）→ 拉到底。",
+        "Drear Rising 陰沉升起 = 1 人直線分攤標 + 2 人連線 + 大點下 AoE → 傳遞分散處理。",
+        "Authority Eternal P1 enrage = 高傷 raidwide 必須在 0.1% 前秒掉。",
+        "P2 Radical Shift = 全員大點下 + 場地變 3 種形態。Dimensional Distortion 維度扭曲 = exaflare 連續 AoE。Tyranny's Grasp 暴君之握 = 摧毀前半場 + 雙 T 塔接。Dying Memory 死亡記憶 = 多 hit raidwide。Royal Banishment 王之放逐 = 多 hit 共享直線 AoE。",
+        "Preservation 終結 = enrage 必須在此前秒 boss。"
+    ],
+    "notes": "DT 7.1 trial Ex（Lv 100，sync 100，ilvl 715，8 人 trial，時限 60 分），位於 The Minstrel's Ballad Sphene Ex。為 DT MSQ 7.1 Sphene 女王『Minstrel's Ballad』極限版。掉落 ilvl 730 武器（10 Totem）+ Sphene Card。整場長機制 + 多次場地變形 + Laws of Earth/Wind/Ice 四律機制。",
+    "bosses": [
         {
-          "name": "Sphene EX 主戰",
-          "mechanics": [
-            {
-              "name": "Aether Storm + Crystal Slash 招式",
-              "type": "tankbuster",
-              "description": "全屏 + MT cleave 連環；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "永恆女王斯費納",
+            "nameEn": "Queen Eternal",
+            "phases": [
                 {
-                  "text": "MT 大減傷",
-                  "role": "tank"
+                    "name": "P1",
+                    "mechanics": [
+                        {
+                            "name": "Aethertithe + auto",
+                            "type": "raidwide",
+                            "description": "持續全屏 raidwide → 連續團補。boss 雙仇 auto attack。",
+                            "tips": [
+                                {"text": "連續團補維持", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Retribute 報應",
+                            "type": "stack",
+                            "description": "錐 AoE + 後接雙奶直線分攤 → 散開拉錐後集合奶分攤。",
+                            "tips": [
+                                {"text": "先散錐 後集合奶", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Virtual Shift / World Shatter（場地變形）",
+                            "type": "raidwide",
+                            "description": "中傷全屏 + 場地變形（多個版本）→ 預備團補 + 預判新場形。",
+                            "tips": [
+                                {"text": "預判場形變化", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Laws of Wind 風之律（雙奶 + 擊退）",
+                            "type": "knockback",
+                            "description": "雙奶 Aeroquell 分攤 + 留 twister AoE + West / East Wind buff → 提前站對應方位接擊退。",
+                            "tips": [
+                                {"text": "提前站對應 Wind 方位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Missing Link 失聯（連線拉開）",
+                            "type": "mechanic",
+                            "description": "兩玩家 tether + DoT → 拉開破鏈解 debuff。",
+                            "tips": [
+                                {"text": "拉開破鏈", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Legitimate Force 合法武力",
+                            "type": "cone",
+                            "description": "半場 cleave（一邊 → 另邊）→ 預判方向跑對側。",
+                            "tips": [
+                                {"text": "預判方向跑對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Prosecution of War 戰爭起訴（雙 hit）",
+                            "type": "tankbuster",
+                            "description": "單體 tankbuster 雙 hit + Blunt Resistance Down → tank swap 或 invul。",
+                            "tips": [
+                                {"text": "tank swap 或 invul 雙吃", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Divide and Conquer 分而治之",
+                            "type": "aoe",
+                            "description": "每人直線 AoE 連續兩次同位置 → 散開放線 + 移開接第二次。",
+                            "tips": [
+                                {"text": "第 1 散放線 + 第 2 移開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Royal Domain + Laws of Earth 8 塔",
+                            "type": "stack",
+                            "description": "Royal Domain 輕全屏 + Laws of Earth = 8 塔需踩接（要 grounded）→ 8 人各 1 塔。",
+                            "tips": [
+                                {"text": "8 人各 1 塔", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Gravitational Empire 重力帝國",
+                            "type": "mechanic",
+                            "description": "兩塔 / 平台 + 1 玩家 Gravity Pillar 大圓 + 1 玩家 Gravity Ray 錐 → 站對應位接。",
+                            "tips": [
+                                {"text": "Pillar/Ray 分位接", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Meteor Impact + Weighty Blow",
+                            "type": "mechanic",
+                            "description": "Meteor Impact = 玩家位置生流星。Weighty Blow = 點 1 玩家單體（擊中即死）→ 用 line-of-sight 躲在流星後。",
+                            "tips": [
+                                {"text": "被點玩家躲流星後", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Coronation 加冕（雷射 + 連線）",
+                            "type": "mechanic",
+                            "description": "4 雷射 + 玩家連線雷射一側 → 站位決定雷射位置。",
+                            "tips": [
+                                {"text": "看連線判雷射位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Atomic Ray 原子光線",
+                            "type": "spread",
+                            "description": "全員大點下 AoE → 散開。",
+                            "tips": [
+                                {"text": "8 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ruthless Regalia 殘酷王權",
+                            "type": "aoe",
+                            "description": "三角發出大直線 AoE → 看三角方向跑縫。",
+                            "tips": [
+                                {"text": "看三角跑縫", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Absolute Authority 絕對權威",
+                            "type": "mechanic",
+                            "description": "多種 AoE 連續：bait / proximity / stack / 紅 dorito 標 → 看順序處理。",
+                            "tips": [
+                                {"text": "看順序連環處理", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Laws of Ice + Rush",
+                            "type": "mechanic",
+                            "description": "Laws of Ice = 4 冰橋 + Freezing Up（不動變 Deep Freeze）→ 持續移動 + 1 人 / 橋。Rush = 連線直線 AoE（不拉到底致死）→ 拉到底。",
+                            "tips": [
+                                {"text": "持續移動 + 1 人 / 橋", "role": "dps"},
+                                {"text": "Rush 拉到底", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Drear Rising 陰沉升起",
+                            "type": "mechanic",
+                            "description": "1 人直線分攤標 + 2 人連線 + 大點下 AoE → 傳遞分散處理。",
+                            "tips": [
+                                {"text": "可傳遞 tether", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Authority Eternal P1 enrage",
+                            "type": "raidwide",
+                            "description": "高傷 raidwide 必須在 0.1% 前秒掉 boss。",
+                            "tips": [
+                                {"text": "全員爆發推到 0.1%", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P2 Radical Shift + 終結",
+                    "mechanics": [
+                        {
+                            "name": "Radical Shift 激進變形",
+                            "type": "mechanic",
+                            "description": "全員大點下 + 場地變 3 種形態 → 預判新場形。",
+                            "tips": [
+                                {"text": "預判場形 + 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dimensional Distortion + Tyranny's Grasp",
+                            "type": "mechanic",
+                            "description": "Dimensional Distortion = exaflare 連續 AoE → 跟爆位走。Tyranny's Grasp = 摧毀前半場 + 雙 T 塔接。",
+                            "tips": [
+                                {"text": "跟 exaflare 爆位走", "role": "dps"},
+                                {"text": "雙 T 接塔", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Dying Memory + Royal Banishment",
+                            "type": "mechanic",
+                            "description": "Dying Memory = 多 hit raidwide。Royal Banishment = 多 hit 共享直線 AoE → 全員集合分攤。",
+                            "tips": [
+                                {"text": "連續團補 + Banishment 集合", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Preservation 終結 enrage",
+                            "type": "raidwide",
+                            "description": "enrage 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Quasi-Particle Pinion 4 連翼",
-              "type": "aoe",
-              "description": "場上密集 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "預判 4 連走位"
-              ]
-            },
-            {
-              "name": "Eternal Aether 4 連散",
-              "type": "spread",
-              "description": "分組分散站位；被點名玩家拉開分散站位5米以上；被點名玩家拉開分散站位5米以上。",
-              "tips": [
-                "看分組站"
-              ]
-            },
-            {
-              "name": "Aether Constructs 4 連 add",
-              "type": "add",
-              "description": "4 隻 add → DPS 配位置打；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS 分配目標",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Lustrous Blade 雙重 buster",
-              "type": "tankbuster",
-              "description": "MT 雙重 buster → T swap；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "雙 T swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Aetherial Gaol 雙人牢籠",
-              "type": "mechanic",
-              "description": "兩名玩家被困 → DPS 打破救出；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                {
-                  "text": "DPS 打破",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Quasi-Particle Storm Phase 2 (enrage) 招式",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員極限減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 Retribute 散錐 → 集合奶",
+                "Laws of Wind 提前站對應方位 / Laws of Earth 8 塔 / Laws of Ice 4 橋 1 人",
+                "Gravity Empire Pillar/Ray 分位 / Weighty Blow 躲流星後",
+                "Divide and Conquer 第 1 散放 + 第 2 移開",
+                "Authority Eternal P1 enrage 必 0.1% 前秒",
+                "P2 Radical Shift 預判 + Tyranny's Grasp 雙 T 接塔"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Sphene 永恆女王斯費納 機制：強化版 Aether Cycle + Crystal Slash。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

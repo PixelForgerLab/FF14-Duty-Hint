@@ -1,109 +1,176 @@
 {
-  "id": "minstrels_ballad_necrons_embrace",
-  "name": "尼克倫絕境戰",
-  "nameEn": "The Minstrel's Ballad: Necron's Embrace - Necron",
-  "expansion": "7.x 黃金遺產 (Dawntrail)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 100,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "尼克倫絕境戰 - Necron 永遠之暗。",
-    "核心機制：強化版 死亡之鐮 + 終焉之星 + 多階段。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "DT 7.3 DT 尼克倫絕境戰（Lv 100）。Boss 為 Necron 永遠之暗。重點：強化版 死亡之鐮 + 終焉之星 + 多階段。",
-  "bosses": [
-    {
-      "name": "永遠之暗",
-      "nameEn": "Necron",
-      "phases": [
+    "id": "minstrels_ballad_necrons_embrace",
+    "name": "尼克倫絕境戰",
+    "nameEn": "The Minstrel's Ballad: Necron's Embrace - Necron",
+    "expansion": "7.x 黃金的遺產 (Dawntrail)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 100,
+    "highEnd": true,
+    "quality": "needs-update",
+    "mnemonic": [
+        "P1：沿用 Hard 版機制 + Ex 強化。Fear of Death = 全屏 + 8 Icy Hands add 紫圓位 + Choking Grasp 直線。",
+        "Cold Grip + Existential Dread = 邊緣直線 + 半場後延後 → 切換站位。Memento Mori = 中央 bleed 區 + 5 Icy Hands 東/西 直線 AoE。",
+        "Blue Shockwave = 90° tankbuster。Soul Reaping + Aetherblight = 環顯示甜甜圈 / 實圓 → 對應貼 boss / 拉遠。",
+        "Twofold / Fourfold Blight（Ex 強化）= boss 連續釋 Blight 多重 AoE → 看 telegraph 順序。",
+        "Grand Cross 縮場 + 4 Azure Aether 球 + 多小圓 → 站對角避『+』形。Neutron Ring = 全屏 + 場地恢復。",
+        "Adds 階段：Rising Fear of Death 條 + 多 Icy Hands → 100 前殺光。Darkness of Eternity = 每人單獨傳送平台 + 40s Doom + 自殺 3 Icy Hand + 跳 3 平台返。",
+        "P2 Specter of Death（東西大手）+ Relentless Reaping（環 4 AoE）+ Crop Rotation（旋轉 + 看首鑽奇偶）。",
+        "The Second / Fourth Season（Ex 新）= 季節變化 + 多 hit raidwide。Circle of Lives 生命之環（Ex 新）= 環機制變化版。",
+        "Mass Macabre 4 塔 = 每塔 4 人踩。Darkness of Eternity Enrage = 終結 → 必須在此前秒 boss。",
+        "詳細機制待補充（CGW 頁面為 stub）→ 建議參考 huiji 灰機 + Mizzteq / Hector / MTQ 影片指南。"
+    ],
+    "notes": "DT 7.x trial Ex（Lv 100，sync 100，ilvl ~725，8 人 trial，時限 60 分），位於 The Ageless Necropolis Ex。為 Necron 尼克倫『Minstrel's Ballad』極限版。掉落 ilvl 755 武器（10 Grave Totem）+ Necron Card。CGW 頁面內容為 stub，機制詳情未完整 → 對應 Hard 版機制強化 + Twofold/Fourfold Blight / The Second-Fourth Season / Circle of Lives 等 Ex 新增。建議參考 Hector / MTQ 動畫指南獲取完整流程。",
+    "bosses": [
         {
-          "name": "Necron 主戰",
-          "mechanics": [
-            {
-              "name": "Embrace of Necron 尼克倫之擁",
-              "type": "raidwide",
-              "description": "全屏 + 點名分散；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
+            "name": "尼克倫",
+            "nameEn": "Necron",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "P1（Hard 機制強化）",
+                    "mechanics": [
+                        {
+                            "name": "Fear of Death 死亡恐懼",
+                            "type": "raidwide",
+                            "description": "全屏 + 8 Icy Hands add 出現紫圓位（站紫圓上會受傷）+ Choking Grasp 直線 AoE。",
+                            "tips": [
+                                {"text": "不站紫圓 + 看 add 線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Cold Grip + Existential Dread",
+                            "type": "aoe",
+                            "description": "直線 AoE 場邊（中央 1/3 安全）+ Existential Dread 延後直線 → 切換站位。",
+                            "tips": [
+                                {"text": "中央 1/3 → 看光換對側", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Memento Mori 死亡警示",
+                            "type": "aoe",
+                            "description": "中央直線 + bleed 區 + 5 Icy Hands 東 / 西延後直線 AoE。",
+                            "tips": [
+                                {"text": "離開 bleed 區 + 看 hand 面向", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Blue Shockwave 藍色震波",
+                            "type": "tankbuster",
+                            "description": "90° 魔法 cleave tankbuster → MT 拉背對團 + 大減傷。",
+                            "tips": [
+                                {"text": "MT 拉背對團", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Soul Reaping + Aetherblight",
+                            "type": "mechanic",
+                            "description": "環顯示甜甜圈或實圓 → Aetherblight：甜甜圈 = 貼 boss / 實圓 = 拉遠。",
+                            "tips": [
+                                {"text": "甜甜圈 = 貼 / 實圓 = 遠", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Twofold / Fourfold Blight（Ex 強化）",
+                            "type": "mechanic",
+                            "description": "boss 連續釋 Blight 多重 AoE → 看 telegraph 順序處理。",
+                            "tips": [
+                                {"text": "看 telegraph 順序", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Grand Cross + Neutron Ring",
+                            "type": "mechanic",
+                            "description": "Grand Cross = 縮場 + 4 球 + 多小圓 → 站對角避『+』形。Neutron Ring = 全屏 + 場地恢復。",
+                            "tips": [
+                                {"text": "站對角避『+』", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "散開"
-              ]
-            },
-            {
-              "name": "Necropolis 死城",
-              "type": "aoe",
-              "description": "場上多 AoE → 走縫；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈走"
-              ]
-            },
-            {
-              "name": "Doom 詛咒",
-              "type": "mechanic",
-              "description": "玩家附加詛咒 → 倒下變僵屍；依預兆圖示處理對應位置與機制流程；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
                 {
-                  "text": "補保人不倒",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Memento Mori 死之記憶",
-              "type": "aoe",
-              "description": "點名玩家直線 AoE → 場邊；看圖示提前走位避開預兆範圍；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "被點往場邊"
-              ]
-            },
-            {
-              "name": "Necron Aspect adds",
-              "type": "add",
-              "description": "場上 add → 速殺；DPS全力切目標殲滅add避免疊壓主戰；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
+                    "name": "Adds 階段（Rising Fear + 單人平台）",
+                    "mechanics": [
+                        {
+                            "name": "Rising Fear of Death 條 + 多 Icy Hands",
+                            "type": "add",
+                            "description": "boss 不可選 + 條累積。多 Icy Hand 出 + Choking Grasp → 必須 100 條前全殺。",
+                            "tips": [
+                                {"text": "DPS 速殺 add", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Darkness of Eternity + 單人平台",
+                            "type": "mechanic",
+                            "description": "每人單獨傳送至個人平台 + 40s Doom + 殺 3 Icy Hand + 跳 3 平台返回 → 解 Doom。",
+                            "tips": [
+                                {"text": "各人速殺 + 跳 3 平台", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
                 {
-                  "text": "DPS 殲滅",
-                  "role": "dps"
+                    "name": "P2 終局",
+                    "mechanics": [
+                        {
+                            "name": "Specter of Death 死之幽靈",
+                            "type": "aoe",
+                            "description": "東西 2 大手 Looming Specters 延後橫直線 AoE → 站對應安全 1/3。被拖入深淵需重做單人 add。",
+                            "tips": [
+                                {"text": "看連線找安全 1/3", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Relentless Reaping + Crop Rotation",
+                            "type": "mechanic",
+                            "description": "環 4 AoE 順序儲存 → Crop Rotation 旋轉 + 從南順時針釋。首鑽奇 = 同順序 / 偶 = 反順序。",
+                            "tips": [
+                                {"text": "看首鑽奇偶判向", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "The Second / Fourth Season（Ex 新）",
+                            "type": "raidwide",
+                            "description": "季節變化 + 多 hit raidwide → 連續團補。",
+                            "tips": [
+                                {"text": "連續團補維持", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Circle of Lives 生命之環（Ex 新）",
+                            "type": "mechanic",
+                            "description": "環機制變化版 → 看 telegraph 處理（CGW 詳情未補）。",
+                            "tips": [
+                                {"text": "看 telegraph 處理", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Mass Macabre 4 塔",
+                            "type": "stack",
+                            "description": "4 個 4 人塔 → 每塔需 4 人踩。",
+                            "tips": [
+                                {"text": "雙 T+H+DPS 分塔", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Darkness of Eternity Enrage",
+                            "type": "raidwide",
+                            "description": "終結 enrage → 必須在此前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Death Sentence 死刑",
-              "type": "tankbuster",
-              "description": "MT 死刑 buster；MT開大減傷 雙T swap接力；MT開大減傷 雙T swap接力。",
-              "tips": [
-                {
-                  "text": "MT 大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Death Wish 死亡之願 (enrage)",
-              "type": "raidwide",
-              "description": "末段全屏 enrage；全員預備減傷與大團補；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷",
-                  "role": "tank"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1 = Hard 機制強化 + Twofold/Fourfold Blight 新招",
+                "Soul Reaping → 甜甜圈 = 貼 / 實圓 = 遠",
+                "Grand Cross 站對角避 + Crop Rotation 看首鑽奇偶",
+                "Adds 階段 → 100 條前殺 → 單人平台 3 add + 跳 3 平台",
+                "P2 The Second/Fourth Season + Circle of Lives Ex 新機制",
+                "詳細請參考動畫指南 → 標為待補充"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Necron 永遠之暗 機制：強化版 死亡之鐮 + 終焉之星 + 多階段。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
