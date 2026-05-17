@@ -1,110 +1,141 @@
 {
-  "id": "hells_kier",
-  "name": "真 朱雀殲滅戰",
-  "nameEn": "Hells' Kier - Suzaku",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 70,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Suzaku 朱雀：Vermilion Flame 烈焰 + Mournful Calls 哀鳴 + 火鳥 add。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.2 SB 蛮神朱雀地獄魔境首戰（Lv 70）。Boss 依序為 Suzaku 朱雀。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "朱雀",
-      "nameEn": "Suzaku",
-      "mnemonic": [
-        "Suzaku 朱雀 機制：Vermilion Flame 烈焰 + Mournful Calls 哀鳴 + 火鳥 add。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "hells_kier",
+    "name": "真 朱雀殲滅戰",
+    "nameEn": "Hells' Kier - Suzaku",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 70,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "Cremate 灼焼 = 預警 tankbuster → MT 開減傷。",
+        "Eternal Flame 永恆之火 = 復活 4 隻 Scarlet Lady 鳳凰 → 連線 DPS → 必須速殺否則『Ashes to Ashes』灰燼歸塵高傷 + debuff（團滅）→ 把鳳凰拉中央 AoE 集火。",
+        "Endless Summer 無盡夏日 = 點 1 玩家大前扇 → 移開避免 debuff。Screams of the Damned 詛咒尖叫 = 全屏 raidwide。",
+        "Phoenix Down 鳳凰降臨 = 大 Scarlet Plume 蓋場 + 慢讀 A Wing and a Prayer 爆炸 → 必須打掉中央 plume 創造安全區（中央集殺鳳凰策略時）；殘留鳳凰被擊中會復活 + buff，必須優先打掉。",
+        "Scarlet Melody 紅色旋律 = orb 7 波 → 玩家面對箭頭吸收 orbs 防 boss 充能 → 全屏傷害依充能強度。",
+        "Southron Star 南方之星 = 全屏。Ruthless Refrain 殘酷副歌 = 中央擊退。Phantom Flurry 鬼影連環 = 多 hit tankbuster + 大前扇擊退。",
+        "Well of Flame 火焰之井 = 直線 AoE 點玩家 → 走出。",
+        "Phoenix Says 鳳凰指令 = 鳳凰擊中符 → 對應平台爆炸 → 看鳳凰飛行方向 + 站旁邊 → 爆炸後移入。Phoenix Says 2.0 = 2 序列 4 符 + 更快移動。",
+        "Incandescent Interlude 白熱間奏 = 4 流星圓 → 1 人 / 圓接。Rekindle 重燃 = 每人圓 AoE → 散開（同時發生）。",
+        "Phoenix Rush 鳳凰衝鋒 = 鳳凰場邊衝過場 → 閃位。"
+    ],
+    "notes": "SB 4.2 trial（Lv 70，sync 70，ilvl 同步，8 人 trial，時限 60 分），位於 Hells' Kier 朱雀龍穴。為四神四聖之朱雀 Suzaku 的 Hard 版（patch 4.2 加入）。劇情：SB 4.2 對抗 Tenzen 的女兒 Tsubaki 召喚的朱雀。掉落 Suzaku Card + Suzaku 武器。Phoenix Says 平台爆炸 + Scarlet Melody orb 充能為核心。",
+    "bosses": [
         {
-          "name": "Suzaku 主戰",
-          "mechanics": [
-            {
-              "name": "Phoenix's Lament 朱雀哀歌",
-              "type": "raidwide",
-              "description": "全屏 AoE + 召喚 add 機制觸發；全員預備減傷與大團補。",
-              "tips": [
+            "name": "朱雀",
+            "nameEn": "Suzaku",
+            "phases": [
                 {
-                  "text": "補大團補",
-                  "role": "healer"
+                    "name": "主戰",
+                    "mechanics": [
+                        {
+                            "name": "Cremate 灼焼",
+                            "type": "tankbuster",
+                            "description": "預警 tankbuster → MT 開減傷。",
+                            "tips": [
+                                {"text": "MT 開減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Eternal Flame + 鳳凰 add",
+                            "type": "add",
+                            "description": "復活 4 Scarlet Lady 鳳凰 → 連線 DPS → 必須速殺否則 Ashes to Ashes 團滅。拉中央 AoE 集火。",
+                            "tips": [
+                                {"text": "中央拉 AoE 速殺", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Endless Summer 無盡夏日",
+                            "type": "cone",
+                            "description": "點 1 玩家大前扇 → 移開避免 debuff。",
+                            "tips": [
+                                {"text": "被點移開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Screams of the Damned 詛咒尖叫",
+                            "type": "raidwide",
+                            "description": "全屏 raidwide → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Phoenix Down 鳳凰降臨",
+                            "type": "mechanic",
+                            "description": "大 Scarlet Plume 蓋場 + 慢讀 A Wing and a Prayer 爆炸 → 打掉中央 plume 創造安全區；殘留鳳凰被擊中會復活 + buff → 優先打掉。",
+                            "tips": [
+                                {"text": "打中央 plume 留安全", "role": "dps"},
+                                {"text": "速殺殘留鳳凰", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Scarlet Melody 紅色旋律（orb 充能）",
+                            "type": "mechanic",
+                            "description": "orb 7 波 → 玩家面對箭頭吸收 orbs 防 boss 充能 → 全屏傷害依充能強度。",
+                            "tips": [
+                                {"text": "面對箭頭吸 orb", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Southron Star + Ruthless Refrain",
+                            "type": "knockback",
+                            "description": "Southron Star = 全屏。Ruthless Refrain = 中央擊退。",
+                            "tips": [
+                                {"text": "預備擊退方位", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Phantom Flurry 鬼影連環",
+                            "type": "tankbuster",
+                            "description": "多 hit tankbuster + 大前扇擊退。",
+                            "tips": [
+                                {"text": "MT 大減傷 + 防擊退", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Well of Flame 火焰之井",
+                            "type": "aoe",
+                            "description": "直線 AoE 點玩家 → 走出。",
+                            "tips": [
+                                {"text": "被點走出線", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Phoenix Says 鳳凰指令",
+                            "type": "mechanic",
+                            "description": "鳳凰擊中符 → 對應平台爆炸 → 看鳳凰飛行方向 + 站旁邊 → 爆炸後移入。",
+                            "tips": [
+                                {"text": "看鳳凰方向站旁 → 爆後移入", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Incandescent Interlude + Rekindle",
+                            "type": "mechanic",
+                            "description": "Incandescent = 4 流星圓 → 1 人 / 圓接；Rekindle = 每人圓 → 散開（同時）。",
+                            "tips": [
+                                {"text": "4 人接流星 + 拉開散開", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Phoenix Says 2.0 + Phoenix Rush",
+                            "type": "mechanic",
+                            "description": "Phoenix Says 2.0 = 2 序列 4 符 + 更快移動。Phoenix Rush = 鳳凰場邊衝過場 → 閃位。",
+                            "tips": [
+                                {"text": "看 2 序列預判走位", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Flames of Unforgiveness 不赦之炎",
-              "type": "cone",
-              "description": "對 MT 釋放扇形 cleave；MT朝場邊面外 近戰站側後。",
-              "tips": [
-                {
-                  "text": "MT 朝場邊",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Sweltering Stride 焚跡",
-              "type": "aoe",
-              "description": "直線衝鋒 AoE → 側閃；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看起手方向 → 側閃"
-              ]
-            },
-            {
-              "name": "Scarlet Plumes 緋羽",
-              "type": "aoe",
-              "description": "場上多個圓形 AoE 散落 → 走縫；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看圈位置走非預兆地"
-              ]
-            },
-            {
-              "name": "Phantom 幻影",
-              "type": "mechanic",
-              "description": "Boss 分身出 phantom；本體做動作分辨；依預兆圖示處理對應位置與機制流程。",
-              "tips": [
-                "看 boss 動作辨真假",
-                "錯誤輸出 phantom → 受傷"
-              ]
-            },
-            {
-              "name": "Mythcall adds 神話召喚 (3 鳥)",
-              "type": "add",
-              "description": "場邊召喚 3 隻 add (鳥)；不殺 → 回血 boss；DPS全力切目標殲滅add避免疊壓主戰。",
-              "tips": [
-                {
-                  "text": "DPS 速殺 add 避免回血",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Stormcall 暴風召喚",
-              "type": "knockback",
-              "description": "場邊風 add → 順時針或逆時針旋轉風流；不順流會被吹下場；提前Arm's Length或Surecast抗擊退。",
-              "tips": [
-                "看風流方向順著走",
-                "Arm's Length 可在緊急時用"
-              ]
-            },
-            {
-              "name": "Wing Beat 拍翅",
-              "type": "aoe",
-              "description": "Boss 環形 AoE 拍翅；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "貼近 boss 圓心安全"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "Eternal Flame 4 鳳凰中央 AoE 速秒",
+                "Phoenix Down 打中央 plume 留安全",
+                "Scarlet Melody 面箭頭吸 orb 防充能",
+                "Phoenix Says 看鳳凰方向站旁 → 爆後移入"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

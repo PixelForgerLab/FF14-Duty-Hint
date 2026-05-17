@@ -1,182 +1,142 @@
 {
-  "id": "pool_of_tribute",
-  "name": "真 須佐之男殲滅戰",
-  "nameEn": "The Pool of Tribute - Susano",
-  "expansion": "4.x 紅蓮解放者 (Stormblood)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 67,
-  "highEnd": false,
-  "quality": "excellent",
-  "mnemonic": [
-    "B1 Susano 須佐之男：Ukehi 受日 + Brightstorm 風暴 + 8 連砍。",
-    "tankbuster + raidwide → MT 大減傷、預備團補。"
-  ],
-  "notes": "SB 4.0 SB 蛮神須佐之男貢物之池（Lv 67）。Boss 依序為 Susano 須佐之男。重點：依各 boss 機制走位、add 速秒、tankbuster 與 raidwide 配合減傷與團補。",
-  "bosses": [
-    {
-      "name": "須佐之男",
-      "nameEn": "Susano",
-      "mnemonic": [
-        "Susano 須佐之男 機制：Ukehi 受日 + Brightstorm 風暴 + 8 連砍。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ],
-      "phases": [
+    "id": "pool_of_tribute",
+    "name": "真 須佐之男殲滅戰",
+    "nameEn": "The Pool of Tribute - Susano",
+    "expansion": "4.x 紅蓮解放者 (Stormblood)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 63,
+    "highEnd": false,
+    "quality": "excellent",
+    "mnemonic": [
+        "MT 拉 boss 不動 + 全員 stack 在 MT 後簡化機制。boss 多招有語音提示。",
+        "P1：Assail 急襲 = 無讀條 tankbuster；Rasen Kaikyo 螺旋階段 = 每人腳下圓 + 雷耐降；Yata No Kagami 八咫鏡（『The seas part for we alone!』）= 點 1 玩家紅標 → 擊退 + 路徑後接全屏 AoE → 擊退方向決定安全區。",
+        "P1 Brightstorm 光暴風 = Yata 後對被標玩家 stack → 集合分攤。Dark Cloud 暗雲 = 釋 The Parting Clouds 寬直線 AoE + 麻痺 → 散開避線。",
+        "P2（~65%）（『How our hearts sing in the chaos!』）：花瓣狀水晶出現 → 1 T 撿（Clashing 持續 Flesh Wound DoT）→ Ame-no-Murakumo 天叢雲讀條 = 必須打掉劍中斷否則團滅 → DPS 全力打劍。",
+        "P2 Sheer Force 純粹之力 = 場邊球 → OT 跑去吃球（會濺射傷害到團）→ 終局大紅直線 = 沒打掉劍前在線上即死。",
+        "P3（『Earth and stone at our beck and call!』）：沿用 P1。Stormsplitter 風暴裂破 = 直線 tankbuster → MT 開大減傷。",
+        "P3 Ama-no-iwato 天岩戶 = 1 玩家被困石頭 + 兩個假石 → 洗牌後必須打掉真石（被困玩家死則 wipe）。真石永遠是仇恨表最下方。",
+        "P3 Ukehi 誓約 = 全屏 1-2 hit → 連續團補。"
+    ],
+    "notes": "SB 4.0 MSQ trial（Lv 63，sync 63，ilvl 同步，8 人 trial，時限 60 分），位於 The Pool of Tribute 紅玉海 朝貢之池。為遠東神道神 Susano 須佐之男的 MSQ 首戰。劇情：SB MSQ 4.0 Kojin 蛟仁族召喚的甲冑神，玩家在紅玉海對抗。掉落 Susano Card + Susanoo 武器系列。Ama-no-Murakumo 劍 DPS check + Ama-no-iwato 真石辨識（仇恨表最下）為核心難點。",
+    "bosses": [
         {
-          "name": "P1 (100–75%)",
-          "mechanics": [
-            {
-              "name": "Massive Strike 強擊",
-              "type": "tankbuster",
-              "description": "對 MT 單體高傷害斬擊。",
-              "tips": [
+            "name": "須佐之男",
+            "nameEn": "Susano",
+            "phases": [
                 {
-                  "text": "MT 開大減傷",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Bubble Burst 禍泡附身",
-              "type": "mechanic",
-              "description": "為所有角色附加 10s 禍泡 debuff，倒數結束時若仍在行動則受到水傷 + 雷屬性耐性低下 1 層。",
-              "tips": [
-                "讀條完畢全員停止動作 5-6s",
-                {
-                  "text": "DPS 注意公共冷卻，停在 10s 之前",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Yata-no-Kagami 八咫鏡",
-              "type": "knockback",
-              "description": "點名非 MT 玩家擊退，路徑兩側生成斷海 AoE 預兆；可能伴隨雷雲云間放電或晴嵐分攤。",
-              "tips": [
-                "被點站場邊朝中央 → 擊退距離安全",
-                "斷海預兆兩側躲縫",
-                {
-                  "text": "晴嵐 = 全員集合分攤",
-                  "role": "dps"
-                }
-              ]
-            },
-            {
-              "name": "Spiral Strait 螺旋海峽",
-              "type": "aoe",
-              "description": "對所有玩家當前位置生成藍橙色 AoE 預兆，造成水傷 + 雷耐低下。",
-              "tips": [
-                "看到圈立刻移動避免疊雷耐"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P2 - 天之叢雲拼刀 (75–50%)",
-          "mechanics": [
-            {
-              "name": "Ame-no-Murakumo 天之叢雲 (拼刀)",
-              "type": "mechanic",
-              "description": "Boss 巨大化舉起天之叢雲；場地會出現 2 次可互動的接刀點，互動後進入 25s 動態演練，附加拼刀 + 切傷 debuff，可選中天之叢雲打血。",
-              "tips": [
-                {
-                  "text": "MT/ST 各接 1 把刀",
-                  "role": "tank"
+                    "name": "P1（100%~65%）",
+                    "mechanics": [
+                        {
+                            "name": "Assail 急襲",
+                            "type": "tankbuster",
+                            "description": "無讀條 tankbuster → MT 開減傷。",
+                            "tips": [
+                                {"text": "MT 開減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Rasen Kaikyo 螺旋階段",
+                            "type": "spread",
+                            "description": "每人腳下圓 AoE → 散開拉開。被擊中加雷耐降。",
+                            "tips": [
+                                {"text": "8 方位散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Yata No Kagami 八咫鏡（紅標）",
+                            "type": "knockback",
+                            "description": "『The seas part for we alone!』→ 點 1 玩家紅標 → 擊退 + 路徑後接全屏 AoE → 擊退方向決定安全區。",
+                            "tips": [
+                                {"text": "被點玩家朝安全方向擊退", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Brightstorm 光暴風",
+                            "type": "stack",
+                            "description": "Yata 後對被標玩家 stack → 全員集合分攤。",
+                            "tips": [
+                                {"text": "全員集合 stack", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Dark Cloud 暗雲（The Parting Clouds）",
+                            "type": "aoe",
+                            "description": "Dark Cloud add 釋 The Parting Clouds 寬直線 AoE + 麻痺 → 散開避線。",
+                            "tips": [
+                                {"text": "避雲線", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "接刀後撐 25s + 全力打天之叢雲",
-                "場周圍紫電爆炸圈逼近 → 動態演練"
-              ]
-            },
-            {
-              "name": "Pressure 劍壓",
-              "type": "raidwide",
-              "description": "拼刀狀態下定期對全場造成傷害。",
-              "tips": [
                 {
-                  "text": "補連續補療",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Discharge 放電 (紫電)",
-              "type": "aoe",
-              "description": "紫電接觸任意角色或天之叢雲後自爆，周圍圓形雷屬性 AoE。",
-              "tips": [
-                "拼刀者站位避免紫電靠近自己",
-                "非拼刀玩家躲開紫電直線"
-              ]
-            },
-            {
-              "name": "Sword of Kusanagi 天叢雲劍",
-              "type": "mechanic",
-              "description": "兩次接刀都成功 → 紅色直線範圍內安全 + 範圍外受傷；接刀失敗 → 全屏 999999 即死。",
-              "tips": [
-                "接刀者必須撐到結束",
-                "其他人站紅線範圍內"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "P3 (50–0%)",
-          "mechanics": [
-            {
-              "name": "Tsunami Slash 破浪斬",
-              "type": "tankbuster",
-              "description": "讀條 5s 對 MT 高傷害斬擊 + 45s 斬擊耐性大幅降低。",
-              "tips": [
-                {
-                  "text": "MT 大減傷 → ST swap",
-                  "role": "tank"
-                }
-              ]
-            },
-            {
-              "name": "Lightning 閃電",
-              "type": "aoe",
-              "description": "連續 4 次點名隨機非 MT 玩家；紫色點名 + 長直線 → 玩家被附加 7s 眩暈。對所在半場造成感電；若在破壞區則對全場造成感電。",
-              "tips": [
-                "被點走到場邊未破壞區",
-                "避免站破壞區 → 全屏炸"
-              ]
-            },
-            {
-              "name": "Stone Vault 岩戶隱",
-              "type": "mechanic",
-              "description": "隨機 1 名非 MT 被附加拘束封入 4 個天之岩戶之一；連線交換位置 2 次後岩戶讀條岩戶閉合 15s 即死。",
-              "tips": [
-                {
-                  "text": "DPS 看清楚交換後 → 集火藏匿岩戶救人",
-                  "role": "dps"
+                    "name": "P2 Ame-no-Murakumo DPS check",
+                    "mechanics": [
+                        {
+                            "name": "Clashing + 花瓣水晶",
+                            "type": "mechanic",
+                            "description": "『How our hearts sing in the chaos!』→ 花瓣狀水晶出現 → T 撿 → Clashing 持續 Flesh Wound DoT 直到劍被打掉。",
+                            "tips": [
+                                {"text": "T 撿水晶", "role": "tank"},
+                                {"text": "治療強補 T", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Ame-no-Murakumo 天叢雲",
+                            "type": "raidwide",
+                            "description": "Susano 釋天叢雲讀條 → 必須打掉劍中斷 → Clashing T 死或劍讀完 = 團滅。DPS 全力打劍。",
+                            "tips": [
+                                {"text": "DPS 全力打劍", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Sheer Force 純粹之力（球）",
+                            "type": "mechanic",
+                            "description": "場邊球向團移動 → OT 跑去吃球（會濺射傷害到團）→ 終局大紅直線 = 沒打掉劍前線上即死。",
+                            "tips": [
+                                {"text": "OT 攔截球", "role": "tank"},
+                                {"text": "勿站紅線", "role": "dps"}
+                            ]
+                        }
+                    ]
                 },
-                "限時 15s"
-              ]
-            },
-            {
-              "name": "Petition 祈請",
-              "type": "raidwide",
-              "description": "讀條 4s 對全場造成 3 連雷屬性傷害。",
-              "tips": [
                 {
-                  "text": "補大團補 + 連續補療",
-                  "role": "healer"
+                    "name": "P3 沿用 + 新招",
+                    "mechanics": [
+                        {
+                            "name": "Stormsplitter 風暴裂破",
+                            "type": "tankbuster",
+                            "description": "直線 tankbuster → MT 大減傷。",
+                            "tips": [
+                                {"text": "MT 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Ama-no-iwato 天岩戶（真假石）",
+                            "type": "mechanic",
+                            "description": "『Earth and stone at our beck and call!』→ 1 玩家被困石頭 + 兩假石 → 洗牌後打掉真石（被困玩家死 = wipe）。真石永遠是仇恨表最下方。",
+                            "tips": [
+                                {"text": "看仇恨表最下方 = 真石", "role": "tank"},
+                                {"text": "DPS 集火真石", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Ukehi 誓約",
+                            "type": "raidwide",
+                            "description": "全屏 1-2 hit → 連續團補。",
+                            "tips": [
+                                {"text": "連續團補", "role": "healer"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Enrage 連續祈請",
-              "type": "raidwide",
-              "description": "P3 約 9 分鐘後 boss 無讀條連續釋放更高傷害祈請直至團滅。",
-              "tips": [
-                "DPS 推輸出避免 enrage"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "P1：Yata No Kagami 看擊退方向選安全 + Brightstorm 集合",
+                "P2 花瓣水晶 T 撿 → 全力打劍中斷 Ame-no-Murakumo + OT 攔球",
+                "P3 Ama-no-iwato 真石 = 仇恨表最下方"
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
