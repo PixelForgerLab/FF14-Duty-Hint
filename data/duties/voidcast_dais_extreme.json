@@ -1,94 +1,155 @@
 {
-  "id": "voidcast_dais_extreme",
-  "name": "戈爾貝薩殲殛戰",
-  "nameEn": "The Voidcast Dais (Extreme) - Golbez",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "戈爾貝薩殲殛戰 - Golbez 戈爾貝薩。",
-    "核心機制：強化版 Void Aero + 四天王召喚 + 多階段。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.4 戈爾貝薩極限版（Lv 90）。Boss 為 Golbez 戈爾貝薩。重點：強化版 Void Aero + 四天王召喚 + 多階段。",
-  "bosses": [
-    {
-      "name": "戈爾貝薩",
-      "nameEn": "Golbez",
-      "phases": [
+    "id": "voidcast_dais_extreme",
+    "name": "戈爾貝薩殲殛戰",
+    "nameEn": "The Voidcast Dais (Extreme) - Golbez",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "預設：分兩光隊 + Support/DPS 配對。",
+        "Terrastorm 地震 = 兩條對角慢落流星 + 中央 AoE → 跑安全角。Lingering Spark 殘留 = 玩家腳下水池 → 等讀條後跑走。",
+        "Phases of the Blade 雙劍階段 = boss 連續砍 cleave 半場（先前、後）→ 預判方向兩段。Binding Cold 束縛之寒 = 全屏 + 8s Frostbite DoT。",
+        "Gale Sphere 強風球 = 直線 AoE（前後 → 左右順序）+ 第二 hit Arctic Assault（類 Hades Shadowspread 散開錐）→ 預判方向 + 散位。",
+        "Void Meteor 虛空流星 = 雙 T 5 hit tank buster → 雙 T 大減傷。",
+        "Azdaja's Shadow 變身（轉場無 cutscene 快速）：3 hit tank line AoE + swap → Phases of the Blade → 環繞龍（紫環 = donut + spread / 小環 + 球 = 點下 AoE + stacks）。",
+        "Double Meteor 雙流星 = MT flex 雙遠 Flare + 奶 flex 雙近 Flare → 2 玩家 Flare = 擊退到對角 / 奶被擊退 = 中央 + 直線 AoE / 對角塔（其他人北 3 stack + 南 2 stack）。",
+        "Void Stardust 虛空星塵（exaflare 連續 AoE）= 從東 / 西邊起 + 跟著爆好的位置走（側 → 角）。Enumeration 計數（近戰中 / 遠程角）。",
+        "Eventide Fall / Triad 日暮 = 光隊（雙奶分擔）或 Triad（職能 cleave）→ 看標分組。",
+        "Terrastorm + Arctic Assault + 奶 stack = 找安全象限 + 近戰進 stack / 遠程角 stack。",
+        "後續循環各招組合：Gale Sphere + Enumeration + Arctic Assault + Phases of the Blade → 多輪連環。",
+        "最終 Azdaja's Shadow execution = 終結（需在 enrage 前秒 boss）。"
+    ],
+    "notes": "EW 6.3 trial Ex（Lv 90，sync 90，ilvl 605，8 人 trial，時限 60 分），位於 The Voidcast Dais Ex。為 EW 黑騎士戈爾貝薩 Ex 版。掉落 ilvl 620 武器 + Golbez Card。整場長機制循環 + 多次 Azdaja's Shadow execution。",
+    "bosses": [
         {
-          "name": "Golbez EX",
-          "mechanics": [
-            {
-              "name": "Black Fang 連 buster",
-              "type": "tankbuster",
-              "description": "MT 連段 cone buster + 暗 debuff；MT開大減傷 雙T swap接力。",
-              "tips": [
+            "name": "戈爾貝薩",
+            "nameEn": "Golbez",
+            "phases": [
                 {
-                  "text": "MT 開無敵或換手",
-                  "role": "tank"
+                    "name": "主戰（多輪循環）",
+                    "mechanics": [
+                        {
+                            "name": "預設站位",
+                            "type": "mechanic",
+                            "description": "分兩光隊 + Support / DPS 配對。",
+                            "tips": [
+                                {"text": "預先分隊", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Terrastorm 地震",
+                            "type": "aoe",
+                            "description": "兩條對角慢落流星 + 中央 AoE → 跑安全角。可搭配 Arctic Assault + 奶 stack。",
+                            "tips": [
+                                {"text": "跑安全角", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Lingering Spark 殘留火花",
+                            "type": "aoe",
+                            "description": "玩家腳下水池 → 等讀條後跑走（bait）。",
+                            "tips": [
+                                {"text": "等讀條後跑", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Phases of the Blade 雙劍階段",
+                            "type": "cone",
+                            "description": "boss 連續砍 cleave 半場（先前、後）→ 預判方向兩段走位。",
+                            "tips": [
+                                {"text": "預判前後方向走位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Binding Cold 束縛之寒",
+                            "type": "raidwide",
+                            "description": "全屏 + 8s Frostbite DoT → 治療連續補。",
+                            "tips": [
+                                {"text": "連續團補 + Esuna", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Gale Sphere 強風球 + Arctic Assault",
+                            "type": "mechanic",
+                            "description": "直線 AoE（前後 → 左右順序）+ 第二 hit Arctic Assault 散開錐 → 預判方向 + 散位。",
+                            "tips": [
+                                {"text": "預判直線 + 散開", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Meteor 虛空流星",
+                            "type": "tankbuster",
+                            "description": "雙 T 5 hit tank buster → 雙 T 大減傷。",
+                            "tips": [
+                                {"text": "雙 T 大減傷", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Azdaja's Shadow 變身機制",
+                            "type": "mechanic",
+                            "description": "3 hit tank line AoE + swap → Phases of the Blade → 環繞龍（紫環 = donut + spread / 小環 + 球 = 點下 AoE + stacks）。",
+                            "tips": [
+                                {"text": "看龍紋判斷紫環 / 小環+球", "role": "dps"},
+                                {"text": "Tank swap", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Double Meteor 雙流星（雙 Flare + 塔）",
+                            "type": "mechanic",
+                            "description": "MT flex 雙遠 Flare + 奶 flex 雙近 Flare → 2 玩家 Flare = 擊退到對角；奶被擊退 = 中央 + 直線 AoE；對角塔（其他人北 3 stack + 南 2 stack）。",
+                            "tips": [
+                                {"text": "Flare 玩家對角擊退", "role": "dps"},
+                                {"text": "奶被擊退到中央", "role": "healer"},
+                                {"text": "塔 3+2 stack 站", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Void Stardust 虛空星塵（exaflare）",
+                            "type": "aoe",
+                            "description": "exaflare 連續 AoE → 從東 / 西邊起 + 跟著爆好的位置走（側 → 角 或反向）。",
+                            "tips": [
+                                {"text": "從側 → 角跟爆位", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Enumeration 計數",
+                            "type": "stack",
+                            "description": "近戰中 / 遠程角配對 stack。",
+                            "tips": [
+                                {"text": "近戰中 / 遠程角配對", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Eventide Fall / Triad 日暮",
+                            "type": "stack",
+                            "description": "光隊分（雙奶分擔）或 Triad（職能 cleave）→ 看標分組。",
+                            "tips": [
+                                {"text": "看標分光隊 / 職能", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Azdaja's Shadow Execution（終結）",
+                            "type": "raidwide",
+                            "description": "最終 Azdaja's Shadow execution 終結機制 → 必須在 enrage 前秒 boss。",
+                            "tips": [
+                                {"text": "全員爆發 + LB3", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Summon Shadow Dragon 召暗龍",
-              "type": "aoe",
-              "description": "召暗龍 + 連 line AoE 多段穿場；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫避連線"
-              ]
-            },
-            {
-              "name": "Cosmic Sigil 強化",
-              "type": "aoe",
-              "description": "場上暗魔法陣 → 多 AoE 圈 + 連發；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫避陣"
-              ]
-            },
-            {
-              "name": "Phantom Rush 連衝鋒",
-              "type": "aoe",
-              "description": "Boss 連衝鋒 line + cleave 多段；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "側步 + 看朝向移位"
-              ]
-            },
-            {
-              "name": "Aetheric Boom + 散",
-              "type": "raidwide",
-              "description": "全屏 + 場上散標 AoE；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "全員減傷 + 散開",
-                  "role": "healer"
-                }
-              ]
-            },
-            {
-              "name": "Megaflare 末段",
-              "type": "raidwide",
-              "description": "末段大全屏連發；全員預備減傷與大團補。",
-              "tips": [
-                {
-                  "text": "末段催爆發",
-                  "role": "dps"
-                }
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "預設分兩光隊 + Support/DPS 配對",
+                "Terrastorm 跑安全角 / Lingering Spark 等讀條後跑",
+                "Gale Sphere 直線 + Arctic Assault 散開",
+                "Azdaja's Shadow 看龍紋：紫環 = donut+spread / 小環+球 = pb+stacks",
+                "Double Meteor：Flare 對角 + 奶中央 + 塔 3+2",
+                "Void Stardust exaflare 從側 → 角 + Enumeration 近戰中 / 遠程角"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Golbez 戈爾貝薩 機制：強化版 Void Aero + 四天王召喚 + 多階段。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }

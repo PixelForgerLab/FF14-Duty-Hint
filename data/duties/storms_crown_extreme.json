@@ -1,80 +1,185 @@
 {
-  "id": "storms_crown_extreme",
-  "name": "真 芭芭莉西亞殲殛戰",
-  "nameEn": "Storm's Crown (Extreme) - Barbariccia",
-  "expansion": "6.x 曉月之終途 (Endwalker)",
-  "type": "trial",
-  "playerCount": 8,
-  "iLvlSync": null,
-  "jobLevelSync": 90,
-  "highEnd": true,
-  "quality": "excellent",
-  "mnemonic": [
-    "真 芭芭莉西亞殲殛戰 - Barbariccia 芭芭莉西亞。",
-    "核心機制：強化版 Wind Wall + Tornado 龍捲 + 多階段。",
-    "8 人 trial：T/H/D 分工協同。",
-    "tankbuster + raidwide：MT 大減傷、預備團補。"
-  ],
-  "notes": "EW 6.1 芭芭莉西亞極限版（Lv 90）。Boss 為 Barbariccia 芭芭莉西亞。重點：強化版 Wind Wall + Tornado 龍捲 + 多階段。",
-  "bosses": [
-    {
-      "name": "芭芭莉西亞",
-      "nameEn": "Barbariccia",
-      "phases": [
+    "id": "storms_crown_extreme",
+    "name": "真 芭芭莉西亞殲殛戰",
+    "nameEn": "Storm's Crown (Extreme) - Barbariccia",
+    "expansion": "6.x 曉月的終焉 (Endwalker)",
+    "type": "trial",
+    "playerCount": 8,
+    "iLvlSync": null,
+    "jobLevelSync": 90,
+    "highEnd": true,
+    "quality": "excellent",
+    "mnemonic": [
+        "預設：分兩光隊（T+H+2DPS）。場上 8 點站位 - MT 北 / OT 南 / 雙奶東西 / DPS 對角。",
+        "P1 Void Aero IV = 全屏 + 隨機無預警全屏。Savage Barbery 看劍位：劍高舉 = 直線 AoE + 落點 → 站 boss 後外 hitbox；劍側持 = 甜甜圈 + 落點 → 站 boss 後內 hitbox。",
+        "P1 Hair Raid 4 變化：(a) 蹲下 + 連線劍 = 衝刺 + 大錐 cleave → 站 boss 側場邊；(b) 浮空 + 召劍 = 甜甜圈 → 貼 boss 站。各搭配 stack 雙奶 / 玩家點名 AoE 兩種子機制。",
+        "P1 第二次 Savage Barbery 反向（線 ↔ donut）→ 站位反轉。第二次 Hair Raid 反向變化 → 對應反轉處理。",
+        "P1 Void Aero III = MT tankbuster + Wind Resistance Down → 必須 tank swap（OT Provoke + MT Shirk）。",
+        "P1 Teasing Tangles = 4 cardinal hair cone 大 AoE → 2 玩家被拉入邊界 + Tangled 移動緩慢（離開拉回 + 致死 DoT）。場上 2 玩家大 AoE + 2 玩家雙人 stack + 4 玩家無標 → 大 AoE 玩家拉場邊；stack 玩家走對角找無標玩家 stack；無標玩家對應 stack 玩家。",
+        "P1 Secret Breeze = Tangles 期間 boss 釋 cardinal cone → 微調走位。隨後散開 8 方位 + boss 釋無預警 cone AoE 每人。",
+        "P1 Curling Iron = 轉場 + 擊退離 hitbox → boss 跳出 + 全屏 → boss 落回中央高傷全屏 → 預備大團補。",
+        "P2 機制無讀條。Brutal Gust（T/H）= boss 連線 dash 留直線 → 被連線玩家側避。Boulder Break + 螺旋 AoE = 雙 T 北 stack 接 + 全員避螺旋。",
+        "P2 中央 stack + 箭頭標 = 螺旋 + 圓 AoE 重疊在中央 → 全員集中央。Brittle Boulder = 衝出中央到位 + 避螺旋 + 後另一輪小 AoE。",
+        "P2 Enumeration = T/H stack 標 + DPS 對角 stack → 順時針配對 + 避同心圓 AoE。Brutal Gust（DPS）= 4 DPS 連續連線 dash。",
+        "P2 Knuckle Drums = boss 連續搥地 + 全屏 → 北 stack 補。Bold Boulder = 雙 T 飛標離團 + 全員 stack 一奶 → 擊退到場邊形成三角形。",
+        "P2 後續 Teasing Tangles + Enumeration + 第二 Knuckle Drums → 轉 P3。",
+        "P3 boss 變回原形態 → 沿用 P1 機制 + 額外複雜組合 → 直到擊敗或 enrage。"
+    ],
+    "notes": "EW 6.1 trial Ex（Lv 90，sync 90，ilvl 585，8 人 trial，時限 60 分），位於 Storm's Crown Ex。為 EW 四闇王第一 Ex 版 - 風之闇王芭芭莉西亞極限版。掉落 ilvl 600 武器 + Barbariccia Card。整場分兩光隊 + 8 點站位為核心策略。",
+    "bosses": [
         {
-          "name": "Barbariccia EX",
-          "mechanics": [
-            {
-              "name": "Whirlwind 強化",
-              "type": "other",
-              "description": "場上召多旋風 + 連續擊退 + line AoE 多方向；依預兆走位處理。",
-              "tips": [
-                "卡縫隙 + 抗擊退"
-              ]
-            },
-            {
-              "name": "Hair Cleave 連",
-              "type": "aoe",
-              "description": "Boss 髮絲連 cone 半場 cleave 多段；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "看朝向 → 站對側"
-              ]
-            },
-            {
-              "name": "Hair Raid 多 line",
-              "type": "aoe",
-              "description": "場上連 line AoE 髮絲穿場；看圖示提前走位避開預兆範圍。",
-              "tips": [
-                "走縫避連線"
-              ]
-            },
-            {
-              "name": "Aerial Storm 強化",
-              "type": "raidwide",
-              "description": "全屏 + 連擊退 + 流血；全員預備減傷與大團補。",
-              "tips": [
+            "name": "芭芭莉西亞",
+            "nameEn": "Barbariccia",
+            "phases": [
                 {
-                  "text": "全員強減傷 + 連補",
-                  "role": "healer"
+                    "name": "P1（標準形態）",
+                    "mechanics": [
+                        {
+                            "name": "Void Aero IV 虛空風暴 4",
+                            "type": "raidwide",
+                            "description": "全屏 + 隨機無預警全屏 → 預備團補。",
+                            "tips": [
+                                {"text": "預備團補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Savage Barbery 凶蠻挑髮（看劍位）",
+                            "type": "mechanic",
+                            "description": "劍高舉 = 直線 AoE + 落點 → 站 boss 後外 hitbox；劍側持 = 甜甜圈 + 落點 → 站 boss 後內 hitbox。第二次反向（線 ↔ donut）→ 站位反轉。",
+                            "tips": [
+                                {"text": "劍高 = 後外 / 劍側 = 後內", "role": "dps"},
+                                {"text": "第二次反向站", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Hair Raid 髮襲（4 變化）",
+                            "type": "mechanic",
+                            "description": "蹲下 = 衝刺 + 大錐 → 站 boss 側場邊；浮空 = 甜甜圈 → 貼 boss。搭配 stack 雙奶 / 玩家點名 AoE 兩子機制。第二次反向變化。",
+                            "tips": [
+                                {"text": "蹲 = 側場邊 / 浮空 = 貼 boss", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Void Aero III + Tank Swap",
+                            "type": "tankbuster",
+                            "description": "MT tankbuster + Wind Resistance Down → 必須 tank swap（OT Provoke + MT Shirk）。",
+                            "tips": [
+                                {"text": "立即 tank swap", "role": "tank"}
+                            ]
+                        },
+                        {
+                            "name": "Teasing Tangles 髮絲挑釁",
+                            "type": "mechanic",
+                            "description": "4 cardinal hair cone 大 AoE → 2 玩家被拉入邊界 + Tangled。場上 2 玩家大 AoE + 2 玩家雙人 stack + 4 玩家無標 → 大 AoE 玩家拉場邊；stack 玩家走對角找無標玩家 stack；無標玩家對應 stack 玩家。",
+                            "tips": [
+                                {"text": "大 AoE 玩家拉場邊", "role": "dps"},
+                                {"text": "stack/無標 對角配對", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Secret Breeze 秘風",
+                            "type": "aoe",
+                            "description": "Tangles 期間 boss 釋 cardinal cone → 微調走位。隨後 boss 釋無預警 cone AoE 每人 → 散開不重疊。",
+                            "tips": [
+                                {"text": "看 cardinal cone 微調", "role": "dps"},
+                                {"text": "8 散後再 cone", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Curling Iron 轉場",
+                            "type": "knockback",
+                            "description": "擊退離 hitbox → boss 跳出 + 全屏 → boss 落回中央高傷全屏 → 預備大團補。",
+                            "tips": [
+                                {"text": "離 hitbox + 預備大團補", "role": "healer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P2 無讀條（風暴形態）",
+                    "mechanics": [
+                        {
+                            "name": "Brutal Gust 殘忍狂風（連線 dash）",
+                            "type": "aoe",
+                            "description": "boss 連線玩家 + dash 留直線 → 被連線玩家側避。分 3 次：T/H → 全員 → DPS → 隨機。",
+                            "tips": [
+                                {"text": "被連線側避 dash", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Boulder Break + 螺旋 AoE",
+                            "type": "tankbuster",
+                            "description": "雙 T 北 stack 接 tankbuster + 全員避螺旋 AoE。",
+                            "tips": [
+                                {"text": "雙 T 北 stack", "role": "tank"},
+                                {"text": "全員避螺旋", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "中央 stack + 箭頭標",
+                            "type": "mechanic",
+                            "description": "螺旋 + 圓 AoE 重疊在中央 → 全員集中央讓 AoE 重疊。",
+                            "tips": [
+                                {"text": "全員集中央", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Brittle Boulder 易碎巨石",
+                            "type": "aoe",
+                            "description": "衝出中央到位 + 避螺旋 + 後另一輪小 AoE 在玩家位置。",
+                            "tips": [
+                                {"text": "衝出後避螺旋", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Enumeration 計數",
+                            "type": "stack",
+                            "description": "T/H stack 標 + DPS 對角 stack → 順時針配對 + 避同心圓 AoE。",
+                            "tips": [
+                                {"text": "順時針配對", "role": "dps"}
+                            ]
+                        },
+                        {
+                            "name": "Knuckle Drums 拳擂",
+                            "type": "raidwide",
+                            "description": "boss 連續搥地 + 全屏 → 北 stack 集中補血減傷。",
+                            "tips": [
+                                {"text": "北 stack 集中補", "role": "healer"}
+                            ]
+                        },
+                        {
+                            "name": "Bold Boulder + 三角擊退",
+                            "type": "knockback",
+                            "description": "雙 T 飛標離團 + 全員 stack 一奶 → 擊退到場邊形成三角形。",
+                            "tips": [
+                                {"text": "雙 T 離團 + 團 stack 奶", "role": "tank"},
+                                {"text": "預判擊退落點三角", "role": "dps"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "P3 復原形態",
+                    "mechanics": [
+                        {
+                            "name": "P1 機制循環 + 複雜組合",
+                            "type": "mechanic",
+                            "description": "boss 變回原形態 → 沿用 P1 機制 + 額外複雜組合 → 直到擊敗或 enrage。",
+                            "tips": [
+                                {"text": "預期 P1 機制循環", "role": "dps"}
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "name": "Massive Landslide 連",
-              "type": "other",
-              "description": "連大擊退 + line AoE 配合；依預兆走位處理。",
-              "tips": [
-                "抗擊退或卡邊"
-              ]
-            }
-          ]
+            ],
+            "mnemonic": [
+                "預設兩光隊 + 8 點站位",
+                "P1 Savage Barbery：劍高 = 後外 / 劍側 = 後內（第 2 反向）",
+                "P1 Hair Raid：蹲 = 側場邊 / 浮空 = 貼 boss",
+                "P1 Void Aero III → 必 tank swap",
+                "P1 Teasing Tangles：大 AoE 拉邊 / stack-無標 對角配",
+                "P2 Brutal Gust 側避 / Enumeration 順時針配對 / Bold Boulder 三角擊退"
+            ]
         }
-      ],
-      "mnemonic": [
-        "Barbariccia 芭芭莉西亞 機制：強化版 Wind Wall + Tornado 龍捲 + 多階段。",
-        "tankbuster → MT 大減傷",
-        "raidwide → 預備團補與減傷"
-      ]
-    }
-  ]
+    ]
 }
